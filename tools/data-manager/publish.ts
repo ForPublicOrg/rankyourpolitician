@@ -64,8 +64,22 @@ export function datasetStats() {
   };
 }
 
-/** Write politicians + constituencies to Firestore. Requires Admin credentials. */
-export async function publishDataset(): Promise<{ politicians: number; constituencies: number }> {
+function loadJson<T>(name: string): T[] {
+  const p = resolve(SEED_DIR, name);
+  try {
+    return JSON.parse(readFileSync(p, 'utf8'));
+  } catch {
+    return [];
+  }
+}
+
+/** Write the full dataset to Firestore. Requires Admin credentials. */
+export async function publishDataset(): Promise<{
+  politicians: number;
+  constituencies: number;
+  central_government: number;
+  office_seats: number;
+}> {
   const { getDb } = await import('../../lib/firebase-admin');
   const db = getDb();
   if (!db)
@@ -74,6 +88,8 @@ export async function publishDataset(): Promise<{ politicians: number; constitue
     );
 
   const { politicians, constituencies } = loadSeed();
+  const central = loadJson<{ id: string }>('central_government.json');
+  const officials = loadJson<{ id: string }>('district_officials.json');
 
   const commitInChunks = async (coll: string, docs: { id: string }[]) => {
     for (let i = 0; i < docs.length; i += 400) {
@@ -85,5 +101,12 @@ export async function publishDataset(): Promise<{ politicians: number; constitue
 
   await commitInChunks('constituencies', constituencies);
   await commitInChunks('politicians', politicians);
-  return { politicians: politicians.length, constituencies: constituencies.length };
+  await commitInChunks('central_government', central);
+  await commitInChunks('office_seats', officials);
+  return {
+    politicians: politicians.length,
+    constituencies: constituencies.length,
+    central_government: central.length,
+    office_seats: officials.length,
+  };
 }

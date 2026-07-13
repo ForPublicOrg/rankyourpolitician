@@ -71,6 +71,16 @@ export interface Politician {
   facts: Fact[];
   terms_served?: number;
   active: boolean;
+  /** Citation for the core identity (name/party/constituency) when the detailed
+   *  fact record hasn't been added yet — so an identity-only profile is still cited. */
+  identity_source?: { url: string; name: string; retrieved_date: string };
+  /** A sourced note when the current party differs from the party the member was
+   *  elected under (defection/merger), or a by-election context. e.g. "Elected 2024
+   *  as Shiv Sena (UBT); joined Shiv Sena on 22 June 2026." */
+  party_note?: string;
+  /** True for auto-generated roster records; a manual `refresh-mps` may replace
+   *  these, but never records that have been enriched with facts. */
+  generated?: boolean;
 }
 
 export interface Constituency {

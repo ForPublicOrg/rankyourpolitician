@@ -36,7 +36,16 @@ async function main() {
       }
       console.log('Publishing to Firestore…');
       const res = await publishDataset();
-      console.log(`✓ Published ${res.politicians} politicians and ${res.constituencies} constituencies.`);
+      console.log(
+        `✓ Published ${res.politicians} politicians, ${res.constituencies} constituencies, ` +
+          `${res.central_government} ministers, ${res.office_seats} office seats.`,
+      );
+      break;
+    }
+    case 'refresh-mps': {
+      // Rebuild the national Lok Sabha roster from the canonical ECI-sourced list.
+      process.argv[2] = process.argv[3] || ''; // optional cached wikitext path
+      await import('./import-lok-sabha');
       break;
     }
     case 'import': {
@@ -57,6 +66,7 @@ Commands:
   npm run dm -- validate            Check citations + consistency
   npm run dm -- stats               Dataset summary
   npm run dm -- publish             Publish to Firestore (needs .env.local creds)
+  npm run dm -- refresh-mps         Rebuild the all-India Lok Sabha roster (543 seats) from the ECI-sourced list
   npm run dm -- import <file.json>  Rebuild seed from a sourcing-workflow output
   npm run dm:dashboard              Open the local review dashboard (http://localhost:4321)
 `);

@@ -150,6 +150,28 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
         </div>
       </div>
 
+      {/* About: plain-language summary + party-change note + identity citation */}
+      {(person.neutral_summary || person.party_note || person.identity_source) && (
+        <section className="mt-5 rounded-3xl border border-line bg-white p-5 shadow-soft sm:p-6">
+          <h2 className="text-xl font-bold text-ink">{tr('profile.aboutTitle')}</h2>
+          {person.neutral_summary && <p className="mt-2 text-ink-soft">{person.neutral_summary}</p>}
+          {person.party_note && (
+            <div className="mt-3 flex items-start gap-2 rounded-xl bg-amber-50 p-3 text-sm text-ink">
+              <span className="mt-0.5 shrink-0"><Icon name="info" size={16} className="text-rating-ink" /></span>
+              <span><span className="font-semibold">{tr('profile.partyUpdate')}:</span> {person.party_note}</span>
+            </div>
+          )}
+          {person.identity_source && (
+            <p className="mt-3 flex flex-wrap items-center gap-x-2 text-xs text-ink-faint">
+              <a href={person.identity_source.url} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center gap-1 text-brand hover:underline">
+                <Icon name="link" size={12} /> {tr('common.source')}: {person.identity_source.name}
+              </a>
+              <span>· {tr('common.lastUpdated')} {formatDate(person.identity_source.retrieved_date, locale)}</span>
+            </p>
+          )}
+        </section>
+      )}
+
       {/* Government role (all portfolios) */}
       {person.portfolios.length > 0 && (
         <section className="mt-5 rounded-3xl border border-brand/20 bg-brand-soft/40 p-5 shadow-soft sm:p-6">

@@ -216,6 +216,8 @@ export interface PersonView {
   performance: PerformanceScore | null;
   hasRecord: boolean; // do we have the detailed MP fact record?
   sources: [string, string][];
+  identity_source?: { url: string; name: string; retrieved_date: string };
+  party_note?: string;
 }
 
 /** Canonical id for a minister: their linked MP id if any, else their own id. */
@@ -261,6 +263,8 @@ export async function getPerson(
         performance: idx.performance.get(id) ?? null,
         hasRecord: p.facts.length > 0,
         sources: [...new Map([...p.facts.map((f) => [f.source_url, f.source_name] as [string, string]), ...extraSources])],
+        identity_source: p.identity_source,
+        party_note: p.party_note,
       },
     };
   }
