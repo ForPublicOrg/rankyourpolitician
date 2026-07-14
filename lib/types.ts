@@ -132,6 +132,8 @@ export interface RankingEntry {
   stateCode: string;
   performance_percentile: number | null;
   performance_cohort: string;
+  /** How many verified metrics fed the composite (0 → unranked). */
+  metrics_used?: number;
   sentiment_mean: number | null;
   sentiment_votes: number;
   photo_url?: string;
@@ -203,6 +205,29 @@ export interface OfficeSeat {
     source_name: string;
     as_of: string; // date the source was current
   };
+}
+
+/** Constitutional / parliamentary offices OUTSIDE the Council of Ministers:
+ *  Head of State, presiding officers and the statutory opposition leaders.
+ *  Info-only (never ranked); the office is non-partisan for president/VP. */
+export type ConstitutionalOfficeKey = 'president' | 'vice_president' | 'ls_speaker' | 'lop_ls' | 'lop_rs';
+
+export interface ConstitutionalOffice {
+  id: string;
+  office: ConstitutionalOfficeKey;
+  title: string;
+  name: string;
+  party?: string;
+  house?: string;
+  constituency?: string;
+  state?: string;
+  politicianId?: string; // link to a full profile if one exists in our dataset
+  photo_url?: string;
+  since?: string; // ISO date office was assumed
+  note?: string;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
 }
 
 /** Central government: a member of the Union Council of Ministers. */

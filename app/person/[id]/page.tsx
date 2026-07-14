@@ -8,6 +8,7 @@ import { t } from '@/lib/i18n';
 import { roleKeyForHouse, RECORD_GROUPS } from '@/lib/roles';
 import { portfolioMandate } from '@/lib/portfolios';
 import { ROLE_ACCOUNTABILITY, ROLE_FOR_HOUSE, type RoleAccountability } from '@/lib/role-accountability';
+import { roleGlance } from '@/lib/role-glance';
 import { OFFICE_META, CPGRAMS_URL } from '@/lib/offices';
 import { ESCALATION_CHAINS, OFFICE_CHAIN_POSITION } from '@/lib/escalation';
 import EscalationChain from '@/components/EscalationChain';
@@ -85,6 +86,9 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
   const baseRole = ROLE_FOR_HOUSE[person.house || 'Lok Sabha'];
   if (baseRole && !rolesHeld.includes(baseRole)) rolesHeld.push(baseRole);
   const roleContent = rolesHeld.map((rk) => ROLE_ACCOUNTABILITY[rk]).filter(Boolean) as RoleAccountability[];
+  // Combined glance bullets: senior-most role in full, further roles in their
+  // shorter "secondary" form — one merged list, never per-role repetition.
+  const glanceBullets = rolesHeld.flatMap((rk, i) => roleGlance(rk, i > 0));
 
   const crumbs: { label: string; href?: string }[] = [{ label: tr('levels.national'), href: '/' }];
   if (person.stateCode && person.state) crumbs.push({ label: person.state, href: `/state/${person.stateCode}` });
@@ -160,10 +164,23 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
             <Chip tone="perf">{tr('common.verifiedData')}</Chip>
           </div>
           <div className="mt-4 flex items-center gap-4">
-            <ScoreRing value={person.performance?.composite_percentile ?? null} size={116} label={tr('ranking.topLabel')} />
+            <ScoreRing
+              value={person.performance?.composite_percentile ?? null}
+              size={116}
+              label={tr('ranking.topLabel')}
+              emptyLabel={tr('ranking.noData')}
+            />
             <div className="min-w-0">
               {person.performance?.composite_percentile != null ? (
-                <p className="font-bold text-perf-ink">{tr('ranking.cohortNote', { n: person.performance.composite_percentile, cohort: person.performance.cohort_label })}</p>
+                <>
+                  <p className="font-bold text-perf-ink">
+                    {tr('ranking.cohortNote', {
+                      n: Math.max(1, Math.round(100 - person.performance.composite_percentile)),
+                      cohort: person.performance.cohort_label,
+                    })}
+                  </p>
+                  <p className="mt-0.5 text-xs text-ink-faint">{tr('ranking.basedOn', { n: person.performance.metrics_used.length })}</p>
+                </>
               ) : (
                 <p className="text-sm text-ink-faint">{person.is_minister ? tr('profile.ministerExempt') : tr('profile.performanceInsufficient')}</p>
               )}
@@ -260,28 +277,54 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
         </section>
       )}
 
-      {/* Accountability — comprehensive, per role held (fixes the old generic block) */}
+      {/* Accountability — ONE combined, glanceable card across every role held.
+          Short bullets (ministry-specific first for ministers); the full
+          role-by-role guide is behind a single collapsible. */}
       <section className="mt-5 glass rounded-3xl p-5 sm:p-6">
         <h2 className="text-xl font-bold text-ink">{tr('profile.accountabilityTitle')}</h2>
-        <p className="mt-1 text-sm text-ink-soft">
-          {roleContent.length > 1 ? tr('profile.accountabilityIntroMulti') : tr('profile.accountabilityIntro')}
-        </p>
-        <div className="mt-4 space-y-4">
-          {roleContent.map((role, i) => (
-            <RoleAccountabilityCard
-              key={role.roleKey}
-              role={role}
-              defaultOpen={i === 0}
-              labels={{
-                accountable: tr('accountability.accountableLabel'),
-                handles: tr('accountability.handlesLabel'),
-                notResponsible: tr('accountability.notResponsibleLabel'),
-                sources: tr('common.sources'),
-                seeMore: tr('profile.roleSeeMore'),
-              }}
-            />
+        <p className="mt-1 text-sm text-ink-soft">{tr('profile.accountabilityGlanceIntro', { name: person.name })}</p>
+
+        <ul className="mt-4 space-y-2">
+          {person.portfolios.length > 0 && (
+            <li className="flex gap-2.5 rounded-xl border border-brand/25 bg-brand-soft/50 px-3.5 py-2.5 text-sm font-medium text-ink">
+              <Icon name="parliament" size={17} className="mt-0.5 shrink-0 text-brand" />
+              <span>
+                {tr('profile.glanceMinistryLead', {
+                  list:
+                    person.portfolios.slice(0, 3).join(' · ') +
+                    (person.portfolios.length > 3 ? ` +${person.portfolios.length - 3}` : ''),
+                })}
+              </span>
+            </li>
+          )}
+          {glanceBullets.map((b, i) => (
+            <li key={i} className="flex gap-2.5 rounded-xl bg-paper-soft px-3.5 py-2.5 text-sm text-ink-soft">
+              <Icon name="check" size={17} className="mt-0.5 shrink-0 text-perf" />
+              <span>{b}</span>
+            </li>
           ))}
-        </div>
+        </ul>
+
+        <details className="group mt-4">
+          <summary className="flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-brand">
+            <Icon name="chevron" size={15} className="transition group-open:rotate-180" /> {tr('profile.fullGuide')}
+          </summary>
+          <div className="mt-4 space-y-4">
+            {roleContent.map((role) => (
+              <RoleAccountabilityCard
+                key={role.roleKey}
+                role={role}
+                labels={{
+                  accountable: tr('accountability.accountableLabel'),
+                  handles: tr('accountability.handlesLabel'),
+                  notResponsible: tr('accountability.notResponsibleLabel'),
+                  sources: tr('common.sources'),
+                  seeMore: tr('profile.roleSeeMore'),
+                }}
+              />
+            ))}
+          </div>
+        </details>
         <Link href="/accountability" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">{tr('nav.accountability')} <Icon name="arrow" size={15} /></Link>
       </section>
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function MethodologyPage() {
   return (
-    <Prose title="Methodology" updated="14 July 2026">
+    <Prose title="Methodology" updated="15 July 2026">
       <p>
         This site is an information tool, not a verdict. We publish sourced facts and two separate,
         clearly-labelled measures. We never combine them into a single score, and we never editorialise.
@@ -30,18 +30,30 @@ export default function MethodologyPage() {
         </li>
       </ul>
 
-      <h2>Verified Performance</h2>
+      <h2>Verified Performance (formula v2)</h2>
       <p>
         For Members of Parliament we use official parliamentary metrics: attendance, questions asked, debates
         participated in, private member bills, and constituency-fund (MPLADS) utilisation. Each metric is
         converted to a <strong>percentile within a comparable cohort</strong> — the same house and tenure
-        bracket — and the percentiles are averaged with <strong>equal weight</strong>. The formula is public
-        and unweighted by us on purpose: we do not assign subjective importance to any metric.
+        bracket — and combined as a <strong>weighted average</strong> with fixed, public weights:
+        attendance 35%, questions 25%, debates 20%, private member bills 10%, MPLADS 10%
+        (weights are re-normalised over the metrics that are actually verified for a member).
+        Attendance carries the most weight because it is the most universal duty; questions and debates
+        measure active scrutiny of the government; bills and fund utilisation reward initiative but have
+        patchier official coverage.
       </p>
       <ul>
+        <li>
+          <strong>Data floor:</strong> a member needs at least <strong>two</strong> verified metrics to be
+          ranked (one for ministers, who are exempt from questions/debates by parliamentary convention).
+          Below the floor we say “not enough data” — we never rank on a single number, and an alphabetical
+          list is never presented as a ranking.
+        </li>
         <li>Ministers and presiding officers are exempt from questions/debates by parliamentary convention, so those metrics are excluded for them rather than counted as zero.</li>
+        <li>State legislatures do not publish comparable member-level attendance/questions data, so most MLAs/MLCs appear as “not enough data” rather than being given a made-up score.</li>
         <li>Declared assets and criminal cases are shown as neutral factual context and are <strong>not</strong> scored.</li>
         <li>Where data is missing, we show “unavailable” — never a zero.</li>
+        <li>Scores are displayed as “top X%” of the comparable cohort (e.g. percentile 87 → top 13%).</li>
       </ul>
 
       <h2>Public Sentiment</h2>

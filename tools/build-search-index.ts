@@ -14,7 +14,8 @@ import seedConstituencies from '../data/seed/constituencies.json';
 import seedCentral from '../data/seed/central_government.json';
 import seedStateGov from '../data/seed/state_government.json';
 import seedDistrictOfficials from '../data/seed/district_officials.json';
-import type { Politician, Minister, StateGovernment, OfficeSeat } from '../lib/types';
+import seedConstitutional from '../data/seed/constitutional_offices.json';
+import type { Politician, Minister, StateGovernment, OfficeSeat, ConstitutionalOffice } from '../lib/types';
 
 // Row shapes (positional arrays keep the file small):
 //   people:    [id, name, partyShort, place, stateCode, role, nameHi?]
@@ -82,6 +83,15 @@ function build(): SearchIndexFile {
     } else {
       people.set(id, [id, m.name, partyShort(m.party), m.portfolios[0] || '', '', role, undefined, m.photo_url]);
     }
+  }
+
+  // Constitutional offices — upgrade the role label for linked MPs (Speaker,
+  // Leaders of the Opposition). Unlinked holders (President/VP) have no
+  // profile page yet, so they are shown on /india and /hierarchy instead.
+  for (const o of seedConstitutional as unknown as ConstitutionalOffice[]) {
+    if (!o.politicianId) continue;
+    const existing = people.get(o.politicianId);
+    if (existing) existing[5] = `${o.title} · ${existing[5]}`;
   }
 
   // State CMs / ministers — same pattern.

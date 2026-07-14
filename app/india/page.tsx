@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { getCentralGovernment, getNationalStats } from '@/lib/data';
+import { getCentralGovernment, getConstitutionalOffices, getNationalStats } from '@/lib/data';
 import { getI18n } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
-import { MINISTER_RANK_LABEL, type Minister, type MinisterRank } from '@/lib/types';
+import { MINISTER_RANK_LABEL, type ConstitutionalOffice, type Minister, type MinisterRank } from '@/lib/types';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import HierarchyLadder from '@/components/HierarchyLadder';
 import { Avatar, PartyChip, Chip, StatPill, SectionCard } from '@/components/ui';
@@ -20,7 +20,11 @@ export const metadata: Metadata = {
 };
 
 export default async function IndiaPage() {
-  const [ministers, stats] = await Promise.all([getCentralGovernment(), getNationalStats()]);
+  const [ministers, stats, constitutional] = await Promise.all([
+    getCentralGovernment(),
+    getNationalStats(),
+    getConstitutionalOffices(),
+  ]);
   const { dict } = await getI18n();
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
@@ -62,6 +66,20 @@ export default async function IndiaPage() {
         </SectionCard>
       </Reveal>
 
+      {/* The Republic's frame around the government: Head of State, presiding
+          officers, and the statutory Opposition leaders. Info-only, never rated. */}
+      {constitutional.length > 0 && (
+        <Reveal className="mt-6">
+          <SectionCard title={tr('india.constitutionalTitle')} subtitle={tr('india.constitutionalHelp')} icon="law">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {constitutional.map((o) => (
+                <ConstitutionalCard key={o.id} o={o} tr={tr} />
+              ))}
+            </div>
+          </SectionCard>
+        </Reveal>
+      )}
+
       {ministers.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-line bg-white p-8 text-center shadow-soft">
           <span className="inline-grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
@@ -93,6 +111,34 @@ export default async function IndiaPage() {
 
       <div className="mt-8">
         <AdSlot />
+      </div>
+    </div>
+  );
+}
+
+function ConstitutionalCard({ o, tr }: { o: ConstitutionalOffice; tr: (k: string, v?: Record<string, string | number>) => string }) {
+  return (
+    <div className="relative flex h-full gap-3 rounded-2xl border border-line bg-white p-4 shadow-soft transition hover:border-brand/40 hover:shadow-lift">
+      <Avatar name={o.name} src={o.photo_url} size={48} />
+      <div className="min-w-0 flex-1">
+        <p className="text-[11px] font-bold uppercase tracking-wide text-brand">{o.title}</p>
+        <div className="mt-0.5 flex flex-wrap items-center gap-2">
+          {o.politicianId ? (
+            <Link href={`/person/${o.politicianId}`} className="font-bold text-ink after:absolute after:inset-0">
+              {o.name}
+            </Link>
+          ) : (
+            <span className="font-bold text-ink">{o.name}</span>
+          )}
+          {o.party && <PartyChip party={o.party} />}
+        </div>
+        {o.note && <p className="mt-1.5 text-xs leading-relaxed text-ink-soft">{o.note}</p>}
+        <div className="mt-2 flex flex-wrap items-center gap-x-2 text-xs text-ink-faint">
+          {o.since && <span>{tr('profile.since')} {o.since}</span>}
+          <a href={o.source_url} target="_blank" rel="noopener noreferrer nofollow" className="relative z-10 inline-flex items-center gap-1 text-brand hover:underline">
+            <Icon name="link" size={12} /> {o.source_name}
+          </a>
+        </div>
       </div>
     </div>
   );

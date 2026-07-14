@@ -13,7 +13,7 @@ import {
   VoteAggregate,
 } from './types';
 
-export const FORMULA_VERSION = 'perf-v1-equalweight-percentile';
+export const FORMULA_VERSION = 'perf-v2-weighted-percentile';
 
 // Bayesian prior for the 1..5 sentiment scale: pull thin samples toward neutral.
 const SENTIMENT_PRIOR_MEAN = 3.0; // neutral
@@ -23,6 +23,27 @@ const SENTIMENT_PRIOR_STRENGTH = 10; // "C" — equivalent number of prior votes
 // (they do not ask questions / debate in the ordinary way). Excluding them
 // avoids both penalising the minister and skewing the cohort distribution.
 const MINISTER_EXEMPT: PerfMetric[] = ['questions_asked', 'debates_participated'];
+
+// perf-v2: explicit weights instead of equal-weighting whatever happens to be
+// available. Attendance is the most universal duty; questions and debates
+// measure active scrutiny of the government; bills/MPLADS reward initiative
+// but have patchy source coverage, so they carry less weight. Weights are
+// renormalised over the metrics a member is actually scored on.
+export const METRIC_WEIGHT: Record<PerfMetric, number> = {
+  attendance_pct: 0.35,
+  questions_asked: 0.25,
+  debates_participated: 0.2,
+  private_member_bills: 0.1,
+  mplads_utilisation_pct: 0.1,
+};
+
+/** perf-v2 coverage rule: a composite needs at least this many scored metrics.
+ *  Ministers are exempt from questions/debates, so one metric (attendance) is
+ *  enough for them; everyone else needs 2+ so a single number can never make
+ *  a rank on its own. Below the floor → composite is null ("not enough data"). */
+export function minMetricsRequired(p: Politician): number {
+  return p.is_minister ? 1 : 2;
+}
 
 export function tenureBracket(terms?: number): string {
   if (terms == null) return 'tenure: unknown';
@@ -94,9 +115,20 @@ export function computePerformanceScores(politicians: Politician[]): Map<string,
         const vals = dist[m];
         if (vals && vals.length) metric_percentiles[m] = percentile(vals, v, true);
       }
-      const pcts = Object.values(metric_percentiles);
-      const composite =
-        pcts.length > 0 ? Math.round(pcts.reduce((a, b) => a + b, 0) / pcts.length) : null;
+      // perf-v2: weighted mean of the metric percentiles, weights renormalised
+      // over the metrics actually scored; null when below the coverage floor.
+      const used = Object.keys(metric_percentiles) as PerfMetric[];
+      let composite: number | null = null;
+      if (used.length >= minMetricsRequired(p)) {
+        let wSum = 0;
+        let acc = 0;
+        for (const m of used) {
+          const w = METRIC_WEIGHT[m];
+          acc += w * metric_percentiles[m]!;
+          wSum += w;
+        }
+        composite = wSum > 0 ? Math.round(acc / wSum) : null;
+      }
 
       result.set(p.id, {
         politician_id: p.id,
@@ -163,6 +195,7 @@ function toEntry(
     stateCode: p.stateCode,
     performance_percentile: ps?.composite_percentile ?? null,
     performance_cohort: ps?.cohort_label ?? '',
+    metrics_used: ps?.metrics_used.length ?? 0,
     sentiment_mean: ss?.bayesian_mean ?? null,
     sentiment_votes: ss?.n_votes ?? 0,
     photo_url: p.photo_url,
@@ -191,7 +224,7 @@ export function buildRankings(
   const now = new Date().toISOString();
   const active = politicians.filter((p) => p.active);
   const note =
-    'Percentiles are computed within a comparable cohort (same house + tenure) among politicians currently in the dataset. Coverage is expanding; see the Methodology page.';
+    'Weighted percentile within a comparable cohort (same house + tenure): attendance 35%, questions 25%, debates 20%, bills 10%, MPLADS 10% — renormalised over verified metrics. Members below the data floor (2 metrics; 1 for ministers) are shown as “not enough data”, never ranked. See the Methodology page.';
 
   const rankings: Ranking[] = [];
   const mk = (level: Ranking['level'], geo: string, label: string, ps: Politician[]) => {

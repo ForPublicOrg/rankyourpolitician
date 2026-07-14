@@ -36,6 +36,7 @@ const refresh = !has('--no-refresh');
 interface Step { name: string; cmd: string; env?: Record<string, string>; heavy?: boolean }
 const STEPS: Step[] = [
   { name: 'Wikidata bio / career / photos / QIDs', cmd: 'enrich-wikidata', heavy: true },
+  { name: 'Verify stored QIDs (strip wrong photos/facts)', cmd: 'verify-wikidata', heavy: true },
   { name: 'Extra photos (Hindi + regional Wikipedia)', cmd: 'enrich-photos', heavy: true },
   { name: 'Affidavits — Lok Sabha (MyNeta/ADR)', cmd: 'enrich-affidavits' },
   { name: 'Affidavits — state assemblies (MyNeta/ADR)', cmd: 'enrich-affidavits-states' },

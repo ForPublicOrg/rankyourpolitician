@@ -76,6 +76,12 @@ async function main() {
       await import('./enrich-wikidata');
       break;
     }
+    case 'verify-wikidata': {
+      // Re-validate every stored QID against the record (constituency/house/
+      // party evidence); strip wrong photos + QID-cited facts on failure.
+      await import('./verify-wikidata');
+      break;
+    }
     case 'enrich-affidavits': {
       // Add declared assets/liabilities/criminal cases from MyNeta (ADR).
       await import('./enrich-affidavits');

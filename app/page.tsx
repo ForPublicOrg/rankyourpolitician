@@ -5,12 +5,11 @@ import { getNationalRanking, getStates, getDatasetMeta, getCentralGovernment, ge
 import { buildStatePaths } from '@/lib/geo';
 import SearchBox from '@/components/SearchBox';
 import GeoMap, { type GeoMapShape } from '@/components/GeoMap';
-import RankingList from '@/components/RankingList';
 import LastUpdated from '@/components/LastUpdated';
 import AdSlot from '@/components/AdSlot';
 import HierarchyLadder from '@/components/HierarchyLadder';
-import { SectionCard, Avatar, PartyChip, Chip, StatPill, Eyebrow } from '@/components/ui';
-import { ScoreRing, Stars } from '@/components/viz';
+import { SectionCard, Avatar, PartyChip, StatPill, Eyebrow } from '@/components/ui';
+import { RankBadge } from '@/components/viz';
 import { Reveal, CountUp } from '@/components/motion';
 import Icon, { type IconName } from '@/components/Icon';
 import { Analytics } from '@vercel/analytics/next';
@@ -46,6 +45,11 @@ export default async function HomePage() {
 
   const pm = central.find((m) => m.rank === 'PM');
   const topCabinet = central.filter((m) => m.rank === 'Cabinet').slice(0, 5);
+  // A small server-rendered teaser — the full leaderboard lives at /rankings
+  // (fetched lazily there). Embedding all ~5,400 entries here used to make the
+  // home payload multiple MB and route transitions take seconds.
+  const topLeaders = (ranking?.entries ?? []).filter((e) => e.performance_percentile != null).slice(0, 5);
+  const totalLeaders = ranking?.entries.length ?? 0;
   const examples = ['Mandi', 'Goa', 'Anurag Thakur'];
   const tiers: { role: string; icon: IconName; tint: string }[] = [
     { role: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand' },
@@ -60,7 +64,7 @@ export default async function HomePage() {
           causing horizontal scroll WITHOUT vertically clipping the search
           dropdown, which is absolutely-positioned and overflows this section. */}
       <section className="relative overflow-x-clip border-b border-line/60">
-        <div className="mx-auto max-w-content px-4 pb-10 pt-10 sm:pt-14">
+        <div className="mx-auto max-w-content px-4 pb-8 pt-8 sm:pt-10">
           <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_1fr]">
             <div className="text-center lg:text-left">
               <h1 className="animate-fade-up font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
@@ -101,8 +105,10 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <div className="animate-map-in" style={{ animationDelay: '150ms' }}>
-              <GeoMap shapes={shapes} w={520} h={560} ariaLabel={tr('home.mapAria')} maxWidthClass="max-w-md" />
+            {/* The map is desktop-only: on phones it added ~600px of scroll
+                before any content. Mobile users get it on /india instead. */}
+            <div className="hidden animate-map-in lg:block" style={{ animationDelay: '150ms' }}>
+              <GeoMap shapes={shapes} w={520} h={560} ariaLabel={tr('home.mapAria')} maxWidthClass="max-w-sm" />
               <p className="mt-2 text-center text-sm text-ink-faint">
                 <Icon name="pin" size={14} className="mr-1 inline-block" />
                 {tr('home.mapHint')}
@@ -112,7 +118,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-content px-4 py-8">
+      <div className="mx-auto max-w-content px-4 py-6">
         {/* Org chart of India — how power flows */}
         <Reveal as="section" className="mb-8">
           <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
@@ -145,27 +151,30 @@ export default async function HomePage() {
             }
           >
             {pm ? (
-              <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.1fr_1fr]">
-                <Link href={`/person/${pm.politicianId || pm.id}`} className="pressable flex gap-3 rounded-2xl border border-brand/20 bg-gradient-to-br from-brand-soft/70 to-white p-4 transition hover:shadow-lift">
-                  <Avatar name={pm.name} src={pm.photo_url} size={64} />
-                  <div className="min-w-0">
-                    <Chip tone="brand" icon="parliament">{tr('central.pm')}</Chip>
-                    <p className="mt-1.5 text-xl font-bold text-ink">{pm.name}</p>
-                    <div className="mt-1"><PartyChip party={pm.party} /></div>
-                  </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <Link href={`/person/${pm.politicianId || pm.id}`} className="pressable flex min-w-0 items-center gap-3 rounded-2xl border border-brand/20 bg-gradient-to-br from-brand-soft/70 to-white px-4 py-3 transition hover:shadow-lift">
+                  <Avatar name={pm.name} src={pm.photo_url} size={48} />
+                  <span className="min-w-0">
+                    <span className="block text-[11px] font-bold uppercase tracking-wide text-brand">{tr('central.pm')}</span>
+                    <span className="block truncate font-bold text-ink">{pm.name}</span>
+                  </span>
                 </Link>
-                <div>
+                <div className="min-w-0 flex-1">
                   <Eyebrow>{tr('central.cabinet')}</Eyebrow>
-                  <ul className="mt-2 divide-y divide-line/70 overflow-hidden rounded-xl border border-line/70 bg-white/80">
+                  <div className="mt-1.5 flex flex-wrap gap-1.5">
                     {topCabinet.map((m) => (
-                      <li key={m.id}>
-                        <Link href={`/person/${m.politicianId || m.id}`} className="flex items-center justify-between gap-3 px-3 py-2 text-sm hover:bg-brand-soft/50">
-                          <span className="font-medium text-ink">{m.name}</span>
-                          <span className="truncate text-right text-xs text-ink-faint">{m.portfolios[0]}</span>
-                        </Link>
-                      </li>
+                      <Link
+                        key={m.id}
+                        href={`/person/${m.politicianId || m.id}`}
+                        className="pressable rounded-full border border-line bg-white/85 px-3 py-1 text-xs font-semibold text-ink-soft hover:border-brand/40 hover:text-brand"
+                      >
+                        {m.name}
+                      </Link>
                     ))}
-                  </ul>
+                    <Link href="/india" className="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand hover:bg-brand hover:text-white">
+                      {tr('central.seeAll')} →
+                    </Link>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -199,42 +208,71 @@ export default async function HomePage() {
           <Reveal>
             <SectionCard title={tr('home.exploreTitle')} subtitle={tr('home.exploreHelp')} icon="map">
               <Eyebrow>{tr('home.statesWithData')}</Eyebrow>
+              {/* Top 12 only — the hero map covers every state, and /hierarchy
+                  lists them all. Keeps the home page within ~2 screens. */}
               <ul className="mt-2 flex flex-wrap gap-2">
-                {states.map((s) => (
-                  <li key={s.stateCode}>
-                    <Link
-                      href={`/state/${s.stateCode}`}
-                      className="pressable inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand hover:text-white"
-                    >
-                      {s.state}
-                      <span className="rounded-full bg-white/90 px-1.5 text-xs tabular-nums text-brand-ink">{s.count}</span>
-                    </Link>
-                  </li>
-                ))}
+                {[...states]
+                  .sort((a, b) => b.count - a.count)
+                  .slice(0, 12)
+                  .map((s) => (
+                    <li key={s.stateCode}>
+                      <Link
+                        href={`/state/${s.stateCode}`}
+                        className="pressable inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand hover:text-white"
+                      >
+                        {s.state}
+                        <span className="rounded-full bg-white/90 px-1.5 text-xs tabular-nums text-brand-ink">{s.count}</span>
+                      </Link>
+                    </li>
+                  ))}
+                <li>
+                  <Link
+                    href="/hierarchy"
+                    className="pressable inline-flex items-center gap-1 rounded-full border border-brand/30 px-3.5 py-1.5 text-sm font-bold text-brand hover:bg-brand-soft"
+                  >
+                    +{Math.max(0, states.length - 12)} <Icon name="arrow" size={13} />
+                  </Link>
+                </li>
               </ul>
             </SectionCard>
           </Reveal>
 
           <Reveal delay={90}>
             <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star" aside={<LastUpdated date={meta.lastUpdated} />}>
-              <div className="mb-4 grid grid-cols-2 gap-3">
-                <div className="flex items-center gap-2.5 rounded-xl bg-perf-soft px-3 py-2">
-                  <ScoreRing value={78} size={44} animate={false} />
-                  <div className="text-xs">
-                    <p className="font-bold text-perf-ink">{tr('home.scoresTitle')}</p>
-                    <p className="text-ink-soft">{tr('home.perfHelp')}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2.5 rounded-xl bg-rating-soft px-3 py-2">
-                  <Stars value={4} size={16} />
-                  <div className="text-xs">
-                    <p className="font-bold text-rating-ink">{tr('profile.scoreRating')}</p>
-                    <p className="text-ink-soft">{tr('home.ratingHelp')}</p>
-                  </div>
-                </div>
-              </div>
-              {ranking && ranking.entries.length > 0 ? (
-                <RankingList entries={ranking.entries} />
+              {topLeaders.length > 0 ? (
+                <>
+                  <ol className="space-y-2">
+                    {topLeaders.map((e, i) => (
+                      <li key={e.politician_id}>
+                        <Link
+                          href={`/person/${e.politician_id}`}
+                          className="pressable flex items-center gap-3 rounded-xl border border-line bg-white px-3 py-2 transition hover:border-brand/40 hover:shadow-lift"
+                        >
+                          <RankBadge rank={i + 1} />
+                          <Avatar name={e.name} src={e.photo_url} size={40} />
+                          <div className="min-w-0 flex-1">
+                            <div className="flex flex-wrap items-center gap-x-2">
+                              <span className="truncate text-sm font-bold text-ink">{e.name}</span>
+                              <PartyChip party={e.party} />
+                            </div>
+                            <p className="truncate text-xs text-ink-faint">
+                              {e.constituencyName}, {e.state}
+                            </p>
+                          </div>
+                          <span className="shrink-0 rounded-full bg-perf-soft px-2.5 py-1 text-xs font-bold text-perf">
+                            {tr('ranking.topShort', { n: Math.max(1, Math.round(100 - (e.performance_percentile ?? 0))) })}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ol>
+                  <Link
+                    href="/rankings"
+                    className="mt-3 flex items-center justify-center gap-1.5 rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold text-brand hover:bg-brand-soft/60"
+                  >
+                    {tr('ranking.seeAllCount', { n: totalLeaders })} <Icon name="arrow" size={14} />
+                  </Link>
+                </>
               ) : (
                 <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
               )}
@@ -253,21 +291,21 @@ export default async function HomePage() {
               <p className="text-sm text-ink-faint">{tr('home.tiersHelp')}</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             {tiers.map(({ role, icon, tint }, i) => (
               <Reveal key={role} delay={i * 80}>
                 <Link
                   href="/accountability"
-                  className="group pressable block h-full rounded-3xl p-5 glass transition hover:shadow-lift"
+                  className="group pressable flex h-full items-center gap-3 rounded-2xl p-3.5 glass transition hover:shadow-lift"
                 >
-                  <span className={`inline-grid h-12 w-12 place-items-center rounded-2xl ${tint}`}>
-                    <Icon name={icon} size={26} />
+                  <span className={`inline-grid h-10 w-10 shrink-0 place-items-center rounded-xl ${tint}`}>
+                    <Icon name={icon} size={22} />
                   </span>
-                  <h3 className="mt-3 font-bold text-ink">{tr(`accountability.roles.${role}.title`)}</h3>
-                  <p className="mt-1 text-sm text-ink-soft">{tr(`accountability.roles.${role}.oneLine`)}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                    {tr('common.readMore')} <Icon name="arrow" size={15} className="transition group-hover:translate-x-0.5" />
+                  <span className="min-w-0">
+                    <h3 className="truncate text-sm font-bold text-ink">{tr(`accountability.roles.${role}.title`)}</h3>
+                    <p className="line-clamp-2 text-xs text-ink-soft">{tr(`accountability.roles.${role}.oneLine`)}</p>
                   </span>
+                  <Icon name="arrow" size={15} className="ml-auto shrink-0 text-brand transition group-hover:translate-x-0.5" />
                 </Link>
               </Reveal>
             ))}

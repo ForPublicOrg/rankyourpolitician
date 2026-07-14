@@ -3,6 +3,7 @@
 // stays on the server and only tiny path strings reach the browser.
 import { geoIdentity, geoPath } from 'd3-geo';
 import statesGeo from '@/data/geo/india-states.json';
+import { shrinkPathData } from './geo-shared';
 
 export const MAP_W = 520;
 export const MAP_H = 560;
@@ -64,14 +65,16 @@ export function buildStatePaths(): StatePath[] {
   // (unlike geoMercator) it never inverts a fill when the source shapefile's
   // ring order differs from RFC 7946. reflectY flips lat (north = up).
   const projection = geoIdentity().reflectY(true).fitSize([MAP_W, MAP_H], fc as any);
-  const path = geoPath(projection);
+  // Integer coordinates + ≥2px point decimation: the hero map used to be
+  // ~514KB of inline SVG — invisible detail that slowed every page load.
+  const path = geoPath(projection).digits(0);
   cached = fc.features.map((f: any) => {
     const name = f.properties.ST_NM as string;
     const [cx, cy] = path.centroid(f);
     return {
       code: STATE_CODE_BY_NAME[name] ?? null,
       name,
-      d: path(f) || '',
+      d: shrinkPathData(path(f) || ''),
       cx: Number.isFinite(cx) ? cx : 0,
       cy: Number.isFinite(cy) ? cy : 0,
     };

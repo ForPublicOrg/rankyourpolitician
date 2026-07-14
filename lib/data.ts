@@ -25,7 +25,8 @@ import seedConstituencies from '@/data/seed/constituencies.json';
 import seedCentral from '@/data/seed/central_government.json';
 import seedDistrictOfficials from '@/data/seed/district_officials.json';
 import seedStateGov from '@/data/seed/state_government.json';
-import { STATE_RANK_LABEL, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
+import seedConstitutional from '@/data/seed/constitutional_offices.json';
+import { STATE_RANK_LABEL, type ConstitutionalOffice, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
 
 function slugify(s: string): string {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -246,12 +247,17 @@ export async function getPerson(
     const allRoles = [...roles, ...stateRoles];
     const portfolios = [...new Set(allRoles.flatMap((r) => r.portfolios))];
     const extraSources = allRoles.filter((r) => r.source_url).map((r) => [r.source_url, r.source_name] as [string, string]);
+    // Constitutional/parliamentary office (Speaker, Leader of the Opposition…)
+    // — lead with it so e.g. the LoP isn't shown as "just an MP".
+    const constRoles = (seedConstitutional as unknown as ConstitutionalOffice[]).filter((o) => o.politicianId === id);
+    if (constRoles.length) extraSources.push(...constRoles.map((o) => [o.source_url, o.source_name] as [string, string]));
     const sr = stateRoles[0];
     const statePosition = sr
       ? sr.rank === 'CM' ? `Chief Minister of ${sr.state}`
         : sr.rank === 'DyCM' ? `Deputy Chief Minister of ${sr.state}`
         : `${STATE_RANK_LABEL[sr.rank]}, ${sr.state}`
       : undefined;
+    const constPosition = constRoles[0]?.title;
     return {
       person: {
         kind: 'elected' as const,
@@ -268,8 +274,9 @@ export async function getPerson(
         photo_url: p.photo_url,
         is_minister: p.is_minister || allRoles.length > 0,
         is_pm: roles.some((r) => r.rank === 'PM'),
-        // Lead with the executive office (Chief Minister…) when they hold one.
-        current_position: statePosition || p.current_position,
+        // Lead with the executive office (Chief Minister…) when they hold one,
+        // then a constitutional office (Speaker / Leader of the Opposition).
+        current_position: statePosition || constPosition || p.current_position,
         portfolios,
         ministerRank: roles[0]?.rank,
         ministerRankLabel: roles[0] ? MINISTER_RANK_LABEL[roles[0].rank] : sr ? STATE_RANK_LABEL[sr.rank] : undefined,
@@ -465,6 +472,12 @@ async function joinMinisterPhotos<T extends { politicianId?: string; photo_url?:
     const p = idx.politicianById.get(m.politicianId);
     return p?.photo_url ? { ...m, photo_url: p.photo_url } : m;
   });
+}
+
+/** Constitutional offices (President, VP, LS Speaker, Leaders of the
+ *  Opposition) — committed seed only, photos joined from linked profiles. */
+export async function getConstitutionalOffices(): Promise<ConstitutionalOffice[]> {
+  return joinMinisterPhotos(seedConstitutional as unknown as ConstitutionalOffice[]);
 }
 
 export async function getCentralGovernment(): Promise<Minister[]> {

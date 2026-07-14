@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
 import { getI18n } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -20,9 +19,10 @@ export default async function WhoPage() {
       <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink">{tr('finder.title')}</h1>
       <p className="mt-2 max-w-2xl text-lg text-ink-soft">{tr('finder.subtitle')}</p>
       <div className="mt-6">
-        <Suspense fallback={<div className="skeleton h-40 w-full rounded-3xl" />}>
-          <Finder />
-        </Suspense>
+        {/* Finder reads the query from window.location on mount (no
+            useSearchParams), so no Suspense boundary is needed — the old one
+            could wedge on its fallback and leave the page blank. */}
+        <Finder />
       </div>
     </div>
   );

@@ -2,7 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getI18n } from '@/lib/i18n/server';
 import { t, tArr } from '@/lib/i18n';
-import { getCentralGovernment, getNationalStats, getStateGovernments, getIndex } from '@/lib/data';
+import { getCentralGovernment, getConstitutionalOffices, getNationalStats, getStateGovernments, getIndex } from '@/lib/data';
+import type { ConstitutionalOffice } from '@/lib/types';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StateCMPicker, { type CmSummary } from '@/components/StateCMPicker';
 import { Avatar, Chip, PageHero, Eyebrow } from '@/components/ui';
@@ -80,13 +81,18 @@ export default async function HierarchyPage() {
   const { dict } = await getI18n();
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
-  const [central, stats, stateGovs, idx] = await Promise.all([
+  const [central, stats, stateGovs, idx, constitutional] = await Promise.all([
     getCentralGovernment(),
     getNationalStats(),
     getStateGovernments(),
     getIndex(),
+    getConstitutionalOffices(),
   ]);
   const pm = central.find((m) => m.rank === 'PM');
+  const co = (k: ConstitutionalOffice['office']) => constitutional.find((o) => o.office === k);
+  const president = co('president');
+  const vicePresident = co('vice_president');
+  const parliamentOfficers = [co('ls_speaker'), co('lop_ls'), co('lop_rs')].filter(Boolean) as ConstitutionalOffice[];
 
   const mlasByState = new Map<string, number>();
   for (const p of idx.politicians) {
@@ -155,10 +161,64 @@ export default async function HierarchyPage() {
                 </Chip>
               </>
             }
-          />
+          >
+            {/* Presiding officer + the statutory Opposition — the House's own
+                counterweights to the government (info-only, never rated). */}
+            {parliamentOfficers.length > 0 && (
+              <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                {parliamentOfficers.map((o) => (
+                  <div key={o.id} className="flex items-center gap-2.5 rounded-2xl bg-white/90 p-2.5">
+                    <Avatar name={o.name} src={o.photo_url} size={38} />
+                    {/* Plain text (no inner <a>): the whole Node is already a link */}
+                    <div className="min-w-0">
+                      <p className="truncate text-[10px] font-bold uppercase tracking-wide text-ink-faint">{o.title}</p>
+                      <p className="truncate text-sm font-bold text-ink">{o.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </Node>
         </Reveal>
 
-        <Drop label={tr('hierarchyPage.parliamentChooses')} />
+        <Drop label={tr('hierarchyPage.electsPresident')} />
+
+        {/* 2b — Head of State */}
+        {president && (
+          <>
+            <Reveal>
+              <Node
+                icon="law"
+                eyebrow={tr('hierarchyPage.presidentEyebrow')}
+                title={president.title}
+                desc={president.note}
+                href="/india"
+                chips={<Chip tone="neutral">{tr('hierarchyPage.chipNonPartisan')}</Chip>}
+              >
+                <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                  <div className="flex items-center gap-3 rounded-2xl bg-white/90 p-3">
+                    <Avatar name={president.name} src={president.photo_url} size={48} />
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold uppercase tracking-wide text-ink-faint">{president.title}</p>
+                      <p className="truncate font-bold text-ink">{president.name}</p>
+                    </div>
+                  </div>
+                  {vicePresident && (
+                    <div className="flex items-center gap-3 rounded-2xl bg-white/90 p-3">
+                      <Avatar name={vicePresident.name} src={vicePresident.photo_url} size={48} />
+                      <div className="min-w-0">
+                        <p className="text-[11px] font-bold uppercase tracking-wide text-ink-faint">{vicePresident.title}</p>
+                        <p className="truncate font-bold text-ink">{vicePresident.name}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </Node>
+            </Reveal>
+            <Drop label={tr('hierarchyPage.presidentAppoints')} />
+          </>
+        )}
+        {!president && <Drop label={tr('hierarchyPage.parliamentChooses')} />}
 
         <Reveal>
           <Node

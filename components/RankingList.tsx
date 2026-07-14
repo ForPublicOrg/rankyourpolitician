@@ -12,7 +12,19 @@ type SortKey = 'performance' | 'rating';
 
 const PAGE_SIZE = 20;
 
-export default function RankingList({ entries, limit }: { entries: RankingEntry[]; limit?: number }) {
+export default function RankingList({
+  entries,
+  limit,
+  seeAllHref,
+  total,
+}: {
+  entries: RankingEntry[];
+  limit?: number;
+  /** Link to the full ranking when `entries` is a capped slice. */
+  seeAllHref?: string;
+  /** Size of the uncapped list (for the "see all" label). */
+  total?: number;
+}) {
   const { t } = useI18n();
   const [sort, setSort] = useState<SortKey>('performance');
   const [page, setPage] = useState(1);
@@ -32,6 +44,14 @@ export default function RankingList({ entries, limit }: { entries: RankingEntry[
     return limit ? arr.slice(0, limit) : arr;
   }, [entries, sort, limit]);
 
+  // Entries WITHOUT a value under the current sort are never given a rank
+  // number — an alphabetical tail is not a ranking. They render after a
+  // divider, badge-less, so "not enough data" can't be mistaken for "worst".
+  const rankedCount = useMemo(() => {
+    const key = (e: RankingEntry) => (sort === 'performance' ? e.performance_percentile : e.sentiment_mean);
+    return sorted.reduce((n, e) => n + (key(e) != null ? 1 : 0), 0);
+  }, [sorted, sort]);
+
   // Reset to the first page when the sort order or the underlying list changes.
   useEffect(() => setPage(1), [sort, entries]);
 
@@ -44,6 +64,9 @@ export default function RankingList({ entries, limit }: { entries: RankingEntry[
     setPage(p);
     topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  const grandTotal = total ?? entries.length;
+  const truncated = seeAllHref && grandTotal > sorted.length;
 
   return (
     <div>
@@ -68,40 +91,62 @@ export default function RankingList({ entries, limit }: { entries: RankingEntry[
       </div>
 
       <ol className="space-y-2.5">
-        {visible.map((e, i) => (
-          <li key={e.politician_id}>
-            <Link
-              href={`/person/${e.politician_id}`}
-              className="flex items-center gap-3 rounded-2xl border border-line bg-white p-3 transition hover:border-brand/40 hover:shadow-lift sm:gap-4 sm:p-4"
-            >
-              <RankBadge rank={start + i + 1} />
-              <Avatar name={e.name} src={e.photo_url} size={52} />
-
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <span className="font-bold text-ink">{e.name}</span>
-                  <PartyChip party={e.party} />
-                </div>
-                <p className="mt-0.5 flex items-center gap-1 truncate text-sm text-ink-faint">
-                  <Icon name="pin" size={14} /> {e.constituencyName}, {e.state}
+        {visible.map((e, i) => {
+          const abs = start + i;
+          const isRanked = abs < rankedCount;
+          const showDivider = rankedCount > 0 && rankedCount < sorted.length && (abs === rankedCount || (i === 0 && start > rankedCount));
+          return (
+            <li key={e.politician_id}>
+              {showDivider && (
+                <p className="mb-2.5 flex items-center gap-2 px-1 text-xs font-semibold uppercase tracking-wide text-ink-faint">
+                  <Icon name="info" size={14} /> {t('ranking.unrankedHeader')}
                 </p>
-                {/* Rating shown inline (mobile-friendly) */}
-                <div className="mt-1.5 flex items-center gap-1.5">
-                  <Stars value={e.sentiment_mean} size={15} />
-                  <span className="text-xs text-ink-faint">
-                    {e.sentiment_mean == null ? t('ranking.noVotes') : `${e.sentiment_mean.toFixed(1)} · ${t('ranking.votes', { n: e.sentiment_votes })}`}
-                  </span>
-                </div>
-              </div>
+              )}
+              <Link
+                href={`/person/${e.politician_id}`}
+                className="flex items-center gap-3 rounded-2xl border border-line bg-white p-3 transition hover:border-brand/40 hover:shadow-lift sm:gap-4 sm:p-4"
+              >
+                <RankBadge rank={isRanked ? abs + 1 : null} />
+                <Avatar name={e.name} src={e.photo_url} size={52} />
 
-              {/* Performance ring */}
-              <div className="hidden shrink-0 text-center sm:block">
-                <ScoreRing value={e.performance_percentile} size={66} label={t('ranking.topLabel')} />
-              </div>
-              <Icon name="chevron" size={18} className="-rotate-90 text-ink-faint" />
-            </Link>
-          </li>
-        ))}
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <span className="font-bold text-ink">{e.name}</span>
+                    <PartyChip party={e.party} />
+                  </div>
+                  <p className="mt-0.5 flex items-center gap-1 truncate text-sm text-ink-faint">
+                    <Icon name="pin" size={14} /> {e.constituencyName}, {e.state}
+                  </p>
+                  {/* Rating + (mobile) performance shown inline */}
+                  <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                    <span className="flex items-center gap-1.5">
+                      <Stars value={e.sentiment_mean} size={15} />
+                      <span className="text-xs text-ink-faint">
+                        {e.sentiment_mean == null ? t('ranking.noVotes') : `${e.sentiment_mean.toFixed(1)} · ${t('ranking.votes', { n: e.sentiment_votes })}`}
+                      </span>
+                    </span>
+                    {e.performance_percentile != null && (
+                      <span className="text-xs font-bold text-perf sm:hidden">
+                        {t('ranking.topShort', { n: Math.max(1, Math.round(100 - e.performance_percentile)) })}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Performance ring */}
+                <div className="hidden shrink-0 text-center sm:block">
+                  <ScoreRing
+                    value={e.performance_percentile}
+                    size={66}
+                    label={t('ranking.topLabel')}
+                    emptyLabel={t('ranking.noData')}
+                  />
+                </div>
+                <Icon name="chevron" size={18} className="-rotate-90 text-ink-faint" />
+              </Link>
+            </li>
+          );
+        })}
       </ol>
 
       <Pager
@@ -111,6 +156,15 @@ export default function RankingList({ entries, limit }: { entries: RankingEntry[
         total={sorted.length}
         pageSize={PAGE_SIZE}
       />
+
+      {truncated && (
+        <Link
+          href={seeAllHref}
+          className="mt-3 flex items-center justify-center gap-1.5 rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold text-brand hover:bg-brand-soft/60"
+        >
+          {t('ranking.seeAllCount', { n: grandTotal })} <Icon name="arrow" size={14} />
+        </Link>
+      )}
     </div>
   );
 }

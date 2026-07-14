@@ -35,6 +35,47 @@ export function normGeoName(s: string): string {
   return NAME_ALIAS[n] ?? n;
 }
 
+/** Shrink an SVG path string: drop consecutive line-to points that moved less
+ *  than `minDelta` px. Full-precision d3 output made pages megabytes heavy —
+ *  at display sizes (≤600px wide) sub-2px detail is invisible but costs real
+ *  download + hydration time on every navigation. */
+export function shrinkPathData(d: string, minDelta = 2): string {
+  // Split into subpaths (each "M…Z" ring) so a tiny ring that would decimate
+  // to nothing keeps its original points instead of disappearing.
+  const rings = d.match(/M[^M]*/g);
+  if (!rings) return d;
+  let out = '';
+  for (const ring of rings) {
+    const re = /([MLZ])([^MLZ]*)/g;
+    let piece = '';
+    let kept = 0;
+    let lastX = NaN;
+    let lastY = NaN;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(ring))) {
+      const cmd = m[1];
+      if (cmd === 'Z') {
+        piece += 'Z';
+        continue;
+      }
+      const [x, y] = m[2].split(',').map(Number);
+      if (cmd === 'M') {
+        piece += `M${x},${y}`;
+        lastX = x;
+        lastY = y;
+        continue;
+      }
+      if (Math.abs(x - lastX) + Math.abs(y - lastY) < minDelta) continue;
+      piece += `L${x},${y}`;
+      kept++;
+      lastX = x;
+      lastY = y;
+    }
+    out += kept >= 2 ? piece : ring; // too small to decimate — keep as-is
+  }
+  return out;
+}
+
 /** Project features to fit `width`, returning path strings + tight height. */
 export function projectFeatures(
   features: { properties: Record<string, unknown>; geometry: unknown }[],
@@ -48,7 +89,9 @@ export function projectFeatures(
   // from RFC 7946. reflectY flips latitude (north = up).
   // (fitWidth exists on geoIdentity at runtime; @types/d3-geo omits it.)
   const projection = (geoIdentity().reflectY(true) as any).fitWidth(width, fc);
-  const path = geoPath(projection);
+  // Integer coordinates (digits 0): sub-pixel precision is invisible at these
+  // sizes but multiplies the payload.
+  const path = geoPath(projection).digits(0);
   const [[, y0], [, y1]] = path.bounds(fc);
   const h = Math.ceil(y1 - y0) + 2;
 
@@ -56,7 +99,7 @@ export function projectFeatures(
     const [cx, cy] = path.centroid(f as GeoPermissibleObjects);
     return {
       name: nameOf(f.properties),
-      d: path(f as GeoPermissibleObjects) || '',
+      d: shrinkPathData(path(f as GeoPermissibleObjects) || ''),
       cx: Number.isFinite(cx) ? cx : 0,
       cy: Number.isFinite(cy) ? cy : 0,
       meta: metaOf?.(f.properties),

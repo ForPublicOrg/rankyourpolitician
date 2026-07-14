@@ -14,7 +14,7 @@ export default function HierarchyLadder({ current }: { current?: 'national' | 's
     { key: 'area', icon: 'pin', href: '/hierarchy', tint: 'bg-paper-sink text-ink-soft' },
   ];
   return (
-    <div className="grid grid-cols-1 gap-1 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] sm:items-stretch sm:gap-0">
+    <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] sm:items-stretch sm:gap-0">
       {steps.map((s, i) => (
         <div key={s.key} className="contents">
           <Link href={s.href} className="block">
@@ -35,8 +35,8 @@ export default function HierarchyLadder({ current }: { current?: 'national' | 's
             </div>
           </Link>
           {i < steps.length - 1 && (
-            <div className="flex items-center justify-center px-1 py-0.5 text-brand/50" aria-hidden="true">
-              <Icon name="chevron" size={18} className="rotate-0 sm:-rotate-90" />
+            <div className="hidden items-center justify-center px-1 py-0.5 text-brand/50 sm:flex" aria-hidden="true">
+              <Icon name="chevron" size={18} className="-rotate-90" />
             </div>
           )}
         </div>

@@ -5,7 +5,7 @@
 // prebuilt static /who/{ST}.json payloads — no server work per lookup.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useI18n } from '@/lib/i18n/provider';
 import { PROBLEMS, PROBLEM_META, PROBLEM_ROUTES, OFFICE_META, CPGRAMS_URL } from '@/lib/offices';
 import { PROBLEM_CHAIN, ESCALATION_CHAINS } from '@/lib/escalation';
@@ -46,7 +46,6 @@ const AREA_KEY = 'ryp:my-area';
 export default function Finder() {
   const { t } = useI18n();
   const router = useRouter();
-  const params = useSearchParams();
 
   const [problem, setProblem] = useState<ProblemType | null>(null);
   const [area, setArea] = useState<'urban' | 'rural'>('urban');
@@ -58,10 +57,14 @@ export default function Finder() {
   const initialised = useRef(false);
 
   // Initial location: URL params win, else the remembered area.
+  // Read from window.location instead of useSearchParams(): this component
+  // only reads the query ONCE on mount, and useSearchParams forced a Suspense
+  // boundary that could wedge on the fallback (blank finder page).
   useEffect(() => {
     if (initialised.current) return;
     initialised.current = true;
     loadIndex().then(setStates).catch(() => setStates([]));
+    const params = new URLSearchParams(window.location.search);
     let st = params.get('state') || '';
     let d = params.get('district') || '';
     if (!st) {

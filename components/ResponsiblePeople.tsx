@@ -1,15 +1,22 @@
 'use client';
 // The "actual people" ladder: for a problem + district, the real humans to
-// contact in order — local office → DM/SP (named where verified) → the state
-// minister whose portfolio owns the department → the Chief Minister — plus the
-// district's own MLAs/MPs as the parallel elected lever. Shared by the /who
+// contact in ESCALATION ORDER, local-first:
+//   1. Level 1 — the office in your area (GP secretary / SHO / JE / ward office)
+//   2. Level 2 — the block/tehsil/sub-division officer above it
+//   3. Your MLA — the elected leader for YOUR assembly constituency (pickable)
+//   4. District administration — DM (SP first for police matters)
+//   5. State minister for the department → Chief Minister (the LAST resort,
+//      not the first stop)
+// plus the district's MPs as the parallel national lever. Shared by the /who
 // Finder and the district page section.
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
-import { PROBLEM_ROUTES, OFFICE_META } from '@/lib/offices';
+import { PROBLEM_ROUTES } from '@/lib/offices';
+import { ESCALATION_CHAINS, PROBLEM_CHAIN } from '@/lib/escalation';
 import { ministersForProblem, isPoliceProblem, type WhoPerson, type WhoDistrict } from '@/lib/responsibility';
 import type { ProblemType, OfficeType } from '@/lib/types';
-import { Avatar, Chip } from './ui';
+import { Avatar } from './ui';
 import Icon, { type IconName } from './Icon';
 
 export interface ResponsiblePeopleProps {
@@ -75,6 +82,17 @@ function Step({
   );
 }
 
+/** A role-level office card (from the verified escalation chains). */
+function OfficeCard({ title, handles, escalate }: { title: string; handles: string; escalate?: string }) {
+  return (
+    <div className="rounded-2xl border border-line/70 bg-white/85 p-3.5">
+      <p className="font-bold text-ink">{title}</p>
+      <p className="mt-0.5 text-sm text-ink-soft">{handles}</p>
+      {escalate && <p className="mt-1.5 text-xs text-ink-faint">{escalate}</p>}
+    </div>
+  );
+}
+
 export default function ResponsiblePeople({
   problem,
   area,
@@ -89,35 +107,112 @@ export default function ResponsiblePeople({
 }: ResponsiblePeopleProps) {
   const { t } = useI18n();
 
-  // Local first-stop offices for this problem (role-level; below district rank).
-  const localOffices = PROBLEM_ROUTES[problem][area].filter(
-    (o: OfficeType) => !['collector_dm', 'sp_district'].includes(o),
-  );
+  // ---- "Your MLA": resolve the district's MLAs to the user's own assembly
+  // constituency (remembered per district on this device). --------------------
+  const acKey = `ryp:my-ac:${stateCode}:${district}`;
+  const [acId, setAcId] = useState('');
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(acKey) || '';
+      setAcId(saved && people.mlas.some((m) => m.id === saved) ? saved : '');
+    } catch {
+      setAcId('');
+    }
+  }, [acKey, people.mlas]);
+  const selectAc = (id: string) => {
+    setAcId(id);
+    try {
+      if (id) localStorage.setItem(acKey, id);
+      else localStorage.removeItem(acKey);
+    } catch {
+      /* ignore */
+    }
+  };
+  const myMla = people.mlas.find((m) => m.id === acId) ?? (people.mlas.length === 1 ? people.mlas[0] : null);
+
+  // ---- Level 1 / Level 2 from the VERIFIED escalation chain for this problem.
+  // These are the sub-district rungs (GP/ward/station → block/tehsil) that used
+  // to be hidden behind a collapsed panel while everything jumped to ministers.
+  const chain = ESCALATION_CHAINS[PROBLEM_CHAIN[problem][area]];
+  const districtIdx = chain.rungs.findIndex((r) => r.level === 'district');
+  const level1 = chain.rungs[0];
+  const level2 = chain.rungs.slice(1, districtIdx > 1 ? Math.min(districtIdx, 3) : 2);
+
   const police = isPoliceProblem(problem);
   const deptMinisters = ministersForProblem(ministers, cm?.id, problem, area);
   // CMs often keep key departments (Home, Urban Development…) for themselves.
   const cmHoldsDept = !!cm && ministersForProblem([cm], undefined, problem, area, 1).length > 0;
   const dm = people.officials.find((o) => o.officeType === 'collector_dm');
   const sp = people.officials.find((o) => o.officeType === 'sp_district');
+  // Keep the route's own local office label as a hint under Level 1 when it
+  // differs from the chain rung (e.g. "BDO" for rural roads).
+  const routeLocal = PROBLEM_ROUTES[problem][area].filter(
+    (o: OfficeType) => !['collector_dm', 'sp_district'].includes(o),
+  );
 
   let n = 0;
   const districtHref = `/district/${stateCode}/${encodeURIComponent(district)}`;
+  const shownMlas = people.mlas.slice(0, 6);
 
   return (
     <div>
       <ol className="mt-1">
-        {/* 1 — the local office (role; no individual name needed) */}
-        {localOffices.length > 0 && (
-          <Step n={++n} icon={OFFICE_META[localOffices[0]].icon} title={t('who.stepOffice')}>
-            <div className="rounded-2xl border border-line/70 bg-white/85 p-3.5">
-              <p className="font-bold text-ink">{t(`offices.${localOffices[0]}.label`)}</p>
-              <p className="mt-0.5 text-sm text-ink-soft">{t(`offices.${localOffices[0]}.handles`)}</p>
-              <p className="mt-1.5 text-xs text-ink-faint">{t(`offices.${localOffices[0]}.escalate`)}</p>
+        {/* 1 — LEVEL 1: the office in your area */}
+        <Step n={++n} icon="home" title={t('who.stepLevel1')}>
+          <OfficeCard title={level1.title} handles={level1.handles} escalate={level1.escalateWhen} />
+        </Step>
+
+        {/* 2 — LEVEL 2: block / tehsil / sub-division, before anything district-wide */}
+        {level2.length > 0 && (
+          <Step n={++n} icon="layers" title={t('who.stepLevel2')}>
+            <div className="space-y-2">
+              {level2.map((r) => (
+                <OfficeCard key={r.id} title={r.title} handles={r.handles} escalate={r.escalateWhen} />
+              ))}
             </div>
           </Step>
         )}
 
-        {/* 2 — district administration: SP for police issues, DM for the rest */}
+        {/* 3 — YOUR MLA: the elected leader for your own assembly seat */}
+        {people.mlas.length > 0 && (
+          <Step n={++n} icon="people" title={t('who.stepMla')}>
+            {people.mlas.length > 1 && (
+              <>
+                <label htmlFor={`ac-${district}`} className="sr-only">{t('who.pickAc')}</label>
+                <select
+                  id={`ac-${district}`}
+                  value={acId}
+                  onChange={(e) => selectAc(e.target.value)}
+                  className="mb-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-ink outline-none focus:border-brand"
+                >
+                  <option value="">{t('who.pickAc')}</option>
+                  {people.mlas.map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.sub || m.name}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
+            {myMla ? (
+              <PersonRow p={myMla} role={`${t('district.chipMla')} · ${myMla.sub || ''}`} />
+            ) : (
+              <div className="grid gap-2 sm:grid-cols-2">
+                {shownMlas.map((p) => (
+                  <PersonRow key={p.id} p={p} role={`${t('district.chipMla')} · ${p.sub || ''}`} />
+                ))}
+              </div>
+            )}
+            {!myMla && people.mlas.length > shownMlas.length && (
+              <Link href={districtHref} className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-brand hover:underline">
+                {t('who.moreMlas', { n: people.mlas.length - shownMlas.length })} <Icon name="arrow" size={12} />
+              </Link>
+            )}
+            {!compact && <p className="mt-2 text-xs text-ink-faint">{t('who.mlaEscalateHint')}</p>}
+          </Step>
+        )}
+
+        {/* 4 — district administration: SP for police issues, DM for the rest */}
         <Step n={++n} icon="shield" title={t('who.stepDistrict')}>
           <div className="space-y-2">
             {(police ? (['sp_district', 'collector_dm'] as const) : (['collector_dm'] as const)).map((ot) => {
@@ -156,7 +251,8 @@ export default function ResponsiblePeople({
           </div>
         </Step>
 
-        {/* 3 — the state minister who runs this department.
+        {/* 5 — the state minister who runs this department, then the CM.
+             The political executive is the LAST resort, not the first stop.
              When the CM keeps the department (common for Home), the CM IS this
              step, so the separate CM step below is skipped. */}
         {(() => {
@@ -200,33 +296,19 @@ export default function ResponsiblePeople({
         })()}
       </ol>
 
-      {/* Parallel elected lever — the district's own MLAs and MPs */}
-      {(people.mlas.length > 0 || people.mps.length > 0) && (
+      {/* Parallel national lever — the district's MPs (MLAs now sit in the ladder) */}
+      {people.mps.length > 0 && (
         <div className="mt-2 rounded-3xl border border-perf/25 bg-perf-soft/40 p-4">
           <p className="flex items-center gap-1.5 text-sm font-bold text-perf-ink">
             <Icon name="people" size={16} /> {t('who.parallelTitle')}
           </p>
           {!compact && <p className="mt-0.5 text-xs text-ink-soft">{t('who.parallelHelp', { district })}</p>}
-          {people.mlas.length > 0 && (
-            <>
-              <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-ink-faint">{t('who.mlasLabel')}</p>
-              <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
-                {people.mlas.map((p) => (
-                  <PersonRow key={p.id} p={p} role={`${t('district.chipMla')} · ${p.sub || ''}`} />
-                ))}
-              </div>
-            </>
-          )}
-          {people.mps.length > 0 && (
-            <>
-              <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-ink-faint">{t('who.mpsLabel')}</p>
-              <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
-                {people.mps.map((p) => (
-                  <PersonRow key={p.id} p={p} role={`${t('district.chipMp')} · ${p.sub || ''}`} />
-                ))}
-              </div>
-            </>
-          )}
+          <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-ink-faint">{t('who.mpsLabel')}</p>
+          <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
+            {people.mps.map((p) => (
+              <PersonRow key={p.id} p={p} role={`${t('district.chipMp')} · ${p.sub || ''}`} />
+            ))}
+          </div>
         </div>
       )}
 
@@ -236,6 +318,11 @@ export default function ResponsiblePeople({
           {t('who.openDistrict', { district })} <Icon name="arrow" size={12} />
         </Link>
       </p>
+      {routeLocal.length > 0 && chain.variesNote && (
+        <p className="mt-2 text-[11px] leading-relaxed text-ink-faint">
+          <Icon name="info" size={12} className="mr-1 inline" /> {t('who.titlesVary')}
+        </p>
+      )}
     </div>
   );
 }

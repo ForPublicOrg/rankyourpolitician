@@ -161,7 +161,13 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             <Reveal>
               <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star">
                 {ranking && ranking.entries.length > 0 ? (
-                  <RankingList entries={ranking.entries} />
+                  // Top 100 only — the full state list lives on /rankings
+                  // (keeps this page's payload small and navigation fast).
+                  <RankingList
+                    entries={ranking.entries.slice(0, 100)}
+                    seeAllHref={`/rankings?state=${state}`}
+                    total={ranking.entries.length}
+                  />
                 ) : (
                   <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
                 )}

@@ -5,12 +5,16 @@ import Icon, { type IconName } from './Icon';
 import { clsx } from 'clsx';
 
 /** Circular progress ring for the Verified Performance percentile.
+ *  `value` is a 0–100 percentile (higher = better); it is DISPLAYED as
+ *  "top X%" (percentile 87 → "top 13%") so the number reads the way people
+ *  say it. The arc fills with the percentile itself.
  *  The arc sweeps in on first paint (CSS `ring-fill` keyframe). */
 export function ScoreRing({
   value,
   size = 132,
   label,
   sublabel,
+  emptyLabel,
   color = '#0d9488',
   animate = true,
 }: {
@@ -18,6 +22,8 @@ export function ScoreRing({
   size?: number;
   label?: string;
   sublabel?: string;
+  /** Short caption shown inside the ring when there is no score. */
+  emptyLabel?: string;
   color?: string;
   animate?: boolean;
 }) {
@@ -26,9 +32,17 @@ export function ScoreRing({
   const circ = 2 * Math.PI * r;
   const pct = value == null ? 0 : Math.max(0, Math.min(100, value));
   const offset = circ * (1 - pct / 100);
+  // "Top X%": percentile 87 → better than 87% of the cohort → top 13%.
+  const top = value == null ? null : Math.max(1, Math.round(100 - pct));
+  const aria = value == null ? (emptyLabel ?? 'No score') : `${label ? `${label} ` : ''}${top}%`;
   return (
-    <div className="relative inline-grid place-items-center" style={{ width: size, height: size }}>
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="-rotate-90">
+    <div
+      className="relative inline-grid place-items-center"
+      style={{ width: size, height: size }}
+      role="img"
+      aria-label={sublabel ?? aria}
+    >
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="-rotate-90" aria-hidden>
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e9e6df" strokeWidth={stroke} />
         {value != null && (
           <circle
@@ -46,20 +60,30 @@ export function ScoreRing({
           />
         )}
       </svg>
-      <div className="absolute inset-0 grid place-items-center text-center">
+      <div className="absolute inset-0 grid place-items-center text-center" aria-hidden>
         {value == null ? (
-          <span className="text-2xl font-bold text-ink-faint">—</span>
+          <div className="px-1">
+            <span className="block font-bold leading-none text-ink-faint" style={{ fontSize: size * 0.28 }}>—</span>
+            {emptyLabel && (
+              <span className="mt-0.5 block font-medium leading-tight text-ink-faint" style={{ fontSize: Math.max(8, size * 0.11) }}>
+                {emptyLabel}
+              </span>
+            )}
+          </div>
         ) : (
           <div>
-            <div className="text-3xl font-extrabold leading-none tabular-nums" style={{ color }}>
-              {value}
-              <span className="text-base font-bold">%</span>
+            {label && (
+              <div className="font-bold uppercase tracking-wide text-ink-faint" style={{ fontSize: Math.max(8, size * 0.11) }}>
+                {label}
+              </div>
+            )}
+            <div className="font-extrabold leading-none tabular-nums" style={{ color, fontSize: size * 0.28 }}>
+              {top}
+              <span className="font-bold" style={{ fontSize: size * 0.16 }}>%</span>
             </div>
-            {label && <div className="mt-0.5 text-[11px] font-medium text-ink-faint">{label}</div>}
           </div>
         )}
       </div>
-      {sublabel && <span className="sr-only">{sublabel}</span>}
     </div>
   );
 }
@@ -114,8 +138,10 @@ export function StatTile({
   );
 }
 
-/** Rank medal: gold/silver/bronze for top 3, else a soft circle. */
-export function RankBadge({ rank }: { rank: number }) {
+/** Rank medal: gold/silver/bronze for top 3, else a soft circle.
+ *  `rank: null` → an unranked entry (not enough data): a neutral dash, so a
+ *  data gap is never displayed as a low rank. */
+export function RankBadge({ rank }: { rank: number | null }) {
   const medal =
     rank === 1
       ? 'bg-gradient-to-br from-[#ffe28a] to-[#f0b429] text-[#6b4e00] shadow-soft'
@@ -126,7 +152,7 @@ export function RankBadge({ rank }: { rank: number }) {
           : 'bg-paper-sink text-ink-faint';
   return (
     <span className={clsx('grid h-9 w-9 shrink-0 place-items-center rounded-full text-sm font-extrabold', medal)}>
-      {rank}
+      {rank ?? '–'}
     </span>
   );
 }
