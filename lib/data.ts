@@ -239,8 +239,19 @@ export async function getPerson(
   const p = idx.politicianById.get(id);
   if (p) {
     const roles = central.filter((m) => m.politicianId === id);
-    const portfolios = [...new Set(roles.flatMap((r) => r.portfolios))];
-    const extraSources = roles.filter((r) => r.source_url).map((r) => [r.source_url, r.source_name] as [string, string]);
+    // A linked Council-of-Ministers role (CM / Dy CM / state minister) belongs on
+    // the real profile too — otherwise the person is "just an MLA" here and their
+    // executive office only lives on a disconnected stub.
+    const stateRoles = (await allStateMinisters()).filter((sm) => sm.politicianId === id);
+    const allRoles = [...roles, ...stateRoles];
+    const portfolios = [...new Set(allRoles.flatMap((r) => r.portfolios))];
+    const extraSources = allRoles.filter((r) => r.source_url).map((r) => [r.source_url, r.source_name] as [string, string]);
+    const sr = stateRoles[0];
+    const statePosition = sr
+      ? sr.rank === 'CM' ? `Chief Minister of ${sr.state}`
+        : sr.rank === 'DyCM' ? `Deputy Chief Minister of ${sr.state}`
+        : `${STATE_RANK_LABEL[sr.rank]}, ${sr.state}`
+      : undefined;
     return {
       person: {
         kind: 'elected' as const,
@@ -255,12 +266,15 @@ export async function getPerson(
         stateCode: p.stateCode,
         districts: p.districts,
         photo_url: p.photo_url,
-        is_minister: p.is_minister || roles.length > 0,
+        is_minister: p.is_minister || allRoles.length > 0,
         is_pm: roles.some((r) => r.rank === 'PM'),
-        current_position: p.current_position,
+        // Lead with the executive office (Chief Minister…) when they hold one.
+        current_position: statePosition || p.current_position,
         portfolios,
         ministerRank: roles[0]?.rank,
-        ministerRankLabel: roles[0] ? MINISTER_RANK_LABEL[roles[0].rank] : undefined,
+        ministerRankLabel: roles[0] ? MINISTER_RANK_LABEL[roles[0].rank] : sr ? STATE_RANK_LABEL[sr.rank] : undefined,
+        stateRank: sr?.rank,
+        govScope: sr ? 'state' : undefined,
         neutral_summary: p.neutral_summary,
         terms_served: p.terms_served,
         facts: p.facts,

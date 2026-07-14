@@ -75,13 +75,15 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.75);
 }
 .glass-overlay {
-  background: rgba(255, 255, 255, 0.97);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid #e8e4dc;
+  /* Floating panels (search dropdown, popovers) sit over ARBITRARY page content
+   * — stat cards, the org chart — so they are FULLY OPAQUE. No alpha, no reliance
+   * on backdrop-blur (which silently no-ops in unsupported browsers / nested
+   * filter contexts and let content bleed through). Solid white, always. */
+  background: #ffffff;
+  border: 1px solid #e2ddd3;
   box-shadow:
-    0 2px 4px rgba(28, 32, 42, 0.05),
-    0 16px 40px rgba(28, 32, 42, 0.14);
+    0 2px 4px rgba(28, 32, 42, 0.06),
+    0 18px 44px rgba(28, 32, 42, 0.18);
 }
 .glass-dark {
   background: rgba(28, 32, 42, 0.92);

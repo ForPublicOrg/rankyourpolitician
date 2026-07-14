@@ -91,6 +91,11 @@ async function main() {
       await import('./normalize-fields');
       break;
     }
+    case 'link-ministers': {
+      // Link CoM records (CMs, state ministers) to their real MLA/MP profiles.
+      await import('./link-ministers');
+      break;
+    }
     case 'import-state-gov': {
       // Build state_government.json from the ryp-state-governments workflow output.
       process.argv[2] = process.argv[3] || '';

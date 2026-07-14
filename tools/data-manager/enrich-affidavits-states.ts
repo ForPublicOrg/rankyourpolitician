@@ -27,8 +27,13 @@ const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z
 const SEED_DIR = resolve(ROOT, 'data', 'seed');
 const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; vikas070696@gmail.com)';
 const TODAY = new Date().toISOString().slice(0, 10);
-const MAX_PAGES = 40;
-const OVERLAP_MIN = 0.45; // a state page must match at least this share of our seats
+const MAX_PAGES = 60;
+// A state page must match at least this share of our seats to be applied. The
+// gate's job is to reject a WRONG-election page; it can be lowered per-run
+// (AFF_MIN_OVERLAP) for states whose election year we've independently confirmed
+// is the current assembly, where low overlap is transliteration noise, not a
+// wrong election. Per-row name+seat safety is unchanged regardless.
+const OVERLAP_MIN = process.env.AFF_MIN_OVERLAP ? parseFloat(process.env.AFF_MIN_OVERLAP) : 0.45;
 
 // Most-recent (current-seating) state-assembly election on MyNeta, per state.
 // Several candidate slugs are tried in order — MyNeta's naming isn't uniform —
@@ -105,10 +110,21 @@ function lev(a: string, b: string): number {
 }
 
 // Name key: drop honorifics/initials noise, keep alnum tokens for overlap scoring.
+const HONORIFICS = /\b(dr|adv|advocate|shri|sri|smt|kumari|selvi|thiru|tmt|puratchi|thalaivar|mr|mrs|ms|prof|er|md|mohd|mohammad|mohammed|syed|alhaj|haji|col|capt|maj|lt|late|prof)\b/g;
 const nameTokens = (s: string) =>
   (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/\b(dr|adv|advocate|shri|smt|kumari|mr|mrs|ms|prof|er|md|mohd|mohammad|mohammed|syed)\b/g, ' ')
+    .replace(HONORIFICS, ' ')
     .replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter((t) => t.length > 1);
+// Two names are "close" if their token sets overlap strongly OR their compact
+// forms are within light edit distance — tolerating transliteration variants
+// (ponmudi/ponmudy, jeyakumar/jayakumar) while staying strict enough to be safe.
+function nameClose(a: string, b: string): boolean {
+  if (nameScore(a, b) >= 0.6) return true;
+  const ca = nameTokens(a).join(''), cb = nameTokens(b).join('');
+  if (!ca || !cb || Math.abs(ca.length - cb.length) > 2) return false;
+  const d = lev(ca, cb);
+  return d <= 2 && d / Math.max(ca.length, cb.length) <= 0.15;
+}
 function nameScore(a: string, b: string): number {
   const ta = new Set(nameTokens(a)), tb = new Set(nameTokens(b));
   if (!ta.size || !tb.size) return 0;
@@ -151,11 +167,18 @@ async function fetchWinners(slugs: string[]): Promise<{ slug: string; byCons: Ma
     const byCons = new Map<string, Row>();
     const list: Row[] = [];
     let got = false;
+    let emptyStreak = 0;
     for (let page = 1; page <= MAX_PAGES; page++) {
       const html = await getHtml(`${base}/index.php?action=summary&subAction=winner_analyzed&sort=candidate&page=${page}`);
-      if (html === null) break;
-      const rows = parsePage(html);
-      if (!rows.length) break;
+      const rows = html ? parsePage(html) : [];
+      if (!rows.length) {
+        // Tolerate a transient blank/failed page — stop only after two in a row
+        // (so one hiccup mid-list doesn't truncate an otherwise-complete roster).
+        if (got && ++emptyStreak >= 2) break;
+        await new Promise((res) => setTimeout(res, 300));
+        continue;
+      }
+      emptyStreak = 0;
       got = true;
       for (const r of rows) { list.push(r); if (!byCons.has(consKey(r.cons))) byCons.set(consKey(r.cons), r); }
       await new Promise((res) => setTimeout(res, 300));
@@ -173,8 +196,16 @@ function resolveWinner(p: Politician, byCons: Map<string, Row>, list: Row[]): Ro
   const ck = consKey(p.constituencyName);
   const exact = byCons.get(ck);
   if (exact && nameMatch(exact.name, p.name)) return exact;
-  const fuzzySeat = list.filter((r) => nameMatch(r.name, p.name) && lev(consKey(r.cons), ck) <= 2);
+  // Seat-anchored: constituency agrees (within transliteration tolerance) AND
+  // name is close — here we can afford edit-distance leniency on the name.
+  const fuzzySeat = list.filter((r) => nameClose(r.name, p.name) && lev(consKey(r.cons), ck) <= 3);
   if (fuzzySeat.length === 1) return fuzzySeat[0];
+  // Name-only (no constituency confirmation): require STRONG token overlap, not
+  // mere edit-distance — this is criminal/financial data, so the unanchored path
+  // must not attach on a coincidental spelling nearness. Can be disabled entirely
+  // (AFF_SEAT_ANCHORED_ONLY) for states whose seed constituencies are themselves
+  // unreliable, where a name-only match could pin data to a mislabelled seat.
+  if (process.env.AFF_SEAT_ANCHORED_ONLY === '1') return null;
   const strong = list.filter((r) => nameScore(r.name, p.name) >= 0.6);
   if (strong.length === 1) return strong[0];
   return null;
