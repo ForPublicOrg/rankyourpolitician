@@ -454,17 +454,30 @@ export async function getDataSource(): Promise<'firestore' | 'seed'> {
   return (await getIndex()).source;
 }
 
+/** Fill a minister record's missing photo from its linked politician profile —
+ *  minister rows come from council lists (no images), but the politician record
+ *  usually has a Commons photo. Without this, the PM/CM cards show initials
+ *  even when we have the person's photo. */
+async function joinMinisterPhotos<T extends { politicianId?: string; photo_url?: string }>(ms: T[]): Promise<T[]> {
+  const idx = await getIndex();
+  return ms.map((m) => {
+    if (m.photo_url || !m.politicianId) return m;
+    const p = idx.politicianById.get(m.politicianId);
+    return p?.photo_url ? { ...m, photo_url: p.photo_url } : m;
+  });
+}
+
 export async function getCentralGovernment(): Promise<Minister[]> {
   const db = getDb();
   if (db) {
     try {
       const snap = await db.collection('central_government').get();
-      if (!snap.empty) return snap.docs.map((d) => d.data() as Minister);
+      if (!snap.empty) return joinMinisterPhotos(snap.docs.map((d) => d.data() as Minister));
     } catch (err) {
       console.error('[data] central_government read failed, using seed:', err);
     }
   }
-  return seedCentral as unknown as Minister[];
+  return joinMinisterPhotos(seedCentral as unknown as Minister[]);
 }
 
 export async function getMinister(id: string): Promise<Minister | null> {
@@ -472,16 +485,18 @@ export async function getMinister(id: string): Promise<Minister | null> {
 }
 
 export async function getStateGovernments(): Promise<StateGovernment[]> {
+  const load = async (gs: StateGovernment[]) =>
+    Promise.all(gs.map(async (g) => ({ ...g, ministers: await joinMinisterPhotos(g.ministers || []) })));
   const db = getDb();
   if (db) {
     try {
       const snap = await db.collection('state_government').get();
-      if (!snap.empty) return snap.docs.map((d) => d.data() as StateGovernment);
+      if (!snap.empty) return load(snap.docs.map((d) => d.data() as StateGovernment));
     } catch (err) {
       console.error('[data] state_government read failed, using seed:', err);
     }
   }
-  return seedStateGov as unknown as StateGovernment[];
+  return load(seedStateGov as unknown as StateGovernment[]);
 }
 
 export async function getStateGovernment(stateCode: string): Promise<StateGovernment | null> {

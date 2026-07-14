@@ -1,5 +1,5 @@
 'use client';
-// Full search page â€” same local index as the SearchBox dropdown, richer layout.
+// Full search page — same local index as the SearchBox dropdown, richer layout.
 // URL-synced (?q=) so results are shareable and the back button works.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -101,8 +101,8 @@ export default function SearchResults() {
                       <span className="min-w-0">
                         <span className="block truncate font-semibold text-ink">{p.name}</span>
                         <span className="block truncate text-xs text-ink-faint">
-                          {[p.role, p.place, p.state].filter(Boolean).join(' Â· ')}
-                          {p.party ? ` Â· ${p.party}` : ''}
+                          {[p.role, p.place, p.state].filter(Boolean).join(' · ')}
+                          {p.party ? ` · ${p.party}` : ''}
                         </span>
                       </span>
                       <Icon name="chevron" size={16} className="ml-auto shrink-0 -rotate-90 text-ink-faint" />
@@ -120,7 +120,7 @@ export default function SearchResults() {
                     <Link href={`/area/${a.id}`} className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-brand-soft/60">
                       <span className="font-medium text-ink">{a.name}</span>
                       <span className="text-xs text-ink-faint">
-                        {a.type === 'PC' ? t('search.pcShort') : t('search.acShort')} Â· {a.state}
+                        {a.type === 'PC' ? t('search.pcShort') : t('search.acShort')} · {a.state}
                       </span>
                     </Link>
                   </li>

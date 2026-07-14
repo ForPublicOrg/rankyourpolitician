@@ -19,6 +19,12 @@ const politicians = seedPoliticians as unknown as Politician[];
 const stateGovs = seedStateGov as unknown as StateGovernment[];
 const officials = seedDistrictOfficials as unknown as OfficeSeat[];
 
+// Minister records carry no images of their own — take the photo from the
+// linked politician profile so CM/minister cards show faces, not initials.
+const photoById = new Map(politicians.filter((p) => p.photo_url).map((p) => [p.id, p.photo_url!]));
+const ministerPhoto = (m: { politicianId?: string; photo_url?: string }): string | undefined =>
+  m.photo_url || (m.politicianId ? photoById.get(m.politicianId) : undefined);
+
 function partyShort(party?: string): string | undefined {
   if (!party) return undefined;
   const m = party.match(/\(([^)]+)\)\s*$/);
@@ -68,7 +74,7 @@ for (const [code, st] of states) {
     id: m.politicianId || m.id,
     name: m.name,
     party: partyShort(m.party),
-    photo: m.photo_url,
+    photo: ministerPhoto(m),
     sub: STATE_RANK_LABEL[m.rank],
     portfolios: m.portfolios,
   });

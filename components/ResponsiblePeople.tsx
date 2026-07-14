@@ -1,7 +1,7 @@
 'use client';
 // The "actual people" ladder: for a problem + district, the real humans to
-// contact in order â€” local office â†’ DM/SP (named where verified) â†’ the state
-// minister whose portfolio owns the department â†’ the Chief Minister â€” plus the
+// contact in order — local office → DM/SP (named where verified) → the state
+// minister whose portfolio owns the department → the Chief Minister — plus the
 // district's own MLAs/MPs as the parallel elected lever. Shared by the /who
 // Finder and the district page section.
 import Link from 'next/link';
@@ -40,7 +40,7 @@ function PersonRow({ p, role, holds }: { p: WhoPerson; role: string; holds?: str
         </span>
         <span className="block truncate text-xs text-ink-faint">
           {role}
-          {holds && holds.length > 0 ? ` Â· ${holds.slice(0, 2).join(', ')}` : ''}
+          {holds && holds.length > 0 ? ` · ${holds.slice(0, 2).join(', ')}` : ''}
         </span>
       </span>
       <Icon name="chevron" size={16} className="-rotate-90 shrink-0 text-ink-faint" />
@@ -95,7 +95,7 @@ export default function ResponsiblePeople({
   );
   const police = isPoliceProblem(problem);
   const deptMinisters = ministersForProblem(ministers, cm?.id, problem, area);
-  // CMs often keep key departments (Home, Urban Developmentâ€¦) for themselves.
+  // CMs often keep key departments (Home, Urban Development…) for themselves.
   const cmHoldsDept = !!cm && ministersForProblem([cm], undefined, problem, area, 1).length > 0;
   const dm = people.officials.find((o) => o.officeType === 'collector_dm');
   const sp = people.officials.find((o) => o.officeType === 'sp_district');
@@ -106,7 +106,7 @@ export default function ResponsiblePeople({
   return (
     <div>
       <ol className="mt-1">
-        {/* 1 â€” the local office (role; no individual name needed) */}
+        {/* 1 — the local office (role; no individual name needed) */}
         {localOffices.length > 0 && (
           <Step n={++n} icon={OFFICE_META[localOffices[0]].icon} title={t('who.stepOffice')}>
             <div className="rounded-2xl border border-line/70 bg-white/85 p-3.5">
@@ -117,7 +117,7 @@ export default function ResponsiblePeople({
           </Step>
         )}
 
-        {/* 2 â€” district administration: SP for police issues, DM for the rest */}
+        {/* 2 — district administration: SP for police issues, DM for the rest */}
         <Step n={++n} icon="shield" title={t('who.stepDistrict')}>
           <div className="space-y-2">
             {(police ? (['sp_district', 'collector_dm'] as const) : (['collector_dm'] as const)).map((ot) => {
@@ -126,13 +126,13 @@ export default function ResponsiblePeople({
                 <div key={ot} className="rounded-2xl border border-line/70 bg-white/85 p-3.5">
                   <p className="flex flex-wrap items-center gap-2 font-bold text-ink">
                     {t(`offices.${ot}.label`)}
-                    <span className="text-xs font-semibold text-ink-faint">Â· {district}</span>
+                    <span className="text-xs font-semibold text-ink-faint">· {district}</span>
                   </p>
                   {officer?.name ? (
                     <div className="mt-1.5">
                       <p className="font-semibold text-ink">
                         {officer.name}
-                        {officer.service && <span className="text-sm font-normal text-ink-faint"> Â· {officer.service}</span>}
+                        {officer.service && <span className="text-sm font-normal text-ink-faint"> · {officer.service}</span>}
                       </p>
                       <p className="mt-0.5 flex flex-wrap gap-x-3 gap-y-0.5 text-xs">
                         {officer.email && (
@@ -156,7 +156,7 @@ export default function ResponsiblePeople({
           </div>
         </Step>
 
-        {/* 3 â€” the state minister who runs this department.
+        {/* 3 — the state minister who runs this department.
              When the CM keeps the department (common for Home), the CM IS this
              step, so the separate CM step below is skipped. */}
         {(() => {
@@ -200,7 +200,7 @@ export default function ResponsiblePeople({
         })()}
       </ol>
 
-      {/* Parallel elected lever â€” the district's own MLAs and MPs */}
+      {/* Parallel elected lever — the district's own MLAs and MPs */}
       {(people.mlas.length > 0 || people.mps.length > 0) && (
         <div className="mt-2 rounded-3xl border border-perf/25 bg-perf-soft/40 p-4">
           <p className="flex items-center gap-1.5 text-sm font-bold text-perf-ink">
@@ -212,7 +212,7 @@ export default function ResponsiblePeople({
               <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-ink-faint">{t('who.mlasLabel')}</p>
               <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
                 {people.mlas.map((p) => (
-                  <PersonRow key={p.id} p={p} role={`${t('district.chipMla')} Â· ${p.sub || ''}`} />
+                  <PersonRow key={p.id} p={p} role={`${t('district.chipMla')} · ${p.sub || ''}`} />
                 ))}
               </div>
             </>
@@ -222,7 +222,7 @@ export default function ResponsiblePeople({
               <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-ink-faint">{t('who.mpsLabel')}</p>
               <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
                 {people.mps.map((p) => (
-                  <PersonRow key={p.id} p={p} role={`${t('district.chipMp')} Â· ${p.sub || ''}`} />
+                  <PersonRow key={p.id} p={p} role={`${t('district.chipMp')} · ${p.sub || ''}`} />
                 ))}
               </div>
             </>

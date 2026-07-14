@@ -96,6 +96,11 @@ async function main() {
       await import('./link-ministers');
       break;
     }
+    case 'enrich-performance': {
+      // Official Digital Sansad metrics: attendance / questions / debates for MPs.
+      await import('./enrich-performance');
+      break;
+    }
     case 'enrich-photos': {
       // Raise photo coverage from Hindi/regional-Wikipedia lead images (Commons).
       await import('./enrich-photos');

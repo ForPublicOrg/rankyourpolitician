@@ -49,9 +49,13 @@ const config: Config = {
         spring: 'cubic-bezier(0.32, 0.72, 0, 1)', // iOS-style deceleration
       },
       keyframes: {
+        // Entrance keyframes END at `transform: none` (not an identity transform):
+        // with fill-mode `both`, a persisted translateY(0)/scale(1) keeps a
+        // STACKING CONTEXT alive on the element forever — which made later
+        // animated siblings (stat pills, map) paint OVER the search dropdown.
         'fade-up': {
           from: { opacity: '0', transform: 'translateY(14px)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
+          to: { opacity: '1', transform: 'none' },
         },
         'fade-in': {
           from: { opacity: '0' },
@@ -59,7 +63,7 @@ const config: Config = {
         },
         'scale-in': {
           from: { opacity: '0', transform: 'scale(0.96)' },
-          to: { opacity: '1', transform: 'scale(1)' },
+          to: { opacity: '1', transform: 'none' },
         },
         shimmer: {
           from: { backgroundPosition: '200% 0' },
@@ -73,7 +77,7 @@ const config: Config = {
         },
         'map-in': {
           from: { opacity: '0', transform: 'scale(0.985)' },
-          to: { opacity: '1', transform: 'scale(1)' },
+          to: { opacity: '1', transform: 'none' },
         },
         'aurora-drift': {
           '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
@@ -83,7 +87,7 @@ const config: Config = {
         'pop-in': {
           '0%': { opacity: '0', transform: 'scale(0.4)' },
           '70%': { transform: 'scale(1.15)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
+          '100%': { opacity: '1', transform: 'none' },
         },
       },
       animation: {

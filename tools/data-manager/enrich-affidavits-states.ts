@@ -55,11 +55,14 @@ const SLUGS: Record<string, { year: string; slugs: string[] }> = {
   ML: { year: '2023', slugs: ['meghalaya2023'] },
   NL: { year: '2023', slugs: ['nagaland2023'] },
   TR: { year: '2023', slugs: ['tripura2023'] },
-  WB: { year: '2021', slugs: ['westbengal2021'] },
-  TN: { year: '2021', slugs: ['tamilnadu2021'] },
-  KL: { year: '2021', slugs: ['kerala2021'] },
-  AS: { year: '2021', slugs: ['assam2021'] },
-  PY: { year: '2021', slugs: ['puducherry2021'] },
+  // These five had 2026 elections (rosters in our seed ARE the 2026 assemblies);
+  // MyNeta's 2026 slugs are CamelCase. The old *2021 pages describe superseded
+  // assemblies and must never be used for the sitting members.
+  WB: { year: '2026', slugs: ['WestBengal2026'] },
+  TN: { year: '2026', slugs: ['TamilNadu2026'] },
+  KL: { year: '2026', slugs: ['Kerala2026'] },
+  AS: { year: '2026', slugs: ['Assam2026'] },
+  PY: { year: '2026', slugs: ['Puducherry2026'] },
   MH: { year: '2024', slugs: ['maharashtra2024'] },
   HR: { year: '2024', slugs: ['haryana2024'] },
   JH: { year: '2024', slugs: ['jharkhand2024'] },

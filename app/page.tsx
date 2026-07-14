@@ -54,7 +54,7 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* HERO â€” search + the living map of India */}
+      {/* HERO — search + the living map of India */}
       <section className="relative overflow-hidden border-b border-line/60">
         <div className="mx-auto max-w-content px-4 pb-10 pt-10 sm:pt-14">
           <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_1fr]">
@@ -69,7 +69,10 @@ export default async function HomePage() {
               <p className="mx-auto mt-4 max-w-xl text-lg text-ink-soft animate-fade-up lg:mx-0" style={{ animationDelay: '80ms' }}>
                 {tr('home.heroSubtitle')}
               </p>
-              <div className="mx-auto mt-7 max-w-xl animate-fade-up lg:mx-0" style={{ animationDelay: '160ms' }}>
+              {/* relative z-20: the entrance animations create stacking contexts on
+                  the sibling stat pills + map; without an explicit z-index here the
+                  search dropdown would paint UNDERNEATH them. */}
+              <div className="relative z-20 mx-auto mt-7 max-w-xl animate-fade-up lg:mx-0" style={{ animationDelay: '160ms' }}>
                 <SearchBox variant="hero" />
                 <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-sm lg:justify-start">
                   <span className="text-ink-faint">{tr('search.tryLabel')}:</span>
@@ -106,7 +109,7 @@ export default async function HomePage() {
       </section>
 
       <div className="mx-auto max-w-content px-4 py-8">
-        {/* Org chart of India â€” how power flows */}
+        {/* Org chart of India — how power flows */}
         <Reveal as="section" className="mb-8">
           <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
             <div className="flex items-center gap-3">
@@ -125,7 +128,7 @@ export default async function HomePage() {
           <HierarchyLadder />
         </Reveal>
 
-        {/* Government of India â€” the top of the ladder */}
+        {/* Government of India — the top of the ladder */}
         <Reveal as="section" className="mb-8">
           <SectionCard
             title={tr('central.title')}
@@ -133,7 +136,7 @@ export default async function HomePage() {
             icon="parliament"
             aside={
               <Link href="/india" className="shrink-0 whitespace-nowrap text-sm font-semibold text-brand hover:underline">
-                {tr('central.seeAll')} â†’
+                {tr('central.seeAll')} →
               </Link>
             }
           >
@@ -164,13 +167,13 @@ export default async function HomePage() {
             ) : (
               <Link href="/india" className="flex items-center justify-between gap-3 rounded-2xl border border-dashed border-line bg-paper-soft px-4 py-5 text-sm text-ink-soft hover:border-brand">
                 <span className="flex items-center gap-2"><Icon name="parliament" size={18} className="text-brand" /> {tr('central.comingSoon')}</span>
-                <span className="font-semibold text-brand">{tr('central.seeAll')} â†’</span>
+                <span className="font-semibold text-brand">{tr('central.seeAll')} →</span>
               </Link>
             )}
           </SectionCard>
         </Reveal>
 
-        {/* Finder CTA â€” guided "who's responsible for what" */}
+        {/* Finder CTA — guided "who's responsible for what" */}
         <Reveal className="mb-8">
           <Link
             href="/who"
