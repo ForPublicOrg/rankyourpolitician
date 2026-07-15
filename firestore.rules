@@ -1,15 +1,19 @@
 rules_version = '2';
 
-// Reads of PUBLISHED data are public (the site can serve it without auth).
-// All client WRITES are denied — the only writer is the server (/api/vote and
-// the local data manager) via the Firebase Admin SDK, which bypasses these
-// rules. Raw per-voter records are never client-readable.
+// DENY EVERYTHING. This is deliberate, not an oversight.
+//
+// The site never talks to Firestore from the browser: there is no Firebase
+// client SDK in package.json, and every read/write goes through the server
+// (Next.js server components + /api/vote) using the Admin SDK, which bypasses
+// these rules entirely. So public read rules would buy the app nothing — while
+// letting anyone who learns the project id enumerate ~10k politician and
+// constituency docs straight from a browser and bill us for every read.
+//
+// If you ever add the Firebase *client* SDK, re-open only the specific
+// collections it needs — and remember that per-user vote records
+// (`votes`) must stay server-only regardless: they are dedupe hashes.
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /politicians/{id}        { allow read: if true;  allow write: if false; }
-    match /constituencies/{id}     { allow read: if true;  allow write: if false; }
-    match /vote_aggregates/{id}    { allow read: if true;  allow write: if false; }
-    match /votes/{id}              { allow read, write: if false; }
-    match /{document=**}           { allow read, write: if false; }
+    match /{document=**} { allow read, write: if false; }
   }
 }

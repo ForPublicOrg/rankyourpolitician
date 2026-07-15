@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
 import Icon from './Icon';
 
+const REPO_URL = 'https://github.com/vikas0706/rankyourpolitician';
+
 export default function Footer() {
   const { t } = useI18n();
   return (
@@ -30,8 +32,18 @@ export default function Footer() {
             <Link href="/grievance" className="text-ink-soft hover:text-brand">{t('footer.grievance')}</Link>
           </nav>
         </div>
-        <p className="mt-8 border-t border-line/70 pt-4 text-xs text-ink-faint">
-          © {new Date().getFullYear()} {t('brand.name')} · {t('footer.openSource')}
+        <p className="mt-8 flex flex-wrap items-center gap-x-2 border-t border-line/70 pt-4 text-xs text-ink-faint">
+          <span>© {new Date().getFullYear()} {t('brand.name')}</span>
+          <span aria-hidden="true">·</span>
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-ink-soft underline-offset-2 hover:text-brand hover:underline"
+          >
+            <Icon name="code" size={13} />
+            {t('footer.openSource')}
+          </a>
         </p>
       </div>
     </footer>

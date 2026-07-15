@@ -6,7 +6,8 @@ export type IconName =
   | 'people' | 'clock' | 'arrow' | 'chevron' | 'globe' | 'home' | 'back'
   | 'info' | 'warn' | 'check' | 'megaphone' | 'cap' | 'briefcase' | 'calendar'
   | 'link' | 'sparkle' | 'scales' | 'flag' | 'layers' | 'x'
-  | 'map' | 'compass' | 'building' | 'phone' | 'mail' | 'external' | 'network' | 'grid';
+  | 'map' | 'compass' | 'building' | 'phone' | 'mail' | 'external' | 'network' | 'grid'
+  | 'code';
 
 const P: Record<IconName, React.ReactNode> = {
   search: <><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></>,
@@ -44,6 +45,7 @@ const P: Record<IconName, React.ReactNode> = {
   external: <><path d="M14 4h6v6M20 4L10 14M18 13v6a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h6" /></>,
   network: <><circle cx="12" cy="5" r="2.5" /><circle cx="5" cy="18" r="2.5" /><circle cx="19" cy="18" r="2.5" /><path d="M12 7.5V12m0 0l-5.5 4M12 12l5.5 4" /></>,
   grid: <><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></>,
+  code: <><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" /></>,
 };
 
 export default function Icon({
