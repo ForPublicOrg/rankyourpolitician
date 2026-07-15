@@ -56,7 +56,7 @@ export default async function RootLayout({
   const { lang } = await params;
   const { locale, dict, dir } = await getI18n(lang);
   return (
-    <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={manrope.variable}>
+    <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={manrope.variable} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
