@@ -193,7 +193,22 @@ Import the repo, add the env vars from `.env.example`, deploy. `tools/` is exclu
 
 ## Contributing
 
-Issues and PRs welcome - corrections to the data are especially welcome.
+Issues and PRs welcome - corrections to the data are especially welcome. Three ground rules
+apply to **every** change; [CLAUDE.md](CLAUDE.md) spells them out with the architecture notes:
+
+1. **Never trade away speed or user experience.** Every page stays static/ISR and CDN-served:
+   no `cookies()`/`headers()` in a render path, no per-request Firestore reads, no blocking
+   third-party scripts, big lists precomputed and lazy-loaded rather than embedded in pages.
+   A change that makes first paint slower or payloads heavier needs a very strong reason.
+2. **No personal data collection.** The site stores nothing about its visitors: no accounts,
+   no emails, no raw IPs or fingerprints (vote dedupe is a salted hash of coarsened signals,
+   and stays that way), no trackers beyond the single analytics mount on the home page.
+   PRs adding PII storage or profiling scripts will be declined.
+3. **Everything is for the public.** Free, MIT-licensed, login-less, non-partisan. Every fact
+   cited to an official public source; features must work for an anonymous visitor on a cheap
+   phone. Nothing lands behind a paywall or an account.
+
+Practical checklist:
 
 - **Found a wrong fact?** Open an issue with the profile URL and an official source. Facts without
   a citation cannot be merged; see `/methodology` for what counts as a source.
