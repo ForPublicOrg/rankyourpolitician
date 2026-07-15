@@ -1,8 +1,12 @@
 # RankYourPolitician
 
-**Live: [rankyourpolitician.com](https://rankyourpolitician.com)** · MIT licensed · contributions welcome
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org)
 
-A free, open-source, **non-partisan** civic platform for India: know **who represents your area**,
+**Live: [www.rankyourpolitician.com](https://www.rankyourpolitician.com)**
+
+An open-source, **non-partisan** civic platform for India: know **who represents your area**,
 **what each office is responsible for**, and **how they're performing** - every fact cited to an
 official source, with a visible "last updated" date. Ranking is one part of an information-first
 profile, never a verdict.
@@ -15,6 +19,21 @@ profile, never a verdict.
 
 > **Runs locally with zero setup.** With no Firebase credentials the site serves the committed
 > seed dataset in `data/seed/` - the full all-India dataset below, not a stub.
+
+## Table of contents
+
+- [What's in the dataset](#whats-in-the-dataset)
+- [Quick start](#quick-start)
+- [Tech stack](#tech-stack)
+- [How data flows](#how-data-flows)
+- [Project structure](#project-structure)
+- [The local Data Manager](#the-local-data-manager-never-deployed)
+- [Configuration](#configuration)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Languages](#languages)
+- [Legal notes for operators (India)](#legal-notes-for-operators-india)
+- [License](#license)
 
 ## What's in the dataset
 
@@ -33,6 +52,8 @@ on any fact missing a `source_url`.
 
 ## Quick start
 
+Requires **Node.js 18.18+**.
+
 ```bash
 git clone https://github.com/ForPublicOrg/rankyourpolitician.git
 cd rankyourpolitician
@@ -43,20 +64,21 @@ npm run dev          # http://localhost:3000 - serves the seed, no credentials n
 `npm run build` runs a `prebuild` step first that generates the static payloads in `public/`
 (search index, rankings, who-does-what data) from the seed.
 
-## Stack (all free tiers)
+## Tech stack
 
 | Concern | Choice |
 |---|---|
-| Framework / host | Next.js 15 (App Router, React 19, TS) on **Vercel**, ISR-cached |
-| Styling | Tailwind |
+| Framework | Next.js 15 (App Router, React 19, TypeScript), ISR-cached |
+| Styling | Tailwind CSS |
 | Database | **Firebase Firestore**, server-side **Admin SDK only** (no client SDK) |
 | Map | `d3-geo` SVG choropleth, DataMeet-compliant GeoJSON, projected server-side |
 | Vote integrity | Cloudflare **Turnstile** + device signal + **Upstash** rate-limit + salted-hash dedupe |
-| Ads | Single non-intrusive AdSense slot (reserved height, no layout shift) |
+| Hosting | Vercel (any host that runs Next.js works) |
 
-## How data flows (and why the Firestore bill stays near zero)
+## How data flows
 
-This is the most important thing to understand before changing `lib/data.ts`:
+The architecture exists so every page is a CDN cache hit, not a server render. This is the most
+important thing to understand before changing `lib/data.ts`:
 
 - **Politician, constituency and government data is served from the committed seed**, never read
   from Firestore at request time. It only changes when you run the data manager and redeploy, so
@@ -67,30 +89,28 @@ This is the most important thing to understand before changing `lib/data.ts`:
   warm instance. The cache stores the *promise*, so a burst of concurrent requests shares one load
   instead of stampeding the database.
 - **ISR sits on top, but only as a daily self-heal** (`revalidate = 86400` on every page).
-  Pages are still served straight from Vercel's CDN cache - same speed as before - they just
-  stop re-rendering every 5 minutes. Vercel bills each background regeneration as an ISR
-  write, and with ~6k person pages x 23 locales the crawl-driven long tail was regenerating
-  around the clock for data that changes rarely.
+  Pages are served straight from the CDN cache; with ~5,300 person pages x 23 locales, the
+  crawl-driven long tail would otherwise re-render around the clock for data that changes rarely.
 - **Freshness is handled where the data actually changes, not by re-rendering everything:**
   - *Votes* - `VoteWidget` re-fetches the live score from `GET /api/vote` on mount
     (CDN-cached 5 min, served from the in-process aggregate cache: zero extra Firestore
     reads). The static HTML can be up to a day old; the numbers on screen never are.
-  - *Trending* - the home page's "Trending" tab (the default view of the Top-leaders
-    card) fetches `GET /api/trending` on mount (CDN-cached 5 min). The vote
-    transaction keeps per-day event buckets on each
-    aggregate doc (`daily`, pruned to 14 days), and trending is derived from the same
-    in-process aggregate cache: a 7-day window, exponential decay (3-day half-life) so
-    recency beats raw bulk, and a 3-vote floor so one drive-by rating never trends.
-    Ordering is by decayed activity only - the rating displayed is the leader's real
-    one (the same all-time plain average their profile shows), and the list is
-    labelled attention, not a verdict. All rules live in `lib/trending.ts`.
+  - *Trending* - the home page's "Trending" tab (the default view of the Top-leaders card)
+    fetches `GET /api/trending` on mount (CDN-cached 5 min). The vote transaction keeps
+    per-day buckets of first-time votes on each aggregate doc (`daily`, pruned to 14 days),
+    and trending is derived from the same in-process aggregate cache: a 7-day window,
+    exponential decay (3-day half-life) so recency beats raw bulk, and a 3-vote floor so one
+    drive-by rating never trends. Ordering is by decayed activity only - the rating displayed
+    is the leader's real one (the same all-time plain average their profile shows), and the
+    list is labelled attention, not a verdict. All rules live in `lib/trending.ts`.
   - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
     `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
     visit. A page that regenerates within ~30 min of a publish can still bake the previous
     in-process TTL snapshot - the daily revalidate self-heals it.
   - *Seed changes* still require a redeploy, which resets the whole cache anyway.
-- **Nothing reads Firestore during `next build`** - prerendering the ~5,330 person pages would
-  otherwise blow the free quota on a single deploy. Override with `FORCE_FIRESTORE_AT_BUILD=1`.
+- **Nothing reads Firestore during `next build`** - prerendering ~5,300 person pages would
+  flood the database with reads on every deploy for data the seed already has. Override with
+  `FORCE_FIRESTORE_AT_BUILD=1`.
 
 Consequence: a voter sees their own score update instantly (the API returns it), but the
 score other visitors see can lag a vote by up to ~10 minutes (5 min CDN cache on the
@@ -99,23 +119,26 @@ sentiment GET + 5 min aggregate TTL). That is by design, not a bug.
 ## Project structure
 
 ```
-app/                          Next.js routes
-  page.tsx                    home
-  india/  hierarchy/          union government, full org chart
-  state/[state]/              state view (assembly composition, district map)
-  district/[state]/[district] district view + escalation ladder + officials
-  area/[constituency]/        constituency view
-  person/[id]/                unified profile (MP/MLA and/or minister, or appointed official)
-  rankings/  search/  who/    full rankings, search, "who fixes what"
-  accountability/ methodology/ about/ privacy/ terms/ grievance/
+app/
+  [lang]/                     every page, statically generated once per locale
+    page.tsx                  home
+    india/  hierarchy/        union government, full org chart
+    state/[state]/            state view (assembly composition, district map)
+    district/[state]/[district]  district view + escalation ladder + officials
+    area/[constituency]/      constituency view
+    person/[id]/              unified profile (MP/MLA and/or minister, or appointed official)
+    rankings/  search/  who/  full rankings, search, "who fixes what"
+    accountability/ methodology/ about/ privacy/ terms/ grievance/
   api/vote/                   vote endpoint (POST: Turnstile + rate-limit + Firestore
                               transaction; GET: live sentiment for the widget, CDN-cached)
   api/trending/               trending leaders (decayed 7-day rating activity,
                               CDN-cached, zero extra Firestore reads)
   api/revalidate/             on-demand cache sweep after `dm publish` (Bearer secret)
   api/health/                 liveness probe (zero Firestore reads)
+middleware.ts                 locale routing: rewrites clean URLs to /{locale}/... from the
+                              `lang` cookie, so pages stay static per locale
 components/                   UI (map, search, ranking, vote widget, i18n switcher, …)
-lib/                          types, data layer, ranking math, i18n, geo projection, vote integrity
+lib/                          types, data layer, ranking + trending math, i18n, geo, vote integrity
 lib/i18n/messages/            en.json (source of truth) + per-locale overrides
 data/seed/                    committed dataset (8 JSON files - politicians, constituencies,
                               central/state government, constitutional offices, district
@@ -140,6 +163,7 @@ npm run dm -- stats                    # dataset summary
 npm run dm -- publish                  # push seed to Firestore (needs .env.local creds)
 npm run dm -- update-all               # orchestrator: refresh every source, rebuild, validate
 npm run dm -- rebuild-indexes          # regenerate static search/who payloads from the seed
+npm run dm -- backfill-trending        # rebuild trending buckets from vote records (--apply)
 npm run dm:dashboard                   # review UI at http://localhost:4321
 ```
 
@@ -156,7 +180,12 @@ verify-wikidata             verify-attendance
 
 Run `npm run dm` with no arguments for the built-in help.
 
-## Enable live data (Firebase)
+## Configuration
+
+Everything is optional for local development - the site runs entirely from the seed with no
+environment variables. `.env.example` documents every variable.
+
+### Live data (Firebase)
 
 1. Create a Firebase project → enable **Firestore** (production mode).
 2. Project Settings → Service accounts → **Generate new private key**. Save it locally (git-ignored).
@@ -166,15 +195,16 @@ Run `npm run dm` with no arguments for the built-in help.
 
 > `firestore.rules` is **deny-all by design** - the app only ever reaches Firestore through the
 > server-side Admin SDK, which bypasses rules. Public read rules would let anyone who learns the
-> project id enumerate the dataset from a browser and bill you for it.
+> project id enumerate the dataset (and hammer the database) from a browser.
 
 > ⚠️ Point `.env.local` at a **separate dev Firebase project** if you can. Otherwise `npm run dev`
 > writes real votes into production data.
 
-## Enable voting integrity (do this before you take real traffic)
+### Voting integrity (do this before you take real traffic)
 
-- **Cloudflare Turnstile** (free): set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY`.
-- **Upstash Redis** (free): set `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`.
+- **Cloudflare Turnstile**: set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY`
+  (both, in the same deploy - the site key is inlined at build time).
+- **Upstash Redis**: set `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`.
 - Set a strong `VOTE_HASH_SALT` (`openssl rand -hex 32`).
 
 Without Turnstile the vote endpoint runs in **dev mode: it accepts every vote with no bot check**
@@ -184,12 +214,13 @@ which does not hold across serverless instances. Both are fine locally; neither 
 Privacy: raw IPs and fingerprints are **never stored**. The vote dedupe key is a salted SHA-256 of
 a coarsened IP (/24 or /48) plus a device signal - see `lib/vote-integrity.ts`.
 
-## Deploy to Vercel
+## Deployment
 
-Import the repo, add the env vars from `.env.example`, deploy. `tools/` is excluded from the build.
+The site deploys as a standard Next.js app. On Vercel: import the repo, add the env vars from
+`.env.example`, deploy. `tools/` is excluded from the build.
 
-> ⚠️ **Vercel Hobby is non-commercial only.** The moment ads or donations go live the site counts as
-> "commercial" - move to **Cloudflare Pages** (free, commercial allowed) or **Vercel Pro** first.
+Remember that `NEXT_PUBLIC_*` variables are inlined at **build time** - adding one to the host's
+dashboard does nothing until the next build actually runs.
 
 ## Contributing
 
@@ -204,7 +235,7 @@ apply to **every** change; [CLAUDE.md](CLAUDE.md) spells them out with the archi
    no emails, no raw IPs or fingerprints (vote dedupe is a salted hash of coarsened signals,
    and stays that way), no trackers beyond the single analytics mount on the home page.
    PRs adding PII storage or profiling scripts will be declined.
-3. **Everything is for the public.** Free, MIT-licensed, login-less, non-partisan. Every fact
+3. **Everything is for the public.** Open, MIT-licensed, login-less, non-partisan. Every fact
    cited to an official public source; features must work for an anonymous visitor on a cheap
    phone. Nothing lands behind a paywall or an account.
 
@@ -212,7 +243,7 @@ Practical checklist:
 
 - **Found a wrong fact?** Open an issue with the profile URL and an official source. Facts without
   a citation cannot be merged; see `/methodology` for what counts as a source.
-- **Code:** run `npm run typecheck` and `npm run lint` before opening a PR.
+- **Code:** run `npm run typecheck` before opening a PR.
 - **Data changes** go through `npm run dm -- validate` - a PR that fails validation will not build.
 - **Neutrality is the bar:** the objective layer stays factual, dated and source-cited. No guilt
   inferences ("N cases declared", never "criminal").
@@ -220,18 +251,18 @@ Practical checklist:
 ## Languages
 
 `lib/i18n/messages/en.json` is the source of truth. Add `xx.json` for locale `xx` (any subset of
-keys; missing keys fall back to English). The switcher lists all 22 Eighth-Schedule languages + English.
+keys; missing keys fall back to English). The switcher lists all 22 Eighth-Schedule languages +
+English. Translation PRs are a great first contribution.
 
-## ⚠️ Pre-launch legal checklist (India)
+## Legal notes for operators (India)
 
-This is a politically sensitive, public-figure site. **Get a one-time review by an Indian lawyer**
-(geospatial + media/IT + data-protection). Before going live:
+Anyone running a public deployment of this politically sensitive, public-figure site should
+**get a one-time review by an Indian lawyer** (geospatial + media/IT + data-protection):
 
 - [ ] **Map:** verify J&K, Ladakh (Aksai Chin) and Arunachal render as Indian with no dispute markings, at every zoom. Never swap in GADM/Natural Earth/OSM basemaps.
 - [ ] **Grievance Officer (IT Rules 2021):** name and a real monitored mailbox are published on `/grievance` (both come from `lib/site-contact.ts`, overridable via `NEXT_PUBLIC_GRIEVANCE_EMAIL`). Outstanding is the operational duty, not the plumbing: honour 24h ack / ~15-day resolution, and keep the mailbox out of spam.
 - [ ] **Defamation (BNS s.356):** keep the objective layer to official-sourced, dated, neutral facts; no guilt inferences. Keep the right-to-reply prominent.
 - [ ] **DPDP Act 2023:** publish the privacy policy; store only salted hashes for vote dedupe; add a pre-vote consent notice; rotate the salt; don't retain raw IP/fingerprint.
-- [ ] **AdSense/Razorpay:** keep content strictly factual and non-partisan.
 
 ## License
 
