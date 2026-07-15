@@ -3,7 +3,12 @@ import Prose from '@/components/Prose';
 
 export const metadata: Metadata = { title: 'Grievance / Right to Reply' };
 
-const EMAIL = process.env.NEXT_PUBLIC_GRIEVANCE_EMAIL || 'grievance@rankyourpolitician.com';
+// TEMPORARY: grievance@rankyourpolitician.com is not a provisioned mailbox, so
+// grievance mail — which the IT Rules 2021 require us to acknowledge in 24h —
+// was silently going nowhere. This personal address is a monitored stopgap
+// until a mailbox on the domain exists. Override per-environment with
+// NEXT_PUBLIC_GRIEVANCE_EMAIL; switch this default the moment the real one is up.
+const EMAIL = process.env.NEXT_PUBLIC_GRIEVANCE_EMAIL || 'shelock221bholmes@gmail.com';
 
 export default async function GrievancePage({ searchParams }: { searchParams: Promise<{ ref?: string }> }) {
   const { ref } = await searchParams;
