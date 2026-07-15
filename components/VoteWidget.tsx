@@ -16,6 +16,7 @@ declare global {
   interface Window {
     turnstile?: {
       render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+      reset?: (id?: string) => void;
     };
   }
 }
@@ -54,6 +55,7 @@ export default function VoteWidget({
   const [token, setToken] = useState('');
   const fpRef = useRef('');
   const tsRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
 
   useEffect(() => {
     fpRef.current = deviceFingerprint();
@@ -64,13 +66,35 @@ export default function VoteWidget({
   }, [politicianId]);
 
   function renderTurnstile() {
-    if (SITE_KEY && tsRef.current && window.turnstile) {
-      window.turnstile.render(tsRef.current, {
-        sitekey: SITE_KEY,
-        callback: (tok: string) => setToken(tok),
-        theme: 'light',
-      });
-    }
+    if (!SITE_KEY || !tsRef.current || !window.turnstile) return;
+    if (widgetIdRef.current != null) return; // render() twice on one element throws
+    widgetIdRef.current = window.turnstile.render(tsRef.current, {
+      sitekey: SITE_KEY,
+      callback: (tok: string) => setToken(tok),
+      // Tokens expire after ~5 min; clear ours so submit() asks for a redo
+      // instead of sending a dead token the server will reject.
+      'expired-callback': () => setToken(''),
+      theme: 'light',
+    });
+  }
+
+  // The turnstile script survives client-side navigations, so <Script onLoad>
+  // only fires on the FIRST page that loads it — every later person page must
+  // render the widget itself on mount, or voting silently breaks.
+  useEffect(() => {
+    renderTurnstile();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  /** Turnstile tokens are single-use: after any round-trip to the server the
+   *  current token is spent, so reset the widget to mint a fresh one (lets the
+   *  voter change their rating without reloading the page). */
+  function resetTurnstile() {
+    if (!SITE_KEY) return;
+    setToken('');
+    try {
+      if (widgetIdRef.current != null) window.turnstile?.reset?.(widgetIdRef.current);
+    } catch {}
   }
 
   async function submit() {
@@ -93,6 +117,9 @@ export default function VoteWidget({
         }),
       });
       const data = await res.json();
+      // The server has now consumed the token whether it accepted the vote or
+      // not — mint a fresh one so the voter can retry / change their rating.
+      resetTurnstile();
       if (!res.ok) {
         setStatus('error');
         setMessage(
@@ -111,6 +138,7 @@ export default function VoteWidget({
         localStorage.setItem(`vote:${politicianId}`, String(selected));
       } catch {}
     } catch {
+      resetTurnstile();
       setStatus('error');
       setMessage(t('vote.errorGeneric'));
     }
@@ -140,10 +168,15 @@ export default function VoteWidget({
             onClick={() => setSelected(n)}
             aria-pressed={selected === n}
             aria-label={`${n} ${labels[n - 1] || ''}`.trim()}
+            // Selected = a SOLID fill, matching how every other active chip on the
+            // site reads. `rating-ink` (not plain amber) because white text on
+            // #f59e0b is only 2.15:1 — it fails WCAG AA; #b45309 gives 5.02:1 for
+            // the label AND 5.02:1 against the unselected white buttons, so the
+            // choice is obvious at a glance and without relying on hue alone.
             className={`grid h-10 w-10 place-items-center rounded-lg border text-sm font-semibold transition ${
               selected === n
-                ? 'border-sentiment bg-sentiment/15 text-[#b5502e]'
-                : 'border-line bg-white text-ink-soft hover:border-sentiment'
+                ? 'border-rating-ink bg-rating-ink text-white shadow-soft ring-2 ring-rating/40'
+                : 'border-line bg-white text-ink-soft hover:border-rating hover:bg-rating-soft'
             }`}
           >
             {n}
@@ -162,7 +195,7 @@ export default function VoteWidget({
           type="button"
           onClick={submit}
           disabled={selected == null || status === 'submitting'}
-          className="rounded-lg bg-sentiment px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
+          className="rounded-lg bg-rating-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-rating-ink/90 disabled:opacity-50"
         >
           {status === 'submitting' ? t('vote.submitting') : t('vote.submit')}
         </button>
@@ -192,7 +225,7 @@ export default function VoteWidget({
                 <div key={n} className="flex items-center gap-2 text-xs">
                   <span className="w-3 text-ink-faint">{n}</span>
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-paper-sink">
-                    <div className="h-full rounded-full bg-sentiment" style={{ width: `${pct}%` }} />
+                    <div className="h-full rounded-full bg-rating" style={{ width: `${pct}%` }} />
                   </div>
                   <span className="w-8 text-right text-ink-faint">{c}</span>
                 </div>
