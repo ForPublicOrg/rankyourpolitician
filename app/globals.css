@@ -384,18 +384,48 @@ details > summary::-webkit-details-marker {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* --color-brand has two jobs that conflict on a dark background: it is link
- * text (113 `text-brand` usages) AND a button fill under white text (12
- * `bg-brand ... text-white`). To clear 4.5:1 as text on --color-paper-sink it
- * needs luminance >= 0.233; to keep white legible on top of it, <= 0.183. No
- * single value satisfies both, so the text role forks to indigo-400 here while
- * the variable stays dark enough for white button labels and keeps the focus
- * ring at 3.73:1. Light mode is unaffected - #4f46e5 already passes both.
+/* Dark-mode role forks.
  *
- * :not(:hover) matters: `hover:text-white` has the same specificity as this
- * rule, so without it source order would win and the hover state on
- * `bg-brand-soft text-brand hover:bg-brand hover:text-white` chips would keep
- * indigo text on an indigo fill. */
-.dark .text-brand:not(:hover) {
+ * Two token families are used for BOTH text and fills, and on a dark background
+ * those roles want opposite luminances. There is no single value for either:
+ *
+ *  - --color-brand is link text (113 `text-brand`) AND a fill under white labels
+ *    (12 `bg-brand ... text-white`). As text on --color-paper-sink it needs
+ *    luminance >= 0.233; under white text it needs <= 0.183.
+ *  - `*-ink` is a hue's text colour, so dark mode rightly flips it light - 34
+ *    `text-*-ink` usages sit on `*-soft` fills, and `text-brand-ink` would fall
+ *    to 1.70:1 if it stayed dark. But four places use it as a fill under a
+ *    hardcoded `text-white`, which flipping turned into white-on-near-white:
+ *    VoteWidget's selected chip and Submit button measured 1.16:1 - invisible at
+ *    rest - and the CPGRAMS / who-fixes-what CTAs do the same on hover.
+ *
+ * So: fork per role. Text keeps the light value, fills keep the dark one, and
+ * white then clears AA on each (9.9:1 / 5.2:1 / 5.0:1). The rating fill still
+ * holds 3.32:1 against the card, so a selected chip still reads as selected.
+ *
+ * :where(.dark) is load-bearing. It contributes no specificity, so each rule
+ * lands at exactly the weight of the utility it patches and wins on source order
+ * alone - while any `hover:`/`focus:` variant, being one class heavier, still
+ * overrides it. A plain `.dark .text-brand` would outrank `hover:text-white` and
+ * freeze the hover state; `.dark .text-brand:not(:hover)` would instead let a
+ * link with no hover colour of its own snap back to the failing 3.73:1 indigo at
+ * the exact moment the pointer lands on it. Light mode is untouched: #4f46e5
+ * already passes in both roles. */
+:where(.dark) .text-brand {
   color: rgb(129 140 248);
+}
+:where(.dark) .bg-rating-ink {
+  background-color: rgb(180 83 9);
+}
+:where(.dark) .border-rating-ink {
+  border-color: rgb(180 83 9);
+}
+:where(.dark) .hover\:bg-rating-ink\/90:hover {
+  background-color: rgb(180 83 9 / 0.9);
+}
+:where(.dark) .hover\:bg-brand-ink:hover {
+  background-color: rgb(55 48 163);
+}
+:where(.dark) .hover\:bg-accent-ink:hover {
+  background-color: rgb(194 65 12);
 }
