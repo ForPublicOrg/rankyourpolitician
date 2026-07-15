@@ -10,7 +10,7 @@
 //
 // Pure + isomorphic: used by the client Finder (fed from /who/{ST}.json) and
 // by the district page (fed server-side from the seed).
-import type { ProblemType } from './types';
+import type { ContactChannel, ProblemType } from './types';
 
 /** Compact person for the finder payloads (kept tiny — shipped to clients). */
 export interface WhoPerson {
@@ -34,10 +34,22 @@ export interface WhoOfficial {
   sourceUrl?: string;
 }
 
+/** The district's own official site — the durable fallback when no officer is named. */
+export interface WhoPortal {
+  url: string;
+  whosWhoUrl?: string;
+  contactUrl?: string;
+  phone?: string;
+  email?: string;
+  retrieved?: string;
+}
+
 export interface WhoDistrict {
   officials: WhoOfficial[];
   mlas: WhoPerson[];
   mps: WhoPerson[];
+  /** Present when we proved the district's site live at build time. */
+  portal?: WhoPortal;
 }
 
 /** One state's payload (public/who/{ST}.json). */
@@ -49,6 +61,8 @@ export interface WhoStateFile {
   cm?: WhoPerson;
   ministers: WhoPerson[]; // full council incl. DyCMs (rank in sub)
   districts: Record<string, WhoDistrict>;
+  /** This state's channels + the national ones, so the client needs one fetch. */
+  channels?: ContactChannel[];
 }
 
 // ---------------------------------------------------------------------------

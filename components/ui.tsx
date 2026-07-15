@@ -61,6 +61,7 @@ export function Chip({ children, tone = 'neutral', icon }: { children: React.Rea
 export function SectionCard({
   title,
   subtitle,
+  eyebrow,
   icon,
   aside,
   children,
@@ -68,6 +69,8 @@ export function SectionCard({
 }: {
   title?: string;
   subtitle?: string;
+  /** Small label above the title — used to name a step in an ordered ladder. */
+  eyebrow?: string;
   icon?: IconName;
   aside?: React.ReactNode;
   children: React.ReactNode;
@@ -84,6 +87,9 @@ export function SectionCard({
               </span>
             )}
             <div>
+              {eyebrow && (
+                <p className="text-[11px] font-bold uppercase tracking-wider text-ink-faint">{eyebrow}</p>
+              )}
               {title && <h2 className="text-lg font-bold text-ink">{title}</h2>}
               {subtitle && <p className="mt-0.5 text-sm text-ink-faint">{subtitle}</p>}
             </div>

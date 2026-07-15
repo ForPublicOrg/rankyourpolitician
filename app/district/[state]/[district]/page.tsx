@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getRanking, getDistrictOfficials, officialPersonId, getDistrictView, getStateGovernment } from '@/lib/data';
+import { getRanking, getDistrictOfficials, officialPersonId, getDistrictView, getStateGovernment, getDistrictPortal, getContactChannels } from '@/lib/data';
 import { buildDistrictMap, matchDistrictName } from '@/lib/geo-districts';
 import { getI18n } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
 import { formatDate } from '@/lib/format';
 import { OFFICE_META } from '@/lib/offices';
 import { STATE_RANK_LABEL, type OfficeSeat, type Politician } from '@/lib/types';
-import type { WhoPerson, WhoDistrict } from '@/lib/responsibility';
+import type { WhoPerson, WhoDistrict, WhoPortal } from '@/lib/responsibility';
+import { telHref, formatPhone } from '@/lib/contacts';
 import DistrictWhoFixes from '@/components/DistrictWhoFixes';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RankingList from '@/components/RankingList';
@@ -61,10 +62,13 @@ export default async function DistrictPage({
   const view = await getDistrictView(state, districtParam);
   if (!view) notFound();
 
-  const [ranking, officials, stateGov] = await Promise.all([
+  const [ranking, officials, stateGov, portal, channels] = await Promise.all([
     getRanking('district', `${state}/${view.district}`),
     getDistrictOfficials(state, view.district),
     getStateGovernment(state),
+    // The fallbacks the ladder needs wherever no officer is named.
+    getDistrictPortal(state, view.district),
+    getContactChannels(state),
   ]);
   const { dict, locale } = await getI18n();
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
@@ -102,6 +106,16 @@ export default async function DistrictPage({
       })),
     mlas: view.mlas.map(toWho),
     mps: view.mps.map(toWho),
+    portal: portal
+      ? {
+          url: portal.url,
+          whosWhoUrl: portal.whosWhoUrl,
+          contactUrl: portal.contactUrl,
+          phone: portal.phone,
+          email: portal.email,
+          retrieved: portal.retrieved_date,
+        }
+      : undefined,
   };
   const govAsOf = stateGov?.asOf ? stateGov.asOf.replace(/^\s*as of\s*/i, '').split(/[;(]/)[0].trim() : undefined;
 
@@ -156,6 +170,7 @@ export default async function DistrictPage({
                   ministers={(stateGov?.ministers ?? []).map(ministerWho)}
                   district={view.district}
                   people={whoPeople}
+                  channels={channels}
                 />
               </SectionCard>
             </Reveal>
@@ -194,7 +209,7 @@ export default async function DistrictPage({
               <SectionCard title={tr('officials.title')} subtitle={tr('officials.subtitle')} icon="shield">
                 <div className="space-y-3">
                   {officials.map((seat) => (
-                    <OfficeSeatCard key={seat.id} seat={seat} tr={tr} locale={locale} />
+                    <OfficeSeatCard key={seat.id} seat={seat} tr={tr} locale={locale} portal={whoPeople.portal} district={view.district} />
                   ))}
                 </div>
                 <Link href="/who" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline">
@@ -267,10 +282,15 @@ function OfficeSeatCard({
   seat,
   tr,
   locale,
+  portal,
+  district,
 }: {
   seat: OfficeSeat;
   tr: (k: string, v?: Record<string, string | number>) => string;
   locale: string;
+  /** The district's own site — shown when we have no named incumbent. */
+  portal?: WhoPortal;
+  district?: string;
 }) {
   const inc = seat.incumbent;
   return (
@@ -308,7 +328,40 @@ function OfficeSeatCard({
           </p>
         </div>
       ) : (
-        <p className="mt-2 text-xs text-ink-faint">{tr('officials.currentlyUnknown')}</p>
+        // No named officer (true for most districts — postings change constantly).
+        // Point at the district's own Who's Who instead of dead-ending: it names
+        // whoever holds the post today, and stays right when they move on.
+        <div className="mt-2">
+          <p className="text-xs text-ink-faint">{tr(portal ? 'officials.currentlyUnknown' : 'officials.currentlyUnknownBare')}</p>
+          {portal && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              <a
+                href={portal.whosWhoUrl || portal.contactUrl || portal.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-brand-soft px-2.5 py-1.5 text-xs font-bold text-brand-ink hover:bg-brand hover:text-white"
+              >
+                <Icon name="law" size={12} /> {tr(portal.whosWhoUrl ? 'contacts.whosWho' : 'contacts.districtSite')}
+              </a>
+              {portal.phone && (
+                <a
+                  href={telHref(portal.phone)}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 text-xs font-semibold text-ink-soft hover:border-brand/40"
+                >
+                  <Icon name="phone" size={12} /> {formatPhone(portal.phone)}
+                </a>
+              )}
+              {portal.email && (
+                <a
+                  href={`mailto:${portal.email}`}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 text-xs font-semibold text-ink-soft hover:border-brand/40"
+                >
+                  <Icon name="mail" size={12} /> {portal.email}
+                </a>
+              )}
+            </div>
+          )}
+        </div>
       )}
 
       <p className="mt-2 text-xs">

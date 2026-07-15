@@ -230,7 +230,8 @@
   "officials": {
     "title": "Officials for this district",
     "subtitle": "The appointed officers who run day-to-day services here. Information only — these officers are not rated.",
-    "currentlyUnknown": "Current officer being verified — check the official district portal.",
+    "currentlyUnknown": "We don't name this officer — postings change often. Use the district's own directory below, which is kept current:",
+    "currentlyUnknownBare": "We don't name this officer — postings change often. Search your district's official website for its \"Who's Who\" directory, which is kept current.",
     "reportIncorrect": "Report an incorrect posting",
     "officeContact": "Office contact",
     "verifiedAsOf": "verified as of",
@@ -278,6 +279,10 @@
     "error": "Search could not load. Check your connection and try again.",
     "pcShort": "Lok Sabha seat",
     "acShort": "Assembly seat",
+    "levelState": "Step 1 · State",
+    "levelDistrict": "Step 2 · District / city",
+    "levelArea": "Step 3 · Your area",
+    "levelPeople": "Step 4 · Your leaders",
     "groups": {
       "politicians": "Leaders",
       "constituencies": "Areas",
@@ -631,5 +636,16 @@
     "presidentsRule": "This state is currently under President's Rule — there is no elected Council of Ministers.",
     "beingVerified": "This list is being verified against official sources — please confirm with the official state government portal.",
     "verifyNote": "Compiled from official portals and recent reporting; governments change with elections and reshuffles — please confirm current office-holders on the official state portal. Spotted an error? Use the report link on any profile."
+  },
+  "contacts": {
+    "reachTitle": "How to reach this office",
+    "whosWho": "District officer directory (Who's Who)",
+    "whosWhoSub": "Official {district} site — names the current officer",
+    "collectorate": "District office, from the official site",
+    "districtSite": "Official district website",
+    "stateScope": "State helpline",
+    "nationalScope": "National helpline",
+    "sourceNote": "Numbers and links are published by official government sources.",
+    "districtDirectory": "Find your district office (official directory)"
   }
 }

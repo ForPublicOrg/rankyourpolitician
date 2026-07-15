@@ -40,14 +40,27 @@ export default function MethodologyPage() {
         (weights are re-normalised over the metrics that are actually verified for a member).
         Attendance carries the most weight because it is the most universal duty; questions and debates
         measure active scrutiny of the government; bills and fund utilisation reward initiative but have
-        patchier official coverage.
+        patchier official coverage — in practice they are usually not scored at all (see “sparse metrics”).
       </p>
       <ul>
+        <li>
+          <strong>One source per metric:</strong> every attendance, questions and debates figure comes from
+          the official Digital Sansad record and nowhere else. Aggregators measure over different windows,
+          so mixing them would rank members against numbers that were never counted the same way. We re-derive
+          every figure from the official API and compare it against what we publish; anything that does not
+          match is corrected or removed rather than shown.
+        </li>
         <li>
           <strong>Data floor:</strong> a member needs at least <strong>two</strong> verified metrics to be
           ranked (one for ministers, who are exempt from questions/debates by parliamentary convention).
           Below the floor we say “not enough data” — we never rank on a single number, and an alphabetical
           list is never presented as a ranking.
+        </li>
+        <li>
+          <strong>Sparse metrics are never scored:</strong> a percentile only means something when enough
+          peers are measured the same way, so a metric must be available for at least 10 members of a cohort
+          before it can affect anyone’s score. A number that only a handful of members happen to have is
+          shown as a plain fact, never converted into a standing or a rank.
         </li>
         <li>Ministers and presiding officers are exempt from questions/debates by parliamentary convention, so those metrics are excluded for them rather than counted as zero.</li>
         <li>State legislatures do not publish comparable member-level attendance/questions data, so most MLAs/MLCs appear as “not enough data” rather than being given a made-up score.</li>

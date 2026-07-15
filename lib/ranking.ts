@@ -45,6 +45,21 @@ export function minMetricsRequired(p: Politician): number {
   return p.is_minister ? 1 : 2;
 }
 
+/**
+ * A metric may only score anyone if this many members of the cohort actually
+ * have it.
+ *
+ * A percentile is a claim about someone's standing AMONG THEIR PEERS, so it is
+ * only meaningful when enough peers are measured the same way. Without this
+ * floor, a metric that only a handful of members happen to carry (because it
+ * came from a source that doesn't cover everyone) still lands a weighted slice
+ * of their composite — e.g. 5 of 529 MPs once had private_member_bills, so one
+ * of them was shown "top 33%" for a percentile computed against four other
+ * people, and it moved their rank against 524 MPs who were never measured on it
+ * at all. Sparse data must be shown as a fact, never converted into a standing.
+ */
+export const MIN_COHORT_FOR_METRIC = 10;
+
 export function tenureBracket(terms?: number): string {
   if (terms == null) return 'tenure: unknown';
   return terms >= 2 ? 'tenure: 2+ terms' : 'tenure: 1st term';
@@ -105,7 +120,10 @@ export function computePerformanceScores(politicians: Politician[]): Map<string,
         const v = p.metrics[m];
         if (v != null && !Number.isNaN(v)) vals.push(v);
       }
-      if (vals.length) dist[m] = vals;
+      // Too few peers measured on this metric → it cannot express a standing,
+      // so it is excluded from scoring entirely (the value survives as a cited
+      // fact on the profile; it just never becomes a percentile or a rank).
+      if (vals.length >= MIN_COHORT_FOR_METRIC) dist[m] = vals;
     }
 
     for (const p of members) {

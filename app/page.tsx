@@ -50,7 +50,9 @@ export default async function HomePage() {
   // home payload multiple MB and route transitions take seconds.
   const topLeaders = (ranking?.entries ?? []).filter((e) => e.performance_percentile != null).slice(0, 5);
   const totalLeaders = ranking?.entries.length ?? 0;
-  const examples = ['Mandi', 'Goa', 'Anurag Thakur'];
+  // One example per rung of the search hierarchy (state → district → person), so
+  // the chips also teach what you can search for. Each is verified to return hits.
+  const examples = ['Rewa', 'Madhya Pradesh', 'Dharmendra Pradhan'];
   const tiers: { role: string; icon: IconName; tint: string }[] = [
     { role: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand' },
     { role: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf' },

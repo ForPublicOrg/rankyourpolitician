@@ -15,8 +15,10 @@ import { useI18n } from '@/lib/i18n/provider';
 import { PROBLEM_ROUTES } from '@/lib/offices';
 import { ESCALATION_CHAINS, PROBLEM_CHAIN } from '@/lib/escalation';
 import { ministersForProblem, isPoliceProblem, type WhoPerson, type WhoDistrict } from '@/lib/responsibility';
-import type { ProblemType, OfficeType } from '@/lib/types';
+import { primaryPhone, hasContactFallback, telHref, formatPhone } from '@/lib/contacts';
+import type { ContactChannel, ProblemType, OfficeType } from '@/lib/types';
 import { Avatar } from './ui';
+import ContactFallback from './ContactFallback';
 import Icon, { type IconName } from './Icon';
 
 export interface ResponsiblePeopleProps {
@@ -29,6 +31,8 @@ export interface ResponsiblePeopleProps {
   ministers: WhoPerson[];
   district: string;
   people: WhoDistrict;
+  /** Published helplines/portals for this state + nationally (see lib/contacts). */
+  channels?: ContactChannel[];
   /** Compact = embedded on the district page (fewer explainer lines). */
   compact?: boolean;
 }
@@ -83,11 +87,30 @@ function Step({
 }
 
 /** A role-level office card (from the verified escalation chains). */
-function OfficeCard({ title, handles, escalate }: { title: string; handles: string; escalate?: string }) {
+function OfficeCard({
+  title,
+  handles,
+  escalate,
+  call,
+}: {
+  title: string;
+  handles: string;
+  escalate?: string;
+  /** The published number that reaches this office, when one exists. */
+  call?: ContactChannel;
+}) {
   return (
     <div className="rounded-2xl border border-line/70 bg-white/85 p-3.5">
       <p className="font-bold text-ink">{title}</p>
       <p className="mt-0.5 text-sm text-ink-soft">{handles}</p>
+      {call && (
+        <a
+          href={telHref(call.value)}
+          className="mt-2 inline-flex items-center gap-1.5 rounded-lg bg-brand-soft px-2.5 py-1.5 text-xs font-bold text-brand-ink hover:bg-brand hover:text-white"
+        >
+          <Icon name="phone" size={12} /> {formatPhone(call.value)} · {call.label}
+        </a>
+      )}
       {escalate && <p className="mt-1.5 text-xs text-ink-faint">{escalate}</p>}
     </div>
   );
@@ -103,6 +126,7 @@ export default function ResponsiblePeople({
   ministers,
   district,
   people,
+  channels,
   compact = false,
 }: ResponsiblePeopleProps) {
   const { t } = useI18n();
@@ -153,13 +177,24 @@ export default function ResponsiblePeople({
   let n = 0;
   const districtHref = `/district/${stateCode}/${encodeURIComponent(district)}`;
   const shownMlas = people.mlas.slice(0, 6);
+  // Whether the "no named officer" copy can point at something real.
+  const hasFallback = hasContactFallback(people.portal, channels, problem);
+  // The district step lists the SP (police problems only) and the DM; the contact
+  // block is worth showing whenever either of them is unnamed.
+  const anyOfficerMissing = police ? !dm?.name || !sp?.name : !dm?.name;
 
   return (
     <div>
       <ol className="mt-1">
-        {/* 1 — LEVEL 1: the office in your area */}
+        {/* 1 — LEVEL 1: the office in your area. Carries the one published number
+             that reaches it, so the first stop is actionable, not just described. */}
         <Step n={++n} icon="home" title={t('who.stepLevel1')}>
-          <OfficeCard title={level1.title} handles={level1.handles} escalate={level1.escalateWhen} />
+          <OfficeCard
+            title={level1.title}
+            handles={level1.handles}
+            escalate={level1.escalateWhen}
+            call={primaryPhone(channels ?? [], problem)}
+          />
         </Step>
 
         {/* 2 — LEVEL 2: block / tehsil / sub-division, before anything district-wide */}
@@ -242,13 +277,24 @@ export default function ResponsiblePeople({
                       </p>
                     </div>
                   ) : (
-                    <p className="mt-1 text-sm text-ink-faint">{t('officials.currentlyUnknown')}</p>
+                    // We don't name most DMs/SPs — officers transfer too often to
+                    // track nationally. The actual ways in are rendered ONCE below
+                    // for the whole step rather than repeated under each officer.
+                    <p className="mt-1 text-sm text-ink-faint">
+                      {t(hasFallback ? 'officials.currentlyUnknown' : 'officials.currentlyUnknownBare')}
+                    </p>
                   )}
                   <p className="mt-1.5 text-xs text-ink-soft">{t(`offices.${ot}.escalate`)}</p>
                 </div>
               );
             })}
           </div>
+          {/* One contact block for the district, shown when we could not name an
+              officer above. Per-card copies would repeat the same district site
+              and helplines two or three times over. */}
+          {anyOfficerMissing && (
+            <ContactFallback portal={people.portal} channels={channels} problem={problem} district={district} />
+          )}
         </Step>
 
         {/* 5 — the state minister who runs this department, then the CM.

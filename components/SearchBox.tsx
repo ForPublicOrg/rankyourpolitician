@@ -23,18 +23,17 @@ interface FlatRow {
   photo?: string;
 }
 
+// Rows are emitted BROAD -> NARROW: state, then district/city, then constituency,
+// then the people who hold those seats. That mirrors how someone actually locates
+// their representative ("Karnataka … Mysuru … Chamaraja … my MLA") and matches the
+// site's own hierarchy, instead of dropping a flat list of namesakes on them first.
 function flatten(hits: SearchHits, labels: Record<string, string>): FlatRow[] {
   const rows: FlatRow[] = [];
-  for (const p of hits.people) {
-    rows.push({
-      href: `/person/${p.id}`,
-      title: p.name,
-      sub: [p.role, p.place, p.state].filter(Boolean).join(' · ') + (p.party ? ` · ${p.party}` : ''),
-      icon: 'people',
-      group: labels.people,
-      isPerson: true,
-      photo: p.photo,
-    });
+  for (const s of hits.states) {
+    rows.push({ href: `/state/${s.stateCode}`, title: s.state, icon: 'flag', group: labels.states });
+  }
+  for (const d of hits.districts) {
+    rows.push({ href: d.href, title: d.district, sub: d.state, icon: 'map', group: labels.districts });
   }
   for (const a of hits.areas) {
     rows.push({
@@ -45,11 +44,16 @@ function flatten(hits: SearchHits, labels: Record<string, string>): FlatRow[] {
       group: labels.areas,
     });
   }
-  for (const d of hits.districts) {
-    rows.push({ href: d.href, title: d.district, sub: d.state, icon: 'map', group: labels.districts });
-  }
-  for (const s of hits.states) {
-    rows.push({ href: `/state/${s.stateCode}`, title: s.state, icon: 'flag', group: labels.states });
+  for (const p of hits.people) {
+    rows.push({
+      href: `/person/${p.id}`,
+      title: p.name,
+      sub: [p.role, p.place, p.state].filter(Boolean).join(' · ') + (p.party ? ` · ${p.party}` : ''),
+      icon: 'people',
+      group: labels.people,
+      isPerson: true,
+      photo: p.photo,
+    });
   }
   return rows;
 }

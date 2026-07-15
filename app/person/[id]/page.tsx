@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getPerson, getAllPersonIds, officialPersonId, type PersonView } from '@/lib/data';
-import { getSentiment } from '@/lib/votes';
+import { getPerson, getAllPersonIds, getPersonSentiment, officialPersonId, type PersonView } from '@/lib/data';
 import { getI18n } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
 import { roleKeyForHouse, RECORD_GROUPS } from '@/lib/roles';
@@ -68,7 +67,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
   if (person.kind === 'official') return <OfficialProfile p={person} tr={tr} locale={locale} />;
 
   // ---- Elected person (MP and/or minister) --------------------------------
-  const sentiment = await getSentiment(id);
+  const sentiment = await getPersonSentiment(id);
   const roleKey = roleKeyForHouse((person.house as House) || 'Lok Sabha');
   const updated = profileLastUpdated({ facts: person.facts } as any);
   const factByType = new Map<string, Fact>();

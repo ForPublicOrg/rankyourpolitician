@@ -235,6 +235,7 @@ export default function Finder() {
                   ministers={stateFile.ministers}
                   district={district}
                   people={people}
+                  channels={stateFile.channels}
                 />
               </div>
             ) : loadingState ? (

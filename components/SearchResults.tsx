@@ -86,10 +86,62 @@ export default function SearchResults() {
         </div>
       )}
 
+      {/* Ordered BROAD -> NARROW (state, district, constituency, then people) so the
+          page reads the way the country is actually organised, and the way someone
+          drills down to their own representative. A step label on each card makes
+          the ladder explicit rather than implied by position alone. */}
       {hits && hits.total > 0 && (
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 space-y-6">
+          {hits.states.length > 0 && (
+            <SectionCard title={t('search.groups.states')} icon="flag" eyebrow={t('search.levelState')}>
+              <ul className="flex flex-wrap gap-2">
+                {hits.states.map((s) => (
+                  <li key={s.stateCode}>
+                    <Link
+                      href={`/state/${s.stateCode}`}
+                      className="inline-flex rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand hover:text-white"
+                    >
+                      {s.state}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </SectionCard>
+          )}
+          {hits.districts.length > 0 && (
+            <SectionCard title={t('search.groups.districts')} icon="map" eyebrow={t('search.levelDistrict')}>
+              <ul className="grid gap-1 sm:grid-cols-2">
+                {hits.districts.map((d) => (
+                  <li key={d.href}>
+                    <Link href={d.href} className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-brand-soft/60">
+                      <span className="font-medium text-ink">{d.district}</span>
+                      <span className="text-xs text-ink-faint">{d.state}</span>
+                      <Icon name="chevron" size={14} className="ml-auto shrink-0 -rotate-90 text-ink-faint" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </SectionCard>
+          )}
+          {hits.areas.length > 0 && (
+            <SectionCard title={t('search.groups.constituencies')} icon="pin" eyebrow={t('search.levelArea')}>
+              <ul className="grid gap-1 sm:grid-cols-2">
+                {hits.areas.map((a) => (
+                  <li key={a.id}>
+                    <Link href={`/area/${a.id}`} className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-brand-soft/60">
+                      <span className="font-medium text-ink">{a.name}</span>
+                      <span className="text-xs text-ink-faint">
+                        {a.type === 'PC' ? t('search.pcShort') : t('search.acShort')} · {a.state}
+                      </span>
+                      <Icon name="chevron" size={14} className="ml-auto shrink-0 -rotate-90 text-ink-faint" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </SectionCard>
+          )}
           {hits.people.length > 0 && (
-            <SectionCard title={t('search.groups.politicians')} icon="people" className="md:col-span-2">
+            <SectionCard title={t('search.groups.politicians')} icon="people" eyebrow={t('search.levelPeople')}>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {hits.people.map((p) => (
                   <li key={p.id}>
@@ -112,54 +164,6 @@ export default function SearchResults() {
               </ul>
             </SectionCard>
           )}
-          {hits.areas.length > 0 && (
-            <SectionCard title={t('search.groups.constituencies')} icon="pin">
-              <ul className="space-y-1">
-                {hits.areas.map((a) => (
-                  <li key={a.id}>
-                    <Link href={`/area/${a.id}`} className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-brand-soft/60">
-                      <span className="font-medium text-ink">{a.name}</span>
-                      <span className="text-xs text-ink-faint">
-                        {a.type === 'PC' ? t('search.pcShort') : t('search.acShort')} · {a.state}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </SectionCard>
-          )}
-          <div className="space-y-6">
-            {hits.districts.length > 0 && (
-              <SectionCard title={t('search.groups.districts')} icon="map">
-                <ul className="space-y-1">
-                  {hits.districts.map((d) => (
-                    <li key={d.href}>
-                      <Link href={d.href} className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-brand-soft/60">
-                        <span className="font-medium text-ink">{d.district}</span>
-                        <span className="text-xs text-ink-faint">{d.state}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </SectionCard>
-            )}
-            {hits.states.length > 0 && (
-              <SectionCard title={t('search.groups.states')} icon="flag">
-                <ul className="flex flex-wrap gap-2">
-                  {hits.states.map((s) => (
-                    <li key={s.stateCode}>
-                      <Link
-                        href={`/state/${s.stateCode}`}
-                        className="inline-flex rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand hover:text-white"
-                      >
-                        {s.state}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </SectionCard>
-            )}
-          </div>
         </div>
       )}
     </div>

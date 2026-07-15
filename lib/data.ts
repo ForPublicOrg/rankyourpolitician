@@ -26,7 +26,9 @@ import seedCentral from '@/data/seed/central_government.json';
 import seedDistrictOfficials from '@/data/seed/district_officials.json';
 import seedStateGov from '@/data/seed/state_government.json';
 import seedConstitutional from '@/data/seed/constitutional_offices.json';
-import { STATE_RANK_LABEL, type ConstitutionalOffice, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
+import seedDistrictPortals from '@/data/seed/district_portals.json';
+import seedContactChannels from '@/data/seed/contact_channels.json';
+import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
 
 function slugify(s: string): string {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -61,16 +63,44 @@ export function rankingDocId(level: RankingLevel, geo: string): string {
   return `${level}__${geo || 'ALL'}`.replace(/[/#?[\]]/g, '_');
 }
 
+// ---- In-process TTL memoisation ---------------------------------------------
+// Every Firestore collection the site reads at runtime goes through one of
+// these memos, so the worst case is one load per collection per TTL per warm
+// instance — NOT per render. Without this, a crawler sweeping the ~6k person
+// pages cost ~200 reads per page (uncached central/state government scans,
+// doubled by generateMetadata) — millions of billed reads with zero real users.
+// The PROMISE is cached, not the resolved value, so a burst of concurrent
+// renders on a cold instance shares a single load instead of stampeding the
+// database. Failed loads are evicted so the next call retries.
+function ttlCache<T>(ttlMs: number, load: () => Promise<T>): () => Promise<T> {
+  let at = 0;
+  let pending: Promise<T> | null = null;
+  return () => {
+    if (pending && Date.now() - at < ttlMs) return pending;
+    at = Date.now();
+    const p = load();
+    pending = p;
+    p.catch(() => {
+      if (pending === p) pending = null;
+    });
+    return p;
+  };
+}
+
+// Government/office collections only change when the data manager publishes;
+// vote aggregates drive the visible scores, so they refresh more often.
+const STATIC_TTL_MS = 30 * 60_000;
+const VOTES_TTL_MS = 5 * 60_000;
+
 /**
- * Live vote aggregates — the ONLY collection read from Firestore at runtime.
+ * Live vote aggregates — the only frequently-refreshed Firestore read.
  * Politician/constituency data is static between deploys and is served from the
- * committed seed, so a page render costs at most one small collection read
- * (only politicians who have received a vote), keeping us well under the free
- * Spark 50k-reads/day quota. Returns empty during `next build` (getDb() is null)
- * or on any read error, degrading gracefully to "no ratings".
+ * committed seed. Returns empty during `next build` (getDb() is null) or on any
+ * read error, degrading gracefully to "no ratings".
  */
-async function loadVoteAggregates(db: ReturnType<typeof getDb>): Promise<Map<string, VoteAggregate>> {
+const loadVoteAggregates = ttlCache(VOTES_TTL_MS, async (): Promise<Map<string, VoteAggregate>> => {
   const m = new Map<string, VoteAggregate>();
+  const db = getDb();
   if (!db) return m;
   try {
     const snap = await db.collection('vote_aggregates').get();
@@ -79,7 +109,7 @@ async function loadVoteAggregates(db: ReturnType<typeof getDb>): Promise<Map<str
     console.error('[data] vote_aggregates read failed, showing no ratings:', err);
   }
   return m;
-}
+});
 
 function loadFromSeed(): Dataset {
   return {
@@ -95,7 +125,7 @@ async function loadDataset(): Promise<Dataset> {
   // snapshot we publish, updated via `dm refresh-mps` + redeploy). Only the
   // dynamic vote aggregates are read live from Firestore at runtime.
   const db = getDb();
-  return { ...loadFromSeed(), voteAggregates: await loadVoteAggregates(db), source: db ? 'firestore' : 'seed' };
+  return { ...loadFromSeed(), voteAggregates: await loadVoteAggregates(), source: db ? 'firestore' : 'seed' };
 }
 
 function buildIndex(ds: Dataset): Index {
@@ -132,16 +162,14 @@ function buildIndex(ds: Dataset): Index {
   };
 }
 
-// Short in-process memo so a burst of requests shares one computation. ISR
-// caches the rendered page on top of this; vote updates surface within TTL.
-let cache: { at: number; index: Index } | null = null;
-const TTL_MS = 60_000;
+// Short memo so a burst of requests shares one computation (the Firestore cost
+// underneath is amortised by loadVoteAggregates' own TTL — rebuilding the index
+// between aggregate refreshes is pure CPU, zero reads). ISR caches the rendered
+// page on top of this; vote updates surface within VOTES_TTL_MS.
+const getIndexCached = ttlCache(60_000, async () => buildIndex(await loadDataset()));
 
 export async function getIndex(): Promise<Index> {
-  if (cache && Date.now() - cache.at < TTL_MS) return cache.index;
-  const index = buildIndex(await loadDataset());
-  cache = { at: Date.now(), index };
-  return index;
+  return getIndexCached();
 }
 
 // ---- Query helpers used by the pages ---------------------------------------
@@ -402,7 +430,7 @@ export async function getPerson(
   return null;
 }
 
-async function allOfficeSeats(): Promise<OfficeSeat[]> {
+const allOfficeSeats = ttlCache(STATIC_TTL_MS, async (): Promise<OfficeSeat[]> => {
   let seeds = seedDistrictOfficials as unknown as OfficeSeat[];
   const db = getDb();
   if (db) {
@@ -414,7 +442,7 @@ async function allOfficeSeats(): Promise<OfficeSeat[]> {
     }
   }
   return seeds;
-}
+});
 
 /** Stable person id for an appointed official (used to link their name). */
 export function officialPersonId(name: string): string {
@@ -461,6 +489,15 @@ export async function getDataSource(): Promise<'firestore' | 'seed'> {
   return (await getIndex()).source;
 }
 
+/** Sentiment for one person, served from the TTL-cached aggregates so a
+ *  person-page render costs zero extra Firestore reads. The vote API returns
+ *  the fresh score directly after a vote, so this staleness is invisible to
+ *  the voter. */
+export async function getPersonSentiment(id: string): Promise<SentimentScore> {
+  const idx = await getIndex();
+  return idx.sentiment.get(id) ?? computeSentimentScore(id, undefined);
+}
+
 /** Fill a minister record's missing photo from its linked politician profile —
  *  minister rows come from council lists (no images), but the politician record
  *  usually has a Commons photo. Without this, the PM/CM cards show initials
@@ -480,36 +517,45 @@ export async function getConstitutionalOffices(): Promise<ConstitutionalOffice[]
   return joinMinisterPhotos(seedConstitutional as unknown as ConstitutionalOffice[]);
 }
 
-export async function getCentralGovernment(): Promise<Minister[]> {
+const loadCentralGovernment = ttlCache(STATIC_TTL_MS, async (): Promise<Minister[]> => {
   const db = getDb();
   if (db) {
     try {
       const snap = await db.collection('central_government').get();
-      if (!snap.empty) return joinMinisterPhotos(snap.docs.map((d) => d.data() as Minister));
+      if (!snap.empty) return snap.docs.map((d) => d.data() as Minister);
     } catch (err) {
       console.error('[data] central_government read failed, using seed:', err);
     }
   }
-  return joinMinisterPhotos(seedCentral as unknown as Minister[]);
+  return seedCentral as unknown as Minister[];
+});
+
+export async function getCentralGovernment(): Promise<Minister[]> {
+  // Photos are joined OUTSIDE the memo: the join depends on the politician
+  // index, which has its own cache — and it's a cheap in-memory map lookup.
+  return joinMinisterPhotos(await loadCentralGovernment());
 }
 
 export async function getMinister(id: string): Promise<Minister | null> {
   return (await getCentralGovernment()).find((m) => m.id === id) ?? null;
 }
 
-export async function getStateGovernments(): Promise<StateGovernment[]> {
-  const load = async (gs: StateGovernment[]) =>
-    Promise.all(gs.map(async (g) => ({ ...g, ministers: await joinMinisterPhotos(g.ministers || []) })));
+const loadStateGovernments = ttlCache(STATIC_TTL_MS, async (): Promise<StateGovernment[]> => {
   const db = getDb();
   if (db) {
     try {
       const snap = await db.collection('state_government').get();
-      if (!snap.empty) return load(snap.docs.map((d) => d.data() as StateGovernment));
+      if (!snap.empty) return snap.docs.map((d) => d.data() as StateGovernment);
     } catch (err) {
       console.error('[data] state_government read failed, using seed:', err);
     }
   }
-  return load(seedStateGov as unknown as StateGovernment[]);
+  return seedStateGov as unknown as StateGovernment[];
+});
+
+export async function getStateGovernments(): Promise<StateGovernment[]> {
+  const gs = await loadStateGovernments();
+  return Promise.all(gs.map(async (g) => ({ ...g, ministers: await joinMinisterPhotos(g.ministers || []) })));
 }
 
 export async function getStateGovernment(stateCode: string): Promise<StateGovernment | null> {
@@ -520,24 +566,34 @@ async function allStateMinisters(): Promise<StateMinister[]> {
   return (await getStateGovernments()).flatMap((g) => g.ministers);
 }
 
+/**
+ * The district's own official website (proven live when the seed was generated).
+ * This is what the ladder offers when we cannot name the DM/SP — the district's
+ * Who's Who page names whoever currently holds the post, so it stays right as
+ * officers transfer. See tools/data-manager/discover-district-portals.ts.
+ */
+export async function getDistrictPortal(stateCode: string, district: string): Promise<DistrictPortal | undefined> {
+  const portals = seedDistrictPortals as unknown as Record<string, DistrictPortal>;
+  return portals[`${stateCode}__${district}`];
+}
+
+/**
+ * Published helplines/grievance portals reachable from this state: the state's
+ * own first (more actionable), then the national ones that work everywhere.
+ */
+export async function getContactChannels(stateCode: string): Promise<ContactChannel[]> {
+  const file = seedContactChannels as unknown as ContactChannelsFile;
+  const st = (file.states ?? []).find((s) => s.stateCode === stateCode);
+  return [...(st?.channels ?? []), ...(file.national ?? [])];
+}
+
 /** The key appointed offices for a district (durable roles), with the current
  *  incumbent merged in where we have a cited one. Always returns the 2 core
  *  seats (Collector/DM + SP) so the "who to approach" is shown even without a name. */
 export async function getDistrictOfficials(stateCode: string, district: string): Promise<OfficeSeat[]> {
-  let seeded = seedDistrictOfficials as unknown as OfficeSeat[];
-  const db = getDb();
-  if (db) {
-    try {
-      const snap = await db
-        .collection('office_seats')
-        .where('stateCode', '==', stateCode)
-        .where('district', '==', district)
-        .get();
-      if (!snap.empty) seeded = snap.docs.map((d) => d.data() as OfficeSeat);
-    } catch (err) {
-      console.error('[data] office_seats read failed, using seed:', err);
-    }
-  }
+  // Filter the TTL-cached full collection in memory — a per-district Firestore
+  // query per district-page render (~780 districts on ISR) adds up fast.
+  const seeded = await allOfficeSeats();
   const core: OfficeType[] = ['collector_dm', 'sp_district'];
   return core.map((officeType) => {
     const match = seeded.find(

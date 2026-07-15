@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
 import { PROBLEMS, PROBLEM_META } from '@/lib/offices';
 import type { WhoPerson, WhoDistrict } from '@/lib/responsibility';
-import type { ProblemType } from '@/lib/types';
+import type { ContactChannel, ProblemType } from '@/lib/types';
 import ResponsiblePeople from './ResponsiblePeople';
 import Icon from './Icon';
 
@@ -19,6 +19,7 @@ export default function DistrictWhoFixes({
   ministers,
   district,
   people,
+  channels,
 }: {
   stateCode: string;
   state: string;
@@ -27,6 +28,7 @@ export default function DistrictWhoFixes({
   ministers: WhoPerson[];
   district: string;
   people: WhoDistrict;
+  channels?: ContactChannel[];
 }) {
   const { t } = useI18n();
   const [problem, setProblem] = useState<ProblemType>('roads');
@@ -80,6 +82,7 @@ export default function DistrictWhoFixes({
           ministers={ministers}
           district={district}
           people={people}
+          channels={channels}
           compact
         />
       </div>

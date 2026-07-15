@@ -207,6 +207,63 @@ export interface OfficeSeat {
   };
 }
 
+/**
+ * A published, citable way to actually reach an office — a helpline number or a
+ * grievance/portal URL.
+ *
+ * Naming every DM/SP in ~600 districts is not sustainable (officers transfer
+ * constantly), so most rungs of the escalation ladder have no incumbent. A
+ * channel is the durable answer: it stays correct as officers change, and it is
+ * what a citizen actually needs — somewhere to call, write or file. Every
+ * channel carries the official source that publishes it; an uncited helpline is
+ * never shown, since a wrong number in an emergency is worse than none.
+ */
+export type ContactTopic =
+  | 'emergency' | 'police' | 'women' | 'child' | 'health' | 'ambulance'
+  | 'electricity' | 'water' | 'ration' | 'senior' | 'grievance' | 'corruption'
+  | 'general' | 'cyber' | 'road' | 'fire' | 'disaster';
+
+export interface ContactChannel {
+  kind: 'phone' | 'url';
+  topic: ContactTopic;
+  label: string;
+  /** Phone: digits only ("112", "1800111555"). URL: full https URL. */
+  value: string;
+  scope: 'national' | 'state';
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+  note?: string;
+}
+
+/** National + per-state channels (data/seed/contact_channels.json). */
+export interface ContactChannelsFile {
+  national: ContactChannel[];
+  states: { stateCode: string; stateName: string; channels: ContactChannel[] }[];
+}
+
+/**
+ * A district's own official website, proven live at build time. This is the
+ * "place to go" when no officer is named: the district's Who's Who directory is
+ * maintained by the district itself, so it names the CURRENT collector even
+ * though we do not.
+ */
+export interface DistrictPortal {
+  key: string; // `${stateCode}__${district}`
+  stateCode: string;
+  district: string;
+  url: string;
+  title?: string;
+  whosWhoUrl?: string;
+  contactUrl?: string;
+  phone?: string;
+  email?: string;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+  verified: 'fetched-200-name-match' | 'fetched-200-marker';
+}
+
 /** Constitutional / parliamentary offices OUTSIDE the Council of Ministers:
  *  Head of State, presiding officers and the statutory opposition leaders.
  *  Info-only (never ranked); the office is non-partisan for president/VP. */

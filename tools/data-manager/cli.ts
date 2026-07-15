@@ -107,6 +107,24 @@ async function main() {
       await import('./enrich-performance');
       break;
     }
+    case 'verify-attendance': {
+      // Independently re-derive every stored attendance/questions/debates figure
+      // from the official Digital Sansad APIs and diff it against the seed.
+      await import('./verify-attendance');
+      break;
+    }
+    case 'import-contact-channels': {
+      // Verified helplines/grievance portals from the research workflow, gated on
+      // an official source, into data/seed/contact_channels.json.
+      await import('./import-contact-channels');
+      break;
+    }
+    case 'discover-district-portals': {
+      // Official district website + Who's Who/contact page per district, so the
+      // escalation ladder always has a real place to go even with no named DM.
+      await import('./discover-district-portals');
+      break;
+    }
     case 'update-all': {
       // Orchestrator: pull latest from every source, rebuild indexes, validate.
       await import('./update-all');
