@@ -18,7 +18,7 @@ body {
 }
 
 /* ---------------------------------------------------------------------------
- * Aurora backdrop — soft national-palette light wash behind the glass layer.
+ * Aurora backdrop - soft national-palette light wash behind the glass layer.
  * Fixed, non-interactive, extremely low saturation so content stays readable.
  * ------------------------------------------------------------------------- */
 .aurora {
@@ -55,7 +55,7 @@ body {
  * - .glass         cards sitting on the page background
  * - .glass-strong  chrome over scrolling content (header, tab bar)
  * - .glass-overlay floating panels over ARBITRARY content (dropdowns,
- *                  popovers) — near-opaque, because backdrop blur is not
+ *                  popovers) - near-opaque, because backdrop blur is not
  *                  guaranteed (unsupported browsers, nested-filter contexts)
  */
 .glass {
@@ -76,7 +76,7 @@ body {
 }
 .glass-overlay {
   /* Floating panels (search dropdown, popovers) sit over ARBITRARY page content
-   * — stat cards, the org chart — so they are FULLY OPAQUE. No alpha, no reliance
+   * - stat cards, the org chart - so they are FULLY OPAQUE. No alpha, no reliance
    * on backdrop-blur (which silently no-ops in unsupported browsers / nested
    * filter contexts and let content bleed through). Solid white, always. */
   background: #ffffff;
@@ -93,7 +93,7 @@ body {
   color: #fff;
 }
 
-/* Tricolor hairline — national accent used sparingly (flag, not party). */
+/* Tricolor hairline - national accent used sparingly (flag, not party). */
 .tricolor-line {
   background: linear-gradient(
     90deg,
@@ -135,14 +135,15 @@ body {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-/* Page-enter transition (applied by app/template.tsx on every navigation). */
+/* Page-enter transition (applied by app/template.tsx on every navigation).
+   Kept short: this runs on EVERY click, so anything long reads as lag. */
 .page-enter {
-  animation: fade-up 0.45s cubic-bezier(0.32, 0.72, 0, 1) both;
+  animation: fade-up 0.22s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -168,7 +169,7 @@ body {
 }
 
 /* ---------------------------------------------------------------------------
- * Maps — interactive choropleth polygons.
+ * Maps - interactive choropleth polygons.
  * ------------------------------------------------------------------------- */
 .geo-path {
   stroke: #ffffff;
