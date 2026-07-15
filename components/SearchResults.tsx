@@ -1,7 +1,7 @@
 'use client';
 // Full search page - same local index as the SearchBox dropdown, richer layout.
 // URL-synced (?q=) so results are shareable and the back button works.
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
@@ -10,17 +10,32 @@ import type { SearchHits } from '@/lib/search-core';
 import { Avatar, SectionCard } from './ui';
 import Icon from './Icon';
 
+// The only useSearchParams() consumer, quarantined behind its own
+// Suspense(null) so the search UI's first paint and hydration never depend on
+// a streamed boundary (in dev those reveal via requestAnimationFrame and can
+// wedge forever in hidden tabs - see RankingsExplorer.tsx). It renders
+// nothing; it only pushes URL changes (header SearchBox push while already on
+// /search, back/forward) into the parent's state.
+function UrlQSync({ onUrlQ }: { onUrlQ: (q: string) => void }) {
+  const urlQ = useSearchParams().get('q') || '';
+  useEffect(() => onUrlQ(urlQ), [urlQ, onUrlQ]);
+  return null;
+}
+
 export default function SearchResults() {
   const { t } = useI18n();
   const router = useRouter();
-  const params = useSearchParams();
-  const urlQ = params.get('q') || '';
-  const [q, setQ] = useState(urlQ);
+  const [q, setQ] = useState('');
   const { status, search, ensureIndex } = useSearch(24);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => ensureIndex(), [ensureIndex]);
-  useEffect(() => setQ(urlQ), [urlQ]);
+  // Initial ?q= comes from window.location (read ONCE on mount, Finder.tsx
+  // idiom) so a deep link works even where UrlQSync's boundary has not
+  // hydrated yet; UrlQSync takes over for every later URL change.
+  useEffect(() => {
+    setQ(new URLSearchParams(window.location.search).get('q') || '');
+  }, []);
 
   // Keep the URL in sync (replace, debounced) so refresh/share keeps the query.
   function onChange(v: string) {
@@ -39,6 +54,9 @@ export default function SearchResults() {
 
   return (
     <div>
+      <Suspense fallback={null}>
+        <UrlQSync onUrlQ={setQ} />
+      </Suspense>
       <div className="relative mx-auto max-w-2xl">
         <input
           type="search"

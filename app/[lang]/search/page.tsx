@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
 import { getI18n, type LangParams } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
 import SearchResults from '@/components/SearchResults';
@@ -17,9 +16,11 @@ export default async function SearchPage({ params }: { params: Promise<LangParam
         {t(dict, 'search.title')}
       </h1>
       <div className="mt-6">
-        <Suspense fallback={<div className="skeleton mx-auto h-14 max-w-2xl" />}>
-          <SearchResults />
-        </Suspense>
+        {/* SearchResults reads the initial ?q= from window.location and keeps
+            its only useSearchParams() consumer behind an internal
+            Suspense(null), so no page-level boundary is needed - the search
+            input prerenders into the static HTML instead of a skeleton. */}
+        <SearchResults />
       </div>
     </div>
   );

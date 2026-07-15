@@ -2,11 +2,19 @@
 // Reads the ?ref= profile id in the browser so the grievance page itself can
 // be fully static - reading searchParams on the server would force the whole
 // route to render per request.
-import { Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-function MailtoInner({ email }: { email: string }) {
-  const ref = useSearchParams().get('ref') ?? undefined;
+export default function GrievanceMailto({ email }: { email: string }) {
+  // ?ref= comes from window.location, not useSearchParams(): it is only read
+  // ONCE on mount, and useSearchParams forced a Suspense boundary whose
+  // streamed reveal can wedge on the fallback in dev (see RankingsExplorer.tsx
+  // / Finder.tsx). Until the effect runs this renders the same link with the
+  // un-suffixed subject, so nothing jumps visually.
+  const [ref, setRef] = useState<string | undefined>(undefined);
+  useEffect(() => {
+    setRef(new URLSearchParams(window.location.search).get('ref') ?? undefined);
+  }, []);
+
   const subject = encodeURIComponent(`Correction / Right to reply${ref ? ` - ${ref}` : ''}`);
   return (
     <>
@@ -18,15 +26,5 @@ function MailtoInner({ email }: { email: string }) {
         </>
       )}
     </>
-  );
-}
-
-export default function GrievanceMailto({ email }: { email: string }) {
-  // useSearchParams needs a Suspense boundary; the fallback is the same link
-  // without the prefilled subject, so nothing jumps visually.
-  return (
-    <Suspense fallback={<a href={`mailto:${email}`}>{email}</a>}>
-      <MailtoInner email={email} />
-    </Suspense>
   );
 }
