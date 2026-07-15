@@ -177,7 +177,7 @@ export default function VoteWidget({
             // choice is obvious at a glance and without relying on hue alone.
             className={`grid h-10 w-10 place-items-center rounded-lg border text-sm font-semibold transition ${
               selected === n
-                ? 'border-rating-ink bg-rating-ink text-white shadow-soft ring-2 ring-rating/40'
+                ? 'border-rating-ink bg-rating-ink text-white dark:text-zinc-950 shadow-soft ring-2 ring-rating/40'
                 : 'border-line bg-white text-ink-soft hover:border-rating hover:bg-rating-soft'
             }`}
           >
@@ -197,12 +197,12 @@ export default function VoteWidget({
           type="button"
           onClick={submit}
           disabled={selected == null || status === 'submitting'}
-          className="rounded-lg bg-rating-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-rating-ink/90 disabled:opacity-50"
+          className="rounded-lg bg-rating-ink px-4 py-2 text-sm font-semibold text-white dark:text-zinc-950 transition hover:bg-rating-ink/90 disabled:opacity-50"
         >
           {status === 'submitting' ? t('vote.submitting') : t('vote.submit')}
         </button>
         {message && (
-          <span className={`text-sm ${status === 'error' ? 'text-red-600' : 'text-good'}`}>{message}</span>
+          <span className={`text-sm ${status === 'error' ? 'text-red-600 dark:text-red-400' : 'text-good dark:text-green-400'}`}>{message}</span>
         )}
       </div>
 
