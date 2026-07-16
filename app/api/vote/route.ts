@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
   const bot = await verifyTurnstile(turnstileToken, ip);
   if (!bot.ok) return NextResponse.json({ error: 'captcha', reason: bot.reason }, { status: 403 });
 
-  const allowed = await checkRateLimit(ip);
+  const allowed = await checkRateLimit(ip, politicianId);
   if (!allowed) return NextResponse.json({ error: 'rate-limited' }, { status: 429 });
 
   const key = voterKey(ip, fingerprint);

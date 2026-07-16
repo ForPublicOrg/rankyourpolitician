@@ -6,6 +6,20 @@ import { createHash } from 'node:crypto';
 
 const SALT = process.env.VOTE_HASH_SALT || 'dev-only-change-me';
 
+// If a production deploy is still using the built-in dev salt, our
+// coarse-IP/fingerprint hashes are effectively unsalted, weakening vote
+// dedupe. The remedy is an ops step: set a strong random VOTE_HASH_SALT in the
+// environment. We WARN loudly rather than throw so an unset env var cannot take
+// the entire vote path down (sha() is on the hot path of every POST /api/vote).
+// Add hard enforcement only once the secret is confirmed set in production.
+if (process.env.NODE_ENV === 'production' && SALT === 'dev-only-change-me') {
+  console.error(
+    '[vote-integrity] CRITICAL: VOTE_HASH_SALT is unset or set to the default ' +
+      'dev value in production. Set a strong random VOTE_HASH_SALT to protect ' +
+      'vote-integrity hashes.',
+  );
+}
+
 export function getClientIp(headers: Headers): string {
   const xff = headers.get('x-forwarded-for');
   if (xff) return xff.split(',')[0].trim();
@@ -29,8 +43,8 @@ export function voterKey(ip: string, fingerprint: string): string {
   return sha(`${coarsenIp(ip)}|${fingerprint || 'none'}`);
 }
 
-export function ipRateKey(ip: string): string {
-  return sha(coarsenIp(ip));
+export function ipRateKey(ip: string, politicianId: string): string {
+  return sha(`${coarsenIp(ip)}|${politicianId}`);
 }
 
 export interface TurnstileResult {
@@ -92,16 +106,22 @@ async function getLimiter(): Promise<Limiter> {
         return { success };
       };
       return limiter;
-    } catch {
-      // fall through to memory
+    } catch (err) {
+      if (process.env.NODE_ENV === 'production') {
+        console.error('[vote-integrity] Failed to initialize Upstash Redis rate limiter, falling back to in-memory:', err);
+      }
+    }
+  } else {
+    if (process.env.NODE_ENV === 'production') {
+      console.warn('[vote-integrity] UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN are not configured. Rate limiting is falling back to in-memory, which does not persist across serverless instances.');
     }
   }
   limiter = memLimiter(10, 60 * 60 * 1000);
   return limiter;
 }
 
-export async function checkRateLimit(ip: string): Promise<boolean> {
+export async function checkRateLimit(ip: string, politicianId: string): Promise<boolean> {
   const rl = await getLimiter();
-  const { success } = await rl(ipRateKey(ip));
+  const { success } = await rl(ipRateKey(ip, politicianId));
   return success;
 }
