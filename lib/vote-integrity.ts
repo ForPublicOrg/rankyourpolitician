@@ -29,8 +29,8 @@ export function voterKey(ip: string, fingerprint: string): string {
   return sha(`${coarsenIp(ip)}|${fingerprint || 'none'}`);
 }
 
-export function ipRateKey(ip: string): string {
-  return sha(coarsenIp(ip));
+export function ipRateKey(ip: string, politicianId: string): string {
+  return sha(`${coarsenIp(ip)}|${politicianId}`);
 }
 
 export interface TurnstileResult {
@@ -100,8 +100,8 @@ async function getLimiter(): Promise<Limiter> {
   return limiter;
 }
 
-export async function checkRateLimit(ip: string): Promise<boolean> {
+export async function checkRateLimit(ip: string, politicianId: string): Promise<boolean> {
   const rl = await getLimiter();
-  const { success } = await rl(ipRateKey(ip));
+  const { success } = await rl(ipRateKey(ip, politicianId));
   return success;
 }
