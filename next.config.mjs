@@ -34,15 +34,15 @@ const nextConfig = {
     // before trusting this in production - Auto ads can pull extra ad domains.
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://va.vercel-scripts.com https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://www.googletagservices.com https://adservice.google.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://va.vercel-scripts.com https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://www.googletagservices.com https://adservice.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' blob: data: https://upload.wikimedia.org https://commons.wikimedia.org https://*.googlesyndication.com https://*.g.doubleclick.net https://*.google.com https://*.gstatic.com",
+      "img-src 'self' blob: data: https://upload.wikimedia.org https://commons.wikimedia.org https://*.googlesyndication.com https://*.g.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google",
       "font-src 'self' data:",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "frame-src 'self' https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com",
-      "connect-src 'self' https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.google.com",
+      "frame-src 'self' https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://ep2.adtrafficquality.google",
+      "connect-src 'self' https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.google.com https://ep1.adtrafficquality.google https://csi.gstatic.com",
       "frame-ancestors 'none'",
       "upgrade-insecure-requests",
     ].join('; ');
