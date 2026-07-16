@@ -88,6 +88,115 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
     sources: tr('common.sources'),
   };
 
+  // --- Cards + column balancing ----------------------------------------------
+  // The government roster and the top-leaders list are the two tall blocks, so
+  // government anchors the left column and leaders the right. Government height
+  // swings by ~1,500px across states (a 5-minister cabinet vs a 44-minister one)
+  // and no fixed split can absorb that, so every other card (composition, map,
+  // district list, constituencies) drops onto whichever column is currently
+  // shorter. Weights are rough rendered-height estimates (px at the
+  // two-column width); only their *relative* size decides placement, so
+  // exactness does not matter. The government roster groups ministers into a
+  // grid, so its height grows ~sqrt(ministers), not linearly (fit to real states).
+  const ministerCount = stateGov && stateGov.governmentStatus !== 'presidents_rule' ? stateGov.ministers.length : 0;
+  const wGovernment = stateGov ? (ministerCount ? Math.max(220, Math.round(430 * Math.sqrt(ministerCount) - 130)) : 320) : 0;
+
+  const governmentCard =
+    stateGov && (stateGov.ministers.length > 0 || stateGov.governmentStatus === 'presidents_rule') ? (
+      <Reveal key="government">
+        <StateGovernmentSection gov={stateGov} labels={govLabels} />
+      </Reveal>
+    ) : null;
+
+  const compositionCard = view.assemblyComposition ? (
+    <Reveal key="composition">
+      <SectionCard title={tr('state.compositionTitle')} subtitle={tr('state.compositionHelp')} icon="people">
+        <CompositionBar
+          segments={view.assemblyComposition.segments}
+          total={view.assemblyComposition.total}
+          ariaLabel={tr('state.compositionTitle')}
+        />
+      </SectionCard>
+    </Reveal>
+  ) : null;
+
+  const mapCard = mapShapes ? (
+    <Reveal key="map">
+      <SectionCard title={tr('state.mapTitle')} subtitle={tr('state.mapHelp')} icon="map">
+        <GeoMap shapes={mapShapes} w={districtMap!.w} h={districtMap!.h} ariaLabel={tr('state.mapAria', { state: view.state })} maxWidthClass="max-w-lg" />
+      </SectionCard>
+    </Reveal>
+  ) : null;
+
+  const districtListCard = (
+    <Reveal key="districts">
+      <SectionCard title={tr('levels.district')} icon="layers" subtitle={tr('state.districtsHelp')}>
+        <ul className="flex flex-wrap gap-2">
+          {view.districtCounts.map((d) => (
+            <li key={d.district}>
+              <Link
+                href={`/district/${state}/${encodeURIComponent(d.district)}`}
+                className="pressable inline-flex items-center gap-1.5 rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
+              >
+                {d.district}
+                <span className="rounded-full bg-paper-sink px-1.5 text-xs tabular-nums">{d.mps + d.mlas}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </SectionCard>
+    </Reveal>
+  );
+
+  const constituenciesCard = (
+    <Reveal key="constituencies">
+      <SectionCard title={tr('search.groups.constituencies')} icon="pin">
+        <PagedConstituencies items={constituencies.map((c) => ({ id: c.id, name: c.name, type: c.type }))} />
+      </SectionCard>
+    </Reveal>
+  );
+
+  const leadersCard = (
+    <Reveal key="leaders">
+      <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star">
+        {ranking && ranking.entries.length > 0 ? (
+          // Top 100 only - the full state list lives on /rankings
+          // (keeps this page's payload small and navigation fast).
+          <RankingList entries={ranking.entries.slice(0, 100)} seeAllHref={`/rankings?state=${state}`} total={ranking.entries.length} />
+        ) : (
+          <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
+        )}
+      </SectionCard>
+    </Reveal>
+  );
+
+  // Government anchors the left column, leaders the right; every other card
+  // (composition, map, district list, constituencies) is split between the two
+  // columns by the assignment that makes them closest in height. With only a
+  // handful of movable cards this is a cheap brute force over every combination,
+  // and each column is *rendered* back in reading order so balancing never
+  // scrambles the page. (The ad is excluded - it renders full width below.)
+  const movable = [
+    ...(compositionCard ? [{ el: compositionCard, w: 210 }] : []),
+    ...(mapCard ? [{ el: mapCard, w: 560 }] : []),
+    { el: districtListCard, w: 110 + 8 * view.districtCounts.length },
+    { el: constituenciesCard, w: 560 },
+  ];
+  const leadersWeight = ranking && ranking.entries.length > 0 ? 260 + Math.min(ranking.entries.length, 20) * 128 : 140;
+  let bestMask = 0;
+  let bestDiff = Infinity;
+  for (let mask = 0; mask < 1 << movable.length; mask++) {
+    let left = wGovernment;
+    let right = leadersWeight;
+    movable.forEach((c, i) => (mask & (1 << i) ? (left += c.w) : (right += c.w)));
+    if (Math.abs(left - right) < bestDiff) {
+      bestDiff = Math.abs(left - right);
+      bestMask = mask;
+    }
+  }
+  const leftCards = [...(governmentCard ? [governmentCard] : []), ...movable.filter((_, i) => bestMask & (1 << i)).map((c) => c.el)];
+  const rightCards = [leadersCard, ...movable.filter((_, i) => !(bestMask & (1 << i))).map((c) => c.el)];
+
   return (
     <>
       <PageHero
@@ -109,80 +218,13 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
       />
 
       <div className="mx-auto max-w-content px-4 py-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_1.3fr]">
-          {/* Left column: map + composition + districts */}
-          <div className="space-y-6">
-            {mapShapes && (
-              <Reveal>
-                <SectionCard title={tr('state.mapTitle')} subtitle={tr('state.mapHelp')} icon="map">
-                  <GeoMap shapes={mapShapes} w={districtMap!.w} h={districtMap!.h} ariaLabel={tr('state.mapAria', { state: view.state })} maxWidthClass="max-w-lg" />
-                </SectionCard>
-              </Reveal>
-            )}
-
-            {view.assemblyComposition && (
-              <Reveal>
-                <SectionCard title={tr('state.compositionTitle')} subtitle={tr('state.compositionHelp')} icon="people">
-                  <CompositionBar
-                    segments={view.assemblyComposition.segments}
-                    total={view.assemblyComposition.total}
-                    ariaLabel={tr('state.compositionTitle')}
-                  />
-                </SectionCard>
-              </Reveal>
-            )}
-
-            <Reveal>
-              <SectionCard title={tr('levels.district')} icon="layers" subtitle={tr('state.districtsHelp')}>
-                <ul className="flex flex-wrap gap-2">
-                  {view.districtCounts.map((d) => (
-                    <li key={d.district}>
-                      <Link
-                        href={`/district/${state}/${encodeURIComponent(d.district)}`}
-                        className="pressable inline-flex items-center gap-1.5 rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
-                      >
-                        {d.district}
-                        <span className="rounded-full bg-paper-sink px-1.5 text-xs tabular-nums">{d.mps + d.mlas}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </SectionCard>
-            </Reveal>
-
-            <Reveal>
-              <SectionCard title={tr('search.groups.constituencies')} icon="pin">
-                <PagedConstituencies items={constituencies.map((c) => ({ id: c.id, name: c.name, type: c.type }))} />
-              </SectionCard>
-            </Reveal>
-
-            <AdSlot />
-          </div>
-
-          {/* Right column: government + leaders */}
-          <div className="space-y-6">
-            {stateGov && (stateGov.ministers.length > 0 || stateGov.governmentStatus === 'presidents_rule') && (
-              <Reveal>
-                <StateGovernmentSection gov={stateGov} labels={govLabels} />
-              </Reveal>
-            )}
-
-            <Reveal>
-              <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star">
-                {ranking && ranking.entries.length > 0 ? (
-                  // Top 100 only - the full state list lives on /rankings
-                  // (keeps this page's payload small and navigation fast).
-                  <RankingList
-                    entries={ranking.entries.slice(0, 100)}
-                    seeAllHref={`/rankings?state=${state}`}
-                    total={ranking.entries.length}
-                  />
-                ) : (
-                  <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
-                )}
-              </SectionCard>
-            </Reveal>
-          </div>
+        {/* Columns balanced by estimated height (see the greedy split above):
+            government anchors the left, leaders the right, and the geography
+            cards fall to the shorter side - otherwise one column ran
+            ~1,700-2,500px past the other and left a dead zone. */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="space-y-6">{leftCards}</div>
+          <div className="space-y-6">{rightCards}</div>
         </div>
 
         <Reveal className="mt-8">
@@ -195,6 +237,12 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
             <Icon name="arrow" size={18} className="shrink-0 text-brand" />
           </Link>
         </Reveal>
+
+        {/* Full width, always last - so the ad never lands above real content
+            when the two columns stack on mobile. */}
+        <div className="mt-6">
+          <AdSlot />
+        </div>
       </div>
     </>
   );
