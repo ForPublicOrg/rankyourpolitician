@@ -92,8 +92,14 @@ async function getLimiter(): Promise<Limiter> {
         return { success };
       };
       return limiter;
-    } catch {
-      // fall through to memory
+    } catch (err) {
+      if (process.env.NODE_ENV === 'production') {
+        console.error('[vote-integrity] Failed to initialize Upstash Redis rate limiter, falling back to in-memory:', err);
+      }
+    }
+  } else {
+    if (process.env.NODE_ENV === 'production') {
+      console.warn('[vote-integrity] UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN are not configured. Rate limiting is falling back to in-memory, which does not persist across serverless instances.');
     }
   }
   limiter = memLimiter(10, 60 * 60 * 1000);
