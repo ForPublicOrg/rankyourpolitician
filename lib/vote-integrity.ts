@@ -6,6 +6,10 @@ import { createHash } from 'node:crypto';
 
 const SALT = process.env.VOTE_HASH_SALT || 'dev-only-change-me';
 
+if (process.env.NODE_ENV === 'production' && SALT === 'dev-only-change-me') {
+  console.error('[CRITICAL ERROR] VOTE_HASH_SALT is not configured or is set to the default dev value in production. This exposes vote integrity hashes. Please set VOTE_HASH_SALT to a strong random hex string in your environment.');
+}
+
 export function getClientIp(headers: Headers): string {
   const xff = headers.get('x-forwarded-for');
   if (xff) return xff.split(',')[0].trim();
@@ -20,6 +24,9 @@ export function coarsenIp(ip: string): string {
 }
 
 export function sha(input: string): string {
+  if (process.env.NODE_ENV === 'production' && SALT === 'dev-only-change-me') {
+    throw new Error('Insecure VOTE_HASH_SALT configuration in production.');
+  }
   return createHash('sha256').update(`${SALT}:${input}`).digest('hex').slice(0, 32);
 }
 
