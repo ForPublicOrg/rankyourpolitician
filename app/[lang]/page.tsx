@@ -71,10 +71,11 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
   // One example per rung of the search hierarchy (state → district → person), so
   // the chips also teach what you can search for. Each is verified to return hits.
   const examples = ['Rewa', 'Madhya Pradesh', 'Pralhad Joshi'];
-  const tiers: { role: string; icon: IconName; tint: string }[] = [
-    { role: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand' },
-    { role: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf' },
-    { role: 'localBody', icon: 'home', tint: 'bg-rating-soft text-rating-ink' },
+  const tiers: { role: string; icon: IconName; tint: string; fragment: string }[] = [
+    { role: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand', fragment: '#lok-sabha' },
+    { role: 'rajyaSabha', icon: 'layers', tint: 'bg-paper-sink text-ink-soft', fragment: '#rajya-sabha' },
+    { role: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf', fragment: '#vidhan-sabha' },
+    { role: 'localBody', icon: 'home', tint: 'bg-rating-soft text-rating-ink', fragment: '#local-body' },
   ];
   // "NOM" groups the President's Rajya Sabha nominees - not a geography, so it
   // gets no state chip (same exclusion as getNationalStats).
@@ -429,11 +430,11 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
               <p className="text-sm text-ink-faint">{tr('home.tiersHelp')}</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {tiers.map(({ role, icon, tint }, i) => (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {tiers.map(({ role, icon, tint,fragment }, i) => (
               <Reveal key={role} delay={i * 80}>
                 <Link
-                  href="/accountability"
+                  href={`/accountability${fragment}`}
                   className="group pressable flex h-full items-center gap-3 rounded-2xl p-3.5 glass transition hover:shadow-lift"
                 >
                   <span className={`inline-grid h-10 w-10 shrink-0 place-items-center rounded-xl ${tint}`}>
