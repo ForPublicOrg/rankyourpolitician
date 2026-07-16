@@ -418,3 +418,20 @@ export interface TrendingEntry {
   /** All-time vote count behind rating_mean. */
   total_votes: number;
 }
+
+/** One row of the top-rated list: leaders ordered by PUBLIC rating (votes
+ *  actually cast), never by the verified-performance score - the two axes stay
+ *  separate everywhere. The Bayesian mean orders the list (it is never shown);
+ *  rating_mean is the plain all-time average the profile displays. */
+export interface TopRatedEntry {
+  politician_id: string;
+  name: string;
+  party?: string;
+  constituencyName?: string;
+  state?: string;
+  photo_url?: string;
+  /** Plain all-time average of votes cast (1..5) - the displayed number. */
+  rating_mean: number;
+  /** All-time vote count behind rating_mean. */
+  total_votes: number;
+}

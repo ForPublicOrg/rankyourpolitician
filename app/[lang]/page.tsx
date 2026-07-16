@@ -274,14 +274,15 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
           </Reveal>
 
           <Reveal delay={90}>
-            {/* Two views of the same card: "Trending" (default - recent rating
-                activity, client-fetched on mount so the page stays static
-                while the list stays fresh) and "Top rated" (this
-                server-rendered list - by verified performance, baked into the
-                ISR page). */}
+            {/* Three views of the same card: "Trending" (default - recent
+                rating activity) and "Top rated" (highest public rating) are
+                client-fetched so the page stays static while the lists stay
+                fresh; "Top performers" (this server-rendered list - the
+                verified work record, a deliberately separate axis from user
+                votes) is baked into the ISR page. */}
             <SectionCard title={tr('home.topTitle')} icon="star" aside={<LastUpdated date={meta.lastUpdated} />}>
               <LeadersTabs
-                top={
+                performance={
                   topLeaders.length > 0 ? (
                     <>
                       <ol className="space-y-2">

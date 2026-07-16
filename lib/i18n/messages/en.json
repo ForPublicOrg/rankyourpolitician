@@ -579,6 +579,7 @@
     "insufficient": "Not enough data",
     "noData": "no data",
     "unrankedHeader": "Not enough verified data to rank - listed A-Z",
+    "unratedHeader": "No ratings yet - listed A-Z",
     "seeAllCount": "See all {n} leaders",
     "cohortNote": "Top {n}% of {cohort}",
     "basedOn": "Based on {n} verified metrics",
@@ -594,6 +595,7 @@
   "trending": {
     "tab": "Trending",
     "tabTop": "Top rated",
+    "tabPerformance": "Top performers",
     "help": "Most rated in the last 7 days. This shows attention, not a verdict.",
     "thisWeek": "{n} ratings this week",
     "oneThisWeek": "1 rating this week",
@@ -601,6 +603,12 @@
     "error": "Could not load trending right now.",
     "retry": "Try again",
     "loading": "Loading trending leaders"
+  },
+  "topRated": {
+    "help": "Highest public rating from votes cast on this site. This is opinion, not a verdict.",
+    "empty": "No one has been rated yet - be the first: open any leader's page and cast a vote.",
+    "error": "Could not load top rated leaders right now.",
+    "loading": "Loading top rated leaders"
   },
   "vote": {
     "title": "Rate this leader",
