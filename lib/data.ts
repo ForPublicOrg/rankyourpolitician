@@ -201,7 +201,9 @@ export async function getDistrictsInState(stateCode: string): Promise<string[]> 
   const idx = await getIndex();
   const set = new Set<string>();
   for (const p of idx.politicians) {
-    if (p.stateCode === stateCode) p.districts.forEach((d) => set.add(d));
+    // Blank names guard: a "" district would prerender an unroutable
+    // /district/XX/ page and a nameless dropdown option.
+    if (p.stateCode === stateCode) p.districts.forEach((d) => d?.trim() && set.add(d));
   }
   return [...set].sort();
 }

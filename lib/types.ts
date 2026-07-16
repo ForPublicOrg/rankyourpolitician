@@ -251,12 +251,26 @@ export type ContactTopic =
   | 'general' | 'cyber' | 'road' | 'fire' | 'disaster';
 
 export interface ContactChannel {
-  kind: 'phone' | 'url';
+  kind: 'phone' | 'url' | 'email';
   topic: ContactTopic;
   label: string;
-  /** Phone: digits only ("112", "1800111555"). URL: full https URL. */
+  /** Phone: digits only ("112", "1800111555"). URL: full https URL. Email: address. */
   value: string;
   scope: 'national' | 'state';
+  /**
+   * Display name of the organisation operating this channel (e.g. "CESC Limited",
+   * "BSES Rajdhani (BRPL)"). Channels sharing an operator render as ONE card with
+   * its phone / email / portal as separate actions.
+   */
+  operator?: string;
+  /**
+   * Seed district names this operator serves, for states where different areas
+   * have different operators (electricity discoms above all). Present = shown
+   * ONLY in these districts; absent = the whole scope. Only ever set from an
+   * officially published service-area list - when in doubt leave it off, since
+   * an over-narrow list hides a real helpline while an absent one merely ranks it lower.
+   */
+  districts?: string[];
   source_url: string;
   source_name: string;
   retrieved_date: string;

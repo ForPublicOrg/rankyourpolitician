@@ -678,6 +678,7 @@
     "districtSite": "Official district website",
     "stateScope": "State helpline",
     "nationalScope": "National helpline",
+    "servesArea": "Serves this area",
     "sourceNote": "Numbers and links are published by official government sources.",
     "districtDirectory": "Find your district office (official directory)"
   }
