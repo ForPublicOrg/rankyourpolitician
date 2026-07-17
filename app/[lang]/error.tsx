@@ -52,6 +52,12 @@ export default function Error({
         >
           Try again
         </button>
+        <a
+          href="/"
+          className="mt-3 text-sm font-medium text-brand hover:underline"
+        >
+          ← Go back home
+        </a>
       </div>
     </div>
   );
