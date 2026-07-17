@@ -59,7 +59,7 @@ const PARTY_HINT = /\b(Party|Congress|Sena|Dal|Samajwadi|Bahujan|Janata|Communis
 // A party value that is really a cell attribute, colour, or placeholder.
 const BAD_PARTY = /^(?:rowspan|colspan|bgcolor|style|align|width|class|scope)\b|^(?:vacant|green|red|blue|white|black|grey|gray|orange|yellow|saffron|maroon|purple|pink|brown)$|=/i;
 // A plain-text cell that is a status note, not a member name.
-const NOTE_LEAD = /^(?:elected|re-?elected|suspended|joined|switched|defected|merged|re-?admitted|resigned|died|passed|expelled|disqualified|declared|appointed|became|nominated|sworn|by-?election|won|contested|supported|on|in|since|from|after)\b/i;
+const NOTE_LEAD = /^(?:elected|re-?elected|suspended|joined|switched|defected|merged|re-?admitted|resigned|died|passed|expelled|disqualified|declared|appointed|became|nominated|sworn|by-?election|won|contested|supported|vacated|retained|on|in|since|from|after)\b/i;
 // The reservation tail cell after a constituency link, e.g. "(SC)" / "(ST)".
 const RESERVED_TAIL = /^\(?(?:SC|ST|SC\/ST)\)?$/i;
 // A cell that reads "Vacant" (optionally with cell attributes before it or a

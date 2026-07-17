@@ -5244,6 +5244,16 @@
     ]
   },
   {
+    "id": "ac-br-kalyanpur-east-champaran",
+    "type": "AC",
+    "name": "Kalyanpur (East Champaran)",
+    "state": "Bihar",
+    "stateCode": "BR",
+    "districts": [
+      "East Champaran"
+    ]
+  },
+  {
     "id": "ac-br-kanti",
     "type": "AC",
     "name": "Kanti",
@@ -6051,6 +6061,16 @@
     "stateCode": "BR",
     "districts": [
       "Supaul"
+    ]
+  },
+  {
+    "id": "ac-br-pipra-east-champaran",
+    "type": "AC",
+    "name": "Pipra (East Champaran)",
+    "state": "Bihar",
+    "stateCode": "BR",
+    "districts": [
+      "East Champaran"
     ]
   },
   {
@@ -14742,6 +14762,16 @@
     ]
   },
   {
+    "id": "ac-ka-badami",
+    "type": "AC",
+    "name": "Badami",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Bagalkot"
+    ]
+  },
+  {
     "id": "pc-ka-bagalkot",
     "type": "PC",
     "name": "Bagalkot",
@@ -15454,6 +15484,16 @@
     "stateCode": "KA",
     "districts": [
       "Koppal"
+    ]
+  },
+  {
+    "id": "ac-ka-gauribidanur",
+    "type": "AC",
+    "name": "Gauribidanur",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Chikkaballapur"
     ]
   },
   {
@@ -16390,6 +16430,16 @@
     ]
   },
   {
+    "id": "ac-ka-mulbagal",
+    "type": "AC",
+    "name": "Mulbagal",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Kolar"
+    ]
+  },
+  {
     "id": "pc-ka-mysore",
     "type": "PC",
     "name": "Mysore",
@@ -16622,6 +16672,16 @@
     ]
   },
   {
+    "id": "ac-ka-sagar",
+    "type": "AC",
+    "name": "Sagar",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Shivamogga"
+    ]
+  },
+  {
     "id": "ac-ka-sakleshpur",
     "type": "AC",
     "name": "Sakleshpur",
@@ -16720,6 +16780,16 @@
     "districts": [
       "Shimoga",
       "Udupi"
+    ]
+  },
+  {
+    "id": "ac-ka-shimoga",
+    "type": "AC",
+    "name": "Shimoga",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Shivamogga"
     ]
   },
   {
@@ -16968,6 +17038,16 @@
     "stateCode": "KA",
     "districts": [
       "Tumkur"
+    ]
+  },
+  {
+    "id": "ac-ka-udupi",
+    "type": "AC",
+    "name": "Udupi",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Udupi"
     ]
   },
   {
@@ -19541,6 +19621,16 @@
     "stateCode": "MP",
     "districts": [
       "Guna"
+    ]
+  },
+  {
+    "id": "ac-mp-gunnaor",
+    "type": "AC",
+    "name": "Gunnaor",
+    "state": "Madhya Pradesh",
+    "stateCode": "MP",
+    "districts": [
+      "Panna"
     ]
   },
   {
@@ -23747,6 +23837,16 @@
     ]
   },
   {
+    "id": "ac-mh-phaltan",
+    "type": "AC",
+    "name": "Phaltan",
+    "state": "Maharashtra",
+    "stateCode": "MH",
+    "districts": [
+      "Satara"
+    ]
+  },
+  {
     "id": "ac-mh-phulambri",
     "type": "AC",
     "name": "Phulambri",
@@ -24454,6 +24554,16 @@
     "stateCode": "MH",
     "districts": [
       "Mumbai"
+    ]
+  },
+  {
+    "id": "ac-mh-vasai",
+    "type": "AC",
+    "name": "Vasai",
+    "state": "Maharashtra",
+    "stateCode": "MH",
+    "districts": [
+      "Palghar"
     ]
   },
   {
@@ -27193,6 +27303,26 @@
     "id": "pc-od-bhubaneswar",
     "type": "PC",
     "name": "Bhubaneswar",
+    "state": "Odisha",
+    "stateCode": "OD",
+    "districts": [
+      "Khordha"
+    ]
+  },
+  {
+    "id": "ac-od-bhubaneswar-central",
+    "type": "AC",
+    "name": "Bhubaneswar Central",
+    "state": "Odisha",
+    "stateCode": "OD",
+    "districts": [
+      "Khordha"
+    ]
+  },
+  {
+    "id": "ac-od-bhubaneswar-north",
+    "type": "AC",
+    "name": "Bhubaneswar North",
     "state": "Odisha",
     "stateCode": "OD",
     "districts": [
@@ -32097,6 +32227,16 @@
     ]
   },
   {
+    "id": "ac-rj-shahpura-bhilwara",
+    "type": "AC",
+    "name": "Shahpura (Bhilwara)",
+    "state": "Rajasthan",
+    "stateCode": "RJ",
+    "districts": [
+      "Bhilwara"
+    ]
+  },
+  {
     "id": "ac-rj-sheo",
     "type": "AC",
     "name": "Sheo",
@@ -32630,7 +32770,9 @@
     "name": "Soreng-Chakung",
     "state": "Sikkim",
     "stateCode": "SK",
-    "districts": []
+    "districts": [
+      "Soreng"
+    ]
   },
   {
     "id": "ac-sk-temi-namphing",
@@ -33919,6 +34061,16 @@
     ]
   },
   {
+    "id": "ac-tn-mylapore",
+    "type": "AC",
+    "name": "Mylapore",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Chennai"
+    ]
+  },
+  {
     "id": "pc-tn-nagapattinam",
     "type": "PC",
     "name": "Nagapattinam",
@@ -35007,6 +35159,16 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": []
+  },
+  {
+    "id": "ac-tn-tiruppattur",
+    "type": "AC",
+    "name": "Tiruppattur",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Sivaganga"
+    ]
   },
   {
     "id": "pc-tn-tiruppur",
@@ -36511,7 +36673,9 @@
     "name": "Secunderabad Cantt.",
     "state": "Telangana",
     "stateCode": "TG",
-    "districts": []
+    "districts": [
+      "Hyderabad"
+    ]
   },
   {
     "id": "ac-tg-serilingampally",
@@ -39131,7 +39295,9 @@
     "name": "Gola Gokarnnath",
     "state": "Uttar Pradesh",
     "stateCode": "UP",
-    "districts": []
+    "districts": [
+      "Lakhimpur Kheri"
+    ]
   },
   {
     "id": "pc-up-gonda",
@@ -43535,6 +43701,16 @@
     ]
   },
   {
+    "id": "ac-wb-binpur",
+    "type": "AC",
+    "name": "Binpur",
+    "state": "West Bengal",
+    "stateCode": "WB",
+    "districts": [
+      "Jhargram"
+    ]
+  },
+  {
     "id": "pc-wb-birbhum",
     "type": "PC",
     "name": "Birbhum",
@@ -43563,6 +43739,16 @@
     "stateCode": "WB",
     "districts": [
       "Bankura"
+    ]
+  },
+  {
+    "id": "ac-wb-bishnupur-south-24-parganas",
+    "type": "AC",
+    "name": "Bishnupur (South 24 Parganas)",
+    "state": "West Bengal",
+    "stateCode": "WB",
+    "districts": [
+      "South 24 Parganas"
     ]
   },
   {
@@ -43794,6 +43980,16 @@
     "stateCode": "WB",
     "districts": [
       "Jalpaiguri"
+    ]
+  },
+  {
+    "id": "ac-wb-dantan",
+    "type": "AC",
+    "name": "Dantan",
+    "state": "West Bengal",
+    "stateCode": "WB",
+    "districts": [
+      "Paschim Medinipur"
     ]
   },
   {

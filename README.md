@@ -181,6 +181,7 @@ Sourcing and enrichment commands (all cite what they write):
 
 ```
 refresh-mps                 Rebuild the Lok Sabha roster (543 seats) from the ECI-sourced list
+audit-mlas                  Read-only diff of MLA rosters vs live assembly pages (catches by-election staleness)
 import-rajya-sabha          import-mlas          import-mlcs          import-state-gov
 import-contact-channels     discover-district-portals                 import <file.json>
 enrich-mps                  enrich-wikidata      enrich-affidavits    enrich-affidavits-states

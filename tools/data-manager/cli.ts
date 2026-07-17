@@ -69,6 +69,13 @@ async function main() {
       await import('./import-mlas');
       break;
     }
+    case 'audit-mlas': {
+      // Read-only staleness audit: diff the seed's MLA rosters against the
+      // live Wikipedia assembly pages (catches by-election staleness).
+      process.argv[2] = process.argv[3] || '';
+      await import('./audit-mlas');
+      break;
+    }
     case 'import-mlcs': {
       // Add the ~426 sitting MLCs (Legislative Council members) across the 6
       // states that have an upper house, from each council's Wikipedia roster.
