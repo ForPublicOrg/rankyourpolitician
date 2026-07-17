@@ -122,7 +122,7 @@ async function main() {
   console.log('Per-state MLA parse:');
   for (const r of report) console.log('  ' + r);
   console.log(`\n✓ Added ${totalAdded} MLAs. Total politicians: ${kept.length}. Constituencies: ${constituencies.length}.`);
-  console.log('Next: npm run dm -- enrich-mps   then   validate   then   publish');
+  console.log('Next: npx tsx tools/data-manager/restore-criminal-case-facts.ts   then   enrich-wikidata   then   validate');
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

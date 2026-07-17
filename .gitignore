@@ -48,3 +48,6 @@ firebase-service-account.json
 
 # Data-manager scrape caches (re-fetchable; keeps reruns off the source sites).
 /tools/data-manager/.cache/
+
+# Agent session scratch (specs, review diffs — not part of the repo).
+/.superpowers/
