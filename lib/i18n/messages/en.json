@@ -583,7 +583,9 @@
     "rightToReplyTitle": "Are you this leader, or spotted a mistake?",
     "rightToReplyBody": "We publish only sourced facts and offer a right to reply. Tell us and we will check.",
     "rightToReplyCta": "Request a correction",
-    "seeSources": "See all sources"
+    "seeSources": "See all sources",
+    "shareCta": "Share profile",
+    "shareSuccess": "Link copied!"
   },
   "fields": {
     "party": "Party",

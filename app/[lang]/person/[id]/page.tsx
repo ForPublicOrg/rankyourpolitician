@@ -23,6 +23,7 @@ import Icon, { type IconName } from '@/components/Icon';
 import LastUpdated from '@/components/LastUpdated';
 import VoteWidget from '@/components/VoteWidget';
 import AdSlot from '@/components/AdSlot';
+import ShareButton from '@/components/ShareButton';
 import DeclaredCases from '@/components/DeclaredCases';
 
 // Weekly self-heal only. Profile facts change via deploy or /api/revalidate, and
@@ -167,6 +168,20 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
             </div>
             <p className="mt-3 text-ink-soft">{person.current_position || tr(`accountability.roles.${roleKey}.oneLine`)}</p>
             {updated && <div className="mt-3 flex justify-center sm:justify-start"><LastUpdated date={updated} /></div>}
+            <div className="mt-3 flex justify-center sm:justify-start">
+              {/* Share the clean locale-less URL, never `/${locale}/...`. It is this
+                  page's canonical, it lets the recipient's own cookie pick their
+                  language (a prefixed link would force the sharer's), and the 22
+                  non-English prefixes are robots-blocked, so a shared prefixed URL
+                  is an unindexable on-demand ISR render. See app/robots.ts. */}
+              <ShareButton
+                title={person.name}
+                text={person.current_position || tr(`accountability.roles.${roleKey}.oneLine`)}
+                url={`/person/${person.id}`}
+                label={tr('profile.shareCta')}
+                successLabel={tr('profile.shareSuccess')}
+              />
+            </div>
           </div>
           {spot && (
             <div className="w-36 shrink-0 sm:w-40">
@@ -504,6 +519,15 @@ function OfficialProfile({ p, tr, locale }: { p: PersonView; tr: (k: string, v?:
                 <Icon name="pin" size={15} /> {p.district}, {p.state}
               </p>
             )}
+            <div className="mt-3 flex justify-center sm:justify-start">
+              <ShareButton
+                title={p.name}
+                text={tr(`offices.${ot}.handles`)}
+                url={`/person/${p.id}`}
+                label={tr('profile.shareCta')}
+                successLabel={tr('profile.shareSuccess')}
+              />
+            </div>
           </div>
         </div>
         <p className="mt-4 flex items-start gap-2 rounded-xl bg-paper-soft p-3 text-sm text-ink-soft">
