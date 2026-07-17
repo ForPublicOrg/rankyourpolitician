@@ -80,11 +80,16 @@
   --color-rating-soft: 59 37 3;
 
   --color-map-terrain: #121212;
-  --color-map-ramp-0: #1c1c1c;
-  --color-map-ramp-1: #2e2e2e;
-  --color-map-ramp-2: #4a4a4a;
-  --color-map-ramp-3: #666666;
-  --color-map-ramp-4: #4f46e5;
+  /* One hue, dark to bright - the mirror of the light ramp. The steps were
+     four greys and then indigo-600, which broke hue at the top bucket: the
+     densest states (UP, Maharashtra) read as a deliberate highlight rather
+     than the end of a ramp. ramp-0 also has to stay clear of --color-map-terrain
+     so "no leaders" and "fewest leaders" don't collapse into the same fill. */
+  --color-map-ramp-0: #22254a;
+  --color-map-ramp-1: #2e3369;
+  --color-map-ramp-2: #3b4189;
+  --color-map-ramp-3: #4a51b8;
+  --color-map-ramp-4: #6366f1;
 }
 
 html {
