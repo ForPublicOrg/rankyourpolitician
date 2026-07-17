@@ -57,6 +57,37 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       push(p, 'warn', 'no scored metrics - performance percentile will be unavailable');
   }
 
+  const mlaBySeat = new Map<string, Politician[]>();
+  for (const p of politicians) {
+    if (p.constituencyType !== 'AC' || !p.active) continue;
+    const k = p.constituencyId!;
+    if (!mlaBySeat.has(k)) mlaBySeat.set(k, []);
+    mlaBySeat.get(k)!.push(p);
+  }
+  for (const [seat, members] of mlaBySeat) {
+    if (members.length < 2) continue;
+    for (const p of members) {
+      const others = members.filter((m) => m.id !== p.id).map((m) => m.id);
+      push(p, 'error', `duplicate active MLA for ${seat}: also ${others.join(', ')}`);
+    }
+  }
+
+  const byQid = new Map<string, Politician[]>();
+  for (const p of politicians) {
+    if (!p.active || !p.wikidata_qid) continue;
+    if (!byQid.has(p.wikidata_qid)) byQid.set(p.wikidata_qid, []);
+    byQid.get(p.wikidata_qid)!.push(p);
+  }
+  for (const [qid, group] of byQid) {
+    if (group.length < 2) continue;
+    const houses = new Set(group.map((p) => p.constituencyType));
+    if (houses.has('AC') && houses.has('PC')) {
+      for (const p of group) {
+        push(p, 'warn', `wikidata ${qid} shared across AC+PC records — stale MLA may remain after seat change`);
+      }
+    }
+  }
+
   // ONE PERSON, ONE AFFIDAVIT PAGE.
   // A MyNeta candidate page describes exactly one candidate in one seat, so two
   // members citing the same page means one of them is publishing somebody else's
