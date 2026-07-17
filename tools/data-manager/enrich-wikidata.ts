@@ -24,6 +24,7 @@
  *
  * Usage:  npm run dm -- enrich-wikidata
  *         ENRICH_LIMIT=50 npm run dm -- enrich-wikidata     (first 50 - testing)
+ *         ENRICH_IDS=id1,id2 npm run dm -- enrich-wikidata  (only these records)
  *         ENRICH_NO_RESOLVE=1 npm run dm -- enrich-wikidata (skip QID search)
  *         ENRICH_NO_PHOTO=1   npm run dm -- enrich-wikidata (skip WP image fallback)
  */
@@ -141,6 +142,13 @@ async function main() {
   const pols: Politician[] = JSON.parse(readFileSync(resolve(SEED_DIR, 'politicians.json'), 'utf8'));
   let working = pols;
   if (LIMIT !== Infinity) working = pols.slice(0, LIMIT);
+  // ENRICH_IDS=id1,id2 scopes the run to specific records (e.g. by-election
+  // winners just added by a roster fix) without touching the other ~5k.
+  if (process.env.ENRICH_IDS) {
+    const want = new Set(process.env.ENRICH_IDS.split(',').map((s) => s.trim()).filter(Boolean));
+    working = pols.filter((p) => want.has(p.id));
+    console.log(`ENRICH_IDS: scoped to ${working.length}/${want.size} requested records`);
+  }
 
   // polId -> qid we will enrich from. Start with records that already carry one.
   const qidByPol = new Map<string, string>();
