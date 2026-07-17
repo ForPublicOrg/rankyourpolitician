@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx tools/build-search-index.ts && tsx tools/build-who-data.ts && tsx tools/build-rankings-data.ts",
+    "prebuild": "node tools/prebuild-gate.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

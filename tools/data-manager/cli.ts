@@ -2,6 +2,7 @@
 //   validate   check every fact is cited and the dataset is consistent
 //   stats      dataset summary
 //   publish    push politicians + constituencies to Firestore (needs creds)
+//   revalidate re-sweep the deployed page cache (~35 min after a publish)
 //   import     rebuild the seed from a sourcing-workflow output JSON
 //                 npm run dm -- import <path-to-output.json>
 import dotenv from 'dotenv';
@@ -40,6 +41,14 @@ async function main() {
         `✓ Published ${res.politicians} politicians, ${res.constituencies} constituencies, ` +
           `${res.central_government} ministers, ${res.office_seats} office seats.`,
       );
+      await requestSiteRevalidation();
+      break;
+    }
+    case 'revalidate': {
+      // Standalone cache sweep - used ~35 min after a publish to re-render any
+      // page that regenerated against a still-warm in-process TTL snapshot
+      // (see the note in app/api/revalidate/route.ts), or after fixing
+      // REVALIDATE_URL/SECRET when the publish-time sweep failed.
       await requestSiteRevalidation();
       break;
     }
@@ -91,6 +100,12 @@ async function main() {
     case 'enrich-affidavits-states': {
       // Same, for sitting MLAs from each state-assembly election (name-guarded).
       await import('./enrich-affidavits-states');
+      break;
+    }
+    case 'fetch-criminal-cases': {
+      // Per-case detail (FIR/court/sections/convictions) behind every declared
+      // criminal case, from the exact affidavit page the count fact cites.
+      await import('./fetch-criminal-cases');
       break;
     }
     case 'verify-affidavits': {
@@ -186,7 +201,9 @@ Commands:
   npm run dm -- validate            Check citations + consistency
   npm run dm -- stats               Dataset summary
   npm run dm -- publish             Publish to Firestore (needs .env.local creds)
+  npm run dm -- revalidate          Re-sweep the deployed page cache (run ~35 min after a publish)
   npm run dm -- refresh-mps         Rebuild the all-India Lok Sabha roster (543 seats) from the ECI-sourced list
+  npm run dm -- fetch-criminal-cases  Per-case affidavit detail behind every declared criminal case
   npm run dm -- import <file.json>  Rebuild seed from a sourcing-workflow output
   npm run dm:dashboard              Open the local review dashboard (http://localhost:4321)
 `);

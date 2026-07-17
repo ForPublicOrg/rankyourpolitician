@@ -14,9 +14,11 @@ import { SectionCard, Avatar, PartyChip, Chip, PageHero } from '@/components/ui'
 import { Reveal } from '@/components/motion';
 import Icon from '@/components/Icon';
 
-// Daily self-heal only - content changes arrive via deploy or /api/revalidate,
-// and every ISR regeneration is a billed write (see README "How data flows").
-export const revalidate = 86400;
+// Weekly self-heal only - content changes arrive via deploy or /api/revalidate,
+// and every ISR regeneration is a billed write: at 86400 this long tail re-rendered
+// daily under crawler traffic and dominated the ISR-writes bill (see README
+// "How data flows").
+export const revalidate = 604800;
 
 // Prebuild every constituency page for English (~4.6k) so first hits are CDN
 // cache hits; other locales render on demand and ISR-cache.
@@ -32,7 +34,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { constituency } = await params;
   const c = await getConstituency(constituency);
-  return { title: c ? `${c.name} - your representative` : 'Constituency' };
+  return {
+    title: c ? `${c.name} - your representative` : 'Constituency',
+    // Clean URL is the canonical for every /{locale}/... duplicate (see person page).
+    alternates: { canonical: `/area/${c ? c.id : constituency}` },
+  };
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ lang: string; constituency: string }> }) {
@@ -51,6 +57,10 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
     c.type === 'PC' ? tr('area.explainPc') : c.type === 'AC' ? tr('area.explainAc') : c.type === 'RS' ? tr('area.explainRs') : tr('area.explainMlc');
 
   const spot = c.type === 'PC' || c.type === 'AC' ? buildSpotMap(c.stateCode, c.type, c.name, 300) : null;
+  // The right column holds the "where is this seat" map + the districts it
+  // covers. Rajya Sabha / MLC seats have neither, so drop the column entirely
+  // rather than render an empty half next to the representative.
+  const hasAside = !!spot || c.districts.length > 0;
 
   return (
     <>
@@ -74,8 +84,13 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
         subtitle={roleExplainer}
       />
 
-      <div className="mx-auto max-w-content px-4 py-6">
-        <div className="grid gap-6 lg:grid-cols-[1.6fr_1fr]">
+      <div className="mx-auto max-w-content space-y-6 px-4 py-6">
+        {/* The representative + the "where is this seat" map sit side by side; the
+            aside (map + covered districts) only exists for PC/AC seats, so when
+            it is empty (Rajya Sabha / MLC) the content goes full width instead of
+            leaving a blank half. The full leaderboard, CTA and ad are full-width
+            rows so no short aside is ever stranded next to a tall list. */}
+        <div className={hasAside ? 'grid gap-6 lg:grid-cols-[1.6fr_1fr]' : undefined}>
           <div className="space-y-6">
             {/* The representative(s) - the reason this page exists */}
             <Reveal>
@@ -109,14 +124,6 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
               </SectionCard>
             </Reveal>
 
-            {ranking && ranking.entries.length > 0 && view.representatives.length > 1 && (
-              <Reveal>
-                <SectionCard title={tr('home.topTitle')} icon="star">
-                  <RankingList entries={ranking.entries} />
-                </SectionCard>
-              </Reveal>
-            )}
-
             {view.siblings.length > 0 && (
               <Reveal>
                 <SectionCard title={tr('area.siblingsTitle')} subtitle={tr('area.siblingsHelp')} icon="grid">
@@ -138,52 +145,64 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
             )}
           </div>
 
-          <div className="space-y-6">
-            {spot && (
-              <Reveal>
-                <SectionCard title={tr('area.mapTitle', { state: c.state })} subtitle={tr('area.mapHelp', { state: c.state })} icon="map">
-                  <SpotMiniMap
-                    outline={spot.outline}
-                    spot={spot.spot}
-                    spotCx={spot.spotCx}
-                    spotCy={spot.spotCy}
-                    w={spot.w}
-                    h={spot.h}
-                    label={tr('area.mapAria', { name: c.name, state: c.state })}
-                    className="mx-auto h-auto w-full max-w-[18rem]"
-                  />
-                </SectionCard>
-              </Reveal>
-            )}
+          {hasAside && (
+            <div className="space-y-6">
+              {spot && (
+                <Reveal>
+                  <SectionCard title={tr('area.mapTitle', { state: c.state })} subtitle={tr('area.mapHelp', { state: c.state })} icon="map">
+                    <SpotMiniMap
+                      outline={spot.outline}
+                      spot={spot.spot}
+                      spotCx={spot.spotCx}
+                      spotCy={spot.spotCy}
+                      w={spot.w}
+                      h={spot.h}
+                      label={tr('area.mapAria', { name: c.name, state: c.state })}
+                      className="mx-auto h-auto w-full max-w-[18rem]"
+                    />
+                  </SectionCard>
+                </Reveal>
+              )}
 
-            {c.districts.length > 0 && (
-              <Reveal>
-                <SectionCard title={tr('accountability.jurisdictionLabel')} icon="layers" subtitle={tr('area.districtsHelp')}>
-                  <div className="flex flex-wrap gap-2">
-                    {c.districts.map((d) => (
-                      <Link
-                        key={d}
-                        href={`/district/${c.stateCode}/${encodeURIComponent(d)}`}
-                        className="pressable rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
-                      >
-                        {d}
-                      </Link>
-                    ))}
-                  </div>
-                </SectionCard>
-              </Reveal>
-            )}
-
-            <Reveal>
-              <Link href="/who" className="pressable flex items-center gap-3 rounded-3xl glass p-4 hover:shadow-lift">
-                <span className="inline-grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-accent text-white"><Icon name="megaphone" size={22} /></span>
-                <span className="min-w-0 flex-1 text-sm font-semibold text-ink">{tr('officials.findCta')}</span>
-                <Icon name="arrow" size={18} className="shrink-0 text-accent-ink" />
-              </Link>
-            </Reveal>
-            <AdSlot />
-          </div>
+              {c.districts.length > 0 && (
+                <Reveal>
+                  <SectionCard title={tr('accountability.jurisdictionLabel')} icon="layers" subtitle={tr('area.districtsHelp')}>
+                    <div className="flex flex-wrap gap-2">
+                      {c.districts.map((d) => (
+                        <Link
+                          key={d}
+                          href={`/district/${c.stateCode}/${encodeURIComponent(d)}`}
+                          className="pressable rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
+                        >
+                          {d}
+                        </Link>
+                      ))}
+                    </div>
+                  </SectionCard>
+                </Reveal>
+              )}
+            </div>
+          )}
         </div>
+
+        {/* Multi-member seats (a shared Rajya Sabha roster, say) carry a ranking;
+            full width keeps it from towering over the short aside. */}
+        {ranking && ranking.entries.length > 0 && view.representatives.length > 1 && (
+          <Reveal>
+            <SectionCard title={tr('home.topTitle')} icon="star">
+              <RankingList entries={ranking.entries} />
+            </SectionCard>
+          </Reveal>
+        )}
+
+        <Reveal>
+          <Link href="/who" className="pressable flex items-center gap-3 rounded-3xl glass p-4 hover:shadow-lift">
+            <span className="inline-grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-accent text-white"><Icon name="megaphone" size={22} /></span>
+            <span className="min-w-0 flex-1 text-sm font-semibold text-ink">{tr('officials.findCta')}</span>
+            <Icon name="arrow" size={18} className="shrink-0 text-accent-ink" />
+          </Link>
+        </Reveal>
+        <AdSlot />
       </div>
     </>
   );

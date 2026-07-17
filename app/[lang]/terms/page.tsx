@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Prose from '@/components/Prose';
 
-export const metadata: Metadata = { title: 'Terms of Use' };
+export const metadata: Metadata = { title: 'Terms of Use', alternates: { canonical: '/terms' } };
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default function TermsPage() {

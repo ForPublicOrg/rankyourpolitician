@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: 'Org chart of India - who answers to whom',
   description:
     'How India is governed, drawn as one simple chart: from you the voter, to Parliament and the PM, your state government, your district officials and your local body.',
+  alternates: { canonical: '/hierarchy' },
 };
 
 function Node({

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Prose from '@/components/Prose';
 
-export const metadata: Metadata = { title: 'About' };
+export const metadata: Metadata = { title: 'About', alternates: { canonical: '/about' } };
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default function AboutPage() {

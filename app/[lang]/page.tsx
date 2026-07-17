@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getI18n, type LangParams } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
 import { getNationalRanking, getStates, getDatasetMeta, getCentralGovernment, getNationalStats } from '@/lib/data';
@@ -19,6 +20,10 @@ import { Analytics } from '@vercel/analytics/next';
 // Daily self-heal only - content changes arrive via deploy or /api/revalidate,
 // and every ISR regeneration is a billed write (see README "How data flows").
 export const revalidate = 86400;
+
+// Clean URL is the canonical for every /{locale}/... duplicate (locale is
+// cookie-picked, so prefixed variants are duplicates crawlers should collapse).
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default async function HomePage({ params }: { params: Promise<LangParams> }) {

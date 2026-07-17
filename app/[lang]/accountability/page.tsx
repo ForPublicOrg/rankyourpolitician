@@ -4,7 +4,7 @@ import { t, tArr } from '@/lib/i18n';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Icon, { type IconName } from '@/components/Icon';
 
-export const metadata: Metadata = { title: 'Who is responsible for what?' };
+export const metadata: Metadata = { title: 'Who is responsible for what?', alternates: { canonical: '/accountability' } };
 
 const ROLES: { key: string; icon: IconName; tint: string }[] = [
   { key: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand' },

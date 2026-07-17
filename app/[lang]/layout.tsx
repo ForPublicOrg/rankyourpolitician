@@ -22,6 +22,14 @@ const manrope = Manrope({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
+// Loud build-time guard: metadataBase feeds every page's canonical tag (plus
+// OG + sitemap URLs). A Vercel build without NEXT_PUBLIC_SITE_URL would stamp
+// http://localhost:3000 canonicals across ~10k+ pages - a silent SEO disaster
+// (NEXT_PUBLIC_* vars are inlined at build time; see the CLAUDE.md gotchas).
+if (process.env.VERCEL && !process.env.NEXT_PUBLIC_SITE_URL) {
+  console.warn('⚠ NEXT_PUBLIC_SITE_URL is not set - canonicals/OG/sitemap will point at localhost.');
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {

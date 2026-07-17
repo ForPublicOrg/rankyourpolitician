@@ -3,7 +3,7 @@ import Prose from '@/components/Prose';
 import GrievanceMailto from '@/components/GrievanceMailto';
 import { CONTACT_EMAIL as EMAIL, GRIEVANCE_OFFICER_NAME } from '@/lib/site-contact';
 
-export const metadata: Metadata = { title: 'Grievance / Right to Reply' };
+export const metadata: Metadata = { title: 'Grievance / Right to Reply', alternates: { canonical: '/grievance' } };
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default function GrievancePage() {

@@ -15,15 +15,18 @@ import DistrictWhoFixes from '@/components/DistrictWhoFixes';
 import PhoneLink from '@/components/PhoneLink';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RankingList from '@/components/RankingList';
+import LeadersTabs from '@/components/LeadersTabs';
 import AdSlot from '@/components/AdSlot';
 import GeoMap, { type GeoMapShape } from '@/components/GeoMap';
 import { SectionCard, Avatar, PartyChip, Chip, PageHero, StatPill, Eyebrow } from '@/components/ui';
 import { Reveal, CountUp } from '@/components/motion';
 import Icon from '@/components/Icon';
 
-// Daily self-heal only - content changes arrive via deploy or /api/revalidate,
-// and every ISR regeneration is a billed write (see README "How data flows").
-export const revalidate = 86400;
+// Weekly self-heal only - content changes arrive via deploy or /api/revalidate,
+// and every ISR regeneration is a billed write: at 86400 this long tail re-rendered
+// daily under crawler traffic and dominated the ISR-writes bill (see README
+// "How data flows").
+export const revalidate = 604800;
 
 // Prebuild every district page for English (~600) so first hits are CDN
 // cache hits; other locales render on demand and ISR-cache.
@@ -43,8 +46,14 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; state: string; district: string }>;
 }): Promise<Metadata> {
-  const { district } = await params;
-  return { title: `${decodeURIComponent(district)} - MPs, MLAs & officials` };
+  const { state, district } = await params;
+  return {
+    title: `${decodeURIComponent(district)} - MPs, MLAs & officials`,
+    // Clean URL is the canonical for every /{locale}/... duplicate (see person
+    // page). decode-then-encode normalises the segment whether it arrives
+    // percent-encoded (runtime requests) or raw (generateStaticParams).
+    alternates: { canonical: `/district/${state}/${encodeURIComponent(decodeURIComponent(district))}` },
+  };
 }
 
 function RepCard({ p, roleChip }: { p: Politician; roleChip: string }) {
@@ -149,6 +158,167 @@ export default async function DistrictPage({
       }))
     : null;
 
+  // --- Cards + column balancing ----------------------------------------------
+  // "Who fixes what" is the flagship and by far the tallest, most size-variable
+  // card, so it anchors the left column; every other card then drops onto
+  // whichever column is currently shorter. This keeps the two columns close in
+  // height for a one-MLA rural district and a nine-MLA city alike (the old fixed
+  // split left one column ~4,600px short). Weights are rough rendered-height
+  // estimates - only their relative size matters, so exactness is not needed.
+  const whoFixesCard = (
+    <Reveal key="whofixes">
+      <SectionCard title={tr('district.whoTitle', { district: view.district })} subtitle={tr('district.whoHelp')} icon="megaphone">
+        <DistrictWhoFixes
+          stateCode={state}
+          state={view.state}
+          asOf={govAsOf}
+          cm={cmM ? ministerWho(cmM) : undefined}
+          ministers={(stateGov?.ministers ?? []).map(ministerWho)}
+          district={view.district}
+          people={whoPeople}
+          channels={channels}
+        />
+      </SectionCard>
+    </Reveal>
+  );
+
+  const repsCard = (
+    <Reveal key="reps">
+      <SectionCard title={tr('district.repsTitle')} subtitle={tr('district.repsHelp')} icon="people">
+        {view.mps.length > 0 && (
+          <div>
+            <Eyebrow icon="parliament">{tr('district.yourMps')}</Eyebrow>
+            <div className="mt-2 space-y-2.5">
+              {view.mps.map((p) => (
+                <RepCard key={p.id} p={p} roleChip={tr('district.chipMp')} />
+              ))}
+            </div>
+          </div>
+        )}
+        {view.mlas.length > 0 && (
+          <div className={view.mps.length > 0 ? 'mt-5' : ''}>
+            <Eyebrow icon="flag">{tr('district.yourMlas')}</Eyebrow>
+            <div className="mt-2 space-y-2.5">
+              {view.mlas.map((p) => (
+                <RepCard key={p.id} p={p} roleChip={tr('district.chipMla')} />
+              ))}
+            </div>
+          </div>
+        )}
+        {view.mps.length === 0 && view.mlas.length === 0 && (
+          <p className="text-sm text-ink-faint">{tr('district.noReps')}</p>
+        )}
+      </SectionCard>
+    </Reveal>
+  );
+
+  const officialsCard = (
+    <Reveal key="officials">
+      <SectionCard title={tr('officials.title')} subtitle={tr('officials.subtitle')} icon="shield">
+        <div className="space-y-3">
+          {officials.map((seat) => (
+            <OfficeSeatCard key={seat.id} seat={seat} tr={tr} locale={locale} portal={whoPeople.portal} district={view.district} />
+          ))}
+        </div>
+        <Link href="/who" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline">
+          <Icon name="megaphone" size={15} /> {tr('officials.findCta')}
+        </Link>
+      </SectionCard>
+    </Reveal>
+  );
+
+  // Same card as the home page's Top leaders: a "Trending" tab (scoped to the
+  // district, client-fetched only when the card scrolls into view - the page
+  // stays a static ISR serve) next to the server-rendered performance list.
+  const leadersCard =
+    ranking && ranking.entries.length > 0 ? (
+      <Reveal key="leaders">
+        <SectionCard title={tr('home.topTitle')} icon="star">
+          <LeadersTabs
+            scope={{ stateCode: state, district: view.district }}
+            trendingHelp={tr('trending.districtHelp', { district: view.district })}
+            performance={<RankingList entries={ranking.entries} />}
+          />
+        </SectionCard>
+      </Reveal>
+    ) : null;
+
+  const mapCard = mapShapes ? (
+    <Reveal key="map">
+      <SectionCard title={tr('district.mapTitle')} subtitle={tr('district.mapHelp', { state: view.state })} icon="map">
+        <GeoMap
+          shapes={mapShapes}
+          w={districtMap!.w}
+          h={districtMap!.h}
+          ariaLabel={tr('district.mapAria', { district: view.district, state: view.state })}
+          maxWidthClass="max-w-sm"
+        />
+      </SectionCard>
+    </Reveal>
+  ) : null;
+
+  const constituenciesCard =
+    view.constituencies.length > 0 ? (
+      <Reveal key="constituencies">
+        <SectionCard title={tr('district.areasTitle')} icon="pin" subtitle={tr('district.areasHelp')}>
+          <ul className="flex flex-wrap gap-2">
+            {view.constituencies.map((c) => (
+              <li key={c.id}>
+                <Link
+                  href={`/area/${c.id}`}
+                  className="pressable inline-flex items-center gap-1 rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
+                >
+                  {c.name}
+                  <span className="text-xs text-ink-faint">{c.type === 'PC' ? tr('search.pcShort') : tr('search.acShort')}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </SectionCard>
+      </Reveal>
+    ) : null;
+
+  const accountabilityCard = (
+    <Reveal key="accountability">
+      <SectionCard title={tr('accountability.title')} icon="info">
+        <p className="text-sm text-ink-faint">{tr('accountability.intro')}</p>
+        <Link href="/accountability" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
+          {tr('common.readMore')} <Icon name="arrow" size={14} />
+        </Link>
+      </SectionCard>
+    </Reveal>
+  );
+
+  // Who-fixes anchors the left; every other card is split between the two columns
+  // by the assignment that makes them closest in height (a cheap brute force over
+  // every combination - there are only a handful of movable cards). Each column
+  // then renders back in reading order, so balancing never scrambles the page.
+  // The ad is excluded: it renders full width below both columns so it can never
+  // land above real content when they stack on mobile (and its real height is
+  // unknowable here - it is often zero in production).
+  const whoFixesWeight = 1900 + Math.min(view.mlas.length, 6) * 90 + view.mps.length * 95;
+  const movable = [
+    { el: repsCard, w: 120 + (view.mps.length ? 45 : 0) + view.mps.length * 84 + (view.mlas.length ? 45 : 0) + view.mlas.length * 84 },
+    ...(leadersCard ? [{ el: leadersCard, w: 260 + Math.min(ranking!.entries.length, 20) * 128 }] : []),
+    { el: officialsCard, w: 120 + officials.length * 240 },
+    ...(mapCard ? [{ el: mapCard, w: 400 }] : []),
+    ...(constituenciesCard ? [{ el: constituenciesCard, w: 130 + view.constituencies.length * 18 }] : []),
+    { el: accountabilityCard, w: 176 },
+  ];
+  let bestMask = 0;
+  let bestDiff = Infinity;
+  for (let mask = 0; mask < 1 << movable.length; mask++) {
+    let left = whoFixesWeight;
+    let right = 0;
+    movable.forEach((c, i) => (mask & (1 << i) ? (left += c.w) : (right += c.w)));
+    if (Math.abs(left - right) < bestDiff) {
+      bestDiff = Math.abs(left - right);
+      bestMask = mask;
+    }
+  }
+  const leftCards = [whoFixesCard, ...movable.filter((_, i) => bestMask & (1 << i)).map((c) => c.el)];
+  const rightCards = movable.filter((_, i) => !(bestMask & (1 << i))).map((c) => c.el);
+
   return (
     <>
       <PageHero
@@ -174,121 +344,16 @@ export default async function DistrictPage({
       />
 
       <div className="mx-auto max-w-content px-4 py-6">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.4fr_1fr]">
-          <div className="space-y-6">
-            {/* Who fixes what HERE - problem → the actual responsible people */}
-            <Reveal>
-              <SectionCard title={tr('district.whoTitle', { district: view.district })} subtitle={tr('district.whoHelp')} icon="megaphone">
-                <DistrictWhoFixes
-                  stateCode={state}
-                  state={view.state}
-                  asOf={govAsOf}
-                  cm={cmM ? ministerWho(cmM) : undefined}
-                  ministers={(stateGov?.ministers ?? []).map(ministerWho)}
-                  district={view.district}
-                  people={whoPeople}
-                  channels={channels}
-                />
-              </SectionCard>
-            </Reveal>
-
-            {/* Elected representatives - the accountability layer citizens vote for */}
-            <Reveal>
-              <SectionCard title={tr('district.repsTitle')} subtitle={tr('district.repsHelp')} icon="people">
-                {view.mps.length > 0 && (
-                  <div>
-                    <Eyebrow icon="parliament">{tr('district.yourMps')}</Eyebrow>
-                    <div className="mt-2 space-y-2.5">
-                      {view.mps.map((p) => (
-                        <RepCard key={p.id} p={p} roleChip={tr('district.chipMp')} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {view.mlas.length > 0 && (
-                  <div className={view.mps.length > 0 ? 'mt-5' : ''}>
-                    <Eyebrow icon="flag">{tr('district.yourMlas')}</Eyebrow>
-                    <div className="mt-2 space-y-2.5">
-                      {view.mlas.map((p) => (
-                        <RepCard key={p.id} p={p} roleChip={tr('district.chipMla')} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {view.mps.length === 0 && view.mlas.length === 0 && (
-                  <p className="text-sm text-ink-faint">{tr('district.noReps')}</p>
-                )}
-              </SectionCard>
-            </Reveal>
-
-            {/* Appointed officials */}
-            <Reveal>
-              <SectionCard title={tr('officials.title')} subtitle={tr('officials.subtitle')} icon="shield">
-                <div className="space-y-3">
-                  {officials.map((seat) => (
-                    <OfficeSeatCard key={seat.id} seat={seat} tr={tr} locale={locale} portal={whoPeople.portal} district={view.district} />
-                  ))}
-                </div>
-                <Link href="/who" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline">
-                  <Icon name="megaphone" size={15} /> {tr('officials.findCta')}
-                </Link>
-              </SectionCard>
-            </Reveal>
-
-            {ranking && ranking.entries.length > 0 && (
-              <Reveal>
-                <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star">
-                  <RankingList entries={ranking.entries} />
-                </SectionCard>
-              </Reveal>
-            )}
-          </div>
-
-          <div className="space-y-6">
-            {mapShapes && (
-              <Reveal>
-                <SectionCard title={tr('district.mapTitle')} subtitle={tr('district.mapHelp', { state: view.state })} icon="map">
-                  <GeoMap
-                    shapes={mapShapes}
-                    w={districtMap!.w}
-                    h={districtMap!.h}
-                    ariaLabel={tr('district.mapAria', { district: view.district, state: view.state })}
-                    maxWidthClass="max-w-sm"
-                  />
-                </SectionCard>
-              </Reveal>
-            )}
-
-            {view.constituencies.length > 0 && (
-              <Reveal>
-                <SectionCard title={tr('district.areasTitle')} icon="pin" subtitle={tr('district.areasHelp')}>
-                  <ul className="flex flex-wrap gap-2">
-                    {view.constituencies.map((c) => (
-                      <li key={c.id}>
-                        <Link
-                          href={`/area/${c.id}`}
-                          className="pressable inline-flex items-center gap-1 rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
-                        >
-                          {c.name}
-                          <span className="text-xs text-ink-faint">{c.type === 'PC' ? tr('search.pcShort') : tr('search.acShort')}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </SectionCard>
-              </Reveal>
-            )}
-
-            <Reveal>
-              <SectionCard title={tr('accountability.title')} icon="info">
-                <p className="text-sm text-ink-faint">{tr('accountability.intro')}</p>
-                <Link href="/accountability" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
-                  {tr('common.readMore')} <Icon name="arrow" size={14} />
-                </Link>
-              </SectionCard>
-            </Reveal>
-            <AdSlot />
-          </div>
+        {/* Columns balanced by height (see the greedy split above) so the map +
+            short lists never leave a tall dead zone next to the people cards. */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="space-y-6">{leftCards}</div>
+          <div className="space-y-6">{rightCards}</div>
+        </div>
+        {/* Full width so the ad is always the last thing, never wedged above
+            content when the columns stack on mobile. */}
+        <div className="mt-6">
+          <AdSlot />
         </div>
       </div>
     </>

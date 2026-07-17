@@ -6,16 +6,19 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 // On-demand cache invalidation, called by the data manager after a successful
-// `dm publish`. Pages carry `revalidate = 86400` as a self-heal safety net, so
-// without this a Firestore publish would take up to a day to appear; with it,
-// every page regenerates on its next visit. The whole layout is swept because
-// published collections (politicians, central/state government, office seats)
-// feed nearly every route, and a sweep only marks entries stale - Vercel bills
-// an ISR write per page actually visited afterwards, not per page invalidated.
+// `dm publish`. Pages carry time-based revalidate only as a self-heal safety
+// net (86400 on the hub pages, 604800 on the ~10.6k-page long tail - the daily
+// window there was most of the ISR-writes bill), so without this a Firestore
+// publish could take up to a week to appear; with it, every page regenerates
+// on its next visit. The whole layout is swept because published collections
+// (politicians, central/state government, office seats) feed nearly every
+// route, and a sweep only marks entries stale - Vercel bills an ISR write per
+// page actually visited afterwards, not per page invalidated.
 //
 // Note: a page that regenerates within ~30 min of a publish can still bake the
-// previous in-process TTL snapshot (lib/data.ts memos); the daily revalidate
-// self-heals those. That trade is deliberate - see README "How data flows".
+// previous in-process TTL snapshot (lib/data.ts memos); `dm publish` prints a
+// reminder to run `dm revalidate` again ~35 min later to re-sweep those, and
+// the weekly revalidate remains the backstop. See README "How data flows".
 
 /** Constant-time comparison so the secret cannot be guessed byte-by-byte from
  *  response timing. */

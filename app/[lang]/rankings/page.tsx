@@ -16,6 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<LangParams>
   return {
     title: t(dict, 'ranking.fullTitle'),
     description: t(dict, 'ranking.fullSubtitle'),
+    // Clean URL is the canonical for every /{locale}/... duplicate (see person page).
+    alternates: { canonical: '/rankings' },
   };
 }
 

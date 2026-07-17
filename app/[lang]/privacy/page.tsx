@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Prose from '@/components/Prose';
 import { CONTACT_EMAIL } from '@/lib/site-contact';
 
-export const metadata: Metadata = { title: 'Privacy Policy' };
+export const metadata: Metadata = { title: 'Privacy Policy', alternates: { canonical: '/privacy' } };
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default function PrivacyPage() {

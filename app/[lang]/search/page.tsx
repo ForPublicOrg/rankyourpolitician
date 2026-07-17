@@ -5,7 +5,7 @@ import SearchResults from '@/components/SearchResults';
 
 // Search runs entirely in the browser against the prebuilt static index -
 // no server work per query. noindex: result pages aren't content.
-export const metadata: Metadata = { title: 'Search', robots: { index: false, follow: true } };
+export const metadata: Metadata = { title: 'Search', robots: { index: false, follow: true }, alternates: { canonical: '/search' } };
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default async function SearchPage({ params }: { params: Promise<LangParams> }) {

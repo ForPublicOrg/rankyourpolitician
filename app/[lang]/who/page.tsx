@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Who's responsible for what? - find the right person",
   description:
     'Pick your problem and your district to see the actual people responsible - the local office, your DM/SP, the state minister who runs that department, the CM, and your own MLAs and MPs.',
+  alternates: { canonical: '/who' },
 };
 
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';

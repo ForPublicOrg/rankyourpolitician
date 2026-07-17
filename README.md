@@ -88,9 +88,11 @@ important thing to understand before changing `lib/data.ts`:
   vote aggregates refresh at most every 5 minutes, government collections every 30 minutes, per
   warm instance. The cache stores the *promise*, so a burst of concurrent requests shares one load
   instead of stampeding the database.
-- **ISR sits on top, but only as a daily self-heal** (`revalidate = 86400` on every page).
-  Pages are served straight from the CDN cache; with ~5,300 person pages x 23 locales, the
-  crawl-driven long tail would otherwise re-render around the clock for data that changes rarely.
+- **ISR sits on top, but only as a slow self-heal** (`revalidate = 86400` on the hub pages,
+  `604800` on the person/area/district/state long tail). Pages are served straight from the
+  CDN cache; with ~10.6k crawlable long-tail pages, the old daily window meant crawler
+  revisits re-rendered the whole tail every day - most of the ISR-writes bill - for data
+  that only changes via publish or deploy.
 - **Freshness is handled where the data actually changes, not by re-rendering everything:**
   - *Votes* - `VoteWidget` re-fetches the live score from `GET /api/vote` on mount
     (CDN-cached 5 min, served from the in-process aggregate cache: zero extra Firestore
@@ -103,10 +105,17 @@ important thing to understand before changing `lib/data.ts`:
     drive-by rating never trends. Ordering is by decayed activity only - the rating displayed
     is the leader's real one (the same all-time plain average their profile shows), and the
     list is labelled attention, not a verdict. All rules live in `lib/trending.ts`.
+    State and district pages reuse the same card: their Top-leaders card carries the same
+    Trending tab, scoped via `?state=` / `&district=` params. Scoping filters the same
+    in-process aggregates (zero extra Firestore reads), each scope is its own CDN cache
+    key, and on those pages the fetch fires only when the card scrolls into view. A row
+    can carry an up/down arrow - this week's new-vote mean vs the leader's own all-time
+    mean, shown only past a 0.2 threshold so noise never draws an arrow.
   - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
     `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
     visit. A page that regenerates within ~30 min of a publish can still bake the previous
-    in-process TTL snapshot - the daily revalidate self-heals it.
+    in-process TTL snapshot - run `npm run dm -- revalidate` again ~35 min after the publish
+    to re-sweep those (the timed revalidate remains the backstop).
   - *Seed changes* still require a redeploy, which resets the whole cache anyway.
 - **Nothing reads Firestore during `next build`** - prerendering ~5,300 person pages would
   flood the database with reads on every deploy for data the seed already has. Override with
@@ -131,8 +140,8 @@ app/
     accountability/ methodology/ about/ privacy/ terms/ grievance/
   api/vote/                   vote endpoint (POST: Turnstile + rate-limit + Firestore
                               transaction; GET: live sentiment for the widget, CDN-cached)
-  api/trending/               trending leaders (decayed 7-day rating activity,
-                              CDN-cached, zero extra Firestore reads)
+  api/trending/               trending leaders (decayed 7-day rating activity, optional
+                              state/district scope, CDN-cached, zero extra Firestore reads)
   api/revalidate/             on-demand cache sweep after `dm publish` (Bearer secret)
   api/health/                 liveness probe (zero Firestore reads)
 middleware.ts                 locale routing: rewrites clean URLs to /{locale}/... from the
@@ -140,9 +149,9 @@ middleware.ts                 locale routing: rewrites clean URLs to /{locale}/.
 components/                   UI (map, search, ranking, vote widget, i18n switcher, …)
 lib/                          types, data layer, ranking + trending math, i18n, geo, vote integrity
 lib/i18n/messages/            en.json (source of truth) + per-locale overrides
-data/seed/                    committed dataset (8 JSON files - politicians, constituencies,
+data/seed/                    committed dataset (9 JSON files - politicians, constituencies,
                               central/state government, constitutional offices, district
-                              officials, district portals, contact channels)
+                              officials, district portals, contact channels, criminal cases)
 data/geo/                     compliant simplified GeoJSON (states, districts, PCs, ACs)
 tools/                        build-time static payload generators (search index, rankings, who)
 tools/data-manager/           LOCAL-ONLY: validate / publish / enrich / import / dashboard
@@ -161,6 +170,7 @@ Runs on your machine with a Firebase service-account key that **stays local** (g
 npm run dm -- validate                 # check every fact is cited + consistent
 npm run dm -- stats                    # dataset summary
 npm run dm -- publish                  # push seed to Firestore (needs .env.local creds)
+npm run dm -- revalidate               # re-sweep the deployed page cache (~35 min after a publish)
 npm run dm -- update-all               # orchestrator: refresh every source, rebuild, validate
 npm run dm -- rebuild-indexes          # regenerate static search/who payloads from the seed
 npm run dm -- backfill-trending        # rebuild trending buckets from vote records (--apply)
@@ -175,8 +185,15 @@ import-rajya-sabha          import-mlas          import-mlcs          import-sta
 import-contact-channels     discover-district-portals                 import <file.json>
 enrich-mps                  enrich-wikidata      enrich-affidavits    enrich-affidavits-states
 enrich-performance          enrich-photos        link-ministers       normalize-fields
-verify-wikidata             verify-attendance
+verify-wikidata             verify-attendance    fetch-criminal-cases
 ```
+
+`fetch-criminal-cases` fills `data/seed/criminal_cases.json`: the case-by-case detail (FIR/case
+number, court, sections, charges-framed status, convictions with punishment and appeal state)
+behind every `criminal_cases_declared` fact, read verbatim from the exact affidavit page that fact
+already cites. It never does person-matching of its own - a page is accepted only if its title
+still names the member (or their seat), otherwise the member is skipped and reported. `validate`
+blocks publish if a detail record disagrees with its count fact or cites a different page.
 
 Run `npm run dm` with no arguments for the built-in help.
 

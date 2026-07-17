@@ -24,13 +24,16 @@ import LastUpdated from '@/components/LastUpdated';
 import VoteWidget from '@/components/VoteWidget';
 import AdSlot from '@/components/AdSlot';
 import ShareButton from '@/components/ShareButton';
+import DeclaredCases from '@/components/DeclaredCases';
 
-// Daily self-heal only. Profile facts change via deploy or /api/revalidate, and
+// Weekly self-heal only. Profile facts change via deploy or /api/revalidate, and
 // the one fast-moving input - live vote numbers - is re-fetched client-side by
-// VoteWidget on mount, so regenerating this HTML every 5 minutes bought nothing
-// while billing an ISR write per visited page per cycle (~6k people x 23
-// locales of crawlable long tail). See README "How data flows".
-export const revalidate = 86400;
+// VoteWidget on mount, so regenerating this HTML on a timer buys nothing while
+// billing an ISR write per visited page per cycle. At revalidate=86400 the ~10.6k
+// crawlable long-tail pages re-rendered once a day under crawler traffic and were
+// ~80% of the ISR-writes bill; weekly matches the sitemap's declared cadence.
+// See README "How data flows".
+export const revalidate = 604800;
 
 const METRIC_ICON: Record<PerfMetric, IconName> = {
   attendance_pct: 'calendar',
@@ -59,9 +62,22 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const res = await getPerson(id);
+  // Alias ids (old slugs) redirect in the page component; canonicalise their
+  // metadata to the target so the alias URL never claims to be the real one.
+  if (res?.redirectTo) return { alternates: { canonical: `/person/${res.redirectTo}` } };
   const p = res?.person;
   if (!p) return { title: 'Not found' };
-  return { title: `${p.name}${p.constituency ? ` - ${p.constituency}` : ''}`, description: p.neutral_summary };
+  return {
+    title: `${p.name}${p.constituency ? ` - ${p.constituency}` : ''}`,
+    description: p.neutral_summary,
+    // The clean locale-less URL is the canonical for every /{locale}/... variant.
+    // Locale is cookie-picked (middleware rewrite), so prefixed variants are
+    // crawlable duplicates, not reachable translations. This tag consolidates
+    // the still-crawlable ones (/en/... and the clean URL itself); the other 22
+    // prefixes are robots-blocked outright, which stops the crawl spend but
+    // also hides these tags from crawlers (see app/robots.ts).
+    alternates: { canonical: `/person/${id}` },
+  };
 }
 
 export default async function PersonPage({ params }: { params: Promise<{ lang: string; id: string }> }) {
@@ -226,7 +242,7 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
             <Chip tone="rating">{tr('common.notVerified')}</Chip>
           </div>
           {/* Rating summary + vote form live in the client widget: the server
-              renders the (possibly day-old) numbers into the static HTML, and
+              renders the (possibly week-old) numbers into the static HTML, and
               the widget re-fetches the live score on mount. */}
           <VoteWidget politicianId={person.id} initial={{ mean: sentiment.raw_mean, votes: sentiment.n_votes, distribution: sentiment.distribution, confidence: sentiment.confidence }} />
         </div>
@@ -383,6 +399,25 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {(['assets_total', 'liabilities_total', 'criminal_cases_declared'] as const).map((field) => {
                   const f = factByType.get(field);
+                  // The court-cases tile is a click-through: the whole card
+                  // jumps to the case-by-case detail section below.
+                  if (field === 'criminal_cases_declared' && f) {
+                    return (
+                      <a key={field} href="#court-cases" className="block rounded-2xl">
+                        <StatTile
+                          icon={FIELD_ICON[field]}
+                          value={leadNumber(f.value)}
+                          label={tr(`fields.${field}`)}
+                          hint={
+                            <span className="inline-flex items-center gap-1 font-semibold text-brand">
+                              {tr('profile.cases.seeDetail')} <Icon name="chevron" size={12} />
+                            </span>
+                          }
+                          accent="ink"
+                        />
+                      </a>
+                    );
+                  }
                   return <StatTile key={field} icon={FIELD_ICON[field]} value={f ? (field === 'criminal_cases_declared' ? leadNumber(f.value) : shortValue(f.value)) : tr('common.unavailable')} label={tr(`fields.${field}`)} accent="ink" />;
                 })}
               </div>
@@ -424,6 +459,9 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
           </>
         )}
       </section>
+
+      {/* Declared court cases - case-by-case affidavit record (own citation). */}
+      <DeclaredCases record={person.criminal_record} fact={factByType.get('criminal_cases_declared')} tr={tr} locale={locale} />
 
       {/* Areas + right to reply */}
       <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">

@@ -20,6 +20,7 @@ export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server
 export const metadata: Metadata = {
   title: 'Government of India - Prime Minister & Union Ministers',
   description: 'The Prime Minister and Union Council of Ministers of India, with the national departments each one handles.',
+  alternates: { canonical: '/india' },
 };
 
 export default async function IndiaPage({ params }: { params: Promise<LangParams> }) {

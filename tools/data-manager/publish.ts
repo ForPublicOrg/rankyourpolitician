@@ -1,9 +1,9 @@
 // Shared data-manager logic: read the local seed, validate it, and publish to
 // Firestore with the Admin SDK. This runs ONLY on your machine, using a
 // service-account key that never leaves it. Never imported by the deployed site.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord } from '../../lib/types';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -86,6 +86,51 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
     }
   }
 
+  // CRIMINAL-CASE DETAIL MUST AGREE WITH THE COUNT FACT, PAGE FOR PAGE.
+  // criminal_cases.json republishes what a member's own affidavit page lists
+  // case by case. Wrong here means attributing FIRs and convictions to the
+  // wrong person, so every record must (a) belong to a real member, (b) cite
+  // exactly the page the member's criminal_cases_declared fact cites, and
+  // (c) state the same total as that fact. Any disagreement blocks publish.
+  const casesPath = resolve(SEED_DIR, 'criminal_cases.json');
+  if (existsSync(casesPath)) {
+    const records: CriminalRecord[] = JSON.parse(readFileSync(casesPath, 'utf8'));
+    const byId = new Map(politicians.map((p) => [p.id, p]));
+    const seen = new Set<string>();
+    let covered = 0;
+    for (const r of records) {
+      const p = byId.get(r.politician_id);
+      const rp = p ?? ({ id: r.politician_id, name: r.politician_id } as Politician);
+      if (!p) { push(rp, 'error', 'criminal_cases.json record has no matching politician'); continue; }
+      if (seen.has(r.politician_id)) push(p, 'error', 'duplicate criminal_cases.json record');
+      seen.add(r.politician_id);
+      if (!r.source_url) push(p, 'error', 'criminal-case record has no source_url (no citation, no claim)');
+      if (!r.retrieved_date) push(p, 'warn', 'criminal-case record has no retrieved_date');
+      const fact = p.facts.find((f) => f.field_type === 'criminal_cases_declared');
+      if (!fact) push(p, 'error', 'criminal-case record but no criminal_cases_declared fact');
+      else {
+        if (fact.source_url !== r.source_url)
+          push(p, 'error', `criminal-case record cites ${r.source_url} but the count fact cites ${fact.source_url}`);
+        if (parseInt(fact.value, 10) !== r.declared_total)
+          push(p, 'error', `criminal-case record says ${r.declared_total} cases, the count fact says ${fact.value}`);
+        else covered++;
+      }
+      if (r.cases.length !== r.declared_total)
+        push(p, 'warn', `affidavit declares ${r.declared_total} cases but the page listed ${r.cases.length} case rows`);
+    }
+    // Coverage is a single aggregate note, not 2,000 lines of warnings.
+    const declaring = politicians.filter((p) => {
+      const f = p.facts.find((x) => x.field_type === 'criminal_cases_declared');
+      return f && parseInt(f.value, 10) > 0;
+    }).length;
+    if (covered < declaring) {
+      issues.push({
+        politicianId: '-', name: 'dataset', severity: 'warn',
+        message: `${declaring - covered} of ${declaring} members with declared cases have no case-detail record yet (run "npm run dm -- fetch-criminal-cases")`,
+      });
+    }
+  }
+
   return { issues, ok: !issues.some((i) => i.severity === 'error') };
 }
 
@@ -150,15 +195,18 @@ export async function publishDataset(): Promise<{
 }
 
 /** Ask the deployed site to drop its page cache (POST /api/revalidate) so the
- *  publish shows up on the next visit instead of the next daily revalidation.
+ *  publish shows up on the next visit instead of the next timed revalidation.
  *  No-op unless REVALIDATE_URL and REVALIDATE_SECRET are set in .env.local,
- *  and never fatal: the publish itself already succeeded, and every page
- *  self-heals within a day regardless. */
+ *  and never fatal: the publish itself already succeeded, and pages self-heal
+ *  regardless (hub pages within a day, the long tail within a week - so a
+ *  failure here is worth fixing, not ignoring). */
 export async function requestSiteRevalidation(): Promise<void> {
   const base = process.env.REVALIDATE_URL;
   const secret = process.env.REVALIDATE_SECRET;
   if (!base || !secret) {
-    console.log('i Skipped site revalidation (REVALIDATE_URL / REVALIDATE_SECRET not set) - pages refresh within a day.');
+    console.log(
+      'i Skipped site revalidation (REVALIDATE_URL / REVALIDATE_SECRET not set) - hub pages refresh within a day, long-tail pages within a WEEK.',
+    );
     return;
   }
   try {
@@ -166,12 +214,24 @@ export async function requestSiteRevalidation(): Promise<void> {
       method: 'POST',
       headers: { authorization: `Bearer ${secret}` },
     });
-    console.log(
-      res.ok
-        ? '✓ Site cache invalidated - pages regenerate on next visit.'
-        : `⚠ Site revalidation returned ${res.status} - pages refresh within a day.`,
-    );
+    if (res.ok) {
+      console.log('✓ Site cache invalidated - pages regenerate on next visit.');
+      console.log(
+        '  Reminder: run `npm run dm -- revalidate` once more in ~35 min. A page that',
+        '\n  regenerates just after a publish can bake the previous in-process TTL snapshot',
+        '\n  (lib/data.ts memos, up to 30 min stale); a second sweep re-renders those.',
+      );
+    } else {
+      console.log(
+        `⚠ Site revalidation returned ${res.status} - the publish stays invisible until pages self-heal (long tail: up to a WEEK).` +
+          (res.status === 401
+            ? '\n  401 hint: REVALIDATE_URL must use the canonical www host - a host redirect drops the Authorization header (see CLAUDE.md).'
+            : ''),
+      );
+    }
   } catch (err) {
-    console.log(`⚠ Site revalidation failed (${err instanceof Error ? err.message : err}) - pages refresh within a day.`);
+    console.log(
+      `⚠ Site revalidation failed (${err instanceof Error ? err.message : err}) - the publish stays invisible until pages self-heal (long tail: up to a WEEK).`,
+    );
   }
 }

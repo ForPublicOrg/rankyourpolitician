@@ -57,7 +57,7 @@ obligation - see the legal checklist in README.md).
 ```bash
 npm run dev          # local dev - serves the committed seed with no credentials
 npm run typecheck    # required before every PR
-npm run build        # prebuild regenerates public/*.json payloads, then next build
+npm run build        # prebuild regenerates public/*.json payloads (hash-gated: skips when data/tools/lib unchanged), then next build
 npm run dm -- validate            # data changes must pass this
 npm run dm -- backfill-trending   # trending bucket rebuild (dry run; --apply writes)
 ```
