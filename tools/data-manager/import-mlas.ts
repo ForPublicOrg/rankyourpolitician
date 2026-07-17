@@ -12,6 +12,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import type { Politician, Constituency } from '../../lib/types';
+import { parseMembers, slug } from './mla-parse';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..', '..');
 const SEED_DIR = resolve(ROOT, 'data', 'seed');
@@ -33,23 +34,6 @@ const EXPECTED: Record<string, number> = {
   UK: 70, WB: 294, DL: 70, PY: 30, JK: 90,
 };
 
-const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-const stripRefs = (s: string) => s.replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, '').replace(/<ref[^>]*\/>/g, '').replace(/\{\{efn[^}]*\}\}/gi, '');
-const clean = (s: string) => stripRefs(s)
-  .replace(/\[\[[^\]|]*\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1')
-  .replace(/\{\{[^}]*\}\}/g, '').replace(/'''?/g, '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '')
-  .replace(/\s+/g, ' ').trim();
-const normParty = (p: string) => clean(p).replace(/\s*\((?:19|20)\d\d[--](?:present|\d\d\d\d)\)\s*$/i, '').trim();
-const cellsOf = (row: string) => ('\n' + row).split(/\n\s*[|!]\s?/).map((c) => c.trim()).filter((c) => c.length);
-const EXCLUDE = /(?:Assembly|Vidhan[a]? Sabha|Legislative) constituency|Lok Sabha| district\b|Party|File:|List of|Chief Minister|Speaker|Deputy Speaker|Governor|\.svg|\.png|\.jpg/i;
-// Constituency wikilink in any spelling used across states.
-const CONS_RE = /\[\[([^\]|]*?(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly) constituency[^\]|]*?)(?:\|([^\]]+))?\]\]/;
-const CONS_COUNT_RE = /(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly) constituency/g;
-const ALLIANCE_TAIL = /(?:Alliance|Coalition)$/i;
-// Words that mark a wikilink as a political party (for states that link the party
-// as a plain [[Party]] rather than a {{Party name with colour}} template, e.g. UP).
-const PARTY_HINT = /\b(Party|Congress|Sena|Dal|Samajwadi|Bahujan|Janata|Communist|Morcha|Kazhagam|Rashtriya|Trinamool|Biju|Desam|Nationalist|People's|Democratic|Republican|Majlis|Jana Sena|Apna|Lok|Munnetra|Maha Vikas|Front)\b/i;
-
 async function api(params: Record<string, string>): Promise<any> {
   const u = WP_API + '?format=json&formatversion=2&origin=*&' + new URLSearchParams(params);
   for (let a = 0; a < 3; a++) {
@@ -57,80 +41,6 @@ async function api(params: Record<string, string>): Promise<any> {
     await new Promise((res) => setTimeout(res, 700 * (a + 1)));
   }
   throw new Error('API failed: ' + u);
-}
-
-interface MLA { cons: string; name: string; title: string | null; party: string; }
-
-/** Pick the section with the most Assembly-constituency links (the members table). */
-function membersBody(wt: string): string {
-  const parts = wt.split(/^==+\s*(.+?)\s*==+\s*$/m);
-  if (parts.length < 3) return wt;
-  let best = '';
-  let bestN = 0;
-  for (let i = 1; i < parts.length; i += 2) {
-    if (/council/i.test(parts[i])) continue; // skip Legislative Council sections
-    const body = parts[i + 1] || '';
-    const n = (body.match(CONS_COUNT_RE) || []).length;
-    if (n > bestN) { bestN = n; best = body; }
-  }
-  return best || wt;
-}
-
-function parseMembers(wt: string): MLA[] {
-  const body = membersBody(wt);
-  const rows = body.split(/\n\|-/);
-  const out: MLA[] = [];
-  let curParty = '';
-  for (const row of rows) {
-    // Constituency wikilink (any spelling). Prefer the link's display text; else
-    // derive it by stripping the "…(Assembly|Vidhan Sabha) constituency" tail.
-    const consM = row.match(CONS_RE);
-    if (!consM) continue;
-    const cons = (consM[2] ? clean(consM[2]) : clean(consM[1].replace(/\s*\(?[A-Za-z. ]*?(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly) constituency\)?/i, '')))
-      .replace(/\s*\((SC|ST|SC\/ST)\)\s*$/i, '').trim();
-    if (!cons) continue;
-    // Party: prefer "Full party name with colour" (the member's own party); else
-    // the first "Party name with colour" that isn't an alliance/front column.
-    const full = row.match(/Full party name with colou?r\s*\|\s*([^|}\n]+)/i);
-    let rowParty: string | null = full ? normParty(full[1]) : null;
-    if (!rowParty) {
-      for (const m of row.matchAll(/[Pp]arty name with colou?r\s*\|\s*([^|}\n]+)/g)) {
-        const v = normParty(m[1]);
-        if (v && !ALLIANCE_TAIL.test(v)) { rowParty = v; break; }
-      }
-    }
-    if (!rowParty) { const pc = row.match(/[Pp]arty color\s*\|\s*([^|}\n]+)/); if (pc) rowParty = normParty(pc[1]); }
-    const links = [...row.matchAll(/\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]/g)];
-    // Plain-link party (e.g. UP links [[Samajwadi Party]] instead of a template).
-    if (!rowParty) {
-      for (const lm of links) {
-        const disp = clean(lm[2] || lm[1]);
-        if (PARTY_HINT.test(lm[1]) && !ALLIANCE_TAIL.test(disp) && !/constituency|district|Lok Sabha|List of/i.test(lm[1])) { rowParty = normParty(lm[2] || lm[1]); break; }
-      }
-    }
-    if (rowParty) curParty = rowParty;
-    // Member = first person wikilink in the row that isn't a constituency/party/etc.
-    let title: string | null = null;
-    let name: string | null = null;
-    for (const lm of links) {
-      if (EXCLUDE.test(lm[1]) || PARTY_HINT.test(lm[1])) continue;
-      title = lm[1].trim().replace(/_/g, ' ');
-      name = clean(lm[2] || lm[1]);
-      break;
-    }
-    if (!name) {
-      // plain-text member: the cell right after the constituency cell
-      const cells = cellsOf(row);
-      const ci = cells.findIndex((c) => /Assembly constituency/.test(c));
-      const cand = ci >= 0 ? clean(cells[ci + 1] || '') : '';
-      if (cand && /^[A-Za-z]/.test(cand) && cand.length <= 50 && !/^vacant$/i.test(cand)) name = cand;
-    }
-    if (!name || name.length < 2 || /^vacant$/i.test(name)) continue;
-    out.push({ cons, name, title, party: curParty || 'Independent' });
-  }
-  // Dedup by constituency (keep first) - guards against a stray positions-table row.
-  const seen = new Set<string>();
-  return out.filter((m) => { const k = slug(m.cons); if (seen.has(k)) return false; seen.add(k); return true; });
 }
 
 async function titlesToQids(titles: string[]): Promise<Map<string, string>> {
@@ -197,6 +107,7 @@ async function main() {
         metrics: {}, facts: [], active: true, generated: true,
         identity_source: { url: `https://en.wikipedia.org/wiki/${encodeURIComponent(rosterPageTitle.replace(/ /g, '_'))}`, name: `Wikipedia - ${rosterPageTitle} (ECI results)`, retrieved_date: TODAY },
         ...(qid ? { wikidata_qid: qid } : {}),
+        ...(m.note ? { party_note: m.note } : {}),
       });
       totalAdded++;
     }
