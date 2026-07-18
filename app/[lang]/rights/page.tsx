@@ -217,11 +217,15 @@ export default async function RightsPage({ params }: { params: Promise<LangParam
               <h3 className="flex items-center gap-2 font-bold text-ink">
                 <Icon name="scales" size={18} className="text-brand" /> {tr('rights.remedies.writsTitle')}
               </h3>
+              <p className="mt-1 text-sm text-ink-soft">{tr('rights.remedies.writsIntro')}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {WRITS.map((w) => (
                   <div key={w} className="rounded-2xl bg-paper-soft p-4">
-                    <p className="font-bold text-ink">{tr(`rights.remedies.writs.${w}.name`)}</p>
-                    <p className="mt-0.5 text-sm text-ink-soft">{tr(`rights.remedies.writs.${w}.desc`)}</p>
+                    <p className="font-bold text-ink">{tr(`rights.remedies.writs.${w}.plain`)}</p>
+                    <p className="mt-1 inline-flex items-center gap-1 rounded-full bg-paper-sink px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-ink-faint">
+                      {tr(`rights.remedies.writs.${w}.name`)}
+                    </p>
+                    <p className="mt-1.5 text-sm text-ink-soft">{tr(`rights.remedies.writs.${w}.desc`)}</p>
                   </div>
                 ))}
               </div>

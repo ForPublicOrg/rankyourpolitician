@@ -638,27 +638,33 @@
       "eyebrow": "Enforcing your rights",
       "title": "What to do if a right is broken",
       "intro": "A right you cannot enforce is only a promise. The Constitution gives you a direct route to the courts, which can issue five kinds of orders, called writs.",
-      "writsTitle": "The five writs a court can issue",
+      "writsTitle": "The five kinds of court order (writs)",
+      "writsIntro": "A writ is simply a direct order from a court. Which one you need depends on the problem. The old Latin names are still used, but here is what each one actually does:",
       "writs": {
         "habeas": {
+          "plain": "Free someone locked up illegally",
           "name": "Habeas Corpus",
-          "desc": "\"Produce the person.\" Frees anyone held unlawfully."
+          "desc": "If a person is being held without a lawful reason, the court can order that they be brought before it and set free."
         },
         "mandamus": {
+          "plain": "Make an office do its duty",
           "name": "Mandamus",
-          "desc": "\"We command.\" Orders a public authority to do its legal duty."
+          "desc": "Orders a government office to do the job the law requires - for example, to issue a document you are clearly entitled to."
         },
         "prohibition": {
+          "plain": "Stop a court that is overstepping",
           "name": "Prohibition",
-          "desc": "Stops a lower court or tribunal exceeding its powers."
+          "desc": "Tells a lower court or tribunal to stop handling a case it has no power to hear, before it decides it."
         },
         "certiorari": {
+          "plain": "Undo a wrong order already made",
           "name": "Certiorari",
-          "desc": "Quashes an illegal order already passed by a lower court."
+          "desc": "Cancels a decision a lower court or authority has already passed without the power to, or without a fair hearing."
         },
         "quo": {
+          "plain": "Question someone's claim to a post",
           "name": "Quo Warranto",
-          "desc": "\"By what authority?\" Challenges someone wrongly holding a public office."
+          "desc": "Challenges a person holding a public office they are not legally entitled to, and can have them removed."
         }
       },
       "practicalTitle": "Other places that can help",
