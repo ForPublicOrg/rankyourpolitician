@@ -130,9 +130,11 @@ async function fetchPhoto(url?: string): Promise<string | null> {
 function Wordmark() {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <div style={{ display: 'flex', width: 46, height: 46, borderRadius: 13, background: C.brand, alignItems: 'center', justifyContent: 'center' }}>
-        <svg width="27" height="27" viewBox="0 0 24 24" fill="#ffffff">
-          <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5z" />
+      {/* The site brand mark (Header.tsx): a white `parliament` icon on a
+          brand -> brand-deep gradient rounded square. */}
+      <div style={{ display: 'flex', width: 46, height: 46, borderRadius: 14, background: 'linear-gradient(135deg, #4f46e5, #312e81)', alignItems: 'center', justifyContent: 'center' }}>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth={1.9} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 21h18M4 21V10m16 11V10M4 10l8-5 8 5M8 21v-6m4 6v-6m4 6v-6" />
         </svg>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 14 }}>
