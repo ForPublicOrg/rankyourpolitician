@@ -6,7 +6,7 @@ import Icon from './Icon';
 const REPO_URL = 'https://github.com/ForPublicOrg/rankyourpolitician';
 const ATHENA_URL = 'https://tryathena.dev';
 // Sibling project: civic-sense education. Reciprocal cross-link.
-const CIVIC_SENSE_URL = 'https://getcivicsense.org';
+const CIVIC_SENSE_URL = 'https://www.getcivicsense.org/';
 
 export default function Footer() {
   const { t } = useI18n();
