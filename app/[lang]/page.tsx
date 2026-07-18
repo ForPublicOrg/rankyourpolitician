@@ -73,6 +73,7 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
   const geoStates = states.filter((s) => s.stateCode !== 'NOM').sort((a, b) => b.count - a.count);
   const exploreLinks: { href: string; icon: IconName; label: string }[] = [
     { href: '/india', icon: 'parliament', label: tr('nav.central') },
+    { href: '/rights', icon: 'scales', label: tr('nav.rights') },
     { href: '/hierarchy', icon: 'network', label: tr('nav.hierarchy') },
     { href: '/rankings', icon: 'star', label: tr('ranking.fullTitle') },
     { href: '/accountability', icon: 'people', label: tr('nav.accountability') },

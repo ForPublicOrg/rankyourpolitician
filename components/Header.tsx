@@ -1,18 +1,22 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useI18n } from '@/lib/i18n/provider';
 import { clsx } from 'clsx';
 import SearchBox from './SearchBox';
 import LanguageSwitcher from './LanguageSwitcher';
 import Icon, { type IconName } from './Icon';
 
+// Primary destinations. `show` controls the INLINE header links (wide screens);
+// below xl the same list is served through the mobile menu, so every item stays
+// reachable on a phone - nothing is hidden without a fallback.
 const NAV: { href: string; key: string; icon: IconName; show: string }[] = [
-  { href: '/india', key: 'nav.central', icon: 'parliament', show: 'hidden md:flex' },
-  { href: '/hierarchy', key: 'nav.hierarchy', icon: 'network', show: 'hidden lg:flex' },
+  { href: '/india', key: 'nav.central', icon: 'parliament', show: 'hidden xl:flex' },
+  { href: '/rights', key: 'nav.rights', icon: 'scales', show: 'hidden xl:flex' },
+  { href: '/hierarchy', key: 'nav.hierarchy', icon: 'network', show: 'hidden xl:flex' },
   { href: '/who', key: 'nav.accountability', icon: 'megaphone', show: 'hidden xl:flex' },
-  { href: '/about', key: 'nav.about', icon: 'info', show: 'hidden sm:flex' },
+  { href: '/about', key: 'nav.about', icon: 'info', show: 'hidden xl:flex' },
 ];
 
 function ThemeToggle() {
@@ -55,6 +59,83 @@ function ThemeToggle() {
     >
       <Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} />
     </button>
+  );
+}
+
+/** Mobile / tablet overflow menu (below xl) so no header destination is ever
+ *  unreachable on a phone. Closes on navigation, outside click and Escape. */
+function MobileMenu() {
+  const { t } = useI18n();
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Close whenever the route changes (a link was followed).
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative xl:hidden">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className={clsx(
+          'pressable grid h-9 w-9 place-items-center rounded-full',
+          open ? 'bg-brand-soft text-brand' : 'text-ink-soft hover:bg-paper-sink',
+        )}
+        aria-label={t('nav.menu')}
+        aria-haspopup="true"
+        aria-expanded={open}
+        aria-controls="mobile-menu"
+      >
+        <Icon name={open ? 'x' : 'menu'} size={20} />
+      </button>
+      {open && (
+        <div
+          id="mobile-menu"
+          className="glass-overlay absolute right-0 top-full z-40 mt-2 w-60 max-w-[calc(100vw-2rem)] rounded-2xl p-1.5 shadow-lift"
+        >
+          <p className="px-3 pb-1 pt-2 text-[11px] font-bold uppercase tracking-wider text-ink-faint">
+            {t('nav.menu')}
+          </p>
+          <nav aria-label="Primary (mobile)">
+            {NAV.map((n) => {
+              const active = pathname === n.href;
+              return (
+                <Link
+                  key={n.href}
+                  href={n.href}
+                  aria-current={active ? 'page' : undefined}
+                  className={clsx(
+                    'pressable flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-semibold',
+                    active ? 'bg-brand-soft text-brand-ink' : 'text-ink-soft hover:bg-paper-sink',
+                  )}
+                >
+                  <Icon name={n.icon} size={17} className={active ? 'text-brand' : 'text-ink-faint'} />
+                  {t(n.key)}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -112,6 +193,7 @@ export default function Header() {
             })}
             <LanguageSwitcher />
             <ThemeToggle />
+            <MobileMenu />
           </nav>
         </div>
 

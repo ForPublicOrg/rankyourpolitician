@@ -10,9 +10,11 @@
     "central": "Govt of India",
     "hierarchy": "Org chart of India",
     "accountability": "Who does what?",
+    "rights": "Know your rights",
     "methodology": "How it works",
     "about": "About",
-    "language": "Language"
+    "language": "Language",
+    "menu": "Menu"
   },
   "tabs": {
     "home": "Home",
@@ -491,6 +493,268 @@
       }
     }
   },
+  "rights": {
+    "metaTitle": "What are my rights? The Constitution of India in plain language",
+    "metaDescription": "Every right the Constitution of India gives you, explained simply - the six fundamental rights, your duties, how to enforce a right in court, and how the whole Constitution is built. With the exact article numbers.",
+    "eyebrow": "Your Constitution, in plain language",
+    "title": "What are my rights?",
+    "subtitle": "Every person in India has rights that no government can take away. Here is what the Constitution of India actually gives you - explained simply, with the exact articles so you can always check the source.",
+    "chips": {
+      "part3": "Fundamental Rights",
+      "plain": "Plain language",
+      "everyone": "For every citizen"
+    },
+    "disclaimer": "This is plain-language civic education, not legal advice. Each right is written into the Constitution of India; the article numbers let you check the original text.",
+    "tocTitle": "On this page",
+    "toc": {
+      "preamble": "The promise",
+      "fundamental": "Your fundamental rights",
+      "keyArticles": "Life, liberty & education",
+      "remedies": "Enforcing your rights",
+      "duties": "Your duties",
+      "directive": "Goals for the state",
+      "structure": "The whole Constitution"
+    },
+    "preamble": {
+      "eyebrow": "The Preamble",
+      "title": "The promise the Constitution makes",
+      "intro": "The Constitution opens with a promise, made in the name of the people of India. It sets out what the country is meant to be, and the four values every law must serve.",
+      "quote": "We, the People of India ... give to ourselves this Constitution.",
+      "identity": "India is a Sovereign, Socialist, Secular, Democratic Republic.",
+      "identityNote": "\"Socialist\" and \"Secular\" were added later, by the 42nd Amendment in 1976.",
+      "values": {
+        "justice": {
+          "title": "Justice",
+          "desc": "Social, economic and political - for everyone, not just a few."
+        },
+        "liberty": {
+          "title": "Liberty",
+          "desc": "Of thought, expression, belief, faith and worship."
+        },
+        "equality": {
+          "title": "Equality",
+          "desc": "Of status and of opportunity, whoever you are."
+        },
+        "fraternity": {
+          "title": "Fraternity",
+          "desc": "Dignity for each person, and unity for the nation."
+        }
+      }
+    },
+    "fundamental": {
+      "eyebrow": "Part III - Fundamental Rights",
+      "title": "Your six fundamental rights",
+      "intro": "These are guaranteed to you by the Constitution itself. If the state breaks them, you can go straight to court - and the court can strike down the law or the order.",
+      "articlesLabel": "Articles",
+      "meansLabel": "What this means for you",
+      "items": {
+        "equality": {
+          "title": "Right to Equality",
+          "articles": "Articles 14-18",
+          "summary": "The law treats everyone the same.",
+          "means": "The state cannot favour you or discriminate against you because of your religion, race, caste, sex or place of birth. Everyone is equal before the law.",
+          "examples": [
+            "Equal protection of the law for every person",
+            "No discrimination in public jobs, shops, wells, roads or bathing places",
+            "Untouchability is abolished and punishable (Article 17)",
+            "The state grants no titles of nobility (Article 18)"
+          ]
+        },
+        "freedom": {
+          "title": "Right to Freedom",
+          "articles": "Articles 19-22",
+          "summary": "The core freedoms of a free citizen.",
+          "means": "You can speak, gather peacefully, move and live anywhere in India, and choose your work - within reasonable limits set by law. You also have protections if you are ever arrested.",
+          "examples": [
+            "Freedom of speech and expression",
+            "Assemble peacefully, form associations, move and settle anywhere in India",
+            "Practise any profession, trade or business",
+            "Protection against arbitrary arrest and detention (Article 22)"
+          ]
+        },
+        "exploitation": {
+          "title": "Right against Exploitation",
+          "articles": "Articles 23-24",
+          "summary": "No one can be forced, bonded or trafficked.",
+          "means": "Human trafficking, begar (forced unpaid labour) and bonded labour are banned. Children under 14 cannot be made to work in factories, mines or other hazardous jobs.",
+          "examples": [
+            "Human trafficking and forced labour are prohibited",
+            "Bonded labour is illegal",
+            "No child under 14 in a factory, mine or hazardous work"
+          ]
+        },
+        "religion": {
+          "title": "Right to Freedom of Religion",
+          "articles": "Articles 25-28",
+          "summary": "Believe, and practise, freely.",
+          "means": "You are free to follow, practise and share any religion, or none at all. Every religious community can manage its own affairs, and India has no official state religion.",
+          "examples": [
+            "Freely profess, practise and propagate your faith",
+            "Religious groups manage their own affairs and institutions",
+            "No one is forced to pay taxes for, or attend, any particular religion"
+          ]
+        },
+        "cultural": {
+          "title": "Cultural & Educational Rights",
+          "articles": "Articles 29-30",
+          "summary": "Your language and culture are protected.",
+          "means": "Any community can keep its own language, script and culture. Religious and linguistic minorities can set up and run their own schools and colleges.",
+          "examples": [
+            "Protect your language, script and culture",
+            "No denial of admission to a state-aided school on grounds of religion, race, caste or language",
+            "Minorities can establish and run their own educational institutions"
+          ]
+        },
+        "remedies": {
+          "title": "Right to Constitutional Remedies",
+          "articles": "Article 32",
+          "summary": "The right that protects all the others.",
+          "means": "If any fundamental right is violated, you can go directly to the Supreme Court, which can issue orders (writs) to enforce it. Dr B. R. Ambedkar called this the \"heart and soul\" of the Constitution.",
+          "examples": [
+            "Move the Supreme Court directly under Article 32",
+            "Move your High Court under Article 226 (which also covers ordinary legal rights)",
+            "The court can order the state to stop acting, or to act"
+          ]
+        }
+      }
+    },
+    "keyArticles": {
+      "eyebrow": "The most-used articles",
+      "title": "Life, liberty and education",
+      "intro": "Two articles inside your Right to Freedom do the heaviest lifting in everyday life.",
+      "life": {
+        "badge": "Article 21",
+        "title": "Right to Life and Personal Liberty",
+        "desc": "No person can be deprived of life or personal liberty except by a fair, just and reasonable procedure established by law. Courts have read this widely - it now includes the right to live with dignity, to privacy, to a clean environment, to health, and to a livelihood."
+      },
+      "education": {
+        "badge": "Article 21A",
+        "title": "Right to Education",
+        "desc": "The state must provide free and compulsory education to every child aged 6 to 14. Added by the 86th Amendment in 2002 and backed by the Right to Education Act, 2009."
+      }
+    },
+    "remedies": {
+      "eyebrow": "Enforcing your rights",
+      "title": "What to do if a right is broken",
+      "intro": "A right you cannot enforce is only a promise. The Constitution gives you a direct route to the courts, which can issue five kinds of orders, called writs.",
+      "writsTitle": "The five writs a court can issue",
+      "writs": {
+        "habeas": {
+          "name": "Habeas Corpus",
+          "desc": "\"Produce the person.\" Frees anyone held unlawfully."
+        },
+        "mandamus": {
+          "name": "Mandamus",
+          "desc": "\"We command.\" Orders a public authority to do its legal duty."
+        },
+        "prohibition": {
+          "name": "Prohibition",
+          "desc": "Stops a lower court or tribunal exceeding its powers."
+        },
+        "certiorari": {
+          "name": "Certiorari",
+          "desc": "Quashes an illegal order already passed by a lower court."
+        },
+        "quo": {
+          "name": "Quo Warranto",
+          "desc": "\"By what authority?\" Challenges someone wrongly holding a public office."
+        }
+      },
+      "practicalTitle": "Other places that can help",
+      "practical": [
+        "Free legal aid - your right if you cannot afford a lawyer (Article 39A; NALSA and district legal-services authorities)",
+        "Human Rights Commissions - national and in each state",
+        "Commissions for Women, SC / ST, Minorities and Child Rights",
+        "The Right to Information (RTI) Act, 2005, to ask the government for answers",
+        "The national grievance portal (CPGRAMS) for public-service complaints"
+      ]
+    },
+    "duties": {
+      "eyebrow": "Part IVA - Article 51A",
+      "title": "Your fundamental duties",
+      "intro": "Rights come with responsibilities. The Constitution lists the duties every citizen is expected to keep - the other side of the same coin.",
+      "items": [
+        "Respect the Constitution, the National Flag and the National Anthem",
+        "Cherish the ideals of the freedom struggle",
+        "Protect the sovereignty, unity and integrity of India",
+        "Defend the country and serve the nation when called upon",
+        "Promote harmony beyond religion, language and region, and reject practices that degrade women",
+        "Value and preserve our rich heritage and composite culture",
+        "Protect the environment - forests, lakes, rivers and wildlife - and be compassionate to living creatures",
+        "Develop a scientific temper, humanism and the spirit of inquiry",
+        "Safeguard public property and reject violence",
+        "Strive towards excellence in every sphere of activity",
+        "Provide education to your child or ward aged 6 to 14 (added in 2002)"
+      ]
+    },
+    "directive": {
+      "eyebrow": "Part IV - Directive Principles",
+      "title": "Goals the state must strive for",
+      "intro": "These are goals set for every government. Courts cannot enforce them directly, but they are fundamental to how the country should be run, and laws are shaped by them.",
+      "items": [
+        "A decent livelihood and a fair sharing of resources (Article 39)",
+        "Equal pay for equal work, for women and men alike",
+        "Free legal aid, so poverty never blocks justice (Article 39A)",
+        "The right to work, to education and to help in old age, sickness and want (Articles 41-43)",
+        "A living wage and humane conditions of work",
+        "Village panchayats as units of self-government (Article 40)",
+        "Better public health and nutrition (Article 47)",
+        "Protection of the environment, forests and wildlife (Article 48A)"
+      ]
+    },
+    "structure": {
+      "eyebrow": "The whole Constitution",
+      "title": "How the Constitution is built",
+      "intro": "The Constitution of India is the longest written constitution in the world, and the supreme law of the land - every other law must obey it.",
+      "facts": {
+        "adopted": {
+          "value": "26 Nov 1949",
+          "label": "Adopted"
+        },
+        "inforce": {
+          "value": "26 Jan 1950",
+          "label": "Came into force"
+        },
+        "original": {
+          "value": "395",
+          "label": "Original articles"
+        },
+        "schedules": {
+          "value": "12",
+          "label": "Schedules today"
+        }
+      },
+      "partsTitle": "The main parts",
+      "partsIntro": "The text is organised into parts. The ones closest to you as a citizen:",
+      "parts": [
+        "Part II - Citizenship: who is an Indian citizen",
+        "Part III - Fundamental Rights: the rights on this page",
+        "Part IV - Directive Principles: goals for the state",
+        "Part IVA - Fundamental Duties: duties of citizens",
+        "Parts V-VI - the Union and the State governments",
+        "Part IX & IXA - Panchayats and Municipalities: your local government",
+        "Part XVIII - Emergency provisions"
+      ],
+      "schedulesTitle": "The 12 Schedules",
+      "schedulesIntro": "Schedules are the detailed lists attached to the Constitution. A few you may hear about:",
+      "schedules": [
+        "Seventh Schedule - splits powers between the Union and the states (the Union, State and Concurrent lists)",
+        "Eighth Schedule - the 22 official languages (this site speaks all of them)",
+        "Tenth Schedule - the anti-defection law",
+        "Eleventh & Twelfth Schedules - the powers of panchayats and municipalities"
+      ],
+      "amendTitle": "It can change - but carefully",
+      "amendDesc": "The Constitution can be amended under Article 368, and has been over a hundred times. But the Supreme Court has held that its \"basic structure\" - such as democracy, secularism and the rule of law - can never be amended away.",
+      "propertyNote": "Rights can change too: the Right to Property was a fundamental right until 1978, when the 44th Amendment made it an ordinary legal right (Article 300A)."
+    },
+    "closing": {
+      "title": "Know who to hold to account",
+      "desc": "Rights are enforced by the people you elect and the officials you can reach. See who is responsible for what, then find the right office near you.",
+      "whoDoes": "Who does what?",
+      "getHelp": "Find who's responsible",
+      "sourceNote": "Source: the Constitution of India. This page is for civic awareness and is not legal advice - for any specific situation, consult a lawyer or the official text."
+    }
+  },
   "profile": {
     "yourMp": "Your MP",
     "minister": "Minister",
@@ -686,11 +950,13 @@
   },
   "footer": {
     "nonpartisan": "Independent and non-partisan. Not linked to any party, leader or government.",
+    "rights": "Know your rights",
     "privacy": "Privacy",
     "terms": "Terms",
     "grievance": "Grievance / Right to reply",
     "openSource": "Open source",
     "builtWith": "Built using {name}",
+    "civicSense": "What is civic sense?",
     "disclaimer": "Compiled from public and official sources for civic awareness. Not legal advice."
   },
   "time": {

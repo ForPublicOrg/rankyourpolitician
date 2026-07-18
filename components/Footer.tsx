@@ -5,6 +5,8 @@ import Icon from './Icon';
 
 const REPO_URL = 'https://github.com/ForPublicOrg/rankyourpolitician';
 const ATHENA_URL = 'https://tryathena.dev';
+// Sibling project: civic-sense education. Reciprocal cross-link.
+const CIVIC_SENSE_URL = 'https://getcivicsense.org';
 
 export default function Footer() {
   const { t } = useI18n();
@@ -25,9 +27,19 @@ export default function Footer() {
           </div>
           <nav className="grid grid-cols-2 gap-x-10 gap-y-2.5 text-sm" aria-label="Footer">
             <Link href="/hierarchy" className="text-ink-soft hover:text-brand">{t('nav.hierarchy')}</Link>
+            <Link href="/rights" className="text-ink-soft hover:text-brand">{t('footer.rights')}</Link>
             <Link href="/accountability" className="text-ink-soft hover:text-brand">{t('nav.accountability')}</Link>
             <Link href="/methodology" className="text-ink-soft hover:text-brand">{t('nav.methodology')}</Link>
             <Link href="/about" className="text-ink-soft hover:text-brand">{t('nav.about')}</Link>
+            <a
+              href={CIVIC_SENSE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-ink-soft underline-offset-2 hover:text-brand"
+            >
+              {t('footer.civicSense')}
+              <Icon name="external" size={12} />
+            </a>
             <Link href="/privacy" className="text-ink-soft hover:text-brand">{t('footer.privacy')}</Link>
             <Link href="/terms" className="text-ink-soft hover:text-brand">{t('footer.terms')}</Link>
             <Link href="/grievance" className="text-ink-soft hover:text-brand">{t('footer.grievance')}</Link>
