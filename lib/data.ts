@@ -252,7 +252,7 @@ export async function getConstituency(id: string): Promise<Constituency | null> 
 /** A unified person: aggregates an MP record and/or one or more ministerial
  *  roles under one canonical id. This is what a profile page renders. */
 export interface PersonView {
-  kind: 'elected' | 'official';
+  kind: 'elected' | 'official' | 'office';
   id: string;
   name: string;
   name_hi?: string;
@@ -297,6 +297,8 @@ export interface PersonView {
   identity_source?: { url: string; name: string; retrieved_date: string };
   party_note?: string;
   party_history?: { party: string; from: string; until?: string; current?: boolean }[];
+  /** Constitutional office record (kind === 'office') - President / VP profile. */
+  office?: ConstitutionalOffice;
 }
 
 /** Canonical id for a minister: their linked MP id if any, else their own id. */
@@ -443,6 +445,40 @@ export async function getPerson(
     };
   }
 
+  // Constitutional office with no linked politician profile (President, VP) -
+  // INFO-ONLY, never rated. Offices that DO link to an MP (Speaker, Leaders of
+  // the Opposition) resolved above via politicianById, so this only ever catches
+  // the non-partisan Head-of-State offices.
+  const constOffice = (
+    await joinMinisterPhotos(
+      (seedConstitutional as unknown as ConstitutionalOffice[]).filter((o) => o.id === id && !o.politicianId),
+    )
+  )[0];
+  if (constOffice) {
+    return {
+      person: {
+        kind: 'office' as const,
+        id: constOffice.id,
+        name: constOffice.name,
+        party: constOffice.party,
+        current_position: constOffice.title,
+        photo_url: constOffice.photo_url,
+        neutral_summary: constOffice.about || constOffice.note,
+        as_of: constOffice.since,
+        office: constOffice,
+        districts: [],
+        is_minister: false,
+        is_pm: false,
+        portfolios: [],
+        facts: [],
+        metrics: {},
+        performance: null,
+        hasRecord: false,
+        sources: [[constOffice.source_url, constOffice.source_name]],
+      },
+    };
+  }
+
   // Appointed official (incumbent of an office seat) - INFO-ONLY person.
   const seats = await allOfficeSeats();
   const seat = seats.find((s) => s.incumbent && slugify(s.incumbent.name) === id);
@@ -524,6 +560,9 @@ export async function getAllPersonIds(): Promise<string[]> {
   for (const m of central) if (!m.politicianId) ids.add(m.id);
   for (const sm of await allStateMinisters()) if (!sm.politicianId) ids.add(sm.id);
   for (const seat of await allOfficeSeats()) if (seat.incumbent) ids.add(slugify(seat.incumbent.name));
+  // Constitutional offices without a linked MP profile (President, VP) get their
+  // own info-only page - so prerender them and list them in the sitemap.
+  for (const o of seedConstitutional as unknown as ConstitutionalOffice[]) if (!o.politicianId) ids.add(o.id);
   return [...ids];
 }
 

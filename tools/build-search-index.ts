@@ -86,12 +86,15 @@ function build(): SearchIndexFile {
   }
 
   // Constitutional offices - upgrade the role label for linked MPs (Speaker,
-  // Leaders of the Opposition). Unlinked holders (President/VP) have no
-  // profile page yet, so they are shown on /india and /hierarchy instead.
+  // Leaders of the Opposition); the unlinked Head-of-State offices (President,
+  // VP) get their own searchable entry pointing at their info-only profile.
   for (const o of seedConstitutional as unknown as ConstitutionalOffice[]) {
-    if (!o.politicianId) continue;
-    const existing = people.get(o.politicianId);
-    if (existing) existing[5] = `${o.title} · ${existing[5]}`;
+    if (o.politicianId) {
+      const existing = people.get(o.politicianId);
+      if (existing) existing[5] = `${o.title} · ${existing[5]}`;
+    } else if (!people.has(o.id)) {
+      people.set(o.id, [o.id, o.name, '', '', '', o.title, undefined, o.photo_url]);
+    }
   }
 
   // State CMs / ministers - same pattern.

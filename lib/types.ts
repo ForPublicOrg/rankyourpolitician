@@ -402,6 +402,12 @@ export interface ConstitutionalOffice {
   wikidata_qid?: string; // resolved for photo sourcing (President/VP are not in politicians.json)
   since?: string; // ISO date office was assumed
   note?: string;
+  // Cited profile detail for offices with a standalone page (President, VP) -
+  // all covered by this record's single source citation.
+  about?: string; // fuller description of the office
+  term?: string; // tenure + constitutional article
+  selection?: string; // how the office is filled + article
+  powers?: string[]; // key constitutional powers / functions
   source_url: string;
   source_name: string;
   retrieved_date: string;

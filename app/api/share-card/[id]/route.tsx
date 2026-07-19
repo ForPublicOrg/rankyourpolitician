@@ -229,7 +229,9 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
 
   const photo = await fetchPhoto(person.photo_url);
   const seat = [person.constituency, person.state].filter(Boolean).join(', ');
-  const rateable = person.kind !== 'official';
+  // Only elected people are rated. Appointed officials and non-partisan
+  // constitutional offices (President, VP) never carry a rating tease.
+  const rateable = person.kind === 'elected';
   const name = person.name.length > 32 ? person.name.slice(0, 31).trimEnd() + '…' : person.name;
   const party = person.party ? (person.party.length > 30 ? person.party.slice(0, 28).trimEnd() + '…' : person.party) : null;
 
@@ -303,7 +305,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
       {/* footer: the personal hook + reveal CTA */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 20, borderTop: `1px solid ${C.line}` }}>
         <div style={{ display: 'flex', fontSize: 22, fontWeight: 700, color: C.ink }}>
-          {rateable ? 'I rated them - now you rate them too.' : 'See who this office answers to.'}
+          {rateable ? 'I rated them - now you rate them too.' : person.kind === 'office' ? 'A non-partisan constitutional office.' : 'See who this office answers to.'}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', fontSize: 23, fontWeight: 800, color: C.brandInk }}>
           rankyourpolitician.com

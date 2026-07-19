@@ -8,10 +8,21 @@
     "note": "Head of State. Appoints the Prime Minister, gives assent to laws and is Supreme Commander of the armed forces - acting on the aid and advice of the Council of Ministers (Article 74). The office is non-partisan.",
     "source_url": "https://en.wikipedia.org/wiki/President_of_India",
     "source_name": "Wikipedia - President of India",
-    "retrieved_date": "2026-07-15",
+    "retrieved_date": "2026-07-20",
     "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/President%20of%20India%20Droupadi%20Murmu%20official%20portrait%20(cropped).jpg?width=400",
     "photo_license": "GODL-India · Wikimedia Commons",
-    "wikidata_qid": "Q19901232"
+    "wikidata_qid": "Q19901232",
+    "about": "The President of India is the Head of State and the first citizen of the Republic. The executive power of the Union is formally vested in the President but is exercised on the aid and advice of the Council of Ministers headed by the Prime Minister (Articles 53 and 74). The office is deliberately non-partisan.",
+    "term": "5 years; eligible for re-election (Article 56).",
+    "selection": "Indirectly elected by an Electoral College of the elected members of both Houses of Parliament and of the Legislative Assemblies of the States and of Delhi and Puducherry, by a single transferable vote (Articles 54-55).",
+    "powers": [
+      "Appoints the Prime Minister and, on the Prime Minister's advice, the other Union ministers (Article 75).",
+      "Gives assent to Bills passed by Parliament; a Bill becomes law only on the President's assent (Article 111).",
+      "Summons and prorogues the Houses of Parliament and can dissolve the Lok Sabha (Article 85).",
+      "Supreme Commander of the Armed Forces of India (Article 53).",
+      "Appoints Governors, the Chief Justice and judges of the higher judiciary, the CAG and Election Commissioners, among other constitutional posts.",
+      "Can grant pardons, reprieves and remissions of punishment (Article 72)."
+    ]
   },
   {
     "id": "vice-president-of-india",
@@ -22,10 +33,17 @@
     "note": "Ex-officio Chairman of the Rajya Sabha (Article 64) - presides over the upper house of Parliament. Elected in the 2025 vice-presidential election.",
     "source_url": "https://en.wikipedia.org/wiki/Vice_President_of_India",
     "source_name": "Wikipedia - Vice President of India",
-    "retrieved_date": "2026-07-15",
+    "retrieved_date": "2026-07-20",
     "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri%20C%20P%20Radhakrishnan%2C%20Honourable%20Vice%20President%20of%20India.jpg?width=400",
     "photo_license": "GODL-India · Wikimedia Commons",
-    "wikidata_qid": "Q15472832"
+    "wikidata_qid": "Q15472832",
+    "about": "The Vice-President is the second-highest constitutional office in India. The Vice-President is the ex-officio Chairman of the Rajya Sabha and discharges the functions of the President when that office falls vacant.",
+    "term": "5 years (Article 67).",
+    "selection": "Elected by an Electoral College of the members of both Houses of Parliament, by a single transferable vote (Article 66).",
+    "powers": [
+      "Ex-officio Chairman of the Rajya Sabha; presides over the upper house and its proceedings (Articles 64 and 89).",
+      "Acts as President when the office of President is vacant, until a new President is elected - for a maximum of six months (Article 65)."
+    ]
   },
   {
     "id": "speaker-lok-sabha",

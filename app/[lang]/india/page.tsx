@@ -127,13 +127,12 @@ function ConstitutionalCard({ o, tr }: { o: ConstitutionalOffice; tr: (k: string
       <div className="min-w-0 flex-1">
         <p className="text-[11px] font-bold uppercase tracking-wide text-brand">{o.title}</p>
         <div className="mt-0.5 flex flex-wrap items-center gap-2">
-          {o.politicianId ? (
-            <Link href={`/person/${o.politicianId}`} className="font-bold text-ink after:absolute after:inset-0">
-              {o.name}
-            </Link>
-          ) : (
-            <span className="font-bold text-ink">{o.name}</span>
-          )}
+          {/* Every office is now clickable: linked MPs (Speaker, Leaders of the
+              Opposition) go to their full MP profile; the Head-of-State offices
+              (President, VP) go to their own info-only office profile. */}
+          <Link href={`/person/${o.politicianId || o.id}`} className="font-bold text-ink after:absolute after:inset-0">
+            {o.name}
+          </Link>
           {o.party && <PartyChip party={o.party} />}
         </div>
         {o.note && <p className="mt-1.5 text-xs leading-relaxed text-ink-soft">{o.note}</p>}
@@ -142,6 +141,7 @@ function ConstitutionalCard({ o, tr }: { o: ConstitutionalOffice; tr: (k: string
           <a href={o.source_url} target="_blank" rel="noopener noreferrer nofollow" className="relative z-10 inline-flex items-center gap-1 text-brand hover:underline">
             <Icon name="link" size={12} /> {o.source_name}
           </a>
+          <span className="ml-auto inline-flex items-center gap-0.5 font-semibold text-brand">{tr('common.viewProfile')} <Icon name="arrow" size={12} /></span>
         </div>
       </div>
     </div>

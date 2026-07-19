@@ -105,6 +105,7 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
   if (person.kind === 'official') return <OfficialProfile p={person} tr={tr} locale={locale} />;
+  if (person.kind === 'office') return <ConstitutionalProfile p={person} tr={tr} locale={locale} />;
 
   // ---- Elected person (MP and/or minister) --------------------------------
   const sentiment = await getPersonSentiment(id);
@@ -617,6 +618,106 @@ function OfficialProfile({ p, tr, locale }: { p: PersonView; tr: (k: string, v?:
         <span className="font-semibold text-ink">{tr('officials.findCta')}</span>
         <Icon name="arrow" size={20} className="ml-auto text-accent-ink" />
       </Link>
+
+      <div className="mt-5"><AdSlot /></div>
+    </div>
+  );
+}
+
+// A constitutional Head-of-State office (President, Vice-President): a rich,
+// fully cited, INFO-ONLY profile. Non-partisan and never rated - so no vote
+// widget, no performance ring, no affidavit record; just who holds the office,
+// what it is, how it is filled and the powers it carries, all from one citation.
+function ConstitutionalProfile({ p, tr, locale }: { p: PersonView; tr: (k: string, v?: Record<string, string | number>) => string; locale: string }) {
+  const o = p.office!;
+  const src = p.sources[0];
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-5">
+      <Breadcrumbs
+        items={[
+          { label: tr('levels.national'), href: '/' },
+          { label: tr('central.title'), href: '/india' },
+          { label: o.title },
+        ]}
+      />
+
+      {/* HERO */}
+      <div className="glass mt-4 rounded-3xl p-5 sm:p-7">
+        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+          <Avatar name={p.name} src={p.photo_url} size={92} />
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+              <Chip tone="neutral" icon="law">{o.title}</Chip>
+              <Chip tone="brand" icon="shield">{tr('profile.office.badge')}</Chip>
+            </div>
+            <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink">{p.name}</h1>
+            {o.since && (
+              <p className="mt-1.5 flex items-center justify-center gap-1.5 text-sm text-ink-soft sm:justify-start">
+                <Icon name="calendar" size={15} className="text-brand" /> {tr('profile.office.inOfficeSince')} {formatDate(o.since, locale)}
+              </p>
+            )}
+            <div className="mt-3 flex justify-center sm:justify-start">
+              <ShareRow id={p.id} name={p.name} kind="official" />
+            </div>
+          </div>
+        </div>
+        <p className="mt-4 flex items-start gap-2 rounded-xl bg-paper-soft p-3 text-sm text-ink-soft">
+          <Icon name="info" size={16} className="mt-0.5 shrink-0 text-ink-faint" /> {tr('profile.office.infoOnly')}
+        </p>
+      </div>
+
+      {/* About this office */}
+      {(o.about || o.note) && (
+        <section className="mt-5 glass rounded-3xl p-5 sm:p-6">
+          <h2 className="text-xl font-bold text-ink">{tr('profile.office.aboutTitle')}</h2>
+          <p className="mt-2 text-ink-soft">{o.about || o.note}</p>
+          {(o.term || o.selection) && (
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              {o.term && (
+                <div className="rounded-xl bg-paper-soft p-4">
+                  <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-ink-faint"><Icon name="calendar" size={14} /> {tr('profile.office.termLabel')}</p>
+                  <p className="mt-1 text-sm text-ink">{o.term}</p>
+                </div>
+              )}
+              {o.selection && (
+                <div className="rounded-xl bg-paper-soft p-4">
+                  <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-ink-faint"><Icon name="people" size={14} /> {tr('profile.office.selectionLabel')}</p>
+                  <p className="mt-1 text-sm text-ink">{o.selection}</p>
+                </div>
+              )}
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Key powers & functions */}
+      {o.powers && o.powers.length > 0 && (
+        <section className="mt-5 glass rounded-3xl p-5 sm:p-6">
+          <h2 className="flex items-center gap-2 text-xl font-bold text-ink"><Icon name="parliament" size={20} className="text-brand" /> {tr('profile.office.powersTitle')}</h2>
+          <ul className="mt-3 space-y-2">
+            {o.powers.map((pw, i) => (
+              <li key={i} className="flex gap-2.5 rounded-xl bg-white px-4 py-3 shadow-sm">
+                <Icon name="check" size={17} className="mt-0.5 shrink-0 text-perf" />
+                <span className="text-sm text-ink-soft">{pw}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Source citation - the whole profile rests on one cited public source. */}
+      <section className="mt-5 glass rounded-3xl p-5 sm:p-6">
+        <h2 className="flex items-center gap-2 font-bold text-ink"><Icon name="link" size={18} className="text-brand" /> {tr('common.source')}</h2>
+        <p className="mt-2 text-sm text-ink-soft">{tr('profile.office.sourceNote')}</p>
+        {src && (
+          <p className="mt-2 flex flex-wrap items-center gap-x-2 text-xs text-ink-faint">
+            <a href={src[0]} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center gap-1 text-brand hover:underline">
+              <Icon name="link" size={12} /> {src[1]}
+            </a>
+            <span>· {tr('common.lastUpdated')} {formatDate(o.retrieved_date, locale)}</span>
+          </p>
+        )}
+      </section>
 
       <div className="mt-5"><AdSlot /></div>
     </div>
