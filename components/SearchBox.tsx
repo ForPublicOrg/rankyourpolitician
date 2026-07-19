@@ -94,6 +94,10 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
   // Cap the dropdown to the space below the input so its last rows never fall
   // off-screen (or behind a clipped ancestor) on short viewports.
   const [maxH, setMaxH] = useState(416);
+  // Give the panel a readable MINIMUM width, capped to the viewport. In the
+  // header the input can be squeezed narrow (a busy top bar); without this the
+  // panel inherits that width and every result truncates to a single letter.
+  const [minW, setMinW] = useState(360);
   const ref = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const listId = `search-list-${variant}`;
@@ -113,6 +117,9 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
       if (!el) return;
       const avail = window.innerHeight - el.getBoundingClientRect().bottom - 16;
       setMaxH(Math.max(200, Math.min(416, avail)));
+      // Never wider than the viewport (minus a small gutter); otherwise a
+      // comfortable ~360px so names and their sub-lines are fully legible.
+      setMinW(Math.min(360, window.innerWidth - 24));
     };
     compute();
     window.addEventListener('resize', compute);
@@ -241,8 +248,8 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
         <div
           id={listId}
           role="listbox"
-          style={{ maxHeight: maxH }}
-          className="glass-overlay absolute left-0 right-0 z-40 mt-2 overflow-auto rounded-2xl bg-white p-1.5 animate-scale-in origin-top"
+          style={{ maxHeight: maxH, minWidth: minW }}
+          className="glass-overlay absolute left-0 right-0 z-40 mt-2 max-w-[calc(100vw-1rem)] overflow-auto rounded-2xl bg-white p-1.5 animate-scale-in origin-top"
         >
           {showRecents && (
             <div className="py-1">
