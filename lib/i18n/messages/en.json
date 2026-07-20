@@ -13,6 +13,7 @@
     "rights": "Know your rights",
     "whyCare": "Why should I care?",
     "forLeaders": "For leaders",
+    "howToBeGoodLeader": "How to be a good leader",
     "methodology": "How it works",
     "about": "About",
     "language": "Language",
@@ -317,6 +318,9 @@
     "tiersTitle": "Who is responsible for what?",
     "tiersHelp": "Different problems need different leaders. Tap to see who to ask.",
     "moreExplore": "More ways to explore",
+    "howToBeGoodLeader": "How to be a good leader",
+    "leaderBannerTitle": "How to be a good leader",
+    "leaderBannerSubtitle": "A guide for elected representatives & civic leaders on transparency, public trust, and public service.",
     "langHint": "Read this in {n} languages:",
     "langMore": "+{n} more"
   },

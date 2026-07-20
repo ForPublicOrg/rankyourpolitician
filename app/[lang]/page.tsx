@@ -75,9 +75,9 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
     { href: '/india', icon: 'parliament', label: tr('nav.central') },
     { href: '/rights', icon: 'scales', label: tr('nav.rights') },
     { href: '/why-care', icon: 'sparkle', label: tr('nav.whyCare') },
+    { href: '/for-leaders', icon: 'compass', label: tr('home.howToBeGoodLeader') },
     { href: '/hierarchy', icon: 'network', label: tr('nav.hierarchy') },
     { href: '/rankings', icon: 'star', label: tr('ranking.fullTitle') },
-    { href: '/accountability', icon: 'people', label: tr('nav.accountability') },
   ];
 
   return (
@@ -124,15 +124,22 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
                 <LanguageHint className="mt-4 justify-center lg:justify-start" />
               </div>
 
-              {/* Gentle onboarding entry for the sceptical first-time visitor -
-                  a small pill under the search, never blocking the primary action. */}
-              <div className="mt-5 flex justify-center animate-fade-up lg:justify-start" style={{ animationDelay: '200ms' }}>
+              {/* Onboarding entry pills for citizens and leaders - placed prominently in hero under search */}
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 animate-fade-up lg:justify-start" style={{ animationDelay: '200ms' }}>
                 <Link
                   href="/why-care"
-                  className="pressable group inline-flex items-center gap-2 rounded-full border border-brand/25 bg-white/80 px-4 py-2 text-sm font-semibold text-brand shadow-soft backdrop-blur hover:bg-brand-soft"
+                  className="pressable group inline-flex items-center gap-2 rounded-full border border-brand/25 bg-white/80 dark:bg-paper-sink/80 px-4 py-2 text-sm font-semibold text-brand shadow-soft backdrop-blur hover:bg-brand-soft"
                 >
                   <Icon name="sparkle" size={16} />
                   {tr('nav.whyCare')}
+                  <Icon name="arrow" size={15} className="transition group-hover:translate-x-0.5" />
+                </Link>
+                <Link
+                  href="/for-leaders"
+                  className="pressable group inline-flex items-center gap-2 rounded-full border border-brand/25 bg-white/80 dark:bg-paper-sink/80 px-4 py-2 text-sm font-semibold text-brand shadow-soft backdrop-blur hover:bg-brand-soft"
+                >
+                  <Icon name="compass" size={16} />
+                  {tr('home.howToBeGoodLeader')}
                   <Icon name="arrow" size={15} className="transition group-hover:translate-x-0.5" />
                 </Link>
               </div>
@@ -251,6 +258,27 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
               <p className="text-sm text-ink-soft">{tr('finder.subtitle')}</p>
             </div>
             <Icon name="arrow" size={22} className="hidden shrink-0 text-accent-ink sm:block" />
+          </Link>
+        </Reveal>
+
+        {/* Leadership Guide CTA */}
+        <Reveal className="mb-8">
+          <Link
+            href="/for-leaders"
+            className="pressable flex flex-col gap-4 rounded-3xl border border-perf/30 bg-gradient-to-r from-perf-soft/80 via-white/70 to-brand-soft/70 p-5 shadow-glass transition hover:shadow-lift sm:flex-row sm:items-center"
+          >
+            <span className="inline-grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-perf text-white shadow-soft">
+              <Icon name="compass" size={26} />
+            </span>
+            <div className="min-w-0 flex-1">
+              <h2 className="text-lg font-bold text-ink">{tr('home.leaderBannerTitle')}</h2>
+              <p className="text-sm text-ink-soft">{tr('home.leaderBannerSubtitle')}</p>
+            </div>
+            <span className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-brand/25 bg-white/80 dark:bg-paper-sink/80 px-4 py-2 text-sm font-semibold text-brand shadow-soft backdrop-blur hover:bg-brand-soft">
+              <Icon name="compass" size={16} />
+              {tr('home.howToBeGoodLeader')}
+              <Icon name="arrow" size={15} className="transition group-hover:translate-x-0.5" />
+            </span>
           </Link>
         </Reveal>
 
