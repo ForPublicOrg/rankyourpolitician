@@ -42,10 +42,13 @@ const VALUES = ['justice', 'liberty', 'equality', 'fraternity'] as const;
 const WRITS = ['habeas', 'mandamus', 'prohibition', 'certiorari', 'quo'] as const;
 const FACTS = ['adopted', 'inforce', 'original', 'schedules'] as const;
 
-// External citations for the Article 32 section (verified against the source).
-const ART32_QUOTE_SRC =
-  'https://theprint.in/theprint-essential/what-is-article-32-which-ambedkar-said-was-heart-and-soul-of-constitution/546050/';
-const ART32_TEXT_SRC = 'https://en.wikipedia.org/wiki/Fundamental_rights_in_India';
+// External citations for the Article 32 section - public / non-commercial sources
+// only. constitutionofindia.net is the free, open archive run by the Centre for
+// Law and Policy Research (a non-profit); it carries both the article text and
+// the Constituent Assembly Debates where Ambedkar defended it.
+const ART32_QUOTE_SRC = 'https://www.constitutionofindia.net/debates/09-dec-1948/';
+const ART32_TEXT_SRC =
+  'https://www.constitutionofindia.net/articles/article-32-remedies-for-enforcement-of-rights-conferred-by-this-part/';
 
 // Official Supreme Court of India filing channels (verified on sci.gov.in). These
 // are facts, kept out of i18n so a translation can never corrupt an address or
