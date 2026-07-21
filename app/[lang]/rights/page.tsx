@@ -72,9 +72,9 @@ const ART32_GUIDE: { key: 'what' | 'when' | 'how'; icon: IconName }[] = [
 
 // Table-of-contents entries → in-page anchor ids.
 const TOC: { key: string; id: string }[] = [
+  { key: 'architect', id: 'architect' },
   { key: 'preamble', id: 'preamble' },
   { key: 'article32', id: 'article32' },
-  { key: 'architect', id: 'architect' },
   { key: 'fundamental', id: 'rights' },
   { key: 'keyArticles', id: 'life' },
   { key: 'remedies', id: 'remedies' },
@@ -130,8 +130,54 @@ export default async function RightsPage({ params }: { params: Promise<LangParam
           </div>
         </nav>
 
-        {/* 1 - The Preamble */}
+        {/* 1 - The architect. Ambedkar shaped the Constitution, so the page opens
+            with him - and with his reminder that a Constitution is only as good as
+            the people who work it, the reason accountability matters. */}
         <Reveal className="mt-9">
+          <section id="architect" aria-labelledby="architect-h" className="scroll-mt-24">
+            <div className="glass rounded-3xl p-5 sm:p-7">
+              <div className="flex items-start gap-4">
+                <span className="inline-grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand">
+                  <Icon name="law" size={30} />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-ink-faint">{tr('rights.ambedkar.eyebrow')}</p>
+                  <h2 id="architect-h" className="mt-0.5 font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+                    {tr('rights.ambedkar.title')}
+                  </h2>
+                  <p className="mt-0.5 text-sm text-ink-faint">{tr('rights.ambedkar.lifespan')}</p>
+                </div>
+              </div>
+
+              <p className="mt-4 leading-relaxed text-ink-soft">{tr('rights.ambedkar.intro')}</p>
+
+              <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+                {ambedkarFacts.map((f, i) => (
+                  <div key={i} className="rounded-2xl bg-paper-soft p-4">
+                    <dt className="text-[11px] font-bold uppercase tracking-wide text-brand">{f.label}</dt>
+                    <dd className="mt-1 text-sm leading-relaxed text-ink-soft">{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <blockquote className="mt-4 rounded-2xl border-l-4 border-brand/40 bg-brand-soft/40 p-4">
+                <p className="text-base font-medium italic leading-relaxed text-ink sm:text-lg">{tr('rights.ambedkar.quote')}</p>
+                <cite className="mt-2.5 block text-sm font-semibold not-italic text-brand-ink">- {tr('rights.ambedkar.quoteBy')}</cite>
+                <p className="mt-2 flex items-start gap-2 text-sm text-ink-soft">
+                  <Icon name="sparkle" size={15} className="mt-0.5 shrink-0 text-brand" />
+                  <span>{tr('rights.ambedkar.quoteNote')}</span>
+                </p>
+              </blockquote>
+
+              <a href={AMBEDKAR_SRC} target="_blank" rel="noopener noreferrer nofollow" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline">
+                <Icon name="external" size={14} /> {tr('rights.ambedkar.sourceLabel')}
+              </a>
+            </div>
+          </section>
+        </Reveal>
+
+        {/* 2 - The Preamble */}
+        <Reveal className="mt-12">
           <section id="preamble" aria-labelledby="preamble-h" className="scroll-mt-24">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-brand-deep p-6 text-white shadow-glow sm:p-7">
               <p className="text-[11px] font-bold uppercase tracking-wider text-white/70">{tr('rights.preamble.eyebrow')}</p>
@@ -260,53 +306,7 @@ export default async function RightsPage({ params }: { params: Promise<LangParam
           </section>
         </Reveal>
 
-        {/* 1c - The architect. The Article 32 quote above is his; here is who he
-            was, and his reminder that a Constitution is only as good as the
-            people who work it - the reason accountability matters. */}
-        <Reveal className="mt-12">
-          <section id="architect" aria-labelledby="architect-h" className="scroll-mt-24">
-            <div className="glass rounded-3xl p-5 sm:p-7">
-              <div className="flex items-start gap-4">
-                <span className="inline-grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand">
-                  <Icon name="law" size={30} />
-                </span>
-                <div className="min-w-0">
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-ink-faint">{tr('rights.ambedkar.eyebrow')}</p>
-                  <h2 id="architect-h" className="mt-0.5 font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-                    {tr('rights.ambedkar.title')}
-                  </h2>
-                  <p className="mt-0.5 text-sm text-ink-faint">{tr('rights.ambedkar.lifespan')}</p>
-                </div>
-              </div>
-
-              <p className="mt-4 leading-relaxed text-ink-soft">{tr('rights.ambedkar.intro')}</p>
-
-              <dl className="mt-4 grid gap-3 sm:grid-cols-2">
-                {ambedkarFacts.map((f, i) => (
-                  <div key={i} className="rounded-2xl bg-paper-soft p-4">
-                    <dt className="text-[11px] font-bold uppercase tracking-wide text-brand">{f.label}</dt>
-                    <dd className="mt-1 text-sm leading-relaxed text-ink-soft">{f.value}</dd>
-                  </div>
-                ))}
-              </dl>
-
-              <blockquote className="mt-4 rounded-2xl border-l-4 border-brand/40 bg-brand-soft/40 p-4">
-                <p className="text-base font-medium italic leading-relaxed text-ink sm:text-lg">{tr('rights.ambedkar.quote')}</p>
-                <cite className="mt-2.5 block text-sm font-semibold not-italic text-brand-ink">- {tr('rights.ambedkar.quoteBy')}</cite>
-                <p className="mt-2 flex items-start gap-2 text-sm text-ink-soft">
-                  <Icon name="sparkle" size={15} className="mt-0.5 shrink-0 text-brand" />
-                  <span>{tr('rights.ambedkar.quoteNote')}</span>
-                </p>
-              </blockquote>
-
-              <a href={AMBEDKAR_SRC} target="_blank" rel="noopener noreferrer nofollow" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline">
-                <Icon name="external" size={14} /> {tr('rights.ambedkar.sourceLabel')}
-              </a>
-            </div>
-          </section>
-        </Reveal>
-
-        {/* 2 - The six fundamental rights */}
+        {/* 3 - The six fundamental rights */}
         <section id="rights" aria-labelledby="rights-h" className="mt-12 scroll-mt-24">
           <Reveal>
             <SectionHead
