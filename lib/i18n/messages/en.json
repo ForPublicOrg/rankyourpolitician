@@ -550,6 +550,15 @@
         "Anyone can file a Public Interest Litigation (PIL) for people who cannot reach the court themselves. Courts have even accepted a simple letter as a petition."
       ],
       "note": "Article 32 is itself a Fundamental Right, which is why it guards all the others. This is plain-language awareness, not legal advice. For a real case, speak to a lawyer or your free Legal Services Authority.",
+      "submitTitle": "How to submit it to the Supreme Court",
+      "submitIntro": "A petition under Article 32 is filed in one of two official ways. No email, by itself, counts as filing.",
+      "submitEfileLabel": "1. File online",
+      "submitEfileText": "Use the Supreme Court's official e-filing portal:",
+      "submitLetterLabel": "2. Or send a letter petition",
+      "submitLetterText": "Post it by registered post, with your facts and documents, to the Chief Justice of India at:",
+      "submitEmailLabel": "Registry contact",
+      "submitEmailText": "For questions and correspondence only - this does not file a petition:",
+      "submitNote": "Most people file through a lawyer, and free legal aid (Article 39A) can do it for you at no cost - ask your nearest Legal Services Authority. Always check the official Supreme Court website before you file.",
       "sourceQuoteLabel": "Read the debate",
       "sourceLabel": "Read Article 32 in the Constitution"
     },

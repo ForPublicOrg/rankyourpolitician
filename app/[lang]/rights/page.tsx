@@ -47,6 +47,16 @@ const ART32_QUOTE_SRC =
   'https://theprint.in/theprint-essential/what-is-article-32-which-ambedkar-said-was-heart-and-soul-of-constitution/546050/';
 const ART32_TEXT_SRC = 'https://en.wikipedia.org/wiki/Fundamental_rights_in_India';
 
+// Official Supreme Court of India filing channels (verified on sci.gov.in). These
+// are facts, kept out of i18n so a translation can never corrupt an address or
+// email. A PIL is FILED by e-filing or a registered letter petition to the CJI -
+// the Registry email is for correspondence only, never a filing shortcut.
+const SCI_SITE = 'https://www.sci.gov.in/';
+const SCI_EFILING_URL = 'https://efiling.sci.gov.in/';
+const SCI_REGISTRY_EMAIL = 'supremecourt@nic.in';
+const SCI_REGISTRY_PHONE = '011-23116400';
+const SCI_ADDRESS = 'The Chief Justice of India, Supreme Court of India, Tilak Marg, New Delhi 110001';
+
 // Article 32 "how to use it" - the practical guidance blocks, by key.
 const ART32_GUIDE: { key: 'what' | 'when' | 'how'; icon: IconName }[] = [
   { key: 'what', icon: 'sparkle' },
@@ -181,6 +191,49 @@ export default async function RightsPage({ params }: { params: Promise<LangParam
                     </ul>
                   </div>
                 ))}
+              </div>
+
+              {/* How to actually submit an Article 32 petition to the Supreme Court. */}
+              <div className="mt-5 rounded-2xl border border-brand/25 bg-brand-soft/40 p-4 sm:p-5">
+                <p className="flex items-center gap-1.5 font-bold text-ink">
+                  <Icon name="mail" size={17} className="text-brand" /> {tr('rights.article32.submitTitle')}
+                </p>
+                <p className="mt-1 text-sm text-ink-soft">{tr('rights.article32.submitIntro')}</p>
+                <div className="mt-3 space-y-3">
+                  <div className="rounded-xl bg-white p-3.5">
+                    <p className="text-sm font-semibold text-ink">{tr('rights.article32.submitEfileLabel')}</p>
+                    <p className="mt-0.5 text-sm text-ink-soft">{tr('rights.article32.submitEfileText')}</p>
+                    <a href={SCI_EFILING_URL} target="_blank" rel="noopener noreferrer nofollow" className="mt-1 inline-flex items-center gap-1 break-all text-sm font-semibold text-brand hover:underline">
+                      <Icon name="external" size={13} /> {SCI_EFILING_URL.replace('https://', '').replace(/\/$/, '')}
+                    </a>
+                  </div>
+                  <div className="rounded-xl bg-white p-3.5">
+                    <p className="text-sm font-semibold text-ink">{tr('rights.article32.submitLetterLabel')}</p>
+                    <p className="mt-0.5 text-sm text-ink-soft">{tr('rights.article32.submitLetterText')}</p>
+                    <p className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-ink">
+                      <Icon name="pin" size={14} className="mt-0.5 shrink-0 text-brand" /> <span>{SCI_ADDRESS}</span>
+                    </p>
+                  </div>
+                  <div className="rounded-xl bg-white p-3.5">
+                    <p className="text-sm font-semibold text-ink">{tr('rights.article32.submitEmailLabel')}</p>
+                    <p className="mt-0.5 text-sm text-ink-soft">{tr('rights.article32.submitEmailText')}</p>
+                    <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+                      <a href={`mailto:${SCI_REGISTRY_EMAIL}`} className="inline-flex items-center gap-1 break-all font-semibold text-brand hover:underline">
+                        <Icon name="mail" size={13} /> {SCI_REGISTRY_EMAIL}
+                      </a>
+                      <span className="inline-flex items-center gap-1 text-ink-soft">
+                        <Icon name="phone" size={13} /> {SCI_REGISTRY_PHONE}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-3 flex items-start gap-2 text-xs text-ink-faint">
+                  <Icon name="info" size={13} className="mt-0.5 shrink-0" />
+                  <span>
+                    {tr('rights.article32.submitNote')}{' '}
+                    <a href={SCI_SITE} target="_blank" rel="noopener noreferrer nofollow" className="text-brand hover:underline">sci.gov.in</a>
+                  </span>
+                </p>
               </div>
 
               <div className="mt-4 flex items-start gap-2.5 rounded-2xl bg-paper-sink p-4 text-sm text-ink-soft">
