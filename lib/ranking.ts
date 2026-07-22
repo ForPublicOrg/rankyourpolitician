@@ -15,8 +15,8 @@ import {
 
 export const FORMULA_VERSION = 'perf-v2-weighted-percentile';
 
-// Bayesian prior for the 1..5 sentiment scale: pull thin samples toward neutral.
-const SENTIMENT_PRIOR_MEAN = 3.0; // neutral
+// Bayesian prior for the 0..5 sentiment scale: pull thin samples toward neutral.
+const SENTIMENT_PRIOR_MEAN = 2.5; // neutral = the scale midpoint
 const SENTIMENT_PRIOR_STRENGTH = 10; // "C" - equivalent number of prior votes
 
 // Metrics that ministers are exempt from: they neither sign the attendance

@@ -1155,7 +1155,7 @@
   "vote": {
     "title": "Rate this leader",
     "prompt": "How would you rate this leader?",
-    "scale1": "Poor",
+    "scale0": "Poor",
     "scale5": "Great",
     "submit": "Submit rating",
     "update": "Update rating",

@@ -69,9 +69,21 @@ export default function VoteWidget({
   useEffect(() => {
     fpRef.current = deviceFingerprint();
     try {
-      const prev = localStorage.getItem(`vote:${politicianId}`);
-      const n = prev ? Number(prev) : NaN;
-      if (Number.isInteger(n) && n >= 1 && n <= 5) {
+      // `vote2:` = the 0-5 scale. A value under the legacy `vote:` key was cast
+      // on the old 1-5 scale, whose floor was 1; the server migration moved
+      // every stored 1 to the new floor 0 (migrate-rating-floor), so mirror
+      // that here or "You rated this 1/5" would contradict the recorded vote.
+      let raw = localStorage.getItem(`vote2:${politicianId}`);
+      if (raw == null) {
+        const legacy = localStorage.getItem(`vote:${politicianId}`);
+        if (legacy != null) {
+          raw = legacy === '1' ? '0' : legacy;
+          localStorage.setItem(`vote2:${politicianId}`, raw);
+          localStorage.removeItem(`vote:${politicianId}`);
+        }
+      }
+      const n = raw ? Number(raw) : NaN;
+      if (Number.isInteger(n) && n >= 0 && n <= 5) {
         setSelected(n);
         setSubmitted(n);
       }
@@ -165,7 +177,7 @@ export default function VoteWidget({
       setStatus('done');
       setMessage(data.updated ? t('vote.already') : t('vote.thanks'));
       try {
-        localStorage.setItem(`vote:${politicianId}`, String(selected));
+        localStorage.setItem(`vote2:${politicianId}`, String(selected));
       } catch {}
     } catch {
       resetTurnstile();
@@ -174,7 +186,8 @@ export default function VoteWidget({
     }
   }
 
-  const labels = [t('vote.scale1'), '', '', '', t('vote.scale5')];
+  // Indexed by rating 0..5; only the endpoints carry a word.
+  const labels = [t('vote.scale0'), '', '', '', '', t('vote.scale5')];
   const confKey =
     'vote.confidence' + sentiment.confidence.charAt(0).toUpperCase() + sentiment.confidence.slice(1);
   // "1 ratings" reads as a bug; t() has no plural support, so pick the form.
@@ -197,8 +210,8 @@ export default function VoteWidget({
 
       {/* The plain average of the votes cast - NOT the Bayesian score used for
           ordering. This sits directly above the vote breakdown, so a shrunk
-          number here would visibly contradict it (five 1-star votes reading
-          as "2.3"). Thin samples are conveyed by the vote count + confidence,
+          number here would visibly contradict it (five 0-star votes reading
+          as "1.7"). Thin samples are conveyed by the vote count + confidence,
           not by silently moving the number toward neutral. */}
       <div className="mt-4 flex items-center gap-3">
         <span className="text-4xl font-extrabold text-rating-ink">{sentiment.mean != null ? sentiment.mean.toFixed(1) : '-'}</span>
@@ -210,14 +223,17 @@ export default function VoteWidget({
 
       <p className="mt-4 border-t border-line pt-4 text-sm text-ink-soft">{t('vote.prompt')}</p>
 
-      <div className="mt-3 flex items-center gap-2">
-        {[1, 2, 3, 4, 5].map((n) => (
+      {/* Six 2.5rem buttons: gap-1.5 keeps the row at 16.875rem (270px) so it
+          still fits a 320px viewport inside the card padding, and flex-wrap is
+          the graceful degrade below that - wrap, never overflow. */}
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        {[0, 1, 2, 3, 4, 5].map((n) => (
           <button
             key={n}
             type="button"
             onClick={() => setSelected(n)}
             aria-pressed={selected === n}
-            aria-label={`${n} ${labels[n - 1] || ''}`.trim()}
+            aria-label={`${n} ${labels[n] || ''}`.trim()}
             // Selected = a SOLID fill, matching how every other active chip on the
             // site reads. `rating-ink` (not plain amber) because white text on
             // #f59e0b is only 2.15:1 - it fails WCAG AA; #b45309 gives 5.02:1 for
@@ -233,8 +249,10 @@ export default function VoteWidget({
           </button>
         ))}
       </div>
-      <div className="mt-1 flex justify-between text-[11px] text-ink-faint" style={{ maxWidth: '17rem' }}>
-        <span>{t('vote.scale1')}</span>
+      {/* Matches the button row's width (6 x 2.5rem + 5 x 0.375rem) so the
+          endpoint words sit under the 0 and 5 buttons. */}
+      <div className="mt-1 flex justify-between text-[11px] text-ink-faint" style={{ maxWidth: '16.875rem' }}>
+        <span>{t('vote.scale0')}</span>
         <span>{t('vote.scale5')}</span>
       </div>
 
@@ -282,7 +300,7 @@ export default function VoteWidget({
           <p className="text-sm text-ink-faint">{t('vote.confidenceNone')}</p>
         ) : (
           <div className="space-y-1">
-            {[5, 4, 3, 2, 1].map((n) => {
+            {[5, 4, 3, 2, 1, 0].map((n) => {
               const c = sentiment.distribution[n] || 0;
               const pct = sentiment.votes ? Math.round((c / sentiment.votes) * 100) : 0;
               return (

@@ -179,6 +179,14 @@ async function main() {
       await import('./update-all');
       break;
     }
+    case 'migrate-rating-floor': {
+      // ONE-TIME: 1-5 → 0-5 scale change - moves every vote recorded as the
+      // old floor (1) to the new floor (0), in vote docs, aggregate counts/sum
+      // and trending buckets. Dry-run unless --apply. Run once, right after
+      // the 0-5 UI deploys; never again (1 is then a real second-lowest vote).
+      await import('./migrate-rating-floor');
+      break;
+    }
     case 'backfill-trending': {
       // Rebuild trending daily buckets from the votes collection - covers votes
       // cast before the trending feature shipped. Dry-run unless --apply.

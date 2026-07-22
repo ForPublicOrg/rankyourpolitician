@@ -109,8 +109,8 @@ export default function MethodologyPage() {
 
       <h2>Public Sentiment</h2>
       <p>
-        Ratings (1-5) are collected without login. <strong>The score we show is the plain average of the votes
-        actually cast</strong> - if five people rate someone 1, it reads 1.0. Alongside it we always show the
+        Ratings (0-5) are collected without login. <strong>The score we show is the plain average of the votes
+        actually cast</strong> - if five people rate someone 0, it reads 0.0. Alongside it we always show the
         full distribution, the vote count and a confidence indicator, so a thin sample is visible as a thin
         sample rather than being quietly adjusted.
       </p>

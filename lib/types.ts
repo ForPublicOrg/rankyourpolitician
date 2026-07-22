@@ -208,17 +208,17 @@ export interface PerformanceScore {
 export interface SentimentScore {
   politician_id: string;
   /**
-   * Bayesian-shrunk mean on a 1..5 scale (3 = neutral prior). For ORDERING only
+   * Bayesian-shrunk mean on a 0..5 scale (2.5 = neutral prior). For ORDERING only
    * - it stops a lone 5-star vote topping the list. It must never be shown as
    * "the rating": it is not what anyone actually voted, and printing it next to
-   * the vote breakdown produces a visible contradiction (five 1-star votes
-   * reading as "2.3"). Display `raw_mean` and let `confidence` convey thinness.
+   * the vote breakdown produces a visible contradiction (five 0-star votes
+   * reading as "1.7"). Display `raw_mean` and let `confidence` convey thinness.
    */
   bayesian_mean: number | null;
   /** The plain average of the votes actually cast - the number we display. */
   raw_mean: number | null;
   n_votes: number;
-  distribution: Record<string, number>; // {"1":..,"5":..}
+  distribution: Record<string, number>; // {"0":..,"5":..}
   confidence: 'none' | 'low' | 'medium' | 'high';
   flagged_unusual_activity: boolean;
   computed_at: string;
@@ -483,7 +483,7 @@ export interface StateGovernment {
 /** Aggregated votes for one politician (never stores raw IPs/fingerprints). */
 export interface VoteAggregate {
   politician_id: string;
-  counts: Record<string, number>; // {"1":n1,...,"5":n5}
+  counts: Record<string, number>; // {"0":n0,...,"5":n5}
   total: number;
   sum: number;
   updated_at: string;

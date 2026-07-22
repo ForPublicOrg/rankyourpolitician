@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
   }
 
   const { politicianId, rating, fingerprint = '', turnstileToken = '' } = body;
-  if (!politicianId || typeof rating !== 'number' || rating < 1 || rating > 5 || !Number.isInteger(rating)) {
+  if (!politicianId || typeof rating !== 'number' || rating < 0 || rating > 5 || !Number.isInteger(rating)) {
     return NextResponse.json({ error: 'invalid' }, { status: 400 });
   }
 
