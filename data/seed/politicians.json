@@ -172719,68 +172719,6 @@
     }
   },
   {
-    "id": "datia-ac-mp-rajendra-bharti",
-    "name": "Rajendra Bharti",
-    "party": "Indian National Congress",
-    "house": "Vidhan Sabha",
-    "state": "Madhya Pradesh",
-    "stateCode": "MP",
-    "constituencyId": "ac-mp-datia",
-    "constituencyName": "Datia",
-    "constituencyType": "AC",
-    "districts": [
-      "Datia"
-    ],
-    "current_position": "Member of the Legislative Assembly, Madhya Pradesh",
-    "is_minister": false,
-    "neutral_summary": "Rajendra Bharti is the Member of the Legislative Assembly (MLA) for the Datia constituency in Madhya Pradesh. Current party affiliation: Indian National Congress.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "assets_total",
-        "value": "₹1,60,30,588 (~1 Crore)",
-        "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=1371",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹25,80,000 (~25 Lacs)",
-        "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=1371",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "6",
-        "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=1371",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "Graduate Professional",
-        "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=1371",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2023 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/16th_Madhya_Pradesh_Assembly",
-      "name": "Wikipedia - 16th Madhya Pradesh Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q123957970",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Datia%20MLA%20thrice%20Rajendra%20Bharti.jpg?width=400",
-    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
-  },
-  {
     "id": "deori-ac-mp-brijbihari-pateriya",
     "name": "Brijbihari Pateriya",
     "party": "Bharatiya Janata Party",
@@ -252726,8 +252664,8 @@
       "Debagarh",
       "Sambalpur"
     ],
-    "current_position": "Union Cabinet Minister",
-    "is_minister": true,
+    "current_position": "Member of Parliament, Lok Sabha",
+    "is_minister": false,
     "neutral_summary": "Dharmendra Pradhan is the Member of Parliament for the Sambalpur constituency in Odisha, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Bharatiya Janata Party.",
     "metrics": {
       "debates_participated": 11

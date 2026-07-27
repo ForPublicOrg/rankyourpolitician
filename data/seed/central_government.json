@@ -184,22 +184,6 @@
     "politicianId": "mumbai-north-piyush-goyal"
   },
   {
-    "id": "dharmendra-pradhan",
-    "rank": "Cabinet",
-    "name": "Dharmendra Pradhan",
-    "party": "BJP",
-    "portfolios": [
-      "Education"
-    ],
-    "house": "Lok Sabha",
-    "constituency": "Sambalpur",
-    "state": "Odisha",
-    "source_url": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
-    "source_name": "Wikipedia - Third Modi ministry",
-    "retrieved_date": "2026-07-14",
-    "politicianId": "sambalpur-dharmendra-pradhan"
-  },
-  {
     "id": "jitan-ram-manjhi",
     "rank": "Cabinet",
     "name": "Jitan Ram Manjhi",
@@ -290,15 +274,17 @@
     "party": "BJP",
     "portfolios": [
       "Consumer Affairs, Food and Public Distribution",
-      "New and Renewable Energy"
+      "New and Renewable Energy",
+      "Education (additional charge)"
     ],
     "house": "Lok Sabha",
     "constituency": "Dharwad",
     "state": "Karnataka",
     "source_url": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
     "source_name": "Wikipedia - Third Modi ministry",
-    "retrieved_date": "2026-07-14",
-    "politicianId": "dharwad-pralhad-joshi"
+    "retrieved_date": "2026-07-27",
+    "politicianId": "dharwad-pralhad-joshi",
+    "as_of": "Holds Education in addition to his own portfolios from 25 July 2026, after Dharmendra Pradhan resigned; took charge on 26 July 2026."
   },
   {
     "id": "jual-oram",
@@ -861,25 +847,6 @@
     "source_name": "Wikipedia - Third Modi ministry",
     "retrieved_date": "2026-07-14",
     "politicianId": "muzaffarpur-raj-bhushan-choudhary"
-  },
-  {
-    "id": "ravneet-singh-bittu",
-    "rank": "MoS",
-    "name": "Ravneet Singh Bittu",
-    "party": "BJP",
-    "portfolios": [
-      "Railways",
-      "Food Processing Industries"
-    ],
-    "house": "Rajya Sabha",
-    "constituency": "Rajya Sabha (term ended 21 June 2026; retained as minister, re-election pending)",
-    "state": "Rajasthan",
-    "source_url": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
-    "source_name": "Wikipedia - Third Modi ministry",
-    "retrieved_date": "2026-07-14",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri%20Ravneet%20Singh.jpg?width=400",
-    "photo_license": "GODL-India · Wikimedia Commons",
-    "wikidata_qid": "Q7296806"
   },
   {
     "id": "pemmasani-chandra-sekhar",

@@ -62,7 +62,7 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
   const totalLeaders = ranking?.entries.length ?? 0;
   // One example per rung of the search hierarchy (state → district → person), so
   // the chips also teach what you can search for. Each is verified to return hits.
-  const examples = ['Rewa', 'Madhya Pradesh', 'Dharmendra Pradhan'];
+  const examples = ['Rewa', 'Madhya Pradesh', 'Pralhad Joshi'];
   const tiers: { role: string; icon: IconName; tint: string }[] = [
     { role: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand' },
     { role: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf' },

@@ -18,7 +18,7 @@ import seedConstitutional from '../data/seed/constitutional_offices.json';
 import type { Politician, Minister, StateGovernment, OfficeSeat, ConstitutionalOffice } from '../lib/types';
 
 // Row shapes (positional arrays keep the file small):
-//   people:    [id, name, partyShort, place, stateCode, role, nameHi?]
+//   people:    [id, name, partyShort, place, stateCode, role, nameHi?, photo?, portfolios?]
 //   areas:     [id, name, stateCode, type]
 //   districts: [stateCode, name]
 //   states:    [code, name]
@@ -58,6 +58,15 @@ function build(): SearchIndexFile {
   for (const p of politicians) if (p.stateCode && p.state) stateByCode.set(p.stateCode, p.state);
 
   const people = new Map<string, (string | undefined)[]>();
+  // Portfolios a person answers for, union + state. Kept as search keywords
+  // only (slot [8]) so "education" finds whoever currently holds Education,
+  // rather than the citizen having to already know the minister's name.
+  const portfolios = new Map<string, Set<string>>();
+  const addPortfolios = (id: string, list: string[] | undefined) => {
+    if (!list?.length) return;
+    const set = portfolios.get(id) ?? portfolios.set(id, new Set()).get(id)!;
+    for (const p of list) if (p?.trim()) set.add(p.trim());
+  };
 
   for (const p of politicians) {
     people.set(p.id, [
@@ -76,6 +85,7 @@ function build(): SearchIndexFile {
   for (const m of central) {
     const id = m.politicianId || m.id;
     const role = m.rank === 'PM' ? 'Prime Minister' : 'Union Minister';
+    addPortfolios(id, m.portfolios);
     const existing = people.get(id);
     if (existing) {
       existing[5] = `${role} · ${existing[5]}`;
@@ -105,6 +115,7 @@ function build(): SearchIndexFile {
         sm.rank === 'CM' ? `Chief Minister, ${g.state}`
         : sm.rank === 'DyCM' ? `Dy Chief Minister, ${g.state}`
         : `Minister, ${g.state}`;
+      addPortfolios(id, sm.portfolios);
       const existing = people.get(id);
       if (existing) {
         if (sm.rank === 'CM' || sm.rank === 'DyCM') existing[5] = `${role.split(',')[0]} · ${existing[5]}`;
@@ -152,6 +163,12 @@ function build(): SearchIndexFile {
   const states = [...stateByCode.entries()]
     .map(([code, name]) => [code, name] as [string, string])
     .sort((a, b) => a[1].localeCompare(b[1]));
+
+  // Attach the portfolio keywords last, so every role loop above has had its say.
+  for (const [id, set] of portfolios) {
+    const row = people.get(id);
+    if (row) row[8] = [...set].join(' · ');
+  }
 
   return {
     v: 1,

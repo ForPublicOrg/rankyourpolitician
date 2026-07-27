@@ -6,7 +6,7 @@ export interface SearchIndexFile {
   v: 1;
   builtAt: string;
   states: [string, string][]; // [code, name]
-  people: (string | undefined)[][]; // [id, name, partyShort, place, stateCode, role, nameHi?, photo?]
+  people: (string | undefined)[][]; // [id, name, partyShort, place, stateCode, role, nameHi?, photo?, portfolios?]
   areas: [string, string, string, string][]; // [id, name, stateCode, type]
   districts: [string, string][]; // [stateCode, name]
 }
@@ -85,7 +85,10 @@ export function prepareIndex(raw: SearchIndexFile): PreparedIndex {
     };
     return {
       nameN: norm(item.name) + (r[6] ? ' ' + norm(r[6]) : ''),
-      restN: norm(`${item.party} ${item.place} ${item.state} ${item.role}`),
+      // r[8] = portfolios held, so "education" reaches whoever holds Education
+      // today. Deliberately in restN, not nameN: a portfolio match must never
+      // outrank someone whose actual name the citizen typed.
+      restN: norm(`${item.party} ${item.place} ${item.state} ${item.role} ${r[8] || ''}`),
       item,
     };
   });
