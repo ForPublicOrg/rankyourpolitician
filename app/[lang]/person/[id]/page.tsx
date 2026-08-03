@@ -209,6 +209,7 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
               ) : null}
             </div>
             <p className="mt-3 text-ink-soft">{person.current_position || tr(`accountability.roles.${roleKey}.oneLine`)}</p>
+            <RoleTermBadge term={person.role_term} tr={tr} locale={locale} />
             {/* Office contact - the channels the house itself publishes for
                 reaching this member, verbatim and cited (see PoliticianContact).
                 Office channels only: published emails + office landlines. */}
@@ -658,6 +659,40 @@ function OfficialProfile({ p, tr, locale }: { p: PersonView; tr: (k: string, v?:
   );
 }
 
+function RoleTermBadge({
+  term,
+  tr,
+  locale,
+}: {
+  term?: PersonView['role_term'];
+  tr: (k: string, v?: Record<string, string | number>) => string;
+  locale: string;
+}) {
+  if (!term) return (
+    <p className="mt-2 flex items-center justify-center gap-1.5 text-sm text-ink-faint sm:justify-start">
+      <Icon name="calendar" size={15} /> {tr('profile.termEndUnavailable')}
+    </p>
+  );
+  const label = term.basis === 'house' ? tr('profile.houseTermEnds') : tr('profile.roleTermEnds');
+  return (
+    <p className="mt-2 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-sm text-ink-soft sm:justify-start">
+      <Icon name="calendar" size={15} className="text-brand" />
+      <span>{label} <time dateTime={term.to} className="font-semibold text-ink">{formatDate(term.to, locale)}</time></span>
+      {term.source_url && (
+        <a
+          href={term.source_url}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-xs font-semibold text-brand hover:underline"
+          aria-label={term.source_name || tr('common.source')}
+        >
+          {tr('common.source')}
+        </a>
+      )}
+    </p>
+  );
+}
+
 // A constitutional Head-of-State office (President, Vice-President): a rich,
 // fully cited, INFO-ONLY profile. Non-partisan and never rated - so no vote
 // widget, no performance ring, no affidavit record; just who holds the office,
@@ -690,6 +725,7 @@ function ConstitutionalProfile({ p, tr, locale }: { p: PersonView; tr: (k: strin
                 <Icon name="calendar" size={15} className="text-brand" /> {tr('profile.office.inOfficeSince')} {formatDate(o.since, locale)}
               </p>
             )}
+            <RoleTermBadge term={p.role_term} tr={tr} locale={locale} />
             <div className="mt-3 flex justify-center sm:justify-start">
               <ShareRow id={p.id} name={p.name} kind="official" />
             </div>

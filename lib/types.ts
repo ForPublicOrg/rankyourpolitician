@@ -168,6 +168,11 @@ export interface Politician {
   /** Official published contact details (see PoliticianContact). */
   contact?: PoliticianContact;
   terms_served?: number;
+  /** Individual term dates for staggered upper houses (ISO yyyy-mm-dd).
+   * Lower-house dates are shared by the whole house and live in
+   * legislature_terms.json rather than being duplicated on every member. */
+  term_start?: string;
+  term_end?: string;
   active: boolean;
   /** Citation for the core identity (name/party/constituency) when the detailed
    *  fact record hasn't been added yet - so an identity-only profile is still cited. */
@@ -181,6 +186,35 @@ export interface Politician {
   /** True for auto-generated roster records; a manual `refresh-mps` may replace
    *  these, but never records that have been enriched with facts. */
   generated?: boolean;
+}
+
+export interface LegislatureTerm {
+  stateCode: string;
+  state: string;
+  from: string;
+  to: string;
+  seats: number;
+}
+
+export interface LegislatureTermsFile {
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+  lok_sabha: Pick<LegislatureTerm, 'from' | 'to' | 'seats'>;
+  assemblies: LegislatureTerm[];
+  constitutional_offices: Record<'president' | 'vice_president', Pick<LegislatureTerm, 'from' | 'to'>>;
+}
+
+export interface RoleTerm {
+  role: string;
+  from: string;
+  to: string;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+  /** A lower-house member serves within the house's term; an upper-house date
+   * is personal to that member. */
+  basis: 'house' | 'member';
 }
 
 export interface Constituency {

@@ -1,0 +1,47 @@
+{
+  "source_url": "https://www.eci.gov.in/term-of-the-houses/",
+  "source_name": "Election Commission of India - Terms of the Houses",
+  "retrieved_date": "2026-08-03",
+  "lok_sabha": {
+    "from": "2024-06-24",
+    "to": "2029-06-23",
+    "seats": 543
+  },
+  "assemblies": [
+    { "stateCode": "AP", "state": "Andhra Pradesh", "from": "2024-06-21", "to": "2029-06-20", "seats": 175 },
+    { "stateCode": "AR", "state": "Arunachal Pradesh", "from": "2024-06-14", "to": "2029-06-13", "seats": 60 },
+    { "stateCode": "AS", "state": "Assam", "from": "2026-05-21", "to": "2031-05-20", "seats": 126 },
+    { "stateCode": "BR", "state": "Bihar", "from": "2025-12-01", "to": "2030-11-30", "seats": 243 },
+    { "stateCode": "CG", "state": "Chhattisgarh", "from": "2023-12-19", "to": "2028-12-18", "seats": 90 },
+    { "stateCode": "GA", "state": "Goa", "from": "2022-03-15", "to": "2027-03-14", "seats": 40 },
+    { "stateCode": "GJ", "state": "Gujarat", "from": "2022-12-20", "to": "2027-12-19", "seats": 182 },
+    { "stateCode": "HR", "state": "Haryana", "from": "2024-10-25", "to": "2029-10-24", "seats": 90 },
+    { "stateCode": "HP", "state": "Himachal Pradesh", "from": "2023-01-04", "to": "2028-01-03", "seats": 68 },
+    { "stateCode": "JH", "state": "Jharkhand", "from": "2024-12-09", "to": "2029-12-08", "seats": 81 },
+    { "stateCode": "KA", "state": "Karnataka", "from": "2023-05-22", "to": "2028-05-21", "seats": 224 },
+    { "stateCode": "KL", "state": "Kerala", "from": "2026-05-21", "to": "2031-05-20", "seats": 140 },
+    { "stateCode": "MP", "state": "Madhya Pradesh", "from": "2023-12-18", "to": "2028-12-17", "seats": 230 },
+    { "stateCode": "MH", "state": "Maharashtra", "from": "2024-12-07", "to": "2029-12-06", "seats": 288 },
+    { "stateCode": "MN", "state": "Manipur", "from": "2022-03-14", "to": "2027-03-13", "seats": 60 },
+    { "stateCode": "ML", "state": "Meghalaya", "from": "2023-03-06", "to": "2028-03-05", "seats": 60 },
+    { "stateCode": "MZ", "state": "Mizoram", "from": "2023-12-12", "to": "2028-12-11", "seats": 40 },
+    { "stateCode": "NL", "state": "Nagaland", "from": "2023-03-20", "to": "2028-03-19", "seats": 60 },
+    { "stateCode": "DL", "state": "Delhi", "from": "2025-02-24", "to": "2030-02-23", "seats": 70 },
+    { "stateCode": "OD", "state": "Odisha", "from": "2024-07-22", "to": "2029-07-21", "seats": 147 },
+    { "stateCode": "PY", "state": "Puducherry", "from": "2026-05-20", "to": "2031-05-19", "seats": 30 },
+    { "stateCode": "PB", "state": "Punjab", "from": "2022-03-17", "to": "2027-03-16", "seats": 117 },
+    { "stateCode": "RJ", "state": "Rajasthan", "from": "2023-12-20", "to": "2028-12-19", "seats": 200 },
+    { "stateCode": "SK", "state": "Sikkim", "from": "2024-06-12", "to": "2029-06-11", "seats": 32 },
+    { "stateCode": "TN", "state": "Tamil Nadu", "from": "2026-05-11", "to": "2031-05-10", "seats": 234 },
+    { "stateCode": "TG", "state": "Telangana", "from": "2023-12-09", "to": "2028-12-08", "seats": 119 },
+    { "stateCode": "TR", "state": "Tripura", "from": "2023-03-24", "to": "2028-03-23", "seats": 60 },
+    { "stateCode": "UP", "state": "Uttar Pradesh", "from": "2022-05-23", "to": "2027-05-22", "seats": 403 },
+    { "stateCode": "UK", "state": "Uttarakhand", "from": "2022-03-29", "to": "2027-03-28", "seats": 70 },
+    { "stateCode": "JK", "state": "Jammu and Kashmir", "from": "2024-11-04", "to": "2029-11-03", "seats": 90 },
+    { "stateCode": "WB", "state": "West Bengal", "from": "2026-05-15", "to": "2031-05-14", "seats": 294 }
+  ],
+  "constitutional_offices": {
+    "president": { "from": "2022-07-25", "to": "2027-07-24" },
+    "vice_president": { "from": "2022-08-11", "to": "2027-08-10" }
+  }
+}

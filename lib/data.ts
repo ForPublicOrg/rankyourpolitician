@@ -37,6 +37,8 @@ import seedElections from '@/data/seed/elections.json';
 import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat } from './types';
 import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type PoliticianContact, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
 import { candidateRatingId } from './elections';
+import { constitutionalRoleTerm, electedRoleTerm } from './terms';
+import type { RoleTerm } from './types';
 
 // Affidavit case detail, keyed by person. Seed-only (updated via
 // `dm fetch-criminal-cases` + redeploy) - a person page embeds just its own
@@ -420,6 +422,9 @@ export interface PersonView {
   govScope?: 'union' | 'state';
   neutral_summary?: string;
   terms_served?: number;
+  /** End of this member's elected term, or of the lower house they currently
+   * sit in. Kept as one tiny object in the already-static profile payload. */
+  role_term?: RoleTerm;
   facts: Fact[];
   /** Official published contact details for the member (elected only). */
   contact?: PoliticianContact;
@@ -523,6 +528,7 @@ export async function getPerson(
         govScope: sr ? 'state' : undefined,
         neutral_summary: p.neutral_summary,
         terms_served: p.terms_served,
+        role_term: electedRoleTerm(p) || undefined,
         facts: p.facts,
         contact: p.contact,
         criminal_record: criminalRecordById().get(id),
@@ -561,6 +567,7 @@ export async function getPerson(
         portfolios,
         ministerRank: m.rank,
         ministerRankLabel: MINISTER_RANK_LABEL[m.rank],
+        role_term: electedRoleTerm(m) || undefined,
         facts: [],
         metrics: {},
         performance: null,
@@ -599,6 +606,7 @@ export async function getPerson(
         stateRank: sm.rank,
         govScope: 'state',
         ministerRankLabel: STATE_RANK_LABEL[sm.rank],
+        role_term: electedRoleTerm({ house: 'Vidhan Sabha', stateCode: sm.stateCode }) || undefined,
         neutral_summary: `${sm.name} is the ${position} (${sm.party}).`,
         facts: [],
         metrics: {},
@@ -630,6 +638,10 @@ export async function getPerson(
         neutral_summary: constOffice.about || constOffice.note,
         as_of: constOffice.since,
         office: constOffice,
+        role_term:
+          constOffice.office === 'president' || constOffice.office === 'vice_president'
+            ? constitutionalRoleTerm(constOffice.office)
+            : undefined,
         districts: [],
         is_minister: false,
         is_pm: false,

@@ -15,6 +15,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test:eci-results": "tsx tools/data-manager/eci-results.regress.ts",
+    "test:terms": "tsx tools/data-manager/terms.regress.ts",
     "dm": "tsx tools/data-manager/cli.ts",
     "dm:dashboard": "tsx tools/data-manager/dashboard.ts",
     "seed:import": "tsx tools/data-manager/cli.ts import-seed",

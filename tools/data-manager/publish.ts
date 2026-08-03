@@ -3,7 +3,7 @@
 // service-account key that never leaves it. Never imported by the deployed site.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile } from '../../lib/types';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -37,6 +37,22 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
   const push = (p: Politician, severity: Issue['severity'], message: string) =>
     issues.push({ politicianId: p.id, name: p.name, severity, message });
 
+  const termsPath = resolve(SEED_DIR, 'legislature_terms.json');
+  const terms = JSON.parse(readFileSync(termsPath, 'utf8')) as LegislatureTermsFile;
+  const termRecord = { id: 'legislature-terms', name: 'Legislature terms' } as Politician;
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+  if (!terms.source_url || !terms.source_name || !terms.retrieved_date) {
+    push(termRecord, 'error', 'legislature_terms.json has no complete source citation');
+  }
+  const assemblyCodes = new Set<string>();
+  for (const term of terms.assemblies) {
+    if (assemblyCodes.has(term.stateCode)) push(termRecord, 'error', `duplicate Assembly term for ${term.stateCode}`);
+    assemblyCodes.add(term.stateCode);
+    if (!isoDate.test(term.from) || !isoDate.test(term.to) || term.from >= term.to) {
+      push(termRecord, 'error', `invalid Assembly term dates for ${term.stateCode}: ${term.from} to ${term.to}`);
+    }
+  }
+
   for (const p of politicians) {
     // Upper-house members (Rajya Sabha MPs, and MLCs in the Legislative Council)
     // are indirectly elected/nominated with NO territorial constituency, so an
@@ -49,6 +65,15 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       if (!p.districts?.length) push(p, 'warn', 'no districts listed (district-level ranking will be empty)');
     }
     if (!p.state || !p.stateCode) push(p, 'error', 'missing state/stateCode');
+    if (p.house === 'Vidhan Sabha' && !assemblyCodes.has(p.stateCode)) {
+      push(p, 'error', `no Assembly term data for stateCode ${p.stateCode}`);
+    }
+    if ((p.term_start && !isoDate.test(p.term_start)) || (p.term_end && !isoDate.test(p.term_end))) {
+      push(p, 'error', 'term_start/term_end must use ISO yyyy-mm-dd');
+    }
+    if ((p.term_start && !p.term_end) || (!p.term_start && p.term_end)) {
+      push(p, 'error', 'individual term must include both term_start and term_end');
+    }
     for (const f of p.facts as Fact[]) {
       if (!f.source_url) push(p, 'error', `fact "${f.field_type}" has no source_url (no citation, no claim)`);
       if (!f.retrieved_date) push(p, 'warn', `fact "${f.field_type}" has no retrieved_date`);

@@ -46,6 +46,14 @@ const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,
 const clean = (s: string) => s.replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, '').replace(/<ref[^>]*\/>/g, '')
   .replace(/\[\[[^\]|]*\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1')
   .replace(/'''?/g, '').replace(/\{\{[^}]*\}\}/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+const termDateToIso = (value?: string) => {
+  if (!value) return undefined;
+  const match = value.match(/^(\d{2})-([A-Za-z]{3})-(\d{4})$/);
+  if (!match) return undefined;
+  const month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+    .indexOf(match[2].toLowerCase()) + 1;
+  return month ? `${match[3]}-${String(month).padStart(2, '0')}-${match[1]}` : undefined;
+};
 
 async function api(base: string, params: Record<string, string>): Promise<any> {
   const u = base + '?format=json&formatversion=2&origin=*&' + new URLSearchParams(params);
@@ -154,6 +162,8 @@ async function main() {
       current_position: 'Member of Parliament, Rajya Sabha',
       is_minister: false,
       neutral_summary: `${m.name} is a Member of Parliament in the Rajya Sabha (the upper house of India's Parliament), ${repClause}. Current party affiliation: ${m.party}.${termClause}`,
+      ...(termDateToIso(m.termStart) ? { term_start: termDateToIso(m.termStart) } : {}),
+      ...(termDateToIso(m.termEnd) ? { term_end: termDateToIso(m.termEnd) } : {}),
       metrics: {},
       facts: [],
       active: true,

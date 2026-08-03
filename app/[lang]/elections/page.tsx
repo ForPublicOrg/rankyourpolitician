@@ -5,6 +5,7 @@ import { getI18n, type LangParams } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
 import { formatDate } from '@/lib/format';
 import { daysUntil, isActivePhase, keyDateFor, phaseOf } from '@/lib/elections';
+import { legislatureTerms, nextAssemblyElections } from '@/lib/terms';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { PageHero, SectionCard, StatPill, Chip } from '@/components/ui';
 import { CountUp, Reveal } from '@/components/motion';
@@ -48,6 +49,13 @@ export default async function ElectionsPage({ params }: { params: Promise<LangPa
     0,
   );
   const updated = events.map((e) => e.retrieved_date).filter(Boolean).sort().pop();
+  const notifiedGeneralElectionStates = new Set(
+    live
+      .filter(({ event }) => event.kind === 'assembly-general')
+      .flatMap(({ event }) => event.seats.map((seat) => seat.stateCode)),
+  );
+  const nextElections = nextAssemblyElections(Date.now(), 5, notifiedGeneralElectionStates);
+  const termSource = legislatureTerms();
 
   return (
     <>
@@ -80,6 +88,49 @@ export default async function ElectionsPage({ params }: { params: Promise<LangPa
         {live.length === 0 && past.length > 0 && (
           <Reveal>
             <NoneRunning tr={tr} />
+          </Reveal>
+        )}
+
+        {nextElections.length > 0 && (
+          <Reveal delay={60}>
+            <SectionCard
+              icon="calendar"
+              eyebrow={tr('elections.nextEyebrow')}
+              title={tr('elections.nextTitle')}
+              subtitle={tr('elections.nextHelp')}
+            >
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {nextElections.map((term) => (
+                  <article key={term.stateCode} className="rounded-2xl border border-line bg-paper-soft p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="font-bold text-ink">{term.state}</p>
+                        <p className="mt-0.5 text-xs text-ink-faint">
+                          {tr('elections.assemblySeats', { n: term.seats })}
+                        </p>
+                      </div>
+                      <Chip tone="neutral" icon="calendar">{formatDate(term.to, locale)}</Chip>
+                    </div>
+                    <p className="mt-3 text-sm text-ink-soft">
+                      {tr('elections.termEndsOn', { date: formatDate(term.to, locale) })}
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-ink-faint">{tr('elections.dateNotAnnounced')}</p>
+                  </article>
+                ))}
+              </div>
+              <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-faint">
+                <Icon name="info" size={13} />
+                <span>{tr('elections.nextCaveat')}</span>
+                <a
+                  href={termSource.source_url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-semibold text-brand hover:underline"
+                >
+                  {termSource.source_name}
+                </a>
+              </p>
+            </SectionCard>
           </Reveal>
         )}
 

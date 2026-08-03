@@ -114,6 +114,14 @@ async function api(params: Record<string, string>): Promise<any> {
 }
 
 interface MLC { code: string; name: string; title: string | null; party: string; electorate: string; termStart: string; termEnd: string; }
+const termDateToIso = (value?: string) => {
+  if (!value) return undefined;
+  const match = value.match(/^(\d{2})-([A-Za-z]{3})-(\d{4})$/);
+  if (!match) return undefined;
+  const month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+    .indexOf(match[2].toLowerCase()) + 1;
+  return month ? `${match[3]}-${String(month).padStart(2, '0')}-${match[1]}` : undefined;
+};
 
 /** The section that actually holds the members table (most date-rows), never References. */
 function membersBody(wt: string): string {
@@ -281,6 +289,8 @@ async function main() {
         current_position: `Member of the Legislative Council (MLC), ${state}`,
         is_minister: false,
         neutral_summary: `${m.name} is a Member of the Legislative Council (MLC) in ${state} - the Vidhan Parishad, the upper house of the state legislature - ${elected}. Current party affiliation: ${m.party}. Current term: ${m.termStart} to ${m.termEnd}.`,
+        ...(termDateToIso(m.termStart) ? { term_start: termDateToIso(m.termStart) } : {}),
+        ...(termDateToIso(m.termEnd) ? { term_end: termDateToIso(m.termEnd) } : {}),
         metrics: {},
         facts: [],
         active: true,
