@@ -194,28 +194,23 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
           )
         )}
 
-        <div // grid-cols-1 is load-bearing: without an explicit base column the
-          // implicit track sizes to min-content and drags the page sideways on a
-          // phone - the overflow class this repo has been bitten by before.
-          className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="space-y-6">
-            <Reveal delay={60}>
-              <CandidateGroups seat={seat} tr={tr} />
+        {/* Candidate lists can be much taller than a date card. Keep these
+            sections in one full-width reading flow instead of marooning a
+            short sidebar beside dozens of candidates. */}
+        <div className="space-y-6">
+          <Reveal delay={60}>
+            <CandidateGroups seat={seat} tr={tr} />
+          </Reveal>
+          <Reveal delay={100}>
+            <ScheduleCard event={event} tr={tr} locale={locale} />
+          </Reveal>
+          {!result && phase !== 'counting' && officialUrl && (
+            <Reveal delay={140}>
+              <SectionCard title={tr('elections.sourceEci')} icon="link">
+                <CountCaveat sourceUrl={officialUrl} tr={tr} />
+              </SectionCard>
             </Reveal>
-          </div>
-
-          <div className="space-y-6">
-            <Reveal delay={100}>
-              <ScheduleCard event={event} tr={tr} locale={locale} />
-            </Reveal>
-            {!result && phase !== 'counting' && officialUrl && (
-              <Reveal delay={140}>
-                <SectionCard title={tr('elections.sourceEci')} icon="link">
-                  <CountCaveat sourceUrl={officialUrl} tr={tr} />
-                </SectionCard>
-              </Reveal>
-            )}
-          </div>
+          )}
         </div>
       </div>
     </>
@@ -248,7 +243,7 @@ function CandidateGroups({
               <span className="text-xs text-ink-faint">{g.people.length}</span>
             </div>
             <p className="mb-2.5 text-sm text-ink-soft">{tr(g.helpKey)}</p>
-            <div className="space-y-2">
+            <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
               {g.people.map((c: ElectionCandidate) => (
                 <CandidateRow key={c.slug} candidate={c} seatSlug={seat.slug} tr={tr} />
               ))}
@@ -283,7 +278,7 @@ function ScheduleCard({
   ];
   return (
     <SectionCard title={tr('elections.scheduleTitle')} subtitle={tr('elections.scheduleHelp')} icon="calendar">
-      <ul className="space-y-2">
+      <ul className="grid gap-x-8 sm:grid-cols-2">
         {rows.map((r) => {
           const value = event.schedule[r.key];
           if (!value) return null;

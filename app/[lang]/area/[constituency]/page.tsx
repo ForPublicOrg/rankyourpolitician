@@ -91,12 +91,10 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
       />
 
       <div className="mx-auto max-w-content space-y-6 px-4 py-6">
-        {/* The representative + the "where is this seat" map sit side by side; the
-            aside (map + covered districts) only exists for PC/AC seats, so when
-            it is empty (Rajya Sabha / MLC) the content goes full width instead of
-            leaving a blank half. The full leaderboard, CTA and ad are full-width
-            rows so no short aside is ever stranded next to a tall list. */}
-        <div className={hasAside ? 'grid gap-6 lg:grid-cols-2' : undefined}>
+        {/* Maps and covered districts follow the representative information in
+            one reading flow. These cards vary greatly in height, so a sidebar
+            would leave a large empty rail next to a long sibling list. */}
+        <div className={hasAside ? 'space-y-6' : undefined}>
           <div className="space-y-6">
             {/* The representative(s) - the reason this page exists */}
             <Reveal>

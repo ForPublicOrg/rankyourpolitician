@@ -105,10 +105,9 @@ export default async function CandidatePage({
       />
 
       <div className="mx-auto max-w-content px-4 py-6">
-        <div // grid-cols-1 is load-bearing: without an explicit base column the
-          // implicit track sizes to min-content and drags the page sideways on a
-          // phone - the overflow class this repo has been bitten by before.
-          className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {/* Candidate records vary wildly in length. Stack their sections so a
+            short rating/result card is never stranded beside a long record. */}
+        <div className="space-y-6">
           <div className="space-y-6">
             <Reveal>
               <SectionCard
