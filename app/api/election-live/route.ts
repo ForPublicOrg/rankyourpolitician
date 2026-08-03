@@ -5,6 +5,7 @@ import {
   constituencyCandidateUrl,
   type EciFetchFailure,
   fetchConstituencyResult,
+  fetchConstituencyResultViaReader,
 } from '@/lib/eci-results';
 import type { ElectionEvent, LiveCountSeat } from '@/lib/types';
 import electionSeed from '@/data/seed/elections.json';
@@ -53,6 +54,7 @@ interface Snapshot {
 interface ReadDiagnostic {
   seatSlug: string;
   outcome: 'ok' | 'failed';
+  readerFallback?: boolean;
   failure?: EciFetchFailure;
 }
 
@@ -69,7 +71,7 @@ async function readFromEci(ev: ElectionEvent, diagnostics?: ReadDiagnostic[]): P
   const seats = await Promise.all(
     ev.seats.map(async (seat): Promise<LiveCountSeat | null> => {
       let failure: EciFetchFailure | undefined;
-      const parsed = await fetchConstituencyResult(
+      let parsed = await fetchConstituencyResult(
         base,
         seat.eci.stateCode,
         seat.eci.acNo,
@@ -78,11 +80,24 @@ async function readFromEci(ev: ElectionEvent, diagnostics?: ReadDiagnostic[]): P
           failure = detail;
         },
       );
+      const shouldUseReader = failure?.reason === 'http' && failure.detail.startsWith('HTTP 403');
+      if (!parsed && shouldUseReader) {
+        failure = undefined;
+        parsed = await fetchConstituencyResultViaReader(
+          base,
+          seat.eci.stateCode,
+          seat.eci.acNo,
+          FETCH_TIMEOUT_MS,
+          (detail) => {
+            failure = detail;
+          },
+        );
+      }
       if (!parsed) {
         diagnostics?.push({ seatSlug: seat.slug, outcome: 'failed', ...(failure ? { failure } : {}) });
         return null;
       }
-      diagnostics?.push({ seatSlug: seat.slug, outcome: 'ok' });
+      diagnostics?.push({ seatSlug: seat.slug, outcome: 'ok', ...(shouldUseReader ? { readerFallback: true } : {}) });
       return {
         seatSlug: seat.slug,
         ...(parsed.round ? { round: parsed.round } : {}),

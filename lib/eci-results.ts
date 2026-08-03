@@ -144,6 +144,53 @@ export function parseConstituencyResult(html: string): ParsedConstituency | null
   };
 }
 
+/**
+ * Jina Reader returns a faithful Markdown rendering of a public page. It is a
+ * transport fallback for ECI's static table only: the numbers and the reader
+ * link shown to people still come from the Commission's own URL. Keeping this
+ * parser separate from the HTML parser makes a changed relay format fail
+ * closed rather than silently changing a reported count.
+ */
+export function parseReaderConstituencyResult(markdown: string): ParsedConstituency | null {
+  const rows: ElectionResultRow[] = [];
+
+  for (const line of markdown.split(/\r?\n/)) {
+    if (!line.trim().startsWith('|')) continue;
+    const cells = line.split('|').slice(1, -1).map((cell) => cell.trim());
+    // Header and Markdown's | --- | separator do not have numeric columns.
+    if (cells.length < 7 || /^s\.\s*n\.?$/i.test(cells[0]) || /^-+$/.test(cells[0])) continue;
+    const [, name, party, evm, postal, total, pct] = cells;
+    // The closing total is not a candidate row and leaves the candidate/party
+    // cells blank, so exclude it before validating numeric candidate cells.
+    if (!name || /^total$/i.test(name)) continue;
+    const evmN = num(evm);
+    const postalN = num(postal);
+    const totalN = num(total);
+    const pctN = num(pct);
+    if (evmN == null || postalN == null || totalN == null || pctN == null) return null;
+    const nota = isNotaRow(name, party);
+    rows.push({
+      name,
+      party,
+      evm_votes: evmN,
+      postal_votes: postalN,
+      total_votes: totalN,
+      vote_share_pct: pctN,
+      ...(nota ? { isNota: true } : {}),
+    });
+  }
+  if (rows.length === 0) return null;
+
+  const r = markdown.match(/Status of EVM Round:\s*(\d+)\s*\/\s*(\d+)/i);
+  const h = markdown.match(/^##\s+Assembly Constituency\s+(.+)$/im);
+  return {
+    ...(h ? { heading: h[1].replace(/\*+/g, '').replace(/\s+/g, ' ').trim() } : {}),
+    ...(r ? { round: { done: Number(r[1]), total: Number(r[2]) } } : {}),
+    rows,
+    total_votes: rows.reduce((s, x) => s + x.total_votes, 0),
+  };
+}
+
 /** Fetch + parse one seat. Never throws: a null return means "we could not
  *  read the Commission right now", which the UI reports honestly. */
 export async function fetchConstituencyResult(
@@ -171,6 +218,46 @@ export async function fetchConstituencyResult(
     const detail = err instanceof Error ? `${err.name}: ${err.message}` : 'Request failed';
     onFailure?.({ url, reason: 'network', detail: `${detail} after ${Date.now() - startedAt}ms` });
     console.error(`[eci] ${url} failed:`, err);
+    return null;
+  }
+}
+
+/**
+ * ECI's Akamai layer blocks known cloud-function IP ranges (HTTP 403), even
+ * when the exact browser-navigation headers are supplied. When that happens,
+ * read the same public ECI page through Jina Reader. The caller deliberately
+ * chooses this fallback only after the direct official request was blocked;
+ * it is never used to invent, merge, or substitute election data.
+ */
+export async function fetchConstituencyResultViaReader(
+  base: string,
+  eciStateCode: string,
+  acNo: number,
+  timeoutMs = 8000,
+  onFailure?: (failure: EciFetchFailure) => void,
+): Promise<ParsedConstituency | null> {
+  const sourceUrl = constituencyResultUrl(base, eciStateCode, acNo);
+  const url = `https://r.jina.ai/http://${sourceUrl.replace(/^https?:\/\//, '')}`;
+  const startedAt = Date.now();
+  try {
+    const res = await fetch(url, {
+      headers: { Accept: 'text/plain' },
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!res.ok) {
+      onFailure?.({ url: sourceUrl, reason: 'http', detail: `Reader HTTP ${res.status} after ${Date.now() - startedAt}ms` });
+      console.error(`[eci-reader] ${sourceUrl} -> HTTP ${res.status}`);
+      return null;
+    }
+    const parsed = parseReaderConstituencyResult(await res.text());
+    if (!parsed) {
+      onFailure?.({ url: sourceUrl, reason: 'parse', detail: `Reader returned an unrecognised results table after ${Date.now() - startedAt}ms` });
+    }
+    return parsed;
+  } catch (err) {
+    const detail = err instanceof Error ? `${err.name}: ${err.message}` : 'Request failed';
+    onFailure?.({ url: sourceUrl, reason: 'network', detail: `Reader ${detail} after ${Date.now() - startedAt}ms` });
+    console.error(`[eci-reader] ${sourceUrl} failed:`, err);
     return null;
   }
 }
