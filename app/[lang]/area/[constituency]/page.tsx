@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getConstituency, getRanking, getConstituencyView, getIndex, getElectionsForConstituency } from '@/lib/data';
 import { keyDateFor, phaseOf } from '@/lib/elections';
@@ -16,6 +16,7 @@ import SpotMiniMap from '@/components/SpotMiniMap';
 import { SectionCard, Avatar, PartyChip, Chip, PageHero } from '@/components/ui';
 import { Reveal } from '@/components/motion';
 import Icon from '@/components/Icon';
+import { canonicalDistrictForConstituency, constituencyHref } from '@/lib/locality';
 
 // Weekly self-heal only - content changes arrive via deploy or /api/revalidate,
 // and every ISR regeneration is a billed write: at 86400 this long tail re-rendered
@@ -37,10 +38,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { constituency } = await params;
   const c = await getConstituency(constituency);
+  const canonicalCityHref = c && canonicalDistrictForConstituency(c) ? constituencyHref(c) : null;
   return {
-    title: c ? `${c.name} - your representative` : 'Constituency',
+    title: c ? (canonicalCityHref ? `${c.name} - MPs, MLAs & officials` : `${c.name} - your representative`) : 'Constituency',
     // Clean URL is the canonical for every /{locale}/... duplicate (see person page).
-    alternates: { canonical: `/area/${c ? c.id : constituency}` },
+    alternates: { canonical: canonicalCityHref ?? `/area/${c ? c.id : constituency}` },
   };
 }
 
@@ -49,6 +51,10 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
   const view = await getConstituencyView(constituency);
   if (!view) notFound();
   const c = view.constituency;
+  // An AC entirely inside its identically named district is a city view, not a
+  // second place. Keep old links alive but land every reader on the complete
+  // civic page (representatives, officials, rankings and this seat's election).
+  if (canonicalDistrictForConstituency(c)) redirect(constituencyHref(c));
 
   const ranking = await getRanking('constituency', c.id);
   // Most recent election for this seat, if we hold one. Seed lookup, no I/O.
@@ -168,7 +174,7 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
                     {view.siblings.map((s) => (
                       <li key={s.id}>
                         <Link
-                          href={`/area/${s.id}`}
+                          href={constituencyHref(s)}
                           className="pressable inline-flex items-center gap-1 rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
                         >
                           {s.name}

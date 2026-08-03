@@ -23,7 +23,9 @@ import type {
   OfficeSeat,
   ConstitutionalOffice,
   ElectionEvent,
+  Constituency,
 } from '../lib/types';
+import { canonicalDistrictForConstituency } from '../lib/locality';
 
 // Row shapes (positional arrays keep the file small):
 //   people:    [id, name, partyShort, place, stateCode, role, nameHi?, photo?, portfolios?]
@@ -149,10 +151,13 @@ function build(): SearchIndexFile {
   // Areas (constituencies) - dedupe by id.
   const seenAreas = new Set<string>();
   const areas: [string, string, string, string][] = [];
-  const constituencies = seedConstituencies as unknown as { id: string; name: string; stateCode: string; type: string }[];
+  const constituencies = seedConstituencies as unknown as Constituency[];
   for (const c of constituencies) {
     if (seenAreas.has(c.id)) continue;
     seenAreas.add(c.id);
+    // A same-named, single-district AC is indexed through its richer district
+    // page. Returning both hits made one city look like two different places.
+    if (canonicalDistrictForConstituency(c)) continue;
     areas.push([c.id, c.name, c.stateCode, c.type]);
   }
 

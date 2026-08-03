@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllElectionSeats, getAllPersonIds, getIndex, getStates, getDistrictsInState } from '@/lib/data';
 import { SITE_URL } from '@/lib/site-url';
+import { canonicalDistrictForConstituency } from '@/lib/locality';
 
 // Built once per deploy. Clean (locale-less) URLs are the canonical ones -
 // middleware picks the reader's language, so one URL serves every locale.
@@ -31,6 +32,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
   for (const c of idx.constituencies) {
+    // The district is canonical where it is the exact same locality as a
+    // single-district Assembly seat; list one URL, never both.
+    if (canonicalDistrictForConstituency(c)) continue;
     urls.push({ url: `${SITE_URL}/area/${c.id}`, changeFrequency: 'weekly' });
   }
   for (const id of personIds) {

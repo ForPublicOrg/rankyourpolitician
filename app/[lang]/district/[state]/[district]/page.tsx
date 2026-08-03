@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getRanking, getDistrictOfficials, officialPersonId, getDistrictView, getStateGovernment, getDistrictPortal, getContactChannels, getStates, getDistrictsInState } from '@/lib/data';
+import { getRanking, getDistrictOfficials, officialPersonId, getDistrictView, getStateGovernment, getDistrictPortal, getContactChannels, getStates, getDistrictsInState, getElectionsForConstituency } from '@/lib/data';
 import { buildDistrictMap, matchDistrictName } from '@/lib/geo-districts';
+import { buildSpotMap } from '@/lib/geo-constituencies';
+import { keyDateFor, phaseOf } from '@/lib/elections';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
@@ -18,9 +20,12 @@ import RankingList from '@/components/RankingList';
 import LeadersTabs from '@/components/LeadersTabs';
 import AdSlot from '@/components/AdSlot';
 import GeoMap, { type GeoMapShape } from '@/components/GeoMap';
+import SpotMiniMap from '@/components/SpotMiniMap';
 import { SectionCard, Avatar, PartyChip, Chip, PageHero, StatPill, Eyebrow } from '@/components/ui';
 import { Reveal, CountUp } from '@/components/motion';
 import Icon from '@/components/Icon';
+import { PhaseChip } from '@/components/ElectionBits';
+import { canonicalDistrictForConstituency, constituencyHref } from '@/lib/locality';
 
 // Weekly self-heal only - content changes arrive via deploy or /api/revalidate,
 // and every ISR regeneration is a billed write: at 86400 this long tail re-rendered
@@ -88,16 +93,28 @@ export default async function DistrictPage({
   const view = await getDistrictView(state, districtParam);
   if (!view) notFound();
 
-  const [ranking, officials, stateGov, portal, channels] = await Promise.all([
+  // A same-named, single-district Assembly seat is one locality with this
+  // district, not a second city page. Its representative is already in `mlas`;
+  // keep the only unique piece of seat data (a current election) on this page.
+  const cityConstituency = view.constituencies.find((c) => canonicalDistrictForConstituency(c)) ?? null;
+  const otherConstituencies = cityConstituency
+    ? view.constituencies.filter((c) => c.id !== cityConstituency.id)
+    : view.constituencies;
+
+  const [ranking, officials, stateGov, portal, channels, cityElections] = await Promise.all([
     getRanking('district', `${state}/${view.district}`),
     getDistrictOfficials(state, view.district),
     getStateGovernment(state),
     // The fallbacks the ladder needs wherever no officer is named.
     getDistrictPortal(state, view.district),
     getContactChannels(state),
+    cityConstituency ? getElectionsForConstituency(cityConstituency.id) : Promise.resolve([]),
   ]);
   const { dict, locale } = await getI18n(lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
+  const cityElection = cityElections[0] ?? null;
+  const cityElectionPhase = cityElection ? phaseOf(cityElection.event) : null;
+  const cityMap = cityConstituency ? buildSpotMap(cityConstituency.stateCode, 'AC', cityConstituency.name, 220) : null;
 
   // Props for the "who fixes what here" real-people ladder (client component).
   const partyShort = (party?: string) => (party ? party.match(/\(([^)]+)\)\s*$/)?.[1] ?? party : undefined);
@@ -212,6 +229,55 @@ export default async function DistrictPage({
     </Reveal>
   );
 
+  // The city page keeps the former area page's two pieces of unique content:
+  // its Assembly-boundary map and (when applicable) its election route. The
+  // live count stays on the dedicated election page, where its one-minute
+  // browser refresh does not slow this static civic page.
+  const cityElectionCard =
+    cityConstituency && (cityElection || cityMap) ? (
+      <Reveal key="city-election">
+        <SectionCard title={tr('area.typeAc')} subtitle={cityConstituency.name} icon="flag">
+          <div className={cityMap ? 'grid items-center gap-4 sm:grid-cols-[minmax(0,1fr)_10rem]' : undefined}>
+            {cityElection && cityElectionPhase && (
+              <Link
+                href={`/elections/${cityElection.seat.slug}`}
+                className="pressable block rounded-2xl border border-brand/25 bg-gradient-to-br from-brand-soft/50 to-white p-4 transition hover:border-brand/50 hover:shadow-lift"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <PhaseChip phase={cityElectionPhase} tr={tr} />
+                  {cityElectionPhase !== 'declared' && <span className="text-xs text-ink-faint">{tr('elections.vacantNote')}</span>}
+                </div>
+                <p className="mt-2 text-base font-extrabold tracking-tight text-ink">
+                  {cityElectionPhase === 'declared' ? tr('elections.areaCardDone') : tr('elections.areaCardTitle')}
+                </p>
+                <p className="mt-1 text-sm text-ink-soft">
+                  {tr(
+                    `elections.phaseHelp.${cityElectionPhase === 'awaiting-count' ? 'awaitingCount' : cityElectionPhase}`,
+                    { date: formatDate(keyDateFor(cityElection.event, cityElectionPhase).date, lang) },
+                  )}
+                </p>
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                  {tr('elections.areaCardCta')} <Icon name="arrow" size={14} />
+                </span>
+              </Link>
+            )}
+            {cityMap && (
+              <SpotMiniMap
+                outline={cityMap.outline}
+                spot={cityMap.spot}
+                spotCx={cityMap.spotCx}
+                spotCy={cityMap.spotCy}
+                w={cityMap.w}
+                h={cityMap.h}
+                label={tr('area.mapAria', { name: cityConstituency.name, state: view.state })}
+                className="mx-auto h-auto w-full max-w-[10rem]"
+              />
+            )}
+          </div>
+        </SectionCard>
+      </Reveal>
+    ) : null;
+
   const officialsCard = (
     <Reveal key="officials">
       <SectionCard title={tr('officials.title')} subtitle={tr('officials.subtitle')} icon="shield">
@@ -258,14 +324,14 @@ export default async function DistrictPage({
   ) : null;
 
   const constituenciesCard =
-    view.constituencies.length > 0 ? (
+    otherConstituencies.length > 0 ? (
       <Reveal key="constituencies">
         <SectionCard title={tr('district.areasTitle')} icon="pin" subtitle={tr('district.areasHelp')}>
           <ul className="flex flex-wrap gap-2">
-            {view.constituencies.map((c) => (
+            {otherConstituencies.map((c) => (
               <li key={c.id}>
                 <Link
-                  href={`/area/${c.id}`}
+                  href={constituencyHref(c)}
                   className="pressable inline-flex items-center gap-1 rounded-full border border-line bg-white/85 px-3 py-1 text-sm text-ink-soft hover:border-brand hover:text-brand"
                 >
                   {c.name}
@@ -299,6 +365,7 @@ export default async function DistrictPage({
   const whoFixesWeight = 1900 + Math.min(view.mlas.length, 6) * 90 + view.mps.length * 95;
   const movable = [
     { el: repsCard, w: 120 + (view.mps.length ? 45 : 0) + view.mps.length * 84 + (view.mlas.length ? 45 : 0) + view.mlas.length * 84 },
+    ...(cityElectionCard ? [{ el: cityElectionCard, w: 230 }] : []),
     // The leaders card opens on its Trending tab (5 rows in geo scope) and keeps
     // the performance list in a hidden tab panel, so it renders ~580px loaded and
     // ~290px before a quiet district has any trending - never the ~2,800px the
@@ -307,7 +374,7 @@ export default async function DistrictPage({
     ...(leadersCard ? [{ el: leadersCard, w: 520 }] : []),
     { el: officialsCard, w: 120 + officials.length * 240 },
     ...(mapCard ? [{ el: mapCard, w: 400 }] : []),
-    ...(constituenciesCard ? [{ el: constituenciesCard, w: 130 + view.constituencies.length * 18 }] : []),
+    ...(constituenciesCard ? [{ el: constituenciesCard, w: 130 + otherConstituencies.length * 18 }] : []),
     { el: accountabilityCard, w: 176 },
   ];
   let bestMask = 0;

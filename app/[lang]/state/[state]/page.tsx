@@ -159,7 +159,7 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
   const constituenciesCard = (
     <Reveal key="constituencies">
       <SectionCard title={tr('search.groups.constituencies')} icon="pin">
-        <PagedConstituencies items={constituencies.map((c) => ({ id: c.id, name: c.name, type: c.type }))} />
+        <PagedConstituencies items={constituencies.map((c) => ({ id: c.id, name: c.name, type: c.type, stateCode: c.stateCode, districts: c.districts }))} />
       </SectionCard>
     </Reveal>
   );

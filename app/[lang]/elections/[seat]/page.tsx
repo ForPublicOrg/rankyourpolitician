@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getAllElectionSeats, getElectionSeat } from '@/lib/data';
+import { getAllElectionSeats, getConstituency, getElectionSeat } from '@/lib/data';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
@@ -16,6 +16,7 @@ import LiveCount from '@/components/LiveCount';
 import ElectionRatingsTabs from '@/components/ElectionRatingsTabs';
 import { CandidateRow, CountCaveat, CountRow, PhaseChip, When } from '@/components/ElectionBits';
 import type { ElectionCandidate, ElectionEvent, ElectionSeat, NominationStatus } from '@/lib/types';
+import { constituencyHref } from '@/lib/locality';
 
 // Weekly self-heal, like every other long-tail page: an ISR regeneration is a
 // billed write, and nothing that changes faster than a deploy is baked in here
@@ -62,6 +63,8 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
   const found = await getElectionSeat(seatSlug);
   if (!found) notFound();
   const { event, seat } = found;
+  const constituency = await getConstituency(seat.constituencyId);
+  const localityHref = constituency ? constituencyHref(constituency) : `/area/${seat.constituencyId}`;
 
   const { dict, locale } = await getI18n(lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
@@ -124,7 +127,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
         }
         aside={
           <Link
-            href={`/area/${seat.constituencyId}`}
+            href={localityHref}
             className="pressable inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink-soft hover:border-brand/40 hover:text-brand"
           >
             <Icon name="map" size={15} />

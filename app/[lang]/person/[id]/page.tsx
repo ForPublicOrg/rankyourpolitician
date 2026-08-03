@@ -26,6 +26,7 @@ import PhoneLink from '@/components/PhoneLink';
 import AdSlot from '@/components/AdSlot';
 import ShareRow from '@/components/share/ShareRow';
 import DeclaredCases from '@/components/DeclaredCases';
+import { constituencyHref } from '@/lib/locality';
 
 // Weekly self-heal only. Profile facts change via deploy or /api/revalidate, and
 // the one fast-moving input - live vote numbers - is re-fetched client-side by
@@ -140,16 +141,28 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
   // shorter "secondary" form - one merged list, never per-role repetition.
   const glanceBullets = rolesHeld.flatMap((rk, i) => roleGlance(rk, i > 0));
 
+  const seatType = person.house === 'Lok Sabha' ? 'PC' : person.house === 'Vidhan Sabha' ? 'AC' : person.house === 'Rajya Sabha' ? 'RS' : 'MLC';
+  const localityHref =
+    person.constituencyId && person.constituency && person.stateCode
+      ? constituencyHref({
+          id: person.constituencyId,
+          name: person.constituency,
+          stateCode: person.stateCode,
+          type: seatType,
+          districts: person.districts,
+        })
+      : undefined;
+
   const crumbs: { label: string; href?: string }[] = [{ label: tr('levels.national'), href: '/' }];
   if (person.stateCode && person.state) crumbs.push({ label: person.state, href: `/state/${person.stateCode}` });
-  if (person.constituencyId && person.constituency) crumbs.push({ label: person.constituency, href: `/area/${person.constituencyId}` });
+  if (person.constituency && localityHref) crumbs.push({ label: person.constituency, href: localityHref });
   crumbs.push({ label: person.name });
 
   // "Where is this seat" mini-map (Lok Sabha / Vidhan Sabha members only).
-  const seatType = person.house === 'Lok Sabha' ? 'PC' : person.house === 'Vidhan Sabha' ? 'AC' : null;
+  const mapSeatType = person.house === 'Lok Sabha' ? 'PC' : person.house === 'Vidhan Sabha' ? 'AC' : null;
   const spot =
-    seatType && person.stateCode && person.constituency
-      ? buildSpotMap(person.stateCode, seatType, person.constituency, 300)
+    mapSeatType && person.stateCode && person.constituency
+      ? buildSpotMap(person.stateCode, mapSeatType, person.constituency, 300)
       : null;
 
   return (
@@ -172,8 +185,8 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
             <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink">{person.name}</h1>
             <div className="mt-1 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
               {person.party && <PartyChip party={person.party} />}
-              {person.constituency && person.constituencyId ? (
-                <Link href={`/area/${person.constituencyId}`} className="flex items-center gap-1 text-sm text-brand hover:underline">
+              {person.constituency && localityHref ? (
+                <Link href={localityHref} className="flex items-center gap-1 text-sm text-brand hover:underline">
                   <Icon name="pin" size={15} /> {person.constituency}{person.state ? `, ${person.state}` : ''}
                 </Link>
               ) : person.constituency ? (
