@@ -16,7 +16,7 @@ const NAV: { href: string; key: string; short: string; icon: IconName }[] = [
   { href: '/elections', key: 'nav.elections', short: 'Elections', icon: 'ballot' },
   { href: '/rights', key: 'nav.rights', short: 'Rights', icon: 'scales' },
   { href: '/hierarchy', key: 'nav.hierarchy', short: 'Structure', icon: 'network' },
-  { href: '/who', key: 'nav.accountability', short: 'Help', icon: 'megaphone' },
+  { href: '/who', key: 'nav.accountability', short: 'Roles', icon: 'megaphone' },
   { href: '/about', key: 'nav.about', short: 'About', icon: 'info' },
   // Onboarding page: surfaced via the home hero + footer on wide screens, and the
   // mobile overflow menu on phones. `show: hidden` keeps it out of the crowded

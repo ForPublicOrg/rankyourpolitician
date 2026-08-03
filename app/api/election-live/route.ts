@@ -11,12 +11,6 @@ import type { ElectionEvent, LiveCountSeat } from '@/lib/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-// ECI's results edge is India-hosted. Without this, a visitor routed through
-// Vercel Mumbai can still have their function executed in a distant region
-// (for example IAD), where the short upstream timeout regularly expires even
-// while the Commission page is available. Keep the live reader close to its
-// source; pages themselves remain globally cached/static.
-export const preferredRegion = 'bom1';
 
 /**
  * Live counting for one election, straight from the Election Commission.
