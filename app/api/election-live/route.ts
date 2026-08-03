@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getElection } from '@/lib/data';
 import { isCountingWindow, phaseOf } from '@/lib/elections';
 import {
   attachSlugs,
@@ -8,9 +7,15 @@ import {
   fetchConstituencyResult,
 } from '@/lib/eci-results';
 import type { ElectionEvent, LiveCountSeat } from '@/lib/types';
+import electionSeed from '@/data/seed/elections.json';
 
-export const runtime = 'nodejs';
+// This reader is intentionally Edge-native: ECI's WAF blocks Vercel's Node
+// function egress, while the Mumbai Edge network provides the same official
+// source through a separate, local path. Keep its dependencies seed-only and
+// web-standard so it never pulls the Node-only Firebase data layer into Edge.
+export const runtime = 'edge';
 export const dynamic = 'force-dynamic';
+export const preferredRegion = 'bom1';
 
 /**
  * Live counting for one election, straight from the Election Commission.
@@ -38,6 +43,7 @@ export const dynamic = 'force-dynamic';
 
 const MEMO_MS = 45_000;
 const FETCH_TIMEOUT_MS = 8000;
+const ELECTIONS = electionSeed as unknown as ElectionEvent[];
 
 interface Snapshot {
   seats: LiveCountSeat[];
@@ -118,7 +124,7 @@ const cache = (seconds: number) => ({
 
 export async function GET(req: NextRequest) {
   const id = req.nextUrl.searchParams.get('event');
-  const ev = id ? await getElection(id) : null;
+  const ev = id ? ELECTIONS.find((event) => event.id === id) ?? null : null;
 
   // An unknown event is an empty, CDN-cacheable 200 rather than a 400: a
   // cacheable miss cannot be used to pin the function warm with junk params.
