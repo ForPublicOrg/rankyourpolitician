@@ -8,16 +8,17 @@ import SearchBox from './SearchBox';
 import LanguageSwitcher from './LanguageSwitcher';
 import Icon, { type IconName } from './Icon';
 
-// Primary destinations. `show` controls the INLINE header links (wide screens);
-// below xl the same list is served through the mobile menu, so every item stays
-// reachable on a phone - nothing is hidden without a fallback.
+// Primary destinations. `show` controls the INLINE header links only on a
+// genuinely wide desktop; below that, the same list is served through the
+// overflow menu. Long translated labels need more than the content rail at
+// Tailwind's `xl` breakpoint, so switching earlier avoids a crammed bar.
 const NAV: { href: string; key: string; icon: IconName; show: string }[] = [
-  { href: '/india', key: 'nav.central', icon: 'parliament', show: 'hidden xl:flex' },
-  { href: '/elections', key: 'nav.elections', icon: 'ballot', show: 'hidden xl:flex' },
-  { href: '/rights', key: 'nav.rights', icon: 'scales', show: 'hidden xl:flex' },
-  { href: '/hierarchy', key: 'nav.hierarchy', icon: 'network', show: 'hidden xl:flex' },
-  { href: '/who', key: 'nav.accountability', icon: 'megaphone', show: 'hidden xl:flex' },
-  { href: '/about', key: 'nav.about', icon: 'info', show: 'hidden xl:flex' },
+  { href: '/india', key: 'nav.central', icon: 'parliament', show: 'hidden min-[1700px]:flex' },
+  { href: '/elections', key: 'nav.elections', icon: 'ballot', show: 'hidden min-[1700px]:flex' },
+  { href: '/rights', key: 'nav.rights', icon: 'scales', show: 'hidden min-[1700px]:flex' },
+  { href: '/hierarchy', key: 'nav.hierarchy', icon: 'network', show: 'hidden min-[1700px]:flex' },
+  { href: '/who', key: 'nav.accountability', icon: 'megaphone', show: 'hidden min-[1700px]:flex' },
+  { href: '/about', key: 'nav.about', icon: 'info', show: 'hidden min-[1700px]:flex' },
   // Onboarding page: surfaced via the home hero + footer on wide screens, and the
   // mobile overflow menu on phones. `show: hidden` keeps it out of the crowded
   // inline desktop bar while still listing it in the mobile menu below.
@@ -69,8 +70,9 @@ function ThemeToggle() {
   );
 }
 
-/** Mobile / tablet overflow menu (below xl) so no header destination is ever
- *  unreachable on a phone. Closes on navigation, outside click and Escape. */
+/** Overflow menu below the full-navigation breakpoint, so no header
+ *  destination is ever unreachable on a narrower desktop or phone. Closes on
+ *  navigation, outside click and Escape. */
 function MobileMenu() {
   const { t } = useI18n();
   const pathname = usePathname();
@@ -99,7 +101,7 @@ function MobileMenu() {
   }, [open]);
 
   return (
-    <div ref={ref} className="relative xl:hidden">
+    <div ref={ref} className="relative min-[1700px]:hidden">
       <button
         onClick={() => setOpen((o) => !o)}
         className={clsx(
@@ -165,7 +167,7 @@ export default function Header() {
         scrolled ? 'shadow-soft border-b border-line/60' : 'border-b border-transparent',
       )}
     >
-      <div className="mx-auto max-w-content px-4">
+      <div className="mx-auto max-w-[100rem] px-4">
         <div className="flex h-16 items-center gap-3">
           <Link href="/" className="pressable flex shrink-0 items-center gap-2" aria-label={t('brand.name')}>
             <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-brand to-brand-deep text-white shadow-soft">
@@ -177,7 +179,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <div className="hidden flex-1 md:block">
+          <div className="hidden min-w-0 flex-1 md:block md:max-w-md min-[1700px]:max-w-xs">
             <SearchBox variant="header" />
           </div>
 
