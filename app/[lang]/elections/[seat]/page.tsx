@@ -87,7 +87,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
   // or adding a request to a time-sensitive page.
   const countCandidates = seat.candidates.map(({ slug, name, name_native, photo_path }) => ({ slug, name, name_native, photo_path }));
   const candidateBySlug = new Map(countCandidates.map((candidate) => [candidate.slug, candidate]));
-  const countIsPrimaryCandidateList = Boolean(result) || phase === 'counting';
+  const countIsPrimaryCandidateList = Boolean(result) || phase === 'counting' || phase === 'awaiting-count' || phase === 'declared';
   // Ratings are opinion measures: do not mount a ranking surface during quiet
   // or polling hours. Individual votes follow the same legal guard.
   const showCandidateRatings = phase !== 'silence' && phase !== 'polling';
@@ -178,9 +178,13 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
               </p>
             </SectionCard>
           </Reveal>
-        ) : phase === 'counting' || phase === 'awaiting-count' ? (
+        ) : phase === 'counting' || phase === 'awaiting-count' || phase === 'declared' ? (
           <Reveal>
-            <SectionCard title={tr('elections.liveCountTitle')} subtitle={tr('elections.liveCountHelp')} icon="sparkle">
+            <SectionCard
+              title={tr(phase === 'declared' ? 'elections.resultTitle' : 'elections.liveCountTitle')}
+              subtitle={tr(phase === 'declared' ? 'elections.resultHelp' : 'elections.liveCountHelp')}
+              icon={phase === 'declared' ? 'check' : 'sparkle'}
+            >
               <LiveCount
                 eventId={event.id}
                 seatSlug={seat.slug}
@@ -191,28 +195,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
               />
             </SectionCard>
           </Reveal>
-        ) : (
-          phase === 'declared' &&
-          officialUrl && (
-            // Counting is over but `dm fetch-election-results` has not run yet.
-            // Rather than a page that silently omits the result, say plainly
-            // that the Commission has it and send the reader there. The gap is
-            // hours at most, and an honest pointer beats a blank.
-            <Reveal>
-              <SectionCard title={tr('elections.resultTitle')} icon="check">
-                <p className="text-sm text-ink-soft">{tr('elections.phaseHelp.declared')}</p>
-                <a
-                  href={officialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="pressable mt-3 inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:shadow-lift"
-                >
-                  {tr('elections.officialLink')} <Icon name="external" size={14} />
-                </a>
-              </SectionCard>
-            </Reveal>
-          )
-        )}
+        ) : null}
 
           {/* Candidate records continue below the live rows in the wider pane.
               Supporting facts live in the second pane rather than creating a
@@ -236,7 +219,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
             <Reveal delay={140}>
               <ScheduleCard event={event} tr={tr} locale={locale} />
             </Reveal>
-            {!result && phase !== 'counting' && officialUrl && (
+            {!result && phase !== 'counting' && phase !== 'awaiting-count' && phase !== 'declared' && officialUrl && (
               <Reveal delay={180}>
                 <SectionCard title={tr('elections.sourceEci')} icon="link">
                   <CountCaveat sourceUrl={officialUrl} tr={tr} />

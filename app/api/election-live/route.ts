@@ -3,9 +3,11 @@ import { isCountingWindow, phaseOf } from '@/lib/elections';
 import {
   attachSlugs,
   constituencyCandidateUrl,
+  fetchConstituencyWinner,
   type EciFetchFailure,
   fetchConstituencyResult,
   fetchConstituencyResultViaReader,
+  officialWinnerOf,
 } from '@/lib/eci-results';
 import type { ElectionEvent, LiveCountSeat } from '@/lib/types';
 import electionSeed from '@/data/seed/elections.json';
@@ -98,10 +100,20 @@ async function readFromEci(ev: ElectionEvent, diagnostics?: ReadDiagnostic[]): P
         return null;
       }
       diagnostics?.push({ seatSlug: seat.slug, outcome: 'ok', ...(shouldUseReader ? { readerFallback: true } : {}) });
+      const rows = attachSlugs(parsed.rows, seat.candidates);
+      // A complete EVM table is still only a count. ECI's candidate view is
+      // the declaration source, and the two views must agree before this site
+      // switches any person from "Ahead" to "Won".
+      const declaration = parsed.round && parsed.round.done >= parsed.round.total
+        ? await fetchConstituencyWinner(base, seat.eci.stateCode, seat.eci.acNo, FETCH_TIMEOUT_MS)
+        : null;
+      const final = declaration ? officialWinnerOf(rows, declaration) : null;
+
       return {
         seatSlug: seat.slug,
         ...(parsed.round ? { round: parsed.round } : {}),
-        rows: attachSlugs(parsed.rows, seat.candidates),
+        ...(final ? { final: true, ...final } : {}),
+        rows,
         total_votes: parsed.total_votes,
         source_url: constituencyCandidateUrl(base, seat.eci.stateCode, seat.eci.acNo),
       };
@@ -133,8 +145,8 @@ function load(ev: ElectionEvent): Promise<Snapshot | null> {
   return p;
 }
 
-const cache = (seconds: number) => ({
-  'cache-control': `public, max-age=0, s-maxage=${seconds}, stale-while-revalidate=${seconds * 5}`,
+const cache = (seconds: number, staleSeconds = seconds) => ({
+  'cache-control': `public, max-age=0, s-maxage=${seconds}, stale-while-revalidate=${staleSeconds}`,
 });
 
 export async function GET(req: NextRequest) {
@@ -149,9 +161,11 @@ export async function GET(req: NextRequest) {
 
   const phase = phaseOf(ev);
 
-  // Not counting: answer from the seed and touch nothing external. This is the
-  // normal state for all but a few hours in an election's life.
-  if (!isCountingWindow(ev)) {
+  // Before counting there is nothing to ask ECI. After the scheduled counting
+  // window, keep resolving seats that have not yet been frozen into the seed:
+  // ECI may publish its formal winner declaration after the last round.
+  const hasUnfrozenSeat = ev.seats.some((seat) => !seat.result);
+  if (!isCountingWindow(ev) && !(phase === 'declared' && hasUnfrozenSeat)) {
     return NextResponse.json(
       { ok: true, status: phase === 'declared' ? 'final' : 'not-counting', phase, seats: [] },
       { headers: cache(3600) },
@@ -168,7 +182,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       {
         ok: true,
-        status: snap ? 'live' : 'unavailable',
+        status: snap && snap.seats.length === ev.seats.length && snap.seats.every((seat) => seat.final) ? 'final' : snap ? 'live' : 'unavailable',
         phase,
         ...(snap ? { fetchedAt: snap.fetchedAt, seats: snap.seats } : { seats: [] }),
         diagnostics,
@@ -179,9 +193,10 @@ export async function GET(req: NextRequest) {
 
   const snap = await load(ev);
   if (snap) {
+    const final = snap.seats.length === ev.seats.length && snap.seats.every((seat) => seat.final);
     return NextResponse.json(
-      { ok: true, status: 'live', phase, fetchedAt: snap.fetchedAt, seats: snap.seats },
-      { headers: cache(60) },
+      { ok: true, status: final ? 'final' : 'live', phase, fetchedAt: snap.fetchedAt, seats: snap.seats },
+      { headers: final ? cache(86_400, 86_400) : cache(60, 60) },
     );
   }
 

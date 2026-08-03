@@ -703,6 +703,13 @@ export interface LiveCountSeat {
   seatSlug: string;
   /** "Status of EVM Round: 5/31" as published. Absent before counting starts. */
   round?: { done: number; total: number };
+  /** True only after ECI's candidate view explicitly marks a person "won".
+   * Completing every EVM round alone is not a declaration. */
+  final?: boolean;
+  /** Present with `final` when the declared ECI winner matches the counted table. */
+  winner_slug?: string;
+  /** ECI-declared winner's lead over the runner-up, in votes. */
+  margin?: number;
   rows: ElectionResultRow[];
   total_votes: number;
   source_url: string;

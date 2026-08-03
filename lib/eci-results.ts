@@ -86,6 +86,17 @@ export interface ParsedConstituency {
   total_votes: number;
 }
 
+/** ECI's candidate view is the authoritative declaration surface: it changes
+ * the leading candidate's status from "leading" to "won". The table view is
+ * deliberately not enough -- all EVM rounds can be present while the Returning
+ * Officer is still completing the formal declaration. */
+export function parseWinnerDeclaration(html: string): string | null {
+  const match = html.match(
+    /class\s*=\s*['"][^'"]*\bcaptli\b[^'"]*['"][^>]*>\s*won\s*<\/div>[\s\S]{0,1400}?<h5[^>]*>([\s\S]*?)<\/h5>/i,
+  );
+  return match ? text(match[1]) || null : null;
+}
+
 /** Narrow, safe diagnostic detail for the live API. This is intentionally
  * transport-only: it helps distinguish a blocked request from an ECI markup
  * change without exposing a response body or any visitor information. */
@@ -191,6 +202,22 @@ export function parseReaderConstituencyResult(markdown: string): ParsedConstitue
   };
 }
 
+/** Reader's Markdown rendering keeps ECI's status and candidate heading on
+ * neighbouring lines. Requiring that exact sequence keeps this fail-closed if
+ * the relay changes its layout. */
+export function parseReaderWinnerDeclaration(markdown: string): string | null {
+  const lines = markdown.split(/\r?\n/);
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trim().toLowerCase() !== 'won') continue;
+    for (let next = i + 1; next < Math.min(lines.length, i + 8); next++) {
+      const heading = lines[next].match(/^#{3,6}\s+(.+)$/);
+      if (heading) return heading[1].replace(/\*+/g, '').replace(/\s+/g, ' ').trim() || null;
+      if (lines[next].trim() && !/^!\[/.test(lines[next].trim()) && next > i + 3) break;
+    }
+  }
+  return null;
+}
+
 /** Fetch + parse one seat. Never throws: a null return means "we could not
  *  read the Commission right now", which the UI reports honestly. */
 export async function fetchConstituencyResult(
@@ -269,18 +296,89 @@ export async function fetchConstituencyResultViaReader(
   }
 }
 
+/**
+ * Read ECI's formal winner declaration. A null result is intentionally
+ * ambiguous between "not declared yet" and "temporarily unreadable": neither
+ * is permission to label someone the winner. A direct 403 alone uses the
+ * reader fallback, matching the table fetch path.
+ */
+export async function fetchConstituencyWinner(
+  base: string,
+  eciStateCode: string,
+  acNo: number,
+  timeoutMs = 4000,
+  onFailure?: (failure: EciFetchFailure) => void,
+): Promise<string | null> {
+  const sourceUrl = constituencyCandidateUrl(base, eciStateCode, acNo);
+  const startedAt = Date.now();
+  try {
+    const res = await fetch(sourceUrl, { headers: ECI_HEADERS, signal: AbortSignal.timeout(timeoutMs) });
+    if (res.ok) return parseWinnerDeclaration(await res.text());
+    const detail = `HTTP ${res.status} after ${Date.now() - startedAt}ms`;
+    if (res.status !== 403) {
+      onFailure?.({ url: sourceUrl, reason: 'http', detail });
+      console.error(`[eci] ${sourceUrl} -> HTTP ${res.status}`);
+      return null;
+    }
+  } catch (err) {
+    const detail = err instanceof Error ? `${err.name}: ${err.message}` : 'Request failed';
+    onFailure?.({ url: sourceUrl, reason: 'network', detail: `${detail} after ${Date.now() - startedAt}ms` });
+    console.error(`[eci] ${sourceUrl} failed:`, err);
+    return null;
+  }
+
+  const cacheBucket = Math.floor(Date.now() / 30_000);
+  const readerSourceUrl = `${sourceUrl}?live=${cacheBucket}`;
+  const readerUrl = `https://r.jina.ai/http://${readerSourceUrl.replace(/^https?:\/\//, '')}`;
+  const readerStartedAt = Date.now();
+  try {
+    const res = await fetch(readerUrl, { headers: { Accept: 'text/plain' }, signal: AbortSignal.timeout(timeoutMs) });
+    if (!res.ok) {
+      onFailure?.({ url: sourceUrl, reason: 'http', detail: `Reader HTTP ${res.status} after ${Date.now() - readerStartedAt}ms` });
+      console.error(`[eci-reader] ${sourceUrl} -> HTTP ${res.status}`);
+      return null;
+    }
+    return parseReaderWinnerDeclaration(await res.text());
+  } catch (err) {
+    const detail = err instanceof Error ? `${err.name}: ${err.message}` : 'Request failed';
+    onFailure?.({ url: sourceUrl, reason: 'network', detail: `Reader ${detail} after ${Date.now() - readerStartedAt}ms` });
+    console.error(`[eci-reader] ${sourceUrl} failed:`, err);
+    return null;
+  }
+}
+
 /** Join ECI's result rows to our candidate slugs by name. ECI prints names in
  *  caps and sometimes with an alias in brackets ("SATENDRABHAI PATEL (SATISH
  *  PATEL)"), so the comparison is loose on punctuation but never fuzzy on
  *  identity - an unmatched row keeps its ECI name and simply carries no link. */
+export function candidateNameKey(s: string): string {
+  return s.toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
 export function attachSlugs(rows: ElectionResultRow[], candidates: { slug: string; name: string }[]): ElectionResultRow[] {
-  const key = (s: string) => s.toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
-  const bySlug = new Map(candidates.map((c) => [key(c.name), c.slug]));
+  const bySlug = new Map(candidates.map((c) => [candidateNameKey(c.name), c.slug]));
   return rows.map((r) => {
     if (r.isNota) return r;
-    const slug = bySlug.get(key(r.name));
+    const slug = bySlug.get(candidateNameKey(r.name));
     return slug ? { ...r, candidateSlug: slug } : r;
   });
+}
+
+/** Turn a formal ECI winner declaration into the final result only when it
+ * names someone in the table and that person has the highest published total.
+ * This cross-check prevents a stale candidate page from ever overriding a
+ * newer table. */
+export function officialWinnerOf(
+  rows: ElectionResultRow[],
+  declaredWinnerName: string,
+): { winner_slug?: string; margin?: number } | null {
+  const real = rows.filter((r) => !r.isNota).sort((a, b) => b.total_votes - a.total_votes);
+  const winner = real.find((row) => candidateNameKey(row.name) === candidateNameKey(declaredWinnerName));
+  if (!winner || real[0] !== winner) return null;
+  const runnerUp = real.find((row) => row !== winner);
+  const margin = runnerUp ? winner.total_votes - runnerUp.total_votes : undefined;
+  if (margin != null && margin < 0) return null;
+  return { ...(winner.candidateSlug ? { winner_slug: winner.candidateSlug } : {}), ...(margin != null ? { margin } : {}) };
 }
 
 /** Winner + margin from a settled table. Returns nothing when the top two are

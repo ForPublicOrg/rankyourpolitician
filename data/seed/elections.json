@@ -2142,7 +2142,252 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-08-03"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-08-03",
+          "winner_slug": "prashant-kishor",
+          "margin": 19324,
+          "total_votes": 130313,
+          "rows": [
+            {
+              "name": "PRASHANT KISHOR",
+              "party": "Jan Suraaj Party",
+              "evm_votes": 64117,
+              "postal_votes": 34,
+              "total_votes": 64151,
+              "vote_share_pct": 49.23,
+              "candidateSlug": "prashant-kishor"
+            },
+            {
+              "name": "NEERAJ KUMAR",
+              "party": "Bharatiya Janata Party",
+              "evm_votes": 44794,
+              "postal_votes": 33,
+              "total_votes": 44827,
+              "vote_share_pct": 34.4,
+              "candidateSlug": "neeraj-kumar"
+            },
+            {
+              "name": "REKHA KUMARI",
+              "party": "Rashtriya Janata Dal",
+              "evm_votes": 14263,
+              "postal_votes": 10,
+              "total_votes": 14273,
+              "vote_share_pct": 10.95,
+              "candidateSlug": "rekha-kumari"
+            },
+            {
+              "name": "MANORANJAN KUMAR SHRIVASTAVA",
+              "party": "Pragatisheel Janta Party",
+              "evm_votes": 973,
+              "postal_votes": 0,
+              "total_votes": 973,
+              "vote_share_pct": 0.75,
+              "candidateSlug": "manoranjan-kumar-shrivastava"
+            },
+            {
+              "name": "TANVIR ALAM",
+              "party": "Rashtriya Lok Janshakti Party",
+              "evm_votes": 864,
+              "postal_votes": 0,
+              "total_votes": 864,
+              "vote_share_pct": 0.66,
+              "candidateSlug": "tanvir-alam"
+            },
+            {
+              "name": "PRADEEP KUMAR",
+              "party": "Bharatiya Aam Awam Party",
+              "evm_votes": 781,
+              "postal_votes": 0,
+              "total_votes": 781,
+              "vote_share_pct": 0.6,
+              "candidateSlug": "pradeep-kumar"
+            },
+            {
+              "name": "BAIJNATH PRASAD",
+              "party": "Bharatheeya Jawan Kisan Party",
+              "evm_votes": 383,
+              "postal_votes": 0,
+              "total_votes": 383,
+              "vote_share_pct": 0.29,
+              "candidateSlug": "baijnath-prasad"
+            },
+            {
+              "name": "ANIL DAS",
+              "party": "Independent",
+              "evm_votes": 311,
+              "postal_votes": 0,
+              "total_votes": 311,
+              "vote_share_pct": 0.24,
+              "candidateSlug": "anil-das"
+            },
+            {
+              "name": "SIKANDAR KUMAR",
+              "party": "Independent",
+              "evm_votes": 264,
+              "postal_votes": 0,
+              "total_votes": 264,
+              "vote_share_pct": 0.2,
+              "candidateSlug": "sikandar-kumar"
+            },
+            {
+              "name": "JITENDRA DUBEY",
+              "party": "Akhil Bharatiya Jan Sangh",
+              "evm_votes": 257,
+              "postal_votes": 0,
+              "total_votes": 257,
+              "vote_share_pct": 0.2,
+              "candidateSlug": "jitendra-dubey"
+            },
+            {
+              "name": "RAMBABU PRASAD",
+              "party": "Rashtriya Garib Dal",
+              "evm_votes": 239,
+              "postal_votes": 1,
+              "total_votes": 240,
+              "vote_share_pct": 0.18,
+              "candidateSlug": "rambabu-prasad"
+            },
+            {
+              "name": "MIRTUNJAY KUMAR",
+              "party": "Rashtriya Samajhit Dal",
+              "evm_votes": 233,
+              "postal_votes": 0,
+              "total_votes": 233,
+              "vote_share_pct": 0.18,
+              "candidateSlug": "mirtunjay-kumar"
+            },
+            {
+              "name": "SURAJ KUMAR YADAV",
+              "party": "Peoples Party of India (Democratic)",
+              "evm_votes": 231,
+              "postal_votes": 0,
+              "total_votes": 231,
+              "vote_share_pct": 0.18,
+              "candidateSlug": "suraj-kumar-yadav"
+            },
+            {
+              "name": "PREM SHANKAR PRASAD",
+              "party": "Proutist Bloc, India",
+              "evm_votes": 225,
+              "postal_votes": 0,
+              "total_votes": 225,
+              "vote_share_pct": 0.17,
+              "candidateSlug": "prem-shankar-prasad"
+            },
+            {
+              "name": "MANISHA SHARMA",
+              "party": "Rashtriya Apna Dal",
+              "evm_votes": 207,
+              "postal_votes": 0,
+              "total_votes": 207,
+              "vote_share_pct": 0.16,
+              "candidateSlug": "manisha-sharma"
+            },
+            {
+              "name": "NIRANJAN KUMAR ACHARYA",
+              "party": "Right to Recall Party",
+              "evm_votes": 196,
+              "postal_votes": 0,
+              "total_votes": 196,
+              "vote_share_pct": 0.15,
+              "candidateSlug": "niranjan-kumar-acharya"
+            },
+            {
+              "name": "ABHAY CHOUDHARY",
+              "party": "Independent",
+              "evm_votes": 196,
+              "postal_votes": 0,
+              "total_votes": 196,
+              "vote_share_pct": 0.15,
+              "candidateSlug": "abhay-choudhary"
+            },
+            {
+              "name": "UPENDRA SAHANI",
+              "party": "Rashtriya Jansambhavna Party",
+              "evm_votes": 178,
+              "postal_votes": 0,
+              "total_votes": 178,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "upendra-sahani"
+            },
+            {
+              "name": "BAGISH NANDAN",
+              "party": "Independent",
+              "evm_votes": 166,
+              "postal_votes": 0,
+              "total_votes": 166,
+              "vote_share_pct": 0.13,
+              "candidateSlug": "bagish-nandan"
+            },
+            {
+              "name": "SHUKESH KUMAR",
+              "party": "Independent",
+              "evm_votes": 157,
+              "postal_votes": 1,
+              "total_votes": 158,
+              "vote_share_pct": 0.12,
+              "candidateSlug": "shukesh-kumar"
+            },
+            {
+              "name": "NITISH KUMAR",
+              "party": "Independent",
+              "evm_votes": 149,
+              "postal_votes": 0,
+              "total_votes": 149,
+              "vote_share_pct": 0.11,
+              "candidateSlug": "nitish-kumar"
+            },
+            {
+              "name": "ASHOK KUMAR",
+              "party": "Samata Party",
+              "evm_votes": 143,
+              "postal_votes": 0,
+              "total_votes": 143,
+              "vote_share_pct": 0.11,
+              "candidateSlug": "ashok-kumar"
+            },
+            {
+              "name": "BINOD RAY",
+              "party": "Bihar Justice Party",
+              "evm_votes": 110,
+              "postal_votes": 0,
+              "total_votes": 110,
+              "vote_share_pct": 0.08,
+              "candidateSlug": "binod-ray"
+            },
+            {
+              "name": "LALU PRASAD YADAV",
+              "party": "Independent",
+              "evm_votes": 81,
+              "postal_votes": 0,
+              "total_votes": 81,
+              "vote_share_pct": 0.06,
+              "candidateSlug": "lalu-prasad-yadav"
+            },
+            {
+              "name": "BRAJESH PATEL",
+              "party": "Independent",
+              "evm_votes": 70,
+              "postal_votes": 0,
+              "total_votes": 70,
+              "vote_share_pct": 0.05,
+              "candidateSlug": "brajesh-patel"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 645,
+              "postal_votes": 1,
+              "total_votes": 646,
+              "vote_share_pct": 0.5,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeAugust2026/candidateswise-S04182.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-08-03"
+        }
       },
       {
         "slug": "manjalpur-gj-2026-07",
@@ -2362,7 +2607,45 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-08-03"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-08-03",
+          "winner_slug": "satendrabhai-patel-satish-patel",
+          "margin": 30630,
+          "total_votes": 82579,
+          "rows": [
+            {
+              "name": "SATENDRABHAI PATEL (SATISH PATEL)",
+              "party": "Bharatiya Janata Party",
+              "evm_votes": 55321,
+              "postal_votes": 160,
+              "total_votes": 55481,
+              "vote_share_pct": 67.19,
+              "candidateSlug": "satendrabhai-patel-satish-patel"
+            },
+            {
+              "name": "BHIKHABHAI RABARI (B.E. MECHANICAL)",
+              "party": "Indian National Congress",
+              "evm_votes": 24759,
+              "postal_votes": 92,
+              "total_votes": 24851,
+              "vote_share_pct": 30.09,
+              "candidateSlug": "bhikhabhai-rabari-b-e-mechanical"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 2239,
+              "postal_votes": 8,
+              "total_votes": 2247,
+              "vote_share_pct": 2.72,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeAugust2026/candidateswise-S06145.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-08-03"
+        }
       },
       {
         "slug": "datia-mp-2026-07",
@@ -3849,7 +4132,216 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-08-03"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-08-03",
+          "winner_slug": "ghanshyam-singh",
+          "margin": 6016,
+          "total_votes": 157499,
+          "rows": [
+            {
+              "name": "GHANSHYAM SINGH",
+              "party": "Indian National Congress",
+              "evm_votes": 66726,
+              "postal_votes": 31,
+              "total_votes": 66757,
+              "vote_share_pct": 42.39,
+              "candidateSlug": "ghanshyam-singh"
+            },
+            {
+              "name": "ASHUTOSH TIWARI",
+              "party": "Bharatiya Janata Party",
+              "evm_votes": 60701,
+              "postal_votes": 40,
+              "total_votes": 60741,
+              "vote_share_pct": 38.57,
+              "candidateSlug": "ashutosh-tiwari"
+            },
+            {
+              "name": "DAMODAR YADAV 'MANDAL'",
+              "party": "Aazad Samaj Party (Kanshi Ram)",
+              "evm_votes": 22515,
+              "postal_votes": 12,
+              "total_votes": 22527,
+              "vote_share_pct": 14.3,
+              "candidateSlug": "damodar-yadav-mandal"
+            },
+            {
+              "name": "DHARMENDRA SINGH PANWAR (GOLU BHAIYA)",
+              "party": "Right to Recall Party",
+              "evm_votes": 957,
+              "postal_votes": 0,
+              "total_votes": 957,
+              "vote_share_pct": 0.61,
+              "candidateSlug": "dharmendra-singh-panwar-golu-bhaiya"
+            },
+            {
+              "name": "JITENDRA MAJHI",
+              "party": "Aapka Gantantra Party",
+              "evm_votes": 927,
+              "postal_votes": 0,
+              "total_votes": 927,
+              "vote_share_pct": 0.59,
+              "candidateSlug": "jitendra-majhi"
+            },
+            {
+              "name": "RAGHVENDRA SINGH",
+              "party": "Independent",
+              "evm_votes": 727,
+              "postal_votes": 0,
+              "total_votes": 727,
+              "vote_share_pct": 0.46,
+              "candidateSlug": "raghvendra-singh"
+            },
+            {
+              "name": "BABULAL SONI",
+              "party": "Independent",
+              "evm_votes": 691,
+              "postal_votes": 0,
+              "total_votes": 691,
+              "vote_share_pct": 0.44,
+              "candidateSlug": "babulal-soni"
+            },
+            {
+              "name": "DEVESH PARIHAR NIMONA",
+              "party": "Independent",
+              "evm_votes": 642,
+              "postal_votes": 0,
+              "total_votes": 642,
+              "vote_share_pct": 0.41,
+              "candidateSlug": "devesh-parihar-nimona"
+            },
+            {
+              "name": "ROHIT GUPTA",
+              "party": "Independent",
+              "evm_votes": 585,
+              "postal_votes": 0,
+              "total_votes": 585,
+              "vote_share_pct": 0.37,
+              "candidateSlug": "rohit-gupta"
+            },
+            {
+              "name": "BRAJENDRA SHAH (BAPA SAHAB)",
+              "party": "Independent",
+              "evm_votes": 384,
+              "postal_votes": 0,
+              "total_votes": 384,
+              "vote_share_pct": 0.24,
+              "candidateSlug": "brajendra-shah-bapa-sahab"
+            },
+            {
+              "name": "RAM SINGH KUSHWAH",
+              "party": "Rashtriya Samanta Dal",
+              "evm_votes": 324,
+              "postal_votes": 0,
+              "total_votes": 324,
+              "vote_share_pct": 0.21,
+              "candidateSlug": "ram-singh-kushwah"
+            },
+            {
+              "name": "VED BHAIYA",
+              "party": "Independent",
+              "evm_votes": 219,
+              "postal_votes": 0,
+              "total_votes": 219,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "ved-bhaiya"
+            },
+            {
+              "name": "SURESH AHIRWAR",
+              "party": "Independent",
+              "evm_votes": 219,
+              "postal_votes": 0,
+              "total_votes": 219,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "suresh-ahirwar"
+            },
+            {
+              "name": "BALKISHUN VISHWAKARMA",
+              "party": "Parivartan Party of India",
+              "evm_votes": 204,
+              "postal_votes": 0,
+              "total_votes": 204,
+              "vote_share_pct": 0.13,
+              "candidateSlug": "balkishun-vishwakarma"
+            },
+            {
+              "name": "ADVOCATE HANSMUKEE LODHI",
+              "party": "Independent",
+              "evm_votes": 204,
+              "postal_votes": 0,
+              "total_votes": 204,
+              "vote_share_pct": 0.13,
+              "candidateSlug": "advocate-hansmukee-lodhi"
+            },
+            {
+              "name": "DHARMENDRA SINGH .",
+              "party": "Independent",
+              "evm_votes": 196,
+              "postal_votes": 0,
+              "total_votes": 196,
+              "vote_share_pct": 0.12,
+              "candidateSlug": "dharmendra-singh"
+            },
+            {
+              "name": "KANCHHADILAL KUSHWAHA",
+              "party": "Independent",
+              "evm_votes": 179,
+              "postal_votes": 0,
+              "total_votes": 179,
+              "vote_share_pct": 0.11,
+              "candidateSlug": "kanchhadilal-kushwaha"
+            },
+            {
+              "name": "SUBHAM RAJPOOT",
+              "party": "Bharatiya Sabhyata Party",
+              "evm_votes": 163,
+              "postal_votes": 0,
+              "total_votes": 163,
+              "vote_share_pct": 0.1,
+              "candidateSlug": "subham-rajpoot"
+            },
+            {
+              "name": "DR. RAKHI BALA",
+              "party": "Rashtriya Samadhan Janmorcha",
+              "evm_votes": 144,
+              "postal_votes": 0,
+              "total_votes": 144,
+              "vote_share_pct": 0.09,
+              "candidateSlug": "dr-rakhi-bala"
+            },
+            {
+              "name": "SANJANA SINGH KINNAR",
+              "party": "Bhartiya Gan Varta Party",
+              "evm_votes": 140,
+              "postal_votes": 1,
+              "total_votes": 141,
+              "vote_share_pct": 0.09,
+              "candidateSlug": "sanjana-singh-kinnar"
+            },
+            {
+              "name": "HARDAS KUSHWAHA",
+              "party": "Bhim Sena",
+              "evm_votes": 112,
+              "postal_votes": 0,
+              "total_votes": 112,
+              "vote_share_pct": 0.07,
+              "candidateSlug": "hardas-kushwaha"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 455,
+              "postal_votes": 1,
+              "total_votes": 456,
+              "vote_share_pct": 0.29,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeAugust2026/candidateswise-S1222.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-08-03"
+        }
       }
     ]
   }

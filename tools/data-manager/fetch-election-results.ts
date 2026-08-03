@@ -21,7 +21,7 @@
  */
 import type { ElectionResult } from '../../lib/types';
 import {
-  attachSlugs, constituencyCandidateUrl, constituencyResultUrl, parseConstituencyResult, winnerOf,
+  attachSlugs, constituencyCandidateUrl, constituencyResultUrl, fetchConstituencyWinner, officialWinnerOf, parseConstituencyResult,
 } from '../../lib/eci-results';
 import { TODAY, fetchEci, loadElections, saveElections, seatKey, HELP_APPLY } from './elections-shared';
 
@@ -91,9 +91,22 @@ async function main() {
         console.warn(`  ! ${label}: ${unmatched.length} result row(s) did not match a nomination: ${unmatched.map((r) => r.name).join(', ')}`);
       }
 
+      // All EVM rounds can be present before the Returning Officer finishes
+      // the formal declaration. Never freeze a merely leading candidate.
+      const declaredWinner = await fetchConstituencyWinner(ev.results_base, seat.eci.stateCode, seat.eci.acNo);
+      if (!declaredWinner) {
+        console.log(`  ... ${label}: all rounds counted; awaiting ECI's formal winner declaration - not freezing`);
+        continue;
+      }
+      const final = officialWinnerOf(rows, declaredWinner);
+      if (!final) {
+        console.error(`  x ${label}: ECI declared "${declaredWinner}", but it does not match the leading table row - not freezing`);
+        continue;
+      }
+
       const result: ElectionResult = {
         declared_date: TODAY,
-        ...winnerOf(rows),
+        ...final,
         total_votes: parsed.total_votes,
         rows,
         source_url: constituencyCandidateUrl(ev.results_base, seat.eci.stateCode, seat.eci.acNo),

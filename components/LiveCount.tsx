@@ -131,6 +131,7 @@ export default function LiveCount({
 
   const seat = state.kind === 'ready' ? state.payload.seats?.find((s) => s.seatSlug === seatSlug) : undefined;
   const candidatesBySlug = new Map(candidates.map((candidate) => [candidate.slug, candidate]));
+  const final = Boolean(seat?.final);
 
   return (
     <div ref={rootRef}>
@@ -159,16 +160,23 @@ export default function LiveCount({
         <>
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
             <p className="text-sm font-semibold text-ink-soft">
-              {t('elections.totalCounted', { n: seat.total_votes.toLocaleString('en-IN') })}
+              {t(final ? 'elections.totalVotes' : 'elections.totalCounted', { n: seat.total_votes.toLocaleString('en-IN') })}
             </p>
             {seat.round && (
-              <p className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-semibold text-accent-ink">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-ink opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-ink" />
-                </span>
-                {t('elections.round', { done: seat.round.done, total: seat.round.total })}
-              </p>
+              final ? (
+                <p className="inline-flex items-center gap-1.5 rounded-full bg-perf/10 px-2.5 py-1 text-xs font-semibold text-perf">
+                  <Icon name="check" size={13} />
+                  {t('elections.phase.declared')}
+                </p>
+              ) : (
+                <p className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-semibold text-accent-ink">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-ink opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-ink" />
+                  </span>
+                  {t('elections.round', { done: seat.round.done, total: seat.round.total })}
+                </p>
+              )
             )}
           </div>
 
@@ -190,14 +198,28 @@ export default function LiveCount({
                 row={row}
                 seatSlug={seatSlug}
                 isLeader={i === 0 && !row.isNota}
-                final={false}
+                final={final}
                 tr={t}
                 candidate={row.candidateSlug ? candidatesBySlug.get(row.candidateSlug) : undefined}
               />
             ))}
           </ul>
 
-          <CountCaveat sourceUrl={seat.source_url ?? officialUrl} tr={t} />
+          {final ? (
+            <p className="mt-4 text-xs text-ink-faint">
+              <a
+                href={seat.source_url ?? officialUrl}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-1 hover:text-brand hover:underline"
+              >
+                <Icon name="link" size={12} />
+                {t('elections.officialLink')}
+              </a>
+            </p>
+          ) : (
+            <CountCaveat sourceUrl={seat.source_url ?? officialUrl} tr={t} />
+          )}
         </>
       )}
     </div>
