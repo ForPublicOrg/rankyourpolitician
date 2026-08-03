@@ -6,11 +6,11 @@ import Icon, { type IconName } from '@/components/Icon';
 
 export const metadata: Metadata = { title: 'Who is responsible for what?', alternates: { canonical: '/accountability' } };
 
-const ROLES: { key: string; icon: IconName; tint: string }[] = [
-  { key: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand' },
-  { key: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf' },
-  { key: 'localBody', icon: 'home', tint: 'bg-rating-soft text-rating-ink' },
-  { key: 'rajyaSabha', icon: 'layers', tint: 'bg-paper-sink text-ink-soft' },
+const ROLES: { key: string; icon: IconName; tint: string; id: string }[] = [
+  { key: 'lokSabha', icon: 'parliament', tint: 'bg-brand-soft text-brand', id: 'lok-sabha' },
+  { key: 'rajyaSabha', icon: 'layers', tint: 'bg-paper-sink text-ink-soft', id: 'rajya-sabha' },
+  { key: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf', id: 'vidhan-sabha' },
+  { key: 'localBody', icon: 'home', tint: 'bg-rating-soft text-rating-ink', id: 'local-body' },
 ];
 
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
@@ -26,8 +26,8 @@ export default async function AccountabilityPage({ params }: { params: Promise<L
       <p className="mt-2 max-w-2xl text-lg text-ink-soft">{tr('accountability.intro')}</p>
 
       <div className="mt-6 space-y-5">
-        {ROLES.map(({ key, icon, tint }) => (
-          <section key={key} className="rounded-3xl border border-line bg-white p-5 shadow-soft sm:p-6">
+        {ROLES.map(({ key, icon, tint, id }) => (
+          <section key={key} id={id} className="scroll-mt-32 rounded-3xl border border-line bg-white p-5 shadow-soft sm:p-6">
             <div className="flex items-start gap-3">
               <span className={`inline-grid h-12 w-12 shrink-0 place-items-center rounded-2xl ${tint}`}>
                 <Icon name={icon} size={26} />
