@@ -708,6 +708,22 @@ export interface LiveCountSeat {
   source_url: string;
 }
 
+/** A candidate in one seat's public-rating lists. Candidate ratings stay
+ * scoped to their election: unlike the national leader lists, these rows never
+ * compare people contesting different seats or elections. */
+export interface ElectionCandidateRatingEntry {
+  candidate_slug: string;
+  name: string;
+  party: string;
+  photo_url?: string;
+  /** Plain all-time average of ratings cast on this site (0..5). */
+  rating_mean: number | null;
+  total_votes: number;
+  /** Present on the Trending tab only: new ratings in the last seven days. */
+  recent_votes?: number;
+  direction?: 'up' | 'down';
+}
+
 /** One row of the top-rated list: leaders ordered by PUBLIC rating (votes
  *  actually cast), never by the verified-performance score - the two axes stay
  *  separate everywhere. The Bayesian mean orders the list (it is never shown);

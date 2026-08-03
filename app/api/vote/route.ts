@@ -12,9 +12,9 @@ export const dynamic = 'force-dynamic';
  * Election candidates are rated through this same endpoint, under a `cand:`
  * id namespace ("cand:{seatSlug}:{candidateSlug}"). Sharing the route is what
  * makes dedupe, Turnstile and rate-limiting apply to them unchanged - and
- * because lib/data.ts builds its sentiment map from politicians.json alone, a
- * candidate id can never surface in the rankings, the trending list or
- * /api/ratings.
+ * because lib/data.ts builds its generic leader lists from politicians.json
+ * alone, a candidate id can never surface in national rankings. Candidate
+ * ratings appear only in the scoped list for that candidate's own seat.
  *
  * Two refusals are non-negotiable:
  *

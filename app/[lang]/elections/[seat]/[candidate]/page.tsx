@@ -14,7 +14,16 @@ import Icon from '@/components/Icon';
 import DeclaredCases from '@/components/DeclaredCases';
 import VoteWidget from '@/components/VoteWidget';
 import { PhaseChip } from '@/components/ElectionBits';
+import { StatTile } from '@/components/viz';
 import type { ElectionCandidate, ElectionSeat } from '@/lib/types';
+
+const FIELD_ICON = {
+  assets_total: 'wallet',
+  liabilities_total: 'briefcase',
+  criminal_cases_declared: 'scales',
+} as const;
+const shortValue = (value: string) => value.split('(')[0].trim();
+const leadNumber = (value: string) => value.replace(/,/g, '').match(/-?\d+(\.\d+)?/)?.[0] ?? value.split(' ')[0];
 
 export const revalidate = 604800;
 
@@ -105,9 +114,42 @@ export default async function CandidatePage({
       />
 
       <div className="mx-auto max-w-content px-4 py-6">
-        {/* Candidate records vary wildly in length. Stack their sections so a
-            short rating/result card is never stranded beside a long record. */}
         <div className="space-y-6">
+          {/* The candidate page follows the profile-page hierarchy: an honest
+              record snapshot beside the public-rating card, then full cited
+              details. There is no invented performance score for a person who
+              has not held office. */}
+          <Reveal>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <SectionCard
+                title={tr('elections.candidateRecordTitle')}
+                subtitle={tr('elections.candidateRecordHelp')}
+                icon="ballot"
+                className="h-full"
+              >
+                <CandidateRecord candidate={candidate} tr={tr} />
+              </SectionCard>
+              <SectionCard
+                title={tr('elections.ratingTitle')}
+                subtitle={tr('elections.ratingHelp')}
+                icon="star"
+                className="h-full"
+              >
+                <VoteWidget
+                  politicianId={candidateRatingId(seat.slug, candidate.slug)}
+                  personName={candidate.name}
+                  initial={{
+                    mean: sentiment.raw_mean,
+                    votes: sentiment.n_votes,
+                    distribution: sentiment.distribution,
+                    confidence: sentiment.confidence,
+                  }}
+                  lockWindow={lock}
+                />
+              </SectionCard>
+            </div>
+          </Reveal>
+
           <div className="space-y-6">
             <Reveal>
               <SectionCard
@@ -160,22 +202,6 @@ export default async function CandidatePage({
               </Reveal>
             )}
 
-            <Reveal delay={80}>
-              <SectionCard title={tr('elections.ratingTitle')} subtitle={tr('elections.ratingHelp')} icon="star">
-                <VoteWidget
-                  politicianId={candidateRatingId(seat.slug, candidate.slug)}
-                  personName={candidate.name}
-                  initial={{
-                    mean: sentiment.raw_mean,
-                    votes: sentiment.n_votes,
-                    distribution: sentiment.distribution,
-                    confidence: sentiment.confidence,
-                  }}
-                  lockWindow={lock}
-                />
-              </SectionCard>
-            </Reveal>
-
             <Reveal delay={120}>
               <Link
                 href={`/elections/${seat.slug}`}
@@ -187,6 +213,59 @@ export default async function CandidatePage({
             </Reveal>
           </div>
         </div>
+      </div>
+    </>
+  );
+}
+
+/** A candidate's equivalent of the politician profile's record snapshot: only
+ * sworn facts, never a made-up performance ranking. */
+function CandidateRecord({
+  candidate,
+  tr,
+}: {
+  candidate: ElectionCandidate;
+  tr: (k: string, v?: Record<string, string | number>) => string;
+}) {
+  const factOf = (type: keyof typeof FIELD_ICON) => candidate.facts.find((fact) => fact.field_type === type)?.value;
+  const recordFields = Object.keys(FIELD_ICON) as (keyof typeof FIELD_ICON)[];
+  const personal = [
+    ['cap', tr('elections.fieldEducation'), candidate.facts.find((fact) => fact.field_type === 'education')?.value],
+    ['briefcase', tr('elections.fieldProfession'), candidate.facts.find((fact) => fact.field_type === 'profession')?.value],
+    ['calendar', tr('elections.fieldAge'), candidate.age ? String(candidate.age) : undefined],
+  ] as const;
+
+  return (
+    <>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {recordFields.map((field) => {
+          const value = factOf(field);
+          const label =
+            field === 'assets_total'
+              ? tr('elections.fieldAssets')
+              : field === 'liabilities_total'
+                ? tr('elections.fieldLiabilities')
+                : tr('profile.cases.title');
+          return (
+            <StatTile
+              key={field}
+              icon={FIELD_ICON[field]}
+              value={value ? (field === 'criminal_cases_declared' ? leadNumber(value) : shortValue(value)) : tr('common.unavailable')}
+              label={label}
+              accent="ink"
+            />
+          );
+        })}
+      </div>
+      <div className="mt-4 grid gap-2 sm:grid-cols-3">
+        {personal.map(([icon, label, value]) => (
+          <div key={label} className="rounded-xl bg-paper-soft p-3">
+            <p className="flex items-center gap-1.5 text-xs font-semibold text-ink-faint">
+              <Icon name={icon} size={14} /> {label}
+            </p>
+            <p className="mt-1 text-sm font-medium text-ink">{value ?? tr('common.unavailable')}</p>
+          </div>
+        ))}
       </div>
     </>
   );

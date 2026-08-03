@@ -19,7 +19,7 @@ import {
   computeSentimentScore,
 } from './ranking';
 import { computeTrendingSignals, trendDirection } from './trending';
-import type { TrendingEntry, TopRatedEntry } from './types';
+import type { TrendingEntry, TopRatedEntry, ElectionCandidateRatingEntry } from './types';
 import { getDb, isFirestoreConfigured } from './firebase-admin';
 import { memVoteAggregates } from './votes';
 import { datasetLastUpdated } from './format';
@@ -36,6 +36,7 @@ import seedCriminalCases from '@/data/seed/criminal_cases.json';
 import seedElections from '@/data/seed/elections.json';
 import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat } from './types';
 import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type PoliticianContact, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
+import { candidateRatingId } from './elections';
 
 // Affidavit case detail, keyed by person. Seed-only (updated via
 // `dm fetch-criminal-cases` + redeploy) - a person page embeds just its own
@@ -115,11 +116,76 @@ export async function getElectionsForConstituency(
  * `vote_aggregates` collection under a `cand:` id namespace, so dedupe,
  * rate-limiting and Turnstile all apply unchanged - but because
  * buildIndex() computes `sentiment` from politicians.json alone, a candidate
- * can never leak into the rankings, the trending list or /api/ratings.
+ * can never leak into the national leader rankings or generic leader lists.
+ * They can appear only in the rating lists for their own election seat.
  */
 export async function getCandidateSentiment(ratingId: string): Promise<SentimentScore> {
   const idx = await getIndex();
   return computeSentimentScore(ratingId, idx.voteAggregates.get(ratingId));
+}
+
+/**
+ * Public candidate ratings scoped to ONE ballot. This deliberately joins only
+ * the candidates stored on that seat, rather than making `cand:` ids eligible
+ * for the national leader lists. It reuses the index's cached vote aggregates,
+ * so one request costs no additional Firestore reads.
+ */
+export async function getElectionCandidateRatings(
+  seatSlug: string,
+  mode: 'trending' | 'top',
+  limit = 5,
+): Promise<ElectionCandidateRatingEntry[]> {
+  const found = await getElectionSeat(seatSlug);
+  if (!found) return [];
+
+  const idx = await getIndex();
+  // A linked office-holder is rated on their canonical person page. Including
+  // them here would imply a second, candidate-specific score that cannot be
+  // cast, so only standalone candidate pages participate.
+  const candidates = found.seat.candidates.filter(
+    (candidate) =>
+      (candidate.status === 'contesting' || candidate.status === 'accepted') &&
+      !candidate.politicianId,
+  );
+  const byRatingId = new Map(candidates.map((candidate) => [candidateRatingId(seatSlug, candidate.slug), candidate]));
+  const toEntry = (
+    candidate: ElectionCandidate,
+    score: SentimentScore,
+    extra: Pick<ElectionCandidateRatingEntry, 'recent_votes' | 'direction'> = {},
+  ): ElectionCandidateRatingEntry => ({
+    candidate_slug: candidate.slug,
+    name: candidate.name,
+    party: candidate.party,
+    photo_url: candidate.photo_path,
+    rating_mean: score.raw_mean,
+    total_votes: score.n_votes,
+    ...extra,
+  });
+
+  if (mode === 'trending') {
+    const signals = computeTrendingSignals(
+      [...idx.voteAggregates.values()].filter((aggregate) => byRatingId.has(aggregate.politician_id)),
+    );
+    return signals.slice(0, limit).flatMap((signal) => {
+      const candidate = byRatingId.get(signal.politician_id);
+      if (!candidate) return [];
+      const score = computeSentimentScore(signal.politician_id, idx.voteAggregates.get(signal.politician_id));
+      const direction = trendDirection(signal.recent_mean, score.raw_mean);
+      return [toEntry(candidate, score, { recent_votes: signal.recent_votes, ...(direction ? { direction } : {}) })];
+    });
+  }
+
+  return candidates
+    .map((candidate) => ({ candidate, score: computeSentimentScore(candidateRatingId(seatSlug, candidate.slug), idx.voteAggregates.get(candidateRatingId(seatSlug, candidate.slug))) }))
+    .filter(({ score }) => score.n_votes > 0 && score.bayesian_mean != null && score.raw_mean != null)
+    .sort(
+      (a, b) =>
+        b.score.bayesian_mean! - a.score.bayesian_mean! ||
+        b.score.n_votes - a.score.n_votes ||
+        a.candidate.slug.localeCompare(b.candidate.slug),
+    )
+    .slice(0, limit)
+    .map(({ candidate, score }) => toEntry(candidate, score));
 }
 
 export interface Index {

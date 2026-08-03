@@ -13,6 +13,7 @@ import { PageHero, SectionCard, Chip } from '@/components/ui';
 import { Reveal } from '@/components/motion';
 import Icon from '@/components/Icon';
 import LiveCount from '@/components/LiveCount';
+import ElectionRatingsTabs from '@/components/ElectionRatingsTabs';
 import { CandidateRow, CountCaveat, CountRow, PhaseChip, When } from '@/components/ElectionBits';
 import type { ElectionCandidate, ElectionEvent, ElectionSeat, NominationStatus } from '@/lib/types';
 
@@ -78,6 +79,15 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
   const resultRows = result
     ? [...result.rows].sort((a, b) => Number(!!a.isNota) - Number(!!b.isNota) || b.total_votes - a.total_votes)
     : [];
+  // Only these four static fields cross the server/client boundary for a live
+  // count. It makes result rows recognisable without sending affidavit records
+  // or adding a request to a time-sensitive page.
+  const countCandidates = seat.candidates.map(({ slug, name, name_native, photo_path }) => ({ slug, name, name_native, photo_path }));
+  const candidateBySlug = new Map(countCandidates.map((candidate) => [candidate.slug, candidate]));
+  const countIsPrimaryCandidateList = Boolean(result) || phase === 'counting';
+  // Ratings are opinion measures: do not mount a ranking surface during quiet
+  // or polling hours. Individual votes follow the same legal guard.
+  const showCandidateRatings = phase !== 'silence' && phase !== 'polling';
 
   return (
     <>
@@ -123,7 +133,9 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
         }
       />
 
-      <div className="mx-auto max-w-content space-y-6 px-4 py-6">
+      <div className="mx-auto max-w-content px-4 py-6">
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(22rem,0.85fr)] xl:items-start">
+          <div className="space-y-6">
         {/* The count comes first once there is one - it is why anyone is here
             today. Before counting day this whole block is absent rather than an
             empty shell promising numbers that do not exist. */}
@@ -134,7 +146,10 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
                 {tr('elections.totalVotes', { n: (result.total_votes ?? 0).toLocaleString('en-IN') })}
                 {result.margin != null && <> · {tr('elections.marginWon', { n: result.margin.toLocaleString('en-IN') })}</>}
               </p>
-              <ul className="space-y-2">
+              {/* The page owns the desktop two-pane split. Keeping result rows
+                  single-column inside their pane protects long names and
+                  exact totals without changing the Commission's vote order. */}
+              <ul className="grid grid-cols-1 gap-2">
                 {resultRows.map((row, i) => (
                   <CountRow
                     key={`${row.name}-${i}`}
@@ -143,6 +158,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
                     isLeader={i === 0 && !row.isNota}
                     final
                     tr={tr}
+                    candidate={row.candidateSlug ? candidateBySlug.get(row.candidateSlug) : undefined}
                   />
                 ))}
               </ul>
@@ -168,6 +184,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
                 expectedRows={seat.candidates.filter((c) => c.status === 'contesting').length}
                 officialUrl={officialUrl}
                 countingDate={event.schedule.countingDate}
+                candidates={countCandidates}
               />
             </SectionCard>
           </Reveal>
@@ -194,23 +211,36 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
           )
         )}
 
-        {/* Candidate lists can be much taller than a date card. Keep these
-            sections in one full-width reading flow instead of marooning a
-            short sidebar beside dozens of candidates. */}
-        <div className="space-y-6">
+          {/* Candidate records continue below the live rows in the wider pane.
+              Supporting facts live in the second pane rather than creating a
+              separate, empty column. */}
           <Reveal delay={60}>
-            <CandidateGroups seat={seat} tr={tr} />
+            <CandidateGroups seat={seat} tr={tr} hideBallotCandidates={countIsPrimaryCandidateList} />
           </Reveal>
-          <Reveal delay={100}>
-            <ScheduleCard event={event} tr={tr} locale={locale} />
-          </Reveal>
-          {!result && phase !== 'counting' && officialUrl && (
+          </div>
+          <aside className="space-y-6 xl:sticky xl:top-24">
+            {showCandidateRatings && (
+              <Reveal delay={100}>
+                <SectionCard
+                  title={tr('elections.candidateRatingsTitle')}
+                  subtitle={tr('elections.candidateRatingsHelp')}
+                  icon="star"
+                >
+                  <ElectionRatingsTabs seatSlug={seat.slug} />
+                </SectionCard>
+              </Reveal>
+            )}
             <Reveal delay={140}>
-              <SectionCard title={tr('elections.sourceEci')} icon="link">
-                <CountCaveat sourceUrl={officialUrl} tr={tr} />
-              </SectionCard>
+              <ScheduleCard event={event} tr={tr} locale={locale} />
             </Reveal>
-          )}
+            {!result && phase !== 'counting' && officialUrl && (
+              <Reveal delay={180}>
+                <SectionCard title={tr('elections.sourceEci')} icon="link">
+                  <CountCaveat sourceUrl={officialUrl} tr={tr} />
+                </SectionCard>
+              </Reveal>
+            )}
+          </aside>
         </div>
       </div>
     </>
@@ -220,42 +250,75 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
 function CandidateGroups({
   seat,
   tr,
+  hideBallotCandidates = false,
 }: {
   seat: ElectionSeat;
   tr: (k: string, v?: Record<string, string | number>) => string;
+  /** The count/result already contains the photo-led ballot candidate cards. */
+  hideBallotCandidates?: boolean;
 }) {
   const groups = GROUPS.map((g) => ({
     ...g,
-    people: seat.candidates.filter((c) => c.status === g.status || (g.status === 'contesting' && c.status === 'accepted')),
+    people: hideBallotCandidates && g.status === 'contesting'
+      ? []
+      : seat.candidates.filter((c) => c.status === g.status || (g.status === 'contesting' && c.status === 'accepted')),
   })).filter((g) => g.people.length > 0);
+
+  if (groups.length === 0) return null;
 
   return (
     <SectionCard
-      title={tr('elections.candidatesTitle')}
-      subtitle={tr('elections.candidatesHelp', { n: seat.candidates.length })}
+      title={tr(hideBallotCandidates ? 'elections.otherNominationsTitle' : 'elections.candidatesTitle')}
+      subtitle={tr(hideBallotCandidates ? 'elections.otherNominationsHelp' : 'elections.candidatesHelp', { n: seat.candidates.length })}
       icon="people"
     >
-      <div className="space-y-6">
-        {groups.map((g) => (
-          <div key={g.status}>
-            <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-ink-faint">{tr(g.titleKey)}</h3>
-              <span className="text-xs text-ink-faint">{g.people.length}</span>
-            </div>
-            <p className="mb-2.5 text-sm text-ink-soft">{tr(g.helpKey)}</p>
-            <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-              {g.people.map((c: ElectionCandidate) => (
-                <CandidateRow key={c.slug} candidate={c} seatSlug={seat.slug} tr={tr} />
-              ))}
-            </div>
+      {hideBallotCandidates ? (
+        <details className="group rounded-2xl border border-line bg-paper-soft">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-brand">
+            {tr('elections.otherNominationsShow', { n: groups.reduce((total, group) => total + group.people.length, 0) })}
+            <Icon name="chevron" size={16} className="shrink-0 transition group-open:rotate-180" />
+          </summary>
+          <div className="border-t border-line p-4">
+            <CandidateGroupList groups={groups} seatSlug={seat.slug} tr={tr} />
           </div>
-        ))}
-      </div>
+        </details>
+      ) : (
+        <CandidateGroupList groups={groups} seatSlug={seat.slug} tr={tr} />
+      )}
       <p className="mt-4 flex items-start gap-1.5 text-xs text-ink-faint">
         <Icon name="info" size={13} className="mt-0.5 shrink-0" />
         {tr('elections.notRanked')}
       </p>
     </SectionCard>
+  );
+}
+
+function CandidateGroupList({
+  groups,
+  seatSlug,
+  tr,
+}: {
+  groups: { status: NominationStatus; titleKey: string; helpKey: string; people: ElectionCandidate[] }[];
+  seatSlug: string;
+  tr: (k: string, v?: Record<string, string | number>) => string;
+}) {
+  return (
+    <div className="space-y-6">
+      {groups.map((group) => (
+        <div key={group.status}>
+          <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-ink-faint">{tr(group.titleKey)}</h3>
+            <span className="text-xs text-ink-faint">{group.people.length}</span>
+          </div>
+          <p className="mb-2.5 text-sm text-ink-soft">{tr(group.helpKey)}</p>
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+            {group.people.map((candidate) => (
+              <CandidateRow key={candidate.slug} candidate={candidate} seatSlug={seatSlug} tr={tr} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

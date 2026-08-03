@@ -19,7 +19,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useI18n } from '@/lib/i18n/provider';
 import { observe } from '@/components/motion';
 import Icon from '@/components/Icon';
-import { CountCaveat, CountRow } from '@/components/ElectionBits';
+import { CountCaveat, CountRow, type CountCandidate } from '@/components/ElectionBits';
 import type { ElectionResultRow, LiveCountSeat } from '@/lib/types';
 
 const POLL_MS = 60_000;
@@ -52,6 +52,7 @@ export default function LiveCount({
   expectedRows,
   officialUrl,
   countingDate,
+  candidates,
 }: {
   eventId: string;
   seatSlug: string;
@@ -59,6 +60,9 @@ export default function LiveCount({
   expectedRows: number;
   officialUrl?: string;
   countingDate: string;
+  /** Static roster details only - photos and names already ship with the seat
+   * page, so enriching live rows does not add another request. */
+  candidates: CountCandidate[];
 }) {
   const { t } = useI18n();
   const [state, setState] = useState<State>({ kind: 'idle' });
@@ -126,6 +130,7 @@ export default function LiveCount({
   }, [shouldPoll, load]);
 
   const seat = state.kind === 'ready' ? state.payload.seats?.find((s) => s.seatSlug === seatSlug) : undefined;
+  const candidatesBySlug = new Map(candidates.map((candidate) => [candidate.slug, candidate]));
 
   return (
     <div ref={rootRef}>
@@ -175,7 +180,10 @@ export default function LiveCount({
             </div>
           )}
 
-          <ul className="space-y-2">
+          {/* The page gives this component one of two desktop panes. Keep rows
+              in a single column inside that pane so long names, party labels
+              and exact vote totals never fight for horizontal space. */}
+          <ul className="grid grid-cols-1 gap-2">
             {sortRows(seat.rows).map((row, i) => (
               <CountRow
                 key={`${row.name}-${i}`}
@@ -184,6 +192,7 @@ export default function LiveCount({
                 isLeader={i === 0 && !row.isNota}
                 final={false}
                 tr={t}
+                candidate={row.candidateSlug ? candidatesBySlug.get(row.candidateSlug) : undefined}
               />
             ))}
           </ul>
