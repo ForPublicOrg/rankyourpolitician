@@ -9,33 +9,35 @@ import Icon from './Icon';
 
 const FLAG_SOURCE_URL = 'https://knowindia.india.gov.in/my-india-my-pride/indian-tricolor.php';
 const SPOKES = Array.from({ length: 24 }, (_, i) => i * 15);
+type FlagPart = 'structure' | 'saffron' | 'white' | 'green' | 'chakra';
+
 const WIND_FRAMES = {
   saffron: [
     'M0 0H300V66.667C250 64 215 69 170 66.667C120 64 60 69 0 66.667Z',
-    'M0 0H300V66.667C250 70 215 63 170 66.667C120 70 60 63 0 66.667Z',
-    'M0 0H300V66.667C250 62 215 68 170 66.667C120 62 60 68 0 66.667Z',
+    'M0 0H300V66.667C250 68.2 215 65.1 170 66.667C120 68.2 60 65.1 0 66.667Z',
+    'M0 0H300V66.667C250 64.7 215 68.1 170 66.667C120 64.7 60 68.1 0 66.667Z',
     'M0 0H300V66.667C250 64 215 69 170 66.667C120 64 60 69 0 66.667Z',
   ],
   white: [
     'M0 66.667C60 69 120 64 170 66.667C215 69 250 64 300 66.667V133.333C250 130 215 136 170 133.333C120 130 60 136 0 133.333Z',
-    'M0 66.667C60 63 120 70 170 66.667C215 63 250 70 300 66.667V133.333C250 137 215 129 170 133.333C120 137 60 129 0 133.333Z',
-    'M0 66.667C60 68 120 62 170 66.667C215 68 250 62 300 66.667V133.333C250 129 215 137 170 133.333C120 129 60 137 0 133.333Z',
+    'M0 66.667C60 65.1 120 68.2 170 66.667C215 65.1 250 68.2 300 66.667V133.333C250 135.2 215 131.3 170 133.333C120 135.2 60 131.3 0 133.333Z',
+    'M0 66.667C60 68.1 120 64.7 170 66.667C215 68.1 250 64.7 300 66.667V133.333C250 131.2 215 135.4 170 133.333C120 131.2 60 135.4 0 133.333Z',
     'M0 66.667C60 69 120 64 170 66.667C215 69 250 64 300 66.667V133.333C250 130 215 136 170 133.333C120 130 60 136 0 133.333Z',
   ],
   green: [
     'M0 133.333C60 136 120 130 170 133.333C215 136 250 130 300 133.333V200H0Z',
-    'M0 133.333C60 129 120 137 170 133.333C215 129 250 137 300 133.333V200H0Z',
-    'M0 133.333C60 137 120 129 170 133.333C215 137 250 129 300 133.333V200H0Z',
+    'M0 133.333C60 131.3 120 135.2 170 133.333C215 131.3 250 135.2 300 133.333V200H0Z',
+    'M0 133.333C60 135.4 120 131.2 170 133.333C215 135.4 250 131.2 300 133.333V200H0Z',
     'M0 133.333C60 136 120 130 170 133.333C215 136 250 130 300 133.333V200H0Z',
   ],
 };
 
-function WindBand({ color, frames }: { color: string; frames: readonly string[] }) {
+function WindBand({ color, frames, part }: { color: string; frames: readonly string[]; part: FlagPart }) {
   return (
-    <path d={frames[0]} fill={color}>
+    <path className={`india-flag-band india-flag-band--${part}`} d={frames[0]} fill={color}>
       <animate
         attributeName="d"
-        dur="4.8s"
+        dur="7.2s"
         repeatCount="indefinite"
         calcMode="spline"
         keyTimes="0;0.32;0.68;1"
@@ -46,7 +48,17 @@ function WindBand({ color, frames }: { color: string; frames: readonly string[] 
   );
 }
 
-function NationalFlag({ className, label, wind = false }: { className?: string; label?: string; wind?: boolean }) {
+function NationalFlag({
+  className,
+  label,
+  wind = false,
+  activePart,
+}: {
+  className?: string;
+  label?: string;
+  wind?: boolean;
+  activePart?: FlagPart | null;
+}) {
   const titleId = useId();
   const sheenId = `india-flag-sheen-${useId().replace(/:/g, '')}`;
 
@@ -63,25 +75,27 @@ function NationalFlag({ className, label, wind = false }: { className?: string; 
         <defs>
           <linearGradient id={sheenId} x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stopColor="#fff" stopOpacity="0" />
-            <stop offset="0.46" stopColor="#fff" stopOpacity="0.18" />
-            <stop offset="0.58" stopColor="#000080" stopOpacity="0.08" />
+            <stop offset="0.2" stopColor="#000" stopOpacity="0.07" />
+            <stop offset="0.36" stopColor="#fff" stopOpacity="0.2" />
+            <stop offset="0.56" stopColor="#000080" stopOpacity="0.07" />
+            <stop offset="0.76" stopColor="#fff" stopOpacity="0.14" />
             <stop offset="1" stopColor="#fff" stopOpacity="0" />
           </linearGradient>
         </defs>
       )}
       {/* The Flag Code specifies three equal horizontal bands in a 3:2 flag. */}
-      <g className={wind ? 'india-flag-wind' : undefined}>
+      <g className={wind ? 'india-flag-wind' : undefined} data-highlight={activePart || undefined}>
         {wind ? (
           <>
-            <WindBand color="#FF9933" frames={WIND_FRAMES.saffron} />
-            <WindBand color="#FFFFFF" frames={WIND_FRAMES.white} />
-            <WindBand color="#138808" frames={WIND_FRAMES.green} />
+            <WindBand color="#FF9933" frames={WIND_FRAMES.saffron} part="saffron" />
+            <WindBand color="#FFFFFF" frames={WIND_FRAMES.white} part="white" />
+            <WindBand color="#138808" frames={WIND_FRAMES.green} part="green" />
           </>
         ) : (
           <>
-            <rect width="300" height="66.6667" fill="#FF9933" />
-            <rect y="66.6667" width="300" height="66.6667" fill="#FFFFFF" />
-            <rect y="133.3333" width="300" height="66.6667" fill="#138808" />
+            <rect className="india-flag-band india-flag-band--saffron" width="300" height="66.6667" fill="#FF9933" />
+            <rect className="india-flag-band india-flag-band--white" y="66.6667" width="300" height="66.6667" fill="#FFFFFF" />
+            <rect className="india-flag-band india-flag-band--green" y="133.3333" width="300" height="66.6667" fill="#138808" />
           </>
         )}
         {/* The Chakra's diameter matches the white band. Each radial is one of its 24 spokes. */}
@@ -91,7 +105,7 @@ function NationalFlag({ className, label, wind = false }: { className?: string; 
             <line key={angle} x1="150" y1="100" x2="150" y2="67.5" transform={`rotate(${angle} 150 100)`} />
           ))}
         </g>
-        <circle cx="150" cy="100" r="1.85" fill="#000080" />
+        <circle className="india-flag-chakra-core" cx="150" cy="100" r="1.85" fill="#000080" />
       </g>
       {wind && <rect className="india-flag-wind__sheen" width="300" height="200" fill={`url(#${sheenId})`} />}
     </svg>
@@ -99,7 +113,7 @@ function NationalFlag({ className, label, wind = false }: { className?: string; 
 }
 
 type Detail = {
-  key: 'structure' | 'saffron' | 'white' | 'green' | 'chakra';
+  key: FlagPart;
   tone: string;
 };
 
@@ -115,11 +129,15 @@ export default function IndiaFlagExplainer() {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [selectedPart, setSelectedPart] = useState<FlagPart | null>(null);
+  const [previewPart, setPreviewPart] = useState<FlagPart | null>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
 
   function close() {
     setOpen(false);
+    setPreviewPart(null);
+    setSelectedPart(null);
     window.requestAnimationFrame(() => triggerRef.current?.focus());
   }
 
@@ -159,6 +177,7 @@ export default function IndiaFlagExplainer() {
         aria-label={t('home.flag.open')}
       >
         <span className="india-flag-trigger__frame">
+          <span className="india-flag-trigger__mast" aria-hidden="true" />
           <NationalFlag className="india-flag-trigger__art" wind />
         </span>
         <span className="india-flag-trigger__label">{t('home.flag.label')}</span>
@@ -197,13 +216,16 @@ export default function IndiaFlagExplainer() {
 
             <div className="india-flag-dialog__content">
               <div className="india-flag-stage">
-                <div className="india-flag-stage__signal" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <div className="india-flag-stage__flag">
-                  <NationalFlag className="india-flag-stage__art" label={t('home.flag.flagAria')} wind />
+                <div className="india-flag-stage__flag-wrap">
+                  <span className="india-flag-stage__mast" aria-hidden="true"><span /></span>
+                  <div className="india-flag-stage__flag">
+                    <NationalFlag
+                      className="india-flag-stage__art"
+                      label={t('home.flag.flagAria')}
+                      wind
+                      activePart={previewPart || selectedPart}
+                    />
+                  </div>
                 </div>
                 <dl className="india-flag-measures" aria-label={t('home.flag.structureTitle')}>
                   <div>
@@ -228,20 +250,34 @@ export default function IndiaFlagExplainer() {
                 <p className="mt-3 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
                   {t('home.flag.intro')}
                 </p>
+                <p className="india-flag-interaction-hint">
+                  <span aria-hidden="true" /> {t('home.flag.interactionHint')}
+                </p>
 
                 <div className="india-flag-details" aria-label={t('home.flag.anatomyTitle')}>
                   {DETAILS.map((detail, index) => (
-                    <article
+                    <button
+                      type="button"
                       key={detail.key}
                       className={`india-flag-detail ${detail.tone}`}
+                      data-active={(previewPart || selectedPart) === detail.key || undefined}
+                      aria-pressed={selectedPart === detail.key}
                       style={{ '--flag-delay': `${120 + index * 85}ms` } as CSSProperties}
+                      onPointerEnter={() => setPreviewPart(detail.key)}
+                      onPointerLeave={() => setPreviewPart(null)}
+                      onFocus={() => setPreviewPart(detail.key)}
+                      onBlur={() => setPreviewPart(null)}
+                      onClick={() => {
+                        setPreviewPart(null);
+                        setSelectedPart((current) => current === detail.key ? null : detail.key);
+                      }}
                     >
                       <span className="india-flag-detail__mark" aria-hidden="true" />
                       <div>
                         <h3>{t(`home.flag.details.${detail.key}.title`)}</h3>
                         <p>{t(`home.flag.details.${detail.key}.body`)}</p>
                       </div>
-                    </article>
+                    </button>
                   ))}
                 </div>
               </div>
