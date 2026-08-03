@@ -237,7 +237,14 @@ export async function fetchConstituencyResultViaReader(
   onFailure?: (failure: EciFetchFailure) => void,
 ): Promise<ParsedConstituency | null> {
   const sourceUrl = constituencyResultUrl(base, eciStateCode, acNo);
-  const url = `https://r.jina.ai/http://${sourceUrl.replace(/^https?:\/\//, '')}`;
+  // Reader caches by source URL. ECI itself declares the table no-cache, but
+  // without a changing key the relay can still hand us an earlier counting
+  // round for several minutes. A half-minute bucket is stable across the
+  // three seat requests in one refresh yet guarantees the next scheduled
+  // poll asks for the current official table.
+  const cacheBucket = Math.floor(Date.now() / 30_000);
+  const readerSourceUrl = `${sourceUrl}?live=${cacheBucket}`;
+  const url = `https://r.jina.ai/http://${readerSourceUrl.replace(/^https?:\/\//, '')}`;
   const startedAt = Date.now();
   try {
     const res = await fetch(url, {
