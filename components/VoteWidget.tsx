@@ -46,12 +46,42 @@ export default function VoteWidget({
   politicianId,
   personName,
   initial,
+  lockWindow,
 }: {
   politicianId: string;
   personName: string;
   initial: Sentiment;
+  /**
+   * Epoch-ms window in which this subject may not be rated OR have its rating
+   * shown. Used for election candidates: RP Act 1951 s.126(1)(b) keeps the 48
+   * hours before a poll closes quiet, and s.126A bans publishing an opinion
+   * survey about an election while it is running. A star rating is an opinion
+   * survey, so during the window the form and the tally both disappear behind
+   * an explanation.
+   *
+   * Evaluated in the BROWSER, because the page HTML is ISR-cached and could be
+   * a week old - a server-rendered decision here would be wrong exactly when it
+   * matters. POST /api/vote enforces the same window server-side; this is the
+   * half that stops us inviting a vote we would then refuse.
+   */
+  lockWindow?: { from: number; to: number };
 }) {
   const { t } = useI18n();
+  // Assume locked until the browser says otherwise: an SSR/no-JS render of a
+  // page inside the window must not flash the tally before hydration.
+  const [locked, setLocked] = useState<boolean>(!!lockWindow);
+  useEffect(() => {
+    if (!lockWindow) {
+      setLocked(false);
+      return;
+    }
+    const check = () => setLocked(Date.now() >= lockWindow.from && Date.now() <= lockWindow.to);
+    check();
+    // The window opens and closes on a clock, not on a navigation - re-check so
+    // a page left open through the poll close unlocks on its own.
+    const id = setInterval(check, 60_000);
+    return () => clearInterval(id);
+  }, [lockWindow?.from, lockWindow?.to]); // eslint-disable-line react-hooks/exhaustive-deps
   const [sentiment, setSentiment] = useState<Sentiment>(initial);
   const [selected, setSelected] = useState<number | null>(null);
   // The rating this visitor has already submitted (restored from localStorage on
@@ -197,6 +227,27 @@ export default function VoteWidget({
       : sentiment.votes === 1
         ? t('ranking.voteOne')
         : t('ranking.votes', { n: sentiment.votes });
+
+  // Inside the silence window nothing about opinion is shown at all - not the
+  // form, not the average, not the vote count. Hiding only the form would still
+  // publish an opinion measure about a live candidate, which is the thing the
+  // law is about.
+  if (locked) {
+    return (
+      <div className="mt-4 rounded-2xl border border-dashed border-line bg-paper-soft p-4">
+        <p className="flex items-center gap-2 text-sm font-bold text-ink">
+          <span className="inline-grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-paper-sink text-ink-soft">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <rect x="4" y="10" width="16" height="10" rx="2" />
+              <path d="M8 10V7a4 4 0 018 0v3" strokeLinecap="round" />
+            </svg>
+          </span>
+          {t('elections.ratingLockedTitle')}
+        </p>
+        <p className="mt-1.5 text-sm text-ink-soft">{t('elections.ratingLockedBody')}</p>
+      </div>
+    );
+  }
 
   return (
     <div>

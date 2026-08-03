@@ -7,7 +7,7 @@ export type IconName =
   | 'info' | 'warn' | 'check' | 'megaphone' | 'cap' | 'briefcase' | 'calendar'
   | 'link' | 'sparkle' | 'scales' | 'flag' | 'layers' | 'x'
   | 'map' | 'compass' | 'building' | 'phone' | 'mail' | 'external' | 'network' | 'grid'
-  | 'code' | 'sun' | 'moon' | 'share' | 'menu';
+  | 'code' | 'sun' | 'moon' | 'share' | 'menu' | 'ballot';
 
 const P: Record<IconName, React.ReactNode> = {
   search: <><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></>,
@@ -50,6 +50,9 @@ const P: Record<IconName, React.ReactNode> = {
   moon: <><path d="M12 3a6 6 0 009 9 9 9 0 11-9-9z" /></>,
   share: <><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v12m-4-4l4-4 4 4" /></>,
   menu: <><path d="M4 7h16M4 12h16M4 17h16" /></>,
+  // A ballot slipping into a box - the one image every Indian voter recognises,
+  // and readable at 16px where a tiny EVM would not be.
+  ballot: <><path d="M4 13h16v7a1 1 0 01-1 1H5a1 1 0 01-1-1v-7z" /><path d="M8 13V4a1 1 0 011-1h6a1 1 0 011 1v9" /><path d="M10.5 8l1.5 1.5L15 6.5" /></>,
 };
 
 export default function Icon({

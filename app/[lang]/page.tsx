@@ -2,7 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getI18n, type LangParams } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
-import { getNationalRanking, getStates, getDatasetMeta, getCentralGovernment, getNationalStats } from '@/lib/data';
+import { getNationalRanking, getStates, getDatasetMeta, getCentralGovernment, getNationalStats, getElections } from '@/lib/data';
+import { isActivePhase, phaseOf } from '@/lib/elections';
 import { buildStatePaths } from '@/lib/geo';
 import SearchBox from '@/components/SearchBox';
 import GeoMap, { type GeoMapShape } from '@/components/GeoMap';
@@ -38,6 +39,13 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
     getNationalStats(),
   ]);
   const paths = buildStatePaths();
+
+  // The running election, if there is one. Seed lookup, no I/O, no Firestore -
+  // and nothing renders when the answer is "none", which is most of the year.
+  const liveElection = (await getElections()).find((e) => isActivePhase(phaseOf(e))) ?? null;
+  const livePhase = liveElection ? phaseOf(liveElection) : null;
+  // One seat goes straight through; several land on the hub, which lists them.
+  const liveSeat = liveElection?.seats.length === 1 ? liveElection.seats[0] : null;
   const countByCode = new Map(states.map((s) => [s.stateCode, s.count]));
   const maxCount = Math.max(1, ...states.map((s) => s.count));
   const shapes: GeoMapShape[] = paths.map((p) => {
@@ -160,6 +168,39 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
       </section>
 
       <div className="mx-auto max-w-content px-4 py-6">
+        {/* An election strip, ONLY while one is actually running. This is news,
+            not a tour of the site's features: when nothing is being voted on it
+            renders nothing at all, and the page is exactly as it was. */}
+        {liveElection && (
+          <Reveal as="section" className="mb-6">
+            <Link
+              href={liveSeat ? `/elections/${liveSeat.slug}` : '/elections'}
+              className="pressable flex flex-wrap items-center gap-x-4 gap-y-2 rounded-3xl border border-brand/25 bg-gradient-to-r from-brand-soft/60 to-white/40 p-4 transition hover:border-brand/50 hover:shadow-lift sm:p-5"
+            >
+              <span className="inline-grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand">
+                <Icon name="ballot" size={22} />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-bold text-accent-ink">
+                    {tr(`elections.phase.${livePhase === 'awaiting-count' ? 'awaitingCount' : livePhase}`)}
+                  </span>
+                  <span className="text-xs text-ink-faint">{tr('elections.sourceEci')}</span>
+                </span>
+                <span className="mt-1 block truncate font-display text-lg font-extrabold tracking-tight text-ink">
+                  {liveElection.title}
+                </span>
+                <span className="mt-0.5 block text-sm text-ink-soft">
+                  {liveElection.seats.map((s) => s.constituencyName).join(' · ')}
+                </span>
+              </span>
+              <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-brand">
+                {tr('elections.seeSeat')} <Icon name="arrow" size={15} />
+              </span>
+            </Link>
+          </Reveal>
+        )}
+
         {/* A quiet one-line civic creed - kept compact so it informs without
             eating space. */}
         <Reveal as="section" className="mb-6">

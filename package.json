@@ -41,6 +41,7 @@
     "express": "^4.21.2",
     "mapshaper": "^0.6.102",
     "postcss": "^8.4.49",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"

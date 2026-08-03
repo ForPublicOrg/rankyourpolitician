@@ -229,6 +229,20 @@ async function main() {
       await import('./import-workflow-output');
       break;
     }
+    // Elections. Each is a dry run unless --apply is passed - and on Windows npm
+    // swallows the flag, so the help below tells you to bypass npm for those.
+    case 'import-elections':
+      await import('./import-elections');
+      break;
+    case 'enrich-candidates':
+      await import('./enrich-candidates');
+      break;
+    case 'fetch-election-results':
+      await import('./fetch-election-results');
+      break;
+    case 'link-candidates':
+      await import('./link-candidates');
+      break;
     default:
       console.log(`rankyourpolitician data manager
 
@@ -242,6 +256,13 @@ Commands:
   npm run dm -- fetch-criminal-cases  Per-case affidavit detail behind every declared criminal case
   npm run dm -- import <file.json>  Rebuild seed from a sourcing-workflow output
   npm run dm:dashboard              Open the local review dashboard (http://localhost:4321)
+
+Elections (dry run unless --apply; npm swallows the flag on Windows, so pass it
+straight to tsx: npx tsx tools/data-manager/<script>.ts --apply)
+  import-elections        Pull every nomination for the elections listed in elections-shared.ts
+  enrich-candidates       Attach each candidate's declared assets / cases / education from their affidavit
+  fetch-election-results  Freeze the Commission's declared count into the seed once counting ends
+  link-candidates         Link a candidate to their profile once they hold office (stops a second ratable page)
 `);
   }
 }

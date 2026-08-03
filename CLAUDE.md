@@ -52,6 +52,28 @@ obligation - see the legal checklist in README.md).
 - The India map is legally constrained: never swap in GADM/Natural Earth/OSM boundaries
   (README legal checklist).
 
+## 4. Elections have rules of their own
+
+The `/elections` section publishes candidates and counts during a live election, which puts
+it under election law as well as the three rules above.
+
+- **Never invent a vote count.** Live numbers come from ECI's own results pages via
+  `/api/election-live`, are labelled as ECI's, and carry ECI's own "not final until Form 20"
+  caveat. A count we cannot read is shown as unavailable with a link to the Commission -
+  never as a zero, never interpolated, never projected.
+- **Rating a candidate is an opinion survey**, so it closes 48 hours before the poll closes
+  and reopens 30 minutes after (RP Act 1951 s.126(1)(b) and s.126A). The window is computed
+  from the cited schedule in `lib/elections.ts`, enforced in `app/api/vote`, and mirrored in
+  `VoteWidget` - during it the form *and* the tally disappear. Do not add any other
+  opinion-shaped UI to a candidate without the same gate.
+- **One human, one ratable page.** A candidate with a `politicianId` redirects to
+  `/person/{id}` and is not separately ratable. Two ratable pages for one person let a single
+  visitor rate them twice - this repo has shipped that bug before. `dm validate` enforces it.
+- **Show every nomination, not just the winners** - contesting, withdrawn and rejected -
+  in the Commission's own order. Ordering candidates ourselves would read as a ranking.
+- ECI lists nomination *papers*, not people (one candidate may file up to four). Fold papers
+  into people before storing, or every count on the page is wrong.
+
 ## Commands
 
 ```bash
@@ -60,6 +82,12 @@ npm run typecheck    # required before every PR
 npm run build        # prebuild regenerates public/*.json payloads (hash-gated: skips when data/tools/lib unchanged), then next build
 npm run dm -- validate            # data changes must pass this
 npm run dm -- backfill-trending   # trending bucket rebuild (dry run; --apply writes)
+
+# Elections. Add the event to tools/data-manager/elections-shared.ts, then:
+npx tsx tools/data-manager/import-elections.ts --apply        # every nomination, from ECI
+npx tsx tools/data-manager/enrich-candidates.ts --apply       # affidavit detail, from MyNeta
+npx tsx tools/data-manager/fetch-election-results.ts --apply  # freeze the count once counting ends
+npx tsx tools/data-manager/link-candidates.ts --apply         # link a winner to their new profile
 ```
 
 ## Gotchas that have bitten before

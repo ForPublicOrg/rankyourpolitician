@@ -111,6 +111,19 @@ important thing to understand before changing `lib/data.ts`:
     key, and on those pages the fetch fires only when the card scrolls into view. A row
     can carry an up/down arrow - this week's new-vote mean vs the leader's own all-time
     mean, shown only past a 0.2 threshold so noise never draws an arrow.
+  - *Election counts* - the one place this site reads a third party at request time, and
+    only for a few hours. `LiveCount` fetches `GET /api/election-live` on the seat page;
+    that route checks the **counting window** first (07:30 IST on counting day to 02:00 the
+    next morning, derived from the cited ECI schedule) and outside it makes **zero** outbound
+    requests. Inside it, it fetches ECI's per-constituency result pages (~4 KB each),
+    memoises in-process for 45 s and CDN-caches for 60 s - so the whole world costs the
+    Commission about one request a minute per warm region. On any failure it serves the last
+    good snapshot, marked stale with its timestamp, and never a fabricated or zero count.
+    Once counting ends, `npm run dm -- fetch-election-results` freezes the declared table
+    into `data/seed/elections.json` and the page needs no network again, ever.
+    ECI's edge rejects requests that do not carry a full browser header set - the exact set
+    is in `lib/eci-results.ts` with the verification matrix; trimming it silently breaks
+    every count, and only on counting day.
   - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
     `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
     visit. A page that regenerates within ~30 min of a publish can still bake the previous
@@ -137,6 +150,8 @@ app/
     area/[constituency]/      constituency view
     person/[id]/              unified profile (MP/MLA and/or minister, or appointed official)
     rankings/  search/  who/  full rankings, search, "who fixes what"
+    elections/                what is being voted on, everyone who filed papers for each
+      [seat]/[candidate]/     seat, and the count live from the Election Commission
     rights/                   "Know your rights" - the Constitution of India, in plain language
     why-care/                 "Why should I care?" - civic-sense onboarding (non-partisan)
     for-leaders/              "How to be a good leader" - cited wisdom addressed to those in office
@@ -145,6 +160,8 @@ app/
                               transaction; GET: live sentiment for the widget, CDN-cached)
   api/trending/               trending leaders (decayed 7-day rating activity, optional
                               state/district scope, CDN-cached, zero extra Firestore reads)
+  api/election-live/          live counting straight from ECI, but only during the
+                              counting window; zero outbound calls the rest of the year
   api/revalidate/             on-demand cache sweep after `dm publish` (Bearer secret)
   api/health/                 liveness probe (zero Firestore reads)
 middleware.ts                 locale routing: rewrites clean URLs to /{locale}/... from the

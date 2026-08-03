@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
 import { useSearch, addRecentSearch } from '@/lib/use-search';
+import { electionSearchSub } from '@/lib/elections';
 import type { SearchHits } from '@/lib/search-core';
 import { Avatar, SectionCard } from './ui';
 import Icon from './Icon';
@@ -23,7 +24,7 @@ function UrlQSync({ onUrlQ }: { onUrlQ: (q: string) => void }) {
 }
 
 export default function SearchResults() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const router = useRouter();
   const [q, setQ] = useState('');
   const { status, search, ensureIndex } = useSearch(24);
@@ -104,10 +105,11 @@ export default function SearchResults() {
         </div>
       )}
 
-      {/* Ordered BROAD -> NARROW (state, district, constituency, then people) so the
-          page reads the way the country is actually organised, and the way someone
-          drills down to their own representative. A step label on each card makes
-          the ladder explicit rather than implied by position alone. */}
+      {/* Ordered BROAD -> NARROW (state, district, constituency, any election in
+          that constituency, then people) so the page reads the way the country is
+          actually organised, and the way someone drills down to their own
+          representative. A step label on each card makes the ladder explicit
+          rather than implied by position alone. */}
       {hits && hits.total > 0 && (
         <div className="mt-8 space-y-6">
           {hits.states.length > 0 && (
@@ -150,6 +152,29 @@ export default function SearchResults() {
                       <span className="font-medium text-ink">{a.name}</span>
                       <span className="text-xs text-ink-faint">
                         {a.type === 'PC' ? t('search.pcShort') : t('search.acShort')} · {a.state}
+                      </span>
+                      <Icon name="chevron" size={14} className="ml-auto shrink-0 -rotate-90 text-ink-faint" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </SectionCard>
+          )}
+          {hits.elections.length > 0 && (
+            <SectionCard title={t('elections.title')} icon="calendar" eyebrow={t('search.levelElection')}>
+              <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2">
+                {hits.elections.map((e) => (
+                  <li key={e.slug} className="min-w-0">
+                    <Link
+                      href={`/elections/${e.slug}`}
+                      className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-brand-soft/60"
+                    >
+                      <span className="font-medium text-ink">{e.seat}</span>
+                      {/* Never just the state: this row sits beside an /area row
+                          with the identical name, so it has to say out loud that
+                          it is the election and where that election stands. */}
+                      <span className="min-w-0 truncate text-xs text-ink-faint">
+                        {electionSearchSub(e, t, locale)}
                       </span>
                       <Icon name="chevron" size={14} className="ml-auto shrink-0 -rotate-90 text-ink-faint" />
                     </Link>

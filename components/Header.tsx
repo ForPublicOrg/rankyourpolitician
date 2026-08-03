@@ -13,6 +13,7 @@ import Icon, { type IconName } from './Icon';
 // reachable on a phone - nothing is hidden without a fallback.
 const NAV: { href: string; key: string; icon: IconName; show: string }[] = [
   { href: '/india', key: 'nav.central', icon: 'parliament', show: 'hidden xl:flex' },
+  { href: '/elections', key: 'nav.elections', icon: 'ballot', show: 'hidden xl:flex' },
   { href: '/rights', key: 'nav.rights', icon: 'scales', show: 'hidden xl:flex' },
   { href: '/hierarchy', key: 'nav.hierarchy', icon: 'network', show: 'hidden xl:flex' },
   { href: '/who', key: 'nav.accountability', icon: 'megaphone', show: 'hidden xl:flex' },

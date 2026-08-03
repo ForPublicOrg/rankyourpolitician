@@ -1,0 +1,3856 @@
+[
+  {
+    "id": "ac-bye-2026-07",
+    "title": "By-elections to three Assembly constituencies",
+    "kind": "assembly-bye",
+    "authority": "ECI",
+    "schedule": {
+      "notification": "2026-07-06",
+      "nominationLast": "2026-07-13",
+      "scrutiny": "2026-07-14",
+      "withdrawalLast": "2026-07-16",
+      "pollDate": "2026-07-30",
+      "pollOpen": "07:00",
+      "pollClose": "18:00",
+      "countingDate": "2026-08-03",
+      "completeBy": "2026-08-04"
+    },
+    "results_base": "https://results.eci.gov.in/ResultAcByeAugust2026",
+    "affidavit_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+    "source_url": "https://www.eci.gov.in/bye-elections",
+    "source_name": "Election Commission of India - Schedule for bye-elections to 03 Assembly Constituencies of Bihar, Madhya Pradesh and Gujarat",
+    "retrieved_date": "2026-08-03",
+    "seats": [
+      {
+        "slug": "bankipur-br-2026-07",
+        "constituencyId": "ac-br-bankipur",
+        "constituencyName": "Bankipur",
+        "state": "Bihar",
+        "stateCode": "BR",
+        "districts": [
+          "Patna"
+        ],
+        "acNumber": 182,
+        "eci": {
+          "stateCode": "S04",
+          "acNo": 182
+        },
+        "candidates": [
+          {
+            "slug": "abhay-choudhary",
+            "name": "ABHAY CHOUDHARY",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "अभय चौधरी",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Upendra Choudhary",
+            "gender": "male",
+            "age": 26,
+            "photo_path": "/candidates/bankipur-br-2026-07/abhay-choudhary.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹4,07,039 (~4 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Business & Social Work",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971"
+          },
+          {
+            "slug": "anil-das",
+            "name": "ANIL DAS",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "अनिल दास",
+            "filed_on": "9th July, 2026",
+            "relative_name": "BIJENDRA DAS",
+            "gender": "male",
+            "age": 41,
+            "photo_path": "/candidates/bankipur-br-2026-07/anil-das.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹19,70,000 (~19 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Literate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Labour",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955"
+          },
+          {
+            "slug": "ashok-kumar",
+            "name": "ASHOK KUMAR",
+            "party": "Samata Party",
+            "status": "contesting",
+            "party_native": "समता पार्टी",
+            "name_native": "अशोक कुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "RAMESH DAS",
+            "gender": "male",
+            "age": 51,
+            "photo_path": "/candidates/bankipur-br-2026-07/ashok-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹13,96,000 (~13 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Labour",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961"
+          },
+          {
+            "slug": "bagish-nandan",
+            "name": "BAGISH NANDAN",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "वागिश नन्दन",
+            "filed_on": "13th July, 2026",
+            "relative_name": "AWADHESH NANDAN SINGH",
+            "gender": "male",
+            "age": 44,
+            "photo_path": "/candidates/bankipur-br-2026-07/bagish-nandan.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹8,79,000 (~8 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate Professional",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Engineer",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968"
+          },
+          {
+            "slug": "baijnath-prasad",
+            "name": "BAIJNATH PRASAD",
+            "party": "Bharatheeya Jawan Kisan Party",
+            "status": "contesting",
+            "party_native": "भारतीय जवान किसान पार्टी",
+            "name_native": "बैजनाथ प्रसाद",
+            "filed_on": "13th July, 2026",
+            "relative_name": "RAMESHWAR PRASAD",
+            "gender": "male",
+            "age": 61,
+            "photo_path": "/candidates/bankipur-br-2026-07/baijnath-prasad.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹3,84,05,000 (~3 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹8,00,000 (~8 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Social Worker",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965"
+          },
+          {
+            "slug": "binod-ray",
+            "name": "BINOD RAY",
+            "party": "Bihar Justice Party",
+            "status": "contesting",
+            "party_native": "बिहार जस्टिस पार्टी",
+            "name_native": "बिनोद राय",
+            "filed_on": "13th July, 2026",
+            "relative_name": "RAMESH PRASAD RAY",
+            "gender": "male",
+            "age": 44,
+            "photo_path": "/candidates/bankipur-br-2026-07/binod-ray.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹12,47,520 (~12 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹45,000 (~45 Thou)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate Professional",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Advocate & Agriculture",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970"
+          },
+          {
+            "slug": "brajesh-patel",
+            "name": "BRAJESH PATEL",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "ब्रजेश पटेल",
+            "filed_on": "13th July, 2026",
+            "relative_name": "BIRENDRA PRASAD",
+            "gender": "male",
+            "age": 49,
+            "photo_path": "/candidates/bankipur-br-2026-07/brajesh-patel.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹60,47,200 (~60 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Illiterate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960"
+          },
+          {
+            "slug": "jitendra-dubey",
+            "name": "JITENDRA DUBEY",
+            "party": "Akhil Bharatiya Jan Sangh",
+            "status": "contesting",
+            "party_native": "अखिल भारतीय जनसंघ",
+            "name_native": "जितेन्द्र दुबे",
+            "filed_on": "13th July, 2026",
+            "relative_name": "LATE RAM GOVIND DUBEY",
+            "gender": "male",
+            "age": 62,
+            "photo_path": "/candidates/bankipur-br-2026-07/jitendra-dubey.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹11,66,61,500 (~11 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹1,06,000 (~1 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972"
+          },
+          {
+            "slug": "lalu-prasad-yadav",
+            "name": "LALU PRASAD YADAV",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "लालू प्रसाद यादव",
+            "filed_on": "8th July, 2026",
+            "relative_name": "RAM JANAM RAY",
+            "gender": "male",
+            "age": 47,
+            "photo_path": "/candidates/bankipur-br-2026-07/lalu-prasad-yadav.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "manisha-sharma",
+            "name": "MANISHA SHARMA",
+            "party": "Rashtriya Apna Dal",
+            "status": "contesting",
+            "party_native": "राष्‍ट्रीय अपना दल",
+            "name_native": "मनीषा शर्मा",
+            "filed_on": "13th July, 2026",
+            "relative_name": "SUJIT KUMAR SINGH",
+            "gender": "female",
+            "age": 49,
+            "photo_path": "/candidates/bankipur-br-2026-07/manisha-sharma.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹15,27,675 (~15 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹8,60,000 (~8 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Business",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962"
+          },
+          {
+            "slug": "manoranjan-kumar-shrivastava",
+            "name": "MANORANJAN KUMAR SHRIVASTAVA",
+            "party": "Pragatisheel Janta Party",
+            "status": "contesting",
+            "party_native": "प्रगतिशील जनता पार्टी",
+            "name_native": "मनोरंजन कुमार श्रीवास्तव",
+            "filed_on": "10th July, 2026",
+            "relative_name": "Late Shashi Bhushan Prasad",
+            "gender": "male",
+            "age": 56,
+            "photo_path": "/candidates/bankipur-br-2026-07/manoranjan-kumar-shrivastava.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹3,62,62,556 (~3 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹39,00,000 (~39 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate Professional",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Advocate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976"
+          },
+          {
+            "slug": "mirtunjay-kumar",
+            "name": "MIRTUNJAY KUMAR",
+            "party": "Rashtriya Samajhit Dal",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय समाजहित दल",
+            "name_native": "मिर्तुन्जय कुमार",
+            "filed_on": "14th July, 2026",
+            "relative_name": "MINA DEVI",
+            "gender": "male",
+            "age": 30,
+            "photo_path": "/candidates/bankipur-br-2026-07/mirtunjay-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹50,500 (~50 Thou)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Private Tution",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957"
+          },
+          {
+            "slug": "neeraj-kumar",
+            "name": "NEERAJ KUMAR",
+            "party": "Bharatiya Janata Party",
+            "status": "contesting",
+            "party_native": "भारतीय जनता पार्टी",
+            "name_native": "नीरज कुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "DHRUV KUMAR",
+            "gender": "male",
+            "age": 32,
+            "photo_path": "/candidates/bankipur-br-2026-07/neeraj-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹20,28,554 (~20 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Social Worker & Business",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964"
+          },
+          {
+            "slug": "niranjan-kumar-acharya",
+            "name": "NIRANJAN KUMAR ACHARYA",
+            "party": "Right to Recall Party",
+            "status": "contesting",
+            "party_native": "राइट टु रिकॉल पार्टी",
+            "name_native": "निरंजन कुमार आचार्य",
+            "filed_on": "8th July, 2026",
+            "relative_name": "Late Sachindra Nath Acharya",
+            "gender": "male",
+            "age": 48,
+            "photo_path": "/candidates/bankipur-br-2026-07/niranjan-kumar-acharya.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,00,000 (~1 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "SELF EMPLOYED",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950"
+          },
+          {
+            "slug": "nitish-kumar",
+            "name": "NITISH KUMAR",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "नीतिश कुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "JITENDRA SINGH",
+            "gender": "male",
+            "age": 25,
+            "photo_path": "/candidates/bankipur-br-2026-07/nitish-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,31,454 (~1 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹1,08,071 (~1 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Consultant",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963"
+          },
+          {
+            "slug": "pradeep-kumar",
+            "name": "PRADEEP KUMAR",
+            "party": "Bharatiya Aam Awam Party",
+            "status": "contesting",
+            "party_native": "भारतीय आम अवाम पार्टी",
+            "name_native": "प्रदीप कुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "ANIL RAJAK",
+            "gender": "male",
+            "age": 32,
+            "photo_path": "/candidates/bankipur-br-2026-07/pradeep-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,50,000 (~1 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Business",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969"
+          },
+          {
+            "slug": "prashant-kishor",
+            "name": "PRASHANT KISHOR",
+            "party": "Jan Suraaj Party",
+            "status": "contesting",
+            "party_native": "जन सुराज पार्टी",
+            "name_native": "प्रशांत किशोर",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Shrikant Pandey",
+            "gender": "male",
+            "age": 49,
+            "photo_path": "/candidates/bankipur-br-2026-07/prashant-kishor.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹2,08,07,61,506 (~208 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹6,32,91,765 (~6 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "8",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Political Advisor & Consultant",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:bankipur-br-2026-07:prashant-kishor",
+              "declared_total": 8,
+              "charges": [
+                {
+                  "count": 4,
+                  "description": "Punishment for Rioting",
+                  "law": "BNS",
+                  "section": "191(2)"
+                },
+                {
+                  "count": 3,
+                  "description": "Assault or use of criminal force to deter public servant from discharge of his duty.",
+                  "law": "BNS",
+                  "section": "132"
+                },
+                {
+                  "count": 2,
+                  "description": "Rioting, armed with a deadly weapon.",
+                  "law": "BNS",
+                  "section": "191(3)"
+                },
+                {
+                  "count": 1,
+                  "description": "Mischief causing loss or damage to the amount of twenty thousand rupees but less than 2 lakh rupees.",
+                  "law": "BNS",
+                  "section": "324(4)"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for Voluntarily causing grievous hurt.",
+                  "law": "BNS",
+                  "section": "117(2)"
+                },
+                {
+                  "count": 1,
+                  "description": "Defamation against the President or the Vice-President or the Governor of a State or Administrator of a Union territory or a Minister in respect of his conduct in the discharge of his public functions when instituted upon a complaint made by the Public Prosecutor.",
+                  "law": "BNS",
+                  "section": "356(2)"
+                },
+                {
+                  "count": 1,
+                  "description": "Cheating and dishonestly inducing delivery of property.",
+                  "law": "BNS",
+                  "section": "318(4)"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for criminal breach of trust",
+                  "law": "BNS",
+                  "section": "316(2)"
+                },
+                {
+                  "count": 4,
+                  "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object.",
+                  "law": "BNS",
+                  "section": "190"
+                },
+                {
+                  "count": 3,
+                  "description": "Disobedience to order duly promulgated by public servant",
+                  "law": "BNS",
+                  "section": "223"
+                },
+                {
+                  "count": 2,
+                  "description": "Punishment for voluntarily causing hurt",
+                  "law": "BNS",
+                  "section": "115(2)"
+                },
+                {
+                  "count": 1,
+                  "description": "Assault or criminal force otherwise than on grave provocation.",
+                  "law": "BNS",
+                  "section": "131"
+                },
+                {
+                  "count": 1,
+                  "description": "Wrongfully restraining any person.",
+                  "law": "BNS",
+                  "section": "126(2)"
+                },
+                {
+                  "count": 1,
+                  "description": "If such disobedience causes obstruction, annoyance or injury to persons lawfully employed.",
+                  "law": "BNS",
+                  "section": "223(a)"
+                },
+                {
+                  "count": 1,
+                  "description": "Defines Defamation",
+                  "law": "BNS",
+                  "section": "356"
+                }
+              ],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "815/2024, Gandhi Maidan Police Station, dated- 29/12/2024",
+                  "court": "S.D.J.M. Patna",
+                  "law": "BNS",
+                  "sections": "191(2), 191(3), 190, 223, 131, 132, 324(4)",
+                  "charges_framed": "No",
+                  "appeal_filed": "Yes",
+                  "appeal_details": "Cr. W.J.C No. 141/2025, Patna High Court"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "154/2025, Sachivalaya Police Station, Dated- 23/07/2025",
+                  "court": "ACJM-II, Patna",
+                  "law": "BNS",
+                  "sections": "191(2), 190, 132, 223",
+                  "charges_framed": "No",
+                  "appeal_filed": "Yes",
+                  "appeal_details": "Cr. W.J.C No. 2323/2025, Patna High Court"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "12/2025, Pirbahore Police Station",
+                  "court": "CJM Patna",
+                  "law": "BNS",
+                  "sections": "191(2), 190, 126(2), 115(2), 117(2), 132, 61(2)",
+                  "charges_framed": "No",
+                  "appeal_filed": "Yes",
+                  "appeal_details": "Cr. W.J.C No. 317/2025, Patna High Court"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "05/2025, Gandhi Maidan Police Station, Dated- 02/01/2025",
+                  "court": "S.D.J.M., Patna",
+                  "law": "BNS",
+                  "sections": "191(2), 191(3), 190, 223",
+                  "charges_framed": "No",
+                  "appeal_filed": "Yes",
+                  "appeal_details": "Cr. W.J.C No. 346/2025, Patna High Court"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "226/2025, Saharsa Sadar Police Station, Dated- 31/10/2025",
+                  "court": "CJM Saharsa",
+                  "law": "BNS",
+                  "sections": "223(a), 3(5)",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "case_no": "Cr. Complaint Case No. 6989(C)/2025",
+                  "court": "CJM Patna, Dated- 13/05/2025",
+                  "law": "BNS",
+                  "sections": "356(2)",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "case_no": "Cr. Complaint Case No. 1934(C)/2025",
+                  "court": "CJM Bettiah, Dated- 23/09/2025",
+                  "law": "BNS",
+                  "sections": "356",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "case_no": "Cr. Complaint Case No. 11/2025 (C)/2025",
+                  "court": "ACJM-I, West Muzaffarpur, Dated- 03/01/2025",
+                  "law": "BNS",
+                  "sections": "115(2), 61(1), 191(1), 318(4), 316(2)",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                }
+              ],
+              "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+              "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Bankipur by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966"
+          },
+          {
+            "slug": "prem-shankar-prasad",
+            "name": "PREM SHANKAR PRASAD",
+            "party": "Proutist Bloc, India",
+            "status": "contesting",
+            "party_native": "प्राउटिस्ट ब्‍लॉक, इंडिया",
+            "name_native": "प्रेम शंकर प्रसाद",
+            "filed_on": "10th July, 2026",
+            "relative_name": "MOHAN LAL PRASAD",
+            "gender": "male",
+            "age": 64,
+            "photo_path": "/candidates/bankipur-br-2026-07/prem-shankar-prasad.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "rambabu-prasad",
+            "name": "RAMBABU PRASAD",
+            "party": "Rashtriya Garib Dal",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय गरीब दल",
+            "name_native": "रामबाबू प्रसाद",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Dashrath Tanti",
+            "gender": "male",
+            "age": 49,
+            "photo_path": "/candidates/bankipur-br-2026-07/rambabu-prasad.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹15,611 (~15 Thou)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Labour",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958"
+          },
+          {
+            "slug": "rekha-kumari",
+            "name": "REKHA KUMARI",
+            "party": "Rashtriya Janata Dal",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय जनता दल",
+            "name_native": "रेखा कुमारी",
+            "filed_on": "9th July, 2026",
+            "relative_name": "RANJAY KUMAR",
+            "gender": "female",
+            "age": 46,
+            "photo_path": "/candidates/bankipur-br-2026-07/rekha-kumari.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹8,17,47,579 (~8 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹3,31,58,451 (~3 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "1",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Businesswoman",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:bankipur-br-2026-07:rekha-kumari",
+              "declared_total": 1,
+              "charges": [
+                {
+                  "count": 1,
+                  "description": "Attempt to commit culpable homicide",
+                  "law": "IPC",
+                  "section": "308"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for theft",
+                  "law": "IPC",
+                  "section": "379"
+                },
+                {
+                  "count": 1,
+                  "description": "Forgery of valuable security, will, etc.",
+                  "law": "IPC",
+                  "section": "467"
+                },
+                {
+                  "count": 1,
+                  "description": "Forgery for purpose of cheating",
+                  "law": "IPC",
+                  "section": "468"
+                },
+                {
+                  "count": 1,
+                  "description": "Acts done by several persons in furtherance of common intention",
+                  "law": "IPC",
+                  "section": "34"
+                }
+              ],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "KOTWALI P.S CASE NO - 445/2022",
+                  "case_no": "G.R No .- 033607",
+                  "court": "A.C.J.M 11",
+                  "law": "IPC",
+                  "sections": "308, 379, 467, 468, 34",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                }
+              ],
+              "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+              "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Bankipur by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954"
+          },
+          {
+            "slug": "shukesh-kumar",
+            "name": "SHUKESH KUMAR",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "शुकेश कुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "RAMBABU PRASAD",
+            "gender": "male",
+            "age": 29,
+            "photo_path": "/candidates/bankipur-br-2026-07/shukesh-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,00,000 (~1 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Self Employed",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967"
+          },
+          {
+            "slug": "sikandar-kumar",
+            "name": "SIKANDAR KUMAR",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "सिकन्दर कुमार",
+            "filed_on": "10th July, 2026",
+            "relative_name": "Late Ramadhar Singh",
+            "gender": "male",
+            "age": 43,
+            "photo_path": "/candidates/bankipur-br-2026-07/sikandar-kumar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹2,69,00,000 (~2 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹83,00,000 (~83 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "3",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:bankipur-br-2026-07:sikandar-kumar",
+              "declared_total": 3,
+              "charges": [
+                {
+                  "count": 2,
+                  "description": "Cheating and dishonestly inducing delivery of property",
+                  "law": "IPC",
+                  "section": "420"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for undue influence or personation at an election",
+                  "law": "IPC",
+                  "section": "171F"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for criminal breach of trust",
+                  "law": "IPC",
+                  "section": "406"
+                },
+                {
+                  "count": 1,
+                  "description": "Forgery of valuable security, will, etc.",
+                  "law": "IPC",
+                  "section": "467"
+                },
+                {
+                  "count": 1,
+                  "description": "Forgery for purpose of cheating",
+                  "law": "IPC",
+                  "section": "468"
+                },
+                {
+                  "count": 1,
+                  "description": "Disobedience to order duly promulgated by public servant",
+                  "law": "IPC",
+                  "section": "188"
+                },
+                {
+                  "count": 1,
+                  "description": "Using as genuine a forged document or electronic record",
+                  "law": "IPC",
+                  "section": "471"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment of criminal conspiracy",
+                  "law": "IPC",
+                  "section": "120B"
+                }
+              ],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Nawada Police Station Case No. 329/2024",
+                  "court": "CJM, Aara",
+                  "law": "IPC",
+                  "sections": "188, 171F",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Chandi Police Station Case No. 336/2019",
+                  "court": "JMFC, Hilsa",
+                  "law": "IPC",
+                  "sections": "420, 406",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Danput Police Station Case No. 452/2006",
+                  "court": "JMFC, Danput",
+                  "law": "IPC",
+                  "sections": "467, 468, 471, 420, 120B",
+                  "charges_framed": "Yes",
+                  "framed_date": "25 Feb 2020",
+                  "appeal_filed": "No"
+                }
+              ],
+              "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+              "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Bankipur by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974"
+          },
+          {
+            "slug": "suraj-kumar-yadav",
+            "name": "SURAJ KUMAR YADAV",
+            "party": "Peoples Party of India (Democratic)",
+            "status": "contesting",
+            "party_native": "पीपल्स पार्टी ऑफ इंडिया (डेमोक्रेटिक)",
+            "name_native": "सुरज कुमार यादव",
+            "filed_on": "13th July, 2026",
+            "relative_name": "SHARWAN YADAV",
+            "gender": "male",
+            "age": 29,
+            "photo_path": "/candidates/bankipur-br-2026-07/suraj-kumar-yadav.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹19,06,000 (~19 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹4,71,000 (~4 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Business",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959"
+          },
+          {
+            "slug": "tanvir-alam",
+            "name": "TANVIR ALAM",
+            "party": "Rashtriya Lok Janshakti Party",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय लोक जनशक्ति पार्टी",
+            "name_native": "तनवीर आलम",
+            "filed_on": "9th July, 2026",
+            "relative_name": "KASIMUDDIN",
+            "gender": "male",
+            "age": 45,
+            "photo_path": "/candidates/bankipur-br-2026-07/tanvir-alam.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹40,36,675 (~40 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "4",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Social Activist & Businessman",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:bankipur-br-2026-07:tanvir-alam",
+              "declared_total": 4,
+              "charges": [
+                {
+                  "count": 3,
+                  "description": "Punishment for criminal intimidation",
+                  "law": "IPC",
+                  "section": "506"
+                },
+                {
+                  "count": 2,
+                  "description": "Punishment for extortion",
+                  "law": "IPC",
+                  "section": "384"
+                },
+                {
+                  "count": 1,
+                  "description": "Attempt to murder",
+                  "law": "IPC",
+                  "section": "307"
+                },
+                {
+                  "count": 1,
+                  "description": "Attempt to commit culpable homicide",
+                  "law": "IPC",
+                  "section": "308"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for criminal breach of trust",
+                  "law": "IPC",
+                  "section": "406"
+                },
+                {
+                  "count": 1,
+                  "description": "Cheating and dishonestly inducing delivery of property",
+                  "law": "IPC",
+                  "section": "420"
+                },
+                {
+                  "count": 3,
+                  "description": "Punishment for wrongful restraint",
+                  "law": "IPC",
+                  "section": "341"
+                },
+                {
+                  "count": 3,
+                  "description": "Punishment for voluntarily causing hurt",
+                  "law": "IPC",
+                  "section": "323"
+                },
+                {
+                  "count": 3,
+                  "description": "Intentional insult with intent to provoke breach of the peace",
+                  "law": "IPC",
+                  "section": "504"
+                },
+                {
+                  "count": 2,
+                  "description": "Acts done by several persons in furtherance of common intention",
+                  "law": "IPC",
+                  "section": "34"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for Rioting",
+                  "law": "IPC",
+                  "section": "147"
+                },
+                {
+                  "count": 1,
+                  "description": "Rioting, armed with deadly weapon",
+                  "law": "IPC",
+                  "section": "148"
+                },
+                {
+                  "count": 1,
+                  "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+                  "law": "IPC",
+                  "section": "149"
+                },
+                {
+                  "count": 1,
+                  "description": "Putting person in fear of injury in order to commit extortion",
+                  "law": "IPC",
+                  "section": "385"
+                }
+              ],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Phulwarisharif PS Case No. 816/2014",
+                  "court": "Ld. ACJM 12, Patna, Sadar",
+                  "law": "IPC",
+                  "sections": "341, 323, 504, 506, 384",
+                  "other_sections": "Section 27 of Arms Act",
+                  "charges_framed": "Yes",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Phulwarisharif PS Case No. 381/2014",
+                  "court": "ACJM 7, Patna, Sadar",
+                  "law": "IPC",
+                  "sections": "341, 323, 504, 506, 384, 34",
+                  "charges_framed": "Yes",
+                  "framed_date": "05 Jul 2017",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Phulwarisharif PS Case No. 549/2015",
+                  "court": "ACJM 4, Patna, Sadar",
+                  "law": "IPC",
+                  "sections": "147, 148, 149, 323, 341, 307, 385, 308, 504, 506",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Phulwarisharif PS Case No. 393/2025",
+                  "court": "ACJM 4, Patna, Sadar",
+                  "law": "IPC",
+                  "sections": "406, 420, 34",
+                  "charges_framed": "No",
+                  "appeal_filed": "Yes",
+                  "appeal_details": "Cr. WJC No. 2137/2025"
+                }
+              ],
+              "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+              "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Bankipur by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952"
+          },
+          {
+            "slug": "upendra-sahani",
+            "name": "UPENDRA SAHANI",
+            "party": "Rashtriya Jansambhavna Party",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय जनसंभावना पार्टी",
+            "name_native": "उपेन्द्र सहनी",
+            "filed_on": "6th July, 2026",
+            "relative_name": "LATE KANHAI SAHANI",
+            "gender": "male",
+            "age": 55,
+            "photo_path": "/candidates/bankipur-br-2026-07/upendra-sahani.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹10,41,38,000 (~10 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹6,50,000 (~6 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Business",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949"
+          },
+          {
+            "slug": "mithilesh-kumar",
+            "name": "MITHILESH KUMAR",
+            "party": "Independent",
+            "status": "withdrawn",
+            "party_native": "निर्दलीय",
+            "name_native": "मिथिलेश कुमार",
+            "filed_on": "10th July, 2026",
+            "relative_name": "Late Kameshwar Singh",
+            "gender": "male",
+            "age": 55,
+            "photo_path": "/candidates/bankipur-br-2026-07/mithilesh-kumar.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "abhishek-kumar",
+            "name": "ABHISHEK KUMAR",
+            "party": "Bharatiya Janata Party",
+            "status": "rejected",
+            "party_native": "भारतीय जनता पार्टी",
+            "name_native": "अभिषेक कुमार",
+            "filed_on": "9th July, 2026",
+            "relative_name": "RABINDRA PRASAD",
+            "gender": "male",
+            "age": 42,
+            "photo_path": "/candidates/bankipur-br-2026-07/abhishek-kumar.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "abhishek-srivastava",
+            "name": "ABHISHEK SRIVASTAVA",
+            "party": "Lohiya Janta Dal",
+            "status": "rejected",
+            "party_native": "लोहिया जनता दल",
+            "name_native": "अभिषेक श्रीवास्तव",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Ratnesh Kumar Rahi",
+            "gender": "male",
+            "age": 43,
+            "photo_path": "/candidates/bankipur-br-2026-07/abhishek-srivastava.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "anita-chauhan",
+            "name": "ANITA CHAUHAN",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "अनिता चौहान",
+            "filed_on": "14th July, 2026",
+            "relative_name": "Late Kamal Chauhan",
+            "gender": "female",
+            "age": 46,
+            "photo_path": "/candidates/bankipur-br-2026-07/anita-chauhan.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "gorakh-ram",
+            "name": "GORAKH RAM",
+            "party": "Bhojpuria Jan Morcha",
+            "status": "rejected",
+            "party_native": "भोजपुरिया जन मोर्चा",
+            "name_native": "गोरख राम",
+            "filed_on": "14th July, 2026",
+            "relative_name": "Suchit Ram",
+            "gender": "male",
+            "age": 58,
+            "photo_path": "/candidates/bankipur-br-2026-07/gorakh-ram.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "mahesh-kumar",
+            "name": "MAHESH KUMAR",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "महेश कुमार",
+            "filed_on": "9th July, 2026",
+            "relative_name": "Late Sundar Singh",
+            "gender": "male",
+            "age": 38,
+            "photo_path": "/candidates/bankipur-br-2026-07/mahesh-kumar.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "navin-tiwari",
+            "name": "NAVIN TIWARI",
+            "party": "Socialist Party (India)",
+            "status": "rejected",
+            "party_native": "सोशलिस्ट पार्टी (इंडिया)",
+            "name_native": "नवीन तिवारी",
+            "filed_on": "13th July, 2026",
+            "relative_name": "AROYANO TIWARI",
+            "gender": "male",
+            "age": 44,
+            "photo_path": "/candidates/bankipur-br-2026-07/navin-tiwari.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "priyanshu-raj",
+            "name": "PRIYANSHU RAJ",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "प्रियांशु राज",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Prashant Kumar Sinha",
+            "age": 29,
+            "photo_path": "/candidates/bankipur-br-2026-07/priyanshu-raj.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "radheshyam-alias-radheshyam-gupta",
+            "name": "RADHESHYAM ALIAS RADHESHYAM GUPTA",
+            "party": "Rashtriya Lok Samta Party",
+            "status": "rejected",
+            "party_native": "राष्‍ट्रीय लोक समता पार्टी",
+            "name_native": "राधेश्याम उर्फ राधेश्याम गुप्ता",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Indra Prasad Sah",
+            "gender": "male",
+            "age": 67,
+            "photo_path": "/candidates/bankipur-br-2026-07/radheshyam-alias-radheshyam-gupta.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "rajib-ranjan-sinha",
+            "name": "RAJIB RANJAN SINHA",
+            "party": "Rashtravadi Vikas Party",
+            "status": "rejected",
+            "party_native": "राष्ट्रवादी विकास पार्टी",
+            "name_native": "राजीव रंजन सिन्हा",
+            "filed_on": "13th July, 2026",
+            "relative_name": "LATE BALESHWAR PRASAD SINHA",
+            "gender": "male",
+            "age": 67,
+            "photo_path": "/candidates/bankipur-br-2026-07/rajib-ranjan-sinha.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "rishikesh-narayan-sinha",
+            "name": "RISHIKESH NARAYAN SINHA",
+            "party": "All India Forward Bloc",
+            "status": "rejected",
+            "party_native": "ऑल इण्डिया फॉरवार्ड ब्‍लॉक",
+            "name_native": "ऋषिकेश नारायण सिन्हा",
+            "filed_on": "14th July, 2026",
+            "relative_name": "Ashok Kumar Sinha",
+            "gender": "male",
+            "age": 48,
+            "photo_path": "/candidates/bankipur-br-2026-07/rishikesh-narayan-sinha.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "shiv-gandhi",
+            "name": "SHIV GANDHI",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "शिव गाँधी",
+            "filed_on": "13th July, 2026",
+            "relative_name": "CHANDRIKA SAH",
+            "gender": "male",
+            "age": 54,
+            "photo_path": "/candidates/bankipur-br-2026-07/shiv-gandhi.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "umesh-kumar",
+            "name": "UMESH KUMAR",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "उमेश कुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late Sheo Kumar Lal",
+            "gender": "male",
+            "age": 63,
+            "photo_path": "/candidates/bankipur-br-2026-07/umesh-kumar.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "vina-mandavi",
+            "name": "VINA MANDAVI",
+            "party": "Janshakti Janta Dal",
+            "status": "rejected",
+            "party_native": "जनशक्ति जनता दल",
+            "name_native": "वीणा माण्डवी",
+            "filed_on": "13th July, 2026",
+            "relative_name": "PARTHSARTHI",
+            "gender": "female",
+            "age": 48,
+            "photo_path": "/candidates/bankipur-br-2026-07/vina-mandavi.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "vinay-kumar-jha",
+            "name": "VINAY KUMAR JHA",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "विनय कुमार झा",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Rup Narayan Jha",
+            "gender": "male",
+            "age": 43,
+            "photo_path": "/candidates/bankipur-br-2026-07/vinay-kumar-jha.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          }
+        ]
+      },
+      {
+        "slug": "manjalpur-gj-2026-07",
+        "constituencyId": "ac-gj-manjalpur",
+        "constituencyName": "Manjalpur",
+        "state": "Gujarat",
+        "stateCode": "GJ",
+        "districts": [
+          "Vadodara"
+        ],
+        "acNumber": 145,
+        "eci": {
+          "stateCode": "S06",
+          "acNo": 145
+        },
+        "candidates": [
+          {
+            "slug": "bhikhabhai-rabari-b-e-mechanical",
+            "name": "BHIKHABHAI RABARI (B.E. MECHANICAL)",
+            "party": "Indian National Congress",
+            "status": "contesting",
+            "party_native": "इंडियन नेशनल काँग्रेस",
+            "name_native": "भीखाभाई रबारी (बी.ई. मैकेनिकल)",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Muljibhai Rabari",
+            "gender": "male",
+            "age": 78,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/bhikhabhai-rabari-b-e-mechanical.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹5,28,20,065 (~5 Crore)",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate Professional",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Income From FD",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821"
+          },
+          {
+            "slug": "satendrabhai-patel-satish-patel",
+            "name": "SATENDRABHAI PATEL (SATISH PATEL)",
+            "party": "Bharatiya Janata Party",
+            "status": "contesting",
+            "party_native": "भारतीय जनता पार्टी",
+            "name_native": "सतेन्द्रभाई पटेल (सतीष पटेल)",
+            "filed_on": "13th July, 2026",
+            "relative_name": "GOVINDBHAI PATEL",
+            "gender": "male",
+            "age": 62,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/satendrabhai-patel-satish-patel.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹51,52,83,376 (~51 Crore)",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Farmer, businessman and social worker.",
+                "source_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
+                "source_name": "MyNeta / ADR - Manjalpur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Manjalpur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822"
+          },
+          {
+            "slug": "dharmeshbhai-patel",
+            "name": "DHARMESHBHAI PATEL",
+            "party": "Indian National Congress",
+            "status": "rejected",
+            "party_native": "इंडियन नेशनल काँग्रेस",
+            "name_native": "धर्मेशभाई पटेल",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Bhogilal Patel",
+            "gender": "male",
+            "age": 52,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/dharmeshbhai-patel.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "dinesh-ramakant-vyas",
+            "name": "DINESH RAMAKANT VYAS",
+            "party": "Right to Recall Party",
+            "status": "rejected",
+            "party_native": "राइट टु रिकॉल पार्टी",
+            "name_native": "दिनेश रमाकांत व्यास",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Ramakant B. Vyas",
+            "gender": "male",
+            "age": 50,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/dinesh-ramakant-vyas.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "pareshkumar-brahmbhatt",
+            "name": "PARESHKUMAR BRAHMBHATT",
+            "party": "Bharatiya Janata Party",
+            "status": "rejected",
+            "party_native": "भारतीय जनता पार्टी",
+            "name_native": "परेशकुमार ब्रह्मभट्ट",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Harikrishna Brahmbhatt",
+            "gender": "male",
+            "age": 59,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/pareshkumar-brahmbhatt.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "rathod-paresh-vinodkumar",
+            "name": "RATHOD PARESH VINODKUMAR",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "राठौड़ परेश विनोदकुमार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Rathod Vinodkumar Jivanlal",
+            "gender": "male",
+            "age": 53,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/rathod-paresh-vinodkumar.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "ratnasagar-rajrajeshvar-dhulabhai",
+            "name": "RATNASAGAR RAJRAJESHVAR DHULABHAI",
+            "party": "Bharatiya Janata Party",
+            "status": "rejected",
+            "party_native": "भारतीय जनता पार्टी",
+            "name_native": "रत्नसागर राजराजेश्वर धुलाभाई",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Dhulabhai Virabhai Vaghela",
+            "gender": "male",
+            "age": 57,
+            "photo_path": "/candidates/manjalpur-gj-2026-07/ratnasagar-rajrajeshvar-dhulabhai.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          }
+        ]
+      },
+      {
+        "slug": "datia-mp-2026-07",
+        "constituencyId": "ac-mp-datia",
+        "constituencyName": "Datia",
+        "state": "Madhya Pradesh",
+        "stateCode": "MP",
+        "districts": [
+          "Datia"
+        ],
+        "acNumber": 22,
+        "eci": {
+          "stateCode": "S12",
+          "acNo": 22
+        },
+        "candidates": [
+          {
+            "slug": "advocate-hansmukee-lodhi",
+            "name": "ADVOCATE HANSMUKEE LODHI",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "एडवोकेट हँसमुखी लोधी",
+            "filed_on": "13th July, 2026",
+            "relative_name": "JAGDISH LODHI",
+            "gender": "female",
+            "age": 33,
+            "photo_path": "/candidates/datia-mp-2026-07/advocate-hansmukee-lodhi.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹9,78,806 (~9 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Advocate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986"
+          },
+          {
+            "slug": "ashutosh-tiwari",
+            "name": "ASHUTOSH TIWARI",
+            "party": "Bharatiya Janata Party",
+            "status": "contesting",
+            "party_native": "भारतीय जनता पार्टी",
+            "name_native": "आशुतोष तिवारी",
+            "filed_on": "14th July, 2026",
+            "relative_name": "KUNJ BIHARI",
+            "gender": "male",
+            "age": 51,
+            "photo_path": "/candidates/datia-mp-2026-07/ashutosh-tiwari.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹3,76,30,090 (~3 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹39,69,782 (~39 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture & Academician",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975"
+          },
+          {
+            "slug": "babulal-soni",
+            "name": "BABULAL SONI",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "बाबूलाल सोनी",
+            "filed_on": "14th July, 2026",
+            "relative_name": "BHOLARAM SONI",
+            "gender": "male",
+            "age": 53,
+            "photo_path": "/candidates/datia-mp-2026-07/babulal-soni.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,20,55,000 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Private Job",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974"
+          },
+          {
+            "slug": "balkishun-vishwakarma",
+            "name": "BALKISHUN VISHWAKARMA",
+            "party": "Parivartan Party of India",
+            "status": "contesting",
+            "party_native": "परिवर्तन पार्टी ऑफ इंडिया",
+            "name_native": "बालकिशुन विश्‍वकर्मा",
+            "filed_on": "10th July, 2026",
+            "relative_name": "ASHARAM",
+            "gender": "male",
+            "age": 39,
+            "photo_path": "/candidates/datia-mp-2026-07/balkishun-vishwakarma.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹3,83,500 (~3 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "1",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate Professional",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Lobour",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:datia-mp-2026-07:balkishun-vishwakarma",
+              "declared_total": 1,
+              "charges": [],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "case_no": "276/2024, PS Vamitha, Dist Chhatarpur, M.P.",
+                  "court": "Civil",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                }
+              ],
+              "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+              "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Datia by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992"
+          },
+          {
+            "slug": "brajendra-shah-bapa-sahab",
+            "name": "BRAJENDRA SHAH (BAPA SAHAB)",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "ब्रजेन्द्र शाह (बापा साहब)",
+            "filed_on": "13th July, 2026",
+            "relative_name": "DEVENDAR",
+            "gender": "male",
+            "age": 68,
+            "photo_path": "/candidates/datia-mp-2026-07/brajendra-shah-bapa-sahab.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹31,29,280 (~31 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Teaching",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983"
+          },
+          {
+            "slug": "damodar-yadav-mandal",
+            "name": "DAMODAR YADAV 'MANDAL'",
+            "party": "Aazad Samaj Party (Kanshi Ram)",
+            "status": "contesting",
+            "party_native": "आजाद समाज पार्टी (कांशी राम)",
+            "name_native": "दामोदर यादव 'मण्डल'",
+            "filed_on": "9th July, 2026",
+            "relative_name": "Late BALRAM SINGH",
+            "gender": "male",
+            "age": 50,
+            "photo_path": "/candidates/datia-mp-2026-07/damodar-yadav-mandal.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹5,50,72,698 (~5 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹1,71,20,725 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "7",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture Work",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:datia-mp-2026-07:damodar-yadav-mandal",
+              "declared_total": 7,
+              "charges": [
+                {
+                  "count": 5,
+                  "description": "Disobedience to order duly promulgated by public servant",
+                  "law": "IPC",
+                  "section": "188"
+                },
+                {
+                  "count": 2,
+                  "description": "Punishment for Rioting",
+                  "law": "IPC",
+                  "section": "147"
+                },
+                {
+                  "count": 2,
+                  "description": "Punishment for wrongful restraint",
+                  "law": "IPC",
+                  "section": "341"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for wrongful Confinement",
+                  "law": "IPC",
+                  "section": "342"
+                },
+                {
+                  "count": 1,
+                  "description": "Negligent act likely to spread infection of disease dangerous to life",
+                  "law": "IPC",
+                  "section": "269"
+                },
+                {
+                  "count": 1,
+                  "description": "Obscene acts and songs",
+                  "law": "IPC",
+                  "section": "294"
+                },
+                {
+                  "count": 1,
+                  "description": "Knowingly joining or continuing in assembly of five or more persons after it has been commanded to disperse",
+                  "law": "IPC",
+                  "section": "151"
+                }
+              ],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "027/20, Karera PS",
+                  "court": "JMFC Karera",
+                  "sections": "188",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "165/20, PS Kotawali Shivpuri",
+                  "court": "JMFC, Shivpuri",
+                  "sections": "188",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "289/21, Indargarh PS",
+                  "court": "JMFC Sevda Datia",
+                  "sections": "147, 341, 342, 188, 269, 294",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "544/23, Indargarh PS",
+                  "court": "JMFC Sevda Datia",
+                  "sections": "147, 188, 341",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "PS Sanchi, 179/23",
+                  "court": "JMFC Sevda",
+                  "sections": "188",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "347/25, Dehat PS Bhind",
+                  "other_sections": "223, 189(2), 352, 115, 7/15 BNS",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "PS Goraghat",
+                  "sections": "151",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                }
+              ],
+              "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+              "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Datia by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985"
+          },
+          {
+            "slug": "devesh-parihar-nimona",
+            "name": "DEVESH PARIHAR NIMONA",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "देवेश परिहार निमोना",
+            "filed_on": "14th July, 2026",
+            "relative_name": "SHREE KAPTAN SINGH",
+            "gender": "male",
+            "age": 25,
+            "photo_path": "/candidates/datia-mp-2026-07/devesh-parihar-nimona.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹2,01,000 (~2 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Lobour",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978"
+          },
+          {
+            "slug": "dharmendra-singh",
+            "name": "DHARMENDRA SINGH .",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "धर्मेन्‍द्र सिहं",
+            "filed_on": "14th July, 2026",
+            "relative_name": "SHREE MALKHAN SINGH",
+            "gender": "male",
+            "age": 33,
+            "photo_path": "/candidates/datia-mp-2026-07/dharmendra-singh.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹2,55,000 (~2 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Private Job",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971"
+          },
+          {
+            "slug": "dharmendra-singh-panwar-golu-bhaiya",
+            "name": "DHARMENDRA SINGH PANWAR (GOLU BHAIYA)",
+            "party": "Right to Recall Party",
+            "status": "contesting",
+            "party_native": "राइट टु रिकॉल पार्टी",
+            "name_native": "धर्मेन्द्र सिंह पंवार (गोलु भैय्या)",
+            "filed_on": "14th July, 2026",
+            "relative_name": "BIPAT SINGH",
+            "gender": "male",
+            "age": 39,
+            "photo_path": "/candidates/datia-mp-2026-07/dharmendra-singh-panwar-golu-bhaiya.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "dr-rakhi-bala",
+            "name": "DR. RAKHI BALA",
+            "party": "Rashtriya Samadhan Janmorcha",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय समाधान जनमोर्चा",
+            "name_native": "डॉ. राखी बाला",
+            "filed_on": "13th July, 2026",
+            "relative_name": "JITENDRA SINGARE",
+            "gender": "female",
+            "age": 44,
+            "photo_path": "/candidates/datia-mp-2026-07/dr-rakhi-bala.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹7,09,332 (~7 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Doctorate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Journalism, Social Worker",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988"
+          },
+          {
+            "slug": "ghanshyam-singh",
+            "name": "GHANSHYAM SINGH",
+            "party": "Indian National Congress",
+            "status": "contesting",
+            "party_native": "इंडियन नेशनल काँग्रेस",
+            "name_native": "घनश्याम सिंह",
+            "filed_on": "13th July, 2026",
+            "relative_name": "KRISHNA SINGH",
+            "gender": "male",
+            "age": 72,
+            "photo_path": "/candidates/datia-mp-2026-07/ghanshyam-singh.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹20,92,26,104 (~20 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹1,29,93,164 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "2",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agiculture, Pension, House Rent",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "criminal": {
+              "politician_id": "cand:datia-mp-2026-07:ghanshyam-singh",
+              "declared_total": 2,
+              "charges": [
+                {
+                  "count": 1,
+                  "description": "Punishment for criminal intimidation",
+                  "law": "IPC",
+                  "section": "506"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for voluntarily causing hurt",
+                  "law": "IPC",
+                  "section": "323"
+                },
+                {
+                  "count": 1,
+                  "description": "Negligent act likely to spread infection of disease dangerous to life",
+                  "law": "IPC",
+                  "section": "269"
+                },
+                {
+                  "count": 1,
+                  "description": "Disobedience to order duly promulgated by public servant",
+                  "law": "IPC",
+                  "section": "188"
+                },
+                {
+                  "count": 1,
+                  "description": "Mischief causing damage to the amount of fifty rupees",
+                  "law": "IPC",
+                  "section": "427"
+                },
+                {
+                  "count": 1,
+                  "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+                  "law": "IPC",
+                  "section": "149"
+                },
+                {
+                  "count": 1,
+                  "description": "Rioting, armed with deadly weapon",
+                  "law": "IPC",
+                  "section": "148"
+                },
+                {
+                  "count": 1,
+                  "description": "Punishment for Rioting",
+                  "law": "IPC",
+                  "section": "147"
+                },
+                {
+                  "count": 1,
+                  "description": "Act endangering life or personal safety of others",
+                  "law": "IPC",
+                  "section": "336"
+                },
+                {
+                  "count": 1,
+                  "description": "Obscene acts and songs",
+                  "law": "IPC",
+                  "section": "294"
+                },
+                {
+                  "count": 1,
+                  "description": "Malignant act likely to spread infection of disease dangerous to life",
+                  "law": "IPC",
+                  "section": "270"
+                }
+              ],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Case No 453/2020, PS Kotawali, Dist Datia",
+                  "case_no": "U.N.C.R. No 102/2024 (Criminal Case)",
+                  "court": "J.M.F.C. Court Datia",
+                  "sections": "323, 294, 506, 336, 147, 148,149, 427",
+                  "other_sections": "As of the present date, the police have not filed the charge sheet in the case, and the applicant has not received any notice from the Court.",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                },
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "fir_no": "Case No 378/2020, PS Kotawali Dist Datia",
+                  "sections": "188, 269, 270",
+                  "other_sections": "Section 51 of the Disaster Management Act, 2005, No case is pending in any court. As of the present date, the candidate has not received any notice from either the police station or the court.",
+                  "charges_framed": "No",
+                  "appeal_filed": "No",
+                  "law": "IPC"
+                }
+              ],
+              "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+              "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Datia by-election 30-07-2026"
+            },
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984"
+          },
+          {
+            "slug": "hardas-kushwaha",
+            "name": "HARDAS KUSHWAHA",
+            "party": "Bhim Sena",
+            "status": "contesting",
+            "party_native": "भीम सेना",
+            "name_native": "हरदास कुशवाहा",
+            "filed_on": "14th July, 2026",
+            "relative_name": "LACHHU",
+            "gender": "male",
+            "age": 53,
+            "photo_path": "/candidates/datia-mp-2026-07/hardas-kushwaha.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,00,93,100 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹65,000 (~65 Thou)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972"
+          },
+          {
+            "slug": "jitendra-majhi",
+            "name": "JITENDRA MAJHI",
+            "party": "Aapka Gantantra Party",
+            "status": "contesting",
+            "party_native": "आपका गणतंत्र पार्टी",
+            "name_native": "जितेन्द्र माझी",
+            "filed_on": "13th July, 2026",
+            "relative_name": "Late OM PRAKASH MEHRA",
+            "gender": "male",
+            "age": 47,
+            "photo_path": "/candidates/datia-mp-2026-07/jitendra-majhi.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹1,37,72,262 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹7,50,268 (~7 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Vegetable Business",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987"
+          },
+          {
+            "slug": "kanchhadilal-kushwaha",
+            "name": "KANCHHADILAL KUSHWAHA",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "कन्छेदीलाल कुशवाहा",
+            "filed_on": "14th July, 2026",
+            "relative_name": "NATHURAM",
+            "gender": "male",
+            "age": 51,
+            "photo_path": "/candidates/datia-mp-2026-07/kanchhadilal-kushwaha.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹41,60,252 (~41 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "10th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture Work",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973"
+          },
+          {
+            "slug": "raghvendra-singh",
+            "name": "RAGHVENDRA SINGH",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "राघवेन्‍द्र सिहं",
+            "filed_on": "14th July, 2026",
+            "relative_name": "CHANDARBHAN SINGH",
+            "gender": "male",
+            "age": 34,
+            "photo_path": "/candidates/datia-mp-2026-07/raghvendra-singh.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹67,60,774 (~67 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture & Pension",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976"
+          },
+          {
+            "slug": "ram-singh-kushwah",
+            "name": "RAM SINGH KUSHWAH",
+            "party": "Rashtriya Samanta Dal",
+            "status": "contesting",
+            "party_native": "राष्ट्रीय समानता दल",
+            "name_native": "रामसिंह कुशवाह",
+            "filed_on": "14th July, 2026",
+            "relative_name": "BABULAL",
+            "gender": "male",
+            "age": 45,
+            "photo_path": "/candidates/datia-mp-2026-07/ram-singh-kushwah.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹40,26,500 (~40 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "8th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "111 No Piyus Bidi Udhog Gwalior",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977"
+          },
+          {
+            "slug": "rohit-gupta",
+            "name": "ROHIT GUPTA",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "रोहित गुप्ता",
+            "filed_on": "14th July, 2026",
+            "relative_name": "SHREE SATISH GUPTA",
+            "gender": "male",
+            "age": 32,
+            "photo_path": "/candidates/datia-mp-2026-07/rohit-gupta.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹4,00,000 (~4 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Lobour",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969"
+          },
+          {
+            "slug": "sanjana-singh-kinnar",
+            "name": "SANJANA SINGH KINNAR",
+            "party": "Bhartiya Gan Varta Party",
+            "status": "contesting",
+            "party_native": "भारतीय गण वार्ता पार्टी",
+            "name_native": "संजना सिंह किन्नर",
+            "filed_on": "14th July, 2026",
+            "relative_name": "BHADURSINGH",
+            "age": 44,
+            "photo_path": "/candidates/datia-mp-2026-07/sanjana-singh-kinnar.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "subham-rajpoot",
+            "name": "SUBHAM RAJPOOT",
+            "party": "Bharatiya Sabhyata Party",
+            "status": "contesting",
+            "party_native": "भारतीय सभ्यता पार्टी",
+            "name_native": "शुभम राजपूत",
+            "filed_on": "14th July, 2026",
+            "relative_name": "KARAN SINGH",
+            "gender": "male",
+            "age": 31,
+            "photo_path": "/candidates/datia-mp-2026-07/subham-rajpoot.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹11,87,000 (~11 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980"
+          },
+          {
+            "slug": "suresh-ahirwar",
+            "name": "SURESH AHIRWAR",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "सुरेश अहिरवार",
+            "filed_on": "13th July, 2026",
+            "relative_name": "LAALU",
+            "gender": "male",
+            "age": 53,
+            "photo_path": "/candidates/datia-mp-2026-07/suresh-ahirwar.webp",
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹22,79,000 (~22 Lacs)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "0",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "5th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981"
+          },
+          {
+            "slug": "ved-bhaiya",
+            "name": "VED BHAIYA",
+            "party": "Independent",
+            "status": "contesting",
+            "party_native": "निर्दलीय",
+            "name_native": "वेद भैया",
+            "filed_on": "13th July, 2026",
+            "relative_name": "LACHHI RAM",
+            "gender": "male",
+            "age": 36,
+            "photo_path": "/candidates/datia-mp-2026-07/ved-bhaiya.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "keshav-singh",
+            "name": "KESHAV SINGH",
+            "party": "Independent",
+            "status": "withdrawn",
+            "party_native": "निर्दलीय",
+            "name_native": "केशव सिंह",
+            "filed_on": "10th July, 2026",
+            "relative_name": "LATE SHREE BALRAM SINGH",
+            "gender": "male",
+            "age": 41,
+            "photo_path": "/candidates/datia-mp-2026-07/keshav-singh.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "meharvan",
+            "name": "MEHARVAN",
+            "party": "Rashtriya Samaj Paksha",
+            "status": "withdrawn",
+            "party_native": "राष्ट्रीय समाज पक्ष",
+            "name_native": "मेहरवान",
+            "filed_on": "13th July, 2026",
+            "relative_name": "LATE SHREE RAGHVER",
+            "gender": "male",
+            "age": 51,
+            "photo_path": "/candidates/datia-mp-2026-07/meharvan.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "shadabuddin",
+            "name": "SHADABUDDIN",
+            "party": "Independent",
+            "status": "withdrawn",
+            "party_native": "निर्दलीय",
+            "name_native": "शादाबउद्दीन",
+            "filed_on": "10th July, 2026",
+            "relative_name": "SAHIDBUDDIN",
+            "gender": "male",
+            "age": 58,
+            "photo_path": "/candidates/datia-mp-2026-07/shadabuddin.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "prem-narayan-kushwaha",
+            "name": "PREM NARAYAN KUSHWAHA",
+            "party": "Independent",
+            "status": "rejected",
+            "party_native": "निर्दलीय",
+            "name_native": "प्रेम नारायण कुशवाह",
+            "filed_on": "14th July, 2026",
+            "relative_name": "SHREE GILLE",
+            "gender": "male",
+            "age": 52,
+            "photo_path": "/candidates/datia-mp-2026-07/prem-narayan-kushwaha.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "ramsingh-baghel",
+            "name": "RAMSINGH BAGHEL",
+            "party": "Lok Jan Shakti Party",
+            "status": "rejected",
+            "party_native": "लोक जन शक्ति पार्टी",
+            "name_native": "रामसिंह वघेल",
+            "filed_on": "13th July, 2026",
+            "relative_name": "SHREE MOHAN SINGH",
+            "gender": "male",
+            "age": 48,
+            "photo_path": "/candidates/datia-mp-2026-07/ramsingh-baghel.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "s-deniyal",
+            "name": "S. DENIYAL.",
+            "party": "National People's Party",
+            "status": "rejected",
+            "party_native": "नेशनल पीपुल्‍स पार्टी",
+            "name_native": "एस. डेनियल.",
+            "filed_on": "14th July, 2026",
+            "relative_name": "P. DENIYAL",
+            "gender": "male",
+            "age": 68,
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          },
+          {
+            "slug": "swamisharan",
+            "name": "SWAMISHARAN",
+            "party": "Indian National Congress",
+            "status": "rejected",
+            "party_native": "इंडियन नेशनल काँग्रेस",
+            "name_native": "स्‍वामीशरण",
+            "filed_on": "14th July, 2026",
+            "relative_name": "LATE GEVU",
+            "gender": "male",
+            "age": 57,
+            "photo_path": "/candidates/datia-mp-2026-07/swamisharan.webp",
+            "facts": [],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-08-03"
+          }
+        ]
+      }
+    ]
+  }
+]

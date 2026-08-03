@@ -3,7 +3,7 @@
 // service-account key that never leaves it. Never imported by the deployed site.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact, CriminalRecord, Minister, StateGovernment } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment } from '../../lib/types';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -264,7 +264,81 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       });
   }
 
+  validateElections(issues, politicians, consIds);
+
   return { issues, ok: !issues.some((i) => i.severity === 'error') };
+}
+
+/**
+ * data/seed/elections.json. Same rule as everything else - no citation, no
+ * claim - plus three checks specific to elections:
+ *
+ *  - Every seat must join a real constituency, or /area and /elections show
+ *    different places under the same name.
+ *  - Slugs must be unique, because they are URLs people bookmark and share.
+ *  - A candidate must never be BOTH linked to a sitting member and separately
+ *    ratable. That is the double-vote vector this site has already shipped
+ *    once: one human, two ratable pages, one visitor rating them twice.
+ */
+function validateElections(issues: Issue[], politicians: Politician[], consIds: Set<string>) {
+  const events = loadJson<ElectionEvent>('elections.json');
+  if (events.length === 0) return;
+
+  const politicianIds = new Set(politicians.map((p) => p.id));
+  const seenSeat = new Set<string>();
+  const push = (id: string, name: string, severity: Issue['severity'], message: string) =>
+    issues.push({ politicianId: id, name, severity, message });
+
+  // The whole file is statically imported into every serverless function, so
+  // its size is a runtime cost on every route, not just this page.
+  const bytes = existsSync(resolve(SEED_DIR, 'elections.json'))
+    ? readFileSync(resolve(SEED_DIR, 'elections.json')).byteLength
+    : 0;
+  if (bytes > 512 * 1024) {
+    push('elections.json', 'elections', 'error',
+      `${(bytes / 1024).toFixed(0)} KB exceeds the 512 KB budget - move candidate lists to a lazily-fetched public/*.json (see tools/build-who-data.ts)`);
+  }
+
+  for (const ev of events) {
+    if (!ev.source_url || !ev.source_name) push(ev.id, ev.title, 'error', 'election has no source citation (no citation, no claim)');
+    if (!ev.retrieved_date) push(ev.id, ev.title, 'warn', 'election has no retrieved_date');
+    for (const k of ['pollDate', 'countingDate', 'pollClose'] as const) {
+      if (!ev.schedule?.[k]) push(ev.id, ev.title, 'error', `schedule.${k} is missing - the phase, the countdown and the rating lock all derive from it`);
+    }
+
+    for (const seat of ev.seats) {
+      const label = `${seat.constituencyName} (${ev.id})`;
+      if (seenSeat.has(seat.slug)) push(seat.slug, label, 'error', `duplicate seat slug "${seat.slug}" - slugs are public URLs`);
+      seenSeat.add(seat.slug);
+      if (!consIds.has(seat.constituencyId)) push(seat.slug, label, 'error', `constituencyId "${seat.constituencyId}" not found in constituencies`);
+      if (!seat.eci?.stateCode || !seat.eci?.acNo) push(seat.slug, label, 'error', 'missing eci.stateCode/acNo - the results URL cannot be built');
+
+      const seenCand = new Set<string>();
+      for (const c of seat.candidates) {
+        const cl = `${c.name} - ${seat.constituencyName}`;
+        if (seenCand.has(c.slug)) push(c.slug, cl, 'error', `duplicate candidate slug "${c.slug}" within ${seat.slug}`);
+        seenCand.add(c.slug);
+        if (!c.source_url || !c.source_name) push(c.slug, cl, 'error', 'candidate has no source citation (no citation, no claim)');
+        if (!c.retrieved_date) push(c.slug, cl, 'warn', 'candidate has no retrieved_date');
+        if (c.politicianId && !politicianIds.has(c.politicianId)) {
+          push(c.slug, cl, 'error', `politicianId "${c.politicianId}" does not exist - the candidate page would redirect to a 404`);
+        }
+        for (const f of c.facts ?? []) {
+          if (!f.source_url) push(c.slug, cl, 'error', `fact "${f.field_type}" has no source_url (no citation, no claim)`);
+        }
+        if (c.criminal && !c.criminal.source_url) push(c.slug, cl, 'error', 'declared-cases record has no source_url');
+      }
+
+      if (seat.result) {
+        const r = seat.result;
+        if (!r.source_url || !r.source_name) push(seat.slug, label, 'error', 'result has no source citation (no citation, no claim)');
+        if (!r.rows?.length) push(seat.slug, label, 'error', 'result has no rows - drop it instead of storing an empty count');
+        if (r.winner_slug && !seat.candidates.some((c) => c.slug === r.winner_slug)) {
+          push(seat.slug, label, 'error', `winner_slug "${r.winner_slug}" is not a candidate on this seat`);
+        }
+      }
+    }
+  }
 }
 
 export function datasetStats() {

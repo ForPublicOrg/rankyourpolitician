@@ -1,11 +1,55 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getPerson, getPersonSentiment } from '@/lib/data';
+import { getCandidateSentiment, getElectionSeat, getPerson, getPersonSentiment } from '@/lib/data';
 import { recordVote } from '@/lib/votes';
 import { getDb, isFirestoreConfigured } from '@/lib/firebase-admin';
 import { getClientIp, verifyTurnstile, checkRateLimit, voterKey } from '@/lib/vote-integrity';
+import { candidateRatingId, isCandidateRatingId, isRatingLocked } from '@/lib/elections';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+/**
+ * Election candidates are rated through this same endpoint, under a `cand:`
+ * id namespace ("cand:{seatSlug}:{candidateSlug}"). Sharing the route is what
+ * makes dedupe, Turnstile and rate-limiting apply to them unchanged - and
+ * because lib/data.ts builds its sentiment map from politicians.json alone, a
+ * candidate id can never surface in the rankings, the trending list or
+ * /api/ratings.
+ *
+ * Two refusals are non-negotiable:
+ *
+ *  - SILENCE PERIOD. A star rating is an opinion survey. RP Act 1951 s.126(1)(b)
+ *    bans displaying election matter in the 48 hours before a poll closes, and
+ *    s.126A bans publishing the result of an opinion survey about how electors
+ *    vote while an election is under way. So candidate rating closes 48 hours
+ *    before the poll closes and reopens 30 minutes after. The widget hides
+ *    itself too, but this is the enforcement.
+ *
+ *  - ONE HUMAN, ONE RATING. A candidate linked to a sitting member
+ *    (`politicianId`) is rated on their /person page, never here. Allowing both
+ *    would let one visitor rate the same person twice under two ids - a bug
+ *    this site has already shipped once, via a duplicate ratable page.
+ */
+type CandidateTarget =
+  | { ok: true; ratingId: string }
+  | { ok: false; error: 'not-found' | 'silence-period' | 'moved'; redirectTo?: string };
+
+async function resolveCandidate(ratingId: string): Promise<CandidateTarget> {
+  const [, seatSlug, candidateSlug] = ratingId.split(':');
+  if (!seatSlug || !candidateSlug) return { ok: false, error: 'not-found' };
+  const found = await getElectionSeat(seatSlug);
+  const candidate = found?.seat.candidates.find((c) => c.slug === candidateSlug);
+  if (!found || !candidate) return { ok: false, error: 'not-found' };
+  if (candidate.politicianId) return { ok: false, error: 'moved', redirectTo: candidate.politicianId };
+  if (isRatingLocked(found.event)) return { ok: false, error: 'silence-period' };
+  return { ok: true, ratingId: candidateRatingId(seatSlug, candidateSlug) };
+}
+
+const CANDIDATE_STATUS: Record<'not-found' | 'silence-period' | 'moved', number> = {
+  'not-found': 404,
+  'silence-period': 403,
+  moved: 403,
+};
 
 /** Live sentiment for one person. VoteWidget fetches this on mount because
  *  profile HTML is ISR-cached for up to a day - the page stays a cheap static
@@ -15,6 +59,21 @@ export const dynamic = 'force-dynamic';
 export async function GET(req: NextRequest) {
   const politicianId = req.nextUrl.searchParams.get('politicianId');
   if (!politicianId) return NextResponse.json({ error: 'bad-request' }, { status: 400 });
+
+  if (isCandidateRatingId(politicianId)) {
+    const target = await resolveCandidate(politicianId);
+    if (!target.ok) {
+      return NextResponse.json({ error: target.error }, { status: CANDIDATE_STATUS[target.error] });
+    }
+    const s = await getCandidateSentiment(target.ratingId);
+    return NextResponse.json(
+      {
+        ok: true,
+        sentiment: { mean: s.raw_mean, votes: s.n_votes, distribution: s.distribution, confidence: s.confidence },
+      },
+      { headers: { 'cache-control': 'public, max-age=0, s-maxage=300, stale-while-revalidate=600' } },
+    );
+  }
 
   const res = await getPerson(politicianId);
   if (!res || (!res.person && !res.redirectTo)) return NextResponse.json({ error: 'not-found' }, { status: 404 });
@@ -44,8 +103,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'invalid' }, { status: 400 });
   }
 
-  const res = await getPerson(politicianId);
-  if (!res || (!res.person && !res.redirectTo)) return NextResponse.json({ error: 'not-found' }, { status: 404 });
+  // Candidates resolve against the elections seed, not the politician index.
+  // Everything after this point - Turnstile, rate limit, dedupe key, the
+  // Firestore transaction - is shared, so a candidate vote is exactly as hard
+  // to forge as a leader vote.
+  let candidateRating: string | null = null;
+  if (isCandidateRatingId(politicianId)) {
+    const target = await resolveCandidate(politicianId);
+    if (!target.ok) {
+      return NextResponse.json(
+        { error: target.error, ...(target.redirectTo ? { redirectTo: target.redirectTo } : {}) },
+        { status: CANDIDATE_STATUS[target.error] },
+      );
+    }
+    candidateRating = target.ratingId;
+  }
+
+  const res = candidateRating ? null : await getPerson(politicianId);
+  if (!candidateRating && (!res || (!res.person && !res.redirectTo))) {
+    return NextResponse.json({ error: 'not-found' }, { status: 404 });
+  }
 
   // Resolve the CANONICAL person before recording, exactly as GET does. An alias
   // id (a central minister linked to their MP, or a state minister linked to
@@ -55,14 +132,19 @@ export async function POST(req: NextRequest) {
   // their canonical-doc vote), defeating dedupe. The redirect target is resolved
   // with a second getPerson - it hits the in-process cached index, so it costs
   // zero extra Firestore reads.
-  const canonicalId = res.redirectTo ?? politicianId;
-  const target = res.redirectTo ? await getPerson(res.redirectTo) : res;
-  if (!target || !target.person) return NextResponse.json({ error: 'not-found' }, { status: 404 });
-  // Appointed officials are information-only and must never be rated. Guard the
-  // RESOLVED target: for an alias id res.person is undefined, so this check has
-  // to run after resolution or it would be skipped entirely.
-  if (target.person.kind === 'official') {
-    return NextResponse.json({ error: 'not-ratable' }, { status: 403 });
+  let canonicalId: string;
+  if (candidateRating) {
+    canonicalId = candidateRating;
+  } else {
+    canonicalId = res!.redirectTo ?? politicianId;
+    const target = res!.redirectTo ? await getPerson(res!.redirectTo) : res!;
+    if (!target || !target.person) return NextResponse.json({ error: 'not-found' }, { status: 404 });
+    // Appointed officials are information-only and must never be rated. Guard the
+    // RESOLVED target: for an alias id res.person is undefined, so this check has
+    // to run after resolution or it would be skipped entirely.
+    if (target.person.kind === 'official') {
+      return NextResponse.json({ error: 'not-ratable' }, { status: 403 });
+    }
   }
 
   // Fail closed in production. When Firestore is configured but no handle is

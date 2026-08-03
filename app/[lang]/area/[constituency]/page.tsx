@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getConstituency, getRanking, getConstituencyView, getIndex } from '@/lib/data';
+import { getConstituency, getRanking, getConstituencyView, getIndex, getElectionsForConstituency } from '@/lib/data';
+import { keyDateFor, phaseOf } from '@/lib/elections';
+import { PhaseChip } from '@/components/ElectionBits';
 import { buildSpotMap } from '@/lib/geo-constituencies';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
+import { formatDate } from '@/lib/format';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RankingList from '@/components/RankingList';
 import AdSlot from '@/components/AdSlot';
@@ -48,6 +51,9 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
   const c = view.constituency;
 
   const ranking = await getRanking('constituency', c.id);
+  // Most recent election for this seat, if we hold one. Seed lookup, no I/O.
+  const election = (await getElectionsForConstituency(c.id))[0] ?? null;
+  const electionPhase = election ? phaseOf(election.event) : null;
   const { dict } = await getI18n(lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
@@ -123,6 +129,39 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
                 )}
               </SectionCard>
             </Reveal>
+
+            {/* A seat with an election is usually a seat with no sitting member -
+                which is exactly when this page had nothing to say. The election
+                card goes directly under the representative slot, because "there
+                is no MLA" and "here is why, and who wants the job" are one
+                thought. */}
+            {election && (
+              <Reveal>
+                <Link
+                  href={`/elections/${election.seat.slug}`}
+                  className="pressable block rounded-3xl border border-brand/25 bg-gradient-to-br from-brand-soft/50 to-white p-5 transition hover:border-brand/50 hover:shadow-lift"
+                >
+                  <div className="flex flex-wrap items-center gap-2">
+                    <PhaseChip phase={electionPhase!} tr={tr} />
+                    {view.representatives.length === 0 && (
+                      <span className="text-xs text-ink-faint">{tr('elections.vacantNote')}</span>
+                    )}
+                  </div>
+                  <p className="mt-2 text-lg font-extrabold tracking-tight text-ink">
+                    {electionPhase === 'declared' ? tr('elections.areaCardDone') : tr('elections.areaCardTitle')}
+                  </p>
+                  <p className="mt-1 text-sm text-ink-soft">
+                    {tr(
+                      `elections.phaseHelp.${electionPhase === 'awaiting-count' ? 'awaitingCount' : electionPhase}`,
+                      { date: formatDate(keyDateFor(election.event, electionPhase!).date, lang) },
+                    )}
+                  </p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                    {tr('elections.areaCardCta')} <Icon name="arrow" size={14} />
+                  </span>
+                </Link>
+              </Reveal>
+            )}
 
             {view.siblings.length > 0 && (
               <Reveal>

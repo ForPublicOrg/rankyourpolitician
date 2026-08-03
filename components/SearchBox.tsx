@@ -9,6 +9,7 @@ import { useI18n } from '@/lib/i18n/provider';
 import { useSearch, addRecentSearch, getRecentSearches, clearRecentSearches } from '@/lib/use-search';
 import type { SearchHits } from '@/lib/search-core';
 import { norm } from '@/lib/search-core';
+import { electionSearchSub } from '@/lib/elections';
 import Icon, { type IconName } from './Icon';
 import { Avatar } from './ui';
 import { clsx } from 'clsx';
@@ -24,10 +25,16 @@ interface FlatRow {
 }
 
 // Rows are emitted BROAD -> NARROW: state, then district/city, then constituency,
-// then the people who hold those seats. That mirrors how someone actually locates
-// their representative ("Karnataka … Mysuru … Chamaraja … my MLA") and matches the
-// site's own hierarchy, instead of dropping a flat list of namesakes on them first.
-function flatten(hits: SearchHits, labels: Record<string, string>): FlatRow[] {
+// then any election being fought in that constituency, then the people who hold
+// those seats. That mirrors how someone actually locates their representative
+// ("Karnataka … Mysuru … Chamaraja … my MLA") and matches the site's own
+// hierarchy, instead of dropping a flat list of namesakes on them first.
+function flatten(
+  hits: SearchHits,
+  labels: Record<string, string>,
+  tr: (k: string, v?: Record<string, string | number>) => string,
+  locale: string,
+): FlatRow[] {
   const rows: FlatRow[] = [];
   for (const s of hits.states) {
     rows.push({ href: `/state/${s.stateCode}`, title: s.state, icon: 'flag', group: labels.states });
@@ -42,6 +49,18 @@ function flatten(hits: SearchHits, labels: Record<string, string>): FlatRow[] {
       sub: `${a.type === 'PC' ? labels.pc : labels.ac} · ${a.state}`,
       icon: 'pin',
       group: labels.areas,
+    });
+  }
+  // Same rung as the area above it, and the row a namesake area could be
+  // mistaken for: the sub-line names the election and where it stands, so
+  // "Bankipur" the seat is never confused with "Bankipur" the constituency.
+  for (const e of hits.elections) {
+    rows.push({
+      href: `/elections/${e.slug}`,
+      title: e.seat,
+      sub: electionSearchSub(e, tr, locale),
+      icon: 'calendar',
+      group: labels.elections,
     });
   }
   for (const p of hits.people) {
@@ -84,7 +103,7 @@ function Highlight({ text, q }: { text: string; q: string }) {
 }
 
 export default function SearchBox({ variant = 'header' }: { variant?: 'header' | 'hero' }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const router = useRouter();
   const { status, search, ensureIndex } = useSearch(5);
   const [q, setQ] = useState('');
@@ -132,6 +151,7 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
       areas: t('search.groups.constituencies'),
       districts: t('search.groups.districts'),
       states: t('search.groups.states'),
+      elections: t('elections.title'),
       pc: t('search.pcShort'),
       ac: t('search.acShort'),
     }),
@@ -139,7 +159,7 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
   );
 
   const hits = q.trim() && status === 'ready' ? search(q) : null;
-  const rows = useMemo(() => (hits ? flatten(hits, labels) : []), [hits, labels]);
+  const rows = useMemo(() => (hits ? flatten(hits, labels, t, locale) : []), [hits, labels, t, locale]);
   const showLoading = q.trim().length > 0 && status !== 'ready' && status !== 'error';
 
   // Keep the highlighted row in range when results change.

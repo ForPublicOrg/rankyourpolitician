@@ -26,6 +26,7 @@ export default function Footer() {
             <p className="mt-2 text-xs text-ink-faint">{t('footer.disclaimer')}</p>
           </div>
           <nav className="grid grid-cols-2 gap-x-10 gap-y-2.5 text-sm" aria-label="Footer">
+            <Link href="/elections" className="text-ink-soft hover:text-brand">{t('nav.elections')}</Link>
             <Link href="/hierarchy" className="text-ink-soft hover:text-brand">{t('nav.hierarchy')}</Link>
             <Link href="/why-care" className="text-ink-soft hover:text-brand">{t('nav.whyCare')}</Link>
             <Link href="/for-leaders" className="text-ink-soft hover:text-brand">{t('nav.forLeaders')}</Link>

@@ -523,6 +523,191 @@ export interface TrendingEntry {
   total_votes: number;
 }
 
+// ---- Elections (data/seed/elections.json) ---------------------------------
+//
+// An election is the one part of this dataset that has a LIFECYCLE: announced ->
+// nominations -> poll -> counting -> declared. Everything here is the Election
+// Commission's own published record, and the same "no citation, no claim" rule
+// applies - a candidate exists only because ECI published their nomination.
+//
+// Two things are deliberately NOT modelled:
+//  - Vote counts are never authored by hand. Live counts come from the ECI
+//    results microsite at runtime (lib/eci-results.ts); the FINAL counts are
+//    frozen into `ElectionSeat.result` by `dm fetch-election-results` once
+//    counting ends, so a settled election needs no network at all.
+//  - The candidate's residential address. ECI publishes it, but it adds nothing
+//    to an informed vote and turns a civic page into a harassment vector.
+
+/** How the seat is being filled. `authority` matters because State Election
+ *  Commissions run local-body polls on entirely different sources - only 'ECI'
+ *  data can use the results/affidavit URL conventions below. */
+export type ElectionKind =
+  | 'assembly-bye'
+  | 'assembly-general'
+  | 'lok-sabha-bye'
+  | 'lok-sabha-general';
+
+/** Every date the Commission publishes for an election, ISO yyyy-mm-dd.
+ *  `pollOpen`/`pollClose` are local wall-clock "HH:MM" as notified (poll hours
+ *  differ by election), and drive the s.126 silence window - see
+ *  lib/elections.ts. */
+export interface ElectionSchedule {
+  notification: string;
+  nominationLast: string;
+  scrutiny: string;
+  withdrawalLast: string;
+  pollDate: string;
+  pollOpen: string;
+  pollClose: string;
+  countingDate: string;
+  completeBy?: string;
+}
+
+/** Where a candidate's paperwork stands after scrutiny and withdrawal, in the
+ *  Commission's own vocabulary. Only 'contesting' candidates appear on the
+ *  ballot; the rest are shown because "who tried to stand" is part of the
+ *  public record, and hiding them would misrepresent the field. */
+export type NominationStatus = 'contesting' | 'accepted' | 'rejected' | 'withdrawn';
+
+export interface ElectionCandidate {
+  /** Stable within the seat: slug of the name, numbered on collision (two
+   *  candidates with identical names on one ballot is real - see Datia 2026). */
+  slug: string;
+  name: string;
+  /** Name as ECI prints it in the state's own script, when published. */
+  name_native?: string;
+  party: string;
+  party_native?: string;
+  status: NominationStatus;
+  /** Father's / husband's name as declared - the standard Indian ballot
+   *  disambiguator when two candidates share a name. */
+  relative_name?: string;
+  gender?: string;
+  age?: number;
+  /** Mirrored into public/candidates/ at ingest - never a hotlink to ECI. */
+  photo_path?: string;
+  /**
+   * A STABLE page showing this candidate's full Form-26 affidavit. ECI's own
+   * per-candidate links (show-profile/..., the PDF download) are encrypted per
+   * request and change on every page load, so they can never be stored; this
+   * points at the MyNeta/ADR mirror of the same sworn affidavit, which is the
+   * source this dataset already cites for sitting members' declarations.
+   */
+  affidavit_url?: string;
+  /** Date the candidate filed, as ECI prints it. */
+  filed_on?: string;
+  /**
+   * Set when this candidate already has a profile in politicians.json (a
+   * sitting member contesting again, or a winner linked after the result).
+   * When present the candidate page REDIRECTS to /person/{id} and the candidate
+   * is not separately ratable - two ratable pages for one human is the
+   * double-vote vector this dataset has already been bitten by once.
+   */
+  politicianId?: string;
+  /** Declared assets / liabilities / education / profession - shown, never scored. */
+  facts: Fact[];
+  /** The candidate's own sworn declaration of criminal cases, same shape and
+   *  same framing rules as a sitting member's (an accusation, not a conviction). */
+  criminal?: CriminalRecord;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+}
+
+/** One candidate's counted votes, exactly as the Commission published them. */
+export interface ElectionResultRow {
+  /** Matches ElectionCandidate.slug when the names join; absent for NOTA. */
+  candidateSlug?: string;
+  name: string;
+  party: string;
+  evm_votes: number;
+  postal_votes: number;
+  total_votes: number;
+  /** ECI's own printed share, kept verbatim rather than recomputed. */
+  vote_share_pct: number;
+  /** NOTA is a ballot option, never a candidate - the UI must not rank it. */
+  isNota?: boolean;
+}
+
+/** A settled result, frozen from the ECI results microsite after counting.
+ *  Once this exists the seat page needs no network call, ever. */
+export interface ElectionResult {
+  declared_date: string;
+  winner_slug?: string;
+  /** Winner's lead over the runner-up, in votes. */
+  margin?: number;
+  total_votes?: number;
+  rows: ElectionResultRow[];
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+}
+
+export interface ElectionSeat {
+  /** URL segment: `${seat}-${stateCode}-${YYYY}-${MM}` of the poll date. */
+  slug: string;
+  /** Joins data/seed/constituencies.json, so /area/{id} and this page agree. */
+  constituencyId: string;
+  constituencyName: string;
+  state: string;
+  stateCode: string;
+  districts: string[];
+  /** The Commission's own numbering, e.g. 182 for Bankipur. */
+  acNumber?: number;
+  /** ECI's internal codes, used to BUILD result URLs - never parsed back out
+   *  (the concatenated form "S1222" is ambiguous). */
+  eci: { stateCode: string; acNo: number };
+  /** Why the seat fell vacant - cited, and never phrased as a verdict. */
+  vacancy_reason?: Fact;
+  electors?: Fact;
+  turnout_pct?: Fact;
+  /** ALL nominations, in the order the Commission lists them. */
+  candidates: ElectionCandidate[];
+  result?: ElectionResult;
+}
+
+export interface ElectionEvent {
+  id: string;
+  title: string;
+  kind: ElectionKind;
+  authority: 'ECI' | 'SEC';
+  schedule: ElectionSchedule;
+  /** Base URL of the ECI results microsite for this event, e.g.
+   *  "https://results.eci.gov.in/ResultAcByeAugust2026". Absent until the
+   *  Commission publishes it (it appears at counting time). */
+  results_base?: string;
+  /** The Commission's candidate-affidavit list for this event. Stable; the
+   *  per-candidate show-profile links are NOT (encrypted, regenerated per
+   *  request) and must never be stored. */
+  affidavit_url?: string;
+  seats: ElectionSeat[];
+  source_url: string;
+  source_name: string;
+  retrieved_date: string;
+}
+
+/** Where an election is in its lifecycle, computed from the schedule against
+ *  "now" - see lib/elections.ts. Drives every status label in the UI. */
+export type ElectionPhase =
+  | 'announced'      // notified; nominations / scrutiny / withdrawal in progress
+  | 'campaign'       // field is final, poll ahead
+  | 'silence'        // s.126 48-hour window before the poll closes
+  | 'polling'        // poll day, booths open
+  | 'awaiting-count' // voted; counting day still to come
+  | 'counting'       // counting day
+  | 'declared';      // result published
+
+/** One seat's live counting snapshot, served by /api/election-live. Never
+ *  persisted, never baked into a page. */
+export interface LiveCountSeat {
+  seatSlug: string;
+  /** "Status of EVM Round: 5/31" as published. Absent before counting starts. */
+  round?: { done: number; total: number };
+  rows: ElectionResultRow[];
+  total_votes: number;
+  source_url: string;
+}
+
 /** One row of the top-rated list: leaders ordered by PUBLIC rating (votes
  *  actually cast), never by the verified-performance score - the two axes stay
  *  separate everywhere. The Bayesian mean orders the list (it is never shown);

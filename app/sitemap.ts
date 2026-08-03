@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getAllPersonIds, getIndex, getStates, getDistrictsInState } from '@/lib/data';
+import { getAllElectionSeats, getAllPersonIds, getIndex, getStates, getDistrictsInState } from '@/lib/data';
 import { SITE_URL } from '@/lib/site-url';
 
 // Built once per deploy. Clean (locale-less) URLs are the canonical ones -
@@ -14,7 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // are for other crawlers, and the actual ISR-write savings come from the
   // revalidate windows and robots.ts, not from this file.
   const urls: MetadataRoute.Sitemap = [
-    ...['', '/india', '/hierarchy', '/rankings'].map((p) => ({
+    ...['', '/india', '/hierarchy', '/rankings', '/elections'].map((p) => ({
       url: `${SITE_URL}${p || '/'}`,
       changeFrequency: 'daily' as const,
     })),
@@ -35,6 +35,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const id of personIds) {
     urls.push({ url: `${SITE_URL}/person/${id}`, changeFrequency: 'weekly' });
+  }
+  // Election seats and the people standing in them. Daily while an election is
+  // live is tempting, but the pages themselves do not change - only the count
+  // does, and that is fetched by the browser, not baked in.
+  for (const { seat } of await getAllElectionSeats()) {
+    urls.push({ url: `${SITE_URL}/elections/${seat.slug}`, changeFrequency: 'weekly' });
+    for (const c of seat.candidates) {
+      // A candidate linked to a sitting member redirects to their profile,
+      // which is already in the sitemap - listing both would be a duplicate.
+      if (c.politicianId) continue;
+      urls.push({ url: `${SITE_URL}/elections/${seat.slug}/${c.slug}`, changeFrequency: 'weekly' });
+    }
   }
   return urls;
 }

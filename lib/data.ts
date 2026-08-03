@@ -33,7 +33,8 @@ import seedConstitutional from '@/data/seed/constitutional_offices.json';
 import seedDistrictPortals from '@/data/seed/district_portals.json';
 import seedContactChannels from '@/data/seed/contact_channels.json';
 import seedCriminalCases from '@/data/seed/criminal_cases.json';
-import type { CriminalRecord } from './types';
+import seedElections from '@/data/seed/elections.json';
+import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat } from './types';
 import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type PoliticianContact, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
 
 // Affidavit case detail, keyed by person. Seed-only (updated via
@@ -48,6 +49,77 @@ function criminalRecordById(): Map<string, CriminalRecord> {
 
 function slugify(s: string): string {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+// ---- Elections -------------------------------------------------------------
+// Seed-only, like the affidavit records above: an election changes when the
+// data manager runs and we redeploy, never per request. No ttlCache and no
+// Firestore branch - the only fast-moving part of an election is the vote
+// count on counting day, and that is client-fetched from /api/election-live.
+//
+// The lookups are one-shot Maps built on first use (the criminalRecordById
+// pattern), NOT hung off `Index` - Index is rebuilt every 5 minutes to pick up
+// vote aggregates, and elections have no reason to be recomputed on that clock.
+
+const ELECTIONS = seedElections as unknown as ElectionEvent[];
+
+let seatIndex: Map<string, { event: ElectionEvent; seat: ElectionSeat }> | null = null;
+function seatBySlug() {
+  return (seatIndex ??= new Map(
+    ELECTIONS.flatMap((event) => event.seats.map((seat) => [seat.slug, { event, seat }] as const)),
+  ));
+}
+
+/** Every election we hold, newest poll first. */
+export async function getElections(): Promise<ElectionEvent[]> {
+  return [...ELECTIONS].sort((a, b) => b.schedule.pollDate.localeCompare(a.schedule.pollDate));
+}
+
+export async function getElection(id: string): Promise<ElectionEvent | null> {
+  return ELECTIONS.find((e) => e.id === id) ?? null;
+}
+
+export async function getElectionSeat(slug: string): Promise<{ event: ElectionEvent; seat: ElectionSeat } | null> {
+  return seatBySlug().get(slug) ?? null;
+}
+
+export async function getElectionCandidate(
+  seatSlug: string,
+  candidateSlug: string,
+): Promise<{ event: ElectionEvent; seat: ElectionSeat; candidate: ElectionCandidate } | null> {
+  const found = seatBySlug().get(seatSlug);
+  const candidate = found?.seat.candidates.find((c) => c.slug === candidateSlug);
+  return found && candidate ? { ...found, candidate } : null;
+}
+
+/** Every (seatSlug, candidateSlug) pair - for generateStaticParams and sitemap. */
+export async function getAllElectionSeats(): Promise<{ event: ElectionEvent; seat: ElectionSeat }[]> {
+  return [...seatBySlug().values()];
+}
+
+/**
+ * The election for a constituency, most recent first. This is what turns a
+ * vacant seat's /area page from a dead end into "there is an election here" -
+ * the page most likely to be visited at exactly the moment it matters.
+ */
+export async function getElectionsForConstituency(
+  constituencyId: string,
+): Promise<{ event: ElectionEvent; seat: ElectionSeat }[]> {
+  return [...seatBySlug().values()]
+    .filter((x) => x.seat.constituencyId === constituencyId)
+    .sort((a, b) => b.event.schedule.pollDate.localeCompare(a.event.schedule.pollDate));
+}
+
+/**
+ * Public rating for one candidate. Candidate ratings live in the same
+ * `vote_aggregates` collection under a `cand:` id namespace, so dedupe,
+ * rate-limiting and Turnstile all apply unchanged - but because
+ * buildIndex() computes `sentiment` from politicians.json alone, a candidate
+ * can never leak into the rankings, the trending list or /api/ratings.
+ */
+export async function getCandidateSentiment(ratingId: string): Promise<SentimentScore> {
+  const idx = await getIndex();
+  return computeSentimentScore(ratingId, idx.voteAggregates.get(ratingId));
 }
 
 export interface Index {

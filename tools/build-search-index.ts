@@ -15,13 +15,22 @@ import seedCentral from '../data/seed/central_government.json';
 import seedStateGov from '../data/seed/state_government.json';
 import seedDistrictOfficials from '../data/seed/district_officials.json';
 import seedConstitutional from '../data/seed/constitutional_offices.json';
-import type { Politician, Minister, StateGovernment, OfficeSeat, ConstitutionalOffice } from '../lib/types';
+import seedElections from '../data/seed/elections.json';
+import type {
+  Politician,
+  Minister,
+  StateGovernment,
+  OfficeSeat,
+  ConstitutionalOffice,
+  ElectionEvent,
+} from '../lib/types';
 
 // Row shapes (positional arrays keep the file small):
 //   people:    [id, name, partyShort, place, stateCode, role, nameHi?, photo?, portfolios?]
 //   areas:     [id, name, stateCode, type]
 //   districts: [stateCode, name]
 //   states:    [code, name]
+//   elections: [seatSlug, seatName, stateCode, pollDate, countingDate, declared?]  declared = '1' once a result is frozen
 export interface SearchIndexFile {
   v: 1;
   builtAt: string;
@@ -29,6 +38,7 @@ export interface SearchIndexFile {
   people: (string | undefined)[][];
   areas: [string, string, string, string][];
   districts: [string, string][];
+  elections: [string, string, string, string, string, string?][];
 }
 
 function slugify(s: string): string {
@@ -146,6 +156,34 @@ function build(): SearchIndexFile {
     areas.push([c.id, c.name, c.stateCode, c.type]);
   }
 
+  // Elections - SEATS ONLY, never the individual candidates. One by-election
+  // can carry 75 nominations, so indexing candidates would add hundreds of rows
+  // to the payload EVERY visitor downloads, for names almost nobody searches;
+  // the seat page lists them all and is one tap from here.
+  //
+  // Slots [3] and [4] are the Commission's cited poll and counting dates, not a
+  // phase label: this file is static between deploys, so a baked "Voting soon"
+  // would still say that a week after the poll closed. Storing both dates is
+  // what lets the search row say "Counting now" on counting day instead of
+  // disagreeing with the page it links to. Slot [5] is set only when a result
+  // has been frozen into the seed - itself a data change that rebuilds this
+  // index - so every label a reader sees derives from facts that cannot go
+  // stale (see electionSearchSub() in lib/elections.ts).
+  const elections: [string, string, string, string, string, string?][] = [];
+  for (const ev of seedElections as unknown as ElectionEvent[]) {
+    for (const seat of ev.seats) {
+      const row: [string, string, string, string, string, string?] = [
+        seat.slug,
+        seat.constituencyName,
+        seat.stateCode,
+        ev.schedule.pollDate,
+        ev.schedule.countingDate,
+      ];
+      if (seat.result) row.push('1');
+      elections.push(row);
+    }
+  }
+
   // Districts (from politicians' coverage lists).
   const seenD = new Set<string>();
   const districts: [string, string][] = [];
@@ -177,6 +215,7 @@ function build(): SearchIndexFile {
     people: [...people.values()],
     areas,
     districts,
+    elections,
   };
 }
 
@@ -186,5 +225,5 @@ const dest = join(process.cwd(), 'public', 'search-index.json');
 mkdirSync(join(process.cwd(), 'public'), { recursive: true });
 writeFileSync(dest, out);
 console.log(
-  `✓ search index: ${idx.people.length} people, ${idx.areas.length} areas, ${idx.districts.length} districts, ${idx.states.length} states → public/search-index.json (${(out.length / 1024).toFixed(0)} KB raw)`,
+  `✓ search index: ${idx.people.length} people, ${idx.areas.length} areas, ${idx.districts.length} districts, ${idx.states.length} states, ${idx.elections.length} election seats → public/search-index.json (${(out.length / 1024).toFixed(0)} KB raw)`,
 );
