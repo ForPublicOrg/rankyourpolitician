@@ -308,6 +308,66 @@
     "mapHint": "Tap any state to meet its leaders",
     "mapAria": "Interactive map of India. Select a state to view its representatives.",
     "mapLeaders": "{n} leaders",
+    "flag": {
+      "label": "The national flag",
+      "hint": "Explore",
+      "open": "Open the National Flag of India explainer",
+      "close": "Close",
+      "eyebrow": "Know the Tricolour",
+      "title": "The National Flag of India",
+      "intro": "India's Tricolour is a precise civic symbol: three equal bands and the Ashoka Chakra at its centre. Explore what each part represents and how the flag came to be adopted.",
+      "flagAria": "The National Flag of India: saffron, white and green horizontal bands with a navy-blue 24-spoke Ashoka Chakra",
+      "anatomyTitle": "The flag, explained",
+      "structureTitle": "Flag construction",
+      "measureRatio": "Height : length",
+      "measureBands": "Equal bands",
+      "measureSpokes": "Chakra spokes",
+      "details": {
+        "structure": {
+          "title": "Its structure",
+          "body": "A rectangular 2:3 flag, divided into three equal horizontal bands. Saffron is always at the top."
+        },
+        "saffron": {
+          "title": "Saffron",
+          "body": "The top band represents the strength and courage of the country."
+        },
+        "white": {
+          "title": "White",
+          "body": "The middle band stands for peace and truth, with the Dharma Chakra at its centre."
+        },
+        "green": {
+          "title": "Green",
+          "body": "The lower band represents the fertility, growth and auspiciousness of the land."
+        },
+        "chakra": {
+          "title": "Ashoka Chakra",
+          "body": "The navy-blue Dharma Chakra has 24 spokes. Based on the Sarnath Lion Capital, it represents the wheel of law and movement."
+        }
+      },
+      "historyEyebrow": "A short history",
+      "historyTitle": "From freedom movement to Republic",
+      "history": {
+        "adopted": {
+          "date": "22 July 1947",
+          "body": "The Constituent Assembly adopted the flag in its present form."
+        },
+        "independence": {
+          "date": "15 August 1947",
+          "body": "It became the national flag of the Dominion of India at Independence."
+        },
+        "republic": {
+          "date": "26 January 1950",
+          "body": "It continued as the national flag when India became a Republic."
+        },
+        "code": {
+          "date": "26 January 2002",
+          "body": "The Flag Code was revised, setting out how citizens may display it with dignity."
+        }
+      },
+      "respectTitle": "Display it with dignity.",
+      "respectBody": "The saffron band is displayed at the top, and the official Flag Code should always be followed.",
+      "sourceCta": "Read the official guide"
+    },
     "statLeaders": "Leaders tracked",
     "statAreas": "Constituencies",
     "statDistricts": "Districts",

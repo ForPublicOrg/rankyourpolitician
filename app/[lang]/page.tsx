@@ -16,6 +16,7 @@ import { SectionCard, Avatar, PartyChip, StatPill, Eyebrow } from '@/components/
 import { RankBadge } from '@/components/viz';
 import { Reveal, CountUp } from '@/components/motion';
 import Icon, { type IconName } from '@/components/Icon';
+import IndiaFlagExplainer from '@/components/IndiaFlagExplainer';
 import { Analytics } from '@vercel/analytics/next';
 
 // Daily self-heal only - content changes arrive via deploy or /api/revalidate,
@@ -158,7 +159,17 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
             {/* The map is desktop-only: on phones it added ~600px of scroll
                 before any content. Mobile users get it on /india instead. */}
             <div className="hidden animate-map-in lg:block" style={{ animationDelay: '150ms' }}>
-              <GeoMap shapes={shapes} w={520} h={560} ariaLabel={tr('home.mapAria')} maxWidthClass="max-w-sm" />
+              <div className="mx-auto flex max-w-[31rem] items-start justify-center gap-2 sm:gap-3">
+                <GeoMap
+                  shapes={shapes}
+                  w={520}
+                  h={560}
+                  ariaLabel={tr('home.mapAria')}
+                  maxWidthClass="max-w-sm"
+                  className="min-w-0 flex-1"
+                />
+                <IndiaFlagExplainer />
+              </div>
               <p className="mt-2 text-center text-sm text-ink-faint">
                 <Icon name="pin" size={14} className="mr-1 inline-block" />
                 {tr('home.mapHint')}
