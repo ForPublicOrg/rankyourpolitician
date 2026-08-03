@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getElection } from '@/lib/data';
 import { isCountingWindow, phaseOf } from '@/lib/elections';
-import { attachSlugs, constituencyCandidateUrl, fetchConstituencyResult } from '@/lib/eci-results';
+import {
+  attachSlugs,
+  constituencyCandidateUrl,
+  type EciFetchFailure,
+  fetchConstituencyResult,
+} from '@/lib/eci-results';
 import type { ElectionEvent, LiveCountSeat } from '@/lib/types';
 
 export const runtime = 'nodejs';
@@ -45,20 +50,39 @@ interface Snapshot {
   fetchedAt: string;
 }
 
+interface ReadDiagnostic {
+  seatSlug: string;
+  outcome: 'ok' | 'failed';
+  failure?: EciFetchFailure;
+}
+
 /** Per-event memo of the in-flight fetch, plus the last snapshot that actually
  *  worked. Module scope, so it survives between requests on a warm instance
  *  and dies with it - nothing is persisted anywhere. */
 const inflight = new Map<string, { at: number; p: Promise<Snapshot | null> }>();
 const lastGood = new Map<string, Snapshot>();
 
-async function readFromEci(ev: ElectionEvent): Promise<Snapshot | null> {
+async function readFromEci(ev: ElectionEvent, diagnostics?: ReadDiagnostic[]): Promise<Snapshot | null> {
   if (!ev.results_base) return null;
   const base = ev.results_base;
 
   const seats = await Promise.all(
     ev.seats.map(async (seat): Promise<LiveCountSeat | null> => {
-      const parsed = await fetchConstituencyResult(base, seat.eci.stateCode, seat.eci.acNo, FETCH_TIMEOUT_MS);
-      if (!parsed) return null;
+      let failure: EciFetchFailure | undefined;
+      const parsed = await fetchConstituencyResult(
+        base,
+        seat.eci.stateCode,
+        seat.eci.acNo,
+        FETCH_TIMEOUT_MS,
+        (detail) => {
+          failure = detail;
+        },
+      );
+      if (!parsed) {
+        diagnostics?.push({ seatSlug: seat.slug, outcome: 'failed', ...(failure ? { failure } : {}) });
+        return null;
+      }
+      diagnostics?.push({ seatSlug: seat.slug, outcome: 'ok' });
       return {
         seatSlug: seat.slug,
         ...(parsed.round ? { round: parsed.round } : {}),
@@ -116,6 +140,25 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       { ok: true, status: phase === 'declared' ? 'final' : 'not-counting', phase, seats: [] },
       { headers: cache(3600) },
+    );
+  }
+
+  // This temporary, no-store probe is for production diagnosis only. Its
+  // response includes request outcome metadata, never ECI HTML or user data.
+  // It bypasses the memo/CDN so an operator can see the actual upstream
+  // condition rather than a previous 30-second unavailable response.
+  if (req.nextUrl.searchParams.get('debug') === '1') {
+    const diagnostics: ReadDiagnostic[] = [];
+    const snap = await readFromEci(ev, diagnostics);
+    return NextResponse.json(
+      {
+        ok: true,
+        status: snap ? 'live' : 'unavailable',
+        phase,
+        ...(snap ? { fetchedAt: snap.fetchedAt, seats: snap.seats } : { seats: [] }),
+        diagnostics,
+      },
+      { headers: { 'cache-control': 'no-store' } },
     );
   }
 

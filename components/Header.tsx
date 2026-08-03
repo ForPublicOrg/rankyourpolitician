@@ -8,22 +8,22 @@ import SearchBox from './SearchBox';
 import LanguageSwitcher from './LanguageSwitcher';
 import Icon, { type IconName } from './Icon';
 
-// Primary destinations. Desktop navigation gets its own row so every
-// destination remains a one-click action without squeezing long labels into
-// the brand/search/actions row. The mobile menu is only a small-screen fallback.
-const NAV: { href: string; key: string; icon: IconName }[] = [
-  { href: '/india', key: 'nav.central', icon: 'parliament' },
-  { href: '/elections', key: 'nav.elections', icon: 'ballot' },
-  { href: '/rights', key: 'nav.rights', icon: 'scales' },
-  { href: '/hierarchy', key: 'nav.hierarchy', icon: 'network' },
-  { href: '/who', key: 'nav.accountability', icon: 'megaphone' },
-  { href: '/about', key: 'nav.about', icon: 'info' },
+// Keep primary destinations one click away on desktop, but use deliberately
+// short labels. At tighter desktop widths the same buttons become icon-first;
+// the full translated name remains available to assistive tech and on hover.
+const NAV: { href: string; key: string; short: string; icon: IconName }[] = [
+  { href: '/india', key: 'nav.central', short: 'India', icon: 'parliament' },
+  { href: '/elections', key: 'nav.elections', short: 'Elections', icon: 'ballot' },
+  { href: '/rights', key: 'nav.rights', short: 'Rights', icon: 'scales' },
+  { href: '/hierarchy', key: 'nav.hierarchy', short: 'Structure', icon: 'network' },
+  { href: '/who', key: 'nav.accountability', short: 'Help', icon: 'megaphone' },
+  { href: '/about', key: 'nav.about', short: 'About', icon: 'info' },
   // Onboarding page: surfaced via the home hero + footer on wide screens, and the
   // mobile overflow menu on phones. `show: hidden` keeps it out of the crowded
   // inline desktop bar while still listing it in the mobile menu below.
-  { href: '/why-care', key: 'nav.whyCare', icon: 'sparkle' },
+  { href: '/why-care', key: 'nav.whyCare', short: 'Why care', icon: 'sparkle' },
   // A note to those in office - reachable via home hero, footer, and the mobile menu.
-  { href: '/for-leaders', key: 'nav.howToBeGoodLeader', icon: 'compass' },
+  { href: '/for-leaders', key: 'nav.howToBeGoodLeader', short: 'For leaders', icon: 'compass' },
 ];
 
 function ThemeToggle() {
@@ -69,8 +69,8 @@ function ThemeToggle() {
   );
 }
 
-/** Mobile-only overflow menu. Desktop navigation remains directly clickable in
- *  its own row. Closes on navigation, outside click and Escape. */
+/** Mobile-only overflow menu. Desktop navigation stays directly clickable in
+ *  the top bar. Closes on navigation, outside click and Escape. */
 function MobileMenu() {
   const { t } = useI18n();
   const pathname = usePathname();
@@ -166,7 +166,7 @@ export default function Header() {
       )}
     >
       <div className="mx-auto max-w-[100rem] px-4">
-        <div className="flex h-16 items-center gap-3">
+        <div className="flex h-16 items-center gap-2 sm:gap-3">
           <Link href="/" className="pressable flex shrink-0 items-center gap-2" aria-label={t('brand.name')}>
             <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-brand to-brand-deep text-white shadow-soft">
               <Icon name="parliament" size={20} />
@@ -177,11 +177,34 @@ export default function Header() {
             </span>
           </Link>
 
-          <div className="hidden min-w-0 flex-1 md:block md:max-w-xl">
+          <div className="hidden min-w-0 flex-1 lg:block lg:max-w-[19rem] xl:max-w-[23rem] 2xl:max-w-[28rem]">
             <SearchBox variant="header" />
           </div>
 
-          <div className="ml-auto flex shrink-0 items-center gap-1">
+          <nav className="ml-auto hidden shrink-0 items-center gap-0.5 md:flex" aria-label="Primary">
+            {NAV.slice(0, 6).map((n) => {
+              const active = pathname === n.href;
+              const fullLabel = t(n.key);
+              return (
+                <Link
+                  key={n.href}
+                  href={n.href}
+                  aria-current={active ? 'page' : undefined}
+                  aria-label={fullLabel}
+                  title={fullLabel}
+                  className={clsx(
+                    'pressable inline-flex h-9 items-center justify-center gap-1.5 rounded-full px-2.5 text-[13px] font-semibold whitespace-nowrap',
+                    active ? 'bg-brand-soft text-brand-ink' : 'text-ink-soft hover:bg-paper-sink',
+                  )}
+                >
+                  <Icon name={n.icon} size={16} />
+                  <span className="hidden xl:inline">{n.short}</span>
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="flex shrink-0 items-center gap-1">
             <LanguageSwitcher />
             <ThemeToggle />
             <MobileMenu />
@@ -193,28 +216,6 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="hidden border-t border-line/60 md:block">
-        <nav className="mx-auto max-w-[100rem] overflow-x-auto px-4" aria-label="Primary">
-          <div className="flex min-w-max items-center gap-1 py-2 text-sm font-medium">
-            {NAV.slice(0, 6).map((n) => {
-              const active = pathname === n.href;
-              return (
-                <Link
-                  key={n.href}
-                  href={n.href}
-                  aria-current={active ? 'page' : undefined}
-                  className={clsx(
-                    'pressable inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2',
-                    active ? 'bg-brand-soft font-semibold text-brand-ink' : 'text-ink-soft hover:bg-paper-sink',
-                  )}
-                >
-                  <Icon name={n.icon} size={16} /> {t(n.key)}
-                </Link>
-              );
-            })}
-          </div>
-        </nav>
-      </div>
     </header>
   );
 }

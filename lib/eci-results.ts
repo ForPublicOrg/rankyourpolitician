@@ -86,6 +86,15 @@ export interface ParsedConstituency {
   total_votes: number;
 }
 
+/** Narrow, safe diagnostic detail for the live API. This is intentionally
+ * transport-only: it helps distinguish a blocked request from an ECI markup
+ * change without exposing a response body or any visitor information. */
+export interface EciFetchFailure {
+  url: string;
+  reason: 'http' | 'parse' | 'network';
+  detail: string;
+}
+
 /**
  * Parse one `ConstituencywiseSxxNNN.htm` page.
  *
@@ -142,16 +151,25 @@ export async function fetchConstituencyResult(
   eciStateCode: string,
   acNo: number,
   timeoutMs = 4000,
+  onFailure?: (failure: EciFetchFailure) => void,
 ): Promise<ParsedConstituency | null> {
   const url = constituencyResultUrl(base, eciStateCode, acNo);
+  const startedAt = Date.now();
   try {
     const res = await fetch(url, { headers: ECI_HEADERS, signal: AbortSignal.timeout(timeoutMs) });
     if (!res.ok) {
+      onFailure?.({ url, reason: 'http', detail: `HTTP ${res.status} after ${Date.now() - startedAt}ms` });
       console.error(`[eci] ${url} -> HTTP ${res.status}`);
       return null;
     }
-    return parseConstituencyResult(await res.text());
+    const parsed = parseConstituencyResult(await res.text());
+    if (!parsed) {
+      onFailure?.({ url, reason: 'parse', detail: `Unrecognised results table after ${Date.now() - startedAt}ms` });
+    }
+    return parsed;
   } catch (err) {
+    const detail = err instanceof Error ? `${err.name}: ${err.message}` : 'Request failed';
+    onFailure?.({ url, reason: 'network', detail: `${detail} after ${Date.now() - startedAt}ms` });
     console.error(`[eci] ${url} failed:`, err);
     return null;
   }
