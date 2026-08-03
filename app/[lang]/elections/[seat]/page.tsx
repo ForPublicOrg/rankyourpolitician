@@ -197,7 +197,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
         <div // grid-cols-1 is load-bearing: without an explicit base column the
           // implicit track sizes to min-content and drags the page sideways on a
           // phone - the overflow class this repo has been bitten by before.
-          className="grid grid-cols-1 gap-6 lg:grid-cols-[1.6fr_1fr]">
+          className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="space-y-6">
             <Reveal delay={60}>
               <CandidateGroups seat={seat} tr={tr} />

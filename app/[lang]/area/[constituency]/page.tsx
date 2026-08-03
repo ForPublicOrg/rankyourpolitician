@@ -96,7 +96,7 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
             it is empty (Rajya Sabha / MLC) the content goes full width instead of
             leaving a blank half. The full leaderboard, CTA and ad are full-width
             rows so no short aside is ever stranded next to a tall list. */}
-        <div className={hasAside ? 'grid gap-6 lg:grid-cols-[1.6fr_1fr]' : undefined}>
+        <div className={hasAside ? 'grid gap-6 lg:grid-cols-2' : undefined}>
           <div className="space-y-6">
             {/* The representative(s) - the reason this page exists */}
             <Reveal>

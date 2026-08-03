@@ -71,7 +71,11 @@ export default function LiveCount({
   const load = useCallback(() => {
     started.current = true;
     setState((s) => (s.kind === 'ready' ? s : { kind: 'loading' }));
-    return fetch(`/api/election-live?event=${encodeURIComponent(eventId)}`)
+    // Counts are intentionally live. `cache: 'no-store'` prevents a browser
+    // cache from replaying an earlier `seats: []` response after ECI has
+    // started publishing the table; the route still controls its short CDN
+    // cache for upstream load protection.
+    return fetch(`/api/election-live?event=${encodeURIComponent(eventId)}`, { cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((data: Payload & { ok?: boolean }) => {
         if (data?.seats?.length) lastGood.current = data;
