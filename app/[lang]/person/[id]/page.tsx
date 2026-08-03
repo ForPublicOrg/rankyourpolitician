@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getPerson, getAllPersonIds, getPersonSentiment, officialPersonId, type PersonView } from '@/lib/data';
+import { getPerson, getAllPersonIds, getPersonSentiment, officialPersonId, isThinProfile, type PersonView } from '@/lib/data';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
@@ -27,6 +27,7 @@ import AdSlot from '@/components/AdSlot';
 import ShareRow from '@/components/share/ShareRow';
 import DeclaredCases from '@/components/DeclaredCases';
 import { constituencyHref } from '@/lib/locality';
+import { profileNarrative } from '@/lib/profile-narrative';
 
 // Weekly self-heal only. Profile facts change via deploy or /api/revalidate, and
 // the one fast-moving input - live vote numbers - is re-fetched client-side by
@@ -85,6 +86,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     // prefixes are robots-blocked outright, which stops the crawl spend but
     // also hides these tags from crawlers (see app/robots.ts).
     alternates: { canonical: `/person/${id}` },
+    // Un-enriched profiles (no record, no performance, no portfolio) carry only a
+    // templated one-liner. Keep them out of the index until they have real
+    // content - a page's worth of near-identical stubs is exactly what an ad
+    // reviewer reads as "low value". `follow` still lets crawlers reach the
+    // richer pages linked from here. See isThinProfile / AdSlot gating below.
+    robots: isThinProfile(p) ? { index: false, follow: true } : undefined,
     openGraph: {
       title,
       description: p.neutral_summary,
@@ -110,6 +117,12 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
 
   // ---- Elected person (MP and/or minister) --------------------------------
   const sentiment = await getPersonSentiment(id);
+  // No ad unit on an un-enriched stub (matches the noindex in generateMetadata).
+  const thin = isThinProfile(person);
+  // Readable prose bio built from this person's own cited data - replaces the
+  // single templated summary line in the About section (the short summary stays
+  // as the page's meta description / share-card text). See lib/profile-narrative.
+  const narrative = profileNarrative(person);
   const roleKey = roleKeyForHouse((person.house as House) || 'Lok Sabha');
   const updated = profileLastUpdated({ facts: person.facts } as any);
   const factByType = new Map<string, Fact>();
@@ -304,7 +317,15 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
       {(person.neutral_summary || person.party_note || person.identity_source) && (
         <section className="mt-5 glass rounded-3xl p-5 sm:p-6">
           <h2 className="text-xl font-bold text-ink">{tr('profile.aboutTitle')}</h2>
-          {person.neutral_summary && <p className="mt-2 text-ink-soft">{person.neutral_summary}</p>}
+          {narrative.length > 0 ? (
+            <div className="mt-2 space-y-3 text-ink-soft">
+              {narrative.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          ) : person.neutral_summary ? (
+            <p className="mt-2 text-ink-soft">{person.neutral_summary}</p>
+          ) : null}
           {person.party_history && person.party_history.length > 0 && (
             <div className="mt-4 rounded-xl border border-line bg-paper-soft p-4">
               <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-ink-faint">
@@ -534,7 +555,7 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
         </section>
       </div>
 
-      <div className="mt-5"><AdSlot /></div>
+      {!thin && <div className="mt-5"><AdSlot /></div>}
     </div>
   );
 }

@@ -15,6 +15,7 @@ const NAV: { href: string; key: string; short: string; icon: IconName }[] = [
   { href: '/india', key: 'nav.central', short: 'India', icon: 'parliament' },
   { href: '/elections', key: 'nav.elections', short: 'Elections', icon: 'ballot' },
   { href: '/rights', key: 'nav.rights', short: 'Rights', icon: 'scales' },
+  { href: '/guides', key: 'nav.guides', short: 'Guides', icon: 'cap' },
   { href: '/hierarchy', key: 'nav.hierarchy', short: 'Structure', icon: 'network' },
   { href: '/who', key: 'nav.accountability', short: 'Roles', icon: 'megaphone' },
   { href: '/about', key: 'nav.about', short: 'About', icon: 'info' },

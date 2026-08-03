@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllElectionSeats, getAllPersonIds, getIndex, getStates, getDistrictsInState } from '@/lib/data';
 import { SITE_URL } from '@/lib/site-url';
 import { canonicalDistrictForConstituency } from '@/lib/locality';
+import { GUIDE_SLUGS } from '@/lib/guides';
 
 // Built once per deploy. Clean (locale-less) URLs are the canonical ones -
 // middleware picks the reader's language, so one URL serves every locale.
@@ -19,8 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${SITE_URL}${p || '/'}`,
       changeFrequency: 'daily' as const,
     })),
-    ...['/rights', '/why-care', '/for-leaders', '/who', '/accountability', '/about', '/methodology', '/grievance', '/privacy', '/terms'].map((p) => ({
+    ...['/rights', '/why-care', '/for-leaders', '/who', '/accountability', '/about', '/methodology', '/grievance', '/privacy', '/terms', '/guides'].map((p) => ({
       url: `${SITE_URL}${p}`,
+      changeFrequency: 'weekly' as const,
+    })),
+    ...GUIDE_SLUGS.map((slug) => ({
+      url: `${SITE_URL}/guides/${slug}`,
       changeFrequency: 'weekly' as const,
     })),
   ];

@@ -17,6 +17,7 @@
     "howToBeGoodLeader": "How to be a good leader",
     "methodology": "How it works",
     "about": "About",
+    "guides": "Guides",
     "language": "Language",
     "menu": "Menu"
   },
@@ -1423,5 +1424,292 @@
     "ratingMovedBody": "They hold office, so their rating lives on their profile page - one person, one rating.",
     "seeProfile": "See their profile",
     "notRanked": "Listed in the Commission's order, never ranked by us."
+  },
+  "guides": {
+    "hubTitle": "Civic guides",
+    "hubSubtitle": "Plain-language, non-partisan how-to guides for using your rights and understanding your government. Free to read, and every claim is sourced.",
+    "hubEyebrow": "Learn",
+    "hubIntro": "Knowing who represents you is the first step. Knowing how to actually use the system - to ask for information, to read what a candidate declares, to get a pothole fixed - is the next. These short guides walk through the everyday tools of Indian citizenship, one at a time.",
+    "readGuide": "Read the guide",
+    "onThisPage": "In this guide",
+    "faqTitle": "Common questions",
+    "sourcesTitle": "Sources",
+    "sourceLabel": "Source",
+    "moreGuides": "More guides",
+    "backToGuides": "All guides",
+    "items": {
+      "file-an-rti": {
+        "title": "How to file an RTI request",
+        "subtitle": "The Right to Information Act, 2005 lets any citizen ask a public authority for information - and get an answer, usually within 30 days. Here is exactly how to use it.",
+        "metaTitle": "How to file an RTI request in India - a step-by-step guide",
+        "metaDescription": "A plain-language, step-by-step guide to filing a Right to Information (RTI) request in India: who you can ask, the fee, the 30-day deadline, and how to appeal if you are refused.",
+        "hubSummary": "Ask any public office for information and get a reply in 30 days. Fees, format, and how to appeal.",
+        "disclaimer": "This is general civic information, not legal advice. Fees and formats vary a little by state and authority, so always check the specific public authority's own RTI page.",
+        "intro": "The Right to Information (RTI) Act, 2005 gives every Indian citizen the right to ask a government body for information and to receive a reply, usually within 30 days. You do not need a reason, a lawyer, or a special form - a plain application and a small fee are enough.",
+        "sections": [
+          {
+            "heading": "What you can ask for",
+            "body": [
+              "You can ask any \"public authority\" - a central or state department, a ministry, a municipal body, a panchayat, a public-sector bank, a government school or hospital, or any body substantially funded by the government - for information it holds.",
+              "That includes records, documents, file notings, emails, contracts, reports, and inspection of works or records. You can ask for the reasons behind a decision, not just the decision itself.",
+              "There are narrow exemptions (Section 8) - for example information that would harm national security, a live investigation, or personal privacy with no public interest. Even then, if only part of a file is exempt, the rest must still be given to you."
+            ]
+          },
+          {
+            "heading": "Who to address it to",
+            "body": [
+              "Every public authority has a Public Information Officer (PIO). Your application goes to the PIO of the office that holds the information you want.",
+              "If you are not sure which office holds it, send it to the one most likely to - if they do not hold it, the Act requires them to transfer your application to the correct authority within five days."
+            ]
+          },
+          {
+            "heading": "How to write it",
+            "body": [
+              "There is no prescribed national form. A plain sheet of paper or a simple typed letter is valid, and many states also offer an online portal."
+            ],
+            "steps": [
+              "Address it to \"The Public Information Officer\" of the relevant office.",
+              "Write your questions clearly and specifically - one point per question, and ask for documents by name or date range where you can.",
+              "State clearly that you are filing under the Right to Information Act, 2005.",
+              "Give your name and a postal address for the reply; an email address helps too.",
+              "Attach the fee, and keep a copy of the whole application for your records."
+            ]
+          },
+          {
+            "heading": "The fee",
+            "body": [
+              "For central government bodies the application fee is Rs 10, paid by cash, postal order, demand draft, or online where available. State fees are similar but can differ, so check the authority's own rules.",
+              "If you are below the poverty line (BPL), you are exempt from the fee - attach a copy of your BPL card. There may be small per-page charges for photocopies, which the PIO will tell you about before sending large records."
+            ]
+          },
+          {
+            "heading": "How long it takes",
+            "body": [
+              "The PIO must reply within 30 days of receiving your application.",
+              "If the information concerns the life or liberty of a person, the reply must come within 48 hours.",
+              "If the PIO does not reply in time, that is treated as a \"deemed refusal\" - and it gives you the right to appeal."
+            ]
+          },
+          {
+            "heading": "If you are refused or ignored",
+            "body": [
+              "A refusal, a partial answer, or silence is not the end of the road. The Act builds in a free, two-step appeal."
+            ],
+            "steps": [
+              "First appeal: within 30 days, write to the \"First Appellate Authority\" - a senior officer in the same public authority. There is no fee.",
+              "Second appeal: if you are still not satisfied, within 90 days you can appeal to the Central or State Information Commission, an independent body.",
+              "The Information Commission can order the information released, and can fine a PIO up to Rs 25,000 for wrongly denying or delaying it."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Do I have to say why I want the information?",
+            "a": "No. The Act specifically says you cannot be asked for your reasons - only for the contact details needed to reply to you."
+          },
+          {
+            "q": "Can I file from anywhere in India?",
+            "a": "Yes. You can file with any public authority in the country; you do not have to live in that state or district."
+          },
+          {
+            "q": "Can a company or association file an RTI?",
+            "a": "The right is given to citizens. You can help someone file, but the applicant should be an individual citizen rather than a company or association."
+          }
+        ]
+      },
+      "how-a-bill-becomes-law": {
+        "title": "How a bill becomes a law",
+        "subtitle": "Every law in India starts as a bill and travels through a fixed set of steps before it can bind anyone. Here is that journey, step by step.",
+        "metaTitle": "How a bill becomes a law in India - the legislative process explained",
+        "metaDescription": "A clear, plain-language explanation of how a bill becomes law in India: the three readings, both Houses of Parliament, committees, the President's assent, and the different kinds of bills.",
+        "hubSummary": "From a draft bill to an Act: the three readings, both Houses, committees, and the President's assent.",
+        "intro": "A \"bill\" is a draft law. Before it can bind citizens it must be passed in the same form by the law-making body - both Houses of Parliament for a central law, or the state legislature for a state law - and then receive assent from the President or Governor.",
+        "sections": [
+          {
+            "heading": "Where a bill begins",
+            "body": [
+              "Most bills are \"Government bills\", introduced by a minister. A bill introduced by any other member is a \"Private Member's bill\"; both follow the same broad path, though very few private member's bills become law.",
+              "A bill can start in either House of Parliament - the Lok Sabha (House of the People) or the Rajya Sabha (Council of States) - with one exception: a Money Bill can only start in the Lok Sabha."
+            ]
+          },
+          {
+            "heading": "The three readings",
+            "body": [
+              "First reading: the bill is introduced and its title and aims are read out. There is usually no debate at this stage.",
+              "Second reading: the heart of the process. Members debate the bill's principles and then its clauses one by one, proposing and voting on amendments.",
+              "Third reading: the House votes on the bill as a whole. If it passes, it moves to the other House."
+            ]
+          },
+          {
+            "heading": "The role of committees",
+            "body": [
+              "A bill is often referred to a Parliamentary Committee - a smaller group of MPs who examine it in detail, take expert and public views, and suggest changes.",
+              "Committees do much of the careful, less visible work of law-making, and their reports shape the final text before the full House votes."
+            ]
+          },
+          {
+            "heading": "Both Houses must agree",
+            "body": [
+              "A bill must be passed by both the Lok Sabha and the Rajya Sabha in the same form.",
+              "If the two Houses disagree, the President can summon a rare \"joint sitting\" of both Houses to resolve the deadlock - though this has happened only a handful of times.",
+              "A Money Bill is different: the Rajya Sabha can only recommend changes, and the Lok Sabha may accept or reject them."
+            ]
+          },
+          {
+            "heading": "Assent and commencement",
+            "body": [
+              "Once both Houses pass a bill, it goes to the President, who can give assent (making it an Act), withhold assent, or return a non-Money Bill for reconsideration - but if Parliament passes it again, the President must sign.",
+              "An Act usually names the date it comes into force, or lets the government notify that date later. Only then does it actually apply."
+            ]
+          },
+          {
+            "heading": "State laws work the same way",
+            "body": [
+              "In a state, a bill passes through the Legislative Assembly (and the Legislative Council, where one exists) and then goes to the Governor for assent.",
+              "The Governor may also reserve certain bills for the President's consideration."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "What is the difference between a bill and an Act?",
+            "a": "A bill is a proposal. It becomes an Act - an enforceable law - only after both Houses pass it and it receives assent."
+          },
+          {
+            "q": "What is an Ordinance?",
+            "a": "When Parliament is not in session and immediate action is needed, the President can issue an Ordinance with the force of law. It must be approved by Parliament within six weeks of it reassembling, or it lapses."
+          },
+          {
+            "q": "What is a Money Bill?",
+            "a": "A bill dealing only with taxes, government spending, or borrowing. It can start only in the Lok Sabha, and the Rajya Sabha's role is limited to recommendations."
+          }
+        ]
+      },
+      "your-local-body": {
+        "title": "Your local body: what your ward actually controls",
+        "subtitle": "The pothole, the water supply, the garbage, the birth certificate - most of daily life is run by your local government, not your MP or MLA. Here is who does what.",
+        "metaTitle": "Local government in India - what your municipality or panchayat controls",
+        "metaDescription": "Understand India's third tier of government: what a Municipal Corporation, Municipality, or Gram Panchayat actually does, how it differs from an MLA or MP, and how to raise a ward-level complaint.",
+        "hubSummary": "Water, roads, garbage, certificates: what your municipality or panchayat runs, and how to complain.",
+        "intro": "India has three tiers of elected government. Below the country's MPs and the state's MLAs sits a third, closest tier - your local body - which the 73rd and 74th Constitutional Amendments made a permanent part of the system. It runs much of what you actually notice day to day.",
+        "sections": [
+          {
+            "heading": "Two kinds of local body",
+            "body": [
+              "In cities and towns, urban local bodies run things: a Municipal Corporation (big cities), a Municipal Council (smaller towns), or a Nagar Panchayat (areas becoming towns).",
+              "In villages, the three-tier Panchayati Raj system does: the Gram Panchayat (village), the Panchayat Samiti (block), and the Zila Parishad (district)."
+            ]
+          },
+          {
+            "heading": "What your ward councillor or panch does",
+            "body": [
+              "You elect a councillor (in a city) or a ward member and Sarpanch (in a village) for your ward - the smallest unit of local government.",
+              "They are your first point of contact for local, physical, everyday problems, and they vote on the local body's budget and works."
+            ]
+          },
+          {
+            "heading": "What the local body actually controls",
+            "body": [
+              "Local water supply, street lighting, local roads and drains, sanitation and garbage collection, public health and local markets, parks, and birth and death certificates.",
+              "The Constitution's Eleventh and Twelfth Schedules list the subjects that can be handed to rural and urban bodies - from drinking water and roads to primary schools and slum improvement."
+            ]
+          },
+          {
+            "heading": "What it does NOT control",
+            "body": [
+              "Big highways, state-wide policing, power generation, and state policy are run by the state government through your MLA and the state departments.",
+              "National matters - defence, railways, income tax, foreign policy - belong to the central government, through your MP. Sending a garbage complaint to your MP rarely gets it fixed faster than telling the local body."
+            ]
+          },
+          {
+            "heading": "How to raise a complaint",
+            "body": [
+              "Because these are local subjects, the fastest route is almost always the local body itself, not a higher representative."
+            ],
+            "steps": [
+              "Start with your ward councillor or the local body's ward office - many now have an app, a helpline, or an online complaint portal.",
+              "Note down the complaint number they give you; it is your proof and your tracking reference.",
+              "If nothing happens, escalate to the ward officer, then the Municipal Commissioner (urban) or the Block Development Officer (rural).",
+              "For services with a legal time limit under your state's Public Services Guarantee Act, a missed deadline can itself be escalated."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Who do I contact for a broken streetlight or uncollected garbage?",
+            "a": "Your urban local body (municipality or corporation) or its ward office - not your MLA or MP. These are local-body subjects."
+          },
+          {
+            "q": "Are local body elections really important?",
+            "a": "Very. This tier decides the services you use most, and turnout is often low - so each vote tends to carry more weight, not less."
+          },
+          {
+            "q": "What is a Gram Sabha?",
+            "a": "The Gram Sabha is the assembly of all adult voters in a village. It approves plans and budgets and can question the Gram Panchayat directly - a rare form of direct democracy."
+          }
+        ]
+      },
+      "read-an-election-affidavit": {
+        "title": "How to read an election affidavit",
+        "subtitle": "Every candidate for Parliament or a state assembly files a sworn affidavit declaring their assets, debts, education, and any criminal cases. Here is how to read one - carefully, and fairly.",
+        "metaTitle": "How to read a candidate's election affidavit in India",
+        "metaDescription": "A neutral guide to reading the sworn affidavit (Form 26) every election candidate in India files with the ECI: assets, liabilities, education, and \"declared cases\" - and what a pending case does and does not mean.",
+        "hubSummary": "Assets, debts, education, pending cases: how to read a candidate's sworn ECI affidavit without jumping to conclusions.",
+        "disclaimer": "This guide explains a public document. A declared court case is an allegation a court is still examining, not a conviction. Reading these figures is about information - never a verdict.",
+        "intro": "Since a 2003 Supreme Court ruling, every candidate for the Lok Sabha or a state assembly must file a sworn affidavit - Form 26 - with the Election Commission when they file their nomination. It is a public document, and it is one of the most useful things a voter can read.",
+        "sections": [
+          {
+            "heading": "What the affidavit contains",
+            "body": [
+              "Form 26 declares, on oath, the candidate's assets (their own and their spouse's and dependants'), their liabilities (loans and dues), their educational qualifications, and any criminal cases against them.",
+              "Because it is sworn, filing false information is itself an offence - which is part of what makes the document worth reading."
+            ]
+          },
+          {
+            "heading": "Assets and liabilities",
+            "body": [
+              "Assets are split into movable (cash, deposits, jewellery, vehicles, investments) and immovable (land and buildings). Liabilities are what they owe - bank loans, government dues, and so on.",
+              "Large assets are not, by themselves, evidence of wrongdoing, and modest assets are not proof of honesty. It is more telling to look at how the figures change between elections, and whether the change is explained."
+            ]
+          },
+          {
+            "heading": "The \"declared cases\" section - read this carefully",
+            "body": [
+              "The affidavit lists criminal cases in two parts: cases where a court has already \"framed charges\" (decided there is enough to put the person on trial), and cases where charges are only alleged.",
+              "A declared case means a trial is pending. In Indian law a person is presumed innocent until convicted, so a pending case is not a conviction and must not be read as one.",
+              "A separate part lists any past convictions. That is a different thing from a pending case, and the affidavit keeps the two apart for a reason."
+            ]
+          },
+          {
+            "heading": "Education and other details",
+            "body": [
+              "The affidavit states the candidate's highest qualification and institution. There is no minimum education requirement to contest an election in India, so this is context, not a pass-or-fail test.",
+              "It also records age, and the income-tax and PAN details of the candidate and family."
+            ]
+          },
+          {
+            "heading": "Where to find and check it",
+            "body": [
+              "The signed affidavit is a public record. The Election Commission publishes candidate affidavits, and non-profit groups compile them into searchable form.",
+              "Prefer the original scanned affidavit on the ECI record over any second-hand summary, and note which election it was filed for - the figures are a snapshot of that moment."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does a pending case mean the candidate is guilty?",
+            "a": "No. It means a court is examining an allegation. Under the law the person is innocent unless and until a court convicts them."
+          },
+          {
+            "q": "Is a candidate with more assets a worse choice?",
+            "a": "Not necessarily. The affidavit is information, not a scorecard. It tells you what was declared; the judgement is yours to make."
+          },
+          {
+            "q": "What if a candidate lies on the affidavit?",
+            "a": "Filing a false affidavit is a punishable offence, and a rival or a citizen can bring it to the notice of the Election Commission or the courts."
+          }
+        ]
+      }
+    }
   }
 }

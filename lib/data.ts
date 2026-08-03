@@ -439,6 +439,32 @@ export interface PersonView {
   office?: ConstitutionalOffice;
 }
 
+/**
+ * A profile is "thin" when it carries no person-specific substance beyond the
+ * templated one-line summary: no affidavit/record facts to speak of, no
+ * performance score, and no ministerial portfolio. These are mostly Legislative
+ * Council (Vidhan Parishad) members we have not yet enriched - name, party and
+ * seat, then "record coming soon". Such pages are set to noindex and run no ad
+ * unit until they gain real content, so they stay out of the sample Google's
+ * AdSense crawler judges the whole site by. Office and official profiles are
+ * substantive by construction (powers, escalation chain, contact) and are never
+ * thin; nor is any elected member with a real affidavit or parliamentary record.
+ */
+export function isThinProfile(person: PersonView): boolean {
+  if (person.kind !== 'elected') return false;
+  const hasMetrics = Object.values(person.metrics).some((v) => v != null);
+  // NB: `performance` is a non-null shell even for members with no metrics
+  // (empty cohort placement) - the real signal is a computed composite score,
+  // exactly what the profile's Performance card gates on.
+  const hasScore = person.performance?.composite_percentile != null;
+  const substantial =
+    person.facts.length >= 2 ||
+    hasMetrics ||
+    hasScore ||
+    person.portfolios.length > 0;
+  return !substantial;
+}
+
 /** Canonical id for a minister: their linked MP id if any, else their own id. */
 function ministerPersonId(m: { id: string; politicianId?: string }): string {
   return m.politicianId || m.id;

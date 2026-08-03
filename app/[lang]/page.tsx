@@ -84,6 +84,7 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
   const exploreLinks: { href: string; icon: IconName; label: string }[] = [
     { href: '/india', icon: 'parliament', label: tr('nav.central') },
     { href: '/rights', icon: 'scales', label: tr('nav.rights') },
+    { href: '/guides', icon: 'cap', label: tr('guides.hubTitle') },
     { href: '/why-care', icon: 'sparkle', label: tr('nav.whyCare') },
     { href: '/for-leaders', icon: 'compass', label: tr('home.howToBeGoodLeader') },
     { href: '/hierarchy', icon: 'network', label: tr('nav.hierarchy') },
