@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy } from '../../lib/types';
+import { splitDistricts, suspectedDistrictSplits } from './ac-districts-shared';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -162,6 +163,37 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
     for (const p of members) {
       const others = members.filter((m) => m.id !== p.id).map((m) => m.id);
       push(p, 'error', `duplicate active MLA for ${seat} (also ${others.join(', ')}) - a by-election likely left a stale record`);
+    }
+  }
+
+  // ONE DISTRICT, ONE SPELLING.
+  // /district/{stateCode}/{name} is matched by normalised name, so two spellings
+  // of one district in the same state silently become two pages, each holding
+  // half that district's representatives and only one of them reachable from
+  // any given seat. This is how a stale district vintage does damage: filling
+  // a new seat with the Commission's current "Sribhumi" while older seats still
+  // said "Karimganj" would split Assam's Karimganj in two. Cheap to detect,
+  // invisible once shipped, so it blocks publish.
+  const districtsByState = new Map<string, Set<string>>();
+  for (const c of constituencies) {
+    for (const d of c.districts ?? []) {
+      const name = d?.trim();
+      if (!name) continue;
+      if (!districtsByState.has(c.stateCode)) districtsByState.set(c.stateCode, new Set());
+      districtsByState.get(c.stateCode)!.add(name);
+    }
+  }
+  const districtRecord = { id: 'constituency-districts', name: 'Constituency districts' } as Politician;
+  for (const [stateCode, names] of districtsByState) {
+    // Certain: /district lookup already treats these as one name, so the data
+    // for one district is sitting on two pages.
+    for (const variants of splitDistricts(names)) {
+      push(districtRecord, 'error', `${stateCode} spells one district ${variants.length} ways (${variants.join(' vs ')}) - they would render as separate district pages`);
+    }
+    // Suspected: a letter apart, which normalisation cannot see. Usually one
+    // district left half-migrated between two vintages. A human decides, so warn.
+    for (const pair of suspectedDistrictSplits(names)) {
+      push(districtRecord, 'warn', `${stateCode} has near-identical district names (${pair.join(' vs ')}) - if they are one district, its representatives are split across two pages`);
     }
   }
 

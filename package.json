@@ -14,6 +14,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "test:ac-districts": "tsx tools/data-manager/ac-districts.regress.ts",
     "test:eci-results": "tsx tools/data-manager/eci-results.regress.ts",
     "test:terms": "tsx tools/data-manager/terms.regress.ts",
     "dm": "tsx tools/data-manager/cli.ts",

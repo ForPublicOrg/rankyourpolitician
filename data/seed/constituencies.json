@@ -2630,7 +2630,9 @@
     "name": "Abhayapuri",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Bongaigaon"
+    ]
   },
   {
     "id": "ac-as-algapur-katlicherra",
@@ -2638,7 +2640,9 @@
     "name": "Algapur-Katlicherra",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Hailakandi"
+    ]
   },
   {
     "id": "ac-as-amri",
@@ -2646,7 +2650,9 @@
     "name": "Amri",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "West Karbi Anglong"
+    ]
   },
   {
     "id": "ac-as-bajali",
@@ -2654,7 +2660,9 @@
     "name": "Bajali",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Bajali"
+    ]
   },
   {
     "id": "ac-as-baksa",
@@ -2672,7 +2680,9 @@
     "name": "Baokhungri",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kokrajhar"
+    ]
   },
   {
     "id": "ac-as-barchalla",
@@ -2700,7 +2710,9 @@
     "name": "Barkhetri",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Nalbari"
+    ]
   },
   {
     "id": "pc-as-barpeta",
@@ -2709,8 +2721,10 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
+      "Bajali",
       "Barpeta",
       "Bongaigaon",
+      "Kamrup",
       "Nalbari"
     ]
   },
@@ -2731,7 +2745,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Sonitpur"
+      "Biswanath"
     ]
   },
   {
@@ -2740,7 +2754,9 @@
     "name": "Bhergaon",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Udalguri"
+    ]
   },
   {
     "id": "ac-as-bhowanipur-sorbhog",
@@ -2748,7 +2764,9 @@
     "name": "Bhowanipur-Sorbhog",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Bajali"
+    ]
   },
   {
     "id": "ac-as-bihpuria",
@@ -2767,7 +2785,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Bongaigaon"
+      "Chirang"
     ]
   },
   {
@@ -2776,7 +2794,9 @@
     "name": "Bilasipara",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Dhubri"
+    ]
   },
   {
     "id": "ac-as-binnakandi",
@@ -2784,7 +2804,9 @@
     "name": "Binnakandi",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Hojai"
+    ]
   },
   {
     "id": "ac-as-birsing-jarua",
@@ -2792,7 +2814,9 @@
     "name": "Birsing Jarua",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Dhubri"
+    ]
   },
   {
     "id": "ac-as-biswanath",
@@ -2801,7 +2825,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Sonitpur"
+      "Biswanath"
     ]
   },
   {
@@ -2830,7 +2854,9 @@
     "name": "Boko-Chaygaon",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kamrup"
+    ]
   },
   {
     "id": "ac-as-bongaigaon",
@@ -2848,7 +2874,9 @@
     "name": "Borkhola",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Cachar"
+    ]
   },
   {
     "id": "ac-as-chabua-lahowal",
@@ -2856,7 +2884,9 @@
     "name": "Chabua-Lahowal",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Dibrugarh"
+    ]
   },
   {
     "id": "ac-as-chamaria",
@@ -2864,7 +2894,9 @@
     "name": "Chamaria",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kamrup"
+    ]
   },
   {
     "id": "ac-as-chenga",
@@ -2892,7 +2924,12 @@
     "name": "Darrang-Udalguri",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Darrang",
+      "Kamrup",
+      "Tamulpur",
+      "Udalguri"
+    ]
   },
   {
     "id": "ac-as-demow",
@@ -2900,7 +2937,9 @@
     "name": "Demow",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Sibsagar"
+    ]
   },
   {
     "id": "ac-as-dergaon",
@@ -2909,7 +2948,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Jorhat"
+      "Golaghat"
     ]
   },
   {
@@ -2919,7 +2958,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Dhemaji"
+      "Lakhimpur"
     ]
   },
   {
@@ -2969,8 +3008,11 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
+      "Barpeta",
+      "Bongaigaon",
       "Dhubri",
-      "Goalpara"
+      "Goalpara",
+      "South Salmara Mankachar"
     ]
   },
   {
@@ -3020,7 +3062,9 @@
     "name": "Dimoria",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kamrup (Metro)"
+    ]
   },
   {
     "id": "pc-as-diphu",
@@ -3028,7 +3072,11 @@
     "name": "Diphu",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Dima Hasao",
+      "Karbi Anglong",
+      "West Karbi Anglong"
+    ]
   },
   {
     "id": "ac-as-diphu",
@@ -3047,7 +3095,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Kamrup"
+      "Kamrup (Metro)"
     ]
   },
   {
@@ -3066,7 +3114,9 @@
     "name": "Dotma",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kokrajhar"
+    ]
   },
   {
     "id": "ac-as-dudhnai",
@@ -3125,7 +3175,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Sonitpur"
+      "Biswanath"
     ]
   },
   {
@@ -3154,7 +3204,9 @@
     "name": "Goreshwar",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Tamulpur"
+    ]
   },
   {
     "id": "ac-as-gossaigaon",
@@ -3172,7 +3224,11 @@
     "name": "Guwahati",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Goalpara",
+      "Kamrup",
+      "Kamrup (Metro)"
+    ]
   },
   {
     "id": "ac-as-guwahati-central",
@@ -3180,7 +3236,9 @@
     "name": "Guwahati Central",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kamrup (Metro)"
+    ]
   },
   {
     "id": "ac-as-haflong",
@@ -3189,7 +3247,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "North Cachar Hills"
+      "Dima Hasao"
     ]
   },
   {
@@ -3208,7 +3266,9 @@
     "name": "Hajo-Sualkuchi",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kamrup"
+    ]
   },
   {
     "id": "ac-as-hojai",
@@ -3217,7 +3277,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Nagaon"
+      "Hojai"
     ]
   },
   {
@@ -3237,7 +3297,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Marigaon"
+      "Morigaon"
     ]
   },
   {
@@ -3246,7 +3306,9 @@
     "name": "Jaleshwar",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Goalpara"
+    ]
   },
   {
     "id": "ac-as-jalukbari",
@@ -3255,7 +3317,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Kamrup"
+      "Kamrup (Metro)"
     ]
   },
   {
@@ -3275,8 +3337,10 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
+      "Charaideo",
       "Jorhat",
-      "Sivasagar"
+      "Majuli",
+      "Sibsagar"
     ]
   },
   {
@@ -3316,9 +3380,8 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Cachar",
       "Hailakandi",
-      "Karimganj"
+      "Sribhumi"
     ]
   },
   {
@@ -3328,7 +3391,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Karimganj"
+      "Sribhumi"
     ]
   },
   {
@@ -3338,7 +3401,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Karimganj"
+      "Sribhumi"
     ]
   },
   {
@@ -3347,7 +3410,9 @@
     "name": "Katigorah",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Cachar"
+    ]
   },
   {
     "id": "pc-as-kaziranga",
@@ -3355,7 +3420,11 @@
     "name": "Kaziranga",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Golaghat",
+      "Hojai",
+      "Nagaon"
+    ]
   },
   {
     "id": "ac-as-khowang",
@@ -3363,7 +3432,9 @@
     "name": "Khowang",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Dibrugarh"
+    ]
   },
   {
     "id": "ac-as-khumtai",
@@ -3382,10 +3453,9 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Barpeta",
-      "Bongaigaon",
-      "Kokrajhar",
-      "Nalbari"
+      "Baksa",
+      "Chirang",
+      "Kokrajhar"
     ]
   },
   {
@@ -3405,7 +3475,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Marigaon"
+      "Morigaon"
     ]
   },
   {
@@ -3416,8 +3486,6 @@
     "stateCode": "AS",
     "districts": [
       "Dhemaji",
-      "Dibrugarh",
-      "Jorhat",
       "Lakhimpur",
       "Tinsukia"
     ]
@@ -3449,7 +3517,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Nagaon"
+      "Hojai"
     ]
   },
   {
@@ -3458,7 +3526,9 @@
     "name": "Mahmora",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Charaideo"
+    ]
   },
   {
     "id": "ac-as-majbat",
@@ -3467,7 +3537,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Darrang"
+      "Udalguri"
     ]
   },
   {
@@ -3477,7 +3547,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Jorhat"
+      "Majuli"
     ]
   },
   {
@@ -3486,7 +3556,9 @@
     "name": "Makum",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Tinsukia"
+    ]
   },
   {
     "id": "ac-as-manas",
@@ -3494,7 +3566,9 @@
     "name": "Manas",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Baksa"
+    ]
   },
   {
     "id": "ac-as-mandia",
@@ -3502,7 +3576,9 @@
     "name": "Mandia",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Barpeta"
+    ]
   },
   {
     "id": "ac-as-mangaldai",
@@ -3510,7 +3586,9 @@
     "name": "Mangaldai",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Darrang"
+    ]
   },
   {
     "id": "ac-as-mankachar",
@@ -3519,7 +3597,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Dhubri"
+      "South Salmara Mankachar"
     ]
   },
   {
@@ -3549,7 +3627,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Marigaon"
+      "Morigaon"
     ]
   },
   {
@@ -3558,7 +3636,9 @@
     "name": "Nadaur",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Sonitpur"
+    ]
   },
   {
     "id": "pc-as-nagaon",
@@ -3567,6 +3647,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
+      "Morigaon",
       "Nagaon"
     ]
   },
@@ -3576,7 +3657,9 @@
     "name": "Nagaon-Batadraba",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Nagaon"
+    ]
   },
   {
     "id": "ac-as-naharkatia",
@@ -3615,7 +3698,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Sivasagar"
+      "Sibsagar"
     ]
   },
   {
@@ -3624,7 +3707,9 @@
     "name": "New Guwahati",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kamrup (Metro)"
+    ]
   },
   {
     "id": "ac-as-pakabetbari",
@@ -3632,7 +3717,9 @@
     "name": "Pakabetbari",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Barpeta"
+    ]
   },
   {
     "id": "ac-as-palasbari",
@@ -3650,7 +3737,9 @@
     "name": "Parbatjhora",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Kokrajhar"
+    ]
   },
   {
     "id": "ac-as-patharkandi",
@@ -3659,7 +3748,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Karimganj"
+      "Sribhumi"
     ]
   },
   {
@@ -3678,7 +3767,9 @@
     "name": "Ram Krishna Nagar",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Sribhumi"
+    ]
   },
   {
     "id": "ac-as-rangapara",
@@ -3706,7 +3797,9 @@
     "name": "Rongkhang",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "West Karbi Anglong"
+    ]
   },
   {
     "id": "ac-as-rongonadi",
@@ -3714,7 +3807,9 @@
     "name": "Rongonadi",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Lakhimpur"
+    ]
   },
   {
     "id": "ac-as-rupohihat",
@@ -3763,7 +3858,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Sivasagar"
+      "Sibsagar"
     ]
   },
   {
@@ -3772,7 +3867,9 @@
     "name": "Sidli-Chirang",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Chirang"
+    ]
   },
   {
     "id": "pc-as-silchar",
@@ -3810,7 +3907,9 @@
     "name": "Sissiborgaon",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Dhemaji"
+    ]
   },
   {
     "id": "ac-as-sonai",
@@ -3829,7 +3928,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Sivasagar"
+      "Charaideo"
     ]
   },
   {
@@ -3839,6 +3938,8 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
+      "Biswanath",
+      "Lakhimpur",
       "Sonitpur"
     ]
   },
@@ -3848,7 +3949,9 @@
     "name": "Srijangram",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Bongaigaon"
+    ]
   },
   {
     "id": "ac-as-tamulpur",
@@ -3857,7 +3960,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Nalbari"
+      "Tamulpur"
     ]
   },
   {
@@ -3866,7 +3969,9 @@
     "name": "Tangla",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Udalguri"
+    ]
   },
   {
     "id": "ac-as-teok",
@@ -3894,7 +3999,9 @@
     "name": "Tihu",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Nalbari"
+    ]
   },
   {
     "id": "ac-as-tingkhong",
@@ -3922,7 +4029,9 @@
     "name": "Titabor",
     "state": "Assam",
     "stateCode": "AS",
-    "districts": []
+    "districts": [
+      "Jorhat"
+    ]
   },
   {
     "id": "ac-as-udalguri",
@@ -3931,7 +4040,7 @@
     "state": "Assam",
     "stateCode": "AS",
     "districts": [
-      "Darrang"
+      "Udalguri"
     ]
   },
   {
@@ -43989,7 +44098,7 @@
     "state": "West Bengal",
     "stateCode": "WB",
     "districts": [
-      "Paschim Medinipur"
+      "Pashchim Medinipur"
     ]
   },
   {
