@@ -83,6 +83,12 @@ npm run build        # prebuild regenerates public/*.json payloads (hash-gated: 
 npm run dm -- validate            # data changes must pass this
 npm run dm -- backfill-trending   # trending bucket rebuild (dry run; --apply writes)
 
+# After `dm update-all`: the affidavit steps join on name within a state, so two
+# same-named members can end up citing one MyNeta page - i.e. one of them is
+# publishing the other's declared assets and criminal cases. validate blocks on
+# it; this resolves each from the cited page's own breadcrumb seat + district.
+npx tsx tools/data-manager/resolve-affidavit-collisions.ts --apply
+
 # Elections. Add the event to tools/data-manager/elections-shared.ts, then:
 npx tsx tools/data-manager/import-elections.ts --apply        # every nomination, from ECI
 npx tsx tools/data-manager/enrich-candidates.ts --apply       # affidavit detail, from MyNeta

@@ -1181,7 +1181,8 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Bankipur by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966"
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+            "politicianId": "bankipur-ac-br-prashant-kishor"
           },
           {
             "slug": "prem-shankar-prasad",
@@ -2520,7 +2521,8 @@
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822"
+            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
+            "politicianId": "manjalpur-ac-gj-satendrabhai-patel-satish-patel"
           },
           {
             "slug": "dharmeshbhai-patel",
@@ -3507,7 +3509,8 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Datia by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984"
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+            "politicianId": "datia-ac-mp-ghanshyam-singh"
           },
           {
             "slug": "hardas-kushwaha",
