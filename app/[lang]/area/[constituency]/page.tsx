@@ -128,6 +128,31 @@ export default async function AreaPage({ params }: { params: Promise<{ lang: str
                       </Link>
                     ))}
                   </div>
+                ) : view.vacancy ? (
+                  /* An empty seat is a fact, not missing data - so say which fact,
+                     and link the source that says it. Without a cited reason we
+                     fall through to the plain line below rather than guess one. */
+                  <div className="rounded-2xl border border-line bg-paper-soft p-4">
+                    <p className="flex flex-wrap items-center gap-2 text-sm font-bold text-ink">
+                      <Icon name="info" size={16} className="shrink-0 text-brand" />
+                      {tr('area.vacantTitle')}
+                      {view.vacancy.as_of && (
+                        <Chip tone="neutral">{tr('area.vacantSince', { date: formatDate(view.vacancy.as_of, lang) })}</Chip>
+                      )}
+                    </p>
+                    <p className="mt-2 leading-relaxed text-ink-soft">{view.vacancy.value}</p>
+                    <p className="mt-3 flex flex-wrap items-center gap-x-2 text-xs text-ink-faint">
+                      <a
+                        href={view.vacancy.source_url}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="inline-flex items-center gap-1 text-brand hover:underline"
+                      >
+                        <Icon name="link" size={12} /> {tr('common.source')}: {view.vacancy.source_name}
+                      </a>
+                      <span>· {tr('common.lastUpdated')} {formatDate(view.vacancy.retrieved_date, lang)}</span>
+                    </p>
+                  </div>
                 ) : (
                   <p className="text-sm text-ink-faint">{tr('area.noRep')}</p>
                 )}

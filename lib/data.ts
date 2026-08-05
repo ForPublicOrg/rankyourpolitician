@@ -34,7 +34,8 @@ import seedDistrictPortals from '@/data/seed/district_portals.json';
 import seedContactChannels from '@/data/seed/contact_channels.json';
 import seedCriminalCases from '@/data/seed/criminal_cases.json';
 import seedElections from '@/data/seed/elections.json';
-import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat } from './types';
+import seedVacancies from '@/data/seed/vacancies.json';
+import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat, SeatVacancy } from './types';
 import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type PoliticianContact, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
 import { candidateRatingId } from './elections';
 import { constitutionalRoleTerm, electedRoleTerm } from './terms';
@@ -47,6 +48,17 @@ let criminalRecords: Map<string, CriminalRecord> | null = null;
 function criminalRecordById(): Map<string, CriminalRecord> {
   return (criminalRecords ??= new Map(
     (seedCriminalCases as unknown as CriminalRecord[]).map((r) => [r.politician_id, r]),
+  ));
+}
+
+// Why a seat has no sitting member, keyed by constituencyId. Seed-only and
+// one-shot, exactly like criminalRecordById above: a vacancy changes when the
+// data manager runs and we redeploy, never per request, so it must not be hung
+// off `Index` (which is rebuilt on the 5-minute vote clock).
+let vacancies: Map<string, SeatVacancy> | null = null;
+function vacancyByConstituency(): Map<string, SeatVacancy> {
+  return (vacancies ??= new Map(
+    (seedVacancies as unknown as SeatVacancy[]).map((v) => [v.constituencyId, v]),
   ));
 }
 
@@ -1149,6 +1161,11 @@ export interface DistrictView {
   /** Constituencies overlapping this district. */
   constituencies: Constituency[];
   neighbours: string[]; // other districts of the state (for quick nav)
+  /** Seats in this district that have no sitting member, with the cited reason.
+   *  A district page that silently lists fewer MLAs than seats reads as missing
+   *  data; this is also the ONLY place the reason surfaces for a seat whose
+   *  /area page redirects here under the canonical-city rule. */
+  vacancies: { constituency: Constituency; vacancy: SeatVacancy }[];
 }
 
 export async function getDistrictView(stateCode: string, districtParam: string): Promise<DistrictView | null> {
@@ -1176,7 +1193,13 @@ export async function getDistrictView(stateCode: string, districtParam: string):
   if (mps.length === 0 && mlas.length === 0 && constituencies.length === 0 && !all.some((d) => normSimple(d) === want)) {
     return null;
   }
-  return { stateCode, state: info.state, district, mps, mlas, constituencies, neighbours };
+  const held = new Set(idx.politicians.map((p) => p.constituencyId));
+  const vacancies = constituencies
+    .filter((c) => !held.has(c.id))
+    .map((c) => ({ constituency: c, vacancy: vacancyByConstituency().get(c.id) }))
+    .filter((x): x is { constituency: Constituency; vacancy: SeatVacancy } => !!x.vacancy);
+
+  return { stateCode, state: info.state, district, mps, mlas, constituencies, neighbours, vacancies };
 }
 
 export interface ConstituencyView {
@@ -1184,6 +1207,9 @@ export interface ConstituencyView {
   representatives: Politician[];
   /** Other constituencies sharing a district with this one (same type first). */
   siblings: Constituency[];
+  /** Set only when the seat has no sitting member AND we hold a cited reason.
+   *  Absent means "we do not know why", which the page says rather than guessing. */
+  vacancy?: SeatVacancy;
 }
 
 export async function getConstituencyView(id: string): Promise<ConstituencyView | null> {
@@ -1199,7 +1225,10 @@ export async function getConstituencyView(id: string): Promise<ConstituencyView 
           .sort((a, b) => (a.type === c.type ? -1 : 1) - (b.type === c.type ? -1 : 1) || a.name.localeCompare(b.name))
           .slice(0, 24)
       : [];
-  return { constituency: c, representatives, siblings };
+  // A vacancy note is only ever an explanation for an empty seat. If the roster
+  // has since been filled, the stale note must not appear beside the new member.
+  const vacancy = representatives.length === 0 ? vacancyByConstituency().get(id) : undefined;
+  return { constituency: c, representatives, siblings, vacancy };
 }
 
 export interface NationalStats {

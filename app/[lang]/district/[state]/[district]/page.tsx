@@ -222,7 +222,40 @@ export default async function DistrictPage({
             </div>
           </div>
         )}
-        {view.mps.length === 0 && view.mlas.length === 0 && (
+        {/* A seat here with nobody in it. Listing fewer MLAs than constituencies
+            without saying why reads as missing data - and for a seat whose own
+            /area page redirects to this district (the canonical-city rule), this
+            is the only place the reason can appear at all. */}
+        {view.vacancies.length > 0 && (
+          <div className={view.mps.length > 0 || view.mlas.length > 0 ? 'mt-5' : ''}>
+            <Eyebrow icon="info">{tr('district.vacantSeats')}</Eyebrow>
+            <div className="mt-2 space-y-2.5">
+              {view.vacancies.map(({ constituency, vacancy }) => (
+                <div key={constituency.id} className="rounded-2xl border border-line bg-paper-soft p-4">
+                  <p className="flex flex-wrap items-center gap-2 text-sm font-bold text-ink">
+                    {constituency.name}
+                    {vacancy.as_of && (
+                      <Chip tone="neutral">{tr('area.vacantSince', { date: formatDate(vacancy.as_of, lang) })}</Chip>
+                    )}
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{vacancy.value}</p>
+                  <p className="mt-2 flex flex-wrap items-center gap-x-2 text-xs text-ink-faint">
+                    <a
+                      href={vacancy.source_url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="inline-flex items-center gap-1 text-brand hover:underline"
+                    >
+                      <Icon name="link" size={12} /> {tr('common.source')}: {vacancy.source_name}
+                    </a>
+                    <span>· {tr('common.lastUpdated')} {formatDate(vacancy.retrieved_date, lang)}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {view.mps.length === 0 && view.mlas.length === 0 && view.vacancies.length === 0 && (
           <p className="text-sm text-ink-faint">{tr('district.noReps')}</p>
         )}
       </SectionCard>

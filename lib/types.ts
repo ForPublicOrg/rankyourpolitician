@@ -227,6 +227,32 @@ export interface Constituency {
   feature_id?: string; // joins to a map polygon (added with the MapLibre layer)
 }
 
+/**
+ * Why a constituency has no sitting member. A seat with nobody in it used to be
+ * a dead end on /area: the page said "no sitting representative on record" and
+ * stopped, which reads as missing data rather than as the fact it is.
+ *
+ * Same discipline as every other claim here. It states an event on the record -
+ * a resignation, a death, a Secretariat notification - and cites the source that
+ * states it. Never a verdict, and never an inference about why the event
+ * happened; `value` is rendered verbatim, so it is written to be read verbatim.
+ *
+ * Seed-only, like the election records: a vacancy changes when the data manager
+ * runs and we redeploy, so there is no runtime read and the page stays ISR.
+ */
+export interface SeatVacancy {
+  /** Joins data/seed/constituencies.json. */
+  constituencyId: string;
+  /** The plain statement shown to the reader. */
+  value: string;
+  /** ISO date the seat fell vacant. OMITTED when the sources do not settle it -
+   *  a missing "vacant since" is honest, a guessed one is not. */
+  as_of?: string;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+}
+
 export interface PerformanceScore {
   politician_id: string;
   cohort_key: string;

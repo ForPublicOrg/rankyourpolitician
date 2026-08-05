@@ -3,7 +3,7 @@
 // service-account key that never leaves it. Never imported by the deployed site.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy } from '../../lib/types';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -50,6 +50,41 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
     assemblyCodes.add(term.stateCode);
     if (!isoDate.test(term.from) || !isoDate.test(term.to) || term.from >= term.to) {
       push(termRecord, 'error', `invalid Assembly term dates for ${term.stateCode}: ${term.from} to ${term.to}`);
+    }
+  }
+
+  // ---- Seat vacancies ------------------------------------------------------
+  // The reason a constituency has no member is a published claim like any other,
+  // so it is held to the same rule: cited, pointed at a real seat, and never
+  // shown beside a sitting member (which would be flatly contradictory).
+  const vacanciesPath = resolve(SEED_DIR, 'vacancies.json');
+  if (existsSync(vacanciesPath)) {
+    const vacancies = JSON.parse(readFileSync(vacanciesPath, 'utf8')) as SeatVacancy[];
+    const vacancyRecord = { id: 'vacancies', name: 'Seat vacancies' } as Politician;
+    const held = new Set(politicians.filter((p) => p.active !== false).map((p) => p.constituencyId));
+    const seenVacancy = new Set<string>();
+    for (const v of vacancies) {
+      const where = v.constituencyId || '(no constituencyId)';
+      if (seenVacancy.has(v.constituencyId)) push(vacancyRecord, 'error', `duplicate vacancy record for ${where}`);
+      seenVacancy.add(v.constituencyId);
+      if (!consIds.has(v.constituencyId)) push(vacancyRecord, 'error', `vacancy ${where} is not a constituency`);
+      if (!v.value?.trim()) push(vacancyRecord, 'error', `vacancy ${where} has no statement`);
+      if (!v.source_url || !v.source_name || !v.retrieved_date) {
+        push(vacancyRecord, 'error', `vacancy ${where} has no complete citation (no citation, no claim)`);
+      }
+      if (v.retrieved_date && !isoDate.test(v.retrieved_date)) push(vacancyRecord, 'error', `vacancy ${where} retrieved_date must be ISO yyyy-mm-dd`);
+      if (v.as_of !== undefined && !isoDate.test(v.as_of)) push(vacancyRecord, 'error', `vacancy ${where} as_of must be ISO yyyy-mm-dd`);
+      // The page hides the note when a member exists, so this never reaches a
+      // reader - but a contradiction in the seed means one of the two is stale.
+      if (held.has(v.constituencyId)) push(vacancyRecord, 'error', `vacancy ${where} contradicts a sitting member in politicians.json`);
+    }
+    // The other direction is a warning, not an error: an unexplained empty seat
+    // is the dead end this file exists to remove, but shipping is not blocked on
+    // research we have not done yet.
+    for (const c of constituencies) {
+      if (c.type !== 'AC' && c.type !== 'PC') continue;
+      if (held.has(c.id) || seenVacancy.has(c.id)) continue;
+      push(vacancyRecord, 'warn', `${c.id} (${c.name}, ${c.state}) has no sitting member and no cited reason - /area shows a dead end`);
     }
   }
 
