@@ -416,6 +416,7 @@
     "chipMp": "MP",
     "chipMla": "MLA",
     "noReps": "We haven't linked representatives to this district yet - check the constituencies below.",
+    "vacantSeats": "Seats with no sitting member",
     "mapTitle": "Where in the state",
     "mapHelp": "This district inside {state}. Tap a neighbouring district to jump to it.",
     "mapAria": "Map showing {district} district highlighted within {state}",
@@ -437,6 +438,8 @@
     "repTitle": "Your representative",
     "repHelp": "The person this area elected. See their full record, scores and responsibilities.",
     "noRep": "No sitting representative on record for this seat right now.",
+    "vacantTitle": "This seat has no sitting member",
+    "vacantSince": "Vacant since {date}",
     "siblingsTitle": "Nearby constituencies",
     "siblingsHelp": "Other seats that share a district with this one.",
     "mapTitle": "Where in {state}",
@@ -892,14 +895,14 @@
   },
   "forLeaders": {
     "metaTitle": "How to be a good leader",
-    "metaDescription": "A simple guide for anyone who leads, or wants to. Seven timeless lessons on good leadership, each from a real, named source - the Bhagavad Gita, Chanakya's Arthashastra, the Thirukkural, Emperor Ashoka and Mahatma Gandhi.",
+    "metaDescription": "A simple guide for anyone who leads, or wants to. Eight lessons on good leadership: seven timeless ones, each from a real, named source - the Bhagavad Gita, Chanakya's Arthashastra, the Thirukkural, Emperor Ashoka and Mahatma Gandhi - and one written for this site by the person who built it.",
     "eyebrow": "For anyone who leads",
     "nonpartisanTag": "Non-partisan",
     "title": "How to be a good leader",
-    "subtitle": "This page is for you, whether you already lead or you want to one day. Long ago, India's wisest teachers wrote down how a good leader should be. Their words are gathered here in simple form, and every one is from a real, famous source.",
+    "subtitle": "This page is for you, whether you already lead or you want to one day. Long ago, India's wisest teachers wrote down how a good leader should be. Their words are gathered here in simple form, each from a real, famous source. The last lesson is not from a book - it is from the person who built this site.",
     "addressTitle": "Leader, this is for you",
     "address": "Leading is not about being big or powerful. It is about doing good for the people who trusted you with their vote. Read these lessons slowly. They were true a thousand years ago, and they are still true today.",
-    "principlesTitle": "Seven lessons on leading well",
+    "principlesTitle": "Eight lessons on leading well",
     "lessonWord": "Lesson",
     "principles": [
       {
@@ -943,13 +946,20 @@
         "quote": "All people are my children. What I want for my own children, their welfare and happiness, I want for all people too.",
         "source": "Emperor Ashoka, Kalinga Edict",
         "explain": "A leader belongs to everyone, not only to his own group, religion or supporters. Care for people of every faith, language and region as if they were your own family."
+      },
+      {
+        "heading": "Be human first, and hear the criticism before the praise",
+        "quote": "Embrace humanity and empathy first. Make sure you understand your criticism before you listen to the praise.",
+        "source": "The developer of RankYourPolitician",
+        "explain": "Once you hold office, praise finds you on its own and criticism has to be looked for. So look for it. Stay with what people are unhappy about until you truly understand it - who is affected, and what they need - because understanding that is the part of the job nobody can do for you. The praise will still be there afterwards, and it will be worth more."
       }
     ],
     "closingTitle": "The chair is for a short time. Your good work stays.",
     "closingBody": "One day your term ends and someone else takes the chair. What stays behind is the good you did and the lives you changed. Lead so that, even after you leave, people say: they were good for us.",
     "originalLabel": "In the original",
     "sourceLabel": "Read the source",
-    "sourcesNote": "Every quote here is from a real, named and published source, and links to it. Where the words come from a holy book, we have kept the meaning true to the well-known translations."
+    "ownWordsLabel": "Written for this site, not a quotation",
+    "sourcesNote": "The first seven quotes are each from a real, named and published source, and link to it. Where the words come from a holy book, we have kept the meaning true to the well-known translations. The eighth lesson carries no outside link because it is not a quotation from anywhere - it was written for this site by the person who built it, and is marked that way on the card."
   },
   "whyCare": {
     "metaTitle": "Why should I care about politics?",

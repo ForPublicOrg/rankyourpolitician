@@ -32,7 +32,12 @@ export async function generateMetadata({ params }: { params: Promise<LangParams>
 // was checked against the cited source before publishing (no citation, no claim).
 // `original` is the source-language text of a scripture verse, shown verbatim and
 // never machine-altered - so it stays LTR even on RTL locales.
-type Lesson = { icon: IconName; original?: string; source_url: string; retrieved: string };
+//
+// The last lesson has no source_url on purpose: it is not a quotation from
+// anywhere, it is written for this site by the person who built it. Rather than
+// fake a citation for it, the card says so in place of the source link - the
+// same "no citation, no claim" rule, answered by dropping the claim to be a quote.
+type Lesson = { icon: IconName; original?: string; source_url?: string; retrieved?: string };
 const LESSONS: Lesson[] = [
   {
     icon: 'star',
@@ -72,6 +77,7 @@ const LESSONS: Lesson[] = [
     source_url: 'https://www.accesstoinsight.org/lib/authors/dhammika/wheel386.html',
     retrieved: '2026-07-20',
   },
+  { icon: 'heart' },
 ];
 
 type PItem = { heading: string; quote: string; source: string; explain: string };
@@ -145,15 +151,23 @@ export default async function ForLeadersPage({ params }: { params: Promise<LangP
                     )}
                     <footer className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1">
                       <cite className="text-sm font-semibold not-italic text-brand-ink">- {it.source}</cite>
-                      <a
-                        href={L.source_url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="inline-flex items-center gap-1 text-xs text-brand hover:underline"
-                      >
-                        <Icon name="link" size={12} /> {tr('forLeaders.sourceLabel')}
-                      </a>
-                      <span className="text-xs text-ink-faint">· {formatDate(L.retrieved, locale)}</span>
+                      {L.source_url ? (
+                        <>
+                          <a
+                            href={L.source_url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="inline-flex items-center gap-1 text-xs text-brand hover:underline"
+                          >
+                            <Icon name="link" size={12} /> {tr('forLeaders.sourceLabel')}
+                          </a>
+                          {L.retrieved && <span className="text-xs text-ink-faint">· {formatDate(L.retrieved, locale)}</span>}
+                        </>
+                      ) : (
+                        <span className="inline-flex items-center gap-1 text-xs text-ink-faint">
+                          <Icon name="info" size={12} /> {tr('forLeaders.ownWordsLabel')}
+                        </span>
+                      )}
                     </footer>
                   </blockquote>
 
