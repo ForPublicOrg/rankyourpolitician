@@ -22310,7 +22310,9 @@
     "constituencyId": "ac-as-abhayapuri",
     "constituencyName": "Abhayapuri",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Bongaigaon"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Bhupen Roy is the Member of the Legislative Assembly (MLA) for the Abhayapuri constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -22375,7 +22377,9 @@
     "constituencyId": "ac-as-algapur-katlicherra",
     "constituencyName": "Algapur-Katlicherra",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Hailakandi"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Zubair Anam Mazumder is the Member of the Legislative Assembly (MLA) for the Algapur-Katlicherra constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -22447,7 +22451,9 @@
     "constituencyId": "ac-as-amri",
     "constituencyName": "Amri",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "West Karbi Anglong"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Habbey Teron is the Member of the Legislative Assembly (MLA) for the Amri constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -22512,7 +22518,9 @@
     "constituencyId": "ac-as-bajali",
     "constituencyName": "Bajali",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Bajali"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Dharmeswar Roy is the Member of the Legislative Assembly (MLA) for the Bajali constituency in Assam. Current party affiliation: Asom Gana Parishad.",
@@ -22667,7 +22675,9 @@
     "constituencyId": "ac-as-baokhungri",
     "constituencyName": "Baokhungri",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kokrajhar"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Rupam Chandra Roy is the Member of the Legislative Assembly (MLA) for the Baokhungri constituency in Assam. Current party affiliation: Bodoland People's Front.",
@@ -22889,7 +22899,9 @@
     "constituencyId": "ac-as-barkhetri",
     "constituencyName": "Barkhetri",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Nalbari"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Narayan Deka is the Member of the Legislative Assembly (MLA) for the Barkhetri constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -23051,8 +23063,10 @@
     "constituencyName": "Barpeta",
     "constituencyType": "PC",
     "districts": [
+      "Bajali",
       "Barpeta",
       "Bongaigaon",
+      "Kamrup",
       "Nalbari"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
@@ -23163,7 +23177,7 @@
     "constituencyName": "Behali",
     "constituencyType": "AC",
     "districts": [
-      "Sonitpur"
+      "Biswanath"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -23229,7 +23243,9 @@
     "constituencyId": "ac-as-bhergaon",
     "constituencyName": "Bhergaon",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Udalguri"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Maheswar Baro is the Member of the Legislative Assembly (MLA) for the Bhergaon constituency in Assam. Current party affiliation: Bodoland People's Front.",
@@ -23309,7 +23325,9 @@
     "constituencyId": "ac-as-bhowanipur-sorbhog",
     "constituencyName": "Bhowanipur-Sorbhog",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Bajali"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Ranjeet Kumar Dass is the Member of the Legislative Assembly (MLA) for the Bhowanipur-Sorbhog constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -23495,7 +23513,7 @@
     "constituencyName": "Bijni",
     "constituencyType": "AC",
     "districts": [
-      "Bongaigaon"
+      "Chirang"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -23561,7 +23579,9 @@
     "constituencyId": "ac-as-bilasipara",
     "constituencyName": "Bilasipara",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Dhubri"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Jibesh Rai is the Member of the Legislative Assembly (MLA) for the Bilasipara constituency in Assam. Current party affiliation: Asom Gana Parishad.",
@@ -23626,7 +23646,9 @@
     "constituencyId": "ac-as-binnakandi",
     "constituencyName": "Binnakandi",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Hojai"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Mohammed Badruddin Ajmal is the Member of the Legislative Assembly (MLA) for the Binnakandi constituency in Assam. Current party affiliation: All India United Democratic Front.",
@@ -23722,7 +23744,9 @@
     "constituencyId": "ac-as-birsing-jarua",
     "constituencyName": "Birsing Jarua",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Dhubri"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Wazed Ali Choudhury is the Member of the Legislative Assembly (MLA) for the Birsing Jarua constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -23805,7 +23829,7 @@
     "constituencyName": "Biswanath",
     "constituencyType": "AC",
     "districts": [
-      "Sonitpur"
+      "Biswanath"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -24077,7 +24101,9 @@
     "constituencyId": "ac-as-boko-chaygaon",
     "constituencyName": "Boko-Chaygaon",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kamrup"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Raju Mesh is the Member of the Legislative Assembly (MLA) for the Boko-Chaygaon constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -24210,7 +24236,9 @@
     "constituencyId": "ac-as-borkhola",
     "constituencyName": "Borkhola",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Cachar"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Kishor Nath is the Member of the Legislative Assembly (MLA) for the Borkhola constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -24301,7 +24329,9 @@
     "constituencyId": "ac-as-chabua-lahowal",
     "constituencyName": "Chabua-Lahowal",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Dibrugarh"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Binod Hazarika is the Member of the Legislative Assembly (MLA) for the Chabua-Lahowal constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -24389,7 +24419,9 @@
     "constituencyId": "ac-as-chamaria",
     "constituencyName": "Chamaria",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kamrup"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Rekibuddin Ahmed is the Member of the Legislative Assembly (MLA) for the Chamaria constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -24637,7 +24669,12 @@
     "constituencyId": "pc-as-darrang-udalguri",
     "constituencyName": "Darrang-Udalguri",
     "constituencyType": "PC",
-    "districts": [],
+    "districts": [
+      "Darrang",
+      "Kamrup",
+      "Tamulpur",
+      "Udalguri"
+    ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
     "neutral_summary": "Dilip Saikia is the Member of Parliament for the Darrang-Udalguri constituency in Assam, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Bharatiya Janata Party.",
@@ -24752,7 +24789,9 @@
     "constituencyId": "ac-as-demow",
     "constituencyName": "Demow",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Sibsagar"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Susanta Borgohain is the Member of the Legislative Assembly (MLA) for the Demow constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -24843,7 +24882,7 @@
     "constituencyName": "Dergaon",
     "constituencyType": "AC",
     "districts": [
-      "Jorhat"
+      "Golaghat"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -24910,7 +24949,7 @@
     "constituencyName": "Dhakuakhana",
     "constituencyType": "AC",
     "districts": [
-      "Dhemaji"
+      "Lakhimpur"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -25409,8 +25448,11 @@
     "constituencyName": "Dhubri",
     "constituencyType": "PC",
     "districts": [
+      "Barpeta",
+      "Bongaigaon",
       "Dhubri",
-      "Goalpara"
+      "Goalpara",
+      "South Salmara Mankachar"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
@@ -25838,7 +25880,9 @@
     "constituencyId": "ac-as-dimoria",
     "constituencyName": "Dimoria",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kamrup (Metro)"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Tapan Das is the Member of the Legislative Assembly (MLA) for the Dimoria constituency in Assam. Current party affiliation: Asom Gana Parishad.",
@@ -25896,7 +25940,11 @@
     "constituencyId": "pc-as-diphu",
     "constituencyName": "Diphu",
     "constituencyType": "PC",
-    "districts": [],
+    "districts": [
+      "Dima Hasao",
+      "Karbi Anglong",
+      "West Karbi Anglong"
+    ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
     "neutral_summary": "Amarsing Tisso is the Member of Parliament for the Diphu constituency in Assam, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Bharatiya Janata Party.",
@@ -26058,7 +26106,7 @@
     "constituencyName": "Dispur",
     "constituencyType": "AC",
     "districts": [
-      "Kamrup"
+      "Kamrup (Metro)"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -26238,7 +26286,9 @@
     "constituencyId": "ac-as-dotma",
     "constituencyName": "Dotma",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kokrajhar"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Rabiram Narzary is the Member of the Legislative Assembly (MLA) for the Dotma constituency in Assam. Current party affiliation: Bodoland People's Front.",
@@ -26743,7 +26793,7 @@
     "constituencyName": "Gohpur",
     "constituencyType": "AC",
     "districts": [
-      "Sonitpur"
+      "Biswanath"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -27021,7 +27071,9 @@
     "constituencyId": "ac-as-goreshwar",
     "constituencyName": "Goreshwar",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Tamulpur"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Victor Kumar Das is the Member of the Legislative Assembly (MLA) for the Goreshwar constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -27154,7 +27206,11 @@
     "constituencyId": "pc-as-guwahati",
     "constituencyName": "Guwahati",
     "constituencyType": "PC",
-    "districts": [],
+    "districts": [
+      "Goalpara",
+      "Kamrup",
+      "Kamrup (Metro)"
+    ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
     "neutral_summary": "Bijuli Kalita Medhi is the Member of Parliament for the Guwahati constituency in Assam, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Bharatiya Janata Party.",
@@ -27256,7 +27312,9 @@
     "constituencyId": "ac-as-guwahati-central",
     "constituencyName": "Guwahati Central",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kamrup (Metro)"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Vijay Kumar Gupta is the Member of the Legislative Assembly (MLA) for the Guwahati Central constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -27330,7 +27388,7 @@
     "constituencyName": "Haflong",
     "constituencyType": "AC",
     "districts": [
-      "North Cachar Hills"
+      "Dima Hasao"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -27463,7 +27521,9 @@
     "constituencyId": "ac-as-hajo-sualkuchi",
     "constituencyName": "Hajo-Sualkuchi",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kamrup"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Prakash Chandra Das is the Member of the Legislative Assembly (MLA) for the Hajo-Sualkuchi constituency in Assam. Current party affiliation: Asom Gana Parishad.",
@@ -27529,7 +27589,7 @@
     "constituencyName": "Hojai",
     "constituencyType": "AC",
     "districts": [
-      "Nagaon"
+      "Hojai"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -27679,7 +27739,7 @@
     "constituencyName": "Jagiroad",
     "constituencyType": "AC",
     "districts": [
-      "Marigaon"
+      "Morigaon"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -27777,7 +27837,9 @@
     "constituencyId": "ac-as-jaleshwar",
     "constituencyName": "Jaleshwar",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Goalpara"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Aftab Uddin Mollah is the Member of the Legislative Assembly (MLA) for the Jaleshwar constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -27846,7 +27908,7 @@
     "constituencyName": "Jalukbari",
     "constituencyType": "AC",
     "districts": [
-      "Kamrup"
+      "Kamrup (Metro)"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -28035,8 +28097,10 @@
     "constituencyName": "Jorhat",
     "constituencyType": "PC",
     "districts": [
+      "Charaideo",
       "Jorhat",
-      "Sivasagar"
+      "Majuli",
+      "Sibsagar"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
@@ -28423,9 +28487,8 @@
     "constituencyName": "Karimganj",
     "constituencyType": "PC",
     "districts": [
-      "Cachar",
       "Hailakandi",
-      "Karimganj"
+      "Sribhumi"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
@@ -28544,7 +28607,7 @@
     "constituencyName": "Karimganj North",
     "constituencyType": "AC",
     "districts": [
-      "Karimganj"
+      "Sribhumi"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -28618,7 +28681,7 @@
     "constituencyName": "Karimganj South",
     "constituencyType": "AC",
     "districts": [
-      "Karimganj"
+      "Sribhumi"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -28691,7 +28754,9 @@
     "constituencyId": "ac-as-katigorah",
     "constituencyName": "Katigorah",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Cachar"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Kamalakhya Dey Purkayastha is the Member of the Legislative Assembly (MLA) for the Katigorah constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -28788,7 +28853,11 @@
     "constituencyId": "pc-as-kaziranga",
     "constituencyName": "Kaziranga",
     "constituencyType": "PC",
-    "districts": [],
+    "districts": [
+      "Golaghat",
+      "Hojai",
+      "Nagaon"
+    ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
     "neutral_summary": "Kamakhya Prasad Tasa is the Member of Parliament for the Kaziranga constituency in Assam, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Bharatiya Janata Party.",
@@ -28905,7 +28974,9 @@
     "constituencyId": "ac-as-khowang",
     "constituencyName": "Khowang",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Dibrugarh"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Chakradhar Gogoi is the Member of the Legislative Assembly (MLA) for the Khowang constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -29091,10 +29162,9 @@
     "constituencyName": "Kokrajhar",
     "constituencyType": "PC",
     "districts": [
-      "Barpeta",
-      "Bongaigaon",
-      "Kokrajhar",
-      "Nalbari"
+      "Baksa",
+      "Chirang",
+      "Kokrajhar"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
@@ -29265,7 +29335,7 @@
     "constituencyName": "Laharighat",
     "constituencyType": "AC",
     "districts": [
-      "Marigaon"
+      "Morigaon"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -29433,8 +29503,6 @@
     "constituencyType": "PC",
     "districts": [
       "Dhemaji",
-      "Dibrugarh",
-      "Jorhat",
       "Lakhimpur",
       "Tinsukia"
     ],
@@ -29644,7 +29712,7 @@
     "constituencyName": "Lumding",
     "constituencyType": "AC",
     "districts": [
-      "Nagaon"
+      "Hojai"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -29733,7 +29801,9 @@
     "constituencyId": "ac-as-mahmora",
     "constituencyName": "Mahmora",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Charaideo"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Suruj Dehingia is the Member of the Legislative Assembly (MLA) for the Mahmora constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -29799,7 +29869,7 @@
     "constituencyName": "Majbat",
     "constituencyType": "AC",
     "districts": [
-      "Darrang"
+      "Udalguri"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -29889,7 +29959,7 @@
     "constituencyName": "Majuli",
     "constituencyType": "AC",
     "districts": [
-      "Jorhat"
+      "Majuli"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -29971,7 +30041,9 @@
     "constituencyId": "ac-as-makum",
     "constituencyName": "Makum",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Tinsukia"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Sanjoy Kishan is the Member of the Legislative Assembly (MLA) for the Makum constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -30066,7 +30138,9 @@
     "constituencyId": "ac-as-manas",
     "constituencyName": "Manas",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Baksa"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Thaneswar Basumatary is the Member of the Legislative Assembly (MLA) for the Manas constituency in Assam. Current party affiliation: Bodoland People's Front.",
@@ -30161,7 +30235,9 @@
     "constituencyId": "ac-as-mandia",
     "constituencyName": "Mandia",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Barpeta"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Sherman Ali Ahmed is the Member of the Legislative Assembly (MLA) for the Mandia constituency in Assam. Current party affiliation: Trinamool Congress.",
@@ -30249,7 +30325,9 @@
     "constituencyId": "ac-as-mangaldai",
     "constituencyName": "Mangaldai",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Darrang"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Nilima Devi is the Member of the Legislative Assembly (MLA) for the Mangaldai constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -30315,7 +30393,7 @@
     "constituencyName": "Mankachar",
     "constituencyType": "AC",
     "districts": [
-      "Dhubri"
+      "South Salmara Mankachar"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -30571,7 +30649,7 @@
     "constituencyName": "Morigaon",
     "constituencyType": "AC",
     "districts": [
-      "Marigaon"
+      "Morigaon"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -30660,7 +30738,9 @@
     "constituencyId": "ac-as-nadaur",
     "constituencyName": "Nadaur",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Sonitpur"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Padma Hazarika is the Member of the Legislative Assembly (MLA) for the Nadaur constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -30751,6 +30831,7 @@
     "constituencyName": "Nagaon",
     "constituencyType": "PC",
     "districts": [
+      "Morigaon",
       "Nagaon"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
@@ -30814,7 +30895,9 @@
     "constituencyId": "ac-as-nagaon-batadraba",
     "constituencyName": "Nagaon-Batadraba",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Nagaon"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Rupak Sarmah is the Member of the Legislative Assembly (MLA) for the Nagaon-Batadraba constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -31164,7 +31247,7 @@
     "constituencyName": "Nazira",
     "constituencyType": "AC",
     "districts": [
-      "Sivasagar"
+      "Sibsagar"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -31230,7 +31313,9 @@
     "constituencyId": "ac-as-new-guwahati",
     "constituencyName": "New Guwahati",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kamrup (Metro)"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Diplu Ranjan Sarmah is the Member of the Legislative Assembly (MLA) for the New Guwahati constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -31296,7 +31381,9 @@
     "constituencyId": "ac-as-pakabetbari",
     "constituencyName": "Pakabetbari",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Barpeta"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Jakir Hussain Sikdar is the Member of the Legislative Assembly (MLA) for the Pakabetbari constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -31422,7 +31509,9 @@
     "constituencyId": "ac-as-parbatjhora",
     "constituencyName": "Parbatjhora",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Kokrajhar"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Md Ashraful Islam Sheikh is the Member of the Legislative Assembly (MLA) for the Parbatjhora constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -31495,7 +31584,7 @@
     "constituencyName": "Patharkandi",
     "constituencyType": "AC",
     "districts": [
-      "Karimganj"
+      "Sribhumi"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -32181,7 +32270,9 @@
     "constituencyId": "ac-as-ram-krishna-nagar",
     "constituencyName": "Ram Krishna Nagar",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Sribhumi"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Bijoy Malakar is the Member of the Legislative Assembly (MLA) for the Ram Krishna Nagar constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -32421,7 +32512,9 @@
     "constituencyId": "ac-as-rongkhang",
     "constituencyName": "Rongkhang",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "West Karbi Anglong"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Tuliram Ronghang is the Member of the Legislative Assembly (MLA) for the Rongkhang constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -32500,7 +32593,9 @@
     "constituencyId": "ac-as-rongonadi",
     "constituencyName": "Rongonadi",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Lakhimpur"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Rishiraj Hazarika is the Member of the Legislative Assembly (MLA) for the Rongonadi constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -32873,7 +32968,7 @@
     "constituencyName": "Sibsagar",
     "constituencyType": "AC",
     "districts": [
-      "Sivasagar"
+      "Sibsagar"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -32940,7 +33035,9 @@
     "constituencyId": "ac-as-sidli-chirang",
     "constituencyName": "Sidli-Chirang",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Chirang"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Paniram Brahma is the Member of the Legislative Assembly (MLA) for the Sidli-Chirang constituency in Assam. Current party affiliation: Bodoland People's Front.",
@@ -33282,7 +33379,9 @@
     "constituencyId": "ac-as-sissiborgaon",
     "constituencyName": "Sissiborgaon",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Dhemaji"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Jiban Gogoi is the Member of the Legislative Assembly (MLA) for the Sissiborgaon constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -33447,7 +33546,7 @@
     "constituencyName": "Sonari",
     "constituencyType": "AC",
     "districts": [
-      "Sivasagar"
+      "Charaideo"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -33515,6 +33614,8 @@
     "constituencyName": "Sonitpur",
     "constituencyType": "PC",
     "districts": [
+      "Biswanath",
+      "Lakhimpur",
       "Sonitpur"
     ],
     "current_position": "Member of Parliament, Lok Sabha",
@@ -33624,7 +33725,9 @@
     "constituencyId": "ac-as-srijangram",
     "constituencyName": "Srijangram",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Bongaigaon"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Md. Nurul Islam is the Member of the Legislative Assembly (MLA) for the Srijangram constituency in Assam. Current party affiliation: Indian National Congress.",
@@ -33690,7 +33793,7 @@
     "constituencyName": "Tamulpur",
     "constituencyType": "AC",
     "districts": [
-      "Nalbari"
+      "Tamulpur"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -33780,7 +33883,9 @@
     "constituencyId": "ac-as-tangla",
     "constituencyName": "Tangla",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Udalguri"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Bikan Chandra Deka is the Member of the Legislative Assembly (MLA) for the Tangla constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -34002,7 +34107,9 @@
     "constituencyId": "ac-as-tihu",
     "constituencyName": "Tihu",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Nalbari"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Chandra Mohan Patowary is the Member of the Legislative Assembly (MLA) for the Tihu constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -34254,7 +34361,9 @@
     "constituencyId": "ac-as-titabor",
     "constituencyName": "Titabor",
     "constituencyType": "AC",
-    "districts": [],
+    "districts": [
+      "Jorhat"
+    ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
     "neutral_summary": "Dhiraj Gowala is the Member of the Legislative Assembly (MLA) for the Titabor constituency in Assam. Current party affiliation: Bharatiya Janata Party.",
@@ -34320,7 +34429,7 @@
     "constituencyName": "Udalguri",
     "constituencyType": "AC",
     "districts": [
-      "Darrang"
+      "Udalguri"
     ],
     "current_position": "Member of the Legislative Assembly, Assam",
     "is_minister": false,
@@ -393790,7 +393899,7 @@
     "constituencyName": "Dantan",
     "constituencyType": "AC",
     "districts": [
-      "Paschim Medinipur"
+      "Pashchim Medinipur"
     ],
     "current_position": "Member of the Legislative Assembly, West Bengal",
     "is_minister": false,

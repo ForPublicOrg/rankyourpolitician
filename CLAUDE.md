@@ -83,6 +83,12 @@ npm run build        # prebuild regenerates public/*.json payloads (hash-gated: 
 npm run dm -- validate            # data changes must pass this
 npm run dm -- backfill-trending   # trending bucket rebuild (dry run; --apply writes)
 
+# Which district administers a seat (drives /district pages + the DM/SP ladder).
+# Dry run unless --apply. One state at a time; it refuses a state whose seats do
+# not match the ECI's 1:1 rather than filling the ones it recognises.
+npx tsx tools/data-manager/import-ac-districts.ts --state=AS --apply
+npm run test:ac-districts         # matcher regressions (offline, ECI fixtures)
+
 # Elections. Add the event to tools/data-manager/elections-shared.ts, then:
 npx tsx tools/data-manager/import-elections.ts --apply        # every nomination, from ECI
 npx tsx tools/data-manager/enrich-candidates.ts --apply       # affidavit detail, from MyNeta

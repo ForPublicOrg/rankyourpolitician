@@ -1,0 +1,1423 @@
+{
+  "generated_by": "tools/data-manager/import-ac-districts.ts",
+  "states": {
+    "AS": {
+      "eciStateCd": "S03",
+      "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/districts/S03",
+      "source_name": "Election Commission of India - Voter Services Portal, electoral-roll district and constituency lists",
+      "retrieved_date": "2026-08-05",
+      "ac_count": 126,
+      "district_count": 35,
+      "seats": [
+        {
+          "constituencyId": "ac-as-gossaigaon",
+          "acNo": 1,
+          "eciAcName": "GOSSAIGAON",
+          "eciDistrictCd": "S0301",
+          "eciDistrictName": "KOKRAJHAR",
+          "district": "Kokrajhar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0301"
+        },
+        {
+          "constituencyId": "ac-as-dotma",
+          "acNo": 2,
+          "eciAcName": "DOTMA",
+          "eciDistrictCd": "S0301",
+          "eciDistrictName": "KOKRAJHAR",
+          "district": "Kokrajhar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0301"
+        },
+        {
+          "constituencyId": "ac-as-kokrajhar",
+          "acNo": 3,
+          "eciAcName": "KOKRAJHAR",
+          "eciDistrictCd": "S0301",
+          "eciDistrictName": "KOKRAJHAR",
+          "district": "Kokrajhar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0301"
+        },
+        {
+          "constituencyId": "ac-as-baokhungri",
+          "acNo": 4,
+          "eciAcName": "BAOKHUNGRI",
+          "eciDistrictCd": "S0301",
+          "eciDistrictName": "KOKRAJHAR",
+          "district": "Kokrajhar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0301"
+        },
+        {
+          "constituencyId": "ac-as-parbatjhora",
+          "acNo": 5,
+          "eciAcName": "PARBATJHORA",
+          "eciDistrictCd": "S0301",
+          "eciDistrictName": "KOKRAJHAR",
+          "district": "Kokrajhar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0301"
+        },
+        {
+          "constituencyId": "ac-as-golakganj",
+          "acNo": 6,
+          "eciAcName": "GOLAKGANJ",
+          "eciDistrictCd": "S0302",
+          "eciDistrictName": "DHUBRI",
+          "district": "Dhubri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0302"
+        },
+        {
+          "constituencyId": "ac-as-gauripur",
+          "acNo": 7,
+          "eciAcName": "GAURIPUR",
+          "eciDistrictCd": "S0302",
+          "eciDistrictName": "DHUBRI",
+          "district": "Dhubri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0302"
+        },
+        {
+          "constituencyId": "ac-as-dhubri",
+          "acNo": 8,
+          "eciAcName": "DHUBRI",
+          "eciDistrictCd": "S0302",
+          "eciDistrictName": "DHUBRI",
+          "district": "Dhubri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0302"
+        },
+        {
+          "constituencyId": "ac-as-birsing-jarua",
+          "acNo": 9,
+          "eciAcName": "BIRSING-JARUA",
+          "eciDistrictCd": "S0302",
+          "eciDistrictName": "DHUBRI",
+          "district": "Dhubri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0302"
+        },
+        {
+          "constituencyId": "ac-as-bilasipara",
+          "acNo": 10,
+          "eciAcName": "BILASIPARA",
+          "eciDistrictCd": "S0302",
+          "eciDistrictName": "DHUBRI",
+          "district": "Dhubri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0302"
+        },
+        {
+          "constituencyId": "ac-as-mankachar",
+          "acNo": 11,
+          "eciAcName": "MANKACHAR",
+          "eciDistrictCd": "S0303",
+          "eciDistrictName": "SOUTH SALMARA MANKACHAR",
+          "district": "South Salmara Mankachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0303"
+        },
+        {
+          "constituencyId": "ac-as-jaleshwar",
+          "acNo": 12,
+          "eciAcName": "JALESWAR",
+          "eciDistrictCd": "S0304",
+          "eciDistrictName": "GOALPARA",
+          "district": "Goalpara",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0304"
+        },
+        {
+          "constituencyId": "ac-as-goalpara-west",
+          "acNo": 13,
+          "eciAcName": "GOALPARA WEST",
+          "eciDistrictCd": "S0304",
+          "eciDistrictName": "GOALPARA",
+          "district": "Goalpara",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0304"
+        },
+        {
+          "constituencyId": "ac-as-goalpara-east",
+          "acNo": 14,
+          "eciAcName": "GOALPARA EAST",
+          "eciDistrictCd": "S0304",
+          "eciDistrictName": "GOALPARA",
+          "district": "Goalpara",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0304"
+        },
+        {
+          "constituencyId": "ac-as-dudhnai",
+          "acNo": 15,
+          "eciAcName": "DUDHNOI",
+          "eciDistrictCd": "S0304",
+          "eciDistrictName": "GOALPARA",
+          "district": "Goalpara",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0304"
+        },
+        {
+          "constituencyId": "ac-as-abhayapuri",
+          "acNo": 16,
+          "eciAcName": "ABHAYAPURI",
+          "eciDistrictCd": "S0305",
+          "eciDistrictName": "BONGAIGAON",
+          "district": "Bongaigaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0305"
+        },
+        {
+          "constituencyId": "ac-as-srijangram",
+          "acNo": 17,
+          "eciAcName": "SRIJANGRAM",
+          "eciDistrictCd": "S0305",
+          "eciDistrictName": "BONGAIGAON",
+          "district": "Bongaigaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0305"
+        },
+        {
+          "constituencyId": "ac-as-bongaigaon",
+          "acNo": 18,
+          "eciAcName": "BONGAIGAON",
+          "eciDistrictCd": "S0305",
+          "eciDistrictName": "BONGAIGAON",
+          "district": "Bongaigaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0305"
+        },
+        {
+          "constituencyId": "ac-as-sidli-chirang",
+          "acNo": 19,
+          "eciAcName": "SIDLI CHIRANG",
+          "eciDistrictCd": "S0306",
+          "eciDistrictName": "CHIRANG",
+          "district": "Chirang",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0306"
+        },
+        {
+          "constituencyId": "ac-as-bijni",
+          "acNo": 20,
+          "eciAcName": "BIJNI",
+          "eciDistrictCd": "S0306",
+          "eciDistrictName": "CHIRANG",
+          "district": "Chirang",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0306"
+        },
+        {
+          "constituencyId": "ac-as-bhowanipur-sorbhog",
+          "acNo": 21,
+          "eciAcName": "BHAWANIPUR-SORBHOG",
+          "eciDistrictCd": "S0308",
+          "eciDistrictName": "BAJALI",
+          "district": "Bajali",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0308"
+        },
+        {
+          "constituencyId": "ac-as-mandia",
+          "acNo": 22,
+          "eciAcName": "MANDIA",
+          "eciDistrictCd": "S0307",
+          "eciDistrictName": "BARPETA",
+          "district": "Barpeta",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0307"
+        },
+        {
+          "constituencyId": "ac-as-chenga",
+          "acNo": 23,
+          "eciAcName": "CHENGA",
+          "eciDistrictCd": "S0307",
+          "eciDistrictName": "BARPETA",
+          "district": "Barpeta",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0307"
+        },
+        {
+          "constituencyId": "ac-as-barpeta",
+          "acNo": 24,
+          "eciAcName": "BARPETA",
+          "eciDistrictCd": "S0307",
+          "eciDistrictName": "BARPETA",
+          "district": "Barpeta",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0307"
+        },
+        {
+          "constituencyId": "ac-as-pakabetbari",
+          "acNo": 25,
+          "eciAcName": "PAKABETBARI",
+          "eciDistrictCd": "S0307",
+          "eciDistrictName": "BARPETA",
+          "district": "Barpeta",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0307"
+        },
+        {
+          "constituencyId": "ac-as-bajali",
+          "acNo": 26,
+          "eciAcName": "BAJALI",
+          "eciDistrictCd": "S0308",
+          "eciDistrictName": "BAJALI",
+          "district": "Bajali",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0308"
+        },
+        {
+          "constituencyId": "ac-as-chamaria",
+          "acNo": 27,
+          "eciAcName": "CHAMARIA",
+          "eciDistrictCd": "S0309",
+          "eciDistrictName": "KAMRUP.",
+          "district": "Kamrup",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0309"
+        },
+        {
+          "constituencyId": "ac-as-boko-chaygaon",
+          "acNo": 28,
+          "eciAcName": "BOKO-CHAYGAON",
+          "eciDistrictCd": "S0309",
+          "eciDistrictName": "KAMRUP.",
+          "district": "Kamrup",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0309"
+        },
+        {
+          "constituencyId": "ac-as-palasbari",
+          "acNo": 29,
+          "eciAcName": "PALASBARI",
+          "eciDistrictCd": "S0309",
+          "eciDistrictName": "KAMRUP.",
+          "district": "Kamrup",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0309"
+        },
+        {
+          "constituencyId": "ac-as-hajo-sualkuchi",
+          "acNo": 30,
+          "eciAcName": "HAJO-SUALKUCHI",
+          "eciDistrictCd": "S0309",
+          "eciDistrictName": "KAMRUP.",
+          "district": "Kamrup",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0309"
+        },
+        {
+          "constituencyId": "ac-as-rangiya",
+          "acNo": 31,
+          "eciAcName": "RANGIA",
+          "eciDistrictCd": "S0309",
+          "eciDistrictName": "KAMRUP.",
+          "district": "Kamrup",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0309"
+        },
+        {
+          "constituencyId": "ac-as-kamalpur",
+          "acNo": 32,
+          "eciAcName": "KAMALPUR",
+          "eciDistrictCd": "S0309",
+          "eciDistrictName": "KAMRUP.",
+          "district": "Kamrup",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0309"
+        },
+        {
+          "constituencyId": "ac-as-dispur",
+          "acNo": 33,
+          "eciAcName": "DISPUR",
+          "eciDistrictCd": "S0310",
+          "eciDistrictName": "KAMRUP (METRO)",
+          "district": "Kamrup (Metro)",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0310"
+        },
+        {
+          "constituencyId": "ac-as-dimoria",
+          "acNo": 34,
+          "eciAcName": "DIMORIA",
+          "eciDistrictCd": "S0310",
+          "eciDistrictName": "KAMRUP (METRO)",
+          "district": "Kamrup (Metro)",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0310"
+        },
+        {
+          "constituencyId": "ac-as-new-guwahati",
+          "acNo": 35,
+          "eciAcName": "NEW GUWAHATI",
+          "eciDistrictCd": "S0310",
+          "eciDistrictName": "KAMRUP (METRO)",
+          "district": "Kamrup (Metro)",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0310"
+        },
+        {
+          "constituencyId": "ac-as-guwahati-central",
+          "acNo": 36,
+          "eciAcName": "GUWAHATI CENTRAL",
+          "eciDistrictCd": "S0310",
+          "eciDistrictName": "KAMRUP (METRO)",
+          "district": "Kamrup (Metro)",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0310"
+        },
+        {
+          "constituencyId": "ac-as-jalukbari",
+          "acNo": 37,
+          "eciAcName": "JALUKBARI",
+          "eciDistrictCd": "S0310",
+          "eciDistrictName": "KAMRUP (METRO)",
+          "district": "Kamrup (Metro)",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0310"
+        },
+        {
+          "constituencyId": "ac-as-barkhetri",
+          "acNo": 38,
+          "eciAcName": "BARKHETRI",
+          "eciDistrictCd": "S0311",
+          "eciDistrictName": "NALBARI",
+          "district": "Nalbari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0311"
+        },
+        {
+          "constituencyId": "ac-as-nalbari",
+          "acNo": 39,
+          "eciAcName": "NALBARI",
+          "eciDistrictCd": "S0311",
+          "eciDistrictName": "NALBARI",
+          "district": "Nalbari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0311"
+        },
+        {
+          "constituencyId": "ac-as-tihu",
+          "acNo": 40,
+          "eciAcName": "TIHU",
+          "eciDistrictCd": "S0311",
+          "eciDistrictName": "NALBARI",
+          "district": "Nalbari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0311"
+        },
+        {
+          "constituencyId": "ac-as-manas",
+          "acNo": 41,
+          "eciAcName": "MANAS",
+          "eciDistrictCd": "S0312",
+          "eciDistrictName": "BAKSA",
+          "district": "Baksa",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0312"
+        },
+        {
+          "constituencyId": "ac-as-baksa",
+          "acNo": 42,
+          "eciAcName": "BAKSA",
+          "eciDistrictCd": "S0312",
+          "eciDistrictName": "BAKSA",
+          "district": "Baksa",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0312"
+        },
+        {
+          "constituencyId": "ac-as-tamulpur",
+          "acNo": 43,
+          "eciAcName": "TAMULPUR",
+          "eciDistrictCd": "S0335",
+          "eciDistrictName": "TAMULPUR",
+          "district": "Tamulpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0335"
+        },
+        {
+          "constituencyId": "ac-as-goreshwar",
+          "acNo": 44,
+          "eciAcName": "GORESWAR",
+          "eciDistrictCd": "S0335",
+          "eciDistrictName": "TAMULPUR",
+          "district": "Tamulpur",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0335"
+        },
+        {
+          "constituencyId": "ac-as-bhergaon",
+          "acNo": 45,
+          "eciAcName": "BHERGAON",
+          "eciDistrictCd": "S0313",
+          "eciDistrictName": "UDALGURI",
+          "district": "Udalguri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0313"
+        },
+        {
+          "constituencyId": "ac-as-udalguri",
+          "acNo": 46,
+          "eciAcName": "UDALGURI",
+          "eciDistrictCd": "S0313",
+          "eciDistrictName": "UDALGURI",
+          "district": "Udalguri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0313"
+        },
+        {
+          "constituencyId": "ac-as-majbat",
+          "acNo": 47,
+          "eciAcName": "MAZBAT",
+          "eciDistrictCd": "S0313",
+          "eciDistrictName": "UDALGURI",
+          "district": "Udalguri",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0313"
+        },
+        {
+          "constituencyId": "ac-as-tangla",
+          "acNo": 48,
+          "eciAcName": "TANGLA",
+          "eciDistrictCd": "S0313",
+          "eciDistrictName": "UDALGURI",
+          "district": "Udalguri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0313"
+        },
+        {
+          "constituencyId": "ac-as-sipajhar",
+          "acNo": 49,
+          "eciAcName": "SIPAJHAR",
+          "eciDistrictCd": "S0314",
+          "eciDistrictName": "DARRANG",
+          "district": "Darrang",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0314"
+        },
+        {
+          "constituencyId": "ac-as-mangaldai",
+          "acNo": 50,
+          "eciAcName": "MANGALDAI",
+          "eciDistrictCd": "S0314",
+          "eciDistrictName": "DARRANG",
+          "district": "Darrang",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0314"
+        },
+        {
+          "constituencyId": "ac-as-dalgaon",
+          "acNo": 51,
+          "eciAcName": "DALGAON",
+          "eciDistrictCd": "S0314",
+          "eciDistrictName": "DARRANG",
+          "district": "Darrang",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0314"
+        },
+        {
+          "constituencyId": "ac-as-jagiroad",
+          "acNo": 52,
+          "eciAcName": "JAGIROAD",
+          "eciDistrictCd": "S0315",
+          "eciDistrictName": "MORIGAON",
+          "district": "Morigaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0315"
+        },
+        {
+          "constituencyId": "ac-as-laharighat",
+          "acNo": 53,
+          "eciAcName": "LAHARIGHAT",
+          "eciDistrictCd": "S0315",
+          "eciDistrictName": "MORIGAON",
+          "district": "Morigaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0315"
+        },
+        {
+          "constituencyId": "ac-as-morigaon",
+          "acNo": 54,
+          "eciAcName": "MORIGAON",
+          "eciDistrictCd": "S0315",
+          "eciDistrictName": "MORIGAON",
+          "district": "Morigaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0315"
+        },
+        {
+          "constituencyId": "ac-as-dhing",
+          "acNo": 55,
+          "eciAcName": "DHING",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-rupohihat",
+          "acNo": 56,
+          "eciAcName": "RUPAHIHAT",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-kaliabor",
+          "acNo": 57,
+          "eciAcName": "KALIABOR",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-samaguri",
+          "acNo": 58,
+          "eciAcName": "SAMAGURI",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-barhampur",
+          "acNo": 59,
+          "eciAcName": "BARHAMPUR",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-nagaon-batadraba",
+          "acNo": 60,
+          "eciAcName": "NAGAON-BATADRABA",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-raha",
+          "acNo": 61,
+          "eciAcName": "RAHA",
+          "eciDistrictCd": "S0316",
+          "eciDistrictName": "NAGAON",
+          "district": "Nagaon",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0316"
+        },
+        {
+          "constituencyId": "ac-as-binnakandi",
+          "acNo": 62,
+          "eciAcName": "BINNAKANDI",
+          "eciDistrictCd": "S0317",
+          "eciDistrictName": "HOJAI",
+          "district": "Hojai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0317"
+        },
+        {
+          "constituencyId": "ac-as-hojai",
+          "acNo": 63,
+          "eciAcName": "HOJAI",
+          "eciDistrictCd": "S0317",
+          "eciDistrictName": "HOJAI",
+          "district": "Hojai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0317"
+        },
+        {
+          "constituencyId": "ac-as-lumding",
+          "acNo": 64,
+          "eciAcName": "LUMDING",
+          "eciDistrictCd": "S0317",
+          "eciDistrictName": "HOJAI",
+          "district": "Hojai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0317"
+        },
+        {
+          "constituencyId": "ac-as-dhekiajuli",
+          "acNo": 65,
+          "eciAcName": "DHEKIAJULI",
+          "eciDistrictCd": "S0318",
+          "eciDistrictName": "SONITPUR",
+          "district": "Sonitpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0318"
+        },
+        {
+          "constituencyId": "ac-as-barchalla",
+          "acNo": 66,
+          "eciAcName": "BARCHALLA",
+          "eciDistrictCd": "S0318",
+          "eciDistrictName": "SONITPUR",
+          "district": "Sonitpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0318"
+        },
+        {
+          "constituencyId": "ac-as-tezpur",
+          "acNo": 67,
+          "eciAcName": "TEZPUR",
+          "eciDistrictCd": "S0318",
+          "eciDistrictName": "SONITPUR",
+          "district": "Sonitpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0318"
+        },
+        {
+          "constituencyId": "ac-as-rangapara",
+          "acNo": 68,
+          "eciAcName": "RANGAPARA",
+          "eciDistrictCd": "S0318",
+          "eciDistrictName": "SONITPUR",
+          "district": "Sonitpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0318"
+        },
+        {
+          "constituencyId": "ac-as-nadaur",
+          "acNo": 69,
+          "eciAcName": "NADUAR",
+          "eciDistrictCd": "S0318",
+          "eciDistrictName": "SONITPUR",
+          "district": "Sonitpur",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0318"
+        },
+        {
+          "constituencyId": "ac-as-biswanath",
+          "acNo": 70,
+          "eciAcName": "BISWANATH",
+          "eciDistrictCd": "S0319",
+          "eciDistrictName": "BISWANATH",
+          "district": "Biswanath",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0319"
+        },
+        {
+          "constituencyId": "ac-as-behali",
+          "acNo": 71,
+          "eciAcName": "BEHALI",
+          "eciDistrictCd": "S0319",
+          "eciDistrictName": "BISWANATH",
+          "district": "Biswanath",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0319"
+        },
+        {
+          "constituencyId": "ac-as-gohpur",
+          "acNo": 72,
+          "eciAcName": "GOHPUR",
+          "eciDistrictCd": "S0319",
+          "eciDistrictName": "BISWANATH",
+          "district": "Biswanath",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0319"
+        },
+        {
+          "constituencyId": "ac-as-bihpuria",
+          "acNo": 73,
+          "eciAcName": "BIHPURIA",
+          "eciDistrictCd": "S0320",
+          "eciDistrictName": "LAKHIMPUR",
+          "district": "Lakhimpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0320"
+        },
+        {
+          "constituencyId": "ac-as-rongonadi",
+          "acNo": 74,
+          "eciAcName": "RONGONADI",
+          "eciDistrictCd": "S0320",
+          "eciDistrictName": "LAKHIMPUR",
+          "district": "Lakhimpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0320"
+        },
+        {
+          "constituencyId": "ac-as-naoboicha",
+          "acNo": 75,
+          "eciAcName": "NOWBOICHA",
+          "eciDistrictCd": "S0320",
+          "eciDistrictName": "LAKHIMPUR",
+          "district": "Lakhimpur",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0320"
+        },
+        {
+          "constituencyId": "ac-as-lakhimpur",
+          "acNo": 76,
+          "eciAcName": "LAKHIMPUR",
+          "eciDistrictCd": "S0320",
+          "eciDistrictName": "LAKHIMPUR",
+          "district": "Lakhimpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0320"
+        },
+        {
+          "constituencyId": "ac-as-dhakuakhana",
+          "acNo": 77,
+          "eciAcName": "DHAKUAKHANA",
+          "eciDistrictCd": "S0320",
+          "eciDistrictName": "LAKHIMPUR",
+          "district": "Lakhimpur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0320"
+        },
+        {
+          "constituencyId": "ac-as-dhemaji",
+          "acNo": 78,
+          "eciAcName": "DHEMAJI",
+          "eciDistrictCd": "S0321",
+          "eciDistrictName": "DHEMAJI",
+          "district": "Dhemaji",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0321"
+        },
+        {
+          "constituencyId": "ac-as-sissiborgaon",
+          "acNo": 79,
+          "eciAcName": "SISSIBORGAON",
+          "eciDistrictCd": "S0321",
+          "eciDistrictName": "DHEMAJI",
+          "district": "Dhemaji",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0321"
+        },
+        {
+          "constituencyId": "ac-as-jonai",
+          "acNo": 80,
+          "eciAcName": "JONAI",
+          "eciDistrictCd": "S0321",
+          "eciDistrictName": "DHEMAJI",
+          "district": "Dhemaji",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0321"
+        },
+        {
+          "constituencyId": "ac-as-sadiya",
+          "acNo": 81,
+          "eciAcName": "SADIYA",
+          "eciDistrictCd": "S0322",
+          "eciDistrictName": "TINSUKIA",
+          "district": "Tinsukia",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0322"
+        },
+        {
+          "constituencyId": "ac-as-doom-dooma",
+          "acNo": 82,
+          "eciAcName": "DOOM DOOMA",
+          "eciDistrictCd": "S0322",
+          "eciDistrictName": "TINSUKIA",
+          "district": "Tinsukia",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0322"
+        },
+        {
+          "constituencyId": "ac-as-margherita",
+          "acNo": 83,
+          "eciAcName": "MARGHERITA",
+          "eciDistrictCd": "S0322",
+          "eciDistrictName": "TINSUKIA",
+          "district": "Tinsukia",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0322"
+        },
+        {
+          "constituencyId": "ac-as-digboi",
+          "acNo": 84,
+          "eciAcName": "DIGBOI",
+          "eciDistrictCd": "S0322",
+          "eciDistrictName": "TINSUKIA",
+          "district": "Tinsukia",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0322"
+        },
+        {
+          "constituencyId": "ac-as-makum",
+          "acNo": 85,
+          "eciAcName": "MAKUM",
+          "eciDistrictCd": "S0322",
+          "eciDistrictName": "TINSUKIA",
+          "district": "Tinsukia",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0322"
+        },
+        {
+          "constituencyId": "ac-as-tinsukia",
+          "acNo": 86,
+          "eciAcName": "TINSUKIA",
+          "eciDistrictCd": "S0322",
+          "eciDistrictName": "TINSUKIA",
+          "district": "Tinsukia",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0322"
+        },
+        {
+          "constituencyId": "ac-as-chabua-lahowal",
+          "acNo": 87,
+          "eciAcName": "CHABUA-LAHOWAL",
+          "eciDistrictCd": "S0323",
+          "eciDistrictName": "DIBRUGARH",
+          "district": "Dibrugarh",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0323"
+        },
+        {
+          "constituencyId": "ac-as-dibrugarh",
+          "acNo": 88,
+          "eciAcName": "DIBRUGARH",
+          "eciDistrictCd": "S0323",
+          "eciDistrictName": "DIBRUGARH",
+          "district": "Dibrugarh",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0323"
+        },
+        {
+          "constituencyId": "ac-as-khowang",
+          "acNo": 89,
+          "eciAcName": "KHOWANG",
+          "eciDistrictCd": "S0323",
+          "eciDistrictName": "DIBRUGARH",
+          "district": "Dibrugarh",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0323"
+        },
+        {
+          "constituencyId": "ac-as-duliajan",
+          "acNo": 90,
+          "eciAcName": "DULIAJAN",
+          "eciDistrictCd": "S0323",
+          "eciDistrictName": "DIBRUGARH",
+          "district": "Dibrugarh",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0323"
+        },
+        {
+          "constituencyId": "ac-as-tingkhong",
+          "acNo": 91,
+          "eciAcName": "TINGKHONG",
+          "eciDistrictCd": "S0323",
+          "eciDistrictName": "DIBRUGARH",
+          "district": "Dibrugarh",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0323"
+        },
+        {
+          "constituencyId": "ac-as-naharkatia",
+          "acNo": 92,
+          "eciAcName": "NAHARKATIA",
+          "eciDistrictCd": "S0323",
+          "eciDistrictName": "DIBRUGARH",
+          "district": "Dibrugarh",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0323"
+        },
+        {
+          "constituencyId": "ac-as-sonari",
+          "acNo": 93,
+          "eciAcName": "SONARI",
+          "eciDistrictCd": "S0324",
+          "eciDistrictName": "CHARAIDEO",
+          "district": "Charaideo",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0324"
+        },
+        {
+          "constituencyId": "ac-as-mahmora",
+          "acNo": 94,
+          "eciAcName": "MAHMORA",
+          "eciDistrictCd": "S0324",
+          "eciDistrictName": "CHARAIDEO",
+          "district": "Charaideo",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0324"
+        },
+        {
+          "constituencyId": "ac-as-demow",
+          "acNo": 95,
+          "eciAcName": "DEMOW",
+          "eciDistrictCd": "S0325",
+          "eciDistrictName": "SIBSAGAR",
+          "district": "Sibsagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0325"
+        },
+        {
+          "constituencyId": "ac-as-sibsagar",
+          "acNo": 96,
+          "eciAcName": "SIBSAGAR",
+          "eciDistrictCd": "S0325",
+          "eciDistrictName": "SIBSAGAR",
+          "district": "Sibsagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0325"
+        },
+        {
+          "constituencyId": "ac-as-nazira",
+          "acNo": 97,
+          "eciAcName": "NAZIRA",
+          "eciDistrictCd": "S0325",
+          "eciDistrictName": "SIBSAGAR",
+          "district": "Sibsagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0325"
+        },
+        {
+          "constituencyId": "ac-as-majuli",
+          "acNo": 98,
+          "eciAcName": "MAJULI",
+          "eciDistrictCd": "S0326",
+          "eciDistrictName": "MAJULI",
+          "district": "Majuli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0326"
+        },
+        {
+          "constituencyId": "ac-as-teok",
+          "acNo": 99,
+          "eciAcName": "TEOK",
+          "eciDistrictCd": "S0327",
+          "eciDistrictName": "JORHAT",
+          "district": "Jorhat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0327"
+        },
+        {
+          "constituencyId": "ac-as-jorhat",
+          "acNo": 100,
+          "eciAcName": "JORHAT",
+          "eciDistrictCd": "S0327",
+          "eciDistrictName": "JORHAT",
+          "district": "Jorhat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0327"
+        },
+        {
+          "constituencyId": "ac-as-mariani",
+          "acNo": 101,
+          "eciAcName": "MARIANI",
+          "eciDistrictCd": "S0327",
+          "eciDistrictName": "JORHAT",
+          "district": "Jorhat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0327"
+        },
+        {
+          "constituencyId": "ac-as-titabor",
+          "acNo": 102,
+          "eciAcName": "TITABOR",
+          "eciDistrictCd": "S0327",
+          "eciDistrictName": "JORHAT",
+          "district": "Jorhat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0327"
+        },
+        {
+          "constituencyId": "ac-as-golaghat",
+          "acNo": 103,
+          "eciAcName": "GOLAGHAT",
+          "eciDistrictCd": "S0328",
+          "eciDistrictName": "GOLAGHAT",
+          "district": "Golaghat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0328"
+        },
+        {
+          "constituencyId": "ac-as-dergaon",
+          "acNo": 104,
+          "eciAcName": "DERGAON",
+          "eciDistrictCd": "S0328",
+          "eciDistrictName": "GOLAGHAT",
+          "district": "Golaghat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0328"
+        },
+        {
+          "constituencyId": "ac-as-bokakhat",
+          "acNo": 105,
+          "eciAcName": "BOKAKHAT",
+          "eciDistrictCd": "S0328",
+          "eciDistrictName": "GOLAGHAT",
+          "district": "Golaghat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0328"
+        },
+        {
+          "constituencyId": "ac-as-khumtai",
+          "acNo": 106,
+          "eciAcName": "KHUMTAI",
+          "eciDistrictCd": "S0328",
+          "eciDistrictName": "GOLAGHAT",
+          "district": "Golaghat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0328"
+        },
+        {
+          "constituencyId": "ac-as-sarupathar",
+          "acNo": 107,
+          "eciAcName": "SARUPATHAR",
+          "eciDistrictCd": "S0328",
+          "eciDistrictName": "GOLAGHAT",
+          "district": "Golaghat",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0328"
+        },
+        {
+          "constituencyId": "ac-as-bokajan",
+          "acNo": 108,
+          "eciAcName": "BOKAJAN",
+          "eciDistrictCd": "S0329",
+          "eciDistrictName": "KARBI ANGLONG",
+          "district": "Karbi Anglong",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0329"
+        },
+        {
+          "constituencyId": "ac-as-howraghat",
+          "acNo": 109,
+          "eciAcName": "HOWRAGHAT",
+          "eciDistrictCd": "S0329",
+          "eciDistrictName": "KARBI ANGLONG",
+          "district": "Karbi Anglong",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0329"
+        },
+        {
+          "constituencyId": "ac-as-diphu",
+          "acNo": 110,
+          "eciAcName": "DIPHU",
+          "eciDistrictCd": "S0329",
+          "eciDistrictName": "KARBI ANGLONG",
+          "district": "Karbi Anglong",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0329"
+        },
+        {
+          "constituencyId": "ac-as-rongkhang",
+          "acNo": 111,
+          "eciAcName": "RONGKHANG",
+          "eciDistrictCd": "S0330",
+          "eciDistrictName": "WEST KARBI ANGLONG",
+          "district": "West Karbi Anglong",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0330"
+        },
+        {
+          "constituencyId": "ac-as-amri",
+          "acNo": 112,
+          "eciAcName": "AMRI",
+          "eciDistrictCd": "S0330",
+          "eciDistrictName": "WEST KARBI ANGLONG",
+          "district": "West Karbi Anglong",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0330"
+        },
+        {
+          "constituencyId": "ac-as-haflong",
+          "acNo": 113,
+          "eciAcName": "HAFLONG",
+          "eciDistrictCd": "S0331",
+          "eciDistrictName": "DIMA HASAO",
+          "district": "Dima Hasao",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0331"
+        },
+        {
+          "constituencyId": "ac-as-lakhipur",
+          "acNo": 114,
+          "eciAcName": "LAKHIPUR",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-udharbond",
+          "acNo": 115,
+          "eciAcName": "UDHARBOND",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-katigorah",
+          "acNo": 116,
+          "eciAcName": "KATIGORAH",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-borkhola",
+          "acNo": 117,
+          "eciAcName": "BORKHOLA",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-silchar",
+          "acNo": 118,
+          "eciAcName": "SILCHAR",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-sonai",
+          "acNo": 119,
+          "eciAcName": "SONAI",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-dholai",
+          "acNo": 120,
+          "eciAcName": "DHOLAI",
+          "eciDistrictCd": "S0332",
+          "eciDistrictName": "CACHAR",
+          "district": "Cachar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0332"
+        },
+        {
+          "constituencyId": "ac-as-hailakandi",
+          "acNo": 121,
+          "eciAcName": "HAILAKANDI",
+          "eciDistrictCd": "S0333",
+          "eciDistrictName": "HAILAKANDI",
+          "district": "Hailakandi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0333"
+        },
+        {
+          "constituencyId": "ac-as-algapur-katlicherra",
+          "acNo": 122,
+          "eciAcName": "ALGAPUR-KATLICHERRA",
+          "eciDistrictCd": "S0333",
+          "eciDistrictName": "HAILAKANDI",
+          "district": "Hailakandi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0333"
+        },
+        {
+          "constituencyId": "ac-as-karimganj-north",
+          "acNo": 123,
+          "eciAcName": "KARIMGANJ NORTH",
+          "eciDistrictCd": "S0334",
+          "eciDistrictName": "SRIBHUMI",
+          "district": "Sribhumi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0334"
+        },
+        {
+          "constituencyId": "ac-as-karimganj-south",
+          "acNo": 124,
+          "eciAcName": "KARIMGANJ SOUTH",
+          "eciDistrictCd": "S0334",
+          "eciDistrictName": "SRIBHUMI",
+          "district": "Sribhumi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0334"
+        },
+        {
+          "constituencyId": "ac-as-patharkandi",
+          "acNo": 125,
+          "eciAcName": "PATHARKANDI",
+          "eciDistrictCd": "S0334",
+          "eciDistrictName": "SRIBHUMI",
+          "district": "Sribhumi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0334"
+        },
+        {
+          "constituencyId": "ac-as-ram-krishna-nagar",
+          "acNo": 126,
+          "eciAcName": "RAM KRISHNA NAGAR",
+          "eciDistrictCd": "S0334",
+          "eciDistrictName": "SRIBHUMI",
+          "district": "Sribhumi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S0334"
+        }
+      ],
+      "parliamentary": {
+        "source_url": "https://ceoassam.nic.in/lok_sabha/2024/AbstractStatement/Abstract_stat_PCwise_2024.html",
+        "source_name": "Chief Electoral Officer, Assam - General Election to Lok Sabha 2024, PC-wise abstract statement",
+        "retrieved_date": "2026-08-05",
+        "seats": [
+          {
+            "constituencyId": "pc-as-kokrajhar",
+            "pcNo": 1,
+            "pcName": "Kokrajhar (ST)",
+            "districts": [
+              "Baksa",
+              "Chirang",
+              "Kokrajhar"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-dhubri",
+            "pcNo": 2,
+            "pcName": "Dhubri",
+            "districts": [
+              "Barpeta",
+              "Bongaigaon",
+              "Dhubri",
+              "Goalpara",
+              "South Salmara Mankachar"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-barpeta",
+            "pcNo": 3,
+            "pcName": "Barpeta",
+            "districts": [
+              "Bajali",
+              "Barpeta",
+              "Bongaigaon",
+              "Kamrup",
+              "Nalbari"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-darrang-udalguri",
+            "pcNo": 4,
+            "pcName": "Darrang-Udalguri",
+            "districts": [
+              "Darrang",
+              "Kamrup",
+              "Tamulpur",
+              "Udalguri"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-guwahati",
+            "pcNo": 5,
+            "pcName": "Guwahati",
+            "districts": [
+              "Goalpara",
+              "Kamrup",
+              "Kamrup (Metro)"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-diphu",
+            "pcNo": 6,
+            "pcName": "Diphu (ST)",
+            "districts": [
+              "Dima Hasao",
+              "Karbi Anglong",
+              "West Karbi Anglong"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-karimganj",
+            "pcNo": 7,
+            "pcName": "Karimganj",
+            "districts": [
+              "Hailakandi",
+              "Sribhumi"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-silchar",
+            "pcNo": 8,
+            "pcName": "Silchar (SC)",
+            "districts": [
+              "Cachar"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-nagaon",
+            "pcNo": 9,
+            "pcName": "Nagaon",
+            "districts": [
+              "Morigaon",
+              "Nagaon"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-kaziranga",
+            "pcNo": 10,
+            "pcName": "Kaziranga",
+            "districts": [
+              "Golaghat",
+              "Hojai",
+              "Nagaon"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-sonitpur",
+            "pcNo": 11,
+            "pcName": "Sonitpur",
+            "districts": [
+              "Biswanath",
+              "Lakhimpur",
+              "Sonitpur"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-lakhimpur",
+            "pcNo": 12,
+            "pcName": "Lakhimpur",
+            "districts": [
+              "Dhemaji",
+              "Lakhimpur",
+              "Tinsukia"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-dibrugarh",
+            "pcNo": 13,
+            "pcName": "Dibrugarh",
+            "districts": [
+              "Dibrugarh",
+              "Tinsukia"
+            ]
+          },
+          {
+            "constituencyId": "pc-as-jorhat",
+            "pcNo": 14,
+            "pcName": "Jorhat",
+            "districts": [
+              "Charaideo",
+              "Jorhat",
+              "Majuli",
+              "Sibsagar"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

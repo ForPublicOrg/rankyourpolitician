@@ -223,8 +223,66 @@ export interface Constituency {
   name: string;
   state: string;
   stateCode: string;
+  /**
+   * The district(s) that administer this seat. Cited per state - not per row -
+   * in data/seed/constituency_districts.json: this file is statically imported
+   * by lib/data.ts and so ships inside every serverless function, and a source
+   * object on each of ~4,600 rows would roughly double it for no reader-facing
+   * gain. See tools/data-manager/import-ac-districts.ts.
+   */
   districts: string[];
   feature_id?: string; // joins to a map polygon (added with the MapLibre layer)
+}
+
+/**
+ * Provenance for Constituency.districts, kept out of constituencies.json for
+ * the bundle-size reason above. One record per state, plus a per-seat evidence
+ * row so any single assertion can be re-checked against the Commission without
+ * re-running the importer. Data-manager and `dm validate` only - the site never
+ * imports this.
+ */
+export interface ConstituencyDistrictsFile {
+  generated_by: string;
+  states: Record<string, ConstituencyDistrictsState>;
+}
+
+export interface ConstituencyDistrictsState {
+  /** The ECI's own state code, e.g. "S03" for Assam. */
+  eciStateCd: string;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+  ac_count: number;
+  district_count: number;
+  seats: ConstituencyDistrictEvidence[];
+  /**
+   * Parliamentary seats, whose districts are the union of their assembly
+   * seats' districts. Cited separately because the ECI's constituency tree
+   * carries a PC number but not the PC's name in English, so the number ->
+   * name list comes from that state's Chief Electoral Officer.
+   */
+  parliamentary?: {
+    source_url: string;
+    source_name: string;
+    retrieved_date: string;
+    seats: { constituencyId: string; pcNo: number; pcName: string; districts: string[] }[];
+  };
+}
+
+export interface ConstituencyDistrictEvidence {
+  constituencyId: string;
+  /** The Commission's constituency number, which is how it identifies a seat. */
+  acNo: number;
+  /** Seat and district names exactly as the ECI serves them, before cleanup. */
+  eciAcName: string;
+  eciDistrictCd: string;
+  eciDistrictName: string;
+  /** The cleaned district name actually stored on the Constituency. */
+  district: string;
+  /** 'name' = names matched outright; 'alias' = a reviewed romanisation pair. */
+  matchedBy: 'name' | 'alias';
+  /** Returns this district's seats, so one row can be verified on its own. */
+  source_url: string;
 }
 
 export interface PerformanceScore {

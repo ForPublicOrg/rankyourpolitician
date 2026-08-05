@@ -69,6 +69,14 @@ async function main() {
       await import('./import-mlas');
       break;
     }
+    case 'import-ac-districts': {
+      // Set each AC's district from the ECI's own district -> constituency tree.
+      // Re-aligns stale districts as well as filling empty ones, because the
+      // district is what resolves the DM/Collector and SP in the escalation
+      // ladder. Dry run unless --apply.
+      await import('./import-ac-districts');
+      break;
+    }
     case 'audit-mlas': {
       // Read-only staleness audit: diff the seed's MLA rosters against the
       // live Wikipedia assembly pages (catches by-election staleness).
