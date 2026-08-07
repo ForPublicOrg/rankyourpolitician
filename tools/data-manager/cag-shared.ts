@@ -37,6 +37,29 @@ const GOV_ALIASES: Record<string, string> = { IN: 'UN', TS: 'TG', OR: 'OD' };
 /** The Union government's key. Not a state code, so it never collides. */
 export const UNION_GOV = 'UN';
 
+/**
+ * Undo HTML escaping the compiled index carried over from the page it scraped:
+ * one title reached us as "Report of the C&amp;AG of India". Deliberately just
+ * the five XML entities and numeric references - this is a title cleaner, not
+ * an HTML parser, and anything more would be inventing characters the source
+ * never had.
+ */
+export function decodeEntities(s: string): string {
+  const named: Record<string, string> = {
+    amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
+  };
+  return s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (whole, ref: string) => {
+    const key = ref.toLowerCase();
+    if (key.startsWith('#')) {
+      const code = key.startsWith('#x') ? parseInt(key.slice(2), 16) : parseInt(key.slice(1), 10);
+      // Control characters and anything outside the BMP-safe range stay as
+      // they came: a mangled title is visible, a smuggled one is not.
+      return code >= 32 && code <= 0x2fff ? String.fromCodePoint(code) : whole;
+    }
+    return named[key] ?? whole;
+  });
+}
+
 /** Replace en/em dashes with a plain hyphen and collapse the "--" the source
  *  index uses as a separator. Keeps titles consistent with the rest of the
  *  site's copy. */
@@ -144,7 +167,7 @@ export function candidateExtracts(row: SourceRow, report: CagReportOut): Extract
   const out: ExtractCandidate[] = [];
   const seen = new Set<string>();
   for (const f of row.keyFindings ?? []) {
-    const quote = normalizeDashes(f?.source?.quote ?? '');
+    const quote = normalizeDashes(decodeEntities(f?.source?.quote ?? ''));
     const page = Number(f?.source?.page);
     if (!Number.isInteger(page) || page < 1) continue;
     if (quote.length < MIN_QUOTE || quote.length > MAX_QUOTE) continue;
@@ -212,7 +235,7 @@ export function toCagReport(
       gov,
       report_no,
       year,
-      title: normalizeDashes(row.title ?? ''),
+      title: normalizeDashes(decodeEntities(row.title ?? '')),
       source_url: url,
       source_name: 'Comptroller and Auditor General of India',
       retrieved_date: opts.retrievedDate,

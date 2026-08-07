@@ -12,6 +12,7 @@
  * Usage:  npx tsx tools/data-manager/cag.regress.ts
  */
 import {
+  decodeEntities,
   normalizeDashes,
   normalizeReportNo,
   isSyntheticTitle,
@@ -82,6 +83,13 @@ assert(normalizeDashes('Audit -- Kerala') === 'Audit - Kerala', 'double hyphen c
 assert(normalizeDashes('2019–20 to 2023–24') === '2019-20 to 2023-24', 'en dashes normalised');
 assert(normalizeAuditPeriod('  ') === undefined, 'blank audit period omitted');
 assert(normalizeAuditPeriod('2017-22') === '2017-22', 'audit period kept');
+
+// ---- HTML escaping carried over from the scraped page ---------------------
+assert(decodeEntities('C&amp;AG of India') === 'C&AG of India', '&amp; decoded');
+assert(normalizeDashes(decodeEntities('&quot;Welfare&quot; &#8211; Phase II')) === '"Welfare" - Phase II',
+  'quot and numeric ref decoded, then the dash normalised');
+assert(decodeEntities('Rock &amp; Roll &notanentity; x') === 'Rock & Roll &notanentity; x', 'unknown entity left alone');
+assert(decodeEntities('&#0;&#x1F600;') === '&#0;&#x1F600;', 'control chars and astral refs left alone');
 
 // ---- end to end -----------------------------------------------------------
 const good = toCagReport({
