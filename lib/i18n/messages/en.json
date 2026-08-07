@@ -19,7 +19,8 @@
     "about": "About",
     "guides": "Guides",
     "language": "Language",
-    "menu": "Menu"
+    "menu": "Menu",
+    "audits": "Audit reports"
   },
   "tabs": {
     "home": "Home",
@@ -1731,5 +1732,43 @@
         ]
       }
     }
+  },
+  "audits": {
+    "title": "CAG audit reports",
+    "hubIntro": "The Comptroller and Auditor General is the constitutional auditor of India. It examines how governments spend public money and places its reports before Parliament or the State legislature, where the Public Accounts Committee takes them up. Every report below is the CAG’s own, listed with its report number and audit period and linked to the original PDF on the CAG’s website.",
+    "metaDescription": "Published Comptroller and Auditor General reports for the Union government and every state and Union Territory, linked to the original PDFs on cag.gov.in.",
+    "caveat": "A CAG report audits a department, not a person. It covers the period stated, which may be before or after the current office-holder took charge. Audit observations are placed before the legislature and examined by the Public Accounts Committee - they are not court findings, and they are not convictions.",
+    "scope": "Every government is listed - the Union and all {states} states and Union Territories - whichever party governs it.",
+    "scopeCount": "{n} reports indexed, tabled between {from} and {to}.",
+    "governmentsTitle": "Choose a government",
+    "union": "Union Government of India",
+    "unionShort": "Union Government",
+    "reportCount": "{n} reports",
+    "reportCountOne": "1 report",
+    "govTitleUnion": "CAG reports on the Union Government",
+    "govTitleState": "CAG reports on the Government of {state}",
+    "govIntroUnion": "Reports of the Comptroller and Auditor General on the Union government, as tabled in Parliament.",
+    "govIntroState": "Reports of the Comptroller and Auditor General on the Government of {state}, as tabled in the State legislature.",
+    "reportNo": "Report {no}",
+    "auditPeriod": "Audit period {period}",
+    "tabled": "Tabled {year}",
+    "openPdf": "Read the report",
+    "pdfNote": "PDF on cag.gov.in",
+    "emptyGov": "No CAG report for this government is indexed here yet. The Comptroller publishes all of its reports on its own site.",
+    "cagSite": "Go to cag.gov.in",
+    "personTitle": "Audit and oversight",
+    "personUnion": "The Comptroller and Auditor General audits the accounts of the Union government and reports to Parliament, which refers the findings to the Public Accounts Committee.",
+    "personState": "The Comptroller and Auditor General audits the accounts of the {state} government and reports to the State legislature, which refers the findings to the Public Accounts Committee.",
+    "personLinkUnion": "CAG reports on the Union Government",
+    "personLinkState": "CAG reports on the Government of {state}",
+    "stateSectionTitle": "Audit of this government",
+    "findingsTitle": "What the audit found",
+    "findingsCount": "{n} passages from the report",
+    "pageRef": "Page {page} of the report",
+    "extractNote": "These sentences are quoted from the report itself. Each one was located in the PDF before being published here - open the report at the page shown to read it in context.",
+    "reportNoLabel": "Report number",
+    "auditPeriodLabel": "Audit period",
+    "tabledLabel": "Tabled in",
+    "sourceNote": "Report details and links are taken from the Comptroller and Auditor General. Each entry was seeded from a publicly compiled index of CAG reports at {compiler}, then checked against cag.gov.in - entries whose PDF could not be confirmed on the Comptroller’s own site were dropped. Nothing beyond the report number, title, audit period and PDF link is carried over: no severity labels, no scores and no summaries."
   }
 }

@@ -20,7 +20,8 @@
     "dm": "tsx tools/data-manager/cli.ts",
     "dm:dashboard": "tsx tools/data-manager/dashboard.ts",
     "seed:import": "tsx tools/data-manager/cli.ts import-seed",
-    "recompute": "tsx tools/data-manager/cli.ts recompute"
+    "recompute": "tsx tools/data-manager/cli.ts recompute",
+    "test:cag": "tsx tools/data-manager/cag.regress.ts"
   },
   "dependencies": {
     "@upstash/ratelimit": "^2.0.5",

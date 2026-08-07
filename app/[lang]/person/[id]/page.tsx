@@ -7,6 +7,7 @@ import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
 import { roleKeyForHouse, RECORD_GROUPS } from '@/lib/roles';
 import { portfolioMandate } from '@/lib/portfolios';
+import { auditGovForPerson, auditsForGovernment } from '@/lib/audits';
 import { ROLE_ACCOUNTABILITY, ROLE_FOR_HOUSE, type RoleAccountability } from '@/lib/role-accountability';
 import { roleGlance } from '@/lib/role-glance';
 import { OFFICE_META, CPGRAMS_URL } from '@/lib/offices';
@@ -124,6 +125,16 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
   // as the page's meta description / share-card text). See lib/profile-narrative.
   const narrative = profileNarrative(person);
   const roleKey = roleKeyForHouse((person.house as House) || 'Lok Sabha');
+  // Which government's CAG index applies, or null for anyone who runs no
+  // department. Never a per-person figure - see lib/audits.ts.
+  const auditGov = auditGovForPerson(person);
+  // The government's OWN audit record, shown on the profile of anyone who helps
+  // run that government. Identical for every minister of the same government by
+  // construction, so it singles nobody out - and the caveat below says plainly
+  // that a report audits a department over a stated period, not a person.
+  const auditAll = auditGov ? auditsForGovernment(auditGov) : [];
+  const auditCount = auditAll.length;
+  const auditRecent = auditAll.slice(0, 5);
   const updated = profileLastUpdated({ facts: person.facts } as any);
   const factByType = new Map<string, Fact>();
   for (const f of person.facts) if (!factByType.has(f.field_type)) factByType.set(f.field_type, f);
@@ -385,6 +396,64 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
               );
             })}
           </ul>
+
+          {/* Audit and oversight - a POINTER, deliberately never a count.
+              A CAG report audits a department over a stated period, and we hold
+              no portfolio tenure dates, so we cannot say a given report is about
+              the person on this page - an audit period often predates their
+              appointment. A number beside a name would also read as a score, and
+              report volume tracks the size of a government and the Commission's
+              audit cadence, not conduct. So this says what the CAG does and
+              links to the government's index, where the whole universe is
+              visible. See lib/audits.ts. */}
+          {auditGov && (
+            <div className="mt-4 rounded-xl bg-white/90 px-4 py-3 shadow-sm">
+              <p className="flex items-center gap-1.5 font-semibold text-brand-ink">
+                <Icon name="scales" size={14} className="shrink-0 text-brand" /> {tr('audits.personTitle')}
+              </p>
+              <p className="mt-1 pl-5 text-sm text-ink-soft">
+                {person.govScope === 'state'
+                  ? tr('audits.personState', { state: person.state || '' })
+                  : tr('audits.personUnion')}
+              </p>
+              {auditRecent.length > 0 && (
+                <ul className="mt-3 space-y-2 pl-5">
+                  {auditRecent.map((r) => (
+                    <li key={r.source_url} className="border-l-2 border-line pl-3">
+                      <p className="text-sm font-medium text-ink">{r.title}</p>
+                      <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-xs text-ink-faint">
+                        <span>{tr('audits.reportNo', { no: r.report_no })}</span>
+                        {r.as_of && <span>· {tr('audits.auditPeriod', { period: r.as_of })}</span>}
+                        <a
+                          href={r.source_url}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="inline-flex items-center gap-1 text-brand hover:underline"
+                        >
+                          <Icon name="external" size={11} className="shrink-0" /> {tr('audits.openPdf')}
+                        </a>
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <p className="mt-3 flex flex-wrap items-center gap-x-2 pl-5 text-sm">
+                <Link
+                  href={`/audits/${auditGov.toLowerCase()}`}
+                  className="inline-flex items-center gap-1.5 font-medium text-brand hover:underline"
+                >
+                  <Icon name="link" size={13} className="shrink-0" />
+                  {person.govScope === 'state'
+                    ? tr('audits.personLinkState', { state: person.state || '' })
+                    : tr('audits.personLinkUnion')}
+                </Link>
+                <span className="text-xs text-ink-faint">
+                  ({auditCount === 1 ? tr('audits.reportCountOne') : tr('audits.reportCount', { n: auditCount })})
+                </span>
+              </p>
+              <p className="mt-2 pl-5 text-xs text-ink-faint">{tr('audits.caveat')}</p>
+            </div>
+          )}
         </section>
       )}
 

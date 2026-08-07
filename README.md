@@ -315,4 +315,8 @@ MIT (code) - see [LICENSE](LICENSE).
 
 Data sources retain their own licences: map boundaries from DataMeet (CC BY), identity references
 from Wikidata (CC0), facts from ECI affidavits, Digital Sansad and PRS Legislative Research, each
-cited per datapoint.
+cited per datapoint. Audit reports (`/audits`) are the Comptroller and Auditor General's own,
+cited and linked to the original PDFs on cag.gov.in; the index of which reports exist was seeded
+from a publicly compiled list at andhbhakt.org and then verified report-by-report against the
+Commission's own site, with unconfirmed entries dropped. Nothing that compiler adds on top of the
+Commission's record - severity labels, scores, summaries, ministry attribution - is published.

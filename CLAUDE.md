@@ -95,6 +95,20 @@ npx tsx tools/data-manager/resolve-affidavit-collisions.ts --apply
 npx tsx tools/data-manager/import-ac-districts.ts --state=AS --apply
 npm run test:ac-districts         # matcher regressions (offline, ECI fixtures)
 
+# CAG audit reports -> data/seed/cag_reports.json, attached to a GOVERNMENT
+# (the Union or a state), never to a person. Seeded from a compiled index but
+# every citation is re-pointed at cag.gov.in and every PDF link is fetched to
+# confirm it exists (~100 of them did not). Refuses to write unless all 32
+# governments are covered. Dry run unless --apply.
+npx tsx tools/data-manager/import-cag-reports.ts --apply
+npm run test:cag                  # import-filter regressions (offline)
+
+# Then check every quoted finding against the real PDF and publish only the ones
+# actually found in it (the compiled index measures ~90% accurate on quotes, and
+# "roughly" is not a standard for printing words in the Comptroller's name).
+# Resumable: verdicts are cached, so a re-run only fetches what it has not seen.
+python tools/data-manager/verify-cag-extracts.py --apply
+
 # Elections. Add the event to tools/data-manager/elections-shared.ts, then:
 npx tsx tools/data-manager/import-elections.ts --apply        # every nomination, from ECI
 npx tsx tools/data-manager/enrich-candidates.ts --apply       # affidavit detail, from MyNeta
@@ -104,6 +118,12 @@ npx tsx tools/data-manager/link-candidates.ts --apply         # link a winner to
 
 ## Gotchas that have bitten before
 
+- The CAG index is seeded from a third-party compiled list that mixes real reports with
+  derived entries ("GovLens Entry 990", "State Finances - Bihar Part LXVII") and with PDF
+  URLs that 404. Both classes are filtered in `cag-shared.ts` and by the import-time link
+  check; never widen those filters to raise the row count. A spot check of the compiler's
+  quoted findings against the real PDFs came back 29/33, which is why no quote, summary,
+  severity or score from it is published - only report number, title, audit period and link.
 - `.env.local` with Firebase creds means `npm run dev` **writes votes to production data**.
   Never cast test votes locally against prod creds; use the credential-less seed mode.
 - `NEXT_PUBLIC_*` env vars are inlined at **build time** - adding one in Vercel does nothing

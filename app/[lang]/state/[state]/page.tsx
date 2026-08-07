@@ -113,6 +113,16 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
     stateGov && (stateGov.ministers.length > 0 || stateGov.governmentStatus === 'presidents_rule') ? (
       <Reveal key="government">
         <StateGovernmentSection gov={stateGov} labels={govLabels} />
+        {/* Audit of this government - a link, never a count. The reports are
+            about departments over stated periods, so they belong to the
+            government, not to whoever currently sits in the chair. */}
+        <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 px-1 text-sm text-ink-soft">
+          <Icon name="scales" size={14} className="shrink-0 text-ink-faint" />
+          <span>{tr('audits.stateSectionTitle')}:</span>
+          <Link href={`/audits/${state.toLowerCase()}`} className="font-medium text-brand hover:underline">
+            {tr('audits.personLinkState', { state: view.state })}
+          </Link>
+        </p>
       </Reveal>
     ) : null;
 

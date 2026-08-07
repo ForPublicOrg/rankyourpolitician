@@ -33,6 +33,7 @@ export default function Footer() {
             <Link href="/guides" className="text-ink-soft hover:text-brand">{t('nav.guides')}</Link>
             <Link href="/rights" className="text-ink-soft hover:text-brand">{t('footer.rights')}</Link>
             <Link href="/accountability" className="text-ink-soft hover:text-brand">{t('nav.accountability')}</Link>
+            <Link href="/audits" className="text-ink-soft hover:text-brand">{t('nav.audits')}</Link>
             <Link href="/methodology" className="text-ink-soft hover:text-brand">{t('nav.methodology')}</Link>
             <Link href="/about" className="text-ink-soft hover:text-brand">{t('nav.about')}</Link>
             <a

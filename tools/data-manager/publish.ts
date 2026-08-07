@@ -3,7 +3,7 @@
 // service-account key that never leaves it. Never imported by the deployed site.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy, CagReport } from '../../lib/types';
 import { splitDistricts, suspectedDistrictSplits } from './ac-districts-shared';
 
 export const ROOT = resolve(
@@ -86,6 +86,97 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       if (c.type !== 'AC' && c.type !== 'PC') continue;
       if (held.has(c.id) || seenVacancy.has(c.id)) continue;
       push(vacancyRecord, 'warn', `${c.id} (${c.name}, ${c.state}) has no sitting member and no cited reason - /area shows a dead end`);
+    }
+  }
+
+  // ---- CAG audit reports ---------------------------------------------------
+  // Two rules here are doing real work beyond the usual citation check.
+  //
+  // The host check is what keeps this dataset non-partisan MECHANICALLY rather
+  // than by good intentions. The index was seeded from a third-party compiler,
+  // and the standing temptation is to paste that compiler's URL back in because
+  // it is a nicer page than a PDF. Every citation must point at the
+  // Comptroller's own site, so a compiler's framing can never reach a reader.
+  //
+  // The coverage check guards the other failure mode: an audit section that
+  // exists for some governments and not others reads as selective attention,
+  // whichever way the gap happens to fall.
+  const cagPath = resolve(SEED_DIR, 'cag_reports.json');
+  if (existsSync(cagPath)) {
+    const reports = JSON.parse(readFileSync(cagPath, 'utf8')) as CagReport[];
+    const cagRecord = { id: 'cag_reports', name: 'CAG audit reports' } as Politician;
+    const stateGovs = JSON.parse(readFileSync(resolve(SEED_DIR, 'state_government.json'), 'utf8')) as StateGovernment[];
+    const validGov = new Set(['UN', ...stateGovs.map((g) => g.stateCode)]);
+    const seenReport = new Set<string>();
+    const covered = new Set<string>();
+
+    const bytes = readFileSync(cagPath).byteLength;
+    if (bytes > 2 * 1024 * 1024) {
+      push(cagRecord, 'error',
+        `cag_reports.json is ${(bytes / 1024).toFixed(0)} KB, over the 2 MB budget - move the list to a lazily-fetched public/*.json`);
+    }
+
+    for (const r of reports) {
+      const where = `${r.gov || '(no gov)'} ${r.report_no || '(no number)'}`;
+      if (!validGov.has(r.gov)) {
+        push(cagRecord, 'error', `report ${where} is attached to "${r.gov}", which is not the Union or a state government`);
+      } else {
+        covered.add(r.gov);
+      }
+      if (!r.title?.trim()) push(cagRecord, 'error', `report ${where} has no title`);
+      if (!r.report_no?.trim()) push(cagRecord, 'error', `report for ${r.gov} has no report number`);
+      if (!Number.isInteger(r.year)) push(cagRecord, 'error', `report ${where} has no tabling year`);
+      if (!r.source_url || !r.source_name) {
+        push(cagRecord, 'error', `report ${where} has no complete citation (no citation, no claim)`);
+      }
+      if (r.source_url && !/^https:\/\/([a-z0-9-]+\.)*cag\.gov\.in\//i.test(r.source_url)) {
+        push(cagRecord, 'error',
+          `report ${where} cites ${r.source_url} - only the Comptroller's own site (cag.gov.in) may be cited here`);
+      }
+      if (r.retrieved_date && !isoDate.test(r.retrieved_date)) {
+        push(cagRecord, 'error', `report ${where} retrieved_date must be ISO yyyy-mm-dd`);
+      }
+      const key = `${r.gov}|${r.source_url}`;
+      if (seenReport.has(key)) push(cagRecord, 'error', `report ${where} is listed twice for the same government`);
+      seenReport.add(key);
+    }
+
+    for (const gov of validGov) {
+      if (!covered.has(gov)) {
+        push(cagRecord, 'warn',
+          `no CAG report indexed for ${gov} - partial coverage reads as selective attention, so /audits should ship complete`);
+      }
+    }
+
+    // ---- Verified extracts -------------------------------------------------
+    // Sentences published in the Comptroller's own name. Every one was located
+    // in the actual PDF by tools/data-manager/verify-cag-extracts.py; the rules
+    // here stop an extract existing for a report we do not carry, or drifting
+    // away from a page reference a reader can check.
+    const extractsPath = resolve(SEED_DIR, 'cag_report_extracts.json');
+    if (existsSync(extractsPath)) {
+      const extracts = JSON.parse(readFileSync(extractsPath, 'utf8')) as Record<
+        string,
+        { page?: number; section?: string; quote?: string }[]
+      >;
+      const knownUrl = new Set(reports.map((r) => r.source_url));
+      const eBytes = readFileSync(extractsPath).byteLength;
+      if (eBytes > 3 * 1024 * 1024) {
+        push(cagRecord, 'error',
+          `cag_report_extracts.json is ${(eBytes / 1024).toFixed(0)} KB, over the 3 MB budget - it is imported only by /audits/[gov], but keep it bounded`);
+      }
+      for (const [url, list] of Object.entries(extracts)) {
+        if (!knownUrl.has(url)) {
+          push(cagRecord, 'error', `extracts reference ${url}, which is not a report in cag_reports.json`);
+          continue;
+        }
+        for (const e of list) {
+          if (!e.quote?.trim()) push(cagRecord, 'error', `an extract for ${url} has no quoted text`);
+          if (!Number.isInteger(e.page) || (e.page ?? 0) < 1) {
+            push(cagRecord, 'error', `an extract for ${url} has no readable page reference - a quote a reader cannot find is not a citation`);
+          }
+        }
+      }
     }
   }
 

@@ -170,6 +170,12 @@ async function main() {
       await import('./import-mla-contacts');
       break;
     }
+    case 'import-cag-reports': {
+      // Rebuild the CAG audit-report index (data/seed/cag_reports.json).
+      // Government-scoped, never person-scoped. Dry-run unless --apply.
+      await import('./import-cag-reports');
+      break;
+    }
     case 'import-contact-channels': {
       // Verified helplines/grievance portals from the research workflow, gated on
       // an official source, into data/seed/contact_channels.json.

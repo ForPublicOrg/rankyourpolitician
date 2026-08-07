@@ -261,6 +261,46 @@ export interface SeatVacancy {
 }
 
 /**
+ * One published report of the Comptroller and Auditor General (Constitution
+ * Art. 148-151), tabled in Parliament or a State legislature.
+ *
+ * ATTACHED TO A GOVERNMENT, NEVER TO A PERSON. A CAG report audits a department
+ * over a stated audit period; it is not a finding about whoever happens to hold
+ * the chair today. We hold no portfolio tenure dates, so any person-level
+ * attribution would be an inference we cannot support - and an audit period
+ * that predates a minister's appointment would make it a false one. Government
+ * level is what the report's own cover states, so government level is what we
+ * publish. (CLAUDE.md rule 3: missing beats wrong.)
+ *
+ * NEUTRALITY: this record deliberately carries NO severity, NO score, NO
+ * category and NO summary. Those are judgements, and the CAG's own report is
+ * the only thing entitled to make them - so we publish its number, its title,
+ * its audit period and a link to its PDF, and nothing else. Rows are never
+ * ordered by anything but date, and no count is ever shown beside a person.
+ *
+ * Seed-only, like vacancies and elections: it changes when the data manager
+ * runs and we redeploy, so there is no runtime read and the pages stay ISR.
+ */
+export interface CagReport {
+  /** 'UN' for the Union government, otherwise a stateCode (e.g. 'KA', 'TG'). */
+  gov: string;
+  /** The CAG's own report number, normalised to "No. 5 of 2026". */
+  report_no: string;
+  /** Year the report was tabled. */
+  year: number;
+  /** The report's own title. */
+  title: string;
+  /** Direct link to the report PDF. Always on cag.gov.in - `dm validate`
+   *  rejects any other host, which is what keeps a third-party compiler's URL
+   *  out of the citation slot. */
+  source_url: string;
+  source_name: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+  /** The audit period as the report states it, e.g. "2019-20 to 2023-24". */
+  as_of?: string;
+}
+
+/**
  * Provenance for Constituency.districts, kept out of constituencies.json for
  * the bundle-size reason above. One record per state, plus a per-seat evidence
  * row so any single assertion can be re-checked against the Commission without
