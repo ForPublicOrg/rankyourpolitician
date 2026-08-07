@@ -1764,6 +1764,7 @@
     "stateSectionTitle": "Audit of this government",
     "findingsTitle": "What the audit found",
     "findingsCount": "{n} passages from the report",
+    "findingsCountOne": "1 passage from the report",
     "pageRef": "Page {page} of the report",
     "extractNote": "These sentences are quoted from the report itself. Each one was located in the PDF before being published here - open the report at the page shown to read it in context.",
     "reportNoLabel": "Report number",

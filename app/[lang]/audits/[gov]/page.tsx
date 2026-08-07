@@ -88,7 +88,9 @@ function ReportCard({ r, tr }: { r: CagReport; tr: Tr }) {
             <Icon name="search" size={14} className="shrink-0 text-brand" />
             {tr('audits.findingsTitle')}
             <span className="font-normal text-ink-faint">
-              ({tr('audits.findingsCount', { n: extracts.length })})
+              ({extracts.length === 1
+                ? tr('audits.findingsCountOne')
+                : tr('audits.findingsCount', { n: extracts.length })})
             </span>
             <span className="ml-auto text-xs font-normal text-ink-faint group-open:hidden">{tr('common.readMore')}</span>
           </summary>
