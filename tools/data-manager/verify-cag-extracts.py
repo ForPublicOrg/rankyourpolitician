@@ -37,6 +37,7 @@ import os
 import re
 import sys
 import tempfile
+import urllib.parse
 import urllib.request
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -90,9 +91,21 @@ def fragments(quote: str):
     return parts or [norm(quote)]
 
 
+def encode_url(url: str) -> str:
+    """Percent-encode what the Comptroller left raw.
+
+    Sixty-odd report URLs on cag.gov.in carry literal spaces ("DDUGJY ENGLISHI
+    ALL PAGES-...pdf"). Node's fetch encodes those on the way out, so the
+    import-time link check passed them and they sit in the seed as-is; urllib
+    refuses them outright with InvalidURL. '%' is in the safe set so anything
+    already escaped is left alone rather than escaped twice.
+    """
+    return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=~-._%")
+
+
 def download(url: str, max_bytes: int):
     """Stream to a temp file. Returns path, or None if too big / unavailable."""
-    req = urllib.request.Request(url, headers=HEADERS)
+    req = urllib.request.Request(encode_url(url), headers=HEADERS)
     try:
         with urllib.request.urlopen(req, timeout=240) as r:
             size = int(r.headers.get("Content-Length") or 0)
