@@ -6,7 +6,35 @@ import { I18nProvider } from '@/lib/i18n/provider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileTabBar from '@/components/MobileTabBar';
+import JsonLd from '@/components/JsonLd';
 import { SITE_URL } from '@/lib/site-url';
+
+// Site-level identity, on every page. This is the entity crawlers attach the
+// individual Person/BreadcrumbList blocks to - without it each profile is a
+// loose page rather than part of a named publication. No SearchAction: Google
+// retired the sitelinks searchbox in 2024, so it would be dead weight in the
+// HTML of ~10k pages.
+const SITE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'RankYourPolitician',
+      description:
+        'A non-partisan, source-cited guide to Indian representatives: who represents your area, what they are responsible for, and how they are performing.',
+      publisher: { '@id': `${SITE_URL}/#org` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#org`,
+      name: 'RankYourPolitician',
+      url: SITE_URL,
+      logo: `${SITE_URL}/apple-icon.png`,
+    },
+  ],
+};
 
 // Google AdSense publisher id (public - it ships in the browser). Override via
 // NEXT_PUBLIC_ADSENSE_CLIENT if the account changes.
@@ -104,6 +132,7 @@ export default async function RootLayout({
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
           />
         )}
+        <JsonLd data={SITE_SCHEMA} />
         <div className="aurora" aria-hidden="true" />
         <I18nProvider locale={locale} dict={dict} dir={dir}>
           <a

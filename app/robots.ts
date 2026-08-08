@@ -18,6 +18,9 @@ export default function robots(): MetadataRoute.Robots {
   const localePrefixes = LOCALE_CODES.filter((c) => c !== DEFAULT_LOCALE).flatMap((c) => [`/${c}/`, `/${c}$`]);
   return {
     rules: [{ userAgent: '*', allow: '/', disallow: ['/api/', ...localePrefixes] }],
+    // A sitemap INDEX (app/sitemap.xml), pointing at one segment per section -
+    // see lib/sitemap.ts. Submitting this one URL in Search Console registers
+    // every segment, and coverage is then reported per segment.
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

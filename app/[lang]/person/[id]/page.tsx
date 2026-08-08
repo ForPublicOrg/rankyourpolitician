@@ -29,6 +29,8 @@ import ShareRow from '@/components/share/ShareRow';
 import DeclaredCases from '@/components/DeclaredCases';
 import { constituencyHref } from '@/lib/locality';
 import { profileNarrative } from '@/lib/profile-narrative';
+import JsonLd, { compact } from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site-url';
 
 // Weekly self-heal only. Profile facts change via deploy or /api/revalidate, and
 // the one fast-moving input - live vote numbers - is re-fetched client-side by
@@ -56,6 +58,46 @@ const FIELD_ICON: Record<string, IconName> = {
 };
 const shortValue = (v: string) => v.split('(')[0].trim();
 const leadNumber = (v: string) => v.replace(/,/g, '').match(/-?\d+(\.\d+)?/)?.[0] ?? v.split(' ')[0];
+
+/**
+ * schema.org Person for a profile - who this is, what office they hold, where.
+ * Every field is public-record data already displayed on the page with its own
+ * citation; nothing new is asserted here.
+ *
+ * Deliberately NO aggregateRating. Google does not support review snippets on
+ * Person anyway, but the real reason is the neutrality rule: putting a score in
+ * machine-readable markup invites third parties to reprint "RankYourPolitician
+ * rates X at N/5" as a verdict, which is exactly what this site refuses to
+ * publish. The rating stays a plain mean of votes cast, shown in context.
+ */
+function personJsonLd(p: PersonView): Record<string, unknown> {
+  const url = `${SITE_URL}/person/${p.id}`;
+  const place = p.constituency || p.district;
+  return compact({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${url}#person`,
+    name: p.name,
+    url,
+    mainEntityOfPage: url,
+    image: p.photo_url,
+    description: p.neutral_summary,
+    jobTitle: p.current_position,
+    affiliation: p.party ? { '@type': 'PoliticalParty', name: p.party } : undefined,
+    memberOf: p.house ? { '@type': 'GovernmentOrganization', name: p.house } : undefined,
+    workLocation: place
+      ? compact({
+          '@type': 'Place',
+          name: place,
+          address: compact({
+            '@type': 'PostalAddress',
+            addressRegion: p.state,
+            addressCountry: 'IN',
+          }),
+        })
+      : undefined,
+  });
+}
 
 // English variants only (~5.4k pages): every locale × person would be a
 // 124k-page build. Other locales are rendered on first request + ISR-cached.
@@ -113,8 +155,22 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
   const { dict, locale } = await getI18n(lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
-  if (person.kind === 'official') return <OfficialProfile p={person} tr={tr} locale={locale} />;
-  if (person.kind === 'office') return <ConstitutionalProfile p={person} tr={tr} locale={locale} />;
+  // Person markup on the two info-only profile kinds; the elected profile adds
+  // its own below (it needs `thin`, which only makes sense for elected people).
+  if (person.kind === 'official')
+    return (
+      <>
+        <JsonLd data={personJsonLd(person)} />
+        <OfficialProfile p={person} tr={tr} locale={locale} />
+      </>
+    );
+  if (person.kind === 'office')
+    return (
+      <>
+        <JsonLd data={personJsonLd(person)} />
+        <ConstitutionalProfile p={person} tr={tr} locale={locale} />
+      </>
+    );
 
   // ---- Elected person (MP and/or minister) --------------------------------
   const sentiment = await getPersonSentiment(id);
@@ -191,6 +247,9 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-5">
+      {/* Skipped on an un-enriched stub: that page is noindex, so schema on it
+          is markup nobody reads (matches the AdSlot gating on `thin`). */}
+      {!thin && <JsonLd data={personJsonLd(person)} />}
       <Breadcrumbs items={crumbs} />
 
       {/* HERO */}
