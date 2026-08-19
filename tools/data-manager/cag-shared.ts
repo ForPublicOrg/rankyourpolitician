@@ -261,7 +261,7 @@ export function sortReports(a: CagReportOut, b: CagReportOut): number {
  * the same report number (different URLs). The document is the thing we are
  * citing, so the document is the identity.
  */
-export const reportKey = (r: CagReportOut): string => `${r.gov}|${r.source_url}`;
+export const reportKey = (r: CagReportOut): string => `${r.gov}|${canonicalCagUrl(r.source_url)}`;
 
 /**
  * Lift a bracket-matched array literal out of a JS bundle, starting at the `[`
@@ -353,3 +353,144 @@ export function findReportsLiteral(bundle: string): string | null {
   }
   return best;
 }
+
+// ---------------------------------------------------------------------------
+// Reading the Commission's own listing (tools/data-manager/import-cag-live.ts)
+//
+// The compiled index this file was originally written for now sits behind a
+// bot wall, and it was never the better source anyway: cag.gov.in publishes the
+// same reports itself, with the government, the tabling date and the PDF the
+// citation has to point at. Everything below parses that listing. It states
+// nothing the Commission does not - a report whose number the listing does not
+// carry is left out rather than numbered by us.
+// ---------------------------------------------------------------------------
+
+/**
+ * CAG serves every PDF under both /uploads/... and /webroot/uploads/..., and
+ * links the second form from its own listing. One document must be one row, so
+ * the shorter form is the identity - the seed already used it for 744 of 746
+ * rows, and the two that slipped through as /webroot/ became duplicate entries
+ * on the government's audit page.
+ */
+export function canonicalCagUrl(url: string): string {
+  const u = (url || '').trim();
+  return u.replace(/^(https:\/\/(?:[a-z0-9-]+\.)*cag\.gov\.in)\/webroot\//i, '$1/');
+}
+
+/** Report numbers as the listing writes them, in the order we trust them. */
+const LISTED_REPORT_NO: RegExp[] = [
+  /reports?\s*no\.?\s*[-–]?\s*(\d{1,3})\s*of\s*(?:the\s*)?year\s*((?:19|20)\d{2})/i,
+  /reports?\s*no\.?\s*[-–]?\s*(\d{1,3})\s*of\s*((?:19|20)\d{2})/i,
+  /\breports?\s+(\d{1,3})\s*(?:of|[-–])\s*((?:19|20)\d{2})/i,
+  /\bno\.?\s*(\d{1,3})\s*of\s*((?:19|20)\d{2})/i,
+];
+
+/** The same, as it survives into a PDF filename. */
+const FILENAME_REPORT_NO: RegExp[] = [
+  /report[-_. ]*no\.?[-_. ]*(\d{1,3})[-_. ]*of[-_. ]*((?:19|20)\d{2})/i,
+  /report[-_. ]*(\d{1,3})[-_. ]*(?:english|eng)?[-_. ]*of[-_. ]*((?:19|20)\d{2})/i,
+  /\b(\d{1,3})[-_. ]*of[-_. ]*((?:19|20)\d{2})\b/i,
+  /\b(\d{1,3})of((?:19|20)\d{2})\b/i,
+];
+
+/** A number with no year beside it - only usable with the year the listing
+ *  filter already told us, which is why it is tried last. */
+const BARE_REPORT_NO = /reports?\s*no\.?\s*[-–]?\s*(\d{1,3})(?!\s*of\s*(?:19|20)\d{2})\b/i;
+
+/**
+ * The Commission's own report number for a listing row, from the title, else
+ * the PDF filename, else a bare "Report No. N" paired with the year the listing
+ * was filtered on. Returns null when none of those states one: roughly one row
+ * in twenty (state finance and technical inspection reports, mostly), and those
+ * are dropped. A report number we invented would be worse than a missing row.
+ */
+export function reportNoFromListing(title: string, pdfUrl: string, listedYear: number): string | null {
+  const t = normalizeDashes(decodeEntities(title || ''));
+  for (const re of LISTED_REPORT_NO) {
+    const m = re.exec(t);
+    if (m) return normalizeReportNo(`${m[1]} of ${m[2]}`);
+  }
+  const file = decodeURIComponent((pdfUrl || '').split('/').pop() ?? '');
+  for (const re of FILENAME_REPORT_NO) {
+    const m = re.exec(file);
+    if (m) return normalizeReportNo(`${m[1]} of ${m[2]}`);
+  }
+  const bare = BARE_REPORT_NO.exec(t);
+  if (bare && Number.isInteger(listedYear)) return normalizeReportNo(`${bare[1]} of ${listedYear}`);
+  return null;
+}
+
+/** Audit periods exactly as CAG titles state them. Nothing is inferred: a
+ *  title that does not say what period it covers simply has no as_of. */
+const AUDIT_PERIOD: RegExp[] = [
+  /for the (?:year|period) ended (?:on )?(\d{1,2} \w+ \d{4})/i,
+  /for the (?:year|period) ended (?:on )?(\w+ \d{4})/i,
+  /for the (?:year|period) (\d{4}-\d{2,4})/i,
+  /for the period (\d{4}-\d{4})/i,
+  /\((\d{4}-\d{2,4})\)/,
+];
+
+export function auditPeriodFromTitle(title: string): string | undefined {
+  const t = normalizeDashes(decodeEntities(title || ''));
+  for (const re of AUDIT_PERIOD) {
+    const m = re.exec(t);
+    if (m) return normalizeAuditPeriod(m[1]);
+  }
+  return undefined;
+}
+
+/**
+ * The government a listing row belongs to, from the label CAG prints beside it
+ * ("Union", "Madhya Pradesh", "Jammu and Kashmir UT (31-Oct-2019 Onwards)").
+ * `names` maps a lower-cased state name to our stateCode and is built from our
+ * own seed, so a government we do not carry can never create an orphan page.
+ */
+export function govForListingLabel(
+  label: string,
+  names: ReadonlyMap<string, string>,
+  validStateCodes: ReadonlySet<string>,
+): string | null {
+  const raw = normalizeDashes(decodeEntities(label || '')).toLowerCase();
+  if (!raw) return null;
+  if (raw === 'union' || raw.startsWith('union government')) return UNION_GOV;
+  // CAG decorates some labels with the reorganisation date they took effect on.
+  const bare = raw.replace(/\s*\(.*\)\s*$/, '').replace(/\s+ut$/, '').trim();
+  for (const key of [raw, bare]) {
+    const code = names.get(key);
+    if (code && validStateCodes.has(code)) return code;
+  }
+  return null;
+}
+
+/**
+ * Is this listing title unusable as a title?
+ *
+ * NOT the same question as isSyntheticTitle. That one guards against a third
+ * party's editorial rows, and its 200-character cap is part of that guard - the
+ * derived series ran to 200+ characters of semicolon-separated statistics while
+ * genuine titles did not. Read off cag.gov.in there are no derived rows to
+ * separate, and the Commission's own Union titles legitimately run past 200
+ * characters because they append the ministry and the report number to the
+ * subject ("...Union Government Ministry of Communications Department of
+ * Telecommunications Report No. 19 of 2026 (Performance Audit - Civil)").
+ * Rejecting those would have dropped 45 real reports. So the cap here is a
+ * payload bound rather than a filter, and the editorial markers are still
+ * rejected in case the page ever starts carrying something else.
+ */
+export function isUnusableListingTitle(title: string): boolean {
+  const t = normalizeDashes(decodeEntities(title || ''));
+  return t.length < 12 || t.length > 400 || SYNTHETIC_TITLE.test(t);
+}
+
+/** Names CAG prints that our seed spells differently. Kept tiny and explicit -
+ *  a fuzzy match here would silently file one state's audit under another. */
+export const CAG_GOV_ALIASES: ReadonlyMap<string, string> = new Map([
+  ['pondicherry', 'PY'],
+  ['puducherry', 'PY'],
+  ['nct of delhi', 'DL'],
+  ['government of nct of delhi', 'DL'],
+  ['orissa', 'OD'],
+  ['uttaranchal', 'UK'],
+  ['jammu and kashmir', 'JK'],
+  ['jammu & kashmir', 'JK'],
+]);

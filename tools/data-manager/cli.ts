@@ -176,6 +176,21 @@ async function main() {
       await import('./import-cag-reports');
       break;
     }
+    case 'import-cag-live': {
+      // Index CAG audit reports from the Commission's OWN listing on
+      // cag.gov.in and merge them into data/seed/cag_reports.json. Fill-only.
+      // Dry-run unless --apply; --from/--to bound the report years.
+      await import('./import-cag-live');
+      break;
+    }
+    case 'verify-cag-attribution': {
+      // Read every indexed report back against cag.gov.in: which government the
+      // Commission files it under, the title it publishes, the report number.
+      // The compiled index the seed came from filed 102 state reports under the
+      // Union. Read-only unless --apply.
+      await import('./verify-cag-attribution');
+      break;
+    }
     case 'import-contact-channels': {
       // Verified helplines/grievance portals from the research workflow, gated on
       // an official source, into data/seed/contact_channels.json.

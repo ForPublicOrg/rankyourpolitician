@@ -96,12 +96,26 @@ npx tsx tools/data-manager/import-ac-districts.ts --state=AS --apply
 npm run test:ac-districts         # matcher regressions (offline, ECI fixtures)
 
 # CAG audit reports -> data/seed/cag_reports.json, attached to a GOVERNMENT
-# (the Union or a state), never to a person. Seeded from a compiled index but
-# every citation is re-pointed at cag.gov.in and every PDF link is fetched to
-# confirm it exists (~100 of them did not). Refuses to write unless all 32
-# governments are covered. Dry run unless --apply.
-npx tsx tools/data-manager/import-cag-reports.ts --apply
+# (the Union or a state), never to a person. Read the Commission's OWN listing;
+# a row whose report number it does not state is dropped rather than numbered by
+# us, and every PDF link is fetched before it is written. Refuses to write
+# unless all 32 governments are covered. Dry run unless --apply.
+npx tsx tools/data-manager/import-cag-live.ts --apply --from=2024 --to=2026
+
+# Then read the index back against cag.gov.in. The compiled index the seed was
+# originally built from filed 102 STATE reports under the Union - Kerala's,
+# Gujarat's, UP's, Telangana's audits sitting on /audits/UN and missing from
+# their own state. Only the Commission can settle whose audit it is.
+# --apply fixes government + report number; --titles also adopts the
+# Commission's own titles over the compiler's paraphrases (486 of them, opt-in
+# because some of the Commission's titles are the less informative of the two).
+npx tsx tools/data-manager/verify-cag-attribution.ts --apply --cache=.cache/cag-listing
 npm run test:cag                  # import-filter regressions (offline)
+
+# The original importer seeds from a third-party compiled index (andhbhakt.org)
+# and is kept for reference only: that site now sits behind a bot wall and
+# returns 403 to a plain fetch. Prefer import-cag-live.
+npx tsx tools/data-manager/import-cag-reports.ts --apply
 
 # Then check every quoted finding against the real PDF and publish only the ones
 # actually found in it (the compiled index measures ~90% accurate on quotes, and

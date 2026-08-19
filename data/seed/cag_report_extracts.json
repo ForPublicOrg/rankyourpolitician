@@ -1,5 +1,10 @@
 {
- "https://cag.gov.in/webroot/uploads/download_audit_report/2026/MP-JJM-Report-No.-5-of-2026-Bhopal---English-06a674f93c3faf1.25493877.pdf": [
+ "https://cag.gov.in/uploads/download_audit_report/2026/MP-JJM-Report-No.-5-of-2026-Bhopal---English-06a674f93c3faf1.25493877.pdf": [
+  {
+   "page": 8,
+   "section": "Executive Summary - Coverage",
+   "quote": "only 13.53 lakh out of 111.81 lakh rural households (12.10 per cent) had access to tap water"
+  },
   {
    "page": 23,
    "section": "Ch.I §1.1.3",
@@ -34,11 +39,6 @@
    "page": 61,
    "section": "Ch.III §3.6",
    "quote": "Jal Nigam in violation of E-in-C's instructions, withdrew the entire allocated amount (₹ 2,410.37 crore) from the SNA in lumpsum, parked the money in a separate savings account"
-  },
-  {
-   "page": 85,
-   "section": "Ch.IV §4.3.1",
-   "quote": "1,907 SVSs are now being shifted to MVSs due to inadequate groundwater"
   }
  ],
  "https://cag.gov.in/uploads/download_audit_report/2026/MP-Report-No.-04-of-2026---MGNREGA--English-06a61c636798ce0.32200448.pdf": [
@@ -78,7 +78,22 @@
    "quote": "Irregular wage payments of ₹1.46 crore was paid on 2,426 duplicate, fake, or incorrect job cards during 2019-24"
   }
  ],
- "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Full_PA_PMAY-ReportNo-8_English_05-15-2025-signed-0694bb6ecc93c28.69875526.pdf": [
+ "https://cag.gov.in/uploads/download_audit_report/2025/Full_PA_PMAY-ReportNo-8_English_05-15-2025-signed-0694bb6ecc93c28.69875526.pdf": [
+  {
+   "page": 10,
+   "section": "Ch.II §2.3",
+   "quote": "Out of 34.71 lakh houses sanctioned under PMAY-G during 2016-23, 20,215 (0.58 per cent) PMAY-G houses were incomplete as of March 2025"
+  },
+  {
+   "page": 10,
+   "section": "Ch.II §2.5",
+   "quote": "₹ 9.52 crore was released to 1,838 ineligible beneficiaries, out of which ₹ 2.62 crore remained unrecovered"
+  },
+  {
+   "page": 11,
+   "section": "Ch.II §2.4",
+   "quote": "74 per cent of houses were without plaster of walls; 54 per cent were without a dedicated place"
+  },
   {
    "page": 27,
    "section": "Ch.II §2.1.2",
@@ -103,21 +118,6 @@
    "page": 51,
    "section": "Ch.IV §4.1",
    "quote": "sanction and release of ₹ 134.51 crore as unit assistance"
-  },
-  {
-   "page": 51,
-   "section": "Ch.IV §4.2-4.5",
-   "quote": "20,215 PMAY-G houses, which were sanctioned during 2016-17 to"
-  },
-  {
-   "page": 68,
-   "section": "Ch.IV §4.5-4.9",
-   "quote": "the claim of the department in case of 77 houses was not found correct in JPV"
-  },
-  {
-   "page": 74,
-   "section": "Ch.IV §4.11",
-   "quote": "highest shortfall of 89 per cent was noticed in"
   }
  ],
  "https://cag.gov.in/uploads/download_audit_report/2025/Performance-Audit---Civil---Report---4-of-2025--English-069a01619c584d8.44750365.pdf": [
@@ -387,23 +387,6 @@
    "page": 19,
    "section": "Ch.III §3.1.1",
    "quote": "Certificate of registration was granted to 42,121 transport vehicle without ensuring issuance of permanent permit"
-  }
- ],
- "https://cag.gov.in/uploads/download_audit_report/2025/Full_PA_PMAY-ReportNo-8_English_05-15-2025-signed-0694bb6ecc93c28.69875526.pdf": [
-  {
-   "page": 10,
-   "section": "Ch.II §2.3",
-   "quote": "Out of 34.71 lakh houses sanctioned under PMAY-G during 2016-23, 20,215 (0.58 per cent) PMAY-G houses were incomplete as of March 2025"
-  },
-  {
-   "page": 10,
-   "section": "Ch.II §2.5",
-   "quote": "₹ 9.52 crore was released to 1,838 ineligible beneficiaries, out of which ₹ 2.62 crore remained unrecovered"
-  },
-  {
-   "page": 11,
-   "section": "Ch.II §2.4",
-   "quote": "74 per cent of houses were without plaster of walls; 54 per cent were without a dedicated place"
   }
  ],
  "https://cag.gov.in/uploads/download_audit_report/2025/Delhi_PA-Report-on-3_DJB_English-069c2836793c603.23213132.pdf": [
@@ -1010,13 +993,6 @@
    "page": 7,
    "section": "Education",
    "quote": "In 40 test-checked TEs, only 18 Tea Garden Managed Schools (TGMS) (37 per cent) had adequate number of teachers as per the provisions of the RTE Act, 2009 and the remaining 31 schools had shortage of teachers ranging between 17 to 67 per cent. Out of 145 teachers available in the test-checked schools, only 12 teachers possessed"
-  }
- ],
- "https://cag.gov.in/uploads/download_audit_report/2026/MP-JJM-Report-No.-5-of-2026-Bhopal---English-06a674f93c3faf1.25493877.pdf": [
-  {
-   "page": 8,
-   "section": "Executive Summary - Coverage",
-   "quote": "only 13.53 lakh out of 111.81 lakh rural households (12.10 per cent) had access to tap water"
   }
  ],
  "https://cag.gov.in/uploads/download_audit_report/2023/Nagpur_Report-No.-8-of-2025-English-069c3cb3b19edd6.82328403.pdf": [

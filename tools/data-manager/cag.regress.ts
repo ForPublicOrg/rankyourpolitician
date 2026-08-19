@@ -24,6 +24,12 @@ import {
   reportKey,
   findNonLiteralToken,
   findReportsLiteral,
+  canonicalCagUrl,
+  reportNoFromListing,
+  auditPeriodFromTitle,
+  govForListingLabel,
+  isUnusableListingTitle,
+  CAG_GOV_ALIASES,
   UNION_GOV,
 } from './cag-shared';
 
@@ -149,6 +155,77 @@ const bundle = 'var q=[1,2];const fn=[{id:"a",reportNo:"1 of 2020",url:"https://
 const lit = findReportsLiteral(bundle);
 assert(lit !== null && lit.includes('reportNo'), 'report array located among other arrays');
 assert(lit !== null && !lit.includes('"b"'), 'unrelated array not picked up');
+
+
+// ---- reading the Commission's own listing (import-cag-live.ts) -------------
+// cag.gov.in serves every PDF twice, and links the /webroot/ spelling from its
+// own listing. Two rows entered the seed that way and became one document
+// listed twice on a government's audit page.
+const WEBROOT = 'https://cag.gov.in/webroot/uploads/download_audit_report/2026/x-069c.pdf';
+const PLAIN = 'https://cag.gov.in/uploads/download_audit_report/2026/x-069c.pdf';
+assert(canonicalCagUrl(WEBROOT) === PLAIN, '/webroot/ prefix collapsed to the canonical form');
+assert(canonicalCagUrl(PLAIN) === PLAIN, 'canonical URL left alone');
+assert(canonicalCagUrl('https://example.com/webroot/uploads/x.pdf') === 'https://example.com/webroot/uploads/x.pdf',
+  'only cag.gov.in URLs are rewritten');
+assert(reportKey({ ...a, gov: 'MP', source_url: WEBROOT }) === reportKey({ ...a, gov: 'MP', source_url: PLAIN }),
+  'the two spellings of one document share a dedupe key');
+
+// Report numbers, as the Commission's own listing writes them.
+assert(reportNoFromListing('Report No. 3 of 2026: Report of the CAG on State Finances', '', 2026) === 'No. 3 of 2026',
+  'listing title states the number');
+assert(reportNoFromListing('Report No. 01 of 2026- Compliance Audit Report of Government of West Bengal', '', 2026) === 'No. 1 of 2026',
+  'leading zero in a listing title');
+assert(reportNoFromListing('Report of the CAG for the year ended 31 March 2025 Union Government (Commercial) No. 22 of 2026 (Compliance Audit Observations)', '', 2026) === 'No. 22 of 2026',
+  'number stated late in a long Union title');
+assert(reportNoFromListing('Report 4 of 2024 - Report of the CAG on Local Bodies', '', 2024) === 'No. 4 of 2024',
+  'a number written without "No."');
+assert(reportNoFromListing('Report No.5 of year 2024 Report on IFMIS', '', 2024) === 'No. 5 of 2024',
+  '"of year YYYY" phrasing');
+assert(reportNoFromListing('Report of the CAG on State Finance for the year 2024-25',
+  'https://cag.gov.in/uploads/download_audit_report/2026/Mumbai-SFAR-2024-25_Report-No-1-of-2026_hyperlinked-06a5.pdf', 2026) === 'No. 1 of 2026',
+  'number recovered from the PDF filename when the title omits it');
+assert(reportNoFromListing('Report No.8 - Local Self-Government Institutions for the year ended March 2023', '', 2025) === 'No. 8 of 2025',
+  'bare number paired with the year the listing was filtered on');
+// The one that must stay missing: a title and a filename that state no number
+// at all. Numbering it ourselves would be inventing the Commission's citation.
+assert(reportNoFromListing('State Finances Audit Report of the CAG of India for the year ended 31 March 2023',
+  'https://cag.gov.in/uploads/download_audit_report/2024/SFAR_ENGLISH_Sikkim-0669.pdf', 2024) === null,
+  'no report number anywhere -> null, never guessed');
+
+// Audit periods are copied from the title or omitted; never inferred.
+assert(auditPeriodFromTitle('Compliance Audit Report for the year ended 31 March 2024') === '31 March 2024',
+  'year-ended period read off the title');
+assert(auditPeriodFromTitle('Report on State Finances for the year 2024-25') === '2024-25', 'financial-year period');
+assert(auditPeriodFromTitle('Performance Audit on Jal Jeevan Mission in Madhya Pradesh (2019-24)') === '2019-24',
+  'bracketed period');
+assert(auditPeriodFromTitle('Report of the CAG on Green India Mission') === undefined,
+  'a title that states no period gets no as_of');
+
+// Government labels the listing prints.
+const NAMES = new Map<string, string>([...CAG_GOV_ALIASES, ['madhya pradesh', 'MP'], ['tamil nadu', 'TN']]);
+const VALID = new Set(['MP', 'TN', 'PY', 'JK', UNION_GOV]);
+assert(govForListingLabel('Union', NAMES, VALID) === UNION_GOV, 'Union label');
+assert(govForListingLabel('Madhya Pradesh', NAMES, VALID) === 'MP', 'state label');
+assert(govForListingLabel('Pondicherry', NAMES, VALID) === 'PY', 'the Commission still writes Pondicherry');
+assert(govForListingLabel('Jammu and Kashmir UT (31-Oct-2019 Onwards)', NAMES, VALID) === 'JK',
+  'reorganisation date stripped off a label');
+assert(govForListingLabel('Karnataka', NAMES, VALID) === null, 'a government we do not carry is refused, not guessed');
+assert(govForListingLabel('', NAMES, VALID) === null, 'empty label refused');
+
+// The first-party title check is a payload bound, NOT the derived-row filter.
+// The Commission's own Union titles legitimately run past isSyntheticTitle's
+// 200-character cap because they append the ministry and the report number.
+const LONG_REAL_TITLE =
+  'Report of the Comptroller and Auditor General of India on Performance Audit on BharatNet Union Government ' +
+  'Ministry of Communications Department of Telecommunications Report No. 19 of 2026 (Performance Audit - Civil) ' +
+  'for the period ended March 2024 covering the National Optical Fibre Network';
+assert(LONG_REAL_TITLE.length > 200, 'fixture is longer than the compiled-index cap');
+assert(!isUnusableListingTitle(LONG_REAL_TITLE), "the Commission's own long titles are kept");
+assert(isSyntheticTitle(LONG_REAL_TITLE), 'and the compiled-index filter would still have dropped it');
+assert(isUnusableListingTitle('x'.repeat(401)), 'past the payload bound it is refused');
+assert(isUnusableListingTitle('Report'), 'a stub title is refused');
+assert(isUnusableListingTitle('GovLens India Entry 990 - Governance Divide'),
+  'editorial markers are still refused on the first-party path');
 
 console.log(failed === 0 ? '\n✓ CAG import regressions passed' : `\n✗ ${failed} failed`);
 process.exit(failed === 0 ? 0 : 1);
