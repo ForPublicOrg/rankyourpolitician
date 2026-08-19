@@ -534,7 +534,8 @@
         "source_url": "https://en.wikipedia.org/wiki/Fifth_Pema_Khandu_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026"
+        "as_of": "as of July 2026",
+        "politicianId": "taliha-ac-ar-nyato-rigia"
       },
       {
         "id": "gabriel-denwang-wangsu-ar",
@@ -1630,7 +1631,7 @@
     "stateCode": "CG",
     "state": "Chhattisgarh",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+    "asOf": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
     "confidence": "high",
     "governor": {
       "name": "Ramen Deka",
@@ -1650,14 +1651,17 @@
           "Mineral Resources",
           "Energy",
           "Public Relations",
-          "Transport",
+          "Water Resources",
           "Aviation",
+          "Good Governance and Convergence",
+          "Electronics and Information Technology",
+          "Public Grievances and Redressal",
           "Departments not allocated to any minister"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sai_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+        "source_url": "https://dprcg.gov.in/pages/1704616640/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%AF",
+        "source_name": "Directorate of Public Relations, Government of Chhattisgarh - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
         "politicianId": "kunkuri-ac-cg-vishnudeo-sai"
       },
       {
@@ -1670,12 +1674,13 @@
         "portfolios": [
           "Public Works (PWD)",
           "Public Health Engineering",
-          "Urban Administration and Development"
+          "Urban Administration and Development",
+          "Sports and Youth Welfare"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sai_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+        "source_url": "https://dprcg.gov.in/pages/1704616640/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%AF",
+        "source_name": "Directorate of Public Relations, Government of Chhattisgarh - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
         "politicianId": "lormi-ac-cg-arun-sao"
       },
       {
@@ -1724,14 +1729,14 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Forest and Climate Change",
-          "Water Resources",
+          "Transport",
           "Cooperatives",
           "Parliamentary Affairs"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sai_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+        "source_url": "https://dprcg.gov.in/pages/1704616640/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%AF",
+        "source_name": "Directorate of Public Relations, Government of Chhattisgarh - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
         "politicianId": "narayanpur-ac-cg-kedar-nath-kashyap"
       },
       {
@@ -1833,13 +1838,12 @@
         "portfolios": [
           "Revenue and Disaster Management",
           "Rehabilitation",
-          "Sports and Youth Welfare",
           "Higher Education"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sai_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+        "source_url": "https://dprcg.gov.in/pages/1704616640/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%AF",
+        "source_name": "Directorate of Public Relations, Government of Chhattisgarh - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
         "politicianId": "baloda-bazar-ac-cg-tank-ram-verma"
       },
       {
@@ -3078,7 +3082,7 @@
     "governor": {
       "name": "Kavinder Gupta",
       "title": "Governor",
-      "sourceUrl": "https://egov.eletsonline.com/2026/03/kavinder-gupta-appointed-himachal-pradesh-governor-shiv-pratap-shukla-shifted-to-telangana/"
+      "sourceUrl": "https://himachalrajbhavan.nic.in/"
     },
     "ministers": [
       {
@@ -3651,7 +3655,7 @@
     "stateCode": "KA",
     "state": "Karnataka",
     "governmentStatus": "elected",
-    "asOf": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
+    "asOf": "as of 19 August 2026 (cabinet expanded from 14 to 33 members on 3 August 2026; portfolios for the enlarged council notified 12 August 2026; one berth of the sanctioned 34 remains vacant)",
     "confidence": "high",
     "governor": {
       "name": "Thawar Chand Gehlot",
@@ -3669,16 +3673,19 @@
         "portfolios": [
           "Finance",
           "Cabinet Affairs",
-          "Personnel & Administrative Reforms (DPAR)",
+          "Personnel and Administrative Reforms (DPAR)",
           "Intelligence",
-          "Bangalore Development Authority (BDA)",
-          "BMRDA",
+          "Information, Law, Justice and Human Rights",
+          "Parliamentary Affairs and Legislation",
+          "Agriculture Marketing",
+          "Commissionerate of Town and Country Planning",
+          "Urban Local Bodies in the BDA and BMRDA areas",
           "All unallocated portfolios"
         ],
         "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
         "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-27",
-        "as_of": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (cabinet expanded from 14 to 33 members on 3 August 2026; portfolios for the enlarged council notified 12 August 2026; one berth of the sanctioned 34 remains vacant)",
         "politicianId": "kanakapura-ac-ka-d-k-shivakumar"
       },
       {
@@ -3790,11 +3797,11 @@
         "name": "Ramalinga Reddy",
         "party": "Indian National Congress",
         "portfolios": [
-          "Water Resources (Major & Medium Irrigation)"
+          "Forest, Ecology and Environment"
         ],
-        "source_url": "https://www.indiatvnews.com/karnataka/karnataka-cm-dk-shivakumar-allocates-portfolios-keeps-finance-priyank-kharge-gets-home-check-full-list-of-13-ministers-2026-06-04-1043695",
-        "source_name": "indiatvnews.com",
-        "retrieved_date": "2026-07-27",
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
         "politicianId": "b-t-m-layout-ac-ka-ramalinga-reddy"
       },
@@ -3806,11 +3813,11 @@
         "name": "K. H. Muniyappa",
         "party": "Indian National Congress",
         "portfolios": [
-          "Food, Civil Supplies & Consumer Affairs"
+          "Social Welfare"
         ],
-        "source_url": "https://www.indiatvnews.com/karnataka/karnataka-cm-dk-shivakumar-allocates-portfolios-keeps-finance-priyank-kharge-gets-home-check-full-list-of-13-ministers-2026-06-04-1043695",
-        "source_name": "indiatvnews.com",
-        "retrieved_date": "2026-07-27",
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
         "politicianId": "devanahalli-ac-ka-k-h-muniyappa"
       },
@@ -3837,11 +3844,13 @@
         "name": "U. T. Khader",
         "party": "Indian National Congress",
         "portfolios": [
-          "Health & Family Welfare"
+          "Health & Family Welfare",
+          "Minority Welfare",
+          "Haj and Wakf"
         ],
-        "source_url": "https://www.indiatvnews.com/karnataka/karnataka-cm-dk-shivakumar-allocates-portfolios-keeps-finance-priyank-kharge-gets-home-check-full-list-of-13-ministers-2026-06-04-1043695",
-        "source_name": "indiatvnews.com",
-        "retrieved_date": "2026-07-27",
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
         "politicianId": "mangalore-ac-ka-u-t-khader"
       },
@@ -3894,16 +3903,323 @@
         "retrieved_date": "2026-07-27",
         "as_of": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
         "politicianId": "bhalki-ac-ka-eshwara-khandre"
+      },
+      {
+        "id": "b-z-zameer-ahmed-khan-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "B. Z. Zameer Ahmed Khan",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Housing"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "chamrajpet-ac-ka-b-z-zameer-ahmed-khan"
+      },
+      {
+        "id": "santosh-lad-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Santosh Lad",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Labour and Employment"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "kalghatgi-ac-ka-santosh-lad"
+      },
+      {
+        "id": "rizwan-arshad-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Rizwan Arshad",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Food and Civil Supplies",
+          "Consumer Affairs"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "shivajinagar-ac-ka-rizwan-arshad"
+      },
+      {
+        "id": "madhu-bangarappa-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Madhu Bangarappa",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Primary and Secondary Education"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "sorab-ac-ka-madhu-bangarappa"
+      },
+      {
+        "id": "b-nagendra-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "B. Nagendra",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Planning and Statistics"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "bellary-ac-ka-b-nagendra"
+      },
+      {
+        "id": "s-s-mallikarjun-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "S. S. Mallikarjun",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Mines and Geology",
+          "Horticulture"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "davanagere-north-ac-ka-s-s-mallikarjun"
+      },
+      {
+        "id": "k-s-basavanthappa-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "K. S. Basavanthappa",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Muzrai",
+          "Fisheries, Ports and Inland Water"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "mayakonda-ac-ka-k-s-basavanthappa"
+      },
+      {
+        "id": "laxman-savadi-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Laxman Savadi",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Co-operation (excluding Agriculture Marketing)"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "athani-ac-ka-laxman-savadi"
+      },
+      {
+        "id": "vijayanand-kashappanavar-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Vijayanand Kashappanavar",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Small Scale Industries",
+          "Public Enterprises"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "hungund-ac-ka-vijayanand-kashappanavar"
+      },
+      {
+        "id": "basavaraj-rayareddy-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Basavaraj Rayareddy",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Higher Education"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "yelburga-ac-ka-basavaraj-rayareddy"
+      },
+      {
+        "id": "h-c-balakrishna-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "H. C. Balakrishna",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Municipal Administration"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "magadi-ac-ka-h-c-balakrishna"
+      },
+      {
+        "id": "k-m-shivalinge-gowda-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "K. M. Shivalinge Gowda",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Excise"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "arsikere-ac-ka-k-m-shivalinge-gowda"
+      },
+      {
+        "id": "n-chaluvaraya-swamy-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "N. Chaluvaraya Swamy",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Major and Medium Irrigation"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "nagamangala-ac-ka-n-chaluvaraya-swamy"
+      },
+      {
+        "id": "ajay-singh-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Ajay Singh",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Minor Irrigation",
+          "Science and Technology"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "jevargi-ac-ka-ajay-singh"
+      },
+      {
+        "id": "p-m-narendraswamy-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "P. M. Narendraswamy",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Agriculture"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "malavalli-ac-ka-p-m-narendraswamy"
+      },
+      {
+        "id": "shivaraj-tangadagi-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Shivaraj Tangadagi",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Backward Classes Welfare",
+          "Kannada and Culture"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "kanakagiri-ac-ka-tangadagi-shivaraj-sangappa"
+      },
+      {
+        "id": "rudrappa-lamani-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "Rudrappa Lamani",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Sugar and Textiles"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "haveri-ac-ka-rudrappa-manappa-lamani"
+      },
+      {
+        "id": "t-raghumurthy-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "T. Raghumurthy",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Scheduled Tribe Welfare"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "challakere-ac-ka-t-raghumurthy"
+      },
+      {
+        "id": "c-puttarangashetty-ka",
+        "stateCode": "KA",
+        "state": "Karnataka",
+        "rank": "Cabinet",
+        "name": "C. Puttarangashetty",
+        "party": "Indian National Congress",
+        "portfolios": [
+          "Animal Husbandry and Sericulture"
+        ],
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
+        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
+        "politicianId": "chamarajanagar-ac-ka-c-puttarangashetty"
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Chief_Minister_of_Karnataka",
       "https://en.wikipedia.org/wiki/Shivakumar_ministry",
-      "https://www.theweek.in/news/india/2026/07/14/karnataka-cabinet-expansion-update-congress-high-command-meeting.html",
-      "https://www.indiatvnews.com/karnataka/karnataka-cm-dk-shivakumar-allocates-portfolios-keeps-finance-priyank-kharge-gets-home-check-full-list-of-13-ministers-2026-06-04-1043695",
-      "https://www.deccanherald.com/india/karnataka/karnatakas-new-ministry-knowall-about-ministers-in-d-k-shivakumars-13-member-cabinet-know-your-ministers-4026829",
-      "https://www.deccanherald.com/india/karnataka/congress-veteran-g-parameshwara-set-to-be-karnatakas-deputy-cm-4025720",
-      "https://egov.eletsonline.com/2026/06/d-k-shivakumar-takes-oath-as-karnataka-chief-minister-g-parameshwara-sworn-in-as-deputy-cm/",
+      "https://en.wikipedia.org/wiki/Chief_Minister_of_Karnataka",
+      "https://www.thenewsminute.com/karnataka/karnataka-cabinet-portfolio-allocation-dk-shivakumar-keeps-bda-bmrda",
+      "https://www.indiatvnews.com/karnataka/karnataka-cm-allocates-portfolios-ramalinga-reddy-gets-forest-muniyappa-social-welfare-who-gets-what-2026-08-12-1051165",
       "https://en.wikipedia.org/wiki/Thawar_Chand_Gehlot"
     ]
   },
@@ -4318,7 +4634,7 @@
     "stateCode": "MP",
     "state": "Madhya Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+    "asOf": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 14 July 2026 General Administration Department notification)",
     "confidence": "high",
     "governor": {
       "name": "Mangubhai C. Patel",
@@ -4341,12 +4657,13 @@
           "Mining",
           "Aviation",
           "Industrial Policy",
-          "Investment Promotion"
+          "Investment Promotion",
+          "Animal Husbandry and Dairy"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Mohan_Yadav_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/Home/Ministers",
+        "source_name": "Government of Madhya Pradesh - Council of Ministers (mpinfo.org, official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 14 July 2026 General Administration Department notification)",
         "politicianId": "ujjain-south-ac-mp-mohan-yadav"
       },
       {
@@ -4750,12 +5067,12 @@
         "name": "Lakhan Patel",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Dairy and Animal Husbandry (Independent Charge)"
+          "Anand (Happiness) Department (Independent Charge)"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Mohan_Yadav_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/Home/Ministers",
+        "source_name": "Government of Madhya Pradesh - Council of Ministers (mpinfo.org, official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 14 July 2026 General Administration Department notification)",
         "politicianId": "pathariya-ac-mp-lakhan-patel"
       },
       {
@@ -4859,7 +5176,7 @@
     "governor": {
       "name": "Jishnu Dev Varma",
       "title": "Governor",
-      "sourceUrl": "https://rajbhavan-maharashtra.gov.in/en/10-03-02026jishnu-dev-varma-sworn-in-as-the-22nd-governor-of-maharashtra/"
+      "sourceUrl": "https://lokbhavan.maharashtra.gov.in/en/governors-profile/"
     },
     "ministers": [
       {
@@ -5956,7 +6273,7 @@
     "stateCode": "MZ",
     "state": "Mizoram",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (composition confirmed intact by CM on 29 June 2026; portfolios reflect the March 2025 reshuffle plus the 19 June 2026 transfer of Personnel & Administrative Reforms from K. Sapdanga to the CM)",
+    "asOf": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 9 October 2025 reallocation)",
     "confidence": "high",
     "governor": {
       "name": "General (Dr) Vijay Kumar Singh (V.K. Singh)",
@@ -6070,14 +6387,12 @@
         "portfolios": [
           "School Education",
           "Higher & Technical Education",
-          "Taxation",
-          "Information & Communication Technology (ICT)",
-          "Information & Public Relations, Printing & Stationery"
+          "Taxation"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Lalduhoma_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (composition confirmed intact by CM on 29 June 2026; portfolios reflect the March 2025 reshuffle plus the 19 June 2026 transfer of Personnel & Administrative Reforms from K. Sapdanga to the CM)",
+        "source_url": "https://dipr.mizoram.gov.in/page/council-of-ministers",
+        "source_name": "Directorate of Information & Public Relations, Government of Mizoram - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 9 October 2025 reallocation)",
         "politicianId": "aizawl-north-2-ac-mz-vanlalthlana"
       },
       {
@@ -6142,12 +6457,13 @@
         "party": "Zoram People's Movement",
         "portfolios": [
           "Food, Civil Supplies & Consumer Affairs",
-          "Land Revenue & Settlement"
+          "Land Revenue & Settlement",
+          "Information, Public Relations, Printing & Stationery"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Lalduhoma_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (composition confirmed intact by CM on 29 June 2026; portfolios reflect the March 2025 reshuffle plus the 19 June 2026 transfer of Personnel & Administrative Reforms from K. Sapdanga to the CM)",
+        "source_url": "https://dipr.mizoram.gov.in/page/council-of-ministers",
+        "source_name": "Directorate of Information & Public Relations, Government of Mizoram - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 9 October 2025 reallocation)",
         "politicianId": "aizawl-east-2-ac-mz-b-lalchhanzova"
       },
       {
@@ -6204,12 +6520,12 @@
     "stateCode": "NL",
     "state": "Nagaland",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026",
+    "asOf": "as of 19 August 2026 (the Nationalist Democratic Progressive Party merged into the Naga People’s Front; the Election Commission recognised the merger by Order No. 56/06/2026/PPS-II of 4 May 2026)",
     "confidence": "high",
     "governor": {
       "name": "Nand Kishore Yadav",
       "title": "Governor",
-      "sourceUrl": "https://nagalandtribune.in/nand-kishore-yadav-appointed-as-governor-of-nagaland/"
+      "sourceUrl": "https://presidentofindia.nic.in/press_releases/press-communique-32"
     },
     "ministers": [
       {
@@ -6218,15 +6534,15 @@
         "state": "Nagaland",
         "rank": "CM",
         "name": "Neiphiu Rio",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Finance",
           "Personnel & Administrative Reforms",
           "all portfolios not allotted to any other minister"
         ],
-        "source_url": "https://nagaland.gov.in/ministers",
-        "source_name": "nagaland.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "northern-angami-ii-ac-nl-neiphiu-rio"
       },
@@ -6236,14 +6552,14 @@
         "state": "Nagaland",
         "rank": "DyCM",
         "name": "T. R. Zeliang",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Planning & Transformation",
           "National Highways"
         ],
-        "source_url": "https://nagaland.gov.in/ministers",
-        "source_name": "nagaland.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "peren-ac-nl-t-r-zeliang"
       },
@@ -6270,13 +6586,13 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "G. Kaito Aye",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Roads & Bridges"
         ],
-        "source_url": "https://www.myneta.info/Nagaland2023/candidate.php?candidate_id=6918",
-        "source_name": "myneta.info",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "satakha-ac-nl-g-kaito-aye"
       },
@@ -6303,14 +6619,14 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "K. G. Kenye",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Power",
           "Parliamentary Affairs"
         ],
-        "source_url": "https://nagaland.gov.in/ministers",
-        "source_name": "nagaland.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "chizami-ac-nl-k-g-kenye"
       },
@@ -6336,14 +6652,14 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "Metsubo Jamir",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Rural Development",
           "State Institute of Rural Development (SIRD)"
         ],
-        "source_url": "https://nagaland.gov.in/ministers",
-        "source_name": "nagaland.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "mokokchung-town-ac-nl-metsubo-jamir"
       },
@@ -6370,14 +6686,14 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "C. L. John",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Forest, Environment & Climate Change",
           "Village Guards"
         ],
-        "source_url": "https://www.myneta.info/Nagaland2023/candidate.php?candidate_id=6834",
-        "source_name": "myneta.info",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "tehok-ac-nl-c-l-john"
       },
@@ -6387,14 +6703,14 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "Salhoutuonuo Kruse",
-        "party": "Nationalist Democratic Progressive Party (NDPP)",
+        "party": "Naga People's Front (NPF)",
         "portfolios": [
           "Women Resource Development",
           "Horticulture"
         ],
-        "source_url": "https://nagaland.gov.in/ministers",
-        "source_name": "nagaland.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://en.wikipedia.org/wiki/Naga_People%27s_Front",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026",
         "politicianId": "western-angami-ac-nl-salhoutuonuo-kruse"
       },
@@ -6738,7 +7054,7 @@
     "stateCode": "PY",
     "state": "Puducherry",
     "governmentStatus": "elected",
-    "asOf": "as of 14 July 2026",
+    "asOf": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
     "confidence": "medium",
     "governor": {
       "name": "K. Kailashnathan (Kuniyil Kailashnathan)",
@@ -6754,24 +7070,19 @@
         "name": "N. Rangaswamy (N. Rangasamy)",
         "party": "All India N.R. Congress",
         "portfolios": [
-          "Finance & Planning",
-          "Revenue & Excise",
-          "Health & Family Welfare",
-          "Local Administration",
           "General Administration",
-          "Personnel & Administrative Reforms",
-          "Cooperation",
-          "Hindu Religious Institutions & Waqf Board",
-          "Town & Country Planning",
-          "Science, Technology & Environment",
-          "Port",
-          "Information & Publicity",
-          "All departments not otherwise allocated"
+          "Finance",
+          "Planning",
+          "Transport",
+          "Fire Services",
+          "Urban Basic Services",
+          "Confidential and Cabinet",
+          "All departments not allocated to any minister"
         ],
-        "source_url": "https://newsonair.gov.in/n-rangasamy-sworn-in-as-puducherry-chief-minister-for-record-fifth-term/",
-        "source_name": "newsonair.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026"
+        "source_url": "https://py.gov.in/ministers",
+        "source_name": "Government of Puducherry - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)"
       },
       {
         "id": "a-namassivayam-py",
@@ -6783,15 +7094,12 @@
         "portfolios": [
           "Home",
           "Education",
-          "Electricity",
-          "Industries & Commerce",
-          "Sports & Youth Affairs",
-          "Sainik Welfare"
+          "Electricity"
         ],
-        "source_url": "https://www.bignewsnetwork.com/news/279128194/puducherry-vp-sivakolundhu-p-rajavelu-and-gns-rajasekaran-sworn-in-as-ministers",
-        "source_name": "bignewsnetwork.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026",
+        "source_url": "https://py.gov.in/ministers",
+        "source_name": "Government of Puducherry - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
         "politicianId": "mannadipet-ac-py-a-namassivayam"
       },
       {
@@ -6801,11 +7109,18 @@
         "rank": "Cabinet",
         "name": "Malladi Krishna Rao",
         "party": "All India N.R. Congress",
-        "portfolios": [],
-        "source_url": "https://www.bignewsnetwork.com/news/279128194/puducherry-vp-sivakolundhu-p-rajavelu-and-gns-rajasekaran-sworn-in-as-ministers",
-        "source_name": "bignewsnetwork.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026",
+        "portfolios": [
+          "Public Works",
+          "Tourism and Civil Aviation",
+          "Fisheries & Fishermen Welfare",
+          "Port",
+          "Industries & Commerce",
+          "Labour & Employment"
+        ],
+        "source_url": "https://py.gov.in/ministers",
+        "source_name": "Government of Puducherry - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
         "politicianId": "yanam-ac-py-malladi-krishna-rao"
       },
       {
@@ -6815,11 +7130,18 @@
         "rank": "Cabinet",
         "name": "P. Rajavelu",
         "party": "All India N.R. Congress",
-        "portfolios": [],
-        "source_url": "https://theprint.in/india/president-appoints-rajavelu-sivakolundhu-rajasekaran-ministers-in-puducherry/2954560/",
-        "source_name": "theprint.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026",
+        "portfolios": [
+          "Adi Dravidar Welfare",
+          "Art & Culture",
+          "Housing",
+          "Information Technology",
+          "Economics & Statistics",
+          "Stationery & Printing"
+        ],
+        "source_url": "https://py.gov.in/ministers",
+        "source_name": "Government of Puducherry - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
         "politicianId": "nettapakkam-ac-py-rajavelu"
       },
       {
@@ -6829,11 +7151,17 @@
         "rank": "Cabinet",
         "name": "V. P. Sivakolundhu",
         "party": "All India N.R. Congress",
-        "portfolios": [],
-        "source_url": "https://theprint.in/india/president-appoints-rajavelu-sivakolundhu-rajasekaran-ministers-in-puducherry/2954560/",
-        "source_name": "theprint.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026",
+        "portfolios": [
+          "Civil Supplies & Consumer Affairs",
+          "Social Welfare",
+          "Backward Class Welfare",
+          "Women & Child Development",
+          "Minority Affairs"
+        ],
+        "source_url": "https://py.gov.in/ministers",
+        "source_name": "Government of Puducherry - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
         "politicianId": "lawspet-ac-py-v-p-sivakolundhu"
       },
       {
@@ -6843,11 +7171,18 @@
         "rank": "Cabinet",
         "name": "G. N. S. Rajasekaran",
         "party": "Bharatiya Janata Party",
-        "portfolios": [],
-        "source_url": "https://theprint.in/india/president-appoints-rajavelu-sivakolundhu-rajasekaran-ministers-in-puducherry/2954560/",
-        "source_name": "theprint.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026",
+        "portfolios": [
+          "Agriculture & Farmers Welfare",
+          "Sports & Youth Affairs",
+          "District Rural Development Agency",
+          "Community Development",
+          "Rural Development",
+          "Sainik Welfare"
+        ],
+        "source_url": "https://py.gov.in/ministers",
+        "source_name": "Government of Puducherry - Council of Ministers (official)",
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
         "politicianId": "thirunallar-ac-py-g-n-s-rajasekaran"
       }
     ],
@@ -7110,11 +7445,12 @@
         "name": "Dr. Ravjot Singh",
         "party": "Aam Aadmi Party",
         "portfolios": [
-          "Parliamentary Affairs"
+          "Parliamentary Affairs",
+          "NRI Affairs"
         ],
         "source_url": "https://www.babushahi.com/transfers.php?id=191858",
         "source_name": "babushahi.com",
-        "retrieved_date": "2026-07-14",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of July 2026 (portfolios reflect the 11 May 2026 post-arrest reallocation; CM, ministry and Sanjeev Arora's no-portfolio status independently reconfirmed for July 2026)",
         "politicianId": "sham-chaurasi-ac-pb-ravjot-singh"
       },
@@ -7885,8 +8221,8 @@
     "confidence": "high",
     "governor": {
       "name": "Rajendra Vishwanath Arlekar",
-      "title": "Governor (additional/acting charge since 12 March 2026; concurrently Governor of Kerala)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Rajendra_Arlekar"
+      "title": "Governor (additional charge from 12 March 2026; substantive Governor of Kerala)",
+      "sourceUrl": "https://presidentofindia.nic.in/press_releases/press-communique-32"
     },
     "ministers": [
       {
@@ -9032,12 +9368,12 @@
     "stateCode": "UP",
     "state": "Uttar Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+    "asOf": "as of 19 August 2026 (roster re-verified against the Chief Minister’s Office lists of Cabinet Ministers, Ministers of State (Independent Charge) and Ministers of State)",
     "confidence": "high",
     "governor": {
       "name": "Anandiben Patel",
       "title": "Governor",
-      "sourceUrl": "https://upgovernor.gov.in/en/page/profile"
+      "sourceUrl": "https://upgovernor.gov.in/"
     },
     "ministers": [
       {
@@ -9209,14 +9545,11 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Animal Husbandry",
-          "Dairy Development",
-          "Minority Welfare",
-          "Muslim Waqf & Haj",
-          "Civil Defence"
+          "Dairy Development"
         ],
-        "source_url": "https://upvidhansabhaproceedings.gov.in/cabinet-ministers",
-        "source_name": "upvidhansabhaproceedings.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
         "politicianId": "aonla-ac-up-dharmpal-singh"
       },
@@ -9300,13 +9633,11 @@
         "name": "Yogendra Upadhyay",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Higher Education",
-          "Science & Technology",
-          "Electronics & Information Technology"
+          "Higher Education"
         ],
-        "source_url": "https://upvidhansabhaproceedings.gov.in/cabinet-ministers",
-        "source_name": "upvidhansabhaproceedings.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
       },
       {
@@ -9351,11 +9682,13 @@
         "name": "Om Prakash Rajbhar",
         "party": "Suheldev Bharatiya Samaj Party (SBSP)",
         "portfolios": [
-          "Panchayati Raj"
+          "Panchayati Raj",
+          "Minority Welfare",
+          "Muslim Waqf and Haj"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Om_Prakash_Rajbhar",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
+        "retrieved_date": "2026-08-19",
         "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
         "politicianId": "zahoorabad-ac-up-om-prakash-rajbhar"
       },
@@ -9741,21 +10074,6 @@
         "politicianId": "khaga-ac-up-krishna-paswan"
       },
       {
-        "id": "surendra-diler-up",
-        "stateCode": "UP",
-        "state": "Uttar Pradesh",
-        "rank": "MoS",
-        "name": "Surendra Diler",
-        "party": "Bharatiya Janata Party",
-        "portfolios": [
-          "Revenue"
-        ],
-        "source_url": "https://www.newsonair.gov.in/up-cm-yogi-adityanath-allocates-portfolios-to-newly-inducted-and-promoted-ministers/",
-        "source_name": "newsonair.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
-      },
-      {
         "id": "hansraj-vishwakarma-up",
         "stateCode": "UP",
         "state": "Uttar Pradesh",
@@ -9787,12 +10105,269 @@
         "retrieved_date": "2026-07-14",
         "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
         "politicianId": "tirwa-ac-up-kailash-singh-rajput"
+      },
+      {
+        "id": "nitin-agrawal-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Nitin Agrawal",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Excise & Prohibition (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "hardoi-ac-up-nitin-agarwal"
+      },
+      {
+        "id": "kapil-dev-agrawal-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Kapil Dev Agrawal",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Professional Education & Skill Development (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "muzaffarnagar-ac-up-kapil-dev-aggarwal"
+      },
+      {
+        "id": "ravindra-jaiswal-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Ravindra Jaiswal",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Stamp and Court Fee, Registration (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "varanasi-north-ac-up-ravindra-jaiswal"
+      },
+      {
+        "id": "sandeep-singh-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Sandeep Singh",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Basic Education (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "atrauli-ac-up-sandeep-kumar-singh"
+      },
+      {
+        "id": "gulab-devi-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Gulab Devi",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Secondary Education (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "chandausi-ac-up-gulab-devi"
+      },
+      {
+        "id": "dharmveer-prajapati-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Dharmveer Prajapati",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Home Guard, Civil Defence (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "dharmveer-prajapati-mlc-up"
+      },
+      {
+        "id": "asim-arun-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Asim Arun",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Social Welfare, Scheduled Caste and Tribal Welfare (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "kannauj-ac-up-asim-arun"
+      },
+      {
+        "id": "jayendra-pratap-singh-rathore-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Jayendra Pratap Singh Rathore",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Cooperative (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "jayendra-pratap-singh-rathore-mlc-up"
+      },
+      {
+        "id": "dayashankar-singh-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Dayashankar Singh",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Transport (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "ballia-nagar-ac-up-daya-shankar-singh"
+      },
+      {
+        "id": "narendra-kumar-kashyap-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Narendra Kumar Kashyap",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Backward Class Welfare, Divyangjan Empowerment (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "narendra-kumar-kashyap-mlc-up"
+      },
+      {
+        "id": "dinesh-pratap-singh-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Dinesh Pratap Singh",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Horticulture, Agricultural Marketing, Agricultural Foreign Trade and Agricultural Exports (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "dinesh-pratap-singh-mlc-up"
+      },
+      {
+        "id": "arun-kumar-saxena-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Arun Kumar Saxena",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Forest and Environment, Zoological Garden, Climate Change (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "bareilly-ac-up-arun-kumar-saxena"
+      },
+      {
+        "id": "dayashankar-mishra-dayalu-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Dayashankar Mishra \"Dayalu\"",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Ayush (Independent Charge)"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State (Independent Charge) roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State (Independent Charge) since the 25 March 2022 ministry",
+        "politicianId": "daya-shankar-mishra-mlc-up"
+      },
+      {
+        "id": "dara-singh-chauhan-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "Cabinet",
+        "name": "Dara Singh Chauhan",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Jail"
+        ],
+        "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "inducted in the 5 March 2024 cabinet expansion",
+        "politicianId": "dara-singh-chauhan-mlc-up"
+      },
+      {
+        "id": "sunil-kumar-sharma-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "Cabinet",
+        "name": "Sunil Kumar Sharma",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Electronics and Information Technology"
+        ],
+        "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "inducted in the 5 March 2024 cabinet expansion",
+        "politicianId": "sahibabad-ac-up-sunil-kumar-sharma"
+      },
+      {
+        "id": "anil-kumar-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "Cabinet",
+        "name": "Anil Kumar",
+        "party": "Rashtriya Lok Dal",
+        "portfolios": [
+          "Science and Technology"
+        ],
+        "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "inducted in the 5 March 2024 cabinet expansion",
+        "politicianId": "purqazi-ac-up-anil-kumar"
       }
     ],
     "sources": [
+      "https://upcmo.up.nic.in/cabinet_minister.htm",
+      "https://upcmo.up.nic.in/state_minister_ic.htm",
+      "https://upcmo.up.nic.in/state_minister.htm",
       "https://uplegisassembly.gov.in/chiefminister/present_chiefminister_en_.aspx",
-      "https://upvidhansabhaproceedings.gov.in/cabinet-ministers",
-      "https://upvidhansabhaproceedings.gov.in/state_minister",
       "https://upcmo.up.nic.in/cabinet_minister.htm",
       "https://upgovernor.gov.in/en/page/profile",
       "https://up.bjp.org/deputy-chief-minister",

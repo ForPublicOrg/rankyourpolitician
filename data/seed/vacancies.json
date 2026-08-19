@@ -95,14 +95,6 @@
     "retrieved_date": "2026-08-05"
   },
   {
-    "constituencyId": "ac-ka-dharwad",
-    "value": "The Karnataka Legislative Assembly Secretariat notified Dharwad (Assembly constituency 71) vacant with effect from 15 April 2026, disqualifying Vinay Kulkarni under Article 191(1)(e) of the Constitution read with section 8 of the Representation of the People Act, 1951, following his conviction in a criminal case. The Karnataka High Court stayed that conviction on 31 July 2026, and the Secretariat is reported to have restored his membership on 3 August 2026. The Assembly's published members roster had not been updated to show him when this page was last checked, so no member is shown here yet.",
-    "as_of": "2026-04-15",
-    "source_url": "https://www.deccanherald.com/india/karnataka/congress-leader-vinay-kulkarni-reinstated-as-mla-4098092",
-    "source_name": "Deccan Herald - Congress leader Vinay Kulkarni reinstated as MLA",
-    "retrieved_date": "2026-08-05"
-  },
-  {
     "constituencyId": "ac-mn-tadubi",
     "value": "N. Kayisii, the member for Tadubi (ST) (Assembly constituency 49), died. The Assembly's own members page shows the constituency as vacant.",
     "as_of": "2025-01-18",
@@ -117,5 +109,37 @@
     "source_url": "https://assembly.mn.gov.in/members",
     "source_name": "Manipur Legislative Assembly - members of the 12th Assembly (official)",
     "retrieved_date": "2026-08-05"
+  },
+  {
+    "constituencyId": "ac-up-rasara",
+    "value": "Umashankar Singh, the member for Rasara (Assembly constituency 353) and the Bahujan Samaj Party's only member of the 18th Vidhan Sabha, died after an illness. No by-election had been announced when this page was last checked.",
+    "as_of": "2026-08-05",
+    "source_url": "https://indianexpress.com/article/cities/lucknow/bsps-lone-up-mla-uma-shankar-singh-dies-after-battle-with-cancer-10819939/",
+    "source_name": "The Indian Express - BSP’s lone UP MLA Uma Shankar Singh dies",
+    "retrieved_date": "2026-08-19"
+  },
+  {
+    "constituencyId": "pc-as-nagaon",
+    "value": "Pradyut Bordoloi, elected from Nagaon in 2024, resigned his Lok Sabha seat with effect from 20 March 2026; the Speaker announced acceptance on 24 March. He was elected to the Assam Legislative Assembly from Dispur in May 2026. The Lok Sabha Secretariat lists Nagaon among the vacant constituencies of the 18th Lok Sabha, and no by-election had been notified when this page was last checked.",
+    "as_of": "2026-03-20",
+    "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
+    "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
+    "retrieved_date": "2026-08-19"
+  },
+  {
+    "constituencyId": "pc-ml-shillong",
+    "value": "Ricky Andrew J. Syngkon, elected from Shillong in 2024, died on 19 February 2026. The Lok Sabha Secretariat lists Shillong among the vacant constituencies of the 18th Lok Sabha, and no by-election had been notified when this page was last checked.",
+    "as_of": "2026-02-19",
+    "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
+    "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
+    "retrieved_date": "2026-08-19"
+  },
+  {
+    "constituencyId": "pc-wb-basirhat",
+    "value": "Haji Sk. Nurul Islam, elected from Basirhat in 2024, died on 25 September 2024. The Lok Sabha Secretariat lists Basirhat among the vacant constituencies of the 18th Lok Sabha, and no by-election had been notified when this page was last checked.",
+    "as_of": "2024-09-25",
+    "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
+    "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
+    "retrieved_date": "2026-08-19"
   }
 ]

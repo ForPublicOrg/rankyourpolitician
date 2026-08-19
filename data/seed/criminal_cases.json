@@ -169519,7 +169519,7 @@
     "as_of": "2024 assembly election affidavit"
   },
   {
-    "politician_id": "pipra-ac-br-shyambabu-prasad-yadav",
+    "politician_id": "pipra-east-champaran-ac-br-shyambabu-prasad-yadav",
     "declared_total": 4,
     "charges": [
       {
@@ -181958,78 +181958,6 @@
     "source_name": "MyNeta / ADR - 2024 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2024 assembly election affidavit"
-  },
-  {
-    "politician_id": "rasara-ac-up-umashankar-singh",
-    "declared_total": 1,
-    "charges": [
-      {
-        "count": 1,
-        "description": "Punishment for criminal breach of trust",
-        "law": "IPC",
-        "section": "406"
-      },
-      {
-        "count": 1,
-        "description": "Criminal breach of trust by public servant, or by banker, merchant or agent",
-        "law": "IPC",
-        "section": "409"
-      },
-      {
-        "count": 1,
-        "description": "Cheating and dishonestly inducing delivery of property",
-        "law": "IPC",
-        "section": "420"
-      },
-      {
-        "count": 1,
-        "description": "Forgery of valuable security, will, etc.",
-        "law": "IPC",
-        "section": "467"
-      },
-      {
-        "count": 1,
-        "description": "Forgery for purpose of cheating",
-        "law": "IPC",
-        "section": "468"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for cheating by personation",
-        "law": "IPC",
-        "section": "419"
-      },
-      {
-        "count": 1,
-        "description": "Using as genuine a forged document or electronic record",
-        "law": "IPC",
-        "section": "471"
-      },
-      {
-        "count": 1,
-        "description": "Punishment of criminal conspiracy",
-        "law": "IPC",
-        "section": "120B"
-      }
-    ],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "25/2010, P.S. Kotwali Nagar Ballia, U.P.",
-        "case_no": "12/2015",
-        "court": "A.S.J.-III, Ballia",
-        "sections": "406, 409, 419, 420, 467, 468, 471, 120B",
-        "other_sections": "Section 13(1)C/13(2) Prevention of Corruption Act",
-        "charges_framed": "No",
-        "appeal_filed": "No",
-        "law": "IPC"
-      }
-    ],
-    "source_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3576",
-    "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2022 assembly election affidavit"
   },
   {
     "politician_id": "rath-ac-up-manisha-anuragi",

@@ -94,11 +94,31 @@ async function main() {
       if (p.stateCode !== code || p.constituencyType !== 'AC') continue;
       seedByCons.set(p.constituencyId.replace(`ac-${code.toLowerCase()}-`, ''), p);
     }
+    // Two seats can share a display name - Bihar has two Kalyanpurs and two
+    // Pipras, West Bengal two Bishnupurs - and our seed disambiguates with a
+    // district suffix ("kalyanpur-east-champaran") while the roster
+    // disambiguates in the article title ("Kalyanpur, Purvi Champaran"). Match
+    // the display slug first, then let the two disambiguators find each other
+    // by shared token, and never hand one seed record to two parsed seats.
+    const claimed = new Set<string>();
+    const seedKeyFor = (s: { cons: string; key: string }): string | undefined => {
+      const base = slug(s.cons);
+      const cands = [...seedByCons.keys()].filter((c) => c === base || c.startsWith(base + '-'));
+      if (cands.length <= 1) return cands[0];
+      const extra = new Set(s.key.split('-').filter((t) => t && !base.split('-').includes(t)));
+      const score = (c: string) =>
+        c.split('-').filter((t) => !base.split('-').includes(t) && extra.has(t)).length;
+      const free = cands.filter((c) => !claimed.has(c));
+      const pool = free.length ? free : cands;
+      return pool.slice().sort((a, b) => score(b) - score(a) || a.length - b.length)[0];
+    };
+
     const parsedKeys = new Set<string>();
     let stale = 0, vacant = 0;
     for (const s of seats) {
-      const k = slug(s.cons);
+      const k = seedKeyFor(s) ?? slug(s.cons);
       parsedKeys.add(k);
+      claimed.add(k);
       const seed = seedByCons.get(k);
       if (!seed) {
         if (s.sitting) findings.push({ kind: 'seat-missing-in-seed', code, cons: s.cons, parsed: s.sitting, note: s.sitting.note || '' });
@@ -121,7 +141,19 @@ async function main() {
       }
     }
     for (const [k, p] of seedByCons) {
-      if (!parsedKeys.has(k)) findings.push({ kind: 'seed-seat-not-parsed', code, cons: p.constituencyName, seedId: p.id, seedName: p.name });
+      if (parsedKeys.has(k)) continue;
+      // A seat whose display name is shared with a seat we DID match is a
+      // naming collision, not a missing seat: the state has two seats of that
+      // name and the roster disambiguates them differently from our ids
+      // (Gannavaram (Konaseema) vs (Krishna), Kalol vs Kalol (Panchmahal)).
+      // Saying "not parsed" reads as staleness; it is a pairing question.
+      const base = k.split('-')[0];
+      const twin = [...parsedKeys].some((x) => x !== k && x.split('-')[0] === base);
+      findings.push({
+        kind: twin ? 'seat-name-ambiguous' : 'seed-seat-not-parsed',
+        code, cons: p.constituencyName, seedId: p.id, seedName: p.name,
+        ...(twin ? { note: `the roster has another seat displayed as "${p.constituencyName.replace(/\s*\(.*\)$/, '')}"; check which of the two this record belongs to` } : {}),
+      });
     }
     const exp = EXPECTED[code];
     stateReport.push(`${code}: parsed ${seats.length}/${exp} seats (sitting ${seats.filter((s) => s.sitting).length}), seed ${seedByCons.size}, stale ${stale}, vacant ${vacant}`);

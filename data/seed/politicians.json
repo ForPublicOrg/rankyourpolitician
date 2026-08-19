@@ -21829,7 +21829,7 @@
   },
   {
     "id": "taliha-ac-ar-nyato-rigia",
-    "name": "Nyato Rigia",
+    "name": "Nyato Dukam",
     "party": "Bharatiya Janata Party",
     "house": "Vidhan Sabha",
     "state": "Arunachal Pradesh",
@@ -21840,9 +21840,9 @@
     "districts": [
       "Upper Subansiri"
     ],
-    "current_position": "Member of the Legislative Assembly, Arunachal Pradesh",
-    "is_minister": false,
-    "neutral_summary": "Nyato Rigia is the Member of the Legislative Assembly (MLA) for the Taliha constituency in Arunachal Pradesh. Current party affiliation: Bharatiya Janata Party.",
+    "current_position": "Cabinet Minister, Arunachal Pradesh",
+    "is_minister": true,
+    "neutral_summary": "Nyato Dukam is the Member of the Legislative Assembly (MLA) for the Taliha constituency in Arunachal Pradesh. Current party affiliation: Bharatiya Janata Party.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -21850,17 +21850,10 @@
     "identity_source": {
       "url": "https://en.wikipedia.org/wiki/11th_Arunachal_Pradesh_Assembly",
       "name": "Wikipedia - 11th Arunachal Pradesh Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
+      "retrieved_date": "2026-08-19"
     },
     "wikidata_qid": "Q126304862",
-    "contact": {
-      "emails": [
-        "n.rigia@gmail.com"
-      ],
-      "source_url": "https://arla.neva.gov.in/Member/Member_ProfileDetail?MemberId=76&AssemblyID=7",
-      "source_name": "Arunachal Pradesh Legislative Assembly - NeVA portal (official)",
-      "retrieved_date": "2026-07-17"
-    }
+    "party_note": "Elected unopposed from Taliha in the 2024 Arunachal Pradesh assembly election. He contested and was declared elected as Nyato Dukam; earlier records for the same seat and the same person carry the name Nyato Rigia."
   },
   {
     "id": "tawang-ac-ar-namgey-tsering",
@@ -30819,127 +30812,6 @@
       "source_name": "Assam Legislative Assembly - NeVA Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
     }
-  },
-  {
-    "id": "nagaon-pradyut-bordoloi",
-    "name": "Pradyut Bordoloi",
-    "party": "Indian National Congress",
-    "house": "Lok Sabha",
-    "state": "Assam",
-    "stateCode": "AS",
-    "constituencyId": "pc-as-nagaon",
-    "constituencyName": "Nagaon",
-    "constituencyType": "PC",
-    "districts": [
-      "Morigaon",
-      "Nagaon"
-    ],
-    "current_position": "Member of Parliament, Lok Sabha",
-    "is_minister": false,
-    "neutral_summary": "Pradyut Bordoloi is the Member of Parliament for the Nagaon constituency in Assam, in the 18th Lok Sabha. Current party affiliation: Indian National Congress.",
-    "metrics": {
-      "attendance_pct": 75.4,
-      "questions_asked": 137,
-      "debates_participated": 11
-    },
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 28 March 1958 (age 68)",
-        "source_url": "https://www.wikidata.org/wiki/Q24565841",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q24565841",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q24565841",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the Assam Legislative Assembly",
-        "source_url": "https://www.wikidata.org/wiki/Q24565841",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹8,39,15,436 (~8 Crore)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2763",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹12,99,774 (~12 Lacs)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2763",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2763",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "attendance_pct",
-        "value": "75.4% (95 of 126 recorded sitting days signed)",
-        "source_url": "https://sansad.in/ls/members",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "questions_asked",
-        "value": "137",
-        "source_url": "https://sansad.in/ls/questions/questions-and-answers",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "debates_participated",
-        "value": "11",
-        "source_url": "https://sansad.in/ls/debates",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://sansad.in/ls/members",
-      "name": "Digital Sansad - Lok Sabha sitting members (official)",
-      "retrieved_date": "2026-07-15"
-    },
-    "contact": {
-      "emails": [
-        "pradyut.bordoloi@mpls.sansad.in",
-        "tipamputra@gmail.com"
-      ],
-      "source_url": "https://sansad.in/ls/members/biography/5108",
-      "source_name": "Digital Sansad - Lok Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    },
-    "wikidata_qid": "Q24565841",
-    "terms_served": 1,
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pradyut.jpg?width=400",
-    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "nagaon-batadraba-ac-as-rupak-sarmah",
@@ -45304,56 +45176,6 @@
     }
   },
   {
-    "id": "kalyanpur-ac-br-sachindra-prasad-singh",
-    "name": "Sachindra Prasad Singh",
-    "party": "Bharatiya Janata Party",
-    "house": "Vidhan Sabha",
-    "state": "Bihar",
-    "stateCode": "BR",
-    "constituencyId": "ac-br-kalyanpur",
-    "constituencyName": "Kalyanpur",
-    "constituencyType": "AC",
-    "districts": [
-      "Samastipur"
-    ],
-    "current_position": "Member of the Legislative Assembly, Bihar",
-    "is_minister": false,
-    "neutral_summary": "Sachindra Prasad Singh is the Member of the Legislative Assembly (MLA) for the Kalyanpur constituency in Bihar. Current party affiliation: Bharatiya Janata Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q27947684",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the Bihar Legislative Assembly",
-        "source_url": "https://www.wikidata.org/wiki/Q27947684",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q27947684",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/18th_Bihar_Assembly",
-      "name": "Wikipedia - 18th Bihar Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q27947684",
-    "terms_served": 1
-  },
-  {
     "id": "kalyanpur-east-champaran-ac-br-sachindra-prasad-singh",
     "name": "Sachindra Prasad Singh",
     "party": "Bharatiya Janata Party",
@@ -54013,95 +53835,6 @@
     }
   },
   {
-    "id": "pipra-ac-br-shyambabu-prasad-yadav",
-    "name": "Shyambabu Prasad Yadav",
-    "party": "Bharatiya Janata Party",
-    "house": "Vidhan Sabha",
-    "state": "Bihar",
-    "stateCode": "BR",
-    "constituencyId": "ac-br-pipra",
-    "constituencyName": "Pipra",
-    "constituencyType": "AC",
-    "districts": [
-      "Supaul"
-    ],
-    "current_position": "Member of the Legislative Assembly, Bihar",
-    "is_minister": false,
-    "neutral_summary": "Shyambabu Prasad Yadav is the Member of the Legislative Assembly (MLA) for the Pipra constituency in Bihar. Current party affiliation: Bharatiya Janata Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 18 July 1966 (age 59)",
-        "source_url": "https://www.wikidata.org/wiki/Q27947685",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q27947685",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the Bihar Legislative Assembly",
-        "source_url": "https://www.wikidata.org/wiki/Q27947685",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q27947685",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹2,36,30,189 (~2 Crore)",
-        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
-        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2025 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹0",
-        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
-        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2025 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "4",
-        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
-        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2025 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "12th Pass",
-        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
-        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2025 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/18th_Bihar_Assembly",
-      "name": "Wikipedia - 18th Bihar Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q27947685",
-    "terms_served": 1
-  },
-  {
     "id": "pipra-east-champaran-ac-br-shyambabu-prasad-yadav",
     "name": "Shyambabu Prasad Yadav",
     "party": "Bharatiya Janata Party",
@@ -54139,6 +53872,38 @@
         "source_url": "https://www.wikidata.org/wiki/Q27947685",
         "source_name": "Wikidata",
         "retrieved_date": "2026-07-17"
+      },
+      {
+        "field_type": "assets_total",
+        "value": "₹2,36,30,189 (~2 Crore)",
+        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
+        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
+        "retrieved_date": "2026-07-15",
+        "as_of": "2025 assembly election affidavit"
+      },
+      {
+        "field_type": "liabilities_total",
+        "value": "₹0",
+        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
+        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
+        "retrieved_date": "2026-07-15",
+        "as_of": "2025 assembly election affidavit"
+      },
+      {
+        "field_type": "criminal_cases_declared",
+        "value": "4",
+        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
+        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
+        "retrieved_date": "2026-07-15",
+        "as_of": "2025 assembly election affidavit"
+      },
+      {
+        "field_type": "education",
+        "value": "12th Pass",
+        "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2927",
+        "source_name": "MyNeta / ADR - 2025 assembly election affidavit",
+        "retrieved_date": "2026-07-15",
+        "as_of": "2025 assembly election affidavit"
       }
     ],
     "active": true,
@@ -80616,27 +80381,6 @@
         "source_name": "MyNeta / ADR - 2022 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "age",
-        "value": "Born 11 November 1960 (age 65)",
-        "source_url": "https://www.wikidata.org/wiki/Q64141277",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q64141277",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the 17th Lok Sabha",
-        "source_url": "https://www.wikidata.org/wiki/Q64141277",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
       }
     ],
     "active": true,
@@ -80654,7 +80398,7 @@
       "source_name": "Gujarat Vidhan Sabha - NeVA (National eVidhan Application) portal (official)",
       "retrieved_date": "2026-07-17"
     },
-    "wikidata_qid": "Q64141277"
+    "party_note": "Not to be confused with Hasmukhbhai Somabhai Patel, the Member of Parliament for Ahmedabad East, who held Amraiwadi until 2019. The member here is Dr. Hasmukh Patel (Patel Hasmukhbhai Prahladbhai), elected in December 2022."
   },
   {
     "id": "amreli-bharatbhai-sutariya",
@@ -175641,27 +175385,6 @@
     "metrics": {},
     "facts": [
       {
-        "field_type": "profession",
-        "value": "judge, jurist",
-        "source_url": "https://www.wikidata.org/wiki/Q746417",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "education",
-        "value": "St John's College",
-        "source_url": "https://www.wikidata.org/wiki/Q746417",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the Constituent Assembly of India (1947-present); President of the International Court of Justice (1985-1988); Vice President of the International Court of Justice (1976-1979); Judge of the International Court of Justice (1973-1988); Chief Election Commissioner of India (1972-1973)",
-        "source_url": "https://www.wikidata.org/wiki/Q746417",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
         "field_type": "assets_total",
         "value": "₹4,28,34,815 (~4 Crore)",
         "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=698",
@@ -175693,9 +175416,6 @@
       "name": "Wikipedia - 16th Madhya Pradesh Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q746417",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/NagendraSingh.jpg?width=400",
-    "photo_license": "CC0 · Wikimedia Commons",
     "contact": {
       "emails": [
         "nagendra.s@mpvidhansabha.nic.in"
@@ -182255,27 +181975,6 @@
     "metrics": {},
     "facts": [
       {
-        "field_type": "profession",
-        "value": "judge, jurist",
-        "source_url": "https://www.wikidata.org/wiki/Q746417",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "education",
-        "value": "St John's College",
-        "source_url": "https://www.wikidata.org/wiki/Q746417",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the Constituent Assembly of India (1947-present); President of the International Court of Justice (1985-1988); Vice President of the International Court of Justice (1976-1979); Judge of the International Court of Justice (1973-1988); Chief Election Commissioner of India (1972-1973)",
-        "source_url": "https://www.wikidata.org/wiki/Q746417",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
         "field_type": "assets_total",
         "value": "₹6,01,20,061 (~6 Crore)",
         "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=70",
@@ -182307,9 +182006,6 @@
       "name": "Wikipedia - 16th Madhya Pradesh Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q746417",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/NagendraSingh.jpg?width=400",
-    "photo_license": "CC0 · Wikimedia Commons",
     "contact": {
       "emails": [
         "tejbahadur.c@mpvidhansabha.nic.in"
@@ -229275,97 +228971,6 @@
       ],
       "source_url": "https://mgla.neva.gov.in/Member/Details/63?AssemblyID=11",
       "source_name": "Meghalaya Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
-    "id": "shillong-ricky-andrew-j-syngkon",
-    "name": "Ricky Andrew J Syngkon",
-    "party": "Voice of the People Party",
-    "house": "Lok Sabha",
-    "state": "Meghalaya",
-    "stateCode": "ML",
-    "constituencyId": "pc-ml-shillong",
-    "constituencyName": "Shillong",
-    "constituencyType": "PC",
-    "districts": [
-      "East Khasi Hills",
-      "Jaintia Hills",
-      "Ri Bhoi",
-      "West Khasi Hills"
-    ],
-    "current_position": "Member of Parliament, Lok Sabha",
-    "is_minister": false,
-    "neutral_summary": "Ricky Andrew J Syngkon is the Member of Parliament for the Shillong constituency in Meghalaya, in the 18th Lok Sabha. Current party affiliation: Voice of the People Party.",
-    "metrics": {
-      "attendance_pct": 73.5,
-      "questions_asked": 18,
-      "debates_participated": 9
-    },
-    "facts": [
-      {
-        "field_type": "assets_total",
-        "value": "₹1,31,28,411 (~1 Crore)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=344",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹4,43,048 (~4 Lacs)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=344",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=344",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "attendance_pct",
-        "value": "73.5% (86 of 117 recorded sitting days signed)",
-        "source_url": "https://sansad.in/ls/members",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "questions_asked",
-        "value": "18",
-        "source_url": "https://sansad.in/ls/questions/questions-and-answers",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "debates_participated",
-        "value": "9",
-        "source_url": "https://sansad.in/ls/debates",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://sansad.in/ls/members",
-      "name": "Digital Sansad - Lok Sabha sitting members (official)",
-      "retrieved_date": "2026-07-15"
-    },
-    "contact": {
-      "emails": [
-        "ricky.ajs@mpls.sansad.in",
-        "rickyajs@yahoo.com"
-      ],
-      "source_url": "https://sansad.in/ls/members/biography/5811",
-      "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
     }
   },
@@ -296239,20 +295844,6 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q65030968",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "2",
-        "source_url": "https://www.wikidata.org/wiki/Q65030968",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-08-05"
       }
     ],
     "active": true,
@@ -296269,9 +295860,7 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    },
-    "wikidata_qid": "Q65030968",
-    "terms_served": 2
+    }
   },
   {
     "id": "coimbatore-south-ac-tn-v-senthilbalaji",
@@ -306002,32 +305591,25 @@
     "metrics": {},
     "facts": [
       {
-        "field_type": "age",
-        "value": "Born 1 January 1974 (age 52)",
-        "source_url": "https://www.wikidata.org/wiki/Q139713977",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
         "field_type": "profession",
         "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q139713977",
+        "source_url": "https://www.wikidata.org/wiki/Q139771696",
         "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
+        "retrieved_date": "2026-08-19"
       },
       {
         "field_type": "previous_positions",
         "value": "Member of the 17th Tamil Nadu Legislative Assembly",
-        "source_url": "https://www.wikidata.org/wiki/Q139713977",
+        "source_url": "https://www.wikidata.org/wiki/Q139771696",
         "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
+        "retrieved_date": "2026-08-19"
       },
       {
         "field_type": "terms_served",
         "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q139713977",
+        "source_url": "https://www.wikidata.org/wiki/Q139771696",
         "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
+        "retrieved_date": "2026-08-19"
       },
       {
         "field_type": "assets_total",
@@ -306069,7 +305651,7 @@
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q139713977",
+    "wikidata_qid": "Q139771696",
     "terms_served": 1,
     "contact": {
       "emails": [
@@ -374239,103 +373821,6 @@
     }
   },
   {
-    "id": "rasara-ac-up-umashankar-singh",
-    "name": "Umashankar Singh",
-    "party": "Bahujan Samaj Party",
-    "house": "Vidhan Sabha",
-    "state": "Uttar Pradesh",
-    "stateCode": "UP",
-    "constituencyId": "ac-up-rasara",
-    "constituencyName": "Rasara",
-    "constituencyType": "AC",
-    "districts": [
-      "Ballia"
-    ],
-    "current_position": "Member of the Legislative Assembly, Uttar Pradesh",
-    "is_minister": false,
-    "neutral_summary": "Umashankar Singh is the Member of the Legislative Assembly (MLA) for the Rasara constituency in Uttar Pradesh. Current party affiliation: Bahujan Samaj Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 2 January 1971 (age 55)",
-        "source_url": "https://www.wikidata.org/wiki/Q30107479",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q30107479",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the Uttar Pradesh Legislative Assembly",
-        "source_url": "https://www.wikidata.org/wiki/Q30107479",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q30107479",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹54,05,04,522 (~54 Crore)",
-        "source_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3576",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹13,02,35,095 (~13 Crore)",
-        "source_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3576",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "1",
-        "source_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3576",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "12th Pass",
-        "source_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3576",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/18th_Uttar_Pradesh_Assembly",
-      "name": "Wikipedia - 18th Uttar Pradesh Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q30107479",
-    "terms_served": 1,
-    "contact": {
-      "emails": [
-        "uss1245@gmail.com"
-      ],
-      "source_url": "https://upvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=4&MSLT=14&Assemblyid=18",
-      "source_name": "Uttar Pradesh Vidhan Sabha - National e-Vidhan Application (NeVA) portal (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
     "id": "rasulabad-ac-up-poonam-sankhwar",
     "name": "Poonam Sankhwar",
     "party": "Bharatiya Janata Party",
@@ -391549,94 +391034,6 @@
     }
   },
   {
-    "id": "basirhat-nurul-islam",
-    "name": "Nurul Islam",
-    "party": "All India Trinamool Congress",
-    "house": "Lok Sabha",
-    "state": "West Bengal",
-    "stateCode": "WB",
-    "constituencyId": "pc-wb-basirhat",
-    "constituencyName": "Basirhat",
-    "constituencyType": "PC",
-    "districts": [
-      "North 24 Parganas"
-    ],
-    "current_position": "Member of Parliament, Lok Sabha",
-    "is_minister": false,
-    "neutral_summary": "Nurul Islam is the Member of Parliament for the Basirhat constituency in West Bengal, in the 18th Lok Sabha. Current party affiliation: All India Trinamool Congress.",
-    "metrics": {
-      "attendance_pct": 4.5,
-      "questions_asked": 0,
-      "debates_participated": 0
-    },
-    "facts": [
-      {
-        "field_type": "assets_total",
-        "value": "₹1,60,02,842 (~1 Crore)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8990",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹0",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8990",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8990",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-08-05",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "attendance_pct",
-        "value": "4.5% (1 of 22 recorded sitting days signed)",
-        "source_url": "https://sansad.in/ls/members",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "questions_asked",
-        "value": "0",
-        "source_url": "https://sansad.in/ls/questions/questions-and-answers",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "debates_participated",
-        "value": "0",
-        "source_url": "https://sansad.in/ls/debates",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-08-05",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://sansad.in/ls/members",
-      "name": "Digital Sansad - Lok Sabha sitting members (official)",
-      "retrieved_date": "2026-07-15"
-    },
-    "contact": {
-      "emails": [
-        "mp.nurulislam@mpls.sansad.in",
-        "mpnurulislam@gmail.com"
-      ],
-      "source_url": "https://sansad.in/ls/members/biography/4490",
-      "source_name": "Digital Sansad - Lok Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
     "id": "basirhat-dakshin-ac-wb-surajit-mitra",
     "name": "Surajit Mitra",
     "party": "Trinamool Congress",
@@ -393001,63 +392398,6 @@
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
     }
-  },
-  {
-    "id": "bishnupur-ac-wb-dilip-mondal",
-    "name": "Dilip Mondal",
-    "party": "Trinamool Congress",
-    "house": "Vidhan Sabha",
-    "state": "West Bengal",
-    "stateCode": "WB",
-    "constituencyId": "ac-wb-bishnupur",
-    "constituencyName": "Bishnupur",
-    "constituencyType": "AC",
-    "districts": [
-      "Bankura"
-    ],
-    "current_position": "Member of the Legislative Assembly, West Bengal",
-    "is_minister": false,
-    "neutral_summary": "Dilip Mondal is the Member of the Legislative Assembly (MLA) for the Bishnupur constituency in West Bengal. Current party affiliation: Trinamool Congress.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 1 January 1968 (age 58)",
-        "source_url": "https://www.wikidata.org/wiki/Q20983438",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q20983438",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the 17th West Bengal Legislative Assembly; Member of the 16th West Bengal Legislative Assembly; Member of the 15th West Bengal Legislative Assembly; Member of the 13th West Bengal Legislative Assembly",
-        "source_url": "https://www.wikidata.org/wiki/Q20983438",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "4",
-        "source_url": "https://www.wikidata.org/wiki/Q20983438",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/18th_West_Bengal_Assembly",
-      "name": "Wikipedia - 18th West Bengal Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q20983438",
-    "terms_served": 4
   },
   {
     "id": "bishnupur-saumitra-khan",
@@ -417070,6 +416410,111 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/489?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
+    }
+  },
+  {
+    "id": "dharwad-ac-ka-vinay-kulkarni",
+    "name": "Vinay Kulkarni",
+    "party": "Indian National Congress",
+    "house": "Vidhan Sabha",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "constituencyId": "ac-ka-dharwad",
+    "constituencyName": "Dharwad",
+    "constituencyType": "AC",
+    "districts": [
+      "Dharwad"
+    ],
+    "current_position": "Member of the Legislative Assembly, Karnataka",
+    "is_minister": false,
+    "neutral_summary": "Vinay Kulkarni is the Member of the Legislative Assembly (MLA) for the Dharwad constituency in Karnataka. Current party affiliation: Indian National Congress.",
+    "party_note": "The Assembly Secretariat notified the seat vacant from 15 April 2026 following his conviction in a criminal case. The Karnataka High Court stayed the conviction on 31 July 2026 and his membership was restored - the Assembly’s own roster of the 16th Assembly lists him for Dharwad again.",
+    "metrics": {},
+    "facts": [],
+    "active": true,
+    "generated": true,
+    "identity_source": {
+      "url": "https://kla.kar.nic.in/assembly/member/16assemblymemberslist.htm",
+      "name": "Karnataka Legislative Assembly - members of the 16th Assembly (official)",
+      "retrieved_date": "2026-08-19"
+    }
+  },
+  {
+    "id": "kalyanpur-ac-br-maheshwar-hazari",
+    "name": "Maheshwar Hazari",
+    "party": "Janata Dal (United)",
+    "house": "Vidhan Sabha",
+    "state": "Bihar",
+    "stateCode": "BR",
+    "constituencyId": "ac-br-kalyanpur",
+    "constituencyName": "Kalyanpur",
+    "constituencyType": "AC",
+    "districts": [
+      "Samastipur"
+    ],
+    "current_position": "Member of the Legislative Assembly, Bihar",
+    "is_minister": false,
+    "neutral_summary": "Maheshwar Hazari is the Member of the Legislative Assembly (MLA) for the Kalyanpur constituency in Bihar. Current party affiliation: Janata Dal (United).",
+    "metrics": {},
+    "facts": [],
+    "active": true,
+    "generated": true,
+    "identity_source": {
+      "url": "https://results.eci.gov.in/ResultAcGenNov2025/candidateswise-S04131.htm",
+      "name": "Election Commission of India - 2025 Bihar assembly result, AC 131 Kalyanpur (SC)",
+      "retrieved_date": "2026-08-19"
+    }
+  },
+  {
+    "id": "pipra-ac-br-rambilash-kamat",
+    "name": "Rambilash Kamat",
+    "party": "Janata Dal (United)",
+    "house": "Vidhan Sabha",
+    "state": "Bihar",
+    "stateCode": "BR",
+    "constituencyId": "ac-br-pipra",
+    "constituencyName": "Pipra",
+    "constituencyType": "AC",
+    "districts": [
+      "Supaul"
+    ],
+    "current_position": "Member of the Legislative Assembly, Bihar",
+    "is_minister": false,
+    "neutral_summary": "Rambilash Kamat is the Member of the Legislative Assembly (MLA) for the Pipra constituency in Bihar. Current party affiliation: Janata Dal (United).",
+    "metrics": {},
+    "facts": [],
+    "active": true,
+    "generated": true,
+    "identity_source": {
+      "url": "https://results.eci.gov.in/ResultAcGenNov2025/candidateswise-S0442.htm",
+      "name": "Election Commission of India - 2025 Bihar assembly result, AC 42 Pipra",
+      "retrieved_date": "2026-08-19"
+    }
+  },
+  {
+    "id": "bishnupur-ac-wb-shukla-chatterjee",
+    "name": "Shukla Chatterjee",
+    "party": "Bharatiya Janata Party",
+    "house": "Vidhan Sabha",
+    "state": "West Bengal",
+    "stateCode": "WB",
+    "constituencyId": "ac-wb-bishnupur",
+    "constituencyName": "Bishnupur",
+    "constituencyType": "AC",
+    "districts": [
+      "Bankura"
+    ],
+    "current_position": "Member of the Legislative Assembly, West Bengal",
+    "is_minister": false,
+    "neutral_summary": "Shukla Chatterjee is the Member of the Legislative Assembly (MLA) for the Bishnupur constituency in West Bengal. Current party affiliation: Bharatiya Janata Party.",
+    "metrics": {},
+    "facts": [],
+    "active": true,
+    "generated": true,
+    "identity_source": {
+      "url": "https://results.eci.gov.in/ResultAcGenMay2026/candidateswise-S25255.htm",
+      "name": "Election Commission of India - 2026 West Bengal assembly result, AC 255 Bishnupur",
+      "retrieved_date": "2026-08-19"
     }
   }
 ]

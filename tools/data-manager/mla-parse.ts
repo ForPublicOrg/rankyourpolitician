@@ -55,7 +55,12 @@ const CONS_CELL_RE = /(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly)\)? cons
 const ALLIANCE_TAIL = /(?:Alliance|Coalition)$/i;
 // Words that mark a wikilink as a political party (for states that link the party
 // as a plain [[Party]] rather than a {{Party name with colour}} template, e.g. UP).
-const PARTY_HINT = /\b(Party|Congress|Sena|Dal|Samajwadi|Bahujan|Janata|Communist|Morcha|Kazhagam|Rashtriya|Trinamool|Biju|Desam|Nationalist|People's|Democratic|Republican|Majlis|Jana Sena|Apna|Lok|Munnetra|Maha Vikas|Front|Samithi|Samiti)\b/i;
+const PARTY_HINT = /\b(Party|Congress|Sena|Dal|Samajwadi|Bahujan|Janata|Communist|Morcha|Kazhagam|Rashtriya|Trinamool|Biju|Desam|Nationalist|People's|Democratic|Republican|Majlis|Jana Sena|Apna|Lok|Munnetra|Maha Vikas|Front|Samithi|Samiti|Independent)\b/i;
+// "Independent" is a real answer to "which party", not a missing one. Rosters
+// write it as [[Independent politician|Independent]], and reading that cell as
+// party-less made the seat inherit the party of the seat above it - which is
+// how Curtorim's Independent MLA was reported as BJP and Tseminyu's as JD(U).
+const INDEPENDENT_RE = /^independent(?:\s+politician)?$/i;
 // A party value that is really a cell attribute, colour, or placeholder.
 const BAD_PARTY = /^(?:rowspan|colspan|bgcolor|style|align|width|class|scope)\b|^(?:vacant|green|red|blue|white|black|grey|gray|orange|yellow|saffron|maroon|purple|pink|brown)$|=/i;
 // A plain-text cell that is a status note, not a member name.
@@ -81,6 +86,14 @@ export function isDepartureNote(text: string): boolean {
 export interface MLA { cons: string; name: string; title: string | null; party: string; note?: string; }
 export interface Seat {
   cons: string;
+  /** Slug of the constituency article title, minus the "... Assembly
+   *  constituency" tail - so two seats a state gives the same DISPLAY name
+   *  keep separate identities. Bihar has two Kalyanpurs (Purvi Champaran and
+   *  Samastipur) and two Pipras; West Bengal two Bishnupurs (South 24
+   *  Parganas and Bankura). Keying on the display name collapsed each pair
+   *  into one seat, so one real member went missing from the audit and the
+   *  surviving row inherited the other district block's party. */
+  key: string;
   /** Sitting member, or null when the seat is vacant. */
   sitting: MLA | null;
   /** Members this group listed before the sitting one (departed incumbents). */
@@ -107,7 +120,10 @@ function membersBody(wt: string): string {
 /** Party from one cell: template params first (skipping attr params like
  *  rowspan=3), then a plain [[Party]] link. Null if the cell has neither. */
 function partyFromCell(cell: string): string | null {
-  for (const tm of cell.matchAll(/\{\{\s*(?:Full party name with colou?r|[Pp]arty name with colou?r|[Pp]arty color(?: cell)?)\s*((?:\|[^|{}]*)+)\}\}/g)) {
+  // \s+ rather than a single space between the words: at least one roster
+  // writes {{party name with  color|...}} with two, and requiring one made
+  // the cell read as party-less so the seat inherited the one above it.
+  for (const tm of cell.matchAll(/\{\{\s*(?:Full\s+party\s+name\s+with\s+colou?r|[Pp]arty\s+name\s+with\s+colou?r|[Pp]arty\s+colou?r(?:\s+cell)?)\s*((?:\|[^|{}]*)+)\}\}/g)) {
     const params = tm[1].split('|').map((s) => s.trim()).filter(Boolean).filter((p) => !/^\w+\s*=/.test(p));
     if (params.length) {
       const v = normParty(params[0]);
@@ -116,12 +132,39 @@ function partyFromCell(cell: string): string | null {
   }
   for (const lm of cell.matchAll(/\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]/g)) {
     const disp = clean(lm[2] || lm[1]);
+    if (INDEPENDENT_RE.test(disp) || INDEPENDENT_RE.test(clean(lm[1]))) return 'Independent';
     if (PARTY_HINT.test(lm[1]) && !ALLIANCE_TAIL.test(disp) && !/constituency|district|Lok Sabha|List of/i.test(lm[1])) {
       const v = normParty(lm[2] || lm[1]);
       if (v && v.length >= 2 && !BAD_PARTY.test(v)) return v;
     }
   }
   return null;
+}
+
+/**
+ * How many table rows this row's party cell covers.
+ *
+ * District blocks rowspan the party cell over every seat the party holds in
+ * that district, so the seats below carry no party cell of their own. Reading
+ * that as "no party stated" and falling back to the last party seen anywhere
+ * is what put BJP on Warisnagar and Samastipur (both inside a JD(U)
+ * rowspan=3) and Kerala Congress on Ranni and Aranmula. The span is what
+ * actually says how far the party reaches, so read it.
+ *
+ * The count sits either on the cell (| rowspan=3 | {{...}}) or inside the
+ * template as a passthrough parameter ({{Party name with color|X|rowspan=3}}).
+ */
+function partyRowspan(rawRow: string, isConsRow: boolean): number {
+  const row = stripRefs(rawRow);
+  const consM = isConsRow ? row.match(CONS_RE) : null;
+  const scan = consM ? row.slice(consM.index! + consM[0].length) : row;
+  for (const c of cellsOf(scan)) {
+    if (!partyFromCell(c)) continue;
+    let n = 1;
+    for (const m of c.matchAll(/rowspan\s*=\s*"?(\d+)/gi)) n = Math.max(n, parseInt(m[1], 10));
+    return n;
+  }
+  return 1;
 }
 
 function parseRow(rawRow: string, isConsRow: boolean): RowInfo {
@@ -197,8 +240,8 @@ function seatRowspan(row: string): number {
 export function parseSeats(wt: string): Seat[] {
   const body = membersBody(wt);
   const rows = body.split(/\n\|-/);
-  const groups: { cons: string; rows: string[] }[] = [];
-  let cur: { cons: string; rows: string[] } | null = null;
+  const groups: { cons: string; key: string; rows: string[] }[] = [];
+  let cur: { cons: string; key: string; rows: string[] } | null = null;
   let pending = 0;
   for (const row of rows) {
     const consM = stripRefs(row).match(CONS_RE);
@@ -210,7 +253,10 @@ export function parseSeats(wt: string): Seat[] {
         .replace(/\s*\(\s*constituency\s*\)/i, '')))
         .replace(/\s*\((SC|ST|SC\/ST)\)\s*$/i, '').trim();
       if (!cons) { cur = null; pending = 0; continue; }
-      cur = { cons, rows: [stripRefs(row)] };
+      // Identity comes from the article title, which carries the district
+      // disambiguator the display text drops.
+      const key = slug(consM[1].replace(/\s*\(?[A-Za-z. ]*?(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly)\)? constituency\)?/i, '').replace(/\s*\(\s*constituency\s*\)/i, ''));
+      cur = { cons, key: key || slug(cons), rows: [stripRefs(row)] };
       groups.push(cur);
       pending = seatRowspan(stripRefs(row)) - 1;
     } else if (pending > 0 && cur) {
@@ -226,17 +272,29 @@ export function parseSeats(wt: string): Seat[] {
   // within the group the last member row is the sitting member.
   const seen = new Set<string>();
   const seats: Seat[] = [];
-  let curParty = ''; // party carries across rows for tables that rowspan the party cell
+  // A rowspanned party cell reaches exactly as far as its rowspan says and no
+  // further. `carry.rows` counts down over the rows it covers; once it runs
+  // out, a row with no party cell of its own has no party - rather than
+  // inheriting from whatever seat happened to be listed before it.
+  const carry = { party: '', rows: 0 };
   for (const g of groups) {
     const infos = g.rows.map((r, i) => parseRow(r, i === 0));
-    const k = slug(g.cons);
+    for (let i = 0; i < infos.length; i++) {
+      if (infos[i].party) {
+        carry.party = infos[i].party!;
+        carry.rows = partyRowspan(g.rows[i], i === 0) - 1;
+      } else if (carry.rows > 0) {
+        infos[i].party = carry.party;
+        carry.rows--;
+      }
+    }
+    const k = g.key;
     if (seen.has(k)) continue;
     seen.add(k);
     let sitting: RowInfo | null = null;
     let sittingIdx = -1;
     for (let i = 0; i < infos.length; i++) {
       const inf = infos[i];
-      if (inf.party) curParty = inf.party;
       if (inf.vacant && !inf.name) { sitting = null; sittingIdx = -1; continue; }
       if (inf.name) { sitting = inf; sittingIdx = i; }
     }
@@ -248,15 +306,15 @@ export function parseSeats(wt: string): Seat[] {
     let sittingParty = '';
     if (sitting) {
       for (let i = sittingIdx; i < infos.length; i++) if (infos[i].party) sittingParty = infos[i].party!;
-      if (!sittingParty) sittingParty = curParty;
     }
     const departed: MLA[] = [];
     for (const inf of infos) {
       if (inf === sitting || !inf.name) continue;
-      departed.push({ cons: g.cons, name: inf.name, title: inf.title, party: inf.party || curParty || 'Independent' });
+      departed.push({ cons: g.cons, name: inf.name, title: inf.title, party: inf.party || 'Independent' });
     }
     seats.push({
       cons: g.cons,
+      key: g.key,
       sitting: sitting && sitting.name
         ? { cons: g.cons, name: sitting.name, title: sitting.title, party: sittingParty || 'Independent', ...(sitting.note ? { note: sitting.note } : {}) }
         : null,

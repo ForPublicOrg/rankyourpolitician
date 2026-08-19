@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy, CagReport } from '../../lib/types';
 import { splitDistricts, suspectedDistrictSplits } from './ac-districts-shared';
+import { canonicalCagUrl } from './cag-shared';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -136,7 +137,10 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       if (r.retrieved_date && !isoDate.test(r.retrieved_date)) {
         push(cagRecord, 'error', `report ${where} retrieved_date must be ISO yyyy-mm-dd`);
       }
-      const key = `${r.gov}|${r.source_url}`;
+      // Keyed on the canonical URL: cag.gov.in serves every PDF under both
+      // /uploads/... and /webroot/uploads/..., so the raw URL let the same
+      // document enter twice and render twice on the government's page.
+      const key = `${r.gov}|${canonicalCagUrl(r.source_url ?? '')}`;
       if (seenReport.has(key)) push(cagRecord, 'error', `report ${where} is listed twice for the same government`);
       seenReport.add(key);
     }
@@ -159,14 +163,17 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
         string,
         { page?: number; section?: string; quote?: string }[]
       >;
-      const knownUrl = new Set(reports.map((r) => r.source_url));
+      // Canonical on both sides: cag.gov.in serves the same PDF from
+      // /uploads/... and /webroot/uploads/..., and an extract keyed on one
+      // spelling must still find the report keyed on the other.
+      const knownUrl = new Set(reports.map((r) => canonicalCagUrl(r.source_url ?? '')));
       const eBytes = readFileSync(extractsPath).byteLength;
       if (eBytes > 3 * 1024 * 1024) {
         push(cagRecord, 'error',
           `cag_report_extracts.json is ${(eBytes / 1024).toFixed(0)} KB, over the 3 MB budget - it is imported only by /audits/[gov], but keep it bounded`);
       }
       for (const [url, list] of Object.entries(extracts)) {
-        if (!knownUrl.has(url)) {
+        if (!knownUrl.has(canonicalCagUrl(url))) {
           push(cagRecord, 'error', `extracts reference ${url}, which is not a report in cag_reports.json`);
           continue;
         }
@@ -305,6 +312,21 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
     if (houses.has('AC') && houses.has('PC')) {
       for (const p of group) {
         push(p, 'warn', `wikidata ${qid} is active in both an assembly and a Lok Sabha seat (${group.map((m) => m.id).join(', ')}) - one record may be stale`);
+      }
+    }
+    // Two ASSEMBLY seats is a different, worse defect: nobody holds two seats
+    // in one house, so either a roster import duplicated one person across two
+    // identically-named constituencies (Bihar has two Kalyanpurs and two
+    // Pipras; West Bengal two Bishnupurs), or two different people were given
+    // one QID by the namesake trap in enrich-wikidata. The first case is two
+    // ratable pages for one human, which is a double-vote vector, and the
+    // second publishes one person's cited facts on another's page. Either way
+    // it is wrong on the page, so it blocks publish.
+    const assemblySeats = group.filter((p) => p.constituencyType === 'AC');
+    if (assemblySeats.length > 1) {
+      for (const p of assemblySeats) {
+        push(p, 'error',
+          `wikidata ${qid} is active on two assembly seats (${assemblySeats.map((m) => `${m.id} / ${m.constituencyName}`).join(', ')}) - either one person has two ratable pages, or two people share a QID`);
       }
     }
   }
