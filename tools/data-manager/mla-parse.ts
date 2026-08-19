@@ -55,7 +55,13 @@ const CONS_CELL_RE = /(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly)\)? cons
 const ALLIANCE_TAIL = /(?:Alliance|Coalition)$/i;
 // Words that mark a wikilink as a political party (for states that link the party
 // as a plain [[Party]] rather than a {{Party name with colour}} template, e.g. UP).
-const PARTY_HINT = /\b(Party|Congress|Sena|Dal|Samajwadi|Bahujan|Janata|Communist|Morcha|Kazhagam|Rashtriya|Trinamool|Biju|Desam|Nationalist|People's|Democratic|Republican|Majlis|Jana Sena|Apna|Lok|Munnetra|Maha Vikas|Front|Samithi|Samiti|Independent)\b/i;
+// "Lok" and "Biju" were in this list and are both ordinary given names - Lok
+// Nath Sharma, the Gyalshing-Barnyak MLA, was read as a PARTY, which reset the
+// rowspanned party cell covering the rest of the Sikkim table and left 27
+// members published as members of a party named after him. Neither word is
+// needed: every party carrying them also carries Dal or Party (Lok Janshakti
+// Party, Rashtriya Lok Dal, Biju Janata Dal).
+const PARTY_HINT = /\b(Party|Congress|Sena|Dal|Samajwadi|Bahujan|Janata|Communist|Morcha|Kazhagam|Rashtriya|Trinamool|Desam|Nationalist|People's|Democratic|Republican|Majlis|Jana Sena|Apna|Munnetra|Maha Vikas|Front|Samithi|Samiti|Independent)\b/i;
 // "Independent" is a real answer to "which party", not a missing one. Rosters
 // write it as [[Independent politician|Independent]], and reading that cell as
 // party-less made the seat inherit the party of the seat above it - which is
@@ -255,7 +261,13 @@ export function parseSeats(wt: string): Seat[] {
       if (!cons) { cur = null; pending = 0; continue; }
       // Identity comes from the article title, which carries the district
       // disambiguator the display text drops.
-      const key = slug(consM[1].replace(/\s*\(?[A-Za-z. ]*?(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly)\)? constituency\)?/i, '').replace(/\s*\(\s*constituency\s*\)/i, ''));
+      // Strip ONLY the trailing '... Assembly constituency' - anchored at the end
+      // so a disambiguator that sits before it survives ('Kalyanpur, Purvi
+      // Champaran Assembly constituency' -> 'kalyanpur-purvi-champaran').
+      const key = slug(consM[1]
+        .replace(/\s*\([^)]*?(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly)\s+constituency\s*\)\s*$/i, '')
+        .replace(/\s+(?:Assembly|Vidhan[a]? Sabha|Legislative Assembly)\s+constituency\s*$/i, '')
+        .replace(/\s*\(\s*constituency\s*\)\s*$/i, ''));
       cur = { cons, key: key || slug(cons), rows: [stripRefs(row)] };
       groups.push(cur);
       pending = seatRowspan(stripRefs(row)) - 1;

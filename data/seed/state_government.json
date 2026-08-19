@@ -8259,9 +8259,9 @@
         ],
         "source_url": "https://www.tn.gov.in/minister_list.php",
         "source_name": "tn.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)",
-        "politicianId": "vellore-d-m-k-anand"
+        "retrieved_date": "2026-08-19",
+        "as_of": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026) The minister is N. Anand (Narayanasamy \"Bussy\" Anand), the member for Thiyagarayanagar - not D.M.K. Anand, the DMK Member of Parliament for Vellore.",
+        "politicianId": "thiyagarayanagar-ac-tn-bussy-n-anand"
       },
       {
         "id": "aadhav-arjuna-tn",
@@ -9986,11 +9986,11 @@
           "Urban Development",
           "Urban Employment & Poverty Alleviation"
         ],
-        "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
-        "source_name": "upvidhansabhaproceedings.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
-        "politicianId": "sitapur-rakesh-rathore"
+        "source_url": "https://upcmo.up.nic.in/state_minister.htm",
+        "source_name": "Office of the Chief Minister, Uttar Pradesh - Ministers of State roster",
+        "retrieved_date": "2026-08-19",
+        "as_of": "Minister of State for Urban Development since 25 March 2022. Not the Rakesh Rathore who is the Congress Member of Parliament for Sitapur - two different men of the same name, one holding the assembly seat and the other the Lok Sabha seat.",
+        "politicianId": "sitapur-ac-up-rakesh-rathour-guru"
       },
       {
         "id": "rajni-tiwari-up",

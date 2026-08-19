@@ -251,5 +251,93 @@ const tg = parseMembers(wrap(`|-
 assert(tg.length === 1 && tg[0].name === 'Padi Kaushik Reddy', `plain member beats party link (got ${tg[0]?.name})`);
 assert(tg[0]?.party === 'Bharat Rashtra Samithi', `party color cell parsed (got ${tg[0]?.party})`);
 
+// A member whose NAME contains a word that also appears in party names. Sikkim
+// rowspans one party cell over its whole table, so the seat below inherits it -
+// until the Gyalshing-Barnyak member, Lok Nath Sharma, was read as a party
+// because "Lok" was a party hint. That ended the span, and 27 members shipped
+// with a colleague's name printed as their party.
+const sikkim = parseSeats(wrap(`|-
+| rowspan="4"|[[Gyalshing district|Gyalshing]]
+| 1
+| [[Yoksam-Tashiding Assembly constituency|Yoksam-Tashiding]] (BL)
+| [[Tshering Thendup Bhutia]]
+| {{Full party name with color|Sikkim Krantikari Morcha|rowspan=4}}
+|
+|-
+| 2
+| [[Yangthang Assembly constituency|Yangthang]]
+| [[Bhim Hang Limboo]]
+|
+|-
+| 3
+| [[Gyalshing-Barnyak Assembly constituency|Gyalshing-Barnyak]]
+| [[Lok Nath Sharma]]
+|
+|-
+| 4
+| [[Rinchenpong Assembly constituency|Rinchenpong]] (BL)
+| [[Erung Tenzing Lepcha]]
+|`));
+assert(sikkim.length === 4, `rowspanned party table yields four seats (got ${sikkim.length})`);
+assert(sikkim.every((s) => s.sitting?.party === 'Sikkim Krantikari Morcha'),
+  `a rowspanned party cell reaches every row it spans (got ${sikkim.map((s) => s.sitting?.party).join(', ')})`);
+const lokNath = sikkim.find((s) => s.cons === 'Gyalshing-Barnyak');
+assert(lokNath?.sitting?.name === 'Lok Nath Sharma', `the member named Lok Nath Sharma is read as the MEMBER (got ${lokNath?.sitting?.name})`);
+
+// The span is a bound, not a licence: the seat after it inherits nothing.
+const spanEnds = parseSeats(wrap(`|-
+| 1
+| [[Patepur Assembly constituency|Patepur]]
+| [[Lakhendra Kumar Raushan]]
+| {{Party name with color|Bharatiya Janata Party}}
+|
+|-
+| 2
+| [[Kalyanpur, Samastipur Assembly constituency|Kalyanpur]]
+| [[Maheshwar Hazari]]
+| {{Party name with color|Janata Dal (United)|rowspan=2}}
+|
+|-
+| 3
+| [[Warisnagar Assembly constituency|Warisnagar]]
+| Manjarik Mrinal
+|`));
+assert(spanEnds[1]?.sitting?.party === 'Janata Dal (United)', 'the row declaring the span keeps its own party');
+assert(spanEnds[2]?.sitting?.party === 'Janata Dal (United)',
+  `the row inside the span inherits it, not the party of the seat above (got ${spanEnds[2]?.sitting?.party})`);
+
+// Two seats a state displays under one name stay two seats.
+const twins = parseSeats(wrap(`|-
+| 1
+| [[Kalyanpur, Purvi Champaran Assembly constituency|Kalyanpur]]
+| [[Sachindra Prasad Singh]]
+| {{Party name with color|Bharatiya Janata Party}}
+|
+|-
+| 2
+| [[Kalyanpur, Samastipur Assembly constituency|Kalyanpur]] (SC)
+| [[Maheshwar Hazari]]
+| {{Party name with color|Janata Dal (United)}}
+|`));
+assert(twins.length === 2, `two seats sharing a display name are two seats (got ${twins.length})`);
+assert(twins[0].key !== twins[1].key, 'and they carry different keys');
+assert(twins[1].sitting?.name === 'Maheshwar Hazari', 'the second seat keeps its own member');
+
+// Independent is a party, not a missing one - it must not be inherited over.
+const indep = parseSeats(wrap(`|-
+| 1
+| [[Patepur Assembly constituency|Patepur]]
+| [[Lakhendra Kumar Raushan]]
+| {{Party name with color|Bharatiya Janata Party}}
+|
+|-
+| 2
+| [[Curtorim Assembly constituency|Curtorim]]
+| [[Aleixo Lourenco]]
+| [[Independent politician|Independent]]
+|`));
+assert(indep[1]?.sitting?.party === 'Independent',
+  `an Independent member is Independent, not the party above them (got ${indep[1]?.sitting?.party})`);
+
 if (failed) { console.error(`\n${failed} failure(s)`); process.exit(1); }
 console.log('\nAll MLA parse regressions passed.');

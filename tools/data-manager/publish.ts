@@ -431,6 +431,37 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
   for (const m of central) dangling(m.id, m.name, m.politicianId, 'central minister');
   for (const m of stateMinisters) dangling(m.id, m.name, m.politicianId, 'state minister');
 
+  // (c) politicianId points at somebody who CANNOT be that minister.
+  // Article 164(4) gives a state minister six months to become a member of the
+  // state legislature, and Article 101(2) stops anyone sitting in Parliament
+  // and in a state house at the same time - so a state minister linked to a
+  // sitting MP is always a mis-link, and always the same cause: a minister
+  // roster that publishes no constituency, matched to a profile by name alone.
+  // It has happened twice, both times pointing a state minister at a Member of
+  // Parliament of a rival party who merely shares the name - Uttar Pradesh's
+  // Rakesh Rathour "Guru" at Sitapur's Congress MP Rakesh Rathore, Tamil Nadu's
+  // N. Anand at Vellore's DMK MP D.M.K. Anand. The cost is not a wrong label:
+  // lib/data.ts renders the minister's role on the linked profile, so that MP's
+  // page becomes a second ratable page for the minister and a visitor can rate
+  // one person twice. Blocks publish.
+  for (const gov of loadJson<StateGovernment>('state_government.json')) {
+    for (const m of gov.ministers || []) {
+      const linked = m.politicianId ? polById.get(m.politicianId) : undefined;
+      if (!linked) continue; // absent or dangling - handled above
+      if (linked.house === 'Lok Sabha' || linked.house === 'Rajya Sabha') {
+        issues.push({
+          politicianId: m.id, name: m.name, severity: 'error',
+          message: `${gov.stateCode} minister is linked to ${linked.id}, a sitting ${linked.house} member (${linked.name}, ${linked.party}) - nobody holds a state ministry and a seat in Parliament at once, so this is a different person of the same name`,
+        });
+      } else if (linked.stateCode !== gov.stateCode) {
+        issues.push({
+          politicianId: m.id, name: m.name, severity: 'error',
+          message: `${gov.stateCode} minister is linked to ${linked.id}, a member of the ${linked.state} legislature`,
+        });
+      }
+    }
+  }
+
   // Conservative: normalised EXACT name match, within the same state only. No
   // fuzzy matching - a false positive here is cheap (a human confirms the warn),
   // a false blocking error is not.
