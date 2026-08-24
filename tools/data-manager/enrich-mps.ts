@@ -28,7 +28,7 @@ const WP_API = 'https://en.wikipedia.org/w/api.php';
 const WD_API = 'https://www.wikidata.org/w/api.php';
 const COMMONS_API = 'https://commons.wikimedia.org/w/api.php';
 const WIKI_TITLE = 'List_of_members_of_the_18th_Lok_Sabha';
-const UA = 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)';
+const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
 const TODAY = new Date().toISOString().slice(0, 10);
 const LIMIT = process.env.ENRICH_LIMIT ? parseInt(process.env.ENRICH_LIMIT, 10) : Infinity;
 

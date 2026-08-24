@@ -22,7 +22,7 @@ const SEED_DIR = resolve(ROOT, 'data', 'seed');
 const BASE = 'https://www.myneta.info/LokSabha2024';
 const LIST = (page: number) => `${BASE}/index.php?action=summary&subAction=winner_analyzed&sort=candidate&page=${page}`;
 const CAND = (id: string) => `${BASE}/candidate.php?candidate_id=${id}`;
-const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; shelock221bholmes@gmail.com)';
+const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; vikas070696@gmail.com)';
 const TODAY = new Date().toISOString().slice(0, 10);
 const MAX_PAGES = process.env.AFF_LIMIT ? parseInt(process.env.AFF_LIMIT, 10) : 30;
 

@@ -19,7 +19,7 @@ const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z
 const SEED = resolve(ROOT, 'data', 'seed', 'politicians.json');
 const WD_API = 'https://www.wikidata.org/w/api.php';
 const COMMONS_API = 'https://commons.wikimedia.org/w/api.php';
-const UA = 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)';
+const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
 const LIMIT = process.env.PHOTO_LIMIT ? parseInt(process.env.PHOTO_LIMIT, 10) : Infinity;
 
 // Language editions to consult, in preference order (portrait quality / recency).

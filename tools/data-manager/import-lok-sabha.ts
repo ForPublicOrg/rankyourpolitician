@@ -171,7 +171,7 @@ function validateCounts(seats: Seat[]) {
 async function fetchWikitext(): Promise<string> {
   const arg = process.argv[2];
   if (arg && existsSync(arg)) return readFileSync(arg, 'utf8');
-  const r = await fetch(API, { headers: { 'User-Agent': 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)' } });
+  const r = await fetch(API, { headers: { 'User-Agent': 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)' } });
   if (!r.ok) throw new Error(`Wikipedia API HTTP ${r.status}`);
   const j = (await r.json()) as any;
   const wt = j?.parse?.wikitext;
