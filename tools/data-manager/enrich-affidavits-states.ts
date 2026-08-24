@@ -25,7 +25,7 @@ import type { Politician, Fact } from '../../lib/types';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..', '..');
 const SEED_DIR = resolve(ROOT, 'data', 'seed');
-const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; vikas070696@gmail.com)';
+const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; shelock221bholmes@gmail.com)';
 const TODAY = new Date().toISOString().slice(0, 10);
 const MAX_PAGES = 60;
 // A state page must match at least this share of our seats to be applied. The

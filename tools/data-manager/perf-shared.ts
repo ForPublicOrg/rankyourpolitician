@@ -34,7 +34,7 @@ import { readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import type { Politician, Fact, PerfMetric, MetricExemptReason } from '../../lib/types';
 
-export const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
+export const UA = 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)';
 // Public token sansad.in's own frontend ships for the RS attendance service.
 export const RS_BEARER = 'Y0hKaFltaGhkQzVyYVhKaGJn';
 /** A percentage needs a meaningful base of recorded sitting days. */

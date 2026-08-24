@@ -20,7 +20,7 @@
  */
 import type { Fact } from '../../lib/types';
 
-export const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; vikas070696@gmail.com)';
+export const UA = 'Mozilla/5.0 (RankYourPolitician civic-info; shelock221bholmes@gmail.com)';
 
 /** Fetch with retries. `null` means "not found" or "gave up" - never throws. */
 export async function getHtml(url: string, tries = 4): Promise<string | null> {

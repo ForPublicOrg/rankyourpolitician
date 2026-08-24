@@ -27,7 +27,7 @@ import type { Politician } from '../../lib/types';
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..', '..');
 const SEED = resolve(ROOT, 'data', 'seed', 'politicians.json');
 const WD_API = 'https://www.wikidata.org/w/api.php';
-const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
+const UA = 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)';
 const DRY = process.env.VERIFY_DRY === '1';
 
 async function api(params: Record<string, string>): Promise<any> {

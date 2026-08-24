@@ -32,7 +32,7 @@ const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z
 const SEED = (f: string) => resolve(ROOT, 'data', 'seed', f);
 const WD_API = 'https://www.wikidata.org/w/api.php';
 const COMMONS_API = 'https://commons.wikimedia.org/w/api.php';
-const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
+const UA = 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)';
 const DRY = !!process.env.DRY;
 
 // A name-search hit is only trusted when its description marks it as an Indian

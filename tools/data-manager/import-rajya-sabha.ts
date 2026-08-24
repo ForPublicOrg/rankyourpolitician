@@ -20,7 +20,7 @@ const SEED_DIR = resolve(ROOT, 'data', 'seed');
 const WP_API = 'https://en.wikipedia.org/w/api.php';
 const WIKI_TITLE = 'List_of_current_members_of_the_Rajya_Sabha';
 const WIKI_URL = `https://en.wikipedia.org/wiki/${WIKI_TITLE}`;
-const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
+const UA = 'RankYourPolitician-DataManager/1.0 (civic info; shelock221bholmes@gmail.com)';
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const STATE2CODE: Record<string, string> = {
