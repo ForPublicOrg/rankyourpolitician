@@ -212,7 +212,11 @@ export function SeatCard({
       </div>
       <p className="mt-2.5 text-xl font-extrabold tracking-tight text-ink">{seat.constituencyName}</p>
       <p className="mt-0.5 text-sm text-ink-faint">
-        {seat.acNumber ? `${tr('area.typeAc')} ${seat.acNumber}` : tr('area.typeAc')}
+        {(() => {
+          // A Lok Sabha by-poll seat joins a PC, not an AC - say so.
+          const type = tr(seat.constituencyId.startsWith('pc-') ? 'area.typePc' : 'area.typeAc');
+          return seat.acNumber ? `${type} ${seat.acNumber}` : type;
+        })()}
         {seat.districts.length > 0 && ` · ${seat.districts.join(', ')}`}
       </p>
 

@@ -108,7 +108,9 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
           <>
             <PhaseChip phase={phase} tr={tr} />
             <Chip tone="neutral" icon="pin">{seat.state}</Chip>
-            {seat.acNumber && <Chip tone="neutral">{`${tr('area.typeAc')} ${seat.acNumber}`}</Chip>}
+            {seat.acNumber && (
+              <Chip tone="neutral">{`${tr(seat.constituencyId.startsWith('pc-') ? 'area.typePc' : 'area.typeAc')} ${seat.acNumber}`}</Chip>
+            )}
           </>
         }
         title={seat.constituencyName}
