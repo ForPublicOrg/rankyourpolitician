@@ -3,9 +3,11 @@
 // service-account key that never leaves it. Never imported by the deployed site.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy, CagReport } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord, ElectionEvent, Minister, StateGovernment, LegislatureTermsFile, SeatVacancy, CagReport, LocalBody, UnionMinistriesFile } from '../../lib/types';
 import { splitDistricts, suspectedDistrictSplits } from './ac-districts-shared';
 import { canonicalCagUrl } from './cag-shared';
+import { unmatchedPortfolios } from '../../lib/ministries';
+import { localChairs, localPersonId } from '../../lib/local-bodies';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -501,8 +503,86 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
   }
 
   validateElections(issues, politicians, consIds);
+  validateLocalBodies(issues, politicians);
+  validateUnionMinistries(issues, central);
 
   return { issues, ok: !issues.some((i) => i.severity === 'error') };
+}
+
+/**
+ * data/seed/local_bodies.json - city governments. The same rule as everywhere:
+ * every named person cites the page that names them. Plus:
+ *  - a body under an Administrator must not also name a head (contradiction);
+ *  - an elected council must name its head, else there is nothing to publish;
+ *  - a head linked to a sitting member must link to a member of THIS state
+ *    (one human, one ratable page - and never somebody else's page);
+ *  - profile ids must be unique across bodies.
+ */
+function validateLocalBodies(issues: Issue[], politicians: Politician[]) {
+  const path = resolve(SEED_DIR, 'local_bodies.json');
+  if (!existsSync(path)) return;
+  const bodies = JSON.parse(readFileSync(path, 'utf8')) as LocalBody[];
+  const rec = (b: LocalBody) => ({ id: b.id, name: b.name }) as Politician;
+  const polById = new Map(politicians.map((p) => [p.id, p]));
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+  const ids = new Set<string>();
+  const personIds = new Set<string>();
+  for (const b of bodies) {
+    const push = (severity: Issue['severity'], message: string) => issues.push({ politicianId: b.id, name: b.name, severity, message });
+    if (!b.id || ids.has(b.id)) push('error', `local body id "${b.id}" is missing or duplicated`);
+    ids.add(b.id);
+    if (!b.name?.trim() || !b.city?.trim() || !b.stateCode || !b.state) push('error', 'local body is missing name / city / state');
+    if (!b.head_title?.trim()) push('error', 'local body has no head_title');
+    if (!b.source_url || !b.source_name || !isoDate.test(b.retrieved_date || '')) push('error', 'local body has no complete citation (no citation, no claim)');
+    if (b.website && !/^https?:\/\//.test(b.website)) push('error', `website "${b.website}" is not a URL`);
+    if (b.status === 'administrator' && b.head) push('error', 'body is under an Administrator but also names a head - one of the two is stale');
+    if (b.status === 'elected_council' && !b.head) push('error', 'elected council with no head named - nothing verifiable to publish');
+    if (b.status !== 'administrator' && b.status !== 'elected_council') push('error', `unknown status "${b.status}"`);
+    for (const { role, person } of localChairs(b)) {
+      if (!person.name?.trim()) push('error', `${role} has no name`);
+      if (!person.source_url || !person.source_name || !isoDate.test(person.retrieved_date || '')) push('error', `${role} ${person.name} has no complete citation`);
+      if (person.since && !isoDate.test(person.since)) push('error', `${role} ${person.name} since must be ISO yyyy-mm-dd`);
+      if (person.politicianId) {
+        const p = polById.get(person.politicianId);
+        if (!p) push('error', `${role} ${person.name} links politicianId "${person.politicianId}" but no politician has that id`);
+        else if (p.stateCode !== b.stateCode) push('error', `${role} ${person.name} is linked to ${p.id}, a member of the ${p.state} legislature - a different person of the same name`);
+      }
+      const pid = localPersonId(b, role, person);
+      if (personIds.has(pid)) push('error', `profile id ${pid} is produced twice`);
+      personIds.add(pid);
+      void rec;
+    }
+  }
+}
+
+/**
+ * data/seed/union_ministries.json - the Cabinet Secretariat's schedule. Cited
+ * as one file; names unique; and every portfolio on the council list must join
+ * a schedule entry, else a ministry page shows nobody in charge of something
+ * a minister actually holds. That last one is a WARNING: a wording drift
+ * should be fixed, but it must not block a roster refresh.
+ */
+function validateUnionMinistries(issues: Issue[], central: Minister[]) {
+  const path = resolve(SEED_DIR, 'union_ministries.json');
+  if (!existsSync(path)) return;
+  const file = JSON.parse(readFileSync(path, 'utf8')) as UnionMinistriesFile;
+  const push = (severity: Issue['severity'], message: string) => issues.push({ politicianId: 'union_ministries', name: 'Union ministries', severity, message });
+  if (!file.entries?.length) return; // not yet imported - nothing to check, nothing rendered
+  if (!file.source_url || !file.source_name || !/^\d{4}-\d{2}-\d{2}$/.test(file.retrieved_date || '')) push('error', 'union_ministries.json has no complete source citation');
+  const seen = new Set<string>();
+  for (const e of file.entries) {
+    if (!e.id || seen.has(e.id)) push('error', `ministry id "${e.id}" is missing or duplicated`);
+    seen.add(e.id);
+    if (!e.name?.trim()) push('error', `entry ${e.order} has no name`);
+    if (e.website && !/^https?:\/\/([a-z0-9-]+\.)*(gov\.in|nic\.in)(\/|$)/i.test(e.website)) push('error', `${e.name}: website ${e.website} is not on a gov.in / nic.in host`);
+    for (const d of e.departments || []) {
+      if (!d.name?.trim()) push('error', `${e.name}: a department has no name`);
+      if (d.website && !/^https?:\/\/([a-z0-9-]+\.)*(gov\.in|nic\.in)(\/|$)/i.test(d.website)) push('error', `${e.name} / ${d.name}: website ${d.website} is not on a gov.in / nic.in host`);
+    }
+  }
+  for (const p of unmatchedPortfolios(file.entries, central)) {
+    push('warn', `council-list portfolio "${p}" joins no ministry or department in the schedule - /india/ministries shows nobody holding it`);
+  }
 }
 
 /**

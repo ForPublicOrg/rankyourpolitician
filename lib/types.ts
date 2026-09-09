@@ -630,7 +630,10 @@ export interface StateMinister {
 export interface StateGovernment {
   stateCode: string;
   state: string;
-  governmentStatus: 'elected' | 'presidents_rule' | 'uncertain';
+  /** 'administered': a Union Territory with no legislature and no Council of
+   *  Ministers - the President administers it through a Lieutenant Governor or
+   *  Administrator (Article 239), who is the `governor` record below. */
+  governmentStatus: 'elected' | 'presidents_rule' | 'uncertain' | 'administered';
   asOf?: string;
   confidence: 'high' | 'medium' | 'low';
   governor?: { name: string; title?: string; sourceUrl?: string };
@@ -904,4 +907,114 @@ export interface TopRatedEntry {
   rating_mean: number;
   /** All-time vote count behind rating_mean. */
   total_votes: number;
+}
+
+// ---- Urban local bodies: city governments (data/seed/local_bodies.json) ----
+//
+// The third tier of elected government. A Municipal Corporation's Mayor (or a
+// council's Chairperson) is the elected head of a city's government; the
+// Municipal Commissioner is the appointed officer who runs it. Both are named
+// here, always with the page that names them, because the whole point of the
+// tier is that a citizen can see who actually answers for their city.
+//
+// INFO-ONLY for now: a local head is never rated. Rating needs the same
+// affidavit + party record a sitting member carries, and a municipal roster
+// carries neither - so the profile says who holds the chair and how the body
+// is reached, and stops there. "One human, one ratable page" also means a
+// mayor who is ALSO a sitting MLA/MP is linked to that profile via
+// `politicianId` rather than given a second page.
+//
+// Seed-only, like officials and vacancies: it changes when the data manager
+// runs and we redeploy, so there is no runtime read and the pages stay ISR.
+export type LocalBodyKind = 'municipal_corporation' | 'municipality' | 'municipal_council' | 'municipal_board';
+
+/** Whether the body has an elected council at all. Councils lapse between
+ *  elections and an Administrator / Special Officer holds charge - a fact
+ *  worth publishing in its own right, never to be papered over with a name. */
+export type LocalBodyStatus = 'elected_council' | 'administrator';
+
+/** One named person on a local body, copied from the cited page. */
+export interface LocalBodyPerson {
+  name: string;
+  /** Only when the cited page prints it - municipal sites usually do not. */
+  party?: string;
+  /** ISO date the person assumed office, when the source states it. */
+  since?: string;
+  /** How the head was chosen, when the source states it. */
+  elected_by?: 'direct' | 'indirect';
+  /** Set when this is the same human as a sitting member in politicians.json;
+   *  the local profile then redirects there (one human, one ratable page). */
+  politicianId?: string;
+  source_url: string;
+  source_name: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+}
+
+export interface LocalBody {
+  /** Stable slug: `${stateCode}-${city}` lower-cased, e.g. "mh-pune". */
+  id: string;
+  kind: LocalBodyKind;
+  /** The body's own name, e.g. "Pune Municipal Corporation". */
+  name: string;
+  city: string;
+  state: string;
+  stateCode: string;
+  /** Seed district name(s) the city sits in - joins the district page. */
+  districts: string[];
+  /** The body's official website, proven live when the seed was generated. */
+  website?: string;
+  /** What the elected head is called: "Mayor", "Chairperson", "Chairman". */
+  head_title: string;
+  status: LocalBodyStatus;
+  /** A plain, cited statement for the reader - e.g. the council's term ended
+   *  and an Administrator holds charge. Rendered verbatim. */
+  status_note?: string;
+  /** The elected head (Mayor / Chairperson). Absent under an Administrator. */
+  head?: LocalBodyPerson;
+  deputy_head?: LocalBodyPerson;
+  /** The appointed Municipal Commissioner / Chief Executive, when the same
+   *  official site names them. Never a person-level claim beyond the name. */
+  commissioner?: LocalBodyPerson & { title?: string };
+  /** Citation for the body itself (name, website, district). */
+  source_url: string;
+  source_name: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+}
+
+// ---- Union ministries and departments (data/seed/union_ministries.json) ----
+//
+// The Government of India (Allocation of Business) Rules, 1961 - First
+// Schedule - is the one document that says which Ministries and Departments
+// exist. Everything here is that schedule's own wording; a minister's
+// `portfolios` (central_government.json) join to these by name (lib/ministries).
+// Websites are the ministry's own *.gov.in / *.nic.in domain, checked live at
+// import time. Seed-only, and small enough to import statically.
+export interface UnionDepartment {
+  name: string;
+  /** The schedule's Hindi name, transliterated - e.g. "Vitta Mantralaya". */
+  name_hi_translit?: string;
+  website?: string;
+}
+
+export interface UnionMinistry {
+  /** Stable slug of the name, e.g. "ministry-of-finance". */
+  id: string;
+  /** Position in the First Schedule - the order the Cabinet Secretariat uses. */
+  order: number;
+  /** A Ministry; a Department that stands alone (Atomic Energy, Space); or an
+   *  office of government (the Prime Minister's Office, Cabinet Secretariat). */
+  kind: 'ministry' | 'department' | 'office';
+  name: string;
+  name_hi_translit?: string;
+  website?: string;
+  departments: UnionDepartment[];
+}
+
+export interface UnionMinistriesFile {
+  source_url: string;
+  source_name: string;
+  /** The "last updated" date the Cabinet Secretariat prints on the schedule. */
+  schedule_last_updated?: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+  entries: UnionMinistry[];
 }

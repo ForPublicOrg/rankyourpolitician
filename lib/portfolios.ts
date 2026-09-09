@@ -7,7 +7,7 @@
 // any "(Independent Charge)" suffix stripped by normalizePortfolio().
 
 export function normalizePortfolio(name: string): string {
-  return name.replace(/\s*\(independent charge\)\s*/i, '').trim();
+  return name.replace(/\s*\((independent|additional) charge\)\s*/i, '').trim();
 }
 
 export const PORTFOLIO_MANDATE: Record<string, string> = {

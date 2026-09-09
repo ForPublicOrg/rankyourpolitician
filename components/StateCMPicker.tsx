@@ -14,8 +14,12 @@ export interface CmSummary {
   cmId?: string;
   cmPhoto?: string;
   governor?: string;
+  /** "Governor", "Lieutenant Governor" or "Administrator" - the record's own title. */
+  governorTitle?: string;
   mlas: number;
   presidentsRule?: boolean;
+  /** A Union Territory with no legislature: administered, not governed by a CM. */
+  administered?: boolean;
 }
 
 export default function StateCMPicker({ states }: { states: CmSummary[] }) {
@@ -46,6 +50,8 @@ export default function StateCMPicker({ states }: { states: CmSummary[] }) {
         <div className="mt-3 animate-scale-in rounded-2xl border border-brand/20 bg-white/90 p-4">
           {sel.presidentsRule ? (
             <p className="text-sm text-ink-soft">{t('stateGov.presidentsRule')}</p>
+          ) : sel.administered ? (
+            <p className="text-sm text-ink-soft">{t('local.administered')}</p>
           ) : sel.cmName ? (
             <Link href={sel.cmId ? `/person/${sel.cmId}` : `/state/${sel.stateCode}`} className="flex items-center gap-3">
               <Avatar name={sel.cmName} src={sel.cmPhoto} size={52} />
@@ -62,12 +68,14 @@ export default function StateCMPicker({ states }: { states: CmSummary[] }) {
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-line/70 pt-3 text-xs text-ink-soft">
             {sel.governor && (
               <span>
-                <span className="font-semibold">{t('stateGov.governor')}:</span> {sel.governor}
+                <span className="font-semibold">{sel.governorTitle || t('stateGov.governor')}:</span> {sel.governor}
               </span>
             )}
-            <span>
-              <span className="font-semibold tabular-nums">{sel.mlas}</span> {t('hierarchyPage.mlasInAssembly')}
-            </span>
+            {sel.mlas > 0 && (
+              <span>
+                <span className="font-semibold tabular-nums">{sel.mlas}</span> {t('hierarchyPage.mlasInAssembly')}
+              </span>
+            )}
           </div>
           <Link
             href={`/state/${sel.stateCode}`}

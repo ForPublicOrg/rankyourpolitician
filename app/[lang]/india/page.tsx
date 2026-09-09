@@ -70,6 +70,19 @@ export default async function IndiaPage({ params }: { params: Promise<LangParams
         </SectionCard>
       </Reveal>
 
+      {/* The machinery the ministers run: every ministry and department of the
+          Union, from the Cabinet Secretariat's own schedule. */}
+      <Reveal className="mt-6">
+        <Link href="/india/ministries" className="pressable flex items-center gap-3 rounded-3xl glass p-4 hover:shadow-lift">
+          <span className="inline-grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand"><Icon name="building" size={22} /></span>
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold text-ink">{tr('ministries.indiaLink')}</p>
+            <p className="mt-0.5 text-xs text-ink-faint">{tr('ministries.indiaLinkHelp')}</p>
+          </div>
+          <Icon name="arrow" size={18} className="shrink-0 text-brand" />
+        </Link>
+      </Reveal>
+
       {/* The Republic's frame around the government: Head of State, presiding
           officers, and the statutory Opposition leaders. Info-only, never rated. */}
       {constitutional.length > 0 && (

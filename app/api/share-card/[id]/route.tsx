@@ -239,7 +239,8 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
   const roleRaw =
     person.current_position ||
     (person.house ? HOUSE_ROLE[person.house] : '') ||
-    (person.kind === 'official' ? (person.service ? `${person.service} · public office` : 'Appointed public office') : '');
+    (person.kind === 'official' ? (person.service ? `${person.service} · public office` : 'Appointed public office') : '') ||
+    (person.kind === 'local' ? 'City government' : '');
   const role = roleRaw && roleRaw.length > 46 ? roleRaw.slice(0, 44).trimEnd() + '…' : roleRaw;
 
   // Blurred teases from the committed seed (facts + contact). No live reads.

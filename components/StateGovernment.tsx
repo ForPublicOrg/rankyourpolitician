@@ -12,6 +12,8 @@ export interface StateGovLabels {
   governor: string;
   holds: string;
   presidentsRule: string;
+  /** UT with no legislature - administered through an LG / Administrator. */
+  administered: string;
   beingVerified: string;
   verifyNote: string;
   asOf: string;
@@ -68,6 +70,8 @@ export default function StateGovernmentSection({ gov, labels }: { gov: StateGove
 
       {gov.governmentStatus === 'presidents_rule' ? (
         <p className="mt-3 rounded-xl bg-amber-50 p-3 text-sm text-ink">{labels.presidentsRule}</p>
+      ) : gov.governmentStatus === 'administered' ? (
+        <p className="mt-3 rounded-xl bg-paper-soft p-3 text-sm text-ink-soft">{labels.administered}</p>
       ) : (
         <>
           {(gov.confidence !== 'high' || gov.governmentStatus === 'uncertain') && (

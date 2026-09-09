@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getPerson, getAllPersonIds, getPersonSentiment, officialPersonId, isThinProfile, type PersonView } from '@/lib/data';
+import { getPerson, getAllPersonIds, getPersonSentiment, getUnionMinistries, officialPersonId, isThinProfile, type PersonView } from '@/lib/data';
+import { departmentsForPortfolio } from '@/lib/ministries';
+import { localRoleTitle } from '@/lib/local-bodies';
+import LocalBodyCard from '@/components/LocalBodyCard';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
@@ -171,9 +174,19 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
         <ConstitutionalProfile p={person} tr={tr} locale={locale} />
       </>
     );
+  if (person.kind === 'local')
+    return (
+      <>
+        <JsonLd data={personJsonLd(person)} />
+        <LocalProfile p={person} tr={tr} locale={locale} />
+      </>
+    );
 
   // ---- Elected person (MP and/or minister) --------------------------------
   const sentiment = await getPersonSentiment(id);
+  // The departments inside each Union ministry this person holds (Cabinet
+  // Secretariat schedule). State portfolios are state departments - not joined.
+  const ministryEntries = person.ministerRank ? (await getUnionMinistries()).entries : [];
   // No ad unit on an un-enriched stub (matches the noindex in generateMetadata).
   const thin = isThinProfile(person);
   // Readable prose bio built from this person's own cited data - replaces the
@@ -445,16 +458,41 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
           <ul className="mt-3 space-y-2">
             {person.portfolios.map((pf) => {
               const mandate = portfolioMandate(pf);
+              const depts = ministryEntries.length ? departmentsForPortfolio(ministryEntries, pf) : undefined;
               return (
                 <li key={pf} className="rounded-xl bg-white px-4 py-3 shadow-sm">
                   <p className="flex items-center gap-1.5 font-semibold text-brand-ink">
                     <Icon name="check" size={14} className="shrink-0 text-brand" /> {pf}
                   </p>
                   {mandate && <p className="mt-1 pl-5 text-sm text-ink-soft">{mandate}</p>}
+                  {depts && depts.departments.length > 0 && (
+                    <div className="mt-2 pl-5">
+                      <p className="text-[11px] font-bold uppercase tracking-wide text-ink-faint">{tr('ministries.profileDepartments')}</p>
+                      <ul className="mt-1 flex flex-wrap gap-1.5">
+                        {depts.departments.map((d) => (
+                          <li key={d.name} className="rounded-full border border-line bg-paper-soft px-2.5 py-0.5 text-xs text-ink-soft">{d.name}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {depts && (
+                    <p className="mt-1.5 pl-5 text-xs">
+                      <Link href={`/india/ministries#${depts.ministry.id}`} className="inline-flex items-center gap-1 text-brand hover:underline">
+                        <Icon name="link" size={11} /> {depts.ministry.name}
+                      </Link>
+                    </p>
+                  )}
                 </li>
               );
             })}
           </ul>
+          {ministryEntries.length > 0 && (
+            <p className="mt-3 text-sm">
+              <Link href="/india/ministries" className="inline-flex items-center gap-1 font-medium text-brand hover:underline">
+                {tr('ministries.profileSeeAll')} <Icon name="arrow" size={13} />
+              </Link>
+            </p>
+          )}
 
           {/* Audit and oversight - a POINTER, deliberately never a count.
               A CAG report audits a department over a stated period, and we hold
@@ -985,6 +1023,85 @@ function RoleAccountabilityCard({
           </p>
         )}
       </details>
+    </div>
+  );
+}
+
+/**
+ * A chair on a city government: the elected Mayor / Chairperson, their deputy,
+ * or the appointed Municipal Commissioner. INFO-ONLY - never rated (the vote
+ * API refuses every non-elected kind). The page says who holds the chair, what
+ * body it is, how the body is reached, and where the name came from.
+ */
+function LocalProfile({ p, tr, locale }: { p: PersonView; tr: (k: string, v?: Record<string, string | number>) => string; locale: string }) {
+  const body = p.localBody!;
+  const role = p.localRole!;
+  const title = localRoleTitle(body, role);
+  const elected = role !== 'commissioner';
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-5">
+      <Breadcrumbs
+        items={[
+          { label: tr('levels.national'), href: '/' },
+          ...(p.stateCode && p.state ? [{ label: p.state, href: `/state/${p.stateCode}` }] : []),
+          ...(p.district ? [{ label: p.district, href: `/district/${p.stateCode}/${encodeURIComponent(p.district)}` }] : []),
+          { label: p.name },
+        ]}
+      />
+
+      <div className="mt-4 glass rounded-3xl p-5 sm:p-7">
+        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+          <Avatar name={p.name} size={84} />
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+              <Chip tone={elected ? 'brand' : 'neutral'} icon={elected ? 'home' : 'shield'}>{title}</Chip>
+              <Chip tone="neutral">{tr(`local.kind.${body.kind}`)}</Chip>
+            </div>
+            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-ink">{p.name}</h1>
+            <div className="mt-1 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+              {p.party && <PartyChip party={p.party} />}
+              <Link href={`/local#${body.id}`} className="flex items-center gap-1 text-sm text-brand hover:underline">
+                <Icon name="pin" size={15} /> {body.name}{p.state ? `, ${p.state}` : ''}
+              </Link>
+            </div>
+            <p className="mt-3 text-ink-soft">{elected ? tr('local.roleElected') : tr('local.roleAppointed')}</p>
+            {p.as_of && (
+              <p className="mt-1 text-sm text-ink-faint">{tr('local.since')} {formatDate(p.as_of, locale)}</p>
+            )}
+            <div className="mt-3 flex justify-center sm:justify-start">
+              <ShareRow id={p.id} name={p.name} kind="official" />
+            </div>
+          </div>
+        </div>
+        <p className="mt-4 flex items-start gap-2 rounded-xl bg-paper-soft p-3 text-sm text-ink-soft">
+          <Icon name="info" size={16} className="mt-0.5 shrink-0 text-ink-faint" /> {tr('local.infoOnly')}
+        </p>
+      </div>
+
+      {/* The body itself: every chair, the site, the citation. */}
+      <section className="mt-5">
+        <h2 className="mb-3 text-xl font-bold text-ink">{tr('local.bodyTitle')}</h2>
+        <LocalBodyCard body={body} tr={tr} locale={locale} />
+      </section>
+
+      {/* Provenance for this person's own row. */}
+      <section className="mt-5 glass rounded-3xl p-5 sm:p-6">
+        <h2 className="flex items-center gap-2 font-bold text-ink"><Icon name="link" size={18} className="text-brand" /> {tr('common.source')}</h2>
+        <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm text-ink-soft">
+          {p.sources[0] && (
+            <a href={p.sources[0][0]} target="_blank" rel="noopener noreferrer nofollow" className="text-brand hover:underline">{p.sources[0][1]}</a>
+          )}
+          <Link href={`/grievance?ref=${encodeURIComponent(p.id)}`} className="text-xs text-ink-faint hover:underline">· {tr('officials.reportIncorrect')}</Link>
+        </p>
+      </section>
+
+      <Link href="/local" className="mt-5 flex items-center gap-3 rounded-2xl border border-accent/30 bg-accent-soft p-4 shadow-soft hover:shadow-lift">
+        <span className="inline-grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-accent text-white"><Icon name="home" size={22} /></span>
+        <span className="font-semibold text-ink">{tr('local.allCta')}</span>
+        <Icon name="arrow" size={20} className="ml-auto text-accent-ink" />
+      </Link>
+
+      <div className="mt-5"><AdSlot /></div>
     </div>
   );
 }

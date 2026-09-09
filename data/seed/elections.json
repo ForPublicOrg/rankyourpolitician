@@ -1,7 +1,150 @@
 [
   {
+    "id": "ac-bye-2026-10",
+    "title": "By-elections to five Assembly constituencies",
+    "kind": "assembly-bye",
+    "authority": "ECI",
+    "schedule": {
+      "notification": "2026-09-09",
+      "nominationLast": "2026-09-16",
+      "scrutiny": "2026-09-17",
+      "withdrawalLast": "2026-09-19",
+      "pollDate": "2026-10-06",
+      "pollOpen": "07:00",
+      "pollClose": "18:00",
+      "countingDate": "2026-10-09",
+      "completeBy": "2026-10-11"
+    },
+    "affidavit_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
+    "source_url": "https://www.eci.gov.in/bye-elections",
+    "source_name": "Election Commission of India - Schedule for bye-elections to 05 (Five) Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 (One) Parliamentary Constituency of Assam (Press Note ECI/PN/114/2026)",
+    "retrieved_date": "2026-09-09",
+    "seats": [
+      {
+        "slug": "madurantakam-tn-2026-10",
+        "constituencyId": "ac-tn-madurantakam",
+        "constituencyName": "Madurantakam",
+        "state": "Tamil Nadu",
+        "stateCode": "TN",
+        "districts": [
+          "Kancheepuram"
+        ],
+        "acNumber": 35,
+        "eci": {
+          "stateCode": "S22",
+          "acNo": 35
+        },
+        "candidates": []
+      },
+      {
+        "slug": "dharapuram-tn-2026-10",
+        "constituencyId": "ac-tn-dharapuram",
+        "constituencyName": "Dharapuram",
+        "state": "Tamil Nadu",
+        "stateCode": "TN",
+        "districts": [
+          "Erode"
+        ],
+        "acNumber": 101,
+        "eci": {
+          "stateCode": "S22",
+          "acNo": 101
+        },
+        "candidates": []
+      },
+      {
+        "slug": "thattanchavady-py-2026-10",
+        "constituencyId": "ac-py-thattanchavady",
+        "constituencyName": "Thattanchavady",
+        "state": "Puducherry",
+        "stateCode": "PY",
+        "districts": [
+          "Puducherry"
+        ],
+        "acNumber": 9,
+        "eci": {
+          "stateCode": "U07",
+          "acNo": 9
+        },
+        "candidates": []
+      },
+      {
+        "slug": "rejinagar-wb-2026-10",
+        "constituencyId": "ac-wb-rejinagar",
+        "constituencyName": "Rejinagar",
+        "state": "West Bengal",
+        "stateCode": "WB",
+        "districts": [
+          "Murshidabad"
+        ],
+        "acNumber": 70,
+        "eci": {
+          "stateCode": "S25",
+          "acNo": 70
+        },
+        "candidates": []
+      },
+      {
+        "slug": "nandigram-wb-2026-10",
+        "constituencyId": "ac-wb-nandigram",
+        "constituencyName": "Nandigram",
+        "state": "West Bengal",
+        "stateCode": "WB",
+        "districts": [
+          "Purba Medinipur"
+        ],
+        "acNumber": 210,
+        "eci": {
+          "stateCode": "S25",
+          "acNo": 210
+        },
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "id": "pc-bye-2026-10",
+    "title": "By-election to the Nagaon Lok Sabha constituency",
+    "kind": "lok-sabha-bye",
+    "authority": "ECI",
+    "schedule": {
+      "notification": "2026-09-09",
+      "nominationLast": "2026-09-16",
+      "scrutiny": "2026-09-17",
+      "withdrawalLast": "2026-09-19",
+      "pollDate": "2026-10-06",
+      "pollOpen": "07:00",
+      "pollClose": "18:00",
+      "countingDate": "2026-10-09",
+      "completeBy": "2026-10-11"
+    },
+    "affidavit_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-PC-BYE-2-64&election=34-PC-BYE-2-64",
+    "source_url": "https://www.eci.gov.in/bye-elections",
+    "source_name": "Election Commission of India - Schedule for bye-elections to 05 (Five) Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 (One) Parliamentary Constituency of Assam (Press Note ECI/PN/114/2026)",
+    "retrieved_date": "2026-09-09",
+    "seats": [
+      {
+        "slug": "nagaon-as-2026-10",
+        "constituencyId": "pc-as-nagaon",
+        "constituencyName": "Nagaon",
+        "state": "Assam",
+        "stateCode": "AS",
+        "districts": [
+          "Morigaon",
+          "Nagaon"
+        ],
+        "acNumber": 9,
+        "eci": {
+          "stateCode": "S03",
+          "acNo": 9
+        },
+        "candidates": []
+      }
+    ]
+  },
+  {
     "id": "ac-bye-2026-07",
-    "title": "Assembly by-elections",
+    "title": "By-elections to three Assembly constituencies",
     "kind": "assembly-bye",
     "authority": "ECI",
     "schedule": {
@@ -19,7 +162,7 @@
     "affidavit_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
     "source_url": "https://www.eci.gov.in/bye-elections",
     "source_name": "Election Commission of India - Schedule for bye-elections to 03 Assembly Constituencies of Bihar, Madhya Pradesh and Gujarat",
-    "retrieved_date": "2026-08-03",
+    "retrieved_date": "2026-09-09",
     "seats": [
       {
         "slug": "bankipur-br-2026-07",
@@ -48,6 +191,7 @@
             "gender": "male",
             "age": 26,
             "photo_path": "/candidates/bankipur-br-2026-07/abhay-choudhary.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -92,8 +236,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2971"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "anil-das",
@@ -107,6 +250,7 @@
             "gender": "male",
             "age": 41,
             "photo_path": "/candidates/bankipur-br-2026-07/anil-das.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -151,8 +295,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2955"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ashok-kumar",
@@ -166,6 +309,7 @@
             "gender": "male",
             "age": 51,
             "photo_path": "/candidates/bankipur-br-2026-07/ashok-kumar.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -210,8 +354,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2961"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "bagish-nandan",
@@ -225,6 +368,7 @@
             "gender": "male",
             "age": 44,
             "photo_path": "/candidates/bankipur-br-2026-07/bagish-nandan.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -269,8 +413,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2968"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "baijnath-prasad",
@@ -284,6 +427,7 @@
             "gender": "male",
             "age": 61,
             "photo_path": "/candidates/bankipur-br-2026-07/baijnath-prasad.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -328,8 +472,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2965"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "binod-ray",
@@ -343,6 +486,7 @@
             "gender": "male",
             "age": 44,
             "photo_path": "/candidates/bankipur-br-2026-07/binod-ray.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -387,8 +531,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2970"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "brajesh-patel",
@@ -402,6 +545,7 @@
             "gender": "male",
             "age": 49,
             "photo_path": "/candidates/bankipur-br-2026-07/brajesh-patel.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -446,8 +590,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2960"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "jitendra-dubey",
@@ -461,6 +604,7 @@
             "gender": "male",
             "age": 62,
             "photo_path": "/candidates/bankipur-br-2026-07/jitendra-dubey.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -505,8 +649,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2972"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "lalu-prasad-yadav",
@@ -523,7 +666,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "manisha-sharma",
@@ -537,6 +680,7 @@
             "gender": "female",
             "age": 49,
             "photo_path": "/candidates/bankipur-br-2026-07/manisha-sharma.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -581,8 +725,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2962"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "manoranjan-kumar-shrivastava",
@@ -596,6 +739,7 @@
             "gender": "male",
             "age": 56,
             "photo_path": "/candidates/bankipur-br-2026-07/manoranjan-kumar-shrivastava.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -640,8 +784,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2976"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "mirtunjay-kumar",
@@ -655,6 +798,7 @@
             "gender": "male",
             "age": 30,
             "photo_path": "/candidates/bankipur-br-2026-07/mirtunjay-kumar.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -699,8 +843,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2957"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "neeraj-kumar",
@@ -714,6 +857,7 @@
             "gender": "male",
             "age": 32,
             "photo_path": "/candidates/bankipur-br-2026-07/neeraj-kumar.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -758,8 +902,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2964"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "niranjan-kumar-acharya",
@@ -773,6 +916,7 @@
             "gender": "male",
             "age": 48,
             "photo_path": "/candidates/bankipur-br-2026-07/niranjan-kumar-acharya.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -817,8 +961,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2950"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "nitish-kumar",
@@ -832,6 +975,7 @@
             "gender": "male",
             "age": 25,
             "photo_path": "/candidates/bankipur-br-2026-07/nitish-kumar.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -876,8 +1020,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2963"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "pradeep-kumar",
@@ -891,6 +1034,7 @@
             "gender": "male",
             "age": 32,
             "photo_path": "/candidates/bankipur-br-2026-07/pradeep-kumar.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -935,8 +1079,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2969"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "prashant-kishor",
@@ -950,51 +1093,8 @@
             "gender": "male",
             "age": 49,
             "photo_path": "/candidates/bankipur-br-2026-07/prashant-kishor.webp",
-            "facts": [
-              {
-                "field_type": "assets_total",
-                "value": "₹2,08,07,61,506 (~208 Crore)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "liabilities_total",
-                "value": "₹6,32,91,765 (~6 Crore)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "criminal_cases_declared",
-                "value": "8",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "education",
-                "value": "Post Graduate",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "profession",
-                "value": "Political Advisor & Consultant",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              }
-            ],
-            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
-            "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
+            "politicianId": "bankipur-ac-br-prashant-kishor",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
             "criminal": {
               "politician_id": "cand:bankipur-br-2026-07:prashant-kishor",
               "declared_total": 8,
@@ -1181,8 +1281,51 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Bankipur by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
-            "politicianId": "bankipur-ac-br-prashant-kishor"
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹2,08,07,61,506 (~208 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹6,32,91,765 (~6 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "8",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Political Advisor & Consultant",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "prem-shankar-prasad",
@@ -1199,7 +1342,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "rambabu-prasad",
@@ -1213,6 +1356,7 @@
             "gender": "male",
             "age": 49,
             "photo_path": "/candidates/bankipur-br-2026-07/rambabu-prasad.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -1257,8 +1401,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2958"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "rekha-kumari",
@@ -1272,51 +1415,7 @@
             "gender": "female",
             "age": 46,
             "photo_path": "/candidates/bankipur-br-2026-07/rekha-kumari.webp",
-            "facts": [
-              {
-                "field_type": "assets_total",
-                "value": "₹8,17,47,579 (~8 Crore)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "liabilities_total",
-                "value": "₹3,31,58,451 (~3 Crore)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "criminal_cases_declared",
-                "value": "1",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "education",
-                "value": "Graduate",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "profession",
-                "value": "Businesswoman",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              }
-            ],
-            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
-            "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
             "criminal": {
               "politician_id": "cand:bankipur-br-2026-07:rekha-kumari",
               "declared_total": 1,
@@ -1370,7 +1469,51 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Bankipur by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954"
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹8,17,47,579 (~8 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹3,31,58,451 (~3 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "1",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Businesswoman",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2954",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "shukesh-kumar",
@@ -1384,6 +1527,7 @@
             "gender": "male",
             "age": 29,
             "photo_path": "/candidates/bankipur-br-2026-07/shukesh-kumar.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -1428,8 +1572,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2967"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "sikandar-kumar",
@@ -1443,43 +1586,7 @@
             "gender": "male",
             "age": 43,
             "photo_path": "/candidates/bankipur-br-2026-07/sikandar-kumar.webp",
-            "facts": [
-              {
-                "field_type": "assets_total",
-                "value": "₹2,69,00,000 (~2 Crore)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "liabilities_total",
-                "value": "₹83,00,000 (~83 Lacs)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "criminal_cases_declared",
-                "value": "3",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "education",
-                "value": "Graduate",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              }
-            ],
-            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
-            "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
             "criminal": {
               "politician_id": "cand:bankipur-br-2026-07:sikandar-kumar",
               "declared_total": 3,
@@ -1571,7 +1678,43 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Bankipur by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974"
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹2,69,00,000 (~2 Crore)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹83,00,000 (~83 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "3",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2974",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "suraj-kumar-yadav",
@@ -1585,6 +1728,7 @@
             "gender": "male",
             "age": 29,
             "photo_path": "/candidates/bankipur-br-2026-07/suraj-kumar-yadav.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -1629,8 +1773,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2959"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "tanvir-alam",
@@ -1644,51 +1787,7 @@
             "gender": "male",
             "age": 45,
             "photo_path": "/candidates/bankipur-br-2026-07/tanvir-alam.webp",
-            "facts": [
-              {
-                "field_type": "assets_total",
-                "value": "₹40,36,675 (~40 Lacs)",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "liabilities_total",
-                "value": "₹0",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "criminal_cases_declared",
-                "value": "4",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "education",
-                "value": "Graduate",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              },
-              {
-                "field_type": "profession",
-                "value": "Social Activist & Businessman",
-                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
-                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Bankipur by-election 30-07-2026"
-              }
-            ],
-            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
-            "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
             "criminal": {
               "politician_id": "cand:bankipur-br-2026-07:tanvir-alam",
               "declared_total": 4,
@@ -1828,7 +1927,51 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Bankipur by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952"
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹40,36,675 (~40 Lacs)",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹0",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "4",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Graduate",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Social Activist & Businessman",
+                "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2952",
+                "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Bankipur by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "upendra-sahani",
@@ -1842,6 +1985,7 @@
             "gender": "male",
             "age": 55,
             "photo_path": "/candidates/bankipur-br-2026-07/upendra-sahani.webp",
+            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -1886,8 +2030,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2949"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "mithilesh-kumar",
@@ -1904,7 +2047,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "abhishek-kumar",
@@ -1921,7 +2064,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "abhishek-srivastava",
@@ -1938,7 +2081,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "anita-chauhan",
@@ -1955,7 +2098,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "gorakh-ram",
@@ -1972,7 +2115,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "mahesh-kumar",
@@ -1989,7 +2132,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "navin-tiwari",
@@ -2006,7 +2149,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "priyanshu-raj",
@@ -2022,7 +2165,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "radheshyam-alias-radheshyam-gupta",
@@ -2039,7 +2182,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "rajib-ranjan-sinha",
@@ -2056,7 +2199,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "rishikesh-narayan-sinha",
@@ -2073,7 +2216,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "shiv-gandhi",
@@ -2090,7 +2233,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "umesh-kumar",
@@ -2107,7 +2250,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "vina-mandavi",
@@ -2124,7 +2267,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "vinay-kumar-jha",
@@ -2141,7 +2284,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           }
         ],
         "result": {
@@ -2417,6 +2560,7 @@
             "gender": "male",
             "age": 78,
             "photo_path": "/candidates/manjalpur-gj-2026-07/bhikhabhai-rabari-b-e-mechanical.webp",
+            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2461,8 +2605,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6821"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "satendrabhai-patel-satish-patel",
@@ -2476,6 +2619,8 @@
             "gender": "male",
             "age": 62,
             "photo_path": "/candidates/manjalpur-gj-2026-07/satendrabhai-patel-satish-patel.webp",
+            "politicianId": "manjalpur-ac-gj-satendrabhai-patel-satish-patel",
+            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2520,9 +2665,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/Gujarat2022/candidate.php?candidate_id=6822",
-            "politicianId": "manjalpur-ac-gj-satendrabhai-patel-satish-patel"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "dharmeshbhai-patel",
@@ -2539,7 +2682,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "dinesh-ramakant-vyas",
@@ -2556,7 +2699,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "pareshkumar-brahmbhatt",
@@ -2573,7 +2716,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "rathod-paresh-vinodkumar",
@@ -2590,7 +2733,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ratnasagar-rajrajeshvar-dhulabhai",
@@ -2607,7 +2750,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           }
         ],
         "result": {
@@ -2676,6 +2819,7 @@
             "gender": "female",
             "age": 33,
             "photo_path": "/candidates/datia-mp-2026-07/advocate-hansmukee-lodhi.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2720,8 +2864,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2986"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ashutosh-tiwari",
@@ -2735,6 +2878,7 @@
             "gender": "male",
             "age": 51,
             "photo_path": "/candidates/datia-mp-2026-07/ashutosh-tiwari.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2779,8 +2923,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2975"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "babulal-soni",
@@ -2794,6 +2937,7 @@
             "gender": "male",
             "age": 53,
             "photo_path": "/candidates/datia-mp-2026-07/babulal-soni.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2838,8 +2982,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2974"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "balkishun-vishwakarma",
@@ -2853,6 +2996,26 @@
             "gender": "male",
             "age": 39,
             "photo_path": "/candidates/datia-mp-2026-07/balkishun-vishwakarma.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+            "criminal": {
+              "politician_id": "cand:datia-mp-2026-07:balkishun-vishwakarma",
+              "declared_total": 1,
+              "charges": [],
+              "cases": [
+                {
+                  "status": "pending",
+                  "status_label": "Pending",
+                  "case_no": "276/2024, PS Vamitha, Dist Chhatarpur, M.P.",
+                  "court": "Civil",
+                  "charges_framed": "No",
+                  "appeal_filed": "No"
+                }
+              ],
+              "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
+              "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+              "retrieved_date": "2026-08-03",
+              "as_of": "Datia by-election 30-07-2026"
+            },
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2897,27 +3060,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "criminal": {
-              "politician_id": "cand:datia-mp-2026-07:balkishun-vishwakarma",
-              "declared_total": 1,
-              "charges": [],
-              "cases": [
-                {
-                  "status": "pending",
-                  "status_label": "Pending",
-                  "case_no": "276/2024, PS Vamitha, Dist Chhatarpur, M.P.",
-                  "court": "Civil",
-                  "charges_framed": "No",
-                  "appeal_filed": "No"
-                }
-              ],
-              "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992",
-              "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-              "retrieved_date": "2026-08-03",
-              "as_of": "Datia by-election 30-07-2026"
-            },
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2992"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "brajendra-shah-bapa-sahab",
@@ -2931,6 +3074,7 @@
             "gender": "male",
             "age": 68,
             "photo_path": "/candidates/datia-mp-2026-07/brajendra-shah-bapa-sahab.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -2975,8 +3119,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2983"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "damodar-yadav-mandal",
@@ -2990,51 +3133,7 @@
             "gender": "male",
             "age": 50,
             "photo_path": "/candidates/datia-mp-2026-07/damodar-yadav-mandal.webp",
-            "facts": [
-              {
-                "field_type": "assets_total",
-                "value": "₹5,50,72,698 (~5 Crore)",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "liabilities_total",
-                "value": "₹1,71,20,725 (~1 Crore)",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "criminal_cases_declared",
-                "value": "7",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "education",
-                "value": "12th Pass",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "profession",
-                "value": "Agriculture Work",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              }
-            ],
-            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
-            "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
             "criminal": {
               "politician_id": "cand:datia-mp-2026-07:damodar-yadav-mandal",
               "declared_total": 7,
@@ -3156,7 +3255,51 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Datia by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985"
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹5,50,72,698 (~5 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹1,71,20,725 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "7",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "12th Pass",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agriculture Work",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2985",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "devesh-parihar-nimona",
@@ -3170,6 +3313,7 @@
             "gender": "male",
             "age": 25,
             "photo_path": "/candidates/datia-mp-2026-07/devesh-parihar-nimona.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3214,8 +3358,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2978"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "dharmendra-singh",
@@ -3229,6 +3372,7 @@
             "gender": "male",
             "age": 33,
             "photo_path": "/candidates/datia-mp-2026-07/dharmendra-singh.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3273,8 +3417,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2971"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "dharmendra-singh-panwar-golu-bhaiya",
@@ -3291,7 +3434,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "dr-rakhi-bala",
@@ -3305,6 +3448,7 @@
             "gender": "female",
             "age": 44,
             "photo_path": "/candidates/datia-mp-2026-07/dr-rakhi-bala.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3349,8 +3493,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2988"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ghanshyam-singh",
@@ -3364,51 +3507,8 @@
             "gender": "male",
             "age": 72,
             "photo_path": "/candidates/datia-mp-2026-07/ghanshyam-singh.webp",
-            "facts": [
-              {
-                "field_type": "assets_total",
-                "value": "₹20,92,26,104 (~20 Crore)",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "liabilities_total",
-                "value": "₹1,29,93,164 (~1 Crore)",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "criminal_cases_declared",
-                "value": "2",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "education",
-                "value": "Post Graduate",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              },
-              {
-                "field_type": "profession",
-                "value": "Agiculture, Pension, House Rent",
-                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
-                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
-                "retrieved_date": "2026-08-03",
-                "as_of": "Datia by-election 30-07-2026"
-              }
-            ],
-            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
-            "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
+            "politicianId": "datia-ac-mp-ghanshyam-singh",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
             "criminal": {
               "politician_id": "cand:datia-mp-2026-07:ghanshyam-singh",
               "declared_total": 2,
@@ -3509,8 +3609,51 @@
               "retrieved_date": "2026-08-03",
               "as_of": "Datia by-election 30-07-2026"
             },
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
-            "politicianId": "datia-ac-mp-ghanshyam-singh"
+            "facts": [
+              {
+                "field_type": "assets_total",
+                "value": "₹20,92,26,104 (~20 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "liabilities_total",
+                "value": "₹1,29,93,164 (~1 Crore)",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "criminal_cases_declared",
+                "value": "2",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "education",
+                "value": "Post Graduate",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              },
+              {
+                "field_type": "profession",
+                "value": "Agiculture, Pension, House Rent",
+                "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+                "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+                "retrieved_date": "2026-08-03",
+                "as_of": "Datia by-election 30-07-2026"
+              }
+            ],
+            "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
+            "source_name": "Election Commission of India - Candidate Affidavit Management",
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "hardas-kushwaha",
@@ -3524,6 +3667,7 @@
             "gender": "male",
             "age": 53,
             "photo_path": "/candidates/datia-mp-2026-07/hardas-kushwaha.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3568,8 +3712,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2972"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "jitendra-majhi",
@@ -3583,6 +3726,7 @@
             "gender": "male",
             "age": 47,
             "photo_path": "/candidates/datia-mp-2026-07/jitendra-majhi.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3627,8 +3771,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2987"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "kanchhadilal-kushwaha",
@@ -3642,6 +3785,7 @@
             "gender": "male",
             "age": 51,
             "photo_path": "/candidates/datia-mp-2026-07/kanchhadilal-kushwaha.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3686,8 +3830,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2973"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "raghvendra-singh",
@@ -3701,6 +3844,7 @@
             "gender": "male",
             "age": 34,
             "photo_path": "/candidates/datia-mp-2026-07/raghvendra-singh.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3745,8 +3889,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2976"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ram-singh-kushwah",
@@ -3760,6 +3903,7 @@
             "gender": "male",
             "age": 45,
             "photo_path": "/candidates/datia-mp-2026-07/ram-singh-kushwah.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3804,8 +3948,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2977"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "rohit-gupta",
@@ -3819,6 +3962,7 @@
             "gender": "male",
             "age": 32,
             "photo_path": "/candidates/datia-mp-2026-07/rohit-gupta.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3863,8 +4007,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2969"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "sanjana-singh-kinnar",
@@ -3880,7 +4023,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "subham-rajpoot",
@@ -3894,6 +4037,7 @@
             "gender": "male",
             "age": 31,
             "photo_path": "/candidates/datia-mp-2026-07/subham-rajpoot.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3938,8 +4082,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2980"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "suresh-ahirwar",
@@ -3953,6 +4096,7 @@
             "gender": "male",
             "age": 53,
             "photo_path": "/candidates/datia-mp-2026-07/suresh-ahirwar.webp",
+            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981",
             "facts": [
               {
                 "field_type": "assets_total",
@@ -3997,8 +4141,7 @@
             ],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03",
-            "affidavit_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2981"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ved-bhaiya",
@@ -4015,7 +4158,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "keshav-singh",
@@ -4032,7 +4175,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "meharvan",
@@ -4049,7 +4192,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "shadabuddin",
@@ -4066,7 +4209,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "prem-narayan-kushwaha",
@@ -4083,7 +4226,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "ramsingh-baghel",
@@ -4100,7 +4243,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "s-deniyal",
@@ -4116,7 +4259,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           },
           {
             "slug": "swamisharan",
@@ -4133,7 +4276,7 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=33-AC-BYE-4-62&election=33-AC-BYE-4-62",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-08-03"
+            "retrieved_date": "2026-09-09"
           }
         ],
         "result": {

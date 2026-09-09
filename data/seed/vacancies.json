@@ -141,5 +141,26 @@
     "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
     "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
     "retrieved_date": "2026-08-19"
+  },
+  {
+    "constituencyId": "ac-py-thattanchavady",
+    "value": "Thiru N. Rangasamy, elected from 09-Thattanchavady, resigned his seat. The Election Commission has scheduled a bye-election for the constituency, with polling on 6 October 2026 and counting on 9 October 2026.",
+    "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
+    "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
+    "retrieved_date": "2026-09-09"
+  },
+  {
+    "constituencyId": "ac-wb-rejinagar",
+    "value": "Sh. Humayun Kabir, elected from 70-Rejinagar, resigned his seat. The Election Commission has scheduled a bye-election for the constituency, with polling on 6 October 2026 and counting on 9 October 2026.",
+    "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
+    "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
+    "retrieved_date": "2026-09-09"
+  },
+  {
+    "constituencyId": "ac-wb-nandigram",
+    "value": "Sh. Suvendu Adhikari, elected from 210-Nandigram, resigned his seat. The Election Commission has scheduled a bye-election for the constituency, with polling on 6 October 2026 and counting on 9 October 2026.",
+    "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
+    "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
+    "retrieved_date": "2026-09-09"
   }
 ]

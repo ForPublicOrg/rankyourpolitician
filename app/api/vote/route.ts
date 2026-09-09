@@ -77,8 +77,9 @@ export async function GET(req: NextRequest) {
 
   const res = await getPerson(politicianId);
   if (!res || (!res.person && !res.redirectTo)) return NextResponse.json({ error: 'not-found' }, { status: 404 });
-  // Appointed officials are information-only and carry no ratings.
-  if (res.person && res.person.kind === 'official') return NextResponse.json({ error: 'not-ratable' }, { status: 403 });
+  // Appointed officials, constitutional offices and city-government chairs are
+  // information-only and carry no ratings - only an elected profile is ratable.
+  if (res.person && res.person.kind !== 'elected') return NextResponse.json({ error: 'not-ratable' }, { status: 403 });
 
   const s = await getPersonSentiment(res.redirectTo ?? politicianId);
   return NextResponse.json(
@@ -142,7 +143,7 @@ export async function POST(req: NextRequest) {
     // Appointed officials are information-only and must never be rated. Guard the
     // RESOLVED target: for an alias id res.person is undefined, so this check has
     // to run after resolution or it would be skipped entirely.
-    if (target.person.kind === 'official') {
+    if (target.person.kind !== 'elected') {
       return NextResponse.json({ error: 'not-ratable' }, { status: 403 });
     }
   }

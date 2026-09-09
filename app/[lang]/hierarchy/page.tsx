@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getI18n, type LangParams } from '@/lib/i18n/server';
 import { t, tArr } from '@/lib/i18n';
-import { getCentralGovernment, getConstitutionalOffices, getNationalStats, getStateGovernments, getIndex } from '@/lib/data';
+import { getCentralGovernment, getConstitutionalOffices, getNationalStats, getStateGovernments, getIndex, getLocalBodies } from '@/lib/data';
 import type { ConstitutionalOffice } from '@/lib/types';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StateCMPicker, { type CmSummary } from '@/components/StateCMPicker';
@@ -85,12 +85,13 @@ export default async function HierarchyPage({ params }: { params: Promise<LangPa
   const { dict } = await getI18n((await params).lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
-  const [central, stats, stateGovs, idx, constitutional] = await Promise.all([
+  const [central, stats, stateGovs, idx, constitutional, localBodies] = await Promise.all([
     getCentralGovernment(),
     getNationalStats(),
     getStateGovernments(),
     getIndex(),
     getConstitutionalOffices(),
+    getLocalBodies(),
   ]);
   const pm = central.find((m) => m.rank === 'PM');
   const co = (k: ConstitutionalOffice['office']) => constitutional.find((o) => o.office === k);
@@ -114,8 +115,10 @@ export default async function HierarchyPage({ params }: { params: Promise<LangPa
         cmId: cm ? cm.politicianId || cm.id : undefined,
         cmPhoto: cm?.photo_url,
         governor: gov?.governor?.name,
+        governorTitle: gov?.governor?.title,
         mlas: mlasByState.get(s.stateCode) ?? 0,
         presidentsRule: gov?.governmentStatus === 'presidents_rule',
+        administered: gov?.governmentStatus === 'administered',
       };
     })
     .sort((a, b) => a.state.localeCompare(b.state));
@@ -297,16 +300,26 @@ export default async function HierarchyPage({ params }: { params: Promise<LangPa
 
         <Drop label={tr('hierarchyPage.districtDelegates')} />
 
-        {/* 5 - Local level */}
+        {/* 5 - Local level: the city governments we have verified so far
+            (Mayors and Commissioners from the bodies' own sites), else the
+            accountability primer until the tier has data. */}
         <Reveal>
           <Node
             icon="home"
             eyebrow={tr('hierarchyPage.localEyebrow')}
             title={tr('hierarchyPage.localTitle')}
-            desc={tr('hierarchyPage.localDesc')}
+            desc={localBodies.length > 0 ? tr('local.hierarchyHelp') : tr('hierarchyPage.localDesc')}
             tone="ink"
-            href="/accountability"
-            chips={<Chip tone="neutral">{tr('hierarchyPage.chipComingSoon')}</Chip>}
+            href={localBodies.length > 0 ? '/local' : '/accountability'}
+            chips={
+              localBodies.length > 0 ? (
+                <Chip tone="brand">
+                  <CountUp value={localBodies.length} /> {tr('local.chipLocalBodies')}
+                </Chip>
+              ) : (
+                <Chip tone="neutral">{tr('hierarchyPage.chipComingSoon')}</Chip>
+              )
+            }
           />
         </Reveal>
 

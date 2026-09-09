@@ -290,13 +290,19 @@ async function main() {
     }
     console.log(`\n${spec.event.id}  ${spec.event.title}`);
     const rows = await fetchAllNominations(spec);
-    if (rows.length === 0) {
+    // While nominations are still open the portal is legitimately sparse: an
+    // announced election with no papers filed yet is a real state of the world,
+    // and the hub should say "nominations open until <date>" rather than hide
+    // the seat. After the last date an empty list is a fetch failure.
+    const nominationsOpen = TODAY <= spec.event.schedule.nominationLast;
+    if (rows.length === 0 && !nominationsOpen) {
       console.error('  ✗ no nominations returned - leaving this event untouched');
       problems++;
       const keep = existing.get(spec.event.id);
       if (keep) out.push(keep);
       continue;
     }
+    if (rows.length === 0) console.log(`  (nominations open until ${spec.event.schedule.nominationLast} - none filed yet)`);
 
     const prev = existing.get(spec.event.id);
     const prevSeats = new Map((prev?.seats ?? []).map((s) => [s.constituencyId, s]));
@@ -312,7 +318,7 @@ async function main() {
       const mine = rows.filter(
         (r) => seatKey(r.constituency) === seatKey(c.name) && seatKey(r.state) === seatKey(c.state),
       );
-      if (mine.length === 0) {
+      if (mine.length === 0 && !nominationsOpen) {
         console.error(`  ✗ ${c.name} (${c.state}): no nominations matched`);
         problems++;
         continue;

@@ -128,6 +128,20 @@ npx tsx tools/data-manager/import-elections.ts --apply        # every nomination
 npx tsx tools/data-manager/enrich-candidates.ts --apply       # affidavit detail, from MyNeta
 npx tsx tools/data-manager/fetch-election-results.ts --apply  # freeze the count once counting ends
 npx tsx tools/data-manager/link-candidates.ts --apply         # link a winner to their new profile
+
+# City governments (data/seed/local_bodies.json): Mayors / Chairpersons, deputies
+# and Municipal Commissioners of the municipal bodies we cover. Input is research
+# output (one JSON array per file); EVERY name is re-fetched from its cited page
+# and dropped if the page does not answer or does not contain the name. Heads
+# are info-only (never rated); a head who is also a sitting member is linked to
+# that profile, never given a second page. Dry run unless --apply.
+npx tsx tools/data-manager/import-local-bodies.ts research/mayors-*.json --apply
+
+# Union ministries + departments (data/seed/union_ministries.json) from the
+# Cabinet Secretariat's Allocation of Business Rules, First Schedule. The
+# council list's portfolio strings join to it by name (lib/ministries.ts);
+# `dm validate` warns on any portfolio that joins nothing.
+npx tsx tools/data-manager/import-union-ministries.ts research/union-ministries.json --apply
 ```
 
 ## Gotchas that have bitten before

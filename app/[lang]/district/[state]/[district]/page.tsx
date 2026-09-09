@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getRanking, getDistrictOfficials, officialPersonId, getDistrictView, getStateGovernment, getDistrictPortal, getContactChannels, getStates, getDistrictsInState, getElectionsForConstituency } from '@/lib/data';
+import { getRanking, getDistrictOfficials, officialPersonId, getDistrictView, getStateGovernment, getDistrictPortal, getContactChannels, getStates, getDistrictsInState, getElectionsForConstituency, getLocalBodiesInDistrict } from '@/lib/data';
+import LocalBodyCard from '@/components/LocalBodyCard';
 import { buildDistrictMap, matchDistrictName } from '@/lib/geo-districts';
 import { buildSpotMap } from '@/lib/geo-constituencies';
 import { keyDateFor, phaseOf } from '@/lib/elections';
@@ -101,7 +102,7 @@ export default async function DistrictPage({
     ? view.constituencies.filter((c) => c.id !== cityConstituency.id)
     : view.constituencies;
 
-  const [ranking, officials, stateGov, portal, channels, cityElections] = await Promise.all([
+  const [ranking, officials, stateGov, portal, channels, cityElections, localBodies] = await Promise.all([
     getRanking('district', `${state}/${view.district}`),
     getDistrictOfficials(state, view.district),
     getStateGovernment(state),
@@ -109,6 +110,7 @@ export default async function DistrictPage({
     getDistrictPortal(state, view.district),
     getContactChannels(state),
     cityConstituency ? getElectionsForConstituency(cityConstituency.id) : Promise.resolve([]),
+    getLocalBodiesInDistrict(state, view.district),
   ]);
   const { dict, locale } = await getI18n(lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
@@ -311,6 +313,21 @@ export default async function DistrictPage({
       </Reveal>
     ) : null;
 
+  // The city government here - the elected Mayor and the appointed
+  // Commissioner, from the body's own site. Elected, unlike the DM/SP below.
+  const localCard =
+    localBodies.length > 0 ? (
+      <Reveal key="local">
+        <SectionCard title={tr('local.districtTitle')} subtitle={tr('local.districtHelp')} icon="home">
+          <div className="space-y-3">
+            {localBodies.map((b) => (
+              <LocalBodyCard key={b.id} body={b} tr={tr} locale={locale} />
+            ))}
+          </div>
+        </SectionCard>
+      </Reveal>
+    ) : null;
+
   const officialsCard = (
     <Reveal key="officials">
       <SectionCard title={tr('officials.title')} subtitle={tr('officials.subtitle')} icon="shield">
@@ -405,6 +422,7 @@ export default async function DistrictPage({
     // full list would suggest. Sizing it off `entries` here weighted a hidden
     // panel and left the other column short.
     ...(leadersCard ? [{ el: leadersCard, w: 520 }] : []),
+    ...(localCard ? [{ el: localCard, w: 120 + localBodies.length * 260 }] : []),
     { el: officialsCard, w: 120 + officials.length * 240 },
     ...(mapCard ? [{ el: mapCard, w: 400 }] : []),
     ...(constituenciesCard ? [{ el: constituenciesCard, w: 130 + otherConstituencies.length * 18 }] : []),

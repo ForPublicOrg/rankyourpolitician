@@ -1,0 +1,1086 @@
+[
+  {
+    "id": "ar-itanagar",
+    "kind": "municipal_corporation",
+    "name": "Itanagar Municipal Corporation",
+    "city": "Itanagar",
+    "state": "Arunachal Pradesh",
+    "stateCode": "AR",
+    "districts": [
+      "Papum Pare"
+    ],
+    "website": "https://www.imc.arunachal.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://www.imc.arunachal.gov.in/",
+    "source_name": "Itanagar Municipal Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Likha Nari Tadar",
+      "source_url": "https://www.imc.arunachal.gov.in/",
+      "source_name": "Itanagar Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "party": "BJP"
+    },
+    "deputy_head": {
+      "name": "Tok Tabin Camdir",
+      "source_url": "https://www.imc.arunachal.gov.in/",
+      "source_name": "Itanagar Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "party": "BJP"
+    },
+    "commissioner": {
+      "name": "Kego Jilen",
+      "source_url": "https://www.imc.arunachal.gov.in/",
+      "source_name": "Itanagar Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "as-guwahati",
+    "kind": "municipal_corporation",
+    "name": "Guwahati Municipal Corporation",
+    "city": "Guwahati",
+    "state": "Assam",
+    "stateCode": "AS",
+    "districts": [
+      "Kamrup Metro"
+    ],
+    "website": "https://gmc.assam.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Guwahati_Municipal_Corporation",
+    "source_name": "Guwahati Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Mrigen Sarania",
+      "source_url": "https://en.wikipedia.org/wiki/Guwahati_Municipal_Corporation",
+      "source_name": "Guwahati Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09",
+      "party": "BJP"
+    },
+    "deputy_head": {
+      "name": "Smita Roy",
+      "source_url": "https://en.wikipedia.org/wiki/Guwahati_Municipal_Corporation",
+      "source_name": "Guwahati Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09",
+      "party": "BJP"
+    },
+    "commissioner": {
+      "name": "Chinmoy Prakash Phookan",
+      "source_url": "https://gmc.assam.gov.in/contact-us",
+      "source_name": "Contact Us | Guwahati Municipal Corporation | Government Of Assam, India",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "as-silchar",
+    "kind": "municipal_corporation",
+    "name": "Silchar Municipal Corporation",
+    "city": "Silchar",
+    "state": "Assam",
+    "stateCode": "AS",
+    "districts": [
+      "Cachar"
+    ],
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Silchar",
+    "source_name": "Silchar - Wikipedia (settlement infobox wikitext via MediaWiki API)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Niharendra Narayan Tagore",
+      "source_url": "https://en.wikipedia.org/wiki/Silchar",
+      "source_name": "Silchar - Wikipedia (settlement infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09",
+      "party": "BJP"
+    }
+  },
+  {
+    "id": "br-patna",
+    "kind": "municipal_corporation",
+    "name": "Patna Municipal Corporation (Patna Nagar Nigam)",
+    "city": "Patna",
+    "state": "Bihar",
+    "stateCode": "BR",
+    "districts": [
+      "Patna"
+    ],
+    "website": "https://pmc.bihar.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://pmc.bihar.gov.in/Home.aspx",
+    "source_name": "Patna Municipal Corporation - Home",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Sita Sahu",
+      "source_url": "https://pmc.bihar.gov.in/Home.aspx",
+      "source_name": "Patna Municipal Corporation - Home",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "direct"
+    },
+    "deputy_head": {
+      "name": "Reshmi Kumari",
+      "source_url": "https://pmc.bihar.gov.in/Home.aspx",
+      "source_name": "Patna Municipal Corporation - Home",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "direct"
+    }
+  },
+  {
+    "id": "ch-chandigarh",
+    "kind": "municipal_corporation",
+    "name": "Municipal Corporation Chandigarh",
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "stateCode": "CH",
+    "districts": [
+      "Chandigarh"
+    ],
+    "website": "https://mcchandigarh.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://mcchandigarh.gov.in/team.aspx",
+    "source_name": "MCC Officers and Councilors - Municipal Corporation Chandigarh",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Saurabh Joshi",
+      "source_url": "https://mcchandigarh.gov.in/team.aspx",
+      "source_name": "MCC Officers and Councilors - Municipal Corporation Chandigarh",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "deputy_head": {
+      "name": "Suman Devi",
+      "source_url": "https://mcchandigarh.gov.in/team.aspx",
+      "source_name": "MCC Officers and Councilors - Municipal Corporation Chandigarh",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "commissioner": {
+      "name": "Amit Kumar",
+      "source_url": "https://mcchandigarh.gov.in/team.aspx",
+      "source_name": "MCC Officers and Councilors - Municipal Corporation Chandigarh",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "dl-delhi",
+    "kind": "municipal_corporation",
+    "name": "Municipal Corporation of Delhi",
+    "city": "Delhi",
+    "state": "Delhi",
+    "stateCode": "DL",
+    "districts": [
+      "New Delhi",
+      "Central Delhi",
+      "North Delhi",
+      "South Delhi",
+      "East Delhi",
+      "West Delhi",
+      "North East Delhi",
+      "North West Delhi",
+      "South East Delhi",
+      "South West Delhi",
+      "Shahdara"
+    ],
+    "website": "https://mcdonline.nic.in/portal",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://mcdonline.nic.in/portal",
+    "source_name": "MCD Online portal (home page leadership strip)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Pravesh Wahi",
+      "source_url": "https://mcdonline.nic.in/portal",
+      "source_name": "MCD Online portal (home page leadership strip)",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "commissioner": {
+      "name": "Sanjeev Khirwar",
+      "source_url": "https://mcdonline.nic.in/portal",
+      "source_name": "MCD Online portal (home page leadership strip)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "gj-jamnagar",
+    "kind": "municipal_corporation",
+    "name": "Jamnagar Municipal Corporation",
+    "city": "Jamnagar",
+    "state": "Gujarat",
+    "stateCode": "GJ",
+    "districts": [
+      "Jamnagar"
+    ],
+    "website": "https://www.mcjamnagar.com/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://www.mcjamnagar.com/Corporation/Mayor.aspx?v=1",
+    "source_name": "Mayor - Jamnagar Municipal Corporation (Home / Corporation / Mayor)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Monikaben Hemendrabhai Vyas",
+      "source_url": "https://www.mcjamnagar.com/Corporation/Mayor.aspx?v=1",
+      "source_name": "Mayor - Jamnagar Municipal Corporation (Home / Corporation / Mayor)",
+      "retrieved_date": "2026-09-09",
+      "party": "Bharatiya Janata Party",
+      "since": "2026-05-26",
+      "elected_by": "indirect"
+    }
+  },
+  {
+    "id": "gj-surat",
+    "kind": "municipal_corporation",
+    "name": "Surat Municipal Corporation",
+    "city": "Surat",
+    "state": "Gujarat",
+    "stateCode": "GJ",
+    "districts": [
+      "Surat"
+    ],
+    "website": "https://www.suratmunicipal.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://www.suratmunicipal.gov.in/Corporation/OfficeBearers",
+    "source_name": "Office Bearers - Surat Municipal Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Mayaben Dharmendrabhai Mavani",
+      "source_url": "https://www.suratmunicipal.gov.in/Corporation/OfficeBearers",
+      "source_name": "Office Bearers - Surat Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "deputy_head": {
+      "name": "Sudhakar Lotanbhai Chaudhari",
+      "source_url": "https://www.suratmunicipal.gov.in/Corporation/OfficeBearers",
+      "source_name": "Office Bearers - Surat Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "commissioner": {
+      "name": "Rajkumar Beniwal",
+      "source_url": "https://www.suratmunicipal.gov.in/Corporation/CorporationCommissioner",
+      "source_name": "CorporationCommissioner - Surat Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "gj-vadodara",
+    "kind": "municipal_corporation",
+    "name": "Vadodara Municipal Corporation",
+    "city": "Vadodara",
+    "state": "Gujarat",
+    "stateCode": "GJ",
+    "districts": [
+      "Vadodara"
+    ],
+    "website": "https://vmc.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
+    "source_name": "Vadodara Municipal Corporation - Wikipedia",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Pinky Soni",
+      "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
+      "source_name": "Vadodara Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "party": "Bharatiya Janata Party",
+      "elected_by": "indirect"
+    },
+    "deputy_head": {
+      "name": "Chirag Barot",
+      "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
+      "source_name": "Vadodara Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "party": "Bharatiya Janata Party",
+      "elected_by": "indirect"
+    },
+    "commissioner": {
+      "name": "Arun Mahesh Babu",
+      "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
+      "source_name": "Vadodara Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "hr-faridabad",
+    "kind": "municipal_corporation",
+    "name": "Faridabad Municipal Corporation",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "stateCode": "HR",
+    "districts": [
+      "Faridabad"
+    ],
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Faridabad_Municipal_Corporation",
+    "source_name": "Faridabad Municipal Corporation - Wikipedia",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Praveen Joshi",
+      "source_url": "https://en.wikipedia.org/wiki/Faridabad_Municipal_Corporation",
+      "source_name": "Faridabad Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "since": "2025-03-02",
+      "elected_by": "direct"
+    }
+  },
+  {
+    "id": "hr-gurugram",
+    "kind": "municipal_corporation",
+    "name": "Municipal Corporation of Gurugram",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "stateCode": "HR",
+    "districts": [
+      "Gurugram"
+    ],
+    "website": "https://www.mcg.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Gurgaon_Municipal_Corporation",
+    "source_name": "Gurgaon Municipal Corporation - Wikipedia",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Rajrani Malhotra",
+      "source_url": "https://en.wikipedia.org/wiki/Gurgaon_Municipal_Corporation",
+      "source_name": "Gurgaon Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "direct"
+    }
+  },
+  {
+    "id": "hp-shimla",
+    "kind": "municipal_corporation",
+    "name": "Municipal Corporation Shimla",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "stateCode": "HP",
+    "districts": [
+      "Shimla"
+    ],
+    "website": "https://shimlamc.hp.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://shimlamc.hp.gov.in/",
+    "source_name": "Home - MC Shimla",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Surinder Chauhan",
+      "source_url": "https://shimlamc.hp.gov.in/",
+      "source_name": "Home - MC Shimla",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "commissioner": {
+      "name": "Sachin Kanwal",
+      "source_url": "https://shimlamc.hp.gov.in/",
+      "source_name": "Home - MC Shimla",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "jk-srinagar",
+    "kind": "municipal_corporation",
+    "name": "Srinagar Municipal Corporation",
+    "city": "Srinagar",
+    "state": "Jammu & Kashmir",
+    "stateCode": "JK",
+    "districts": [
+      "Srinagar"
+    ],
+    "website": "https://smcsrinagar.jk.gov.in/",
+    "head_title": "Mayor",
+    "status": "administrator",
+    "status_note": "The corporation's own site carries no Mayor anywhere; its leadership message is signed by an officer holding the combined designation 'Administrator/Commissioner'.",
+    "source_url": "https://smcsrinagar.jk.gov.in/",
+    "source_name": "Srinagar Municipal Corporation",
+    "retrieved_date": "2026-09-09",
+    "commissioner": {
+      "name": "Faz Lul Haseeb",
+      "source_url": "https://smcsrinagar.jk.gov.in/",
+      "source_name": "Srinagar Municipal Corporation (official site, Commissioner's Message)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "ka-mysuru",
+    "kind": "municipal_corporation",
+    "name": "Mysuru City Corporation",
+    "city": "Mysuru",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "districts": [
+      "Mysore"
+    ],
+    "website": "http://www.mysurucity.mrc.gov.in/en/home",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "http://www.mysurucity.mrc.gov.in/en/node/56",
+    "source_name": "Council Members | Mysuru City Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Shivakumar",
+      "source_url": "http://www.mysurucity.mrc.gov.in/en/node/56",
+      "source_name": "Council Members | Mysuru City Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "G Roopa",
+      "source_url": "http://www.mysurucity.mrc.gov.in/en/node/56",
+      "source_name": "Council Members | Mysuru City Corporation",
+      "retrieved_date": "2026-09-09"
+    }
+  },
+  {
+    "id": "kl-kannur",
+    "kind": "municipal_corporation",
+    "name": "Kannur Municipal Corporation",
+    "city": "Kannur",
+    "state": "Kerala",
+    "stateCode": "KL",
+    "districts": [
+      "Kannur"
+    ],
+    "website": "https://kannurcorporation.lsgkerala.gov.in/en",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://kannurcorporation.lsgkerala.gov.in/en",
+    "source_name": "Kannur Municipal Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "P Indira",
+      "source_url": "https://kannurcorporation.lsgkerala.gov.in/en",
+      "source_name": "Kannur Municipal Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "K P Thahir",
+      "source_url": "https://kannurcorporation.lsgkerala.gov.in/en",
+      "source_name": "Kannur Municipal Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Vinu C Kunjappan",
+      "source_url": "https://kannurcorporation.lsgkerala.gov.in/en",
+      "source_name": "Kannur Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "kl-kochi",
+    "kind": "municipal_corporation",
+    "name": "Cochin Corporation",
+    "city": "Kochi",
+    "state": "Kerala",
+    "stateCode": "KL",
+    "districts": [
+      "Ernakulam"
+    ],
+    "website": "https://kochicorporation.lsgkerala.gov.in/en",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://kochicorporation.lsgkerala.gov.in/en",
+    "source_name": "Home | Cochin Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Minimol V. K.",
+      "source_url": "https://kochicorporation.lsgkerala.gov.in/en",
+      "source_name": "Home | Cochin Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "V R Sudheer",
+      "source_url": "https://kochicorporation.lsgkerala.gov.in/en",
+      "source_name": "Home | Cochin Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "P.S. Shibu",
+      "source_url": "https://kochicorporation.lsgkerala.gov.in/en",
+      "source_name": "Home | Cochin Corporation",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "kl-kozhikode",
+    "kind": "municipal_corporation",
+    "name": "Kozhikode Municipal Corporation",
+    "city": "Kozhikode",
+    "state": "Kerala",
+    "stateCode": "KL",
+    "districts": [
+      "Kozhikode"
+    ],
+    "website": "https://kozhikodecorporation.lsgkerala.gov.in/en",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://kozhikodecorporation.lsgkerala.gov.in/en/node/569",
+    "source_name": "Mayor | Kozhikode Municipal Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "O Sadasivan",
+      "source_url": "https://kozhikodecorporation.lsgkerala.gov.in/en/node/569",
+      "source_name": "Mayor | Kozhikode Municipal Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "S Jayasree",
+      "source_url": "https://kozhikodecorporation.lsgkerala.gov.in/en",
+      "source_name": "Home | Kozhikode Municipal Corporation",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Saju D",
+      "source_url": "https://kozhikodecorporation.lsgkerala.gov.in/en",
+      "source_name": "Home | Kozhikode Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "kl-thiruvananthapuram",
+    "kind": "municipal_corporation",
+    "name": "Thiruvananthapuram Municipal Corporation",
+    "city": "Thiruvananthapuram",
+    "state": "Kerala",
+    "stateCode": "KL",
+    "districts": [
+      "Thiruvananthapuram"
+    ],
+    "website": "https://tmc.lsgkerala.gov.in/en",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://tmc.lsgkerala.gov.in/index.php/en/city-mayor",
+    "source_name": "City Mayor | City Of Thiruvananthapuram",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "V V Rajesh",
+      "source_url": "https://tmc.lsgkerala.gov.in/index.php/en/city-mayor",
+      "source_name": "City Mayor | City Of Thiruvananthapuram",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "Asha Nath G S",
+      "source_url": "https://tmc.lsgkerala.gov.in/index.php/en/city-mayor",
+      "source_name": "City Mayor | City Of Thiruvananthapuram",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "J Muhammed Shafi",
+      "source_url": "https://tmc.lsgkerala.gov.in/index.php/en/secretary",
+      "source_name": "Secretary | City Of Thiruvananthapuram",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "kl-thrissur",
+    "kind": "municipal_corporation",
+    "name": "Thrissur Corporation",
+    "city": "Thrissur",
+    "state": "Kerala",
+    "stateCode": "KL",
+    "districts": [
+      "Thrissur"
+    ],
+    "website": "https://thrissurcorporation.lsgkerala.gov.in/en",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://thrissurcorporation.lsgkerala.gov.in/en/mayor/181",
+    "source_name": "Thrissur corporation - Mayor",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Niji Justin",
+      "source_url": "https://thrissurcorporation.lsgkerala.gov.in/en/mayor/181",
+      "source_name": "Thrissur corporation - Mayor",
+      "retrieved_date": "2026-09-09"
+    }
+  },
+  {
+    "id": "mz-aizawl",
+    "kind": "municipal_corporation",
+    "name": "Aizawl Municipal Corporation",
+    "city": "Aizawl",
+    "state": "Mizoram",
+    "stateCode": "MZ",
+    "districts": [
+      "Aizawl"
+    ],
+    "website": "https://amcmizoram.com/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://amcmizoram.com/page/list-of-councillors",
+    "source_name": "List of Corporators - Aizawl Municipal Corporation",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "H. Lalremtluanga",
+      "source_url": "https://amcmizoram.com/page/list-of-councillors",
+      "source_name": "List of Corporators - Aizawl Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "party": "ZPM"
+    },
+    "deputy_head": {
+      "name": "R. Lalawmpuii",
+      "source_url": "https://amcmizoram.com/page/list-of-councillors",
+      "source_name": "List of Corporators - Aizawl Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "party": "ZPM"
+    },
+    "commissioner": {
+      "name": "Joseph H Lalramsanga",
+      "source_url": "https://amcmizoram.com/page/list-of-officers-staff",
+      "source_name": "List of Officers & Staff - Aizawl Municipal Corporation",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "nl-kohima",
+    "kind": "municipal_council",
+    "name": "Kohima Municipal Council",
+    "city": "Kohima",
+    "state": "Nagaland",
+    "stateCode": "NL",
+    "districts": [
+      "Kohima"
+    ],
+    "website": "https://kmc.nagaland.gov.in/",
+    "head_title": "Chairperson",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Kohima_Municipal_Council",
+    "source_name": "Kohima Municipal Council - Wikipedia (infobox wikitext via MediaWiki API)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Neibodzelie Solo",
+      "source_url": "https://en.wikipedia.org/wiki/Kohima_Municipal_Council",
+      "source_name": "Kohima Municipal Council - Wikipedia (infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09",
+      "party": "Naga People's Front"
+    }
+  },
+  {
+    "id": "py-puducherry",
+    "kind": "municipality",
+    "name": "Pondicherry Municipal Council",
+    "city": "Puducherry",
+    "state": "Puducherry",
+    "stateCode": "PY",
+    "districts": [
+      "Puducherry"
+    ],
+    "website": "https://pdymun.in",
+    "head_title": "Mayor",
+    "status": "administrator",
+    "status_note": "No elected chairperson. The Pondicherry Municipal Council's own Wikipedia infobox records the Municipal Chairman post as 'Vacant since 2011', with the last municipal election in 2006 and 42 seats; only the Municipal Commissioner (an official, not an elected head) is named.",
+    "source_url": "https://en.wikipedia.org/wiki/Pondicherry_Municipal_Council",
+    "source_name": "Pondicherry Municipal Council",
+    "retrieved_date": "2026-09-09",
+    "commissioner": {
+      "name": "Gowri Saroja",
+      "source_url": "https://en.wikipedia.org/wiki/Pondicherry_Municipal_Council",
+      "source_name": "Pondicherry Municipal Council - English Wikipedia (wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "rj-jaipur",
+    "kind": "municipal_corporation",
+    "name": "Jaipur Municipal Corporation",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "stateCode": "RJ",
+    "districts": [
+      "Jaipur"
+    ],
+    "website": "https://jaipurmc.org/",
+    "head_title": "Mayor",
+    "status": "administrator",
+    "status_note": "Rajasthan re-merged the twin Jaipur Heritage and Jaipur Greater corporations into a single Jaipur Municipal Corporation in November 2025; the terms of both Houses and both Mayors ended and the charge of presiding officer passed to the Divisional Commissioner pending fresh elections. Polling in the 2026 Rajasthan urban local body elections is under way on 9 and 11 September 2026 with counting on 14 September 2026, so no Mayor holds office today.",
+    "source_url": "https://www.thestatesman.com/india/rajasthan-merges-twin-municipal-corporations-in-jaipur-jodhpur-and-kota-into-single-integrated-bodies-1503510026.html",
+    "source_name": "Jaipur Municipal Corporation",
+    "retrieved_date": "2026-09-09"
+  },
+  {
+    "id": "rj-jodhpur",
+    "kind": "municipal_corporation",
+    "name": "Jodhpur Municipal Corporation",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "stateCode": "RJ",
+    "districts": [
+      "Jodhpur"
+    ],
+    "website": "https://jodhpurmc.org/",
+    "head_title": "Mayor",
+    "status": "administrator",
+    "status_note": "Jodhpur North and Jodhpur South were merged into a single Jodhpur Municipal Corporation in November 2025; the terms of both Houses and Mayors ended and the Divisional Commissioner holds the presiding officer's charge pending the September 2026 polls (voting 9 and 11 September 2026, counting 14 September 2026).",
+    "source_url": "https://en.wikipedia.org/wiki/Jodhpur_Municipal_Corporation",
+    "source_name": "Jodhpur Municipal Corporation",
+    "retrieved_date": "2026-09-09"
+  },
+  {
+    "id": "rj-kota",
+    "kind": "municipal_corporation",
+    "name": "Kota Municipal Corporation",
+    "city": "Kota",
+    "state": "Rajasthan",
+    "stateCode": "RJ",
+    "districts": [
+      "Kota"
+    ],
+    "website": "https://kotamc.org/",
+    "head_title": "Mayor",
+    "status": "administrator",
+    "status_note": "Kota North and Kota South were merged into a single Kota Municipal Corporation in November 2025; the terms of both Houses and Mayors ended and the Divisional Commissioner holds the presiding officer's charge pending the September 2026 polls (voting 9 and 11 September 2026, counting 14 September 2026).",
+    "source_url": "https://www.thestatesman.com/india/rajasthan-merges-twin-municipal-corporations-in-jaipur-jodhpur-and-kota-into-single-integrated-bodies-1503510026.html",
+    "source_name": "Kota Municipal Corporation",
+    "retrieved_date": "2026-09-09"
+  },
+  {
+    "id": "sk-gangtok",
+    "kind": "municipal_corporation",
+    "name": "Gangtok Municipal Corporation",
+    "city": "Gangtok",
+    "state": "Sikkim",
+    "stateCode": "SK",
+    "districts": [
+      "East"
+    ],
+    "website": "https://gmc.sikkim.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Gangtok_Municipal_Corporation",
+    "source_name": "Gangtok Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Tshering Palden Bhutia",
+      "source_url": "https://en.wikipedia.org/wiki/Gangtok_Municipal_Corporation",
+      "source_name": "Gangtok Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "Sara Lama",
+      "source_url": "https://en.wikipedia.org/wiki/Gangtok_Municipal_Corporation",
+      "source_name": "Gangtok Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Gayden Chopel",
+      "source_url": "https://en.wikipedia.org/wiki/Gangtok_Municipal_Corporation",
+      "source_name": "Gangtok Municipal Corporation - Wikipedia (infobox wikitext via MediaWiki API)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "tn-chennai",
+    "kind": "municipal_corporation",
+    "name": "Greater Chennai Corporation",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Chennai"
+    ],
+    "website": "https://chennaicorporation.gov.in/gcc/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://chennaicorporation.gov.in/gcc/who-is-who/index_data.jsp",
+    "source_name": "Welcome to Greater Chennai Corporation - Who's who",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "R. Priya",
+      "source_url": "https://chennaicorporation.gov.in/gcc/who-is-who/index_data.jsp",
+      "source_name": "Welcome to Greater Chennai Corporation - Who's who",
+      "retrieved_date": "2026-09-09",
+      "since": "2022-03-04"
+    },
+    "deputy_head": {
+      "name": "M. Magesh Kumaar",
+      "source_url": "https://chennaicorporation.gov.in/gcc/who-is-who/index_data.jsp",
+      "source_name": "Welcome to Greater Chennai Corporation - Who's who",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "G.S. Sameeran",
+      "source_url": "https://chennaicorporation.gov.in/gcc/who-is-who/index_data.jsp",
+      "source_name": "Welcome to Greater Chennai Corporation - Who's who",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "tn-coimbatore",
+    "kind": "municipal_corporation",
+    "name": "Coimbatore City Municipal Corporation",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Coimbatore"
+    ],
+    "website": "https://www.ccmc.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/List_of_mayors_of_Coimbatore",
+    "source_name": "List of mayors of Coimbatore (English Wikipedia)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "R. Ranganayaki",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_mayors_of_Coimbatore",
+      "source_name": "List of mayors of Coimbatore (English Wikipedia)",
+      "retrieved_date": "2026-09-09",
+      "party": "Dravida Munnetra Kazhagam"
+    },
+    "deputy_head": {
+      "name": "R. Vetriselvan",
+      "source_url": "https://en.wikipedia.org/wiki/Coimbatore_Municipal_Corporation",
+      "source_name": "Coimbatore Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Katta Ravi Teja",
+      "source_url": "https://en.wikipedia.org/wiki/Coimbatore_Municipal_Corporation",
+      "source_name": "Coimbatore Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "tn-salem",
+    "kind": "municipal_corporation",
+    "name": "Salem City Municipal Corporation",
+    "city": "Salem",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Salem"
+    ],
+    "website": "https://www.salemcorporation.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/List_of_mayors_of_Salem,_Tamil_Nadu",
+    "source_name": "List of mayors of Salem, Tamil Nadu (English Wikipedia)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "A. Ramachandran",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_mayors_of_Salem,_Tamil_Nadu",
+      "source_name": "List of mayors of Salem, Tamil Nadu (English Wikipedia)",
+      "retrieved_date": "2026-09-09",
+      "party": "Dravida Munnetra Kazhagam",
+      "since": "2022-03-04",
+      "elected_by": "indirect"
+    },
+    "deputy_head": {
+      "name": "Saradha Devi",
+      "source_url": "https://en.wikipedia.org/wiki/Salem_City_Municipal_Corporation",
+      "source_name": "Salem City Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "indirect"
+    },
+    "commissioner": {
+      "name": "Lalith Aditya Neelam",
+      "source_url": "https://en.wikipedia.org/wiki/Salem_City_Municipal_Corporation",
+      "source_name": "Salem City Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "tn-tiruchirappalli",
+    "kind": "municipal_corporation",
+    "name": "Tiruchirappalli City Municipal Corporation",
+    "city": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Tiruchirappalli"
+    ],
+    "website": "https://www.trichycorporation.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://www.trichycorporation.gov.in/electedmembers",
+    "source_name": "Tiruchirappalli City Municipal Corporation - Elected Public Representative",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "M.Anbalagan",
+      "source_url": "https://www.trichycorporation.gov.in/electedmembers",
+      "source_name": "Tiruchirappalli City Municipal Corporation - Elected Public Representative",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "G.Divya",
+      "source_url": "https://www.trichycorporation.gov.in/electedmembers",
+      "source_name": "Tiruchirappalli City Municipal Corporation - Elected Public Representative",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Veer Pratap Singh",
+      "source_url": "https://www.trichycorporation.gov.in/citycommissioner",
+      "source_name": "Tiruchirappalli City Municipal Corporation - Commissioner",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "tn-tirunelveli",
+    "kind": "municipal_corporation",
+    "name": "Tirunelveli City Municipal Corporation",
+    "city": "Tirunelveli",
+    "state": "Tamil Nadu",
+    "stateCode": "TN",
+    "districts": [
+      "Tirunelveli"
+    ],
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Tirunelveli_Municipal_Corporation",
+    "source_name": "Tirunelveli Municipal Corporation (English Wikipedia)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "G.Ramakrishnan",
+      "source_url": "https://en.wikipedia.org/wiki/Tirunelveli_Municipal_Corporation",
+      "source_name": "Tirunelveli Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09"
+    },
+    "deputy_head": {
+      "name": "K.R.Raju",
+      "source_url": "https://en.wikipedia.org/wiki/Tirunelveli_Municipal_Corporation",
+      "source_name": "Tirunelveli Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Monika Rana",
+      "source_url": "https://en.wikipedia.org/wiki/Tirunelveli_Municipal_Corporation",
+      "source_name": "Tirunelveli Municipal Corporation (English Wikipedia)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "up-agra",
+    "kind": "municipal_corporation",
+    "name": "Agra Nagar Nigam (Agra Municipal Corporation)",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "stateCode": "UP",
+    "districts": [
+      "Agra"
+    ],
+    "website": "https://nagarnigamagra.com/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://nagarnigamagra.com/",
+    "source_name": "Nagar Nigam Agra - Serving the City of Taj (home page)",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Hemalata Diwakar",
+      "source_url": "https://nagarnigamagra.com/",
+      "source_name": "Nagar Nigam Agra - Serving the City of Taj (home page)",
+      "retrieved_date": "2026-09-09"
+    },
+    "commissioner": {
+      "name": "Santosh Kumar Vaishya",
+      "source_url": "https://nagarnigamagra.com/",
+      "source_name": "Nagar Nigam Agra (home page)",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  },
+  {
+    "id": "up-varanasi",
+    "kind": "municipal_corporation",
+    "name": "Varanasi Nagar Nigam (Varanasi Municipal Corporation)",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "stateCode": "UP",
+    "districts": [
+      "Varanasi"
+    ],
+    "website": "https://nnvns.org.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://nnvns.org.in/nnvns/index.php?lang=en",
+    "source_name": "Varanasi Nagar Nigam - Home",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Ashok Kumar Tiwari",
+      "source_url": "https://nnvns.org.in/nnvns/index.php?lang=en",
+      "source_name": "Varanasi Nagar Nigam - Home",
+      "retrieved_date": "2026-09-09"
+    }
+  },
+  {
+    "id": "uk-dehradun",
+    "kind": "municipal_corporation",
+    "name": "Nagar Nigam Dehradun (Dehradun Municipal Corporation)",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "stateCode": "UK",
+    "districts": [
+      "Dehradun"
+    ],
+    "website": "https://nndehradun.uk.gov.in/",
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://nndehradun.uk.gov.in/list-of-honble-mayors/",
+    "source_name": "List of hon'ble Mayor's | Nagar Nigam Dehradun | India",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Saurabh Thapliyal",
+      "source_url": "https://nndehradun.uk.gov.in/list-of-honble-mayors/",
+      "source_name": "List of hon'ble Mayor's | Nagar Nigam Dehradun | India",
+      "retrieved_date": "2026-09-09",
+      "elected_by": "direct"
+    }
+  },
+  {
+    "id": "uk-haridwar",
+    "kind": "municipal_corporation",
+    "name": "Haridwar Municipal Corporation (Nagar Nigam Haridwar)",
+    "city": "Haridwar",
+    "state": "Uttarakhand",
+    "stateCode": "UK",
+    "districts": [
+      "Haridwar"
+    ],
+    "head_title": "Mayor",
+    "status": "elected_council",
+    "source_url": "https://en.wikipedia.org/wiki/Haridwar_Municipal_Corporation",
+    "source_name": "Haridwar Municipal Corporation - Wikipedia",
+    "retrieved_date": "2026-09-09",
+    "head": {
+      "name": "Kiran Jaisal",
+      "source_url": "https://en.wikipedia.org/wiki/Haridwar_Municipal_Corporation",
+      "source_name": "Haridwar Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "party": "Bharatiya Janata Party",
+      "since": "2025-02-07",
+      "elected_by": "direct"
+    },
+    "commissioner": {
+      "name": "Varun Chaudhary",
+      "source_url": "https://en.wikipedia.org/wiki/Haridwar_Municipal_Corporation",
+      "source_name": "Haridwar Municipal Corporation - Wikipedia",
+      "retrieved_date": "2026-09-09",
+      "title": "Municipal Commissioner"
+    }
+  }
+]

@@ -35,11 +35,14 @@ import seedContactChannels from '@/data/seed/contact_channels.json';
 import seedCriminalCases from '@/data/seed/criminal_cases.json';
 import seedElections from '@/data/seed/elections.json';
 import seedVacancies from '@/data/seed/vacancies.json';
-import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat, SeatVacancy } from './types';
+import seedLocalBodies from '@/data/seed/local_bodies.json';
+import seedUnionMinistries from '@/data/seed/union_ministries.json';
+import type { CriminalRecord, ElectionCandidate, ElectionEvent, ElectionSeat, SeatVacancy, LocalBody, LocalBodyPerson, UnionMinistriesFile } from './types';
 import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type PoliticianContact, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
 import { candidateRatingId } from './elections';
 import { constitutionalRoleTerm, electedRoleTerm } from './terms';
 import type { RoleTerm } from './types';
+import { localChairs, localPersonId, localRoleTitle, type LocalRole } from './local-bodies';
 
 // Affidavit case detail, keyed by person. Seed-only (updated via
 // `dm fetch-criminal-cases` + redeploy) - a person page embeds just its own
@@ -64,6 +67,66 @@ function vacancyByConstituency(): Map<string, SeatVacancy> {
 
 function slugify(s: string): string {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+// ---- Urban local bodies (city governments) --------------------------------
+// Seed-only and one-shot, like vacancies: a mayor changes when the data
+// manager runs and we redeploy, never per request. The person index below is
+// built once; it is NOT hung off `Index` (rebuilt on the 5-minute vote clock).
+
+const LOCAL_BODIES = seedLocalBodies as unknown as LocalBody[];
+
+export type { LocalRole } from './local-bodies';
+export { localPersonId } from './local-bodies';
+
+interface LocalChair { body: LocalBody; role: LocalRole; person: LocalBodyPerson }
+
+let localChairIndex: Map<string, LocalChair> | null = null;
+function localChairById(): Map<string, LocalChair> {
+  if (localChairIndex) return localChairIndex;
+  localChairIndex = new Map();
+  for (const body of LOCAL_BODIES) {
+    for (const { role, person } of localChairs(body)) {
+      localChairIndex.set(localPersonId(body, role, person), { body, role, person });
+    }
+  }
+  return localChairIndex;
+}
+
+/** Every city government we hold, in seed order (state, then city). */
+export async function getLocalBodies(): Promise<LocalBody[]> {
+  return LOCAL_BODIES;
+}
+
+export async function getLocalBody(id: string): Promise<LocalBody | null> {
+  return LOCAL_BODIES.find((b) => b.id === id) ?? null;
+}
+
+export async function getLocalBodiesInState(stateCode: string): Promise<LocalBody[]> {
+  return LOCAL_BODIES.filter((b) => b.stateCode === stateCode);
+}
+
+/** Local bodies whose city sits in this district (matched the way the district
+ *  page matches its own name, so "Purba Medinipur" and "purba-medinipur" agree). */
+export async function getLocalBodiesInDistrict(stateCode: string, district: string): Promise<LocalBody[]> {
+  const want = normSimple(district);
+  return LOCAL_BODIES.filter((b) => b.stateCode === stateCode && b.districts.some((d) => normSimple(d) === want));
+}
+
+/** The chairs of every local body, for search and the sitemap: the elected
+ *  head and deputy, plus the appointed commissioner where the site names one.
+ *  A head who is also a sitting member is linked, not listed twice. */
+export async function getLocalChairs(): Promise<{ id: string; body: LocalBody; role: LocalRole; person: LocalBodyPerson }[]> {
+  return [...localChairById().entries()]
+    .filter(([, c]) => !c.person.politicianId)
+    .map(([id, c]) => ({ id, ...c }));
+}
+
+// ---- Union ministries and departments --------------------------------------
+// The Cabinet Secretariat's First Schedule, statically imported (it is a few
+// dozen KB) and never read at request time.
+export async function getUnionMinistries(): Promise<UnionMinistriesFile> {
+  return seedUnionMinistries as unknown as UnionMinistriesFile;
 }
 
 // ---- Elections -------------------------------------------------------------
@@ -404,7 +467,9 @@ export async function getConstituency(id: string): Promise<Constituency | null> 
 /** A unified person: aggregates an MP record and/or one or more ministerial
  *  roles under one canonical id. This is what a profile page renders. */
 export interface PersonView {
-  kind: 'elected' | 'official' | 'office';
+  /** 'local': the head (or commissioner) of an urban local body - info-only,
+   *  like 'official' and 'office'. */
+  kind: 'elected' | 'official' | 'office' | 'local';
   id: string;
   name: string;
   name_hi?: string;
@@ -454,6 +519,11 @@ export interface PersonView {
   party_history?: { party: string; from: string; until?: string; current?: boolean }[];
   /** Constitutional office record (kind === 'office') - President / VP profile. */
   office?: ConstitutionalOffice;
+  /** The city government this person heads or runs (kind === 'local'). */
+  localBody?: LocalBody;
+  /** Which chair on that body: the elected head, their deputy, or the
+   *  appointed commissioner. */
+  localRole?: LocalRole;
 }
 
 /**
@@ -667,6 +737,46 @@ export async function getPerson(
     };
   }
 
+  // A chair on a city government - the elected Mayor / Chairperson, their
+  // deputy, or the appointed Municipal Commissioner. INFO-ONLY: never rated,
+  // and a head who is also a sitting member redirects to that one profile.
+  const chair = localChairById().get(id);
+  if (chair) {
+    if (chair.person.politicianId && idx.politicianById.get(chair.person.politicianId)) {
+      return { redirectTo: chair.person.politicianId };
+    }
+    const { body, role, person: lp } = chair;
+    const title = localRoleTitle(body, role);
+    return {
+      person: {
+        kind: 'local' as const,
+        id,
+        name: lp.name,
+        party: lp.party,
+        current_position: `${title}, ${body.name}`,
+        state: body.state,
+        stateCode: body.stateCode,
+        district: body.districts[0],
+        districts: body.districts,
+        as_of: lp.since,
+        localBody: body,
+        localRole: role,
+        neutral_summary:
+          role === 'commissioner'
+            ? `${lp.name} is the ${title} of ${body.name}, the appointed officer who runs the city administration in ${body.city}, ${body.state}.`
+            : `${lp.name} is the ${title} of ${body.name}${lp.party ? ` (${lp.party})` : ''} - the elected head of the city government in ${body.city}, ${body.state}.`,
+        is_minister: false,
+        is_pm: false,
+        portfolios: [],
+        facts: [],
+        metrics: {},
+        performance: null,
+        hasRecord: false,
+        sources: [[lp.source_url, lp.source_name]],
+      },
+    };
+  }
+
   // Appointed official (incumbent of an office seat) - INFO-ONLY person.
   const seats = await allOfficeSeats();
   const seat = seats.find((s) => s.incumbent && slugify(s.incumbent.name) === id);
@@ -751,6 +861,11 @@ export async function getAllPersonIds(): Promise<string[]> {
   // Constitutional offices without a linked MP profile (President, VP) get their
   // own info-only page - so prerender them and list them in the sitemap.
   for (const o of seedConstitutional as unknown as ConstitutionalOffice[]) if (!o.politicianId) ids.add(o.id);
+  // City-government chairs (mayors, deputies, commissioners) - info-only pages.
+  for (const id of localChairById().keys()) {
+    const c = localChairById().get(id)!;
+    if (!c.person.politicianId) ids.add(id);
+  }
   return [...ids];
 }
 

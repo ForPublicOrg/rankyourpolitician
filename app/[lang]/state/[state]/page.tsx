@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getStateByCode, getRanking, getConstituenciesInState, getStates, getStateGovernment, getStateView } from '@/lib/data';
+import { getStateByCode, getRanking, getConstituenciesInState, getStates, getStateGovernment, getStateView, getLocalBodiesInState } from '@/lib/data';
+import LocalBodyCard from '@/components/LocalBodyCard';
 import { buildDistrictMap } from '@/lib/geo-districts';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
@@ -43,12 +44,13 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
   const view = await getStateView(state);
   if (!view) notFound();
 
-  const [ranking, constituencies, stateGov] = await Promise.all([
+  const [ranking, constituencies, stateGov, localBodies] = await Promise.all([
     getRanking('state', state),
     getConstituenciesInState(state),
     getStateGovernment(state),
+    getLocalBodiesInState(state),
   ]);
-  const { dict } = await getI18n(lang);
+  const { dict, locale } = await getI18n(lang);
   const tr = (k: string, v?: Record<string, string | number>) => t(dict, k, v);
 
   // District drill-down map - choropleth by number of linked representatives.
@@ -83,6 +85,7 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
     governor: tr('stateGov.governor'),
     holds: tr('central.holds'),
     presidentsRule: tr('stateGov.presidentsRule'),
+    administered: tr('local.administered'),
     beingVerified: tr('stateGov.beingVerified'),
     verifyNote: tr('stateGov.verifyNote'),
     asOf: tr('common.asOf'),
@@ -103,14 +106,12 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
   // not the roster size: Uttar Pradesh has 44 ministers but 17 in cabinet and
   // renders no taller than Madhya Pradesh's 18-of-31. Measured across states at
   // the two-column width: ~95px per cabinet row over a ~720px shell.
-  const cabinetCount =
-    stateGov && stateGov.governmentStatus !== 'presidents_rule'
-      ? stateGov.ministers.filter((m) => m.rank === 'Cabinet').length
-      : 0;
-  const wGovernment = stateGov ? (stateGov.governmentStatus === 'presidents_rule' ? 320 : 720 + 95 * cabinetCount) : 0;
+  const noCouncil = stateGov?.governmentStatus === 'presidents_rule' || stateGov?.governmentStatus === 'administered';
+  const cabinetCount = stateGov && !noCouncil ? stateGov.ministers.filter((m) => m.rank === 'Cabinet').length : 0;
+  const wGovernment = stateGov ? (noCouncil ? 320 : 720 + 95 * cabinetCount) : 0;
 
   const governmentCard =
-    stateGov && (stateGov.ministers.length > 0 || stateGov.governmentStatus === 'presidents_rule') ? (
+    stateGov && (stateGov.ministers.length > 0 || noCouncil) ? (
       <Reveal key="government">
         <StateGovernmentSection gov={stateGov} labels={govLabels} />
         {/* Audit of this government - a link, never a count. The reports are
@@ -166,6 +167,30 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
     </Reveal>
   );
 
+  // City governments in this state - the third elected tier, verified from
+  // the bodies' own sites (see data/seed/local_bodies.json).
+  const localCard =
+    localBodies.length > 0 ? (
+      <Reveal key="local">
+        <SectionCard
+          title={tr('local.stateTitle', { state: view.state })}
+          subtitle={tr('local.stateHelp')}
+          icon="home"
+          aside={
+            <Link href="/local" className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
+              {tr('common.viewAll')} <Icon name="arrow" size={14} />
+            </Link>
+          }
+        >
+          <div className="space-y-3">
+            {localBodies.map((b) => (
+              <LocalBodyCard key={b.id} body={b} tr={tr} locale={locale} compact />
+            ))}
+          </div>
+        </SectionCard>
+      </Reveal>
+    ) : null;
+
   const constituenciesCard = (
     <Reveal key="constituencies">
       <SectionCard title={tr('search.groups.constituencies')} icon="pin">
@@ -219,6 +244,8 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
     // shell (measured 16 -> 239px, 52 -> 536px, 75 -> 796px).
     { el: districtListCard, w: 90 + Math.round(9.4 * view.districtCounts.length) },
     { el: constituenciesCard, w: 560 },
+    // ~250px per body card (name, up to three chairs, citation) over a shell.
+    ...(localCard ? [{ el: localCard, w: 120 + localBodies.length * 250 }] : []),
   ];
   let bestMask = 0;
   let bestDiff = Infinity;

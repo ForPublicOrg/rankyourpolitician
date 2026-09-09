@@ -3655,7 +3655,7 @@
     "stateCode": "KA",
     "state": "Karnataka",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (cabinet expanded from 14 to 33 members on 3 August 2026; portfolios for the enlarged council notified 12 August 2026; one berth of the sanctioned 34 remains vacant)",
+    "asOf": "as of 9 September 2026 (B. Nagendra resigned from the Cabinet on 28 August 2026; Parliamentary Affairs and Legislation moved to Krishna Byre Gowda on 18 August 2026; the council is 32 of a sanctioned 34)",
     "confidence": "high",
     "governor": {
       "name": "Thawar Chand Gehlot",
@@ -3676,7 +3676,6 @@
           "Personnel and Administrative Reforms (DPAR)",
           "Intelligence",
           "Information, Law, Justice and Human Rights",
-          "Parliamentary Affairs and Legislation",
           "Agriculture Marketing",
           "Commissionerate of Town and Country Planning",
           "Urban Local Bodies in the BDA and BMRDA areas",
@@ -3684,8 +3683,8 @@
         ],
         "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
         "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-08-19",
-        "as_of": "as of 19 August 2026 (cabinet expanded from 14 to 33 members on 3 August 2026; portfolios for the enlarged council notified 12 August 2026; one berth of the sanctioned 34 remains vacant)",
+        "retrieved_date": "2026-09-09",
+        "as_of": "as of 9 September 2026 (Parliamentary Affairs and Legislation moved to Krishna Byre Gowda on 18 August 2026)",
         "politicianId": "kanakapura-ac-ka-d-k-shivakumar"
       },
       {
@@ -3781,12 +3780,13 @@
         "name": "Krishna Byre Gowda",
         "party": "Indian National Congress",
         "portfolios": [
-          "Greater Bengaluru Development (GBA)"
+          "Greater Bengaluru Development (GBA)",
+          "Parliamentary Affairs and Legislation"
         ],
-        "source_url": "https://www.indiatvnews.com/karnataka/karnataka-cm-dk-shivakumar-allocates-portfolios-keeps-finance-priyank-kharge-gets-home-check-full-list-of-13-ministers-2026-06-04-1043695",
-        "source_name": "indiatvnews.com",
-        "retrieved_date": "2026-07-27",
-        "as_of": "as of 27 July 2026 (roster reflects the 3 June 2026 swearing-in and 4 June 2026 portfolio allocation of the D. K. Shivakumar ministry that replaced the Siddaramaiah government; re-verified 27 July 2026 - the cabinet is still 14 of a sanctioned 34 members and the expansion had not taken place)",
+        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
+        "source_name": "en.wikipedia.org",
+        "retrieved_date": "2026-09-09",
+        "as_of": "as of 9 September 2026 (given additional charge of Parliamentary Affairs and Legislation on 18 August 2026)",
         "politicianId": "byatarayanapura-ac-ka-krishna-byregowda"
       },
       {
@@ -3968,22 +3968,6 @@
         "retrieved_date": "2026-08-19",
         "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
         "politicianId": "sorab-ac-ka-madhu-bangarappa"
-      },
-      {
-        "id": "b-nagendra-ka",
-        "stateCode": "KA",
-        "state": "Karnataka",
-        "rank": "Cabinet",
-        "name": "B. Nagendra",
-        "party": "Indian National Congress",
-        "portfolios": [
-          "Planning and Statistics"
-        ],
-        "source_url": "https://en.wikipedia.org/wiki/Shivakumar_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-08-19",
-        "as_of": "sworn in 3 August 2026; portfolio notified 12 August 2026",
-        "politicianId": "bellary-ac-ka-b-nagendra"
       },
       {
         "id": "s-s-mallikarjun-ka",

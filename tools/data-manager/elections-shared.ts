@@ -49,9 +49,15 @@ export interface EventSpec {
  * quietly fetching another state's seat.
  */
 export const ECI_STATE_CODE: Record<string, string> = {
+  AS: 'S03',
   BR: 'S04',
   GJ: 'S06',
   MP: 'S12',
+  TN: 'S22',
+  WB: 'S25',
+  // Puducherry is a Union Territory: ECI numbers it U07 (its affidavit portal's
+  // own state list), not S-anything.
+  PY: 'U07',
 };
 
 export const EVENTS: EventSpec[] = [
@@ -86,6 +92,73 @@ export const EVENTS: EventSpec[] = [
       { constituencyId: 'ac-gj-manjalpur', acNo: 145, eciStateCode: 'S06' },
       { constituencyId: 'ac-mp-datia', acNo: 22, eciStateCode: 'S12' },
     ],
+  },
+  // ECI Press Note No. ECI/PN/114/2026 dated 7 September 2026 (the Commission's
+  // own bye-election listing at /bye-elections and its details API both carry
+  // these dates verbatim). Poll HOURS are not printed in the press note - they
+  // are fixed by the Gazette notification of 9 September - so 07:00-18:00, the
+  // hours the Commission notified for every 2026 bye-election so far, are used
+  // here and MUST be re-checked against the notification once it is online:
+  // they drive the s.126 silence window (lib/elections.ts).
+  {
+    event: {
+      id: 'ac-bye-2026-10',
+      title: 'By-elections to five Assembly constituencies',
+      kind: 'assembly-bye',
+      authority: 'ECI',
+      schedule: {
+        notification: '2026-09-09',
+        nominationLast: '2026-09-16',
+        scrutiny: '2026-09-17',
+        withdrawalLast: '2026-09-19',
+        pollDate: '2026-10-06',
+        pollOpen: '07:00',
+        pollClose: '18:00',
+        countingDate: '2026-10-09',
+        completeBy: '2026-10-11',
+      },
+      affidavit_url:
+        'https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63',
+      source_url: 'https://www.eci.gov.in/bye-elections',
+      source_name:
+        'Election Commission of India - Schedule for bye-elections to 05 (Five) Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 (One) Parliamentary Constituency of Assam (Press Note ECI/PN/114/2026)',
+      retrieved_date: '2026-09-09',
+    },
+    affidavit: { electionType: '34-AC-BYE-4-63', election: '34-AC-BYE-4-63' },
+    seats: [
+      { constituencyId: 'ac-tn-madurantakam', acNo: 35, eciStateCode: 'S22', vacancyReason: 'Resignation of Tmt. Maragatham Kumaravel' },
+      { constituencyId: 'ac-tn-dharapuram', acNo: 101, eciStateCode: 'S22', vacancyReason: 'Resignation of Tmt. P. Sathyabama' },
+      { constituencyId: 'ac-py-thattanchavady', acNo: 9, eciStateCode: 'U07', vacancyReason: 'Resignation of Thiru N. Rangasamy' },
+      { constituencyId: 'ac-wb-rejinagar', acNo: 70, eciStateCode: 'S25', vacancyReason: 'Resignation of Sh. Humayun Kabir' },
+      { constituencyId: 'ac-wb-nandigram', acNo: 210, eciStateCode: 'S25', vacancyReason: 'Resignation of Sh. Suvendu Adhikari' },
+    ],
+  },
+  {
+    event: {
+      id: 'pc-bye-2026-10',
+      title: 'By-election to the Nagaon Lok Sabha constituency',
+      kind: 'lok-sabha-bye',
+      authority: 'ECI',
+      schedule: {
+        notification: '2026-09-09',
+        nominationLast: '2026-09-16',
+        scrutiny: '2026-09-17',
+        withdrawalLast: '2026-09-19',
+        pollDate: '2026-10-06',
+        pollOpen: '07:00',
+        pollClose: '18:00',
+        countingDate: '2026-10-09',
+        completeBy: '2026-10-11',
+      },
+      affidavit_url:
+        'https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-PC-BYE-2-64&election=34-PC-BYE-2-64',
+      source_url: 'https://www.eci.gov.in/bye-elections',
+      source_name:
+        'Election Commission of India - Schedule for bye-elections to 05 (Five) Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 (One) Parliamentary Constituency of Assam (Press Note ECI/PN/114/2026)',
+      retrieved_date: '2026-09-09',
+    },
+    affidavit: { electionType: '34-PC-BYE-2-64', election: '34-PC-BYE-2-64' },
+    seats: [{ constituencyId: 'pc-as-nagaon', acNo: 9, eciStateCode: 'S03', vacancyReason: 'Resignation of Sh. Pradyut Bordoloi' }],
   },
 ];
 

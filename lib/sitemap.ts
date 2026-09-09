@@ -107,7 +107,7 @@ async function build(): Promise<SitemapSegment[]> {
   // revalidate windows and robots.ts, not from this file.
   const core: SitemapUrl[] = [
     { loc: `${SITE_URL}/`, changefreq: 'daily', lastmod: datasetDate },
-    ...['/india', '/hierarchy', '/rankings'].map((p) => ({
+    ...['/india', '/india/ministries', '/hierarchy', '/rankings', '/local'].map((p) => ({
       loc: `${SITE_URL}${p}`,
       changefreq: 'daily' as const,
       lastmod: datasetDate,

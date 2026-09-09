@@ -42,8 +42,9 @@ profile, never a verdict.
 | Elected representatives | **5,266** - 543 Lok Sabha · 245 Rajya Sabha · 4,100 MLAs · 378 MLCs |
 | Cited facts | **30,847** (every one carries a source URL + retrieved date) |
 | Constituencies | 4,643 across 36 states & UTs (598 districts) |
-| Union government | 71 ministers · 5 constitutional offices (President, VP, Speaker, LoPs) |
-| State governments | 31 councils of ministers (571 ministers) |
+| Union government | 69 ministers · 5 constitutional offices (President, VP, Speaker, LoPs) · 53 ministries + 53 departments (Allocation of Business Rules) |
+| State governments | 31 councils of ministers (604 ministers) |
+| City governments | 35 municipal bodies with their elected Mayor / Chairperson, deputy and Commissioner, each verified on the body's own site (`/local`) |
 | Escalation contacts | 495 district portals · 14 national + 36 state helplines |
 
 Facts come from Election Commission of India affidavits, Digital Sansad, PRS Legislative Research

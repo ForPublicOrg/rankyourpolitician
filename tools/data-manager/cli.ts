@@ -241,6 +241,18 @@ async function main() {
       await import('./enrich-office-photos');
       break;
     }
+    case 'import-local-bodies': {
+      // City governments (Municipal Corporations + Mayors) from research output,
+      // every name re-verified against its cited page. Dry run unless --apply.
+      await import('./import-local-bodies');
+      break;
+    }
+    case 'import-union-ministries': {
+      // Every Union ministry + department from the Cabinet Secretariat's
+      // Allocation of Business Rules extraction. Dry run unless --apply.
+      await import('./import-union-ministries');
+      break;
+    }
     case 'import-state-gov': {
       // Build state_government.json from the ryp-state-governments workflow output.
       process.argv[2] = process.argv[3] || '';
@@ -284,6 +296,8 @@ Commands:
   npm run dm -- enrich-contacts     Attach each MP's published email/phone from the official Digital Sansad directories
   npm run dm -- fetch-criminal-cases  Per-case affidavit detail behind every declared criminal case
   npm run dm -- import <file.json>  Rebuild seed from a sourcing-workflow output
+  npm run dm -- import-local-bodies <files>      City governments (Mayors) from research output, each name re-verified
+  npm run dm -- import-union-ministries <file>   Union ministries + departments from the Allocation of Business Rules
   npm run dm:dashboard              Open the local review dashboard (http://localhost:4321)
 
 Elections (dry run unless --apply; npm swallows the flag on Windows, so pass it

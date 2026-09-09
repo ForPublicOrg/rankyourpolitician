@@ -16,6 +16,7 @@ import seedStateGov from '../data/seed/state_government.json';
 import seedDistrictOfficials from '../data/seed/district_officials.json';
 import seedConstitutional from '../data/seed/constitutional_offices.json';
 import seedElections from '../data/seed/elections.json';
+import seedLocalBodies from '../data/seed/local_bodies.json';
 import type {
   Politician,
   Minister,
@@ -24,8 +25,10 @@ import type {
   ConstitutionalOffice,
   ElectionEvent,
   Constituency,
+  LocalBody,
 } from '../lib/types';
 import { canonicalDistrictForConstituency } from '../lib/locality';
+import { localChairs, localPersonId, localRoleTitle } from '../lib/local-bodies';
 
 // Row shapes (positional arrays keep the file small):
 //   people:    [id, name, partyShort, place, stateCode, role, nameHi?, photo?, portfolios?]
@@ -145,6 +148,18 @@ function build(): SearchIndexFile {
     if (!people.has(id)) {
       const label = seat.officeType === 'collector_dm' ? 'District Collector / DM' : seat.officeType === 'sp_district' ? 'Superintendent of Police' : 'Official';
       people.set(id, [id, seat.incumbent.name, seat.incumbent.service || 'Official', seat.district || '', seat.stateCode || '', label]);
+    }
+  }
+
+  // City governments: the elected head and deputy, plus the appointed
+  // commissioner where the body's site names one (info-only profiles). A head
+  // who is also a sitting member is that member's row, so is skipped here.
+  for (const body of seedLocalBodies as unknown as LocalBody[]) {
+    for (const { role, person } of localChairs(body)) {
+      if (person.politicianId) continue;
+      const id = localPersonId(body, role, person);
+      if (people.has(id)) continue;
+      people.set(id, [id, person.name, person.party ? partyShort(person.party) : '', body.city, body.stateCode, `${localRoleTitle(body, role)} · ${body.name}`]);
     }
   }
 
