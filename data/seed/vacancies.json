@@ -162,5 +162,13 @@
     "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
     "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
     "retrieved_date": "2026-09-09"
+  },
+  {
+    "constituencyId": "ac-jh-giridih",
+    "value": "Sudivya Kumar, elected from Giridih (Assembly constituency 29) and a Cabinet Minister in the Jharkhand government, died on 6 September 2026. The seat is vacant until the Election Commission holds a bye-election.",
+    "as_of": "2026-09-06",
+    "source_url": "https://en.wikipedia.org/wiki/Sudivya_Kumar",
+    "source_name": "Wikipedia - Sudivya Kumar (citing The Hindu, NDTV and India Today reports of 6 September 2026)",
+    "retrieved_date": "2026-09-09"
   }
 ]

@@ -1032,9 +1032,35 @@ export async function getTrending(limit = 5, scope?: TrendingScope): Promise<Tre
  * zero-extra-reads pattern as getTrending: served from the TTL-cached
  * aggregates, ids that resolve to no known person are skipped.
  */
-export async function getTopRated(limit = 5): Promise<TopRatedEntry[]> {
+export async function getTopRated(limit = 5, scope?: TrendingScope): Promise<TopRatedEntry[]> {
   const idx = await getIndex();
-  const rated = [...idx.sentiment.values()]
+
+  // Same geo scoping as getTrending: filter the already-computed sentiment
+  // map before ranking (a few map lookups per rated leader, zero extra
+  // Firestore reads). For a state scope, CM/minister stubs rated from the
+  // government pages are admitted via the state's roster ids.
+  let scored: Iterable<SentimentScore> = idx.sentiment.values();
+  if (scope) {
+    const wantDistrict = scope.district ? normSimple(scope.district) : null;
+    const stubIds = new Set<string>();
+    if (!wantDistrict) {
+      const gov = (await loadStateGovernments()).find((g) => g.stateCode === scope.stateCode);
+      for (const m of gov?.ministers ?? []) stubIds.add(m.politicianId || m.id);
+    }
+    const stubs = [...idx.voteAggregates.values()]
+      .filter((a) => !idx.politicianById.has(a.politician_id) && stubIds.has(a.politician_id))
+      .map((a) => computeSentimentScore(a.politician_id, a));
+    scored = [
+      ...[...idx.sentiment.values()].filter((s) => {
+        const p = idx.politicianById.get(s.politician_id);
+        if (!p || p.stateCode !== scope.stateCode) return false;
+        return !wantDistrict || p.districts.some((d) => normSimple(d) === wantDistrict);
+      }),
+      ...stubs,
+    ];
+  }
+
+  const rated = [...scored]
     .filter((s) => s.n_votes > 0 && s.bayesian_mean != null && s.raw_mean != null)
     .sort(
       (a, b) =>

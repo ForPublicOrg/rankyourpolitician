@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getStateByCode, getRanking, getConstituenciesInState, getStates, getStateGovernment, getStateView, getLocalBodiesInState } from '@/lib/data';
 import LocalBodyCard from '@/components/LocalBodyCard';
+import { auditsForGovernment } from '@/lib/audits';
 import { buildDistrictMap } from '@/lib/geo-districts';
 import { getI18n } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
@@ -116,14 +117,18 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
         <StateGovernmentSection gov={stateGov} labels={govLabels} />
         {/* Audit of this government - a link, never a count. The reports are
             about departments over stated periods, so they belong to the
-            government, not to whoever currently sits in the chair. */}
-        <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 px-1 text-sm text-ink-soft">
-          <Icon name="scales" size={14} className="shrink-0 text-ink-faint" />
-          <span>{tr('audits.stateSectionTitle')}:</span>
-          <Link href={`/audits/${state.toLowerCase()}`} className="font-medium text-brand hover:underline">
-            {tr('audits.personLinkState', { state: view.state })}
-          </Link>
-        </p>
+            government, not to whoever currently sits in the chair. A Union
+            Territory without a legislature has no index of its own (its audits
+            are tabled under the Union), so it gets no link. */}
+        {auditsForGovernment(state).length > 0 && (
+          <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 px-1 text-sm text-ink-soft">
+            <Icon name="scales" size={14} className="shrink-0 text-ink-faint" />
+            <span>{tr('audits.stateSectionTitle')}:</span>
+            <Link href={`/audits/${state.toLowerCase()}`} className="font-medium text-brand hover:underline">
+              {tr('audits.personLinkState', { state: view.state })}
+            </Link>
+          </p>
+        )}
       </Reveal>
     ) : null;
 

@@ -13,13 +13,15 @@
       "departments": [
         {
           "name": "Department of Agriculture and Farmers Welfare",
-          "name_hi_translit": "Krishi Evam Kisan Kalyan Vibhag"
+          "name_hi_translit": "Krishi Evam Kisan Kalyan Vibhag",
+          "website": "https://agriwelfare.gov.in/"
         },
         {
           "name": "Department of Agricultural Research and Education",
           "name_hi_translit": "Krishi Anusandhan aur Shiksha Vibhag"
         }
-      ]
+      ],
+      "website": "https://agriwelfare.gov.in/"
     },
     {
       "id": "ministry-of-ayush",
@@ -27,7 +29,8 @@
       "kind": "ministry",
       "name": "Ministry of Ayush",
       "name_hi_translit": "Ayush Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://ayush.gov.in/"
     },
     {
       "id": "ministry-of-chemicals-and-fertilizers",
@@ -38,15 +41,18 @@
       "departments": [
         {
           "name": "Department of Chemicals and Petro-Chemicals",
-          "name_hi_translit": "Rasayan aur Petro-Rasayan Vibhag"
+          "name_hi_translit": "Rasayan aur Petro-Rasayan Vibhag",
+          "website": "https://chemicals.gov.in/"
         },
         {
           "name": "Department of Fertilizers",
-          "name_hi_translit": "Urvarak Vibhag"
+          "name_hi_translit": "Urvarak Vibhag",
+          "website": "https://fert.gov.in/"
         },
         {
           "name": "Department of Pharmaceuticals",
-          "name_hi_translit": "Aushadh Vibhag"
+          "name_hi_translit": "Aushadh Vibhag",
+          "website": "https://pharma-dept.gov.in/"
         }
       ]
     },
@@ -56,7 +62,8 @@
       "kind": "ministry",
       "name": "Ministry of Civil Aviation",
       "name_hi_translit": "Nagar Vimanan Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.civilaviation.gov.in/"
     },
     {
       "id": "ministry-of-coal",
@@ -64,7 +71,8 @@
       "kind": "ministry",
       "name": "Ministry of Coal",
       "name_hi_translit": "Koyala Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://coal.gov.in/"
     },
     {
       "id": "ministry-of-commerce-and-industry",
@@ -75,13 +83,16 @@
       "departments": [
         {
           "name": "Department of Commerce",
-          "name_hi_translit": "Vanijya Vibhag"
+          "name_hi_translit": "Vanijya Vibhag",
+          "website": "https://www.commerce.gov.in/"
         },
         {
           "name": "Department for Promotion of Industry and Internal Trade",
-          "name_hi_translit": "Udyog Samvardhan aur Antarik Vyapar Vibhag"
+          "name_hi_translit": "Udyog Samvardhan aur Antarik Vyapar Vibhag",
+          "website": "https://www.dpiit.gov.in/"
         }
-      ]
+      ],
+      "website": "https://www.commerce.gov.in/"
     },
     {
       "id": "ministry-of-communications",
@@ -92,11 +103,13 @@
       "departments": [
         {
           "name": "Department of Telecommunications",
-          "name_hi_translit": "Doorsanchar Vibhag"
+          "name_hi_translit": "Doorsanchar Vibhag",
+          "website": "https://www.dot.gov.in/"
         },
         {
           "name": "Department of Posts",
-          "name_hi_translit": "Dak Vibhag"
+          "name_hi_translit": "Dak Vibhag",
+          "website": "https://indiapost.gov.in/"
         }
       ]
     },
@@ -109,11 +122,13 @@
       "departments": [
         {
           "name": "Department of Consumer Affairs",
-          "name_hi_translit": "Upbhokta Mamle Vibhag"
+          "name_hi_translit": "Upbhokta Mamle Vibhag",
+          "website": "https://consumeraffairs.gov.in/"
         },
         {
           "name": "Department of Food and Public Distribution",
-          "name_hi_translit": "Khadya aur Sarvajanik Vitaran Vibhag"
+          "name_hi_translit": "Khadya aur Sarvajanik Vitaran Vibhag",
+          "website": "https://dfpd.gov.in/"
         }
       ]
     },
@@ -123,7 +138,8 @@
       "kind": "ministry",
       "name": "Ministry of Cooperation",
       "name_hi_translit": "Sahkarita Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://cooperation.gov.in/"
     },
     {
       "id": "ministry-of-corporate-affairs",
@@ -139,7 +155,8 @@
       "kind": "ministry",
       "name": "Ministry of Culture",
       "name_hi_translit": "Sanskriti Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://culture.gov.in/"
     },
     {
       "id": "ministry-of-defence",
@@ -150,25 +167,31 @@
       "departments": [
         {
           "name": "Department of Defence",
-          "name_hi_translit": "Raksha Vibhag"
+          "name_hi_translit": "Raksha Vibhag",
+          "website": "https://mod.gov.in/dod/"
         },
         {
           "name": "Department of Military Affairs",
-          "name_hi_translit": "Sainya Karya Vibhag"
+          "name_hi_translit": "Sainya Karya Vibhag",
+          "website": "https://mod.gov.in/en/department-military-affairs"
         },
         {
           "name": "Department of Defence Production",
-          "name_hi_translit": "Raksha Utpadan Vibhag"
+          "name_hi_translit": "Raksha Utpadan Vibhag",
+          "website": "https://www.ddpmod.gov.in/"
         },
         {
           "name": "Department of Defence Research and Development",
-          "name_hi_translit": "Raksha Anusandhan aur Vikas Vibhag"
+          "name_hi_translit": "Raksha Anusandhan aur Vikas Vibhag",
+          "website": "https://drdo.gov.in/"
         },
         {
           "name": "Department of Ex-Servicemen Welfare",
-          "name_hi_translit": "Poorva Senani Kalyan Vibhag"
+          "name_hi_translit": "Poorva Senani Kalyan Vibhag",
+          "website": "https://desw.gov.in/"
         }
-      ]
+      ],
+      "website": "https://mod.gov.in/"
     },
     {
       "id": "ministry-of-development-of-north-eastern-region",
@@ -176,7 +199,8 @@
       "kind": "ministry",
       "name": "Ministry of Development of North Eastern Region",
       "name_hi_translit": "Uttar Poorvi Kshetra Vikas Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.mdoner.gov.in/"
     },
     {
       "id": "ministry-of-earth-sciences",
@@ -184,7 +208,8 @@
       "kind": "ministry",
       "name": "Ministry of Earth Sciences",
       "name_hi_translit": "Prithvi Vigyan Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.moes.gov.in/"
     },
     {
       "id": "ministry-of-electronics-and-information-technology",
@@ -192,7 +217,8 @@
       "kind": "ministry",
       "name": "Ministry of Electronics and Information Technology",
       "name_hi_translit": "Electroniki aur Soochana Praudyogiki Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.meity.gov.in/"
     },
     {
       "id": "ministry-of-environment-forest-and-climate-change",
@@ -200,7 +226,8 @@
       "kind": "ministry",
       "name": "Ministry of Environment, Forest and Climate Change",
       "name_hi_translit": "Paryavaran, Van aur Jalvaayu Parivartan Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://moef.gov.in/"
     },
     {
       "id": "ministry-of-external-affairs",
@@ -208,7 +235,8 @@
       "kind": "ministry",
       "name": "Ministry of External Affairs",
       "name_hi_translit": "Videsh Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.mea.gov.in/"
     },
     {
       "id": "ministry-of-finance",
@@ -219,27 +247,33 @@
       "departments": [
         {
           "name": "Department of Economic Affairs",
-          "name_hi_translit": "Arthik Karya Vibhag"
+          "name_hi_translit": "Arthik Karya Vibhag",
+          "website": "https://dea.gov.in/"
         },
         {
           "name": "Department of Expenditure",
-          "name_hi_translit": "Vyaya Vibhag"
+          "name_hi_translit": "Vyaya Vibhag",
+          "website": "https://doe.gov.in/"
         },
         {
           "name": "Department of Revenue",
-          "name_hi_translit": "Rajaswa Vibhag"
+          "name_hi_translit": "Rajaswa Vibhag",
+          "website": "https://dor.gov.in/"
         },
         {
           "name": "Department of Investment and Public Asset Management (DIPAM)",
-          "name_hi_translit": "Nivesh aur Lok Parisampatti Prabandhan Vibhag(DIPAM)"
+          "name_hi_translit": "Nivesh aur Lok Parisampatti Prabandhan Vibhag(DIPAM)",
+          "website": "https://dipam.gov.in/"
         },
         {
           "name": "Department of Financial Services",
-          "name_hi_translit": "Vittiya Sewayen Vibhag"
+          "name_hi_translit": "Vittiya Sewayen Vibhag",
+          "website": "https://financialservices.gov.in/"
         },
         {
           "name": "Department of Public Enterprises",
-          "name_hi_translit": "Lok Udyam Vibhag"
+          "name_hi_translit": "Lok Udyam Vibhag",
+          "website": "https://www.dpe.gov.in/"
         }
       ]
     },
@@ -252,11 +286,13 @@
       "departments": [
         {
           "name": "Department of Fisheries",
-          "name_hi_translit": "Matsyapalan Vibhag"
+          "name_hi_translit": "Matsyapalan Vibhag",
+          "website": "https://www.dof.gov.in/"
         },
         {
           "name": "Department of Animal Husbandry and Dairying",
-          "name_hi_translit": "Pashupalan aur Dairy Vibhag"
+          "name_hi_translit": "Pashupalan aur Dairy Vibhag",
+          "website": "https://dahd.gov.in/"
         }
       ]
     },
@@ -266,7 +302,8 @@
       "kind": "ministry",
       "name": "Ministry of Food Processing Industries",
       "name_hi_translit": "Khadya Prasanskaran Udyog Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://mofpi.gov.in/"
     },
     {
       "id": "ministry-of-health-and-family-welfare",
@@ -277,13 +314,16 @@
       "departments": [
         {
           "name": "Department of Health and Family Welfare",
-          "name_hi_translit": "Swasthya aur Parivar Kalyan Vibhag"
+          "name_hi_translit": "Swasthya aur Parivar Kalyan Vibhag",
+          "website": "https://www.mohfw.gov.in/"
         },
         {
           "name": "Department of Health Research",
-          "name_hi_translit": "Swasthya Anusandhan Vibhag"
+          "name_hi_translit": "Swasthya Anusandhan Vibhag",
+          "website": "https://www.dhr.gov.in/"
         }
-      ]
+      ],
+      "website": "https://www.mohfw.gov.in/"
     },
     {
       "id": "ministry-of-heavy-industries",
@@ -291,7 +331,8 @@
       "kind": "ministry",
       "name": "Ministry of Heavy Industries",
       "name_hi_translit": "Bhari Udyog Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://heavyindustries.gov.in/"
     },
     {
       "id": "ministry-of-home-affairs",
@@ -310,7 +351,8 @@
         },
         {
           "name": "Department of Official Language",
-          "name_hi_translit": "Raj Bhasha Vibhag"
+          "name_hi_translit": "Raj Bhasha Vibhag",
+          "website": "https://rajbhasha.gov.in/"
         },
         {
           "name": "Department of Home",
@@ -324,7 +366,8 @@
           "name": "Department of Border Management",
           "name_hi_translit": "Seema Prabandhan Vibhag"
         }
-      ]
+      ],
+      "website": "https://www.mha.gov.in/"
     },
     {
       "id": "ministry-of-housing-and-urban-affairs",
@@ -341,7 +384,8 @@
           "name": "Department of Urban Development",
           "name_hi_translit": "Shahari Vikas Vibhag"
         }
-      ]
+      ],
+      "website": "https://www.mohua.gov.in/"
     },
     {
       "id": "ministry-of-education",
@@ -352,13 +396,16 @@
       "departments": [
         {
           "name": "Department of School Education and Literacy",
-          "name_hi_translit": "School Shiksha aur Saksharta Vibhag"
+          "name_hi_translit": "School Shiksha aur Saksharta Vibhag",
+          "website": "https://www.education.gov.in/en/school-education"
         },
         {
           "name": "Department of Higher Education",
-          "name_hi_translit": "Uchchatar Shiksha Vibhag"
+          "name_hi_translit": "Uchchatar Shiksha Vibhag",
+          "website": "https://www.education.gov.in/en/higher_education"
         }
-      ]
+      ],
+      "website": "https://www.education.gov.in/"
     },
     {
       "id": "ministry-of-information-and-broadcasting",
@@ -366,7 +413,8 @@
       "kind": "ministry",
       "name": "Ministry of Information and Broadcasting",
       "name_hi_translit": "Soochana aur Prasaran Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://mib.gov.in/"
     },
     {
       "id": "ministry-of-jal-shakti",
@@ -377,13 +425,16 @@
       "departments": [
         {
           "name": "Department of Water Resources, River Development and Ganga Rejuvenation",
-          "name_hi_translit": "Jal Sansadhan, Nadi Vikas aur Ganga Sanrakshan Vibhag"
+          "name_hi_translit": "Jal Sansadhan, Nadi Vikas aur Ganga Sanrakshan Vibhag",
+          "website": "https://www.jalshakti-dowr.gov.in/"
         },
         {
           "name": "Department of Drinking Water and Sanitation",
-          "name_hi_translit": "Peya Jal aur Swachchhata Vibhag"
+          "name_hi_translit": "Peya Jal aur Swachchhata Vibhag",
+          "website": "https://www.jalshakti-ddws.gov.in/"
         }
-      ]
+      ],
+      "website": "https://jalshakti.gov.in/"
     },
     {
       "id": "ministry-of-labour-and-employment",
@@ -391,7 +442,8 @@
       "kind": "ministry",
       "name": "Ministry of Labour and Employment",
       "name_hi_translit": "Shram aur Rozgar Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.labour.gov.in/"
     },
     {
       "id": "ministry-of-law-and-justice",
@@ -402,17 +454,21 @@
       "departments": [
         {
           "name": "Department of Legal Affairs",
-          "name_hi_translit": "Vidhi Karya Vibhag"
+          "name_hi_translit": "Vidhi Karya Vibhag",
+          "website": "https://www.legalaffairs.gov.in/"
         },
         {
           "name": "Legislative Department",
-          "name_hi_translit": "Vidhayee Vibhag"
+          "name_hi_translit": "Vidhayee Vibhag",
+          "website": "https://www.legislative.gov.in/"
         },
         {
           "name": "Department of Justice",
-          "name_hi_translit": "Nyaya Vibhag"
+          "name_hi_translit": "Nyaya Vibhag",
+          "website": "https://www.doj.gov.in/"
         }
-      ]
+      ],
+      "website": "https://www.lawmin.gov.in/"
     },
     {
       "id": "ministry-of-micro-small-and-medium-enterprises",
@@ -420,7 +476,8 @@
       "kind": "ministry",
       "name": "Ministry of Micro, Small and Medium Enterprises",
       "name_hi_translit": "Sukshma, Laghu Aur Madhyam Udyam Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.msme.gov.in/"
     },
     {
       "id": "ministry-of-mines",
@@ -428,7 +485,8 @@
       "kind": "ministry",
       "name": "Ministry of Mines",
       "name_hi_translit": "Khan Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://mines.gov.in/webportal/"
     },
     {
       "id": "ministry-of-minority-affairs",
@@ -436,7 +494,8 @@
       "kind": "ministry",
       "name": "Ministry of Minority Affairs",
       "name_hi_translit": "Alpasankhyak Karya Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://minorityaffairs.gov.in/"
     },
     {
       "id": "ministry-of-new-and-renewable-energy",
@@ -444,7 +503,8 @@
       "kind": "ministry",
       "name": "Ministry of New and Renewable Energy",
       "name_hi_translit": "Naveen aur Navikarniya Oorja Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://mnre.gov.in/"
     },
     {
       "id": "ministry-of-panchayati-raj",
@@ -452,7 +512,8 @@
       "kind": "ministry",
       "name": "Ministry of Panchayati Raj",
       "name_hi_translit": "Panchayati Raj Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://panchayat.gov.in/"
     },
     {
       "id": "ministry-of-parliamentary-affairs",
@@ -460,7 +521,8 @@
       "kind": "ministry",
       "name": "Ministry of Parliamentary Affairs",
       "name_hi_translit": "Sansadiya Karya Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.mpa.gov.in/"
     },
     {
       "id": "ministry-of-personnel-public-grievances-and-pensions",
@@ -471,17 +533,21 @@
       "departments": [
         {
           "name": "Department of Personnel and Training",
-          "name_hi_translit": "Karmik aur Prashikshan Vibhag"
+          "name_hi_translit": "Karmik aur Prashikshan Vibhag",
+          "website": "https://dopt.gov.in/"
         },
         {
           "name": "Department of Administrative Reforms and Public Grievances",
-          "name_hi_translit": "Prashasanik Sudhar aur Lok Shikayat Vibhag"
+          "name_hi_translit": "Prashasanik Sudhar aur Lok Shikayat Vibhag",
+          "website": "https://www.darpg.gov.in/"
         },
         {
           "name": "Department of Pensions and Pensioners Welfare",
-          "name_hi_translit": "Pension aur Pension Bhogi Kalyan Vibhag"
+          "name_hi_translit": "Pension aur Pension Bhogi Kalyan Vibhag",
+          "website": "https://www.doppw.gov.in/"
         }
-      ]
+      ],
+      "website": "https://persmin.gov.in/"
     },
     {
       "id": "ministry-of-petroleum-and-natural-gas",
@@ -489,7 +555,8 @@
       "kind": "ministry",
       "name": "Ministry of Petroleum and Natural Gas",
       "name_hi_translit": "Petroleum aur Prakritik Gas Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://mopng.gov.in/"
     },
     {
       "id": "ministry-of-planning",
@@ -505,7 +572,8 @@
       "kind": "ministry",
       "name": "Ministry of Ports, Shipping and Waterways",
       "name_hi_translit": "Pattan, Pot Parivahan aur Jalmarg Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://shipmin.gov.in/"
     },
     {
       "id": "ministry-of-power",
@@ -513,7 +581,8 @@
       "kind": "ministry",
       "name": "Ministry of Power",
       "name_hi_translit": "Vidyut Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.powermin.gov.in/"
     },
     {
       "id": "ministry-of-railways",
@@ -521,7 +590,8 @@
       "kind": "ministry",
       "name": "Ministry of Railways",
       "name_hi_translit": "Rail Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://indianrailways.gov.in/"
     },
     {
       "id": "ministry-of-road-transport-and-highways",
@@ -529,7 +599,8 @@
       "kind": "ministry",
       "name": "Ministry of Road Transport and Highways",
       "name_hi_translit": "Sadak Parivahan aur Raj Marg Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://morth.gov.in/"
     },
     {
       "id": "ministry-of-rural-development",
@@ -540,13 +611,16 @@
       "departments": [
         {
           "name": "Department of Rural Development",
-          "name_hi_translit": "Gramin Vikas Vibhag"
+          "name_hi_translit": "Gramin Vikas Vibhag",
+          "website": "https://www.rural.gov.in/"
         },
         {
           "name": "Department of Land Resources",
-          "name_hi_translit": "Bhumi Sansadhan Vibhag"
+          "name_hi_translit": "Bhumi Sansadhan Vibhag",
+          "website": "https://dolr.gov.in/"
         }
-      ]
+      ],
+      "website": "https://www.rural.gov.in/"
     },
     {
       "id": "ministry-of-science-and-technology",
@@ -557,15 +631,18 @@
       "departments": [
         {
           "name": "Department of Science and Technology",
-          "name_hi_translit": "Vigyan aur Praudyogiki Vibhag"
+          "name_hi_translit": "Vigyan aur Praudyogiki Vibhag",
+          "website": "https://dst.gov.in/"
         },
         {
           "name": "Department of Scientific and Industrial Research",
-          "name_hi_translit": "Vigyan aur Audyogik Anusandhan Vibhag"
+          "name_hi_translit": "Vigyan aur Audyogik Anusandhan Vibhag",
+          "website": "https://www.dsir.gov.in/"
         },
         {
           "name": "Department of Bio-Technology",
-          "name_hi_translit": "Biotechnology Vibhag"
+          "name_hi_translit": "Biotechnology Vibhag",
+          "website": "https://dbt.gov.in/"
         }
       ]
     },
@@ -575,7 +652,8 @@
       "kind": "ministry",
       "name": "Ministry of Skill Development and Entrepreneurship",
       "name_hi_translit": "Kaushal Vikas aur Udyamshilta Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.msde.gov.in/"
     },
     {
       "id": "ministry-of-social-justice-and-empowerment",
@@ -586,13 +664,16 @@
       "departments": [
         {
           "name": "Department of Social Justice and Empowerment",
-          "name_hi_translit": "Samajik Nyaya aur Adhikarita Vibhag"
+          "name_hi_translit": "Samajik Nyaya aur Adhikarita Vibhag",
+          "website": "https://socialjustice.gov.in/"
         },
         {
           "name": "Department of Empowerment of Persons with Disabilities (Divyangjan)",
-          "name_hi_translit": "Divyangjan Sashaktikaran Vibhag"
+          "name_hi_translit": "Divyangjan Sashaktikaran Vibhag",
+          "website": "https://depwd.gov.in/"
         }
-      ]
+      ],
+      "website": "https://socialjustice.gov.in/"
     },
     {
       "id": "ministry-of-statistics-and-programme-implementation",
@@ -600,7 +681,8 @@
       "kind": "ministry",
       "name": "Ministry of Statistics and Programme Implementation",
       "name_hi_translit": "Sankhyiki aur Karyakram Karyanvayan Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://mospi.gov.in/"
     },
     {
       "id": "ministry-of-steel",
@@ -608,7 +690,8 @@
       "kind": "ministry",
       "name": "Ministry of Steel",
       "name_hi_translit": "Ispat Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://steel.gov.in/"
     },
     {
       "id": "ministry-of-textiles",
@@ -616,7 +699,8 @@
       "kind": "ministry",
       "name": "Ministry of Textiles",
       "name_hi_translit": "Vastra Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.texmin.gov.in/"
     },
     {
       "id": "ministry-of-tourism",
@@ -624,7 +708,8 @@
       "kind": "ministry",
       "name": "Ministry of Tourism",
       "name_hi_translit": "Paryatan Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.tourism.gov.in/"
     },
     {
       "id": "ministry-of-tribal-affairs",
@@ -632,7 +717,8 @@
       "kind": "ministry",
       "name": "Ministry of Tribal Affairs",
       "name_hi_translit": "Janjatiya Karya Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://tribal.nic.in/"
     },
     {
       "id": "ministry-of-women-and-child-development",
@@ -640,7 +726,8 @@
       "kind": "ministry",
       "name": "Ministry of Women and Child Development",
       "name_hi_translit": "Mahila aur Bal Vikas Mantralaya",
-      "departments": []
+      "departments": [],
+      "website": "https://wcd.gov.in/"
     },
     {
       "id": "ministry-of-youth-affairs-and-sports",
@@ -651,13 +738,16 @@
       "departments": [
         {
           "name": "Department of Youth Affairs",
-          "name_hi_translit": "Yuvak Karyakram Vibhag"
+          "name_hi_translit": "Yuvak Karyakram Vibhag",
+          "website": "https://yas.gov.in/youth-affairs"
         },
         {
           "name": "Department of Sports",
-          "name_hi_translit": "Khel Vibhag"
+          "name_hi_translit": "Khel Vibhag",
+          "website": "https://yas.gov.in/sports"
         }
-      ]
+      ],
+      "website": "https://yas.gov.in/"
     },
     {
       "id": "department-of-atomic-energy",
@@ -665,7 +755,8 @@
       "kind": "department",
       "name": "Department of Atomic Energy",
       "name_hi_translit": "Parmanu Oorja Vibhag",
-      "departments": []
+      "departments": [],
+      "website": "https://dae.gov.in/"
     },
     {
       "id": "department-of-space",
@@ -673,7 +764,8 @@
       "kind": "department",
       "name": "Department of Space",
       "name_hi_translit": "Antariksh Vibhag",
-      "departments": []
+      "departments": [],
+      "website": "https://www.isro.gov.in/"
     },
     {
       "id": "cabinet-secretariat",
@@ -681,7 +773,8 @@
       "kind": "office",
       "name": "Cabinet Secretariat",
       "name_hi_translit": "Mantrimandal Sachivalaya",
-      "departments": []
+      "departments": [],
+      "website": "https://cabsec.gov.in/"
     },
     {
       "id": "president-s-secretariat",
@@ -689,7 +782,8 @@
       "kind": "office",
       "name": "President's Secretariat",
       "name_hi_translit": "Rashtrapati Sachivalaya",
-      "departments": []
+      "departments": [],
+      "website": "https://presidentofindia.nic.in/"
     },
     {
       "id": "prime-minister-s-office",
@@ -697,7 +791,8 @@
       "kind": "office",
       "name": "Prime Minister's Office",
       "name_hi_translit": "Pradhan Mantri Karyalaya",
-      "departments": []
+      "departments": [],
+      "website": "https://www.pmindia.gov.in/en/"
     },
     {
       "id": "niti-aayog",
@@ -705,7 +800,8 @@
       "kind": "office",
       "name": "NITI Aayog",
       "name_hi_translit": "National Institution for Transforming India",
-      "departments": []
+      "departments": [],
+      "website": "https://www.niti.gov.in/"
     },
     {
       "id": "national-security-council-secretariat",

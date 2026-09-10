@@ -14,6 +14,9 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
       { protocol: 'https', hostname: 'commons.wikimedia.org' },
+      // Commons now serves SCALED thumbnails (our ?width=400 requests) from
+      // thumb.wikimedia.org; only unscaled originals still come from upload.
+      { protocol: 'https', hostname: 'thumb.wikimedia.org' },
     ],
   },
   // The local-only data manager must never be bundled into the deployed site.
@@ -36,7 +39,10 @@ const nextConfig = {
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://va.vercel-scripts.com https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://www.googletagservices.com https://adservice.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' blob: data: https://upload.wikimedia.org https://commons.wikimedia.org https://*.googlesyndication.com https://*.g.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google",
+      // thumb.wikimedia.org: where Special:FilePath?width= redirects now land.
+      // Without it every scaled leader photo is a CSP-blocked broken image,
+      // while the few unscaled originals (upload.wikimedia.org) still load.
+      "img-src 'self' blob: data: https://upload.wikimedia.org https://commons.wikimedia.org https://thumb.wikimedia.org https://*.googlesyndication.com https://*.g.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google",
       "font-src 'self' data:",
       "object-src 'none'",
       "base-uri 'self'",

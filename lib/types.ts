@@ -936,6 +936,9 @@ export type LocalBodyStatus = 'elected_council' | 'administrator';
 /** One named person on a local body, copied from the cited page. */
 export interface LocalBodyPerson {
   name: string;
+  /** The name as the body prints it in the state's own script, when that is
+   *  the only form the cited page carries (Marathi, Gujarati, Hindi sites). */
+  name_native?: string;
   /** Only when the cited page prints it - municipal sites usually do not. */
   party?: string;
   /** ISO date the person assumed office, when the source states it. */

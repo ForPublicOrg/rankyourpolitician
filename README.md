@@ -39,12 +39,12 @@ profile, never a verdict.
 
 | | Count |
 |---|---|
-| Elected representatives | **5,266** - 543 Lok Sabha · 245 Rajya Sabha · 4,100 MLAs · 378 MLCs |
-| Cited facts | **30,847** (every one carries a source URL + retrieved date) |
-| Constituencies | 4,643 across 36 states & UTs (598 districts) |
-| Union government | 69 ministers · 5 constitutional offices (President, VP, Speaker, LoPs) · 53 ministries + 53 departments (Allocation of Business Rules) |
-| State governments | 31 councils of ministers (604 ministers) |
-| City governments | 35 municipal bodies with their elected Mayor / Chairperson, deputy and Commissioner, each verified on the body's own site (`/local`) |
+| Elected representatives | **5,265** - 540 Lok Sabha · 244 Rajya Sabha · 4,103 MLAs · 378 MLCs |
+| Cited facts | **30,489** (every one carries a source URL + retrieved date) |
+| Constituencies | 4,666 across 36 states & UTs (616 districts) |
+| Union government | 69 ministers · 5 constitutional offices (President, VP, Speaker, LoPs) · 53 ministries · 53 departments within them · 2 independent departments · 5 offices (Allocation of Business Rules, First Schedule) |
+| State governments | 36 - 31 councils of ministers (603 ministers) + 5 Union Territories run by an Administrator / Lieutenant Governor |
+| City governments | 94 municipal bodies - 70 with their elected Mayor / Chairperson, deputy and Commissioner, 24 under an Administrator / Special Officer - each name re-verified on the cited page (`/local`) |
 | Escalation contacts | 495 district portals · 14 national + 36 state helplines |
 
 Facts come from Election Commission of India affidavits, Digital Sansad, PRS Legislative Research
@@ -170,9 +170,10 @@ middleware.ts                 locale routing: rewrites clean URLs to /{locale}/.
 components/                   UI (map, search, ranking, vote widget, i18n switcher, …)
 lib/                          types, data layer, ranking + trending math, i18n, geo, vote integrity
 lib/i18n/messages/            en.json (source of truth) + per-locale overrides
-data/seed/                    committed dataset (9 JSON files - politicians, constituencies,
-                              central/state government, constitutional offices, district
-                              officials, district portals, contact channels, criminal cases)
+data/seed/                    committed dataset (17 JSON files - politicians, constituencies,
+                              central/state government, Union ministries, city governments,
+                              constitutional offices, elections + vacancies, CAG reports,
+                              district officials, district portals, contact channels, criminal cases)
 data/geo/                     compliant simplified GeoJSON (states, districts, PCs, ACs)
 tools/                        build-time static payload generators (search index, rankings, who)
 tools/data-manager/           LOCAL-ONLY: validate / publish / enrich / import / dashboard

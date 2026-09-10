@@ -1,5 +1,21 @@
 [
   {
+    "stateCode": "AN",
+    "state": "Andaman & Nicobar Islands",
+    "governmentStatus": "administered",
+    "asOf": "as of 9 September 2026 (Lieutenant Governor per Andaman & Nicobar Administration - Lieutenant Governor; in office since 2017-10-08)",
+    "confidence": "high",
+    "governor": {
+      "name": "Admiral D K Joshi, PVSM, AVSM, YSM, NM, VSM (Retd.)",
+      "title": "Lieutenant Governor",
+      "sourceUrl": "https://andamannicobar.gov.in/and_lg"
+    },
+    "ministers": [],
+    "sources": [
+      "https://andamannicobar.gov.in/and_lg"
+    ]
+  },
+  {
     "stateCode": "AP",
     "state": "Andhra Pradesh",
     "governmentStatus": "elected",
@@ -1628,6 +1644,22 @@
     ]
   },
   {
+    "stateCode": "CH",
+    "state": "Chandigarh",
+    "governmentStatus": "administered",
+    "asOf": "as of 9 September 2026 (Administrator per The official website of the Chandigarh Administration; in office since 2024-07-31)",
+    "confidence": "high",
+    "governor": {
+      "name": "Shri Gulab Chand Kataria",
+      "title": "Administrator",
+      "sourceUrl": "https://chandigarh.gov.in/"
+    },
+    "ministers": [],
+    "sources": [
+      "https://chandigarh.gov.in/"
+    ]
+  },
+  {
     "stateCode": "CG",
     "state": "Chhattisgarh",
     "governmentStatus": "elected",
@@ -1908,6 +1940,22 @@
       "https://www.prokerala.com/news/articles/a1666034.html",
       "https://rajbhavancg.gov.in/honorable-governors/honorable-governors.php",
       "https://en.wikipedia.org/wiki/List_of_governors_of_Chhattisgarh"
+    ]
+  },
+  {
+    "stateCode": "DN",
+    "state": "Dadra & Nagar Haveli and Daman & Diu",
+    "governmentStatus": "administered",
+    "asOf": "as of 9 September 2026 (Administrator per UT of Dadra and Nagar Haveli and Daman and Diu - Homepage; in office since 2020-01-26)",
+    "confidence": "high",
+    "governor": {
+      "name": "Shri. Praful Patel",
+      "title": "Administrator",
+      "sourceUrl": "https://ddd.gov.in/"
+    },
+    "ministers": [],
+    "sources": [
+      "https://ddd.gov.in/"
     ]
   },
   {
@@ -3433,7 +3481,7 @@
     "stateCode": "JH",
     "state": "Jharkhand",
     "governmentStatus": "elected",
-    "asOf": "as of mid-2026 (verified against sources reflecting May-July 2026; one cabinet slot vacant since Ramdas Soren's death on 15 Aug 2025)",
+    "asOf": "as of 9 September 2026 (Cabinet Minister Sudivya Kumar died on 6 September 2026; his berth and the berth vacant since Ramdas Soren's death remain unfilled)",
     "confidence": "high",
     "governor": {
       "name": "Santosh Kumar Gangwar",
@@ -3599,25 +3647,6 @@
         "retrieved_date": "2026-07-14",
         "as_of": "as of mid-2026 (verified against sources reflecting May-July 2026; one cabinet slot vacant since Ramdas Soren's death on 15 Aug 2025)",
         "politicianId": "gomia-ac-jh-yogendra-prasad"
-      },
-      {
-        "id": "sudivya-kumar-jh",
-        "stateCode": "JH",
-        "state": "Jharkhand",
-        "rank": "Cabinet",
-        "name": "Sudivya Kumar",
-        "party": "Jharkhand Mukti Morcha",
-        "portfolios": [
-          "Urban Development and Housing",
-          "Higher and Technical Education",
-          "Tourism, Art & Culture",
-          "Sports and Youth Affairs"
-        ],
-        "source_url": "https://cm.jharkhand.gov.in/ministers-portfolio",
-        "source_name": "cm.jharkhand.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-2026 (verified against sources reflecting May-July 2026; one cabinet slot vacant since Ramdas Soren's death on 15 Aug 2025)",
-        "politicianId": "giridih-ac-jh-sudivya-kumar"
       },
       {
         "id": "shilpi-neha-tirkey-jh",
@@ -4612,6 +4641,38 @@
       "https://en.wikipedia.org/wiki/List_of_governors_of_Kerala",
       "https://en.wikipedia.org/wiki/Rajendra_Arlekar",
       "https://www.rajbhavan.kerala.gov.in/index.php/the-governor/governor-profile"
+    ]
+  },
+  {
+    "stateCode": "LA",
+    "state": "Ladakh",
+    "governmentStatus": "administered",
+    "asOf": "as of 9 September 2026 (Lieutenant Governor per Administration of Union Territory of Ladakh - Directory: Shri Vinai Kumar Saxena; in office since 2026-03-13)",
+    "confidence": "high",
+    "governor": {
+      "name": "Shri Vinai Kumar Saxena",
+      "title": "Lieutenant Governor",
+      "sourceUrl": "https://ladakh.gov.in/directory/hlg-ladakh/"
+    },
+    "ministers": [],
+    "sources": [
+      "https://ladakh.gov.in/directory/hlg-ladakh/"
+    ]
+  },
+  {
+    "stateCode": "LD",
+    "state": "Lakshadweep",
+    "governmentStatus": "administered",
+    "asOf": "as of 9 September 2026 (Administrator per Union Territory of Lakshadweep - Official portal; in office since 2020-12-04)",
+    "confidence": "high",
+    "governor": {
+      "name": "Shri. Praful Patel",
+      "title": "Administrator",
+      "sourceUrl": "https://lakshadweep.gov.in/"
+    },
+    "ministers": [],
+    "sources": [
+      "https://lakshadweep.gov.in/"
     ]
   },
   {
@@ -7038,7 +7099,7 @@
     "stateCode": "PY",
     "state": "Puducherry",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
+    "asOf": "as of 9 September 2026 (portfolios per the official py.gov.in roster, page updated 9 September 2026)",
     "confidence": "medium",
     "governor": {
       "name": "K. Kailashnathan (Kuniyil Kailashnathan)",
@@ -7054,19 +7115,28 @@
         "name": "N. Rangaswamy (N. Rangasamy)",
         "party": "All India N.R. Congress",
         "portfolios": [
+          "Confidential and Cabinet Department",
+          "Planning and Finance",
+          "Personnel and Administrative Reforms",
+          "Cooperation",
+          "Revenue and Excise",
           "General Administration",
-          "Finance",
-          "Planning",
-          "Transport",
-          "Fire Services",
+          "Health and Family Welfare",
+          "Hindu Religious Institutions",
+          "Wakf Board",
+          "Local Administration",
           "Urban Basic Services",
-          "Confidential and Cabinet",
-          "All departments not allocated to any minister"
+          "Transport",
+          "Science, Technology and Environment",
+          "Town and Country Planning",
+          "Information and Publicity",
+          "Fire Services",
+          "Other subjects which are not allocated to any other Ministers"
         ],
         "source_url": "https://py.gov.in/ministers",
-        "source_name": "Government of Puducherry - Council of Ministers (official)",
-        "retrieved_date": "2026-08-19",
-        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)"
+        "source_name": "Government of Puducherry - Ministers (official)",
+        "retrieved_date": "2026-09-09",
+        "as_of": "as of 9 September 2026 (portfolios per the official py.gov.in roster, updated 9 September 2026)"
       },
       {
         "id": "a-namassivayam-py",
@@ -7077,13 +7147,16 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Home",
-          "Education",
-          "Electricity"
+          "Animal Husbandry & Animal Welfare",
+          "Forest & Wild Life",
+          "Electricity",
+          "Education including Collegiate Education",
+          "Law"
         ],
         "source_url": "https://py.gov.in/ministers",
-        "source_name": "Government of Puducherry - Council of Ministers (official)",
-        "retrieved_date": "2026-08-19",
-        "as_of": "as of 19 August 2026 (portfolios as notified and published by the Union Territory administration)",
+        "source_name": "Government of Puducherry - Ministers (official)",
+        "retrieved_date": "2026-09-09",
+        "as_of": "as of 9 September 2026 (portfolios per the official py.gov.in roster, updated 9 September 2026)",
         "politicianId": "mannadipet-ac-py-a-namassivayam"
       },
       {
@@ -7171,6 +7244,7 @@
       }
     ],
     "sources": [
+      "https://py.gov.in/ministers",
       "https://en.wikipedia.org/wiki/2026_Puducherry_Legislative_Assembly_election",
       "https://newsonair.gov.in/n-rangasamy-sworn-in-as-puducherry-chief-minister-for-record-fifth-term/",
       "https://newsonair.gov.in/president-droupadi-murmu-appoints-n-rangasamy-as-puducherry-chief-minister/",
@@ -8811,7 +8885,7 @@
     "stateCode": "TG",
     "state": "Telangana",
     "governmentStatus": "elected",
-    "asOf": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)",
+    "asOf": "as of 9 September 2026 (Konda Surekha was dropped from the Council of Ministers on 3 September 2026; Environment & Forests and Endowments have no named successor)",
     "confidence": "high",
     "governor": {
       "name": "Shiv Pratap Shukla",
@@ -8958,23 +9032,6 @@
         "politicianId": "husnabad-ac-tg-ponnam-prabhakar"
       },
       {
-        "id": "konda-surekha-tg",
-        "stateCode": "TG",
-        "state": "Telangana",
-        "rank": "Cabinet",
-        "name": "Konda Surekha",
-        "party": "Indian National Congress",
-        "portfolios": [
-          "Environment & Forests",
-          "Endowment"
-        ],
-        "source_url": "https://www.thecurrentindia.com/govt/telangana-ministers-list/",
-        "source_name": "thecurrentindia.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)",
-        "politicianId": "warangal-east-ac-tg-konda-surekha"
-      },
-      {
         "id": "d-anasuya-seethakka-tg",
         "stateCode": "TG",
         "state": "Telangana",
@@ -9107,7 +9164,8 @@
       "https://www.nationalheraldindia.com/politics/telangana-mohammed-azharuddin-gets-minorities-welfare-public-enterprises-portfolios",
       "https://governor.telangana.gov.in/present_governor.do",
       "https://ddnews.gov.in/en/shiv-pratap-shukla-sworn-in-as-new-governor-of-telangana/",
-      "https://en.wikipedia.org/wiki/List_of_governors_of_Telangana"
+      "https://en.wikipedia.org/wiki/List_of_governors_of_Telangana",
+      "https://thefederal.com/category/states/south/telangana/telangana-cm-revanth-reddy-sacks-forest-minister-konda-surekha-from-cabinet-255589"
     ]
   },
   {
@@ -9352,7 +9410,7 @@
     "stateCode": "UP",
     "state": "Uttar Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (roster re-verified against the Chief Minister’s Office lists of Cabinet Ministers, Ministers of State (Independent Charge) and Ministers of State)",
+    "asOf": "as of 9 September 2026 (roster re-verified against the Chief Minister's Office lists: 23 cabinet-rank including the CM and two Deputy CMs, 16 Ministers of State with independent charge, 21 Ministers of State)",
     "confidence": "high",
     "governor": {
       "name": "Anandiben Patel",
@@ -9709,6 +9767,23 @@
         "politicianId": "unchahar-ac-up-manoj-kumar-pandey"
       },
       {
+        "id": "girish-chandra-yadav-up",
+        "stateCode": "UP",
+        "state": "Uttar Pradesh",
+        "rank": "MoS",
+        "name": "Girish Chandra Yadav",
+        "party": "Bharatiya Janata Party",
+        "portfolios": [
+          "Sports (Independent Charge)",
+          "Youth Welfare"
+        ],
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Chief Minister's Office, Uttar Pradesh - Ministers of State (Independent Charge)",
+        "retrieved_date": "2026-09-09",
+        "as_of": "as of 9 September 2026 (official CMO list of Ministers of State with Independent Charge)",
+        "politicianId": "jaunpur-ac-up-girish-chandra-yadav"
+      },
+      {
         "id": "ajit-pal-singh-up",
         "stateCode": "UP",
         "state": "Uttar Pradesh",
@@ -9716,12 +9791,11 @@
         "name": "Ajit Pal Singh",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Food Safety & Drug Administration (Independent Charge)",
-          "Political Pension"
+          "Food Safety & Drug Administration (Independent Charge)"
         ],
-        "source_url": "https://www.newsonair.gov.in/up-cm-yogi-adityanath-allocates-portfolios-to-newly-inducted-and-promoted-ministers/",
-        "source_name": "newsonair.gov.in",
-        "retrieved_date": "2026-07-14",
+        "source_url": "https://upcmo.up.nic.in/state_minister_ic.htm",
+        "source_name": "Chief Minister's Office, Uttar Pradesh - Ministers of State (Independent Charge)",
+        "retrieved_date": "2026-09-09",
         "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
         "politicianId": "sikandra-ac-up-ajit-singh-pal"
       },

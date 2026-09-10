@@ -1,17 +1,18 @@
 'use client';
-// "Trending / Top rated / Top performers" switcher inside the Top-leaders
-// card. The live views (trending activity, top PUBLIC rating) are
-// client-fetched from CDN-cached APIs on demand - the page itself stays a
-// static ISR serve, exactly like the VoteWidget pattern on person pages. The
-// performers list (verified work record - the SYSTEM axis, deliberately a
-// separate tab from the user-vote axis) stays server-rendered: it is passed in
-// as children, so it costs no client JS and keeps its SEO.
+// "Top rated / Trending / Top performers" switcher inside the Top-leaders
+// card - the same three tabs on the home, state and district pages. The live
+// views (top PUBLIC rating, trending activity) are client-fetched from
+// CDN-cached APIs on demand - the page itself stays a static ISR serve,
+// exactly like the VoteWidget pattern on person pages. The performers list
+// (verified work record - the SYSTEM axis, deliberately a separate tab from
+// the user-vote axis) stays server-rendered: it is passed in as children, so
+// it costs no client JS and keeps its SEO.
 //
-// State/district pages mount the same card with `scope`: trending is scoped to
-// their leaders (same API, ?state=/&district= params - each scope is its own
-// CDN cache key), the Top-rated tab is dropped (it has no scoped endpoint),
-// and the trending fetch waits until the card scrolls into view - most visits
-// never reach it, and every skipped fetch is a skipped function invocation.
+// State/district pages mount the same card with `scope`: both live lists are
+// scoped to their leaders (same APIs, ?state=/&district= params - each scope
+// is its own CDN cache key), and the first fetch waits until the card scrolls
+// into view - most visits never reach it, and every skipped fetch is a skipped
+// function invocation.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useI18n } from '@/lib/i18n/provider';
 import { observe } from '@/components/motion';
@@ -35,7 +36,9 @@ export default function LeadersTabs({
 }) {
   const { t } = useI18n();
   const rows = scope ? 5 : 10;
-  const [tab, setTab] = useState<Tab>('trending');
+  // Top rated opens first - it is the site's own public rating, the number
+  // people come for; trending (attention) and the verified record follow.
+  const [tab, setTab] = useState<Tab>('top');
   const [trending, setTrending] = useState<Remote<TrendingEntry>>({ status: 'idle' });
   const [topRated, setTopRated] = useState<Remote<TopRatedEntry>>({ status: 'idle' });
   const rootRef = useRef<HTMLDivElement>(null);
@@ -67,33 +70,39 @@ export default function LeadersTabs({
   const loadTopRated = useCallback(() => {
     topStarted.current = true;
     setTopRated({ status: 'loading' });
-    fetch('/api/ratings?top=10')
+    const qs = new URLSearchParams({ top: String(rows) });
+    if (scope) {
+      qs.set('state', scope.stateCode);
+      if (scope.district) qs.set('district', scope.district);
+    }
+    fetch(`/api/ratings?${qs.toString()}`)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((data) => setTopRated({ status: 'ready', entries: data?.entries ?? [] }))
       .catch(() => setTopRated({ status: 'error' }));
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rows, scope?.stateCode, scope?.district]);
 
-  // Trending is the default view. On the home page it loads on mount; in geo
+  // Top rated is the default view. On the home page it loads on mount; in geo
   // mode the fetch is deferred until the card first scrolls into view (the
   // same shared observer the Reveal animations use). The refs (not the state)
   // guard the dev StrictMode double-invoke from firing a second fetch.
   useEffect(() => {
-    if (trendingStarted.current) return;
+    if (topStarted.current) return;
     if (!scope) {
-      loadTrending();
+      loadTopRated();
       return;
     }
     const el = rootRef.current;
     if (!el) return;
     if (el.getBoundingClientRect().top < window.innerHeight) {
-      loadTrending();
+      loadTopRated();
       return;
     }
     return observe(el, () => {
-      if (!trendingStarted.current) loadTrending();
+      if (!topStarted.current) loadTopRated();
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loadTrending]);
+  }, [loadTopRated]);
 
   const switchTab = (next: Tab) => {
     setTab(next);
@@ -102,8 +111,8 @@ export default function LeadersTabs({
   };
 
   const tabs: { key: Tab; label: string; icon?: IconName }[] = [
+    { key: 'top', label: t('trending.tabTop'), icon: 'star' },
     { key: 'trending', label: t('trending.tab'), icon: 'sparkle' },
-    ...(scope ? [] : [{ key: 'top' as Tab, label: t('trending.tabTop'), icon: 'star' as IconName }]),
     { key: 'performance', label: t('trending.tabPerformance') },
   ];
 
@@ -144,17 +153,15 @@ export default function LeadersTabs({
         ))}
       </div>
 
+      <div role="tabpanel" id="leaders-panel-top" aria-labelledby="leaders-tab-top" hidden={tab !== 'top'}>
+        <p className="mb-3 text-sm text-ink-faint">{t('topRated.help')}</p>
+        {tab === 'top' && <TopRatedPanel state={topRated} onRetry={loadTopRated} />}
+      </div>
+
       <div role="tabpanel" id="leaders-panel-trending" aria-labelledby="leaders-tab-trending" hidden={tab !== 'trending'}>
         <p className="mb-3 text-sm text-ink-faint">{trendingHelp ?? t('trending.help')}</p>
         {tab === 'trending' && <TrendingPanel state={trending} onRetry={loadTrending} rows={rows} />}
       </div>
-
-      {!scope && (
-        <div role="tabpanel" id="leaders-panel-top" aria-labelledby="leaders-tab-top" hidden={tab !== 'top'}>
-          <p className="mb-3 text-sm text-ink-faint">{t('topRated.help')}</p>
-          {tab === 'top' && <TopRatedPanel state={topRated} onRetry={loadTopRated} />}
-        </div>
-      )}
 
       <div role="tabpanel" id="leaders-panel-performance" aria-labelledby="leaders-tab-performance" hidden={tab !== 'performance'}>
         <p className="mb-3 text-sm text-ink-faint">{t('home.topHelp')}</p>

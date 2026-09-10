@@ -17,11 +17,18 @@ const CACHE = { 'cache-control': 'public, max-age=0, s-maxage=300, stale-while-r
  *  - GET /api/ratings?top=N → the N highest-rated leaders enriched with
  *    name/party/photo for the home "Top rated" tab. Mirrors /api/trending. */
 export async function GET(req: NextRequest) {
-  const topRaw = req.nextUrl.searchParams.get('top');
+  const sp = req.nextUrl.searchParams;
+  const topRaw = sp.get('top');
   if (topRaw != null) {
     const n = Number(topRaw);
     const limit = Number.isFinite(n) ? Math.min(12, Math.max(1, Math.floor(n))) : 5;
-    const entries = await getTopRated(limit);
+    // Optional ?state= / &district= scope, exactly as /api/trending: the
+    // state and district pages mount the same card. Unknown values match
+    // nothing and return a cacheable empty list.
+    const state = sp.get('state');
+    const district = sp.get('district');
+    const scope = state ? { stateCode: state, district: district || undefined } : undefined;
+    const entries = await getTopRated(limit, scope);
     return NextResponse.json({ ok: true, entries }, { headers: CACHE });
   }
 

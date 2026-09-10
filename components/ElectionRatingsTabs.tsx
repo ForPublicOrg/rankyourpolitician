@@ -16,7 +16,8 @@ type Tab = 'trending' | 'top';
 
 export default function ElectionRatingsTabs({ seatSlug }: { seatSlug: string }) {
   const { t } = useI18n();
-  const [tab, setTab] = useState<Tab>('trending');
+  // Top rated first, as on every other leaders card.
+  const [tab, setTab] = useState<Tab>('top');
   const [trending, setTrending] = useState<Remote<ElectionCandidateRatingEntry>>({ status: 'idle' });
   const [top, setTop] = useState<Remote<ElectionCandidateRatingEntry>>({ status: 'idle' });
   const rootRef = useRef<HTMLDivElement>(null);
@@ -37,15 +38,15 @@ export default function ElectionRatingsTabs({ seatSlug }: { seatSlug: string }) 
   // The initial tab is deferred until it is useful. Pages with no interest in
   // ratings keep their static, CDN-served HTML and make no ranking request.
   useEffect(() => {
-    if (started.current.trending) return;
+    if (started.current.top) return;
     const element = rootRef.current;
     if (!element) return;
     if (element.getBoundingClientRect().top < window.innerHeight) {
-      load('trending');
+      load('top');
       return;
     }
     return observe(element, () => {
-      if (!started.current.trending) load('trending');
+      if (!started.current.top) load('top');
     });
   }, [load]);
 
@@ -54,8 +55,8 @@ export default function ElectionRatingsTabs({ seatSlug }: { seatSlug: string }) 
     if (!started.current[next]) load(next);
   };
   const tabs: { key: Tab; label: string; icon: 'sparkle' | 'star' }[] = [
-    { key: 'trending', label: t('trending.tab'), icon: 'sparkle' },
     { key: 'top', label: t('trending.tabTop'), icon: 'star' },
+    { key: 'trending', label: t('trending.tab'), icon: 'sparkle' },
   ];
   const current = tab === 'trending' ? trending : top;
 

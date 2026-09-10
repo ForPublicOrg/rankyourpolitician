@@ -379,8 +379,8 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
           </Reveal>
 
           <Reveal delay={90}>
-            {/* Three views of the same card: "Trending" (default - recent
-                rating activity) and "Top rated" (highest public rating) are
+            {/* Three views of the same card: "Top rated" (default - highest
+                public rating) and "Trending" (recent rating activity) are
                 client-fetched so the page stays static while the lists stay
                 fresh; "Top performers" (this server-rendered list - the
                 verified work record, a deliberately separate axis from user

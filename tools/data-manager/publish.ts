@@ -147,7 +147,12 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       seenReport.add(key);
     }
 
+    // A Union Territory with no legislature has no audit report of its own -
+    // the Comptroller tables its audits in Parliament under the Union - so
+    // its absence from the index is not a coverage gap.
+    const administered = new Set(stateGovs.filter((g) => g.governmentStatus === 'administered').map((g) => g.stateCode));
     for (const gov of validGov) {
+      if (administered.has(gov)) continue;
       if (!covered.has(gov)) {
         push(cagRecord, 'warn',
           `no CAG report indexed for ${gov} - partial coverage reads as selective attention, so /audits should ship complete`);
@@ -538,6 +543,9 @@ function validateLocalBodies(issues: Issue[], politicians: Politician[]) {
     if (b.status === 'administrator' && b.head) push('error', 'body is under an Administrator but also names a head - one of the two is stale');
     if (b.status === 'elected_council' && !b.head) push('error', 'elected council with no head named - nothing verifiable to publish');
     if (b.status !== 'administrator' && b.status !== 'elected_council') push('error', `unknown status "${b.status}"`);
+    // status_note is printed on the /local card verbatim: research commentary
+    // ("do not publish", "NEWS-sourced", "Wikipedia infobox") must not ship.
+    if (b.status_note && /\b(do not|important caveat|recording status|news-sourced|first-party|research|verif(?:y|ied|iable)|wikipedia|infobox|no source)\b/i.test(b.status_note)) push('warn', `${b.id}: status_note reads like research commentary, not public copy - rewrite it`);
     for (const { role, person } of localChairs(b)) {
       if (!person.name?.trim()) push('error', `${role} has no name`);
       if (!person.source_url || !person.source_name || !isoDate.test(person.retrieved_date || '')) push('error', `${role} ${person.name} has no complete citation`);
