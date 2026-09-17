@@ -3,23 +3,24 @@
     "stateCode": "AN",
     "state": "Andaman & Nicobar Islands",
     "governmentStatus": "administered",
-    "asOf": "as of 9 September 2026 (Lieutenant Governor per Andaman & Nicobar Administration - Lieutenant Governor; in office since 2017-10-08)",
+    "asOf": "as of 17 September 2026 (Lieutenant Governor per Andaman & Nicobar Administration - Lieutenant Governor; in office since 2026-09-15, appointed by the President's communique of 5 September 2026)",
     "confidence": "high",
     "governor": {
-      "name": "Admiral D K Joshi, PVSM, AVSM, YSM, NM, VSM (Retd.)",
+      "name": "Prof. (Dr.) Dinesh Sharma",
       "title": "Lieutenant Governor",
       "sourceUrl": "https://andamannicobar.gov.in/and_lg"
     },
     "ministers": [],
     "sources": [
-      "https://andamannicobar.gov.in/and_lg"
+      "https://andamannicobar.gov.in/and_lg",
+      "https://www.presidentofindia.gov.in/press_releases/press-communique-36"
     ]
   },
   {
     "stateCode": "AP",
     "state": "Andhra Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (independently re-verified 14 July 2026; Wikipedia ministry page updated 7 July 2026, all ministers Incumbent, no reshuffle)",
+    "asOf": "as of 17 September 2026 (independently re-verified 14 July 2026; Wikipedia ministry page updated 7 July 2026, all ministers Incumbent, no reshuffle)",
     "confidence": "high",
     "governor": {
       "name": "Syed Abdul Nazeer",
@@ -473,7 +474,7 @@
     "stateCode": "AR",
     "state": "Arunachal Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026",
+    "asOf": "as of 17 September 2026",
     "confidence": "high",
     "governor": {
       "name": "Kaiwalya Trivikram Parnaik",
@@ -719,7 +720,7 @@
     "stateCode": "AS",
     "state": "Assam",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (ministry sworn in 12 May 2026; cabinet expanded 5 June 2026 with portfolios allocated 8 June 2026; CM + 16 cabinet ministers = 13 BJP, 2 AGP, 1 BPF)",
+    "asOf": "as of 17 September 2026 (ministry sworn in 12 May 2026; cabinet expanded 5 June 2026 with portfolios allocated 8 June 2026; CM + 16 cabinet ministers = 13 BJP, 2 AGP, 1 BPF)",
     "confidence": "high",
     "governor": {
       "name": "Lakshman Prasad Acharya",
@@ -1032,7 +1033,8 @@
         "source_url": "https://assamtribune.com/assam/assam-cm-allots-12-portfolios-keeps-police-power-pwd-1612498",
         "source_name": "assamtribune.com",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry sworn in 12 May 2026; cabinet expanded 5 June 2026 with portfolios allocated 8 June 2026; CM + 16 cabinet ministers = 13 BJP, 2 AGP, 1 BPF)"
+        "as_of": "as of July 2026 (ministry sworn in 12 May 2026; cabinet expanded 5 June 2026 with portfolios allocated 8 June 2026; CM + 16 cabinet ministers = 13 BJP, 2 AGP, 1 BPF)",
+        "politicianId": "golakganj-ac-as-ashwini-roy-sarkar"
       }
     ],
     "sources": [
@@ -1051,7 +1053,7 @@
     "stateCode": "BR",
     "state": "Bihar",
     "governmentStatus": "elected",
-    "asOf": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)",
+    "asOf": "as of 17 September 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)",
     "confidence": "high",
     "governor": {
       "name": "Syed Ata Hasnain",
@@ -1469,7 +1471,8 @@
         "source_url": "https://en.wikipedia.org/wiki/Samrat_Choudhary_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)"
+        "as_of": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)",
+        "politicianId": "jamui-ac-br-shreyasi-singh"
       },
       {
         "id": "mohd-zama-khan-br",
@@ -1613,7 +1616,8 @@
         "source_url": "https://en.wikipedia.org/wiki/Samrat_Choudhary_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)"
+        "as_of": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)",
+        "politicianId": "bakhri-ac-br-sanjay-paswan"
       },
       {
         "id": "deepak-prakash-br",
@@ -1628,7 +1632,8 @@
         "source_url": "https://en.wikipedia.org/wiki/Samrat_Choudhary_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)"
+        "as_of": "as of mid-July 2026 (CM in office since 15 April 2026; portfolios allocated 7 May 2026; ministry formed 15 April 2026)",
+        "politicianId": "deepak-prakash-mlc-br"
       }
     ],
     "sources": [
@@ -1647,7 +1652,7 @@
     "stateCode": "CH",
     "state": "Chandigarh",
     "governmentStatus": "administered",
-    "asOf": "as of 9 September 2026 (Administrator per The official website of the Chandigarh Administration; in office since 2024-07-31)",
+    "asOf": "as of 17 September 2026 (Administrator per The official website of the Chandigarh Administration; in office since 2024-07-31)",
     "confidence": "high",
     "governor": {
       "name": "Shri Gulab Chand Kataria",
@@ -1663,7 +1668,7 @@
     "stateCode": "CG",
     "state": "Chhattisgarh",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
+    "asOf": "as of 17 September 2026 (portfolios per the state government roster, reflecting the 20 August 2025 cabinet expansion and reallocation)",
     "confidence": "high",
     "governor": {
       "name": "Ramen Deka",
@@ -1741,15 +1746,15 @@
         "name": "Ram Vichar Netam",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Tribal and Scheduled Tribe Development",
-          "Agriculture and Farmers Welfare",
+          "Tribal Development",
+          "Agriculture Development and Farmers Welfare and Biotechnology",
           "Fisheries",
-          "Animal Husbandry"
+          "Livestock Development"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sai_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+        "source_url": "https://dprcg.gov.in/pages/1704616640/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%AF",
+        "source_name": "Directorate of Public Relations, Chhattisgarh - Council of Ministers profiles (official, page dated 17 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "ramanujganj-ac-cg-ramvichar-netam"
       },
       {
@@ -1814,14 +1819,15 @@
         "name": "Shyam Bihari Jaiswal",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Health and Family Welfare",
+          "Public Health and Family Welfare",
           "Medical Education",
-          "OBC and Minorities Welfare"
+          "Backward Classes and Minorities Development",
+          "Twenty Point Programme Implementation"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sai_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry composition per the 20 August 2025 cabinet expansion; verified unchanged and at full strength of 14 via Wikipedia updated June 2026 and independent reshuffle coverage)",
+        "source_url": "https://dprcg.gov.in/pages/1704616640/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%AF",
+        "source_name": "Directorate of Public Relations, Chhattisgarh - Council of Ministers profiles (official, page dated 17 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "manendragarh-ac-cg-shyam-bihari-jaiswal"
       },
       {
@@ -1946,7 +1952,7 @@
     "stateCode": "DN",
     "state": "Dadra & Nagar Haveli and Daman & Diu",
     "governmentStatus": "administered",
-    "asOf": "as of 9 September 2026 (Administrator per UT of Dadra and Nagar Haveli and Daman and Diu - Homepage; in office since 2020-01-26)",
+    "asOf": "as of 17 September 2026 (Administrator per UT of Dadra and Nagar Haveli and Daman and Diu - Homepage; in office since 2020-01-26)",
     "confidence": "high",
     "governor": {
       "name": "Shri. Praful Patel",
@@ -1962,7 +1968,7 @@
     "stateCode": "DL",
     "state": "Delhi",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026",
+    "asOf": "as of 17 September 2026",
     "confidence": "high",
     "governor": {
       "name": "Taranjit Singh Sandhu",
@@ -2013,7 +2019,8 @@
         "source_url": "https://en.wikipedia.org/wiki/Rekha_Gupta_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026"
+        "as_of": "as of July 2026",
+        "politicianId": "new-delhi-ac-dl-parvesh-sahib-singh-verma"
       },
       {
         "id": "ashish-sood-dl",
@@ -2129,7 +2136,7 @@
     "stateCode": "GA",
     "state": "Goa",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (portfolios per Goa Govt. Notification No.1/4/2022-GAD-II dated 27 August 2025; no change since)",
+    "asOf": "as of 17 September 2026 (portfolios per Goa Govt. Notification No.1/4/2022-GAD-II dated 27 August 2025; no change since)",
     "confidence": "high",
     "governor": {
       "name": "Pusapati Ashok Gajapathi Raju",
@@ -2147,15 +2154,18 @@
         "portfolios": [
           "Home",
           "Finance",
-          "Personnel",
           "Vigilance",
+          "Personnel",
           "Official Language",
-          "Archives and Archaeology"
+          "Agriculture",
+          "Handicrafts",
+          "Civil Supplies",
+          "All departments not allotted to other ministers"
         ],
-        "source_url": "https://www.goavidhansabha.gov.in/council-of-ministers.php",
-        "source_name": "goavidhansabha.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (portfolios per Goa Govt. Notification No.1/4/2022-GAD-II dated 27 August 2025; no change since)",
+        "source_url": "https://secretariat.goa.gov.in/cab_minis",
+        "source_name": "Secretariat, Government of Goa - Cabinet Ministers (last updated 10 March 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "sanquelim-ac-ga-pramod-sawant"
       },
       {
@@ -2170,12 +2180,13 @@
           "Urban Development",
           "Town & Country Planning",
           "Women & Child Development",
-          "Forest"
+          "Forest",
+          "Ayush"
         ],
         "source_url": "https://www.goavidhansabha.gov.in/council-of-ministers.php",
-        "source_name": "goavidhansabha.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (portfolios per Goa Govt. Notification No.1/4/2022-GAD-II dated 27 August 2025; no change since)",
+        "source_name": "Goa Legislative Assembly - Council of Ministers (site updated 11 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "valpoi-ac-ga-vishwajit-pratapsingh-rane"
       },
       {
@@ -2299,13 +2310,13 @@
         "portfolios": [
           "Social Welfare",
           "Drinking Water",
-          "Disability Empowerment",
+          "Empowerment of Persons with Disabilities",
           "River Navigation"
         ],
         "source_url": "https://www.goavidhansabha.gov.in/council-of-ministers.php",
-        "source_name": "goavidhansabha.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (portfolios per Goa Govt. Notification No.1/4/2022-GAD-II dated 27 August 2025; no change since)"
+        "source_name": "Goa Legislative Assembly - Council of Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026"
       },
       {
         "id": "digambar-kamat-ga",
@@ -2356,7 +2367,7 @@
     "stateCode": "GJ",
     "state": "Gujarat",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)",
+    "asOf": "as of 17 September 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)",
     "confidence": "high",
     "governor": {
       "name": "Acharya Devvrat",
@@ -2400,23 +2411,28 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Home",
-          "Police",
-          "Jails",
+          "Police Housing",
+          "Jail",
           "Border Security",
+          "Gruh Rakshak Dal and Gram Rakshak Dal",
+          "Civil Defence",
           "Prohibition and Excise",
           "Transport",
           "Law and Justice",
           "Sports and Youth Services",
           "Cultural Activities",
+          "Coordination of Voluntary Organisations",
           "Industries",
-          "Micro, Small and Medium Enterprises",
+          "Micro, Small and Medium Industries",
+          "Salt Industries",
+          "Printing and Stationery",
           "Tourism and Pilgrimage Development",
           "Civil Aviation"
         ],
         "source_url": "https://gad.gujarat.gov.in/personnel/council-of-ministers-new.htm",
-        "source_name": "gad.gujarat.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)",
+        "source_name": "General Administration Department, Govt. of Gujarat - Council of Ministers (page last updated 17/8/2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "majura-ac-gj-harsh-sanghavi"
       },
       {
@@ -2445,16 +2461,17 @@
         "name": "Jitubhai (Jitendra) Savjibhai Vaghani",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Agriculture and Farmers' Welfare",
+          "Agriculture and Farmers Welfare",
           "Cooperation",
-          "Fisheries",
           "Animal Husbandry",
-          "Cow Breeding"
+          "Cow Breeding",
+          "Fisheries",
+          "Protocol"
         ],
         "source_url": "https://gad.gujarat.gov.in/personnel/council-of-ministers-new.htm",
-        "source_name": "gad.gujarat.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)"
+        "source_name": "General Administration Department, Govt. of Gujarat - Council of Ministers (updated 17/8/2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026"
       },
       {
         "id": "rushikesh-ganeshbhai-patel-gj",
@@ -2584,12 +2601,13 @@
         "name": "Praful Pansheriya",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Health, Family Welfare and Medical Education (Independent Charge)"
+          "Health, Family Welfare and Medical Education (Independent Charge)",
+          "Protocol (State Minister)"
         ],
-        "source_url": "https://www.vibesofindia.com/list-of-portfolios-of-gujarat-ministers/",
-        "source_name": "vibesofindia.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)"
+        "source_url": "https://gad.gujarat.gov.in/personnel/council-of-ministers-new.htm",
+        "source_name": "General Administration Department, Govt. of Gujarat - Council of Ministers (updated 17/8/2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026"
       },
       {
         "id": "dr-manisha-vakil-gj",
@@ -2715,17 +2733,19 @@
         "name": "Dr. Jayrambhai Gamit",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Sports and Youth Services",
-          "Cultural Activities",
+          "Sports, Youth Services and Cultural Activities",
+          "Coordination of Voluntary Organisations",
           "Industries",
-          "Micro, Small and Medium Enterprises",
+          "Micro, Small and Medium Industries",
+          "Salt Industries",
+          "Printing and Stationery",
           "Tourism and Pilgrimage Development",
           "Civil Aviation"
         ],
-        "source_url": "https://www.vibesofindia.com/list-of-portfolios-of-gujarat-ministers/",
-        "source_name": "vibesofindia.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)"
+        "source_url": "https://gad.gujarat.gov.in/personnel/council-of-ministers-new.htm",
+        "source_name": "General Administration Department, Govt. of Gujarat - Council of Ministers (updated 17/8/2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026"
       },
       {
         "id": "trikambhai-chhanga-gj",
@@ -2752,14 +2772,16 @@
         "portfolios": [
           "Finance",
           "Police Housing",
-          "Jails",
+          "Jail",
           "Border Security",
+          "Gruh Rakshak Dal and Gram Rakshak Dal",
+          "Civil Defence",
           "Prohibition and Excise"
         ],
-        "source_url": "https://www.vibesofindia.com/list-of-portfolios-of-gujarat-ministers/",
-        "source_name": "vibesofindia.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (cabinet formed 17 October 2025; roster and portfolios re-verified against multiple sources; no change in office since formation)"
+        "source_url": "https://gad.gujarat.gov.in/personnel/council-of-ministers-new.htm",
+        "source_name": "General Administration Department, Govt. of Gujarat - Council of Ministers (updated 17/8/2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026"
       },
       {
         "id": "sanjaysinh-mahida-gj",
@@ -2845,7 +2867,7 @@
     "stateCode": "HR",
     "state": "Haryana",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026",
+    "asOf": "as of 17 September 2026",
     "confidence": "high",
     "governor": {
       "name": "Ashim Kumar Ghosh",
@@ -2862,20 +2884,23 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Home",
-          "Finance",
+          "Finance, Institutional Finance & Credit Control",
           "Planning",
-          "Excise & Taxation",
-          "Town & Country Planning",
+          "Excise and Taxation",
+          "Town & Country Planning and Urban Estates",
+          "Information, Public Relations, Language and Culture",
+          "Administration of Justice",
           "General Administration",
-          "Personnel",
-          "Law & Legislative",
-          "Information Public Relations Languages & Tourism (general)",
-          "all departments not allocated to other ministers"
+          "Housing For All",
+          "Criminal Investigation (C.I.D)",
+          "Personnel & Training",
+          "Law and Legislative",
+          "Any other department not allotted to any other Minister"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Saini_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://haryanacmoffice.gov.in/council-of-ministers",
+        "source_name": "Haryana Chief Minister's Office - Council of Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "ladwa-ac-hr-nayab-singh-saini"
       },
       {
@@ -3101,12 +3126,14 @@
         "name": "Gaurav Gautam",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Sports & Youth Empowerment (Independent Charge)"
+          "Youth Empowerment & Entrepreneurship (Independent Charge)",
+          "Sports (Independent Charge)",
+          "Law & Legislative (Attached)"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Saini_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://haryanacmoffice.gov.in/council-of-ministers?page=1",
+        "source_name": "Haryana Chief Minister's Office - Council of Ministers (page 2)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "palwal-ac-hr-gaurav-gautam"
       }
     ],
@@ -3125,7 +3152,7 @@
     "stateCode": "HP",
     "state": "Himachal Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+    "asOf": "as of 17 September 2026 (CM and 11-member Congress ministry in office since Dec 2022; portfolios per the Himachal Pradesh government portal, updated 11 September 2026; Governor Kavinder Gupta since March 2026)",
     "confidence": "high",
     "governor": {
       "name": "Kavinder Gupta",
@@ -3151,7 +3178,7 @@
         "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "nadaun-ac-hp-sukhvinder-singh-sukhu"
       },
       {
@@ -3170,7 +3197,7 @@
         "source_url": "https://en.wikipedia.org/wiki/Mukesh_Agnihotri",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "haroli-ac-hp-mukesh-agnihotri"
       },
       {
@@ -3188,7 +3215,7 @@
         "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "solan-ac-hp-dhani-ram-shandil"
       },
       {
@@ -3205,7 +3232,7 @@
         "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "jawali-ac-hp-chander-kumar"
       },
       {
@@ -3223,7 +3250,7 @@
         "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "shillai-ac-hp-harshwardhan-chauhan"
       },
       {
@@ -3236,12 +3263,13 @@
         "portfolios": [
           "Revenue",
           "Horticulture",
-          "Tribal Development"
+          "Tribal Development",
+          "Redressal of Public Grievances"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB5RoJeWJ8txbw%3D%3D",
+        "source_name": "Government of Himachal Pradesh portal - Council of Ministers (last updated 11 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "kinnaur-ac-hp-jagat-singh-negi"
       },
       {
@@ -3252,13 +3280,14 @@
         "name": "Rohit Thakur",
         "party": "Indian National Congress",
         "portfolios": [
+          "School Education",
           "Higher Education",
-          "Elementary Education"
+          "Printing & Stationery"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB5RoJeWJ8txbw%3D%3D",
+        "source_name": "Government of Himachal Pradesh portal - Council of Ministers (last updated 11 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "jubbal-kotkhai-ac-hp-rohit-thakur"
       },
       {
@@ -3274,7 +3303,7 @@
         "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "kasumpti-ac-hp-anirudh-singh"
       },
       {
@@ -3291,7 +3320,7 @@
         "source_url": "https://www.tribuneindia.com/news/himachal/portfolios-allocated-to-himachal-pradesh-ministers-cm-sukhu-keeps-finance-and-home-see-full-list-469525",
         "source_name": "tribuneindia.com",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "as_of": "as of 17 September 2026",
         "politicianId": "shimla-rural-ac-hp-vikramaditya-singh"
       },
       {
@@ -3302,14 +3331,14 @@
         "name": "Rajesh Dharmani",
         "party": "Indian National Congress",
         "portfolios": [
-          "Technical Education",
           "Town & Country Planning",
-          "Housing"
+          "Housing",
+          "Technical Education, Vocational and Industrial Training"
         ],
-        "source_url": "https://www.tribuneindia.com/news/himachal/portfolios-allocated-to-himachal-pradesh-ministers-cm-sukhu-keeps-finance-and-home-see-full-list-469525",
-        "source_name": "tribuneindia.com",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB5RoJeWJ8txbw%3D%3D",
+        "source_name": "Government of Himachal Pradesh portal - Council of Ministers (last updated 11 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "ghumarwin-ac-hp-rajesh-dharmani"
       },
       {
@@ -3321,12 +3350,13 @@
         "party": "Indian National Congress",
         "portfolios": [
           "Ayush",
-          "Youth Services & Sports"
+          "Youth Services and Sports",
+          "Law & Legal Remembrancer's"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Sukhu_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (CM and 11-member Congress ministry in office continuously since Dec 2022; Governor Kavinder Gupta since March 2026). Cabinet composition unchanged in 2026 - a reshuffle has been discussed but not executed.",
+        "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB5RoJeWJ8txbw%3D%3D",
+        "source_name": "Government of Himachal Pradesh portal - Council of Ministers (last updated 11 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "jaisinghpur-ac-hp-yadvinder-goma"
       }
     ],
@@ -3344,7 +3374,7 @@
     "stateCode": "JK",
     "state": "Jammu and Kashmir",
     "governmentStatus": "elected",
-    "asOf": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
+    "asOf": "as of 17 September 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
     "confidence": "high",
     "governor": {
       "name": "Manoj Sinha",
@@ -3481,7 +3511,7 @@
     "stateCode": "JH",
     "state": "Jharkhand",
     "governmentStatus": "elected",
-    "asOf": "as of 9 September 2026 (Cabinet Minister Sudivya Kumar died on 6 September 2026; his berth and the berth vacant since Ramdas Soren's death remain unfilled)",
+    "asOf": "as of 17 September 2026 (Cabinet Minister Sudivya Kumar died on 6 September 2026; his berth and the berth vacant since Ramdas Soren's death remain unfilled)",
     "confidence": "high",
     "governor": {
       "name": "Santosh Kumar Gangwar",
@@ -3684,7 +3714,7 @@
     "stateCode": "KA",
     "state": "Karnataka",
     "governmentStatus": "elected",
-    "asOf": "as of 9 September 2026 (B. Nagendra resigned from the Cabinet on 28 August 2026; Parliamentary Affairs and Legislation moved to Krishna Byre Gowda on 18 August 2026; the council is 32 of a sanctioned 34)",
+    "asOf": "as of 17 September 2026 (B. Nagendra resigned from the Cabinet on 28 August 2026; Parliamentary Affairs and Legislation moved to Krishna Byre Gowda on 18 August 2026; the council is 32 of a sanctioned 34)",
     "confidence": "high",
     "governor": {
       "name": "Thawar Chand Gehlot",
@@ -4240,7 +4270,7 @@
     "stateCode": "KL",
     "state": "Kerala",
     "governmentStatus": "elected",
-    "asOf": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+    "asOf": "as of 17 September 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
     "confidence": "high",
     "governor": {
       "name": "Rajendra Vishwanath Arlekar",
@@ -4256,16 +4286,47 @@
         "name": "V. D. Satheesan",
         "party": "Indian National Congress",
         "portfolios": [
-          "General Administration",
           "Finance",
+          "National Savings",
+          "Stores Purchase",
+          "Commercial Taxes",
+          "Agricultural Income Tax",
+          "Treasuries",
+          "Lotteries",
+          "State Audit",
+          "Kerala State Financial Enterprises",
+          "State Insurance",
+          "Kerala Financial Corporation",
+          "Stamps and Stamp Duties",
+          "Ports",
           "Law",
-          "Planning",
-          "State Goods and Services Tax"
+          "Planning and Economic Affairs",
+          "General Administration",
+          "All India Services",
+          "Science",
+          "Technology",
+          "Disaster Management",
+          "Non-Resident Keralites Affairs",
+          "Pollution Control",
+          "Scientific Institutes",
+          "Personnel and Administrative Reforms",
+          "Election",
+          "Integration",
+          "Sainik Welfare",
+          "Distress Relief",
+          "State Hospitality",
+          "Administration of Civil & Criminal Justice",
+          "Airports",
+          "Metro Rail",
+          "Inter-State River Waters",
+          "Coastal Shipping and Inland Navigation",
+          "Kerala State Inland Navigation Corporation",
+          "Information and Public Relations"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "paravur-ac-kl-v-d-satheesan"
       },
       {
@@ -4298,13 +4359,17 @@
         "portfolios": [
           "Health",
           "Medical Education",
-          "Devaswom",
-          "Ayush"
+          "Medical University",
+          "Indigenous Medicine",
+          "Ayush",
+          "Drugs Control",
+          "Food Safety",
+          "Devaswoms"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "vattiyoorkavu-ac-kl-k-muraleedharan"
       },
       {
@@ -4456,13 +4521,16 @@
         "portfolios": [
           "Sports",
           "Youth Affairs",
+          "Zoos",
+          "Museum",
+          "Registration",
           "Archaeology",
-          "Museums"
+          "Archives"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "kodungallur-ac-kl-o-j-janeesh"
       },
       {
@@ -4473,16 +4541,17 @@
         "name": "P. K. Kunhalikutty",
         "party": "Indian Union Muslim League",
         "portfolios": [
-          "Industries",
+          "Industries & Commerce",
           "Information Technology",
           "Artificial Intelligence",
-          "Mining",
-          "Textiles"
+          "Start ups",
+          "Mining and Geology",
+          "Handlooms & Textiles"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "malappuram-ac-kl-p-k-kunhalikutty"
       },
       {
@@ -4494,14 +4563,14 @@
         "party": "Indian Union Muslim League",
         "portfolios": [
           "General Education",
-          "Minority Welfare",
-          "Waqf",
-          "Hajj"
+          "Literacy Movement",
+          "Wakf and Haj Pilgrimage",
+          "Minority Welfare"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "mannarkkad-ac-kl-n-samsudheen"
       },
       {
@@ -4512,15 +4581,18 @@
         "name": "K. M. Shaji",
         "party": "Indian Union Muslim League",
         "portfolios": [
-          "Local Self Government",
           "Panchayat",
           "Municipality",
-          "Town Planning"
+          "Corporation",
+          "Town Planning",
+          "Rural Development",
+          "Regional Development Authorities",
+          "KILA"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "vengara-ac-kl-k-m-shaji"
       },
       {
@@ -4583,14 +4655,16 @@
         "name": "Mons Joseph",
         "party": "Kerala Congress",
         "portfolios": [
-          "Water Resources",
           "Irrigation",
+          "Command Area Development Authority (CADA)",
+          "Ground Water Department",
+          "Water Supply & Sanitation",
           "Housing"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Satheesan_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (Satheesan ministry sworn in 18 May 2026; portfolios allocated 20 May 2026)",
+        "source_url": "http://www.niyamasabha.org/codes/cmin-new.htm",
+        "source_name": "Kerala Legislative Assembly - Council of Ministers, 16th KLA",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "kaduthuruthy-ac-kl-mons-joseph"
       },
       {
@@ -4647,7 +4721,7 @@
     "stateCode": "LA",
     "state": "Ladakh",
     "governmentStatus": "administered",
-    "asOf": "as of 9 September 2026 (Lieutenant Governor per Administration of Union Territory of Ladakh - Directory: Shri Vinai Kumar Saxena; in office since 2026-03-13)",
+    "asOf": "as of 17 September 2026 (Lieutenant Governor per Administration of Union Territory of Ladakh - Directory: Shri Vinai Kumar Saxena; in office since 2026-03-13)",
     "confidence": "high",
     "governor": {
       "name": "Shri Vinai Kumar Saxena",
@@ -4663,7 +4737,7 @@
     "stateCode": "LD",
     "state": "Lakshadweep",
     "governmentStatus": "administered",
-    "asOf": "as of 9 September 2026 (Administrator per Union Territory of Lakshadweep - Official portal; in office since 2020-12-04)",
+    "asOf": "as of 17 September 2026 (Administrator per Union Territory of Lakshadweep - Official portal; in office since 2020-12-05)",
     "confidence": "high",
     "governor": {
       "name": "Shri. Praful Patel",
@@ -4679,7 +4753,7 @@
     "stateCode": "MP",
     "state": "Madhya Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 14 July 2026 General Administration Department notification)",
+    "asOf": "as of 17 September 2026 (portfolios per the state government roster, reflecting the 14 July 2026 General Administration Department notification)",
     "confidence": "high",
     "governor": {
       "name": "Mangubhai C. Patel",
@@ -4697,18 +4771,21 @@
         "portfolios": [
           "General Administration",
           "Home",
+          "Jail",
+          "Industry Policy and Investment Promotion",
           "Public Relations",
-          "Jails",
-          "Mining",
+          "Narmada Valley Development",
           "Aviation",
-          "Industrial Policy",
-          "Investment Promotion",
-          "Animal Husbandry and Dairy"
+          "Mineral Resources",
+          "Public Service Management",
+          "Non-Resident Indian",
+          "Animal Husbandry and Dairy",
+          "other departments not allotted to any other Minister"
         ],
-        "source_url": "https://www.mpinfo.org/Home/Ministers",
-        "source_name": "Government of Madhya Pradesh - Council of Ministers (mpinfo.org, official)",
-        "retrieved_date": "2026-08-19",
-        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 14 July 2026 General Administration Department notification)",
+        "source_url": "https://www.mpinfo.org/NewsWebService.asmx/get_MinisterDetails?Minister_ID=0&FontName=%22Mangal%22",
+        "source_name": "Government of Madhya Pradesh, Directorate of Public Relations - Council of Ministers data feed behind https://www.mpinfo.org/Home/FrmMinister_Info (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "ujjain-south-ac-mp-mohan-yadav"
       },
       {
@@ -4736,13 +4813,14 @@
         "name": "Jagdish Devda",
         "party": "Bharatiya Janata Party",
         "portfolios": [
+          "Commercial Tax",
           "Finance",
-          "Commercial Tax"
+          "Planning, Economics & Statistics"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Jagdish_Devda",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/NewsWebService.asmx/get_MinisterDetails?Minister_ID=0&FontName=%22Mangal%22",
+        "source_name": "Government of Madhya Pradesh, Directorate of Public Relations - Council of Ministers data feed (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "malhargarh-ac-mp-jagdish-devda"
       },
       {
@@ -4753,12 +4831,13 @@
         "name": "Prahlad Singh Patel",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Panchayat and Rural Development"
+          "Panchayat and Rural Development",
+          "Labour"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Mohan_Yadav_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/NewsWebService.asmx/get_MinisterDetails?Minister_ID=0&FontName=%22Mangal%22",
+        "source_name": "Government of Madhya Pradesh, Directorate of Public Relations - Council of Ministers data feed (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "narsingpur-ac-mp-prahlad-singh-patel"
       },
       {
@@ -4984,12 +5063,13 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Higher Education",
+          "AYUSH",
           "Technical Education"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Mohan_Yadav_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/NewsWebService.asmx/get_MinisterDetails?Minister_ID=0&FontName=%22Mangal%22",
+        "source_name": "Government of Madhya Pradesh, Directorate of Public Relations - Council of Ministers data feed (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "shujalpur-ac-mp-inder-singh-parmar"
       },
       {
@@ -5047,12 +5127,13 @@
         "name": "Krishna Gaur",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Other Backward Classes and Minority Welfare (Independent Charge)"
+          "Backward Classes and Minorities Welfare (Independent Charge)",
+          "De-notified, Nomadic & Semi-Nomadic Welfare (Independent Charge)"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Mohan_Yadav_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/NewsWebService.asmx/get_MinisterDetails?Minister_ID=0&FontName=%22Mangal%22",
+        "source_name": "Government of Madhya Pradesh, Directorate of Public Relations - Council of Ministers data feed (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "govindpura-ac-mp-krishna-gaur"
       },
       {
@@ -5192,12 +5273,12 @@
         "name": "Narendra Shivaji Patel",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Public Health (MoS)"
+          "Public Health & Medical Education (MoS)"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Mohan_Yadav_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (ministry constituted Dec 2023; roster verified stable through late June 2026, cross-checked against Wikipedia updated 27 June 2026 and Oneindia MP cabinet list)",
+        "source_url": "https://www.mpinfo.org/NewsWebService.asmx/get_MinisterDetails?Minister_ID=0&FontName=%22Mangal%22",
+        "source_name": "Government of Madhya Pradesh, Directorate of Public Relations - Council of Ministers data feed (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "udaipura-ac-mp-narendra-shivaji-patel"
       }
     ],
@@ -5216,7 +5297,7 @@
     "stateCode": "MH",
     "state": "Maharashtra",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026; CM (Fadnavis), both Deputy CMs (Eknath Shinde, Sunetra Pawar) and Governor (Jishnu Dev Varma) independently confirmed via 2026 sources; ministry roster reflects the 31 January 2026 reshuffle following the death of Deputy CM Ajit Pawar (28 Jan 2026)",
+    "asOf": "as of 17 September 2026; CM (Fadnavis), both Deputy CMs (Eknath Shinde, Sunetra Pawar) and Governor (Jishnu Dev Varma) independently confirmed via 2026 sources; ministry roster reflects the 31 January 2026 reshuffle following the death of Deputy CM Ajit Pawar (28 Jan 2026)",
     "confidence": "high",
     "governor": {
       "name": "Jishnu Dev Varma",
@@ -5955,7 +6036,7 @@
     "stateCode": "MN",
     "state": "Manipur",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (ministry formed 4 February 2026; portfolios allocated 4 March 2026; still only 5 ministers, 7 of 12 berths vacant)",
+    "asOf": "as of 17 September 2026 (ministry formed 4 February 2026; portfolios allocated 4 March 2026; still only 5 ministers, 7 of 12 berths vacant)",
     "confidence": "high",
     "governor": {
       "name": "Ajay Kumar Bhalla",
@@ -6071,7 +6152,7 @@
     "stateCode": "ML",
     "state": "Meghalaya",
     "governmentStatus": "elected",
-    "asOf": "as of 14 July 2026",
+    "asOf": "as of 17 September 2026",
     "confidence": "high",
     "governor": {
       "name": "Chandrashekhar Harishankar Vijayashankar (C. H. Vijayashankar)",
@@ -6088,16 +6169,21 @@
         "party": "National People's Party",
         "portfolios": [
           "Cabinet Affairs",
-          "Finance",
           "Elections",
+          "Finance",
+          "Forests & Environment",
           "Home (Political)",
-          "Planning",
-          "and all portfolios not otherwise allocated"
+          "Information Technology and Communication",
+          "Mining & Geology",
+          "Personnel & A.R.",
+          "Planning, Investment Promotion & Sustainable Development",
+          "Programme Implementation & Evaluation",
+          "any portfolios not allotted to any other Minister"
         ],
         "source_url": "https://meghalaya.gov.in/key-contacts/council-of-ministers",
-        "source_name": "meghalaya.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026",
+        "source_name": "Meghalaya Government Portal - Council of Ministers (official, last updated 17 Sep 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "south-tura-ac-ml-conrad-sangma"
       },
       {
@@ -6318,7 +6404,7 @@
     "stateCode": "MZ",
     "state": "Mizoram",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 9 October 2025 reallocation)",
+    "asOf": "as of 17 September 2026 (portfolios per the state government roster, reflecting the 9 October 2025 reallocation)",
     "confidence": "high",
     "governor": {
       "name": "General (Dr) Vijay Kumar Singh (V.K. Singh)",
@@ -6392,15 +6478,15 @@
         "name": "C. Lalsawivunga",
         "party": "Zoram People's Movement",
         "portfolios": [
-          "Local Administration / District Council & Minority Affairs",
+          "District Council & Minority Affairs",
           "Art & Culture",
           "Animal Husbandry & Veterinary",
           "Horticulture"
         ],
-        "source_url": "https://newsonair.gov.in/mizoram-cm-lalduhoma-reshuffles-portfolios-of-seven-ministers/",
-        "source_name": "newsonair.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (composition confirmed intact by CM on 29 June 2026; portfolios reflect the March 2025 reshuffle plus the 19 June 2026 transfer of Personnel & Administrative Reforms from K. Sapdanga to the CM)",
+        "source_url": "https://dipr.mizoram.gov.in/page/council-of-ministers",
+        "source_name": "Directorate of Information & Public Relations, Government of Mizoram - Council of Ministers (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "aizawl-south-1-ac-mz-c-lalsawivunga"
       },
       {
@@ -6432,12 +6518,13 @@
         "portfolios": [
           "School Education",
           "Higher & Technical Education",
-          "Taxation"
+          "Information & Communication Technology",
+          "assists the Chief Minister on Taxation (under the Finance Department)"
         ],
         "source_url": "https://dipr.mizoram.gov.in/page/council-of-ministers",
         "source_name": "Directorate of Information & Public Relations, Government of Mizoram - Council of Ministers (official)",
-        "retrieved_date": "2026-08-19",
-        "as_of": "as of 19 August 2026 (portfolios per the state government roster, reflecting the 9 October 2025 reallocation)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "aizawl-north-2-ac-mz-vanlalthlana"
       },
       {
@@ -6519,14 +6606,14 @@
         "name": "Prof. Lalnilawma",
         "party": "Zoram People's Movement",
         "portfolios": [
-          "Rural Development",
+          "Rural Development & Administration",
           "Public Health Engineering",
           "Disaster Management & Rehabilitation"
         ],
-        "source_url": "https://newsonair.gov.in/mizoram-cm-lalduhoma-reshuffles-portfolios-of-seven-ministers/",
-        "source_name": "newsonair.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (composition confirmed intact by CM on 29 June 2026; portfolios reflect the March 2025 reshuffle plus the 19 June 2026 transfer of Personnel & Administrative Reforms from K. Sapdanga to the CM)",
+        "source_url": "https://dipr.mizoram.gov.in/page/council-of-ministers",
+        "source_name": "Directorate of Information & Public Relations, Government of Mizoram - Council of Ministers (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "tawi-ac-mz-lalnilawma"
       },
       {
@@ -6565,7 +6652,7 @@
     "stateCode": "NL",
     "state": "Nagaland",
     "governmentStatus": "elected",
-    "asOf": "as of 19 August 2026 (the Nationalist Democratic Progressive Party merged into the Naga People’s Front; the Election Commission recognised the merger by Order No. 56/06/2026/PPS-II of 4 May 2026)",
+    "asOf": "as of 17 September 2026 (the Nationalist Democratic Progressive Party merged into the Naga People’s Front; the Election Commission recognised the merger by Order No. 56/06/2026/PPS-II of 4 May 2026)",
     "confidence": "high",
     "governor": {
       "name": "Nand Kishore Yadav",
@@ -6794,7 +6881,7 @@
     "stateCode": "OD",
     "state": "Odisha",
     "governmentStatus": "elected",
-    "asOf": "as of 14 July 2026 (ministry unchanged since its 12 June 2024 formation; 16 ministers in office, 6 of 22 permissible berths still vacant; cabinet-expansion buzz persisted through May 2026 but no expansion had been effected as of this date - verified against Wikipedia Majhi-ministry page last edited 12 July 2026)",
+    "asOf": "as of 17 September 2026 (ministry unchanged since its 12 June 2024 formation; 16 ministers in office, 6 of 22 permissible berths still vacant; cabinet-expansion buzz persisted through May 2026 but no expansion had been effected as of this date - verified against Wikipedia Majhi-ministry page last edited 12 July 2026)",
     "confidence": "high",
     "governor": {
       "name": "Dr. Hari Babu Kambhampati",
@@ -6815,12 +6902,12 @@
           "Finance",
           "Information & Public Relations",
           "Water Resources",
-          "Planning & Coordination"
+          "Planning & Convergence"
         ],
-        "source_url": "https://cm.odisha.gov.in/",
-        "source_name": "cm.odisha.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (ministry unchanged since its 12 June 2024 formation; 16 ministers in office, 6 of 22 permissible berths still vacant; cabinet-expansion buzz persisted through May 2026 but no expansion had been effected as of this date - verified against Wikipedia Majhi-ministry page last edited 12 July 2026)",
+        "source_url": "https://odishaassembly.nic.in/CouncilOfMinister.aspx",
+        "source_name": "Odisha Legislative Assembly - Council Of Ministers (official)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "keonjhar-ac-od-mohan-charan-majhi"
       },
       {
@@ -7099,7 +7186,7 @@
     "stateCode": "PY",
     "state": "Puducherry",
     "governmentStatus": "elected",
-    "asOf": "as of 9 September 2026 (portfolios per the official py.gov.in roster, page updated 9 September 2026)",
+    "asOf": "as of 17 September 2026 (portfolios per the official py.gov.in roster, page updated 9 September 2026)",
     "confidence": "medium",
     "governor": {
       "name": "K. Kailashnathan (Kuniyil Kailashnathan)",
@@ -7260,7 +7347,7 @@
     "stateCode": "PB",
     "state": "Punjab",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (portfolios reflect the 11 May 2026 post-arrest reallocation; CM, ministry and Sanjeev Arora's no-portfolio status independently reconfirmed for July 2026)",
+    "asOf": "as of 17 September 2026 (portfolios reflect the 11 May 2026 post-arrest reallocation; CM, ministry and Sanjeev Arora's no-portfolio status independently reconfirmed for July 2026)",
     "confidence": "high",
     "governor": {
       "name": "Gulab Chand Kataria",
@@ -7580,7 +7667,7 @@
     "stateCode": "RJ",
     "state": "Rajasthan",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (December 2023 Sharma ministry composition; no reshuffle executed as of this verification)",
+    "asOf": "as of 17 September 2026 (December 2023 Sharma ministry composition; no reshuffle executed as of this verification)",
     "confidence": "high",
     "governor": {
       "name": "Haribhau Kisanrao Bagde",
@@ -8036,7 +8123,7 @@
     "stateCode": "SK",
     "state": "Sikkim",
     "governmentStatus": "elected",
-    "asOf": "as of 14 July 2026 (second Tamang ministry, sworn in 10 June 2024; no reshuffle or vacancy since)",
+    "asOf": "as of 17 September 2026 (second Tamang ministry, sworn in 10 June 2024; no reshuffle or vacancy since)",
     "confidence": "high",
     "governor": {
       "name": "Om Prakash Mathur",
@@ -8275,7 +8362,7 @@
     "stateCode": "TN",
     "state": "Tamil Nadu",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)",
+    "asOf": "as of 17 September 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)",
     "confidence": "high",
     "governor": {
       "name": "Rajendra Vishwanath Arlekar",
@@ -8293,15 +8380,26 @@
         "portfolios": [
           "Public",
           "General Administration",
+          "Indian Administrative Service",
+          "Indian Police Service",
+          "Indian Forest Service",
+          "District Revenue Officers",
           "Police",
           "Home",
           "Special Programme Implementation",
-          "Youth Welfare"
+          "Special Initiatives",
+          "Poverty Alleviation and Rural Indebtedness",
+          "Youth Welfare",
+          "Welfare of Children",
+          "Aged",
+          "Differently Abled Persons",
+          "Municipal Administration",
+          "Urban and Water Supply"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/C._Joseph_Vijay_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)",
+        "source_url": "https://www.tn.gov.in/minister_list.php",
+        "source_name": "Government of Tamil Nadu - Council of Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "perambur-ac-tn-c-joseph-vijay"
       },
       {
@@ -8365,12 +8463,17 @@
         "party": "Tamilaga Vettri Kazhagam",
         "portfolios": [
           "Revenue",
-          "Disaster Management"
+          "District Revenue Establishment",
+          "Deputy Collectors",
+          "Disaster Management",
+          "Boodhan",
+          "Gramadhan",
+          "Legislative Assembly"
         ],
         "source_url": "https://www.tn.gov.in/minister_list.php",
-        "source_name": "tn.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)",
+        "source_name": "Government of Tamil Nadu - Council of Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "gobichettipalayam-ac-tn-k-a-sengottaiyan"
       },
       {
@@ -8422,7 +8525,8 @@
         "source_url": "https://www.tn.gov.in/minister_list.php",
         "source_name": "tn.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)"
+        "as_of": "as of July 2026 (government sworn in 10 May 2026; cabinet portfolios per official TN government portal; Governor holding additional charge since 12 March 2026)",
+        "politicianId": "egmore-ac-tn-a-rajmohan"
       },
       {
         "id": "t-k-prabhu-tn",
@@ -8885,7 +8989,7 @@
     "stateCode": "TG",
     "state": "Telangana",
     "governmentStatus": "elected",
-    "asOf": "as of 9 September 2026 (Konda Surekha was dropped from the Council of Ministers on 3 September 2026; Environment & Forests and Endowments have no named successor)",
+    "asOf": "as of 17 September 2026 (Konda Surekha was dropped from the Council of Ministers on 3 September 2026; Environment & Forests and Endowments have no named successor)",
     "confidence": "high",
     "governor": {
       "name": "Shiv Pratap Shukla",
@@ -9012,7 +9116,8 @@
         "source_url": "https://www.thecurrentindia.com/govt/telangana-ministers-list/",
         "source_name": "thecurrentindia.com",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)"
+        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)",
+        "politicianId": "palair-ac-tg-ponguleti-srinivasa-reddy"
       },
       {
         "id": "ponnam-prabhakar-tg",
@@ -9064,7 +9169,8 @@
         "source_url": "https://www.thecurrentindia.com/govt/telangana-ministers-list/",
         "source_name": "thecurrentindia.com",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)"
+        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)",
+        "politicianId": "khammam-ac-tg-thummala-nageswara-rao"
       },
       {
         "id": "jupally-krishna-rao-tg",
@@ -9152,7 +9258,8 @@
         "source_url": "https://www.nationalheraldindia.com/politics/telangana-mohammed-azharuddin-gets-minorities-welfare-public-enterprises-portfolios",
         "source_name": "nationalheraldindia.com",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)"
+        "as_of": "as of 14 July 2026 (verified against news sources through 2026; portal last updated June 2026)",
+        "politicianId": "mohammed-azharuddin-mlc-tg"
       }
     ],
     "sources": [
@@ -9172,7 +9279,7 @@
     "stateCode": "TR",
     "state": "Tripura",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (cross-checked 14 July 2026 against official Council of Ministers portal, last updated 15 July 2025, and Wikipedia 'Second Saha ministry'; governor confirmed against Wikipedia governors list updated 13 June 2026; no cabinet or gubernatorial change affecting Tripura found since)",
+    "asOf": "as of 17 September 2026 (cross-checked 14 July 2026 against official Council of Ministers portal, last updated 15 July 2025, and Wikipedia 'Second Saha ministry'; governor confirmed against Wikipedia governors list updated 13 June 2026; no cabinet or gubernatorial change affecting Tripura found since)",
     "confidence": "high",
     "governor": {
       "name": "N. Indrasena Reddy (Indrasena Reddy Nallu)",
@@ -9233,7 +9340,8 @@
         "source_url": "https://tripura.gov.in/council-ministers",
         "source_name": "tripura.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (cross-checked 14 July 2026 against official Council of Ministers portal, last updated 15 July 2025, and Wikipedia 'Second Saha ministry'; governor confirmed against Wikipedia governors list updated 13 June 2026; no cabinet or gubernatorial change affecting Tripura found since)"
+        "as_of": "as of July 2026 (cross-checked 14 July 2026 against official Council of Ministers portal, last updated 15 July 2025, and Wikipedia 'Second Saha ministry'; governor confirmed against Wikipedia governors list updated 13 June 2026; no cabinet or gubernatorial change affecting Tripura found since)",
+        "politicianId": "radhakishorpur-ac-tr-pranjit-singha-roy"
       },
       {
         "id": "santana-chakma-tr",
@@ -9410,7 +9518,7 @@
     "stateCode": "UP",
     "state": "Uttar Pradesh",
     "governmentStatus": "elected",
-    "asOf": "as of 9 September 2026 (roster re-verified against the Chief Minister's Office lists: 23 cabinet-rank including the CM and two Deputy CMs, 16 Ministers of State with independent charge, 21 Ministers of State)",
+    "asOf": "as of 17 September 2026 (roster re-verified against the Chief Minister's Office lists: 23 cabinet-rank including the CM and two Deputy CMs, 16 Ministers of State with independent charge, 21 Ministers of State)",
     "confidence": "high",
     "governor": {
       "name": "Anandiben Patel",
@@ -9576,7 +9684,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/cabinet-ministers",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "mainpuri-ac-up-jaiveer-singh"
       },
       {
         "id": "dharmpal-singh-up",
@@ -9665,7 +9774,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/cabinet-ministers",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "a-k-sharma-mlc-up"
       },
       {
         "id": "yogendra-upadhyay-up",
@@ -9680,7 +9790,8 @@
         "source_url": "https://upcmo.up.nic.in/cabinet_minister.htm",
         "source_name": "Office of the Chief Minister, Uttar Pradesh - Cabinet Ministers roster",
         "retrieved_date": "2026-08-19",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "agra-south-ac-up-yogendra-upadhyaya"
       },
       {
         "id": "ashish-patel-up",
@@ -9867,7 +9978,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "obra-ac-up-sanjiv-kumar"
       },
       {
         "id": "baldev-singh-olakh-up",
@@ -9884,7 +9996,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "bilaspur-ac-up-baldev-singh-aulakh"
       },
       {
         "id": "jaswant-saini-up",
@@ -9933,7 +10046,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "mehroni-ac-up-manohar-lal-panth"
       },
       {
         "id": "sanjay-gangwar-up",
@@ -9965,7 +10079,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "deoband-ac-up-brijesh-singh-rawat"
       },
       {
         "id": "k-p-malik-up",
@@ -9982,7 +10097,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "baraut-ac-up-krishan-pal-malik"
       },
       {
         "id": "suresh-rahi-up",
@@ -10063,7 +10179,8 @@
         "source_url": "https://upvidhansabhaproceedings.gov.in/state_minister",
         "source_name": "upvidhansabhaproceedings.gov.in",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)"
+        "as_of": "as of mid-July 2026 (ministry reflects the 10 May 2026 cabinet expansion and subsequent portfolio allocation; CM incumbency independently confirmed via July 2026 news coverage)",
+        "politicianId": "shahabad-ac-up-rajani-tiwari"
       },
       {
         "id": "satish-sharma-up",
@@ -10442,7 +10559,7 @@
     "stateCode": "UK",
     "state": "Uttarakhand",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026",
+    "asOf": "as of 17 September 2026",
     "confidence": "high",
     "governor": {
       "name": "Lt Gen Gurmit Singh (Retd)",
@@ -10458,29 +10575,35 @@
         "name": "Pushkar Singh Dhami",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Home",
-          "Finance",
-          "Taxation",
           "Personnel",
           "Vigilance",
           "Secretariat Administration",
-          "Information",
-          "Justice",
           "Planning",
+          "State Property",
+          "Information",
+          "Home",
+          "Prisons",
+          "Civil Defence and Home Guards",
           "Revenue",
           "Industrial Development",
-          "Labour, Employment and Skill Development",
+          "Mining",
+          "Council of Ministers",
+          "Labour",
+          "Drinking Water",
+          "Energy and Alternative Energy",
           "Excise",
-          "Energy (incl. Renewable Energy)",
-          "Disaster Management and Rehabilitation",
+          "Justice",
           "Civil Aviation",
-          "Protocol",
-          "Administrative Reforms"
+          "Finance",
+          "Commercial Tax",
+          "Stamps and Registration",
+          "Housing",
+          "All departments not allocated to other ministers"
         ],
         "source_url": "https://cm.uk.gov.in/cabinet-minister/",
-        "source_name": "cm.uk.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers (last updated 1 Apr 2026)",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "champawat-ac-uk-pushkar-singh-dhami"
       },
       {
@@ -10492,15 +10615,19 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Public Works Department",
-          "Tourism",
-          "Irrigation and Flood Control",
+          "Rural Works Department",
           "Culture",
-          "Panchayati Raj"
+          "Endowment",
+          "Tourism",
+          "India, Nepal, Uttarakhand River Projects",
+          "Irrigation",
+          "Minor Irrigation",
+          "General Administration Department"
         ],
-        "source_url": "https://ddnews.gov.in/en/uttarakhand-govt-allocates-portfolios-after-cabinet-expansion-dhami-retains-key-departments/",
-        "source_name": "ddnews.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "chaubattakhal-ac-uk-satpal-maharaj"
       },
       {
@@ -10511,14 +10638,18 @@
         "name": "Ganesh Joshi",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "Agriculture and Farmers' Welfare",
-          "Horticulture",
-          "Agricultural Marketing"
+          "Agriculture and Farmer Welfare",
+          "Agriculture Education",
+          "Agriculture Marketing",
+          "Horticulture and Food Processing",
+          "Horticulture and Fruit Industry",
+          "Sericulture",
+          "Sainik (Soldier) Welfare"
         ],
-        "source_url": "https://ddnews.gov.in/en/uttarakhand-govt-allocates-portfolios-after-cabinet-expansion-dhami-retains-key-departments/",
-        "source_name": "ddnews.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "mussoorie-ac-uk-ganesh-joshi"
       },
       {
@@ -10529,15 +10660,17 @@
         "name": "Dhan Singh Rawat",
         "party": "Bharatiya Janata Party",
         "portfolios": [
-          "School Education",
+          "Basic Education",
+          "Secondary Education",
+          "Sanskrit Education",
+          "Cooperative",
           "Higher Education",
-          "Health and Medical Education",
-          "Co-operation"
+          "Technical Education"
         ],
-        "source_url": "https://ddnews.gov.in/en/uttarakhand-govt-allocates-portfolios-after-cabinet-expansion-dhami-retains-key-departments/",
-        "source_name": "ddnews.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "srinagar-ac-uk-dhan-singh-rawat"
       },
       {
@@ -10549,15 +10682,14 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Forest",
-          "Environment and Climate Change",
-          "Technical Education",
-          "Elections",
-          "Language"
+          "Election",
+          "Legislative and Parliamentary Affairs",
+          "Medical Health and Medical Education"
         ],
-        "source_url": "https://ddnews.gov.in/en/uttarakhand-govt-allocates-portfolios-after-cabinet-expansion-dhami-retains-key-departments/",
-        "source_name": "ddnews.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "narendranagar-ac-uk-subodh-uniyal"
       },
       {
@@ -10569,13 +10701,14 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Women Empowerment and Child Development",
-          "Food and Civil Supplies",
-          "Social Welfare"
+          "Food, Civil Supplies and Consumer Affairs",
+          "Sports",
+          "Youth Welfare"
         ],
-        "source_url": "https://ddnews.gov.in/en/uttarakhand-govt-allocates-portfolios-after-cabinet-expansion-dhami-retains-key-departments/",
-        "source_name": "ddnews.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "someshwar-ac-uk-rekha-arya"
       },
       {
@@ -10589,13 +10722,14 @@
           "Animal Husbandry",
           "Dairy Development",
           "Fisheries",
-          "Sugar Industries",
-          "Skill Development"
+          "Cane Development and Sugar Industry",
+          "Protocol",
+          "Skill Development and Employment"
         ],
-        "source_url": "https://ddnews.gov.in/en/uttarakhand-govt-allocates-portfolios-after-cabinet-expansion-dhami-retains-key-departments/",
-        "source_name": "ddnews.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "sitarganj-ac-uk-saurabh-bahuguna"
       },
       {
@@ -10607,13 +10741,15 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Panchayati Raj",
-          "Disaster Management",
-          "AYUSH"
+          "Disaster Management and Rehabilitation",
+          "AYUSH and AYUSH Education",
+          "Reorganisation",
+          "Census"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Uttarakhand_Council_of_Ministers",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "haridwar-ac-uk-madan-kaushik"
       },
       {
@@ -10643,12 +10779,14 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Transport",
-          "IT and e-Governance"
+          "Information Technology and Good Governance",
+          "Science and Technology",
+          "Biotechnology"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Uttarakhand_Council_of_Ministers",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "roorkee-ac-uk-pradip-batra"
       },
       {
@@ -10660,12 +10798,15 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Social Welfare",
-          "Minority and Student Welfare"
+          "Minority Welfare",
+          "Student Welfare",
+          "Language"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Uttarakhand_Council_of_Ministers",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026"
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
+        "politicianId": "rajpur-road-ac-uk-khajan-dass"
       },
       {
         "id": "ram-singh-kaira-uk",
@@ -10676,12 +10817,13 @@
         "party": "Bharatiya Janata Party",
         "portfolios": [
           "Urban Development",
-          "Environmental Protection"
+          "Environment Conservation and Climate Change",
+          "Watershed Management"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Uttarakhand_Council_of_Ministers",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026",
+        "source_url": "https://cm.uk.gov.in/cabinet-minister/",
+        "source_name": "Uttarakhand CM Office - Cabinet Ministers",
+        "retrieved_date": "2026-09-17",
+        "as_of": "as of 17 September 2026",
         "politicianId": "bhimtal-ac-uk-ram-singh-kaira"
       }
     ],
@@ -10699,7 +10841,7 @@
     "stateCode": "WB",
     "state": "West Bengal",
     "governmentStatus": "elected",
-    "asOf": "as of July 2026 (BJP ministry formed 9 May 2026; cabinet expanded to 41 ministers on 1 June 2026)",
+    "asOf": "as of 17 September 2026 (BJP ministry formed 9 May 2026; cabinet expanded to 41 ministers on 1 June 2026)",
     "confidence": "high",
     "governor": {
       "name": "R. N. Ravi",
@@ -10962,7 +11104,8 @@
         "source_url": "https://en.wikipedia.org/wiki/Suvendu_Adhikari_ministry",
         "source_name": "en.wikipedia.org",
         "retrieved_date": "2026-07-14",
-        "as_of": "as of July 2026 (BJP ministry formed 9 May 2026; cabinet expanded to 41 ministers on 1 June 2026)"
+        "as_of": "as of July 2026 (BJP ministry formed 9 May 2026; cabinet expanded to 41 ministers on 1 June 2026)",
+        "politicianId": "bidhannagar-ac-wb-sharadwat-mukhopadhyay"
       },
       {
         "id": "arup-kumar-das-wb",

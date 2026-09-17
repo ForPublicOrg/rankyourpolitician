@@ -85,6 +85,9 @@ export function phaseOf(ev: ElectionEvent, now = Date.now()): ElectionPhase {
   // The field is only final once withdrawals close; before that the candidate
   // list on screen can still change.
   if (now > istInstant(s.withdrawalLast, '23:59')) return 'campaign';
+  // Papers can no longer be filed, so "still filing" would be false - but
+  // scrutiny and withdrawals can still change who is on the ballot.
+  if (now > istInstant(s.nominationLast, '23:59')) return 'scrutiny';
   return 'announced';
 }
 
@@ -147,7 +150,7 @@ export function daysUntil(isoDate: string, hhmm = '00:00', now = Date.now()): nu
 /** The one date a reader most needs for a given phase, so the UI can show
  *  "Counting on 3 August" without a switch statement in every component. */
 export function keyDateFor(ev: ElectionEvent, phase: ElectionPhase): { date: string; kind: 'poll' | 'counting' | 'nomination' } {
-  if (phase === 'announced') return { date: ev.schedule.withdrawalLast, kind: 'nomination' };
+  if (phase === 'announced' || phase === 'scrutiny') return { date: ev.schedule.withdrawalLast, kind: 'nomination' };
   if (phase === 'campaign' || phase === 'silence' || phase === 'polling') {
     return { date: ev.schedule.pollDate, kind: 'poll' };
   }
@@ -187,8 +190,9 @@ export function isCandidateRatingId(id: string): boolean {
 export const NOMINATION_ORDER: Record<string, number> = {
   contesting: 0,
   accepted: 1,
-  withdrawn: 2,
-  rejected: 3,
+  filed: 2,
+  withdrawn: 3,
+  rejected: 4,
 };
 
 export function contestingOf(seat: ElectionSeat) {

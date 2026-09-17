@@ -221,7 +221,7 @@ export async function getElectionCandidateRatings(
   // cast, so only standalone candidate pages participate.
   const candidates = found.seat.candidates.filter(
     (candidate) =>
-      (candidate.status === 'contesting' || candidate.status === 'accepted') &&
+      (candidate.status === 'contesting' || candidate.status === 'accepted' || candidate.status === 'filed') &&
       !candidate.politicianId,
   );
   const byRatingId = new Map(candidates.map((candidate) => [candidateRatingId(seatSlug, candidate.slug), candidate]));

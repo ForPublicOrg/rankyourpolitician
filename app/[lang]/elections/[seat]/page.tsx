@@ -42,8 +42,10 @@ export async function generateMetadata({
   if (!found) return { title: t(dict, 'elections.title') };
   const standing = found.seat.candidates.filter((c) => c.status === 'contesting').length;
   const title = `${found.seat.constituencyName}, ${found.seat.state} - ${t(dict, 'elections.title')}`;
+  // Before scrutiny nobody is on the ballot yet; "0 on the ballot" would read
+  // as an empty field rather than one awaiting the Returning Officer.
   const description = t(dict, 'elections.candidatesHelp', { n: found.seat.candidates.length })
-    .replace(/\.$/, '') + `. ${standing} on the ballot.`;
+    .replace(/\.$/, '') + (standing ? `. ${standing} on the ballot.` : '.');
   return {
     title,
     description,
@@ -54,6 +56,7 @@ export async function generateMetadata({
 
 const GROUPS: { status: NominationStatus; titleKey: string; helpKey: string }[] = [
   { status: 'contesting', titleKey: 'elections.groupContesting', helpKey: 'elections.groupContestingHelp' },
+  { status: 'filed', titleKey: 'elections.groupFiled', helpKey: 'elections.groupFiledHelp' },
   { status: 'withdrawn', titleKey: 'elections.groupWithdrawn', helpKey: 'elections.groupWithdrawnHelp' },
   { status: 'rejected', titleKey: 'elections.groupRejected', helpKey: 'elections.groupRejectedHelp' },
 ];
@@ -133,7 +136,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
             className="pressable inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink-soft hover:border-brand/40 hover:text-brand"
           >
             <Icon name="map" size={15} />
-            {tr('area.typeAc')}
+            {tr(seat.constituencyId.startsWith('pc-') ? 'area.typePc' : 'area.typeAc')}
           </Link>
         }
       />

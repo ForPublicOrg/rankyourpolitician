@@ -85,6 +85,9 @@ function statusOf(raw: string): NominationStatus | null {
   if (s.includes('accept')) return 'accepted';
   if (s.includes('withdraw')) return 'withdrawn';
   if (s.includes('reject')) return 'rejected';
+  // Before scrutiny every paper reads "Applied". Dropping those rows made a
+  // seat with 154 papers filed look like one with no nominations at all.
+  if (s.includes('appl')) return 'filed';
   return null;
 }
 
@@ -101,12 +104,13 @@ function statusOf(raw: string): NominationStatus | null {
  *
  * Status across a person's papers, strongest signal first: a withdrawal is a
  * decision about the candidate, so it wins; otherwise one accepted paper puts
- * them on the ballot even if another was rejected; only if every paper was
- * rejected are they out.
+ * them on the ballot even if another was rejected; a paper still awaiting
+ * scrutiny keeps them pending; only if every paper was rejected are they out.
  */
 function resolveStatus(forms: ListRow[]): NominationStatus {
   if (forms.some((f) => f.status === 'withdrawn')) return 'withdrawn';
   if (forms.some((f) => f.status === 'accepted' || f.status === 'contesting')) return 'contesting';
+  if (forms.some((f) => f.status === 'filed')) return 'filed';
   return 'rejected';
 }
 
@@ -358,7 +362,7 @@ async function main() {
 
       // The Commission lists contesting candidates first; keep that order and
       // never impose our own, which would read as a ranking.
-      const order: Record<NominationStatus, number> = { contesting: 0, accepted: 1, withdrawn: 2, rejected: 3 };
+      const order: Record<NominationStatus, number> = { contesting: 0, accepted: 1, filed: 2, withdrawn: 3, rejected: 4 };
       candidates.sort((a, b) => order[a.status] - order[b.status] || a.name.localeCompare(b.name));
 
       seats.push({
@@ -380,7 +384,7 @@ async function main() {
       const n = (s: NominationStatus) => candidates.filter((x) => x.status === s).length;
       console.log(
         `  ✓ ${c.name.padEnd(14)} ${String(mine.length).padStart(3)} papers -> ${String(candidates.length).padStart(3)} people ` +
-          `(${n('contesting')} contesting, ${n('withdrawn')} withdrawn, ${n('rejected')} rejected)  -> /elections/${sSlug}`,
+          `(${n('filed') ? `${n('filed')} awaiting scrutiny, ` : ''}${n('contesting')} contesting, ${n('withdrawn')} withdrawn, ${n('rejected')} rejected)  -> /elections/${sSlug}`,
       );
     }
 

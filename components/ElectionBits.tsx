@@ -200,6 +200,7 @@ export function SeatCard({
   tr: Tr;
 }) {
   const standing = seat.candidates.filter((c) => c.status === 'contesting').length;
+  const filed = seat.candidates.filter((c) => c.status === 'filed').length;
   const winner = seat.result?.rows.find((r) => r.candidateSlug && r.candidateSlug === seat.result?.winner_slug);
   return (
     <Link
@@ -229,7 +230,9 @@ export function SeatCard({
         </p>
       ) : (
         <p className="mt-3 text-sm text-ink-soft">
-          {standing === 1 ? tr('elections.standingOne') : tr('elections.standingMany', { n: standing })}
+          {standing === 0 && filed > 0
+            ? filed === 1 ? tr('elections.filedOne') : tr('elections.filedMany', { n: filed })
+            : standing === 1 ? tr('elections.standingOne') : tr('elections.standingMany', { n: standing })}
           {phase !== 'declared' && days > 0 && <> · <When days={days} tr={tr} /></>}
         </p>
       )}

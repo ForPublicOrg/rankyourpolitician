@@ -44,8 +44,10 @@ export default async function ElectionsPage({ params }: { params: Promise<LangPa
   const past = withPhase.filter((x) => !isActivePhase(x.phase));
 
   const seatsLive = live.reduce((n, x) => n + x.event.seats.length, 0);
+  // People still in the race: on the ballot, or with papers awaiting scrutiny.
   const standingLive = live.reduce(
-    (n, x) => n + x.event.seats.reduce((m, s) => m + s.candidates.filter((c) => c.status === 'contesting').length, 0),
+    (n, x) =>
+      n + x.event.seats.reduce((m, s) => m + s.candidates.filter((c) => c.status === 'contesting' || c.status === 'filed').length, 0),
     0,
   );
   const updated = events.map((e) => e.retrieved_date).filter(Boolean).sort().pop();

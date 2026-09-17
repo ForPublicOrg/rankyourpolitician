@@ -157,17 +157,11 @@
       "Cachar"
     ],
     "head_title": "Mayor",
-    "status": "elected_council",
-    "source_url": "https://en.wikipedia.org/wiki/Silchar",
-    "source_name": "Silchar - Wikipedia (settlement infobox wikitext via MediaWiki API)",
-    "retrieved_date": "2026-09-10",
-    "head": {
-      "name": "Niharendra Narayan Tagore",
-      "source_url": "https://en.wikipedia.org/wiki/Silchar",
-      "source_name": "Silchar - Wikipedia (settlement infobox wikitext via MediaWiki API)",
-      "retrieved_date": "2026-09-09",
-      "party": "Bharatiya Janata Party"
-    }
+    "status": "administrator",
+    "source_url": "https://barakbulletin.com/silchar-municipal-corporation-polls-159-nominations-filed-across-42-wards/",
+    "source_name": "Barak Bulletin - Silchar Municipal Corporation polls: 159 nominations filed across 42 wards (12 September 2026)",
+    "retrieved_date": "2026-09-17",
+    "status_note": "The corporation has no elected council or Mayor yet; officials and an Executive Officer run municipal affairs. Its first election is scheduled for 3 October 2026, with counting on 6 October 2026."
   },
   {
     "id": "br-bhagalpur",
@@ -626,30 +620,22 @@
     "website": "https://vmc.gov.in/",
     "head_title": "Mayor",
     "status": "elected_council",
-    "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
-    "source_name": "Vadodara Municipal Corporation - Wikipedia",
-    "retrieved_date": "2026-09-10",
+    "source_url": "https://vmc.gov.in/",
+    "source_name": "Vadodara Municipal Corporation (official website)",
+    "retrieved_date": "2026-09-17",
     "head": {
-      "name": "Pinky Soni",
-      "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
-      "source_name": "Vadodara Municipal Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
-      "party": "Bharatiya Janata Party",
-      "elected_by": "indirect"
-    },
-    "deputy_head": {
-      "name": "Chirag Barot",
-      "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
-      "source_name": "Vadodara Municipal Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
+      "name": "Geetaben Makwana",
+      "source_url": "https://vmc.gov.in/",
+      "source_name": "Vadodara Municipal Corporation (official website)",
+      "retrieved_date": "2026-09-17",
       "party": "Bharatiya Janata Party",
       "elected_by": "indirect"
     },
     "commissioner": {
       "name": "Arun Mahesh Babu",
-      "source_url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation",
-      "source_name": "Vadodara Municipal Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
+      "source_url": "https://vmc.gov.in/",
+      "source_name": "Vadodara Municipal Corporation (official website)",
+      "retrieved_date": "2026-09-17",
       "title": "Municipal Commissioner"
     }
   },
@@ -1034,7 +1020,14 @@
     "status_note": "The elected council's term ended on 28 February 2025 and an Administrator was appointed under the Karnataka Municipal Corporations Act, 1976; Deputy Commissioner Mullai Muhilan took charge as Administrator on 24 March 2025. There has been no Mayor since.",
     "source_url": "https://www.daijiworld.com/news/newsDisplay?newsID=1275792",
     "source_name": "Mangaluru City Corporation",
-    "retrieved_date": "2026-09-10"
+    "retrieved_date": "2026-09-10",
+    "commissioner": {
+      "name": "Rahul Ratnam Pandey",
+      "source_url": "http://www.mangalurucity.mrc.gov.in/en/city-staff",
+      "source_name": "Mangaluru City Corporation - City Staff",
+      "retrieved_date": "2026-09-17",
+      "title": "Municipal Commissioner"
+    }
   },
   {
     "id": "ka-mysuru",
@@ -2061,10 +2054,10 @@
     "website": "https://jaipurmc.org/",
     "head_title": "Mayor",
     "status": "administrator",
-    "status_note": "Rajasthan merged the twin Jaipur Heritage and Jaipur Greater corporations into a single Jaipur Municipal Corporation in November 2025. The terms of both Houses and both Mayors ended, and the Divisional Commissioner holds charge as presiding officer pending fresh elections.",
-    "source_url": "https://www.thestatesman.com/india/rajasthan-merges-twin-municipal-corporations-in-jaipur-jodhpur-and-kota-into-single-integrated-bodies-1503510026.html",
-    "source_name": "Jaipur Municipal Corporation",
-    "retrieved_date": "2026-09-10"
+    "status_note": "Rajasthan merged the twin Jaipur Heritage and Jaipur Greater corporations into a single Jaipur Municipal Corporation in November 2025, ending the terms of both Houses and both Mayors. Councillors for the merged corporation were elected in the September 2026 urban local body elections, but EVM faults held back the results of some wards. The State Election Commission has deferred the Mayor and Deputy Mayor elections until further orders. The office of Mayor remains vacant.",
+    "source_url": "https://sec.rajasthan.gov.in/AllNotificationsNew.aspx",
+    "source_name": "State Election Commission, Rajasthan - notifications (15 September 2026)",
+    "retrieved_date": "2026-09-17"
   },
   {
     "id": "rj-jodhpur",
@@ -2079,10 +2072,10 @@
     "website": "https://jodhpurmc.org/",
     "head_title": "Mayor",
     "status": "administrator",
-    "status_note": "Jodhpur North and Jodhpur South were merged into a single Jodhpur Municipal Corporation in November 2025. The terms of both Houses and both Mayors ended, and the Divisional Commissioner holds charge as presiding officer pending fresh elections.",
-    "source_url": "https://en.wikipedia.org/wiki/Jodhpur_Municipal_Corporation",
-    "source_name": "Jodhpur Municipal Corporation",
-    "retrieved_date": "2026-09-10"
+    "status_note": "Jodhpur North and Jodhpur South were merged into a single Jodhpur Municipal Corporation in November 2025, ending the terms of both Houses and both Mayors. Councillors for the merged corporation were elected in the September 2026 urban local body elections, but EVM faults held back the result of a ward. The State Election Commission has deferred the Mayor and Deputy Mayor elections until further orders. The office of Mayor remains vacant.",
+    "source_url": "https://sec.rajasthan.gov.in/AllNotificationsNew.aspx",
+    "source_name": "State Election Commission, Rajasthan - notifications (15 September 2026)",
+    "retrieved_date": "2026-09-17"
   },
   {
     "id": "rj-kota",
@@ -2097,10 +2090,10 @@
     "website": "https://kotamc.org/",
     "head_title": "Mayor",
     "status": "administrator",
-    "status_note": "Kota North and Kota South were merged into a single Kota Municipal Corporation in November 2025. The terms of both Houses and both Mayors ended, and the Divisional Commissioner holds charge as presiding officer pending fresh elections.",
-    "source_url": "https://www.thestatesman.com/india/rajasthan-merges-twin-municipal-corporations-in-jaipur-jodhpur-and-kota-into-single-integrated-bodies-1503510026.html",
-    "source_name": "Kota Municipal Corporation",
-    "retrieved_date": "2026-09-10"
+    "status_note": "Kota North and Kota South were merged into a single Kota Municipal Corporation in November 2025, ending the terms of both Houses and both Mayors. Councillors for the merged corporation were elected in the September 2026 urban local body elections, but EVM faults held back the results of some wards. The State Election Commission has deferred the Mayor and Deputy Mayor elections until further orders. The office of Mayor remains vacant.",
+    "source_url": "https://sec.rajasthan.gov.in/AllNotificationsNew.aspx",
+    "source_name": "State Election Commission, Rajasthan - notifications (15 September 2026)",
+    "retrieved_date": "2026-09-17"
   },
   {
     "id": "sk-gangtok",
@@ -2280,10 +2273,10 @@
       "retrieved_date": "2026-09-09"
     },
     "commissioner": {
-      "name": "Veer Pratap Singh",
+      "name": "N. Ponmani",
       "source_url": "https://www.trichycorporation.gov.in/citycommissioner",
       "source_name": "Tiruchirappalli City Municipal Corporation - Commissioner",
-      "retrieved_date": "2026-09-09",
+      "retrieved_date": "2026-09-17",
       "title": "Municipal Commissioner"
     }
   },

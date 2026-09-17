@@ -1337,6 +1337,7 @@
     "seeResult": "See the result",
     "phase": {
       "announced": "Papers being filed",
+      "scrutiny": "Papers being checked",
       "campaign": "Voting soon",
       "silence": "Quiet period",
       "polling": "Voting today",
@@ -1346,6 +1347,7 @@
     },
     "phaseHelp": {
       "announced": "People who want to stand are still filing their papers, so the list below can still change.",
+      "scrutiny": "Nominations have closed. The papers are being checked and people can still withdraw until {date}, so the list below can still change.",
       "campaign": "The list of people standing is now final. Voting is on {date}.",
       "silence": "Campaigning has stopped. The law keeps the last 48 hours before voting quiet, so nobody is pressured at the last minute.",
       "polling": "Polling booths are open today. The votes are counted on {date}.",
@@ -1375,6 +1377,8 @@
     "otherNominationsShow": "Show {n} other nomination records",
     "groupContesting": "On the ballot",
     "groupContestingHelp": "These names appear on the voting machine.",
+    "groupFiled": "Papers filed, scrutiny pending",
+    "groupFiledHelp": "They have filed nomination papers. The Returning Officer's scrutiny decides who goes on the ballot.",
     "groupWithdrawn": "Pulled out",
     "groupWithdrawnHelp": "Filed papers, then withdrew before the deadline.",
     "groupRejected": "Papers rejected",
@@ -1383,7 +1387,8 @@
       "contesting": "On the ballot",
       "accepted": "Papers accepted",
       "withdrawn": "Pulled out",
-      "rejected": "Papers rejected"
+      "rejected": "Papers rejected",
+      "filed": "Papers filed"
     },
     "liveCountTitle": "The count",
     "liveCountHelp": "Straight from the Election Commission, updated about every minute.",

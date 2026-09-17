@@ -96,10 +96,12 @@ export const EVENTS: EventSpec[] = [
   // ECI Press Note No. ECI/PN/114/2026 dated 7 September 2026 (the Commission's
   // own bye-election listing at /bye-elections and its details API both carry
   // these dates verbatim). Poll HOURS are not printed in the press note - they
-  // are fixed by the Gazette notification of 9 September - so 07:00-18:00, the
-  // hours the Commission notified for every 2026 bye-election so far, are used
-  // here and MUST be re-checked against the notification once it is online:
-  // they drive the s.126 silence window (lib/elections.ts).
+  // are fixed by each seat's Gazette notification of 9 September, and they
+  // drive the s.126 silence window (lib/elections.ts). Checked 17 Sep 2026:
+  // Tamil Nadu (Gazette Ex. Nos. 383/384) and Puducherry (Gazette Ex. No. 160)
+  // print 07:00-18:00. The West Bengal notifications for Rejinagar and
+  // Nandigram were not found online yet - re-check before 4 October, and split
+  // those seats into their own event if their close differs.
   {
     event: {
       id: 'ac-bye-2026-10',
@@ -146,7 +148,11 @@ export const EVENTS: EventSpec[] = [
         withdrawalLast: '2026-09-19',
         pollDate: '2026-10-06',
         pollOpen: '07:00',
-        pollClose: '18:00',
+        // ECI Notification No. 100/AS-HP/1/2026 (Assam Gazette Ex. No. 532,
+        // 9 Sep 2026) "fixes the hours from 7 A.M. to 5 P.M." - an hour earlier
+        // than the assembly seats, so this event's silence window starts at
+        // 17:00 on 4 October.
+        pollClose: '17:00',
         countingDate: '2026-10-09',
         completeBy: '2026-10-11',
       },

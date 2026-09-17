@@ -9,11 +9,11 @@
   },
   {
     "constituencyId": "ac-tn-dharapuram",
-    "value": "Tmt. P. Sathyabama, elected from Dharapuram (SC) (Assembly constituency 101), resigned her seat. The Assembly's members directory records the constituency as vacant.",
+    "value": "Tmt. P. Sathyabama, elected from Dharapuram (SC) (Assembly constituency 101), resigned her seat. The Election Commission has scheduled a bye-election for the constituency, with polling on 6 October 2026 and counting on 9 October 2026.",
     "as_of": "2026-05-25",
-    "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
-    "source_name": "Tamil Nadu Legislative Assembly - members of the 17th Assembly (official)",
-    "retrieved_date": "2026-08-05"
+    "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
+    "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
+    "retrieved_date": "2026-09-17"
   },
   {
     "constituencyId": "ac-tn-karur",
@@ -25,11 +25,11 @@
   },
   {
     "constituencyId": "ac-tn-madurantakam",
-    "value": "Tmt. K. Maragatham Kumaravel, elected from Madurantakam (SC) (Assembly constituency 35), resigned her seat. The Assembly's members directory records the constituency as vacant.",
+    "value": "Tmt. K. Maragatham Kumaravel, elected from Madurantakam (SC) (Assembly constituency 35), resigned her seat. The Election Commission has scheduled a bye-election for the constituency, with polling on 6 October 2026 and counting on 9 October 2026.",
     "as_of": "2026-05-25",
-    "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
-    "source_name": "Tamil Nadu Legislative Assembly - members of the 17th Assembly (official)",
-    "retrieved_date": "2026-08-05"
+    "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
+    "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
+    "retrieved_date": "2026-09-17"
   },
   {
     "constituencyId": "ac-tn-perundurai",
@@ -81,10 +81,11 @@
   },
   {
     "constituencyId": "ac-up-nizamabad",
-    "value": "Alam Badi Azmi, the member for Nizamabad (Assembly constituency 347) and the oldest member of the 18th Vidhan Sabha, died in July 2026. The Uttar Pradesh Vidhan Sabha made an obituary reference to him on 3 August 2026, and its NeVA portal now reports 399 sitting members against a House of 403.",
+    "value": "Alam Badi Azmi, the member for Nizamabad (Assembly constituency 348) and the oldest member of the 18th Vidhan Sabha, died on 22 July 2026. The Uttar Pradesh Vidhan Sabha made an obituary reference to him on 3 August 2026, and its register of deceased members of the 18th Assembly records him.",
     "source_url": "https://www.indiatvnews.com/uttar-pradesh/alam-badi-azmi-five-time-sp-mla-dies-at-90-in-hospital-akhilesh-yadav-pays-tribute-latest-updates-2026-07-23-1049108",
     "source_name": "India TV - Alam Badi Azmi, five-time SP MLA, dies",
-    "retrieved_date": "2026-08-05"
+    "retrieved_date": "2026-09-17",
+    "as_of": "2026-07-22"
   },
   {
     "constituencyId": "ac-ka-hiriyur",
@@ -112,19 +113,19 @@
   },
   {
     "constituencyId": "ac-up-rasara",
-    "value": "Umashankar Singh, the member for Rasara (Assembly constituency 353) and the Bahujan Samaj Party's only member of the 18th Vidhan Sabha, died after an illness. No by-election had been announced when this page was last checked.",
+    "value": "Umashankar Singh, the member for Rasara (Assembly constituency 358) and the Bahujan Samaj Party's only member of the 18th Vidhan Sabha, died after an illness. No by-election had been announced when this page was last checked.",
     "as_of": "2026-08-05",
     "source_url": "https://indianexpress.com/article/cities/lucknow/bsps-lone-up-mla-uma-shankar-singh-dies-after-battle-with-cancer-10819939/",
     "source_name": "The Indian Express - BSP’s lone UP MLA Uma Shankar Singh dies",
-    "retrieved_date": "2026-08-19"
+    "retrieved_date": "2026-09-17"
   },
   {
     "constituencyId": "pc-as-nagaon",
-    "value": "Pradyut Bordoloi, elected from Nagaon in 2024, resigned his Lok Sabha seat with effect from 20 March 2026; the Speaker announced acceptance on 24 March. He was elected to the Assam Legislative Assembly from Dispur in May 2026. The Lok Sabha Secretariat lists Nagaon among the vacant constituencies of the 18th Lok Sabha, and no by-election had been notified when this page was last checked.",
+    "value": "Pradyut Bordoloi, elected from Nagaon in 2024, resigned his Lok Sabha seat with effect from 20 March 2026; the Speaker announced acceptance on 24 March. He was elected to the Assam Legislative Assembly from Dispur in May 2026. The Lok Sabha Secretariat lists Nagaon among the vacant constituencies of the 18th Lok Sabha. The Election Commission has notified a bye-election (Notification No. 100/AS-HP/1/2026, 9 September 2026), with polling on 6 October 2026 and counting on 9 October 2026.",
     "as_of": "2026-03-20",
     "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
     "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
-    "retrieved_date": "2026-08-19"
+    "retrieved_date": "2026-09-17"
   },
   {
     "constituencyId": "pc-ml-shillong",
@@ -145,6 +146,7 @@
   {
     "constituencyId": "ac-py-thattanchavady",
     "value": "Thiru N. Rangasamy, elected from 09-Thattanchavady, resigned his seat. The Election Commission has scheduled a bye-election for the constituency, with polling on 6 October 2026 and counting on 9 October 2026.",
+    "as_of": "2026-05-17",
     "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4oBU6Ckj%2BSSQcEb83rPNNuBKiWXr0VmPlf4DMtEGZrfg%3D%3D",
     "source_name": "Election Commission of India - Press Note ECI/PN/114/2026, Schedule for bye-elections to 05 Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 Parliamentary Constituency of Assam (7 September 2026)",
     "retrieved_date": "2026-09-09"
@@ -165,10 +167,34 @@
   },
   {
     "constituencyId": "ac-jh-giridih",
-    "value": "Sudivya Kumar, elected from Giridih (Assembly constituency 29) and a Cabinet Minister in the Jharkhand government, died on 6 September 2026. The seat is vacant until the Election Commission holds a bye-election.",
+    "value": "Sudivya Kumar, elected from Giridih (Assembly constituency 32) and a Cabinet Minister in the Jharkhand government, died on 6 September 2026. The seat is vacant until the Election Commission holds a bye-election.",
     "as_of": "2026-09-06",
     "source_url": "https://en.wikipedia.org/wiki/Sudivya_Kumar",
     "source_name": "Wikipedia - Sudivya Kumar (citing The Hindu, NDTV and India Today reports of 6 September 2026)",
-    "retrieved_date": "2026-09-09"
+    "retrieved_date": "2026-09-17"
+  },
+  {
+    "constituencyId": "ac-up-shikarpur",
+    "value": "Anil Sharma, the member for Shikarpur (Assembly constituency 69), died on 2 September 2026. The Uttar Pradesh Vidhan Sabha's register of deceased members of the 18th Assembly records him, and its list of sitting members no longer includes the seat.",
+    "as_of": "2026-09-02",
+    "source_url": "https://www.freepressjournal.in/uttar-pradesh/bjp-mla-anil-sharma-passes-away-cm-yogi-adityanath-expresses-grief",
+    "source_name": "Free Press Journal - BJP MLA Anil Sharma passes away (2 September 2026)",
+    "retrieved_date": "2026-09-17"
+  },
+  {
+    "constituencyId": "ac-ga-taleigao",
+    "value": "Jennifer Monserrate, the member for Taleigao (Assembly constituency 12), died on 19 July 2026. The Goa Legislative Assembly's members page records her as deceased (Bulletin No. 272), and no bye-election has been announced.",
+    "as_of": "2026-07-19",
+    "source_url": "https://goavidhansabha.gov.in/mlas.php",
+    "source_name": "Goa Legislative Assembly - Members of the Eighth Legislative Assembly (official)",
+    "retrieved_date": "2026-09-17"
+  },
+  {
+    "constituencyId": "ac-ga-ponda",
+    "value": "Ravi Naik, the member for Ponda (Assembly constituency 21), died on 15 October 2025. The Election Commission scheduled a bye-election for 9 April 2026 but rescinded its notification on 8 April 2026, after the High Court of Bombay at Goa declared the notification null and void. The Goa Legislative Assembly's members page records the member as deceased (Bulletin No. 236).",
+    "as_of": "2025-10-15",
+    "source_url": "https://ceogoa.nic.in/PDF/byeelection2026/Notification-ECI-dated-08-04-2026.pdf",
+    "source_name": "Election Commission of India - Notification No. 100/GOA-LA/1/2026 dated 8 April 2026, rescinding the Ponda bye-election (via CEO Goa)",
+    "retrieved_date": "2026-09-17"
   }
 ]

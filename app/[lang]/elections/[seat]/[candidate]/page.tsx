@@ -295,7 +295,7 @@ function DetailList({
     [tr('elections.fieldProfession'), factOf('profession')],
     [tr('elections.fieldAssets'), factOf('assets_total')],
     [tr('elections.fieldLiabilities'), factOf('liabilities_total')],
-    [tr('area.typeAc'), `${seat.constituencyName}${seat.acNumber ? ` (${seat.acNumber})` : ''}`],
+    [tr(seat.constituencyId.startsWith('pc-') ? 'area.typePc' : 'area.typeAc'), `${seat.constituencyName}${seat.acNumber ? ` (${seat.acNumber})` : ''}`],
   ];
   return (
     <dl className="divide-y divide-line/60">

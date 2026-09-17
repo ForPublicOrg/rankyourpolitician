@@ -5323,6 +5323,40 @@
     "as_of": "2024 assembly election affidavit"
   },
   {
+    "politician_id": "amberpet-ac-tg-kaleru-venkatesh",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for bribery",
+        "law": "IPC",
+        "section": "171E"
+      },
+      {
+        "count": 1,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "IPC",
+        "section": "188"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "251/2023 P.S. Kacheguda, Hyderabad",
+        "sections": "188, 171E",
+        "other_sections": "sec 3 r/w 7 of Religious institutions Prevention of Misuse Act 1998",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/telangana2023/candidate.php?candidate_id=12",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
+  },
+  {
     "politician_id": "ambur-ac-tn-a-c-vilwanathan",
     "declared_total": 4,
     "charges": [
@@ -19750,6 +19784,192 @@
     "source_name": "MyNeta / ADR - 2025 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2025 assembly election affidavit"
+  },
+  {
+    "politician_id": "bankipur-ac-br-prashant-kishor",
+    "declared_total": 8,
+    "charges": [
+      {
+        "count": 4,
+        "description": "Punishment for Rioting",
+        "law": "BNS",
+        "section": "191(2)"
+      },
+      {
+        "count": 3,
+        "description": "Assault or use of criminal force to deter public servant from discharge of his duty.",
+        "law": "BNS",
+        "section": "132"
+      },
+      {
+        "count": 2,
+        "description": "Rioting, armed with a deadly weapon.",
+        "law": "BNS",
+        "section": "191(3)"
+      },
+      {
+        "count": 1,
+        "description": "Mischief causing loss or damage to the amount of twenty thousand rupees but less than 2 lakh rupees.",
+        "law": "BNS",
+        "section": "324(4)"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Voluntarily causing grievous hurt.",
+        "law": "BNS",
+        "section": "117(2)"
+      },
+      {
+        "count": 1,
+        "description": "Defamation against the President or the Vice-President or the Governor of a State or Administrator of a Union territory or a Minister in respect of his conduct in the discharge of his public functions when instituted upon a complaint made by the Public Prosecutor.",
+        "law": "BNS",
+        "section": "356(2)"
+      },
+      {
+        "count": 1,
+        "description": "Cheating and dishonestly inducing delivery of property.",
+        "law": "BNS",
+        "section": "318(4)"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for criminal breach of trust",
+        "law": "BNS",
+        "section": "316(2)"
+      },
+      {
+        "count": 4,
+        "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object.",
+        "law": "BNS",
+        "section": "190"
+      },
+      {
+        "count": 3,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "BNS",
+        "section": "223"
+      },
+      {
+        "count": 2,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "BNS",
+        "section": "115(2)"
+      },
+      {
+        "count": 1,
+        "description": "Assault or criminal force otherwise than on grave provocation.",
+        "law": "BNS",
+        "section": "131"
+      },
+      {
+        "count": 1,
+        "description": "Wrongfully restraining any person.",
+        "law": "BNS",
+        "section": "126(2)"
+      },
+      {
+        "count": 1,
+        "description": "If such disobedience causes obstruction, annoyance or injury to persons lawfully employed.",
+        "law": "BNS",
+        "section": "223(a)"
+      },
+      {
+        "count": 1,
+        "description": "Defines Defamation",
+        "law": "BNS",
+        "section": "356"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "815/2024, Gandhi Maidan Police Station, dated- 29/12/2024",
+        "court": "S.D.J.M. Patna",
+        "law": "BNS",
+        "sections": "191(2), 191(3), 190, 223, 131, 132, 324(4)",
+        "charges_framed": "No",
+        "appeal_filed": "Yes",
+        "appeal_details": "Cr. W.J.C No. 141/2025, Patna High Court"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "154/2025, Sachivalaya Police Station, Dated- 23/07/2025",
+        "court": "ACJM-II, Patna",
+        "law": "BNS",
+        "sections": "191(2), 190, 132, 223",
+        "charges_framed": "No",
+        "appeal_filed": "Yes",
+        "appeal_details": "Cr. W.J.C No. 2323/2025, Patna High Court"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "12/2025, Pirbahore Police Station",
+        "court": "CJM Patna",
+        "law": "BNS",
+        "sections": "191(2), 190, 126(2), 115(2), 117(2), 132, 61(2)",
+        "charges_framed": "No",
+        "appeal_filed": "Yes",
+        "appeal_details": "Cr. W.J.C No. 317/2025, Patna High Court"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "05/2025, Gandhi Maidan Police Station, Dated- 02/01/2025",
+        "court": "S.D.J.M., Patna",
+        "law": "BNS",
+        "sections": "191(2), 191(3), 190, 223",
+        "charges_framed": "No",
+        "appeal_filed": "Yes",
+        "appeal_details": "Cr. W.J.C No. 346/2025, Patna High Court"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "226/2025, Saharsa Sadar Police Station, Dated- 31/10/2025",
+        "court": "CJM Saharsa",
+        "law": "BNS",
+        "sections": "223(a), 3(5)",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "case_no": "Cr. Complaint Case No. 6989(C)/2025",
+        "court": "CJM Patna, Dated- 13/05/2025",
+        "law": "BNS",
+        "sections": "356(2)",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "case_no": "Cr. Complaint Case No. 1934(C)/2025",
+        "court": "CJM Bettiah, Dated- 23/09/2025",
+        "law": "BNS",
+        "sections": "356",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "case_no": "Cr. Complaint Case No. 11/2025 (C)/2025",
+        "court": "ACJM-I, West Muzaffarpur, Dated- 03/01/2025",
+        "law": "BNS",
+        "sections": "115(2), 61(1), 191(1), 318(4), 316(2)",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+    "source_name": "MyNeta / ADR - Bankipur by-election 30-07-2026",
+    "retrieved_date": "2026-09-17",
+    "as_of": "Bankipur by-election 30-07-2026"
   },
   {
     "politician_id": "bankura-ac-wb-niladri-sekhar-dana",
@@ -36200,6 +36420,71 @@
     "as_of": "2026 assembly election affidavit"
   },
   {
+    "politician_id": "binpur-ac-wb-pranat-tudu",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Voluntarily causing grievous hurt by dangerous weapons or means",
+        "law": "IPC",
+        "section": "326"
+      },
+      {
+        "count": 1,
+        "description": "Attempt to murder",
+        "law": "IPC",
+        "section": "307"
+      },
+      {
+        "count": 1,
+        "description": "Assault or criminal force to woman with intent to outrage her modesty",
+        "law": "IPC",
+        "section": "354"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for wrongful restraint",
+        "law": "IPC",
+        "section": "341"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "IPC",
+        "section": "323"
+      },
+      {
+        "count": 1,
+        "description": "Acts done by several persons in furtherance of common intention",
+        "law": "IPC",
+        "section": "34"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Garbeta PS Case no-146/24, dt-25.05.2024, Garbeta, PS At-Lapuria, Po-Garbeta, PS-Garbeta, Dist Paschim Medinipur West Bengal-721127",
+        "case_no": "GR Case No-193/2024",
+        "court": "LD. A.C.J.M. Garbeta, Paschim Medinipur",
+        "law": "IPC",
+        "sections": "341, 323, 326, 307, 354, 506, 34",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/WestBengal2026/candidate.php?candidate_id=505",
+    "source_name": "MyNeta / ADR - 2026 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2026 assembly election affidavit"
+  },
+  {
     "politician_id": "bisalpur-ac-up-vivek-kumar-verma",
     "declared_total": 4,
     "charges": [
@@ -52218,6 +52503,106 @@
     "source_name": "MyNeta / ADR - 2022 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2022 assembly election affidavit"
+  },
+  {
+    "politician_id": "datia-ac-mp-ghanshyam-singh",
+    "declared_total": 2,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "IPC",
+        "section": "323"
+      },
+      {
+        "count": 1,
+        "description": "Negligent act likely to spread infection of disease dangerous to life",
+        "law": "IPC",
+        "section": "269"
+      },
+      {
+        "count": 1,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "IPC",
+        "section": "188"
+      },
+      {
+        "count": 1,
+        "description": "Mischief causing damage to the amount of fifty rupees",
+        "law": "IPC",
+        "section": "427"
+      },
+      {
+        "count": 1,
+        "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+        "law": "IPC",
+        "section": "149"
+      },
+      {
+        "count": 1,
+        "description": "Rioting, armed with deadly weapon",
+        "law": "IPC",
+        "section": "148"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Rioting",
+        "law": "IPC",
+        "section": "147"
+      },
+      {
+        "count": 1,
+        "description": "Act endangering life or personal safety of others",
+        "law": "IPC",
+        "section": "336"
+      },
+      {
+        "count": 1,
+        "description": "Obscene acts and songs",
+        "law": "IPC",
+        "section": "294"
+      },
+      {
+        "count": 1,
+        "description": "Malignant act likely to spread infection of disease dangerous to life",
+        "law": "IPC",
+        "section": "270"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Case No 453/2020, PS Kotawali, Dist Datia",
+        "case_no": "U.N.C.R. No 102/2024 (Criminal Case)",
+        "court": "J.M.F.C. Court Datia",
+        "sections": "323, 294, 506, 336, 147, 148,149, 427",
+        "other_sections": "As of the present date, the police have not filed the charge sheet in the case, and the applicant has not received any notice from the Court.",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Case No 378/2020, PS Kotawali Dist Datia",
+        "sections": "188, 269, 270",
+        "other_sections": "Section 51 of the Disaster Management Act, 2005, No case is pending in any court. As of the present date, the candidate has not received any notice from either the police station or the court.",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+    "source_name": "MyNeta / ADR - Datia by-election 30-07-2026",
+    "retrieved_date": "2026-09-17",
+    "as_of": "Datia by-election 30-07-2026"
   },
   {
     "politician_id": "daund-ac-mh-rahul-kul",
@@ -73715,6 +74100,54 @@
     "as_of": "2024 assembly election affidavit"
   },
   {
+    "politician_id": "gunnaor-ac-mp-rajesh-kumar-verma",
+    "declared_total": 2,
+    "charges": [
+      {
+        "count": 2,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "IPC",
+        "section": "188"
+      },
+      {
+        "count": 1,
+        "description": "Wearing grab or carrying token used by public servant with fraudulent intent",
+        "law": "IPC",
+        "section": "171"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "CR.NO.-324/2018 Police Station Devendranagar District Panna",
+        "case_no": "SCPPM 12/23",
+        "court": "Judicial Magistrate First Class MP/MLA , Dist-Gwalior MP",
+        "sections": "188",
+        "charges_framed": "Yes",
+        "framed_date": "29 Aug 2019",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "CR.No.- 776/2018 Police Station Devendranagar District",
+        "case_no": "RCT 185/2019",
+        "court": "JMFC Panna",
+        "sections": "171,188",
+        "charges_framed": "Yes",
+        "framed_date": "10 Feb 2020",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=502",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
+  },
+  {
     "politician_id": "gunnaur-ac-up-ramkhiladi-singh-yadav",
     "declared_total": 9,
     "charges": [
@@ -74667,6 +75100,114 @@
     "source_name": "MyNeta / ADR - 2024 assembly election affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2024 assembly election affidavit"
+  },
+  {
+    "politician_id": "gurmitkal-ac-ka-sharanagouda-kandakur",
+    "declared_total": 3,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 3,
+        "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+        "law": "IPC",
+        "section": "149"
+      },
+      {
+        "count": 2,
+        "description": "Punishment for Being member of an unlawful assembly",
+        "law": "IPC",
+        "section": "143"
+      },
+      {
+        "count": 2,
+        "description": "Punishment for Rioting",
+        "law": "IPC",
+        "section": "147"
+      },
+      {
+        "count": 2,
+        "description": "Punishment for wrongful restraint",
+        "law": "IPC",
+        "section": "341"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for wrongful Confinement",
+        "law": "IPC",
+        "section": "342"
+      },
+      {
+        "count": 1,
+        "description": "Intentional insult with intent to provoke breach of the peace",
+        "law": "IPC",
+        "section": "504"
+      },
+      {
+        "count": 1,
+        "description": "Act endangering life or personal safety of others",
+        "law": "IPC",
+        "section": "336"
+      },
+      {
+        "count": 1,
+        "description": "Wantonly giving provocation with intent to cause riot-if rioting be committed-if not committed",
+        "law": "IPC",
+        "section": "153"
+      },
+      {
+        "count": 1,
+        "description": "Punishment of criminal conspiracy",
+        "law": "IPC",
+        "section": "120B"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "109/2020, Yadgiri Town PS, Yadgiri",
+        "case_no": "Crime No. 62/2020, CC No. 02/2021",
+        "court": "CJM Court Yadgiri",
+        "sections": "342, 504, 506, 149",
+        "other_sections": "03.10.2020 Charge sheet filed",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "180/2019, Yadgiri Town PS, Yadgiri",
+        "case_no": "Crime No. 82/2019, CC No. 184/2020",
+        "court": "CJM Court Yadgiri",
+        "sections": "143, 147, 341, 336, 153, 120B, 149",
+        "other_sections": "04.07.2020 Charge sheet filed",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "67/2017, Gurmitkal PS, Gurmitkal, Dist. Yadgiri",
+        "case_no": "Crime No. 28/2017, CC No. 676/2018",
+        "court": "JMFC Court Yadgiri",
+        "sections": "143, 147, 341, 149",
+        "other_sections": "25.05.2017 Charge sheet filed",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=7280",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
   },
   {
     "politician_id": "gurua-ac-br-upendra-prasad",
@@ -80882,6 +81423,109 @@
     "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=507",
     "source_name": "MyNeta / ADR - 2023 assembly election affidavit",
     "retrieved_date": "2026-07-16",
+    "as_of": "2023 assembly election affidavit"
+  },
+  {
+    "politician_id": "huzurabad-ac-tg-padi-kaushik-reddy",
+    "declared_total": 4,
+    "charges": [
+      {
+        "count": 2,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 1,
+        "description": "Defamation",
+        "law": "IPC",
+        "section": "499"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Defamation",
+        "law": "IPC",
+        "section": "500"
+      },
+      {
+        "count": 1,
+        "description": "Obstructing public servant in discharge of public functions",
+        "law": "IPC",
+        "section": "186"
+      },
+      {
+        "count": 1,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "IPC",
+        "section": "188"
+      },
+      {
+        "count": 1,
+        "description": "Criminal intimidation by an anonymous communication",
+        "law": "IPC",
+        "section": "507"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for criminal trespass",
+        "law": "IPC",
+        "section": "447"
+      },
+      {
+        "count": 1,
+        "description": "Mischief causing damage to the amount of fifty rupees",
+        "law": "IPC",
+        "section": "427"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "STC No. 7028/2022,",
+        "case_no": "STC No. 0007028/2020",
+        "court": "28- Judicial Magistrate Court No.VI, Madurai Tamil Nadu",
+        "sections": "499, 500",
+        "other_sections": "U/S 200 CRPC",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "327/2020 of police Station Huzurabad, (Town) Karimnagar Dist.",
+        "court": "1st Addl. Jr. 1st Class Magistrate, Huzurabad Karimanagar Dist.",
+        "sections": "186, 188, 506",
+        "other_sections": "Sec.3EDA",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "72/2017 of police Station Ellandakunta Karimanagar Dist.",
+        "court": "2nd Addl. Huzurabad Karimanagar Dist.",
+        "sections": "506, 507",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "511/2017 of police Station Subesari Hanamakonda Dist.",
+        "court": "3rd Addl JFCM, Huzurabad Dist.",
+        "sections": "447, 427",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/telangana2023/candidate.php?candidate_id=91",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
     "as_of": "2023 assembly election affidavit"
   },
   {
@@ -94126,6 +94770,82 @@
     "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2022 assembly election affidavit"
+  },
+  {
+    "politician_id": "kalyanpur-east-champaran-ac-br-sachindra-prasad-singh",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for theft",
+        "law": "IPC",
+        "section": "379"
+      },
+      {
+        "count": 1,
+        "description": "Voluntarily causing hurt to deter public servant from his duty",
+        "law": "IPC",
+        "section": "332"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Rioting",
+        "law": "IPC",
+        "section": "147"
+      },
+      {
+        "count": 1,
+        "description": "Rioting, armed with deadly weapon",
+        "law": "IPC",
+        "section": "148"
+      },
+      {
+        "count": 1,
+        "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+        "law": "IPC",
+        "section": "149"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for wrongful restraint",
+        "law": "IPC",
+        "section": "341"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "IPC",
+        "section": "323"
+      },
+      {
+        "count": 1,
+        "description": "Assault or criminal force to deter public servant from discharge of his duty",
+        "law": "IPC",
+        "section": "353"
+      },
+      {
+        "count": 1,
+        "description": "Causing hurt by act endangering life or personal safety of others",
+        "law": "IPC",
+        "section": "337"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Chakia PS Case No 161/2005, Chakia, Purvi Champaran",
+        "court": "Sub Judge- 9 Cum ACJM Chakiya",
+        "law": "IPC",
+        "sections": "147, 148, 149, 341, 323, 353, 379, 332, 337",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/bihar2025/candidate.php?candidate_id=2940",
+    "source_name": "MyNeta / ADR - 2025 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2025 assembly election affidavit"
   },
   {
     "politician_id": "kamalapuram-ac-ap-putha-krishna-chaitanya-reddy",
@@ -142896,6 +143616,59 @@
     "as_of": "2022 assembly election affidavit"
   },
   {
+    "politician_id": "mulbagal-ac-ka-samruddhi-v-manjunath",
+    "declared_total": 2,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Illegal payments in connection with an election",
+        "law": "IPC",
+        "section": "171H"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for bribery",
+        "law": "IPC",
+        "section": "171E"
+      },
+      {
+        "count": 1,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "IPC",
+        "section": "188"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "CR 107/2023, Mulabagilu Rural Police Station",
+        "court": "Senior Civil Court and JMFC Mulabagilu",
+        "sections": "171H",
+        "other_sections": "Section 14 Child Labour Act",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "CR 143/2018, Mulabagilu Rural Police Station",
+        "case_no": "CC no 298/2018",
+        "court": "Senior Civil Court and JMFC Mulabagilu",
+        "sections": "171E, 188",
+        "charges_framed": "Yes",
+        "framed_date": "31 May 2018",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=7587",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
+  },
+  {
     "politician_id": "mulug-ac-tg-dansari-anasuya-seethakka",
     "declared_total": 6,
     "charges": [
@@ -150603,6 +151376,118 @@
     "source_url": "https://www.myneta.info/Assam2026/candidate.php?candidate_id=751",
     "source_name": "MyNeta / ADR - 2026 assembly affidavit",
     "retrieved_date": "2026-07-16",
+    "as_of": "2026 assembly election affidavit"
+  },
+  {
+    "politician_id": "naoda-ac-wb-humayun-kabir",
+    "declared_total": 4,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Deliberate and malicious acts, intended to outrage religious feelings or any class by insulting its religion or religious beliefs",
+        "law": "IPC",
+        "section": "295A"
+      },
+      {
+        "count": 1,
+        "description": "Promoting enmity between different groups on grounds of religion, race, place of birth, residence, language, etc., and doing acts prejudicial to maintenance of harmony",
+        "law": "IPC",
+        "section": "153A"
+      },
+      {
+        "count": 1,
+        "description": "Statements conducing to public mischief",
+        "law": "IPC",
+        "section": "505"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing grievous hurt",
+        "law": "IPC",
+        "section": "325"
+      },
+      {
+        "count": 1,
+        "description": "Voluntarily causing grievous hurt by dangerous weapons or means",
+        "law": "IPC",
+        "section": "326"
+      },
+      {
+        "count": 1,
+        "description": "Attempt to commit culpable homicide",
+        "law": "IPC",
+        "section": "308"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Criminal intimidation.",
+        "law": "BNS",
+        "section": "351(2)"
+      },
+      {
+        "count": 2,
+        "description": "Punishment for Being member of an unlawful assembly",
+        "law": "IPC",
+        "section": "143"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "IPC",
+        "section": "323"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "346/2025 with Name Humayun Kabir and Saktipur Police Station",
+        "court": "Berhampore GRO Court",
+        "law": "BNS",
+        "sections": "351(2), 3(5)",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "126/2024 with Name Humayun Kabir and Saktipur Police Station",
+        "court": "Berhampore GRO Court",
+        "law": "IPC",
+        "sections": "295A, 153A, 505, 506",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "297/2012 with Name Humayun Kabir and Rejinagar Police Station",
+        "court": "J.M. 3rd Court Berhampore",
+        "law": "IPC",
+        "sections": "143, 323, 325",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "298/2012 with Name Humayun Kabir and Rejinagar Police Station",
+        "court": "Berhampore GRO Court",
+        "law": "IPC",
+        "sections": "143, 326, 308",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/WestBengal2026/candidate.php?candidate_id=299",
+    "source_name": "MyNeta / ADR - 2026 assembly affidavit",
+    "retrieved_date": "2026-09-17",
     "as_of": "2026 assembly election affidavit"
   },
   {
@@ -170353,26 +171238,6 @@
     "as_of": "2026 assembly election affidavit"
   },
   {
-    "politician_id": "ponda-ac-ga-ravi-naik",
-    "declared_total": 1,
-    "charges": [],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "case_no": "Special Case No 5/2019",
-        "court": "Additional Session Judge North Goa At Panjim",
-        "other_sections": "Section 135 R/w S-134(3)(O) of the Company Act 2013",
-        "charges_framed": "No",
-        "appeal_filed": "No"
-      }
-    ],
-    "source_url": "https://www.myneta.info/goa2022/candidate.php?candidate_id=134",
-    "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2022 assembly election affidavit"
-  },
-  {
     "politician_id": "ponnani-m-p-abdussamad-samadani",
     "declared_total": 1,
     "charges": [
@@ -176430,6 +177295,71 @@
     "source_name": "MyNeta / ADR - 2025 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2025 assembly election affidavit"
+  },
+  {
+    "politician_id": "rahuri-ac-mh-akshay-shivajirao-kardile",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for Being member of an unlawful assembly",
+        "law": "IPC",
+        "section": "143"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Rioting",
+        "law": "IPC",
+        "section": "147"
+      },
+      {
+        "count": 1,
+        "description": "Rioting, armed with deadly weapon",
+        "law": "IPC",
+        "section": "148"
+      },
+      {
+        "count": 1,
+        "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+        "law": "IPC",
+        "section": "149"
+      },
+      {
+        "count": 1,
+        "description": "Act endangering life or personal safety of others",
+        "law": "IPC",
+        "section": "336"
+      },
+      {
+        "count": 1,
+        "description": "Mischief causing damage to the amount of fifty rupees",
+        "law": "IPC",
+        "section": "427"
+      },
+      {
+        "count": 1,
+        "description": "Abetment of desertion of soldier, sailor or airman",
+        "law": "IPC",
+        "section": "135"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "153/2023, Kotwali Police Station, Tal. Ahilyanagar",
+        "case_no": "RCC No. 1126/23",
+        "court": "Additional Chief Judicial Magistrate Court No. 20, Dist. Court Ahilyanagar",
+        "law": "IPC",
+        "sections": "143, 147, 148, 149, 336, 427, 37(1), 135",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/maharashtra2024/candidate.php?candidate_id=4366",
+    "source_name": "MyNeta / ADR - 2024 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2024 assembly election affidavit"
   },
   {
     "politician_id": "raichur-rural-ac-ka-basanagouda-daddal",
@@ -186053,6 +186983,47 @@
     "as_of": "2026 assembly election affidavit"
   },
   {
+    "politician_id": "salempur-ac-up-vijay-laxmi-gautam",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "IPC",
+        "section": "323"
+      },
+      {
+        "count": 1,
+        "description": "Intentional insult with intent to provoke breach of the peace",
+        "law": "IPC",
+        "section": "504"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Crime no.78/20, Police Station Kotwali Deoria",
+        "case_no": "15639/2021",
+        "court": "C.J.M. Deoria",
+        "sections": "323, 504, 506",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3759",
+    "source_name": "MyNeta / ADR - 2022 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2022 assembly election affidavit"
+  },
+  {
     "politician_id": "saligao-ac-ga-kedar-naik",
     "declared_total": 1,
     "charges": [
@@ -186264,55 +187235,6 @@
     "source_name": "MyNeta / ADR - 2026 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2026 assembly election affidavit"
-  },
-  {
-    "politician_id": "salumber-ac-rj-amrit-lal-meena",
-    "declared_total": 1,
-    "charges": [
-      {
-        "count": 1,
-        "description": "Cheating and dishonestly inducing delivery of property",
-        "law": "IPC",
-        "section": "420"
-      },
-      {
-        "count": 1,
-        "description": "Forgery of valuable security, will, etc.",
-        "law": "IPC",
-        "section": "467"
-      },
-      {
-        "count": 1,
-        "description": "Forgery for purpose of cheating",
-        "law": "IPC",
-        "section": "468"
-      },
-      {
-        "count": 1,
-        "description": "Using as genuine a forged document or electronic record",
-        "law": "IPC",
-        "section": "471"
-      }
-    ],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "127/2015, Police Station Semari",
-        "case_no": "34/2020",
-        "court": "Judicial Magistrate Sarada",
-        "sections": "420, 467, 468, 471",
-        "charges_framed": "Yes",
-        "framed_date": "29 Apr 2023",
-        "appeal_filed": "Yes",
-        "appeal_details": "Filed a Revision",
-        "law": "IPC"
-      }
-    ],
-    "source_url": "https://www.myneta.info/rajasthan2023/candidate.php?candidate_id=376",
-    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2023 assembly election affidavit"
   },
   {
     "politician_id": "salur-ac-ap-gummadi-sandhya-rani",
@@ -192652,6 +193574,63 @@
     "as_of": "2023 assembly election affidavit"
   },
   {
+    "politician_id": "shahpura-bhilwara-ac-rj-lalaram-bairwa",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Voluntarily causing hurt to deter public servant from his duty",
+        "law": "IPC",
+        "section": "332"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for Rioting",
+        "law": "IPC",
+        "section": "147"
+      },
+      {
+        "count": 1,
+        "description": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+        "law": "IPC",
+        "section": "149"
+      },
+      {
+        "count": 1,
+        "description": "Danger or obstruction in public way or line of navigation",
+        "law": "IPC",
+        "section": "283"
+      },
+      {
+        "count": 1,
+        "description": "Act endangering life or personal safety of others",
+        "law": "IPC",
+        "section": "336"
+      },
+      {
+        "count": 1,
+        "description": "Assault or criminal force to deter public servant from discharge of his duty",
+        "law": "IPC",
+        "section": "353"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "0249/2023, PS Shahpura",
+        "sections": "147, 149, 283, 336, 332, 353",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/rajasthan2023/candidate.php?candidate_id=514",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
+  },
+  {
     "politician_id": "shajapur-ac-mp-arun-bhimawad",
     "declared_total": 2,
     "charges": [
@@ -193709,6 +194688,45 @@
     "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2022 assembly election affidavit"
+  },
+  {
+    "politician_id": "shimoga-ac-ka-s-n-channabasappa",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Section 505(2)",
+        "law": "IPC",
+        "section": "505(2)"
+      },
+      {
+        "count": 1,
+        "description": "Intentional insult with intent to provoke breach of the peace",
+        "law": "IPC",
+        "section": "504"
+      },
+      {
+        "count": 1,
+        "description": "Acts done by several persons in furtherance of common intention",
+        "law": "IPC",
+        "section": "34"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "164/2022, Doddapete Police Station",
+        "sections": "156A, 159A, 504, 505(2), 34",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=8286",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
   },
   {
     "politician_id": "shimoga-b-y-raghavendra",
@@ -199651,6 +200669,49 @@
     "as_of": "2023 assembly election affidavit"
   },
   {
+    "politician_id": "soreng-chakung-ac-sk-aditya-tamang",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for criminal breach of trust",
+        "law": "IPC",
+        "section": "406"
+      },
+      {
+        "count": 2,
+        "description": "Dishonest misappropriation of property",
+        "law": "IPC",
+        "section": "403"
+      },
+      {
+        "count": 1,
+        "description": "Punishment of criminal conspiracy",
+        "law": "IPC",
+        "section": "120B"
+      }
+    ],
+    "cases": [
+      {
+        "status": "convicted",
+        "status_label": "Convicted",
+        "case_no": "S.T. (VIG) Case No. 02 of 2009 (05 of 2013)",
+        "court": "Special Judge (PC Act), East Sikkim at Gangtok",
+        "sections": "403, 120B, 403, 406",
+        "other_sections": "Section 13(2) R/W Section 13(I)(D)(II) of The PC Act 1988",
+        "punishment": "Under Section 13(2) R/W Section 13(I)(d)(ii) of PC Act, 1988, Was Sentenced S.I. For 1 Year and to Pay A Fine of Rs. 10000/- and Under Section 403 IPC Was Sentenced S.I. For 1 Year and Under Section 120(B) R/W Sections 403/406 of IPC, 1860 Was Sentenced S.I. for 6 Months The Aforestated Sentences Ran Concurrently",
+        "convicted_date": "28 Dec 2016",
+        "appeal_filed": "Yes",
+        "appeal_details": "An Appeal Was preferred in the High Court of Sikkim: Gangtok and Same Was Registered As CRL A. No. 01 of 2017 However the Conviction and Sentence of the LD Trail Court Was Affirmed And Upheld Vide Judgment Dated 28-06-2017 Against The Impugned Final Judgment and Order Dated 28-06-2017 in CRL. A No. 01of 2017 Passed By The High Court of Sikkim at Gangtok A Special Leave Petitioon Was Filed Before the Supreme Court of India Same Being Special Leave Petition (Criminal) Diary No. (S) 32346/2017 However The Special Leave Petition Too Was Dismissed vide Order Dated 10-11-2017 As It Found No. Legal And Valid Ground For Interference",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/sikkim2024/candidate.php?candidate_id=113",
+    "source_name": "MyNeta / ADR - 2024 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2024 assembly election affidavit"
+  },
+  {
     "politician_id": "soro-ac-od-madhab-dhada",
     "declared_total": 4,
     "charges": [
@@ -203563,98 +204624,6 @@
     "source_name": "MyNeta / ADR - 2026 assembly election affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2026 assembly election affidavit"
-  },
-  {
-    "politician_id": "taleigao-ac-ga-jennifer-monserrate",
-    "declared_total": 1,
-    "charges": [
-      {
-        "count": 1,
-        "description": "Voluntarily causing hurt by dangerous weapons or means",
-        "law": "IPC",
-        "section": "324"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for voluntarily causing grievous hurt",
-        "law": "IPC",
-        "section": "325"
-      },
-      {
-        "count": 1,
-        "description": "Voluntarily causing grievous hurt by dangerous weapons or means",
-        "law": "IPC",
-        "section": "326"
-      },
-      {
-        "count": 1,
-        "description": "Voluntarily causing grievous hurt to deter public servant from his duty",
-        "law": "IPC",
-        "section": "333"
-      },
-      {
-        "count": 1,
-        "description": "Mischief by destroying or moving, etc., a land- mark fixed by public authority Mischief by fire or explosive substance with intent to cause damage to amount of one hundred or (in case of agricultural produce) ten rupees",
-        "law": "IPC",
-        "section": "435"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for Being member of an unlawful assembly",
-        "law": "IPC",
-        "section": "143"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for Rioting",
-        "law": "IPC",
-        "section": "147"
-      },
-      {
-        "count": 1,
-        "description": "Rioting, armed with deadly weapon",
-        "law": "IPC",
-        "section": "148"
-      },
-      {
-        "count": 1,
-        "description": "Wantonly giving provocation with intent to cause riot-if rioting be committed-if not committed",
-        "law": "IPC",
-        "section": "153"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for voluntarily causing hurt",
-        "law": "IPC",
-        "section": "323"
-      },
-      {
-        "count": 1,
-        "description": "Mischief causing damage to the amount of fifty rupees",
-        "law": "IPC",
-        "section": "427"
-      }
-    ],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "57/08 Panaji PS. Panaji (Goa) and re-registered as FIR No. BSI/2008/S/0003 RC03/(S)/2008/MUM, CBI Mumbai",
-        "case_no": "Criminal Case No. 230/09/A Re-Registered as Sessions case No. 4/2014",
-        "court": "JMFC, Panaji, re-registered Court Addl. Sessions Judge, Mapusa",
-        "sections": "143, 147, 148, 153, 324, 325, 326, 323, 333, 427, 435",
-        "other_sections": "Section 3 of the Prevention of Damage to Public Property Act. 1984",
-        "charges_framed": "Yes",
-        "framed_date": "12 Sep 2014",
-        "appeal_filed": "Yes",
-        "appeal_details": "the same has been disposed",
-        "law": "IPC"
-      }
-    ],
-    "source_url": "https://www.myneta.info/goa2022/candidate.php?candidate_id=187",
-    "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2022 assembly election affidavit"
   },
   {
     "politician_id": "talwandi-sabo-ac-pb-baljinder-kaur",
@@ -213176,6 +214145,36 @@
     "as_of": "2026 assembly election affidavit"
   },
   {
+    "politician_id": "udupi-ac-ka-yashpal-anand-suvarna",
+    "declared_total": 1,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Abetment of suicide",
+        "law": "IPC",
+        "section": "306"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Crime No. 0023/2023, Malpe Police Station, Malpe, Udupi",
+        "case_no": "Cri. Misc. 66/2023",
+        "court": "The Principal District & Sessions Judge, Udupi at Udupi",
+        "sections": "306",
+        "other_sections": "Section 3(2)(V) of SC and The ST (Prevention of Attrocities) Act 1989",
+        "charges_framed": "No",
+        "appeal_filed": "No",
+        "law": "IPC"
+      }
+    ],
+    "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=8378",
+    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+    "retrieved_date": "2026-09-17",
+    "as_of": "2023 assembly election affidavit"
+  },
+  {
     "politician_id": "ujiarpur-ac-br-alok-kumar-mehta",
     "declared_total": 3,
     "charges": [
@@ -213869,88 +214868,6 @@
     "source_name": "MyNeta / ADR - 2024 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2024 assembly election affidavit"
-  },
-  {
-    "politician_id": "umreth-ac-gj-govindbhai-parmar",
-    "declared_total": 3,
-    "charges": [
-      {
-        "count": 1,
-        "description": "House-trespass after preparation for hurt, assault or wrongful restraint",
-        "law": "IPC",
-        "section": "452"
-      },
-      {
-        "count": 1,
-        "description": "Theft in dwelling house, etc.",
-        "law": "IPC",
-        "section": "380"
-      },
-      {
-        "count": 1,
-        "description": "Mischief causing damage to the amount of fifty rupees",
-        "law": "IPC",
-        "section": "427"
-      },
-      {
-        "count": 1,
-        "description": "Abettor present when offence is committed",
-        "law": "IPC",
-        "section": "114"
-      },
-      {
-        "count": 1,
-        "description": "Disobedience to order duly promulgated by public servant",
-        "law": "IPC",
-        "section": "188"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for voluntarily causing hurt",
-        "law": "IPC",
-        "section": "323"
-      },
-      {
-        "count": 1,
-        "description": "Intentional insult with intent to provoke breach of the peace",
-        "law": "IPC",
-        "section": "504"
-      }
-    ],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "Anand Bahruch Police Station",
-        "case_no": "3851/92, 57/92",
-        "court": "Anand Chief Judicial Magistrtae Court",
-        "sections": "452, 380, 427, 114, 188, 506(2), 323, 504",
-        "charges_framed": "Yes",
-        "framed_date": "03 Feb 1991",
-        "appeal_filed": "No",
-        "law": "IPC"
-      },
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "Anand Bahruch Police Station",
-        "case_no": "3096/02",
-        "charges_framed": "No",
-        "appeal_filed": "No"
-      },
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "Anand Bahruch Police Station",
-        "case_no": "50/95",
-        "charges_framed": "No",
-        "appeal_filed": "No"
-      }
-    ],
-    "source_url": "https://www.myneta.info/gujarat2022/candidate.php?candidate_id=6172",
-    "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2022 assembly election affidavit"
   },
   {
     "politician_id": "una-ac-gj-kalubhai-rathod",

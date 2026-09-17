@@ -727,8 +727,10 @@ export interface ElectionSchedule {
 /** Where a candidate's paperwork stands after scrutiny and withdrawal, in the
  *  Commission's own vocabulary. Only 'contesting' candidates appear on the
  *  ballot; the rest are shown because "who tried to stand" is part of the
- *  public record, and hiding them would misrepresent the field. */
-export type NominationStatus = 'contesting' | 'accepted' | 'rejected' | 'withdrawn';
+ *  public record, and hiding them would misrepresent the field. 'filed' is the
+ *  Commission's "Applied": papers are in but scrutiny has not ruled on them, so
+ *  the person is neither on the ballot nor out of it yet. */
+export type NominationStatus = 'contesting' | 'accepted' | 'filed' | 'rejected' | 'withdrawn';
 
 export interface ElectionCandidate {
   /** Stable within the seat: slug of the name, numbered on collision (two
@@ -850,7 +852,8 @@ export interface ElectionEvent {
 /** Where an election is in its lifecycle, computed from the schedule against
  *  "now" - see lib/elections.ts. Drives every status label in the UI. */
 export type ElectionPhase =
-  | 'announced'      // notified; nominations / scrutiny / withdrawal in progress
+  | 'announced'      // notified; nominations open
+  | 'scrutiny'       // nominations closed; scrutiny / withdrawal window, field not final
   | 'campaign'       // field is final, poll ahead
   | 'silence'        // s.126 48-hour window before the poll closes
   | 'polling'        // poll day, booths open
