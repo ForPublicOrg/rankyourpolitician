@@ -1418,6 +1418,2356 @@
           }
         ]
       }
+    },
+    "TN": {
+      "eciStateCd": "S22",
+      "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/districts/S22",
+      "source_name": "Election Commission of India - Voter Services Portal, electoral-roll district and constituency lists",
+      "retrieved_date": "2026-09-28",
+      "ac_count": 234,
+      "district_count": 38,
+      "seats": [
+        {
+          "constituencyId": "ac-tn-gummidipoondi",
+          "acNo": 1,
+          "eciAcName": "Gummidipoondi",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-ponneri",
+          "acNo": 2,
+          "eciAcName": "Ponneri",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-tiruttani",
+          "acNo": 3,
+          "eciAcName": "Tiruttani",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-thiruvallur",
+          "acNo": 4,
+          "eciAcName": "Thiruvallur",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-poonamallee",
+          "acNo": 5,
+          "eciAcName": "Poonamallee",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-avadi",
+          "acNo": 6,
+          "eciAcName": "Avadi",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-maduravoyal",
+          "acNo": 7,
+          "eciAcName": "Maduravoyal",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-ambattur",
+          "acNo": 8,
+          "eciAcName": "Ambattur",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-madavaram",
+          "acNo": 9,
+          "eciAcName": "Madavaram",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-thiruvottiyur",
+          "acNo": 10,
+          "eciAcName": "Thiruvottiyur",
+          "eciDistrictCd": "S2201",
+          "eciDistrictName": "Thiruvallur",
+          "district": "Thiruvallur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2201"
+        },
+        {
+          "constituencyId": "ac-tn-dr-radhakrishnan-nagar",
+          "acNo": 11,
+          "eciAcName": "Dr.Radhakrishnan Nagar",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-perambur",
+          "acNo": 12,
+          "eciAcName": "Perambur",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-kolathur",
+          "acNo": 13,
+          "eciAcName": "Kolathur",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-villivakkam",
+          "acNo": 14,
+          "eciAcName": "Villivakkam",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-thiru-vi-ka-nagar",
+          "acNo": 15,
+          "eciAcName": "Thiru-Vi-Ka-Nagar",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-egmore",
+          "acNo": 16,
+          "eciAcName": "Egmore",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-royapuram",
+          "acNo": 17,
+          "eciAcName": "Royapuram",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-harbour",
+          "acNo": 18,
+          "eciAcName": "Harbour",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-chepauk-thiruvallikeni",
+          "acNo": 19,
+          "eciAcName": "Chepauk-Thiruvallikeni",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-thousand-lights",
+          "acNo": 20,
+          "eciAcName": "Thousand Lights",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-anna-nagar",
+          "acNo": 21,
+          "eciAcName": "Anna Nagar",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-virugampakkam",
+          "acNo": 22,
+          "eciAcName": "Virugampakkam",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-saidapet",
+          "acNo": 23,
+          "eciAcName": "Saidapet",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-thiyagarayanagar",
+          "acNo": 24,
+          "eciAcName": "Thiyagarayanagar",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-mylapore",
+          "acNo": 25,
+          "eciAcName": "Mylapore",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-velachery",
+          "acNo": 26,
+          "eciAcName": "Velachery",
+          "eciDistrictCd": "S2202",
+          "eciDistrictName": "Chennai",
+          "district": "Chennai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2202"
+        },
+        {
+          "constituencyId": "ac-tn-sholinganallur",
+          "acNo": 27,
+          "eciAcName": "Shozhinganallur",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-alandur",
+          "acNo": 28,
+          "eciAcName": "Alandur",
+          "eciDistrictCd": "S2203",
+          "eciDistrictName": "Kancheepuram",
+          "district": "Kancheepuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2203"
+        },
+        {
+          "constituencyId": "ac-tn-sriperumbudur",
+          "acNo": 29,
+          "eciAcName": "Sriperumbudur",
+          "eciDistrictCd": "S2203",
+          "eciDistrictName": "Kancheepuram",
+          "district": "Kancheepuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2203"
+        },
+        {
+          "constituencyId": "ac-tn-pallavaram",
+          "acNo": 30,
+          "eciAcName": "Pallavaram",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-tambaram",
+          "acNo": 31,
+          "eciAcName": "Tambaram",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-chengalpattu",
+          "acNo": 32,
+          "eciAcName": "Chengalpattu",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-thiruporur",
+          "acNo": 33,
+          "eciAcName": "Thiruporur",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-cheyyur",
+          "acNo": 34,
+          "eciAcName": "Cheyyur",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-madurantakam",
+          "acNo": 35,
+          "eciAcName": "Madurantakam",
+          "eciDistrictCd": "S2235",
+          "eciDistrictName": "Chengalpattu",
+          "district": "Chengalpattu",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2235"
+        },
+        {
+          "constituencyId": "ac-tn-uthiramerur",
+          "acNo": 36,
+          "eciAcName": "Uthiramerur",
+          "eciDistrictCd": "S2203",
+          "eciDistrictName": "Kancheepuram",
+          "district": "Kancheepuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2203"
+        },
+        {
+          "constituencyId": "ac-tn-kancheepuram",
+          "acNo": 37,
+          "eciAcName": "Kancheepuram",
+          "eciDistrictCd": "S2203",
+          "eciDistrictName": "Kancheepuram",
+          "district": "Kancheepuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2203"
+        },
+        {
+          "constituencyId": "ac-tn-arakkonam",
+          "acNo": 38,
+          "eciAcName": "Arakkonam",
+          "eciDistrictCd": "S2237",
+          "eciDistrictName": "Ranipet",
+          "district": "Ranipet",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2237"
+        },
+        {
+          "constituencyId": "ac-tn-sholinghur",
+          "acNo": 39,
+          "eciAcName": "Sholinghur",
+          "eciDistrictCd": "S2237",
+          "eciDistrictName": "Ranipet",
+          "district": "Ranipet",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2237"
+        },
+        {
+          "constituencyId": "ac-tn-katpadi",
+          "acNo": 40,
+          "eciAcName": "Katpadi",
+          "eciDistrictCd": "S2204",
+          "eciDistrictName": "Vellore",
+          "district": "Vellore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2204"
+        },
+        {
+          "constituencyId": "ac-tn-ranipet",
+          "acNo": 41,
+          "eciAcName": "Ranipet",
+          "eciDistrictCd": "S2237",
+          "eciDistrictName": "Ranipet",
+          "district": "Ranipet",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2237"
+        },
+        {
+          "constituencyId": "ac-tn-arcot",
+          "acNo": 42,
+          "eciAcName": "Arcot",
+          "eciDistrictCd": "S2237",
+          "eciDistrictName": "Ranipet",
+          "district": "Ranipet",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2237"
+        },
+        {
+          "constituencyId": "ac-tn-vellore",
+          "acNo": 43,
+          "eciAcName": "Vellore",
+          "eciDistrictCd": "S2204",
+          "eciDistrictName": "Vellore",
+          "district": "Vellore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2204"
+        },
+        {
+          "constituencyId": "ac-tn-anaicut",
+          "acNo": 44,
+          "eciAcName": "Anaikattu",
+          "eciDistrictCd": "S2204",
+          "eciDistrictName": "Vellore",
+          "district": "Vellore",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2204"
+        },
+        {
+          "constituencyId": "ac-tn-kilvaithinankuppam",
+          "acNo": 45,
+          "eciAcName": "Kilvaithinankuppam",
+          "eciDistrictCd": "S2204",
+          "eciDistrictName": "Vellore",
+          "district": "Vellore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2204"
+        },
+        {
+          "constituencyId": "ac-tn-gudiyatham",
+          "acNo": 46,
+          "eciAcName": "Gudiyattam",
+          "eciDistrictCd": "S2204",
+          "eciDistrictName": "Vellore",
+          "district": "Vellore",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2204"
+        },
+        {
+          "constituencyId": "ac-tn-vaniyambadi",
+          "acNo": 47,
+          "eciAcName": "Vaniyambadi",
+          "eciDistrictCd": "S2236",
+          "eciDistrictName": "Tirupathur",
+          "district": "Tirupathur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2236"
+        },
+        {
+          "constituencyId": "ac-tn-ambur",
+          "acNo": 48,
+          "eciAcName": "Ambur",
+          "eciDistrictCd": "S2236",
+          "eciDistrictName": "Tirupathur",
+          "district": "Tirupathur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2236"
+        },
+        {
+          "constituencyId": "ac-tn-jolarpet",
+          "acNo": 49,
+          "eciAcName": "Jolarpet",
+          "eciDistrictCd": "S2236",
+          "eciDistrictName": "Tirupathur",
+          "district": "Tirupathur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2236"
+        },
+        {
+          "constituencyId": "ac-tn-tirupattur",
+          "acNo": 50,
+          "eciAcName": "Tirupattur",
+          "eciDistrictCd": "S2236",
+          "eciDistrictName": "Tirupathur",
+          "district": "Tirupathur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2236"
+        },
+        {
+          "constituencyId": "ac-tn-uthangarai",
+          "acNo": 51,
+          "eciAcName": "Uthangarai",
+          "eciDistrictCd": "S2205",
+          "eciDistrictName": "Krishnagiri",
+          "district": "Krishnagiri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2205"
+        },
+        {
+          "constituencyId": "ac-tn-bargur",
+          "acNo": 52,
+          "eciAcName": "Bargur",
+          "eciDistrictCd": "S2205",
+          "eciDistrictName": "Krishnagiri",
+          "district": "Krishnagiri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2205"
+        },
+        {
+          "constituencyId": "ac-tn-krishnagiri",
+          "acNo": 53,
+          "eciAcName": "Krishnagiri",
+          "eciDistrictCd": "S2205",
+          "eciDistrictName": "Krishnagiri",
+          "district": "Krishnagiri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2205"
+        },
+        {
+          "constituencyId": "ac-tn-veppanahalli",
+          "acNo": 54,
+          "eciAcName": "Veppanahalli",
+          "eciDistrictCd": "S2205",
+          "eciDistrictName": "Krishnagiri",
+          "district": "Krishnagiri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2205"
+        },
+        {
+          "constituencyId": "ac-tn-hosur",
+          "acNo": 55,
+          "eciAcName": "Hosur",
+          "eciDistrictCd": "S2205",
+          "eciDistrictName": "Krishnagiri",
+          "district": "Krishnagiri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2205"
+        },
+        {
+          "constituencyId": "ac-tn-thalli",
+          "acNo": 56,
+          "eciAcName": "Thalli",
+          "eciDistrictCd": "S2205",
+          "eciDistrictName": "Krishnagiri",
+          "district": "Krishnagiri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2205"
+        },
+        {
+          "constituencyId": "ac-tn-palacode",
+          "acNo": 57,
+          "eciAcName": "Palacodu",
+          "eciDistrictCd": "S2206",
+          "eciDistrictName": "Dharmapuri",
+          "district": "Dharmapuri",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2206"
+        },
+        {
+          "constituencyId": "ac-tn-pennagaram",
+          "acNo": 58,
+          "eciAcName": "Pennagaram",
+          "eciDistrictCd": "S2206",
+          "eciDistrictName": "Dharmapuri",
+          "district": "Dharmapuri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2206"
+        },
+        {
+          "constituencyId": "ac-tn-dharmapuri",
+          "acNo": 59,
+          "eciAcName": "Dharmapuri",
+          "eciDistrictCd": "S2206",
+          "eciDistrictName": "Dharmapuri",
+          "district": "Dharmapuri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2206"
+        },
+        {
+          "constituencyId": "ac-tn-pappireddipatti",
+          "acNo": 60,
+          "eciAcName": "Pappireddipatti",
+          "eciDistrictCd": "S2206",
+          "eciDistrictName": "Dharmapuri",
+          "district": "Dharmapuri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2206"
+        },
+        {
+          "constituencyId": "ac-tn-harur",
+          "acNo": 61,
+          "eciAcName": "Harur",
+          "eciDistrictCd": "S2206",
+          "eciDistrictName": "Dharmapuri",
+          "district": "Dharmapuri",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2206"
+        },
+        {
+          "constituencyId": "ac-tn-chengam",
+          "acNo": 62,
+          "eciAcName": "Chengam",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-tiruvannamalai",
+          "acNo": 63,
+          "eciAcName": "Tiruvannamalai",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-kilpennathur",
+          "acNo": 64,
+          "eciAcName": "Kilpennathur",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-kalasapakkam",
+          "acNo": 65,
+          "eciAcName": "Kalasapakkam",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-polur",
+          "acNo": 66,
+          "eciAcName": "Polur",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-arani",
+          "acNo": 67,
+          "eciAcName": "Arani",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-cheyyar",
+          "acNo": 68,
+          "eciAcName": "Cheyyar",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-vandavasi",
+          "acNo": 69,
+          "eciAcName": "Vandavasi",
+          "eciDistrictCd": "S2207",
+          "eciDistrictName": "Tiruvannamalai",
+          "district": "Tiruvannamalai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2207"
+        },
+        {
+          "constituencyId": "ac-tn-gingee",
+          "acNo": 70,
+          "eciAcName": "Gingee",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-mailam",
+          "acNo": 71,
+          "eciAcName": "Mailam",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-tindivanam",
+          "acNo": 72,
+          "eciAcName": "Tindivanam",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-vanur",
+          "acNo": 73,
+          "eciAcName": "Vanur",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-villupuram",
+          "acNo": 74,
+          "eciAcName": "Viluppuram",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-vikravandi",
+          "acNo": 75,
+          "eciAcName": "Vikravandi",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-tirukkoyilur",
+          "acNo": 76,
+          "eciAcName": "Tirukkoyilur",
+          "eciDistrictCd": "S2208",
+          "eciDistrictName": "Viluppuram",
+          "district": "Viluppuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2208"
+        },
+        {
+          "constituencyId": "ac-tn-ulundurpet",
+          "acNo": 77,
+          "eciAcName": "Ulundurpettai",
+          "eciDistrictCd": "S2233",
+          "eciDistrictName": "Kallakurichi",
+          "district": "Kallakurichi",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2233"
+        },
+        {
+          "constituencyId": "ac-tn-rishivandiyam",
+          "acNo": 78,
+          "eciAcName": "Rishivandiyam",
+          "eciDistrictCd": "S2233",
+          "eciDistrictName": "Kallakurichi",
+          "district": "Kallakurichi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2233"
+        },
+        {
+          "constituencyId": "ac-tn-sankarapuram",
+          "acNo": 79,
+          "eciAcName": "Sankarapuram",
+          "eciDistrictCd": "S2233",
+          "eciDistrictName": "Kallakurichi",
+          "district": "Kallakurichi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2233"
+        },
+        {
+          "constituencyId": "ac-tn-kallakurichi",
+          "acNo": 80,
+          "eciAcName": "Kallakurichi",
+          "eciDistrictCd": "S2233",
+          "eciDistrictName": "Kallakurichi",
+          "district": "Kallakurichi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2233"
+        },
+        {
+          "constituencyId": "ac-tn-gangavalli",
+          "acNo": 81,
+          "eciAcName": "Gangavalli",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-attur",
+          "acNo": 82,
+          "eciAcName": "Attur",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-yercaud",
+          "acNo": 83,
+          "eciAcName": "Yercaud",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-omalur",
+          "acNo": 84,
+          "eciAcName": "Omalur",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-mettur",
+          "acNo": 85,
+          "eciAcName": "Mettur",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-edappadi",
+          "acNo": 86,
+          "eciAcName": "Edappadi",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-sankari",
+          "acNo": 87,
+          "eciAcName": "Sankari",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-salem-west",
+          "acNo": 88,
+          "eciAcName": "Salem (West)",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-salem-north",
+          "acNo": 89,
+          "eciAcName": "Salem (North)",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-salem-south",
+          "acNo": 90,
+          "eciAcName": "Salem (South)",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-veerapandi",
+          "acNo": 91,
+          "eciAcName": "Veerapandi",
+          "eciDistrictCd": "S2209",
+          "eciDistrictName": "Salem",
+          "district": "Salem",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2209"
+        },
+        {
+          "constituencyId": "ac-tn-rasipuram",
+          "acNo": 92,
+          "eciAcName": "Rasipuram",
+          "eciDistrictCd": "S2210",
+          "eciDistrictName": "Namakkal",
+          "district": "Namakkal",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2210"
+        },
+        {
+          "constituencyId": "ac-tn-senthamangalam",
+          "acNo": 93,
+          "eciAcName": "Senthamangalam",
+          "eciDistrictCd": "S2210",
+          "eciDistrictName": "Namakkal",
+          "district": "Namakkal",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2210"
+        },
+        {
+          "constituencyId": "ac-tn-namakkal",
+          "acNo": 94,
+          "eciAcName": "Namakkal",
+          "eciDistrictCd": "S2210",
+          "eciDistrictName": "Namakkal",
+          "district": "Namakkal",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2210"
+        },
+        {
+          "constituencyId": "ac-tn-paramathi-velur",
+          "acNo": 95,
+          "eciAcName": "Paramathi-Velur",
+          "eciDistrictCd": "S2210",
+          "eciDistrictName": "Namakkal",
+          "district": "Namakkal",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2210"
+        },
+        {
+          "constituencyId": "ac-tn-tiruchengode",
+          "acNo": 96,
+          "eciAcName": "Tiruchengodu",
+          "eciDistrictCd": "S2210",
+          "eciDistrictName": "Namakkal",
+          "district": "Namakkal",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2210"
+        },
+        {
+          "constituencyId": "ac-tn-kumarapalayam",
+          "acNo": 97,
+          "eciAcName": "Kumarapalayam",
+          "eciDistrictCd": "S2210",
+          "eciDistrictName": "Namakkal",
+          "district": "Namakkal",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2210"
+        },
+        {
+          "constituencyId": "ac-tn-erode-east",
+          "acNo": 98,
+          "eciAcName": "Erode (East)",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-erode-west",
+          "acNo": 99,
+          "eciAcName": "Erode (West)",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-modakkurichi",
+          "acNo": 100,
+          "eciAcName": "Modakkurichi",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-dharapuram",
+          "acNo": 101,
+          "eciAcName": "Dharapuram",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-kangayam",
+          "acNo": 102,
+          "eciAcName": "Kangayam",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-perundurai",
+          "acNo": 103,
+          "eciAcName": "Perundurai",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-bhavani",
+          "acNo": 104,
+          "eciAcName": "Bhavani",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-anthiyur",
+          "acNo": 105,
+          "eciAcName": "Anthiyur",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-gobichettipalayam",
+          "acNo": 106,
+          "eciAcName": "Gobichettipalayam",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-bhavanisagar",
+          "acNo": 107,
+          "eciAcName": "Bhavanisagar",
+          "eciDistrictCd": "S2211",
+          "eciDistrictName": "Erode",
+          "district": "Erode",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2211"
+        },
+        {
+          "constituencyId": "ac-tn-udhagamandalam",
+          "acNo": 108,
+          "eciAcName": "Udhagamandalam",
+          "eciDistrictCd": "S2212",
+          "eciDistrictName": "The Nilgiris",
+          "district": "The Nilgiris",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2212"
+        },
+        {
+          "constituencyId": "ac-tn-gudalur",
+          "acNo": 109,
+          "eciAcName": "Gudalur",
+          "eciDistrictCd": "S2212",
+          "eciDistrictName": "The Nilgiris",
+          "district": "The Nilgiris",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2212"
+        },
+        {
+          "constituencyId": "ac-tn-coonoor",
+          "acNo": 110,
+          "eciAcName": "Coonoor",
+          "eciDistrictCd": "S2212",
+          "eciDistrictName": "The Nilgiris",
+          "district": "The Nilgiris",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2212"
+        },
+        {
+          "constituencyId": "ac-tn-mettuppalayam",
+          "acNo": 111,
+          "eciAcName": "Mettuppalayam",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-avanashi",
+          "acNo": 112,
+          "eciAcName": "Avanashi",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-tiruppur-north",
+          "acNo": 113,
+          "eciAcName": "Tiruppur (North)",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-tiruppur-south",
+          "acNo": 114,
+          "eciAcName": "Tiruppur (South)",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-palladam",
+          "acNo": 115,
+          "eciAcName": "Palladam",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-sulur",
+          "acNo": 116,
+          "eciAcName": "Sulur",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-kavundampalayam",
+          "acNo": 117,
+          "eciAcName": "Kavundampalayam",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-coimbatore-north",
+          "acNo": 118,
+          "eciAcName": "Coimbatore (North)",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-thondamuthur",
+          "acNo": 119,
+          "eciAcName": "Thondamuthur",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-coimbatore-south",
+          "acNo": 120,
+          "eciAcName": "Coimbatore (South)",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-singanallur",
+          "acNo": 121,
+          "eciAcName": "Singanallur",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-kinathukadavu",
+          "acNo": 122,
+          "eciAcName": "Kinathukadavu",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-pollachi",
+          "acNo": 123,
+          "eciAcName": "Pollachi",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-valparai",
+          "acNo": 124,
+          "eciAcName": "Valparai",
+          "eciDistrictCd": "S2213",
+          "eciDistrictName": "Coimbatore",
+          "district": "Coimbatore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2213"
+        },
+        {
+          "constituencyId": "ac-tn-udumalaipettai",
+          "acNo": 125,
+          "eciAcName": "Udumalaipettai",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-madathukulam",
+          "acNo": 126,
+          "eciAcName": "Madathukulam",
+          "eciDistrictCd": "S2232",
+          "eciDistrictName": "Tiruppur",
+          "district": "Tiruppur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2232"
+        },
+        {
+          "constituencyId": "ac-tn-palani",
+          "acNo": 127,
+          "eciAcName": "Palani",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-oddanchatram",
+          "acNo": 128,
+          "eciAcName": "Oddanchatram",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-athoor",
+          "acNo": 129,
+          "eciAcName": "Athoor",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-nilakkottai",
+          "acNo": 130,
+          "eciAcName": "Nilakkottai",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-natham",
+          "acNo": 131,
+          "eciAcName": "Natham",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-dindigul",
+          "acNo": 132,
+          "eciAcName": "Dindigul",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-vedasandur",
+          "acNo": 133,
+          "eciAcName": "Vedasandur",
+          "eciDistrictCd": "S2214",
+          "eciDistrictName": "Dindigul",
+          "district": "Dindigul",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2214"
+        },
+        {
+          "constituencyId": "ac-tn-aravakurichi",
+          "acNo": 134,
+          "eciAcName": "Aravakurichi",
+          "eciDistrictCd": "S2215",
+          "eciDistrictName": "Karur",
+          "district": "Karur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2215"
+        },
+        {
+          "constituencyId": "ac-tn-karur",
+          "acNo": 135,
+          "eciAcName": "Karur",
+          "eciDistrictCd": "S2215",
+          "eciDistrictName": "Karur",
+          "district": "Karur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2215"
+        },
+        {
+          "constituencyId": "ac-tn-krishnarayapuram",
+          "acNo": 136,
+          "eciAcName": "Krishnarayapuram",
+          "eciDistrictCd": "S2215",
+          "eciDistrictName": "Karur",
+          "district": "Karur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2215"
+        },
+        {
+          "constituencyId": "ac-tn-kulithalai",
+          "acNo": 137,
+          "eciAcName": "Kulithalai",
+          "eciDistrictCd": "S2215",
+          "eciDistrictName": "Karur",
+          "district": "Karur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2215"
+        },
+        {
+          "constituencyId": "ac-tn-manapparai",
+          "acNo": 138,
+          "eciAcName": "Manapparai",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-srirangam",
+          "acNo": 139,
+          "eciAcName": "Srirangam",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-tiruchirappalli-west",
+          "acNo": 140,
+          "eciAcName": "Tiruchirappalli (West)",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-tiruchirappalli-east",
+          "acNo": 141,
+          "eciAcName": "Tiruchirappalli (East)",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "alias",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-thiruverumbur",
+          "acNo": 142,
+          "eciAcName": "Thiruverumbur",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-lalgudi",
+          "acNo": 143,
+          "eciAcName": "Lalgudi",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-manachanallur",
+          "acNo": 144,
+          "eciAcName": "Manachanallur",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-musiri",
+          "acNo": 145,
+          "eciAcName": "Musiri",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-thuraiyur",
+          "acNo": 146,
+          "eciAcName": "Thuraiyur",
+          "eciDistrictCd": "S2216",
+          "eciDistrictName": "Tiruchirappalli",
+          "district": "Tiruchirappalli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2216"
+        },
+        {
+          "constituencyId": "ac-tn-perambalur",
+          "acNo": 147,
+          "eciAcName": "Perambalur",
+          "eciDistrictCd": "S2217",
+          "eciDistrictName": "Perambalur",
+          "district": "Perambalur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2217"
+        },
+        {
+          "constituencyId": "ac-tn-kunnam",
+          "acNo": 148,
+          "eciAcName": "Kunnam",
+          "eciDistrictCd": "S2217",
+          "eciDistrictName": "Perambalur",
+          "district": "Perambalur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2217"
+        },
+        {
+          "constituencyId": "ac-tn-ariyalur",
+          "acNo": 149,
+          "eciAcName": "Ariyalur",
+          "eciDistrictCd": "S2231",
+          "eciDistrictName": "Ariyalur",
+          "district": "Ariyalur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2231"
+        },
+        {
+          "constituencyId": "ac-tn-jayankondam",
+          "acNo": 150,
+          "eciAcName": "Jayankondam",
+          "eciDistrictCd": "S2231",
+          "eciDistrictName": "Ariyalur",
+          "district": "Ariyalur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2231"
+        },
+        {
+          "constituencyId": "ac-tn-tittakudi",
+          "acNo": 151,
+          "eciAcName": "Tittakudi",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-vriddhachalam",
+          "acNo": 152,
+          "eciAcName": "Vriddhachalam",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-neyveli",
+          "acNo": 153,
+          "eciAcName": "Neyveli",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-panruti",
+          "acNo": 154,
+          "eciAcName": "Panruti",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-cuddalore",
+          "acNo": 155,
+          "eciAcName": "Cuddalore",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-kurinjipadi",
+          "acNo": 156,
+          "eciAcName": "Kurinjipadi",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-bhuvanagiri",
+          "acNo": 157,
+          "eciAcName": "Bhuvanagiri",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-chidambaram",
+          "acNo": 158,
+          "eciAcName": "Chidambaram",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-kattumannarkoil",
+          "acNo": 159,
+          "eciAcName": "Kattumannarkoil",
+          "eciDistrictCd": "S2218",
+          "eciDistrictName": "Cuddalore",
+          "district": "Cuddalore",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2218"
+        },
+        {
+          "constituencyId": "ac-tn-sirkazhi",
+          "acNo": 160,
+          "eciAcName": "Sirkazhi",
+          "eciDistrictCd": "S2238",
+          "eciDistrictName": "Mayiladuthurai",
+          "district": "Mayiladuthurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2238"
+        },
+        {
+          "constituencyId": "ac-tn-mayiladuthurai",
+          "acNo": 161,
+          "eciAcName": "Mayiladuthurai",
+          "eciDistrictCd": "S2238",
+          "eciDistrictName": "Mayiladuthurai",
+          "district": "Mayiladuthurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2238"
+        },
+        {
+          "constituencyId": "ac-tn-poompuhar",
+          "acNo": 162,
+          "eciAcName": "Poompuhar",
+          "eciDistrictCd": "S2238",
+          "eciDistrictName": "Mayiladuthurai",
+          "district": "Mayiladuthurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2238"
+        },
+        {
+          "constituencyId": "ac-tn-nagapattinam",
+          "acNo": 163,
+          "eciAcName": "Nagapattinam",
+          "eciDistrictCd": "S2219",
+          "eciDistrictName": "Nagapattinam",
+          "district": "Nagapattinam",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2219"
+        },
+        {
+          "constituencyId": "ac-tn-kilvelur",
+          "acNo": 164,
+          "eciAcName": "Kilvelur",
+          "eciDistrictCd": "S2219",
+          "eciDistrictName": "Nagapattinam",
+          "district": "Nagapattinam",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2219"
+        },
+        {
+          "constituencyId": "ac-tn-vedaranyam",
+          "acNo": 165,
+          "eciAcName": "Vedaranyam",
+          "eciDistrictCd": "S2219",
+          "eciDistrictName": "Nagapattinam",
+          "district": "Nagapattinam",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2219"
+        },
+        {
+          "constituencyId": "ac-tn-thiruthuraipoondi",
+          "acNo": 166,
+          "eciAcName": "Thiruthuraipoondi",
+          "eciDistrictCd": "S2220",
+          "eciDistrictName": "Thiruvarur",
+          "district": "Thiruvarur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2220"
+        },
+        {
+          "constituencyId": "ac-tn-mannargudi",
+          "acNo": 167,
+          "eciAcName": "Mannargudi",
+          "eciDistrictCd": "S2220",
+          "eciDistrictName": "Thiruvarur",
+          "district": "Thiruvarur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2220"
+        },
+        {
+          "constituencyId": "ac-tn-thiruvarur",
+          "acNo": 168,
+          "eciAcName": "Thiruvarur",
+          "eciDistrictCd": "S2220",
+          "eciDistrictName": "Thiruvarur",
+          "district": "Thiruvarur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2220"
+        },
+        {
+          "constituencyId": "ac-tn-nannilam",
+          "acNo": 169,
+          "eciAcName": "Nannilam",
+          "eciDistrictCd": "S2220",
+          "eciDistrictName": "Thiruvarur",
+          "district": "Thiruvarur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2220"
+        },
+        {
+          "constituencyId": "ac-tn-thiruvidaimarudur",
+          "acNo": 170,
+          "eciAcName": "Thiruvidaimarudur",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-kumbakonam",
+          "acNo": 171,
+          "eciAcName": "Kumbakonam",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-papanasam",
+          "acNo": 172,
+          "eciAcName": "Papanasam",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-thiruvaiyaru",
+          "acNo": 173,
+          "eciAcName": "Thiruvaiyaru",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-thanjavur",
+          "acNo": 174,
+          "eciAcName": "Thanjavur",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-orathanadu",
+          "acNo": 175,
+          "eciAcName": "Orathanadu",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-pattukkottai",
+          "acNo": 176,
+          "eciAcName": "Pattukkottai",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-peravurani",
+          "acNo": 177,
+          "eciAcName": "Peravurani",
+          "eciDistrictCd": "S2221",
+          "eciDistrictName": "Thanjavur",
+          "district": "Thanjavur",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2221"
+        },
+        {
+          "constituencyId": "ac-tn-gandarvakkottai",
+          "acNo": 178,
+          "eciAcName": "Gandarvakkottai",
+          "eciDistrictCd": "S2222",
+          "eciDistrictName": "Pudukkottai",
+          "district": "Pudukkottai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2222"
+        },
+        {
+          "constituencyId": "ac-tn-viralimalai",
+          "acNo": 179,
+          "eciAcName": "Viralimalai",
+          "eciDistrictCd": "S2222",
+          "eciDistrictName": "Pudukkottai",
+          "district": "Pudukkottai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2222"
+        },
+        {
+          "constituencyId": "ac-tn-pudukkottai",
+          "acNo": 180,
+          "eciAcName": "Pudukkottai",
+          "eciDistrictCd": "S2222",
+          "eciDistrictName": "Pudukkottai",
+          "district": "Pudukkottai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2222"
+        },
+        {
+          "constituencyId": "ac-tn-thirumayam",
+          "acNo": 181,
+          "eciAcName": "Thirumayam",
+          "eciDistrictCd": "S2222",
+          "eciDistrictName": "Pudukkottai",
+          "district": "Pudukkottai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2222"
+        },
+        {
+          "constituencyId": "ac-tn-alangudi",
+          "acNo": 182,
+          "eciAcName": "Alangudi",
+          "eciDistrictCd": "S2222",
+          "eciDistrictName": "Pudukkottai",
+          "district": "Pudukkottai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2222"
+        },
+        {
+          "constituencyId": "ac-tn-aranthangi",
+          "acNo": 183,
+          "eciAcName": "Aranthangi",
+          "eciDistrictCd": "S2222",
+          "eciDistrictName": "Pudukkottai",
+          "district": "Pudukkottai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2222"
+        },
+        {
+          "constituencyId": "ac-tn-karaikudi",
+          "acNo": 184,
+          "eciAcName": "Karaikudi",
+          "eciDistrictCd": "S2223",
+          "eciDistrictName": "Sivaganga",
+          "district": "Sivaganga",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2223"
+        },
+        {
+          "constituencyId": "ac-tn-tiruppattur",
+          "acNo": 185,
+          "eciAcName": "Tiruppattur",
+          "eciDistrictCd": "S2223",
+          "eciDistrictName": "Sivaganga",
+          "district": "Sivaganga",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2223"
+        },
+        {
+          "constituencyId": "ac-tn-sivaganga",
+          "acNo": 186,
+          "eciAcName": "Sivaganga",
+          "eciDistrictCd": "S2223",
+          "eciDistrictName": "Sivaganga",
+          "district": "Sivaganga",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2223"
+        },
+        {
+          "constituencyId": "ac-tn-manamadurai",
+          "acNo": 187,
+          "eciAcName": "Manamadurai",
+          "eciDistrictCd": "S2223",
+          "eciDistrictName": "Sivaganga",
+          "district": "Sivaganga",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2223"
+        },
+        {
+          "constituencyId": "ac-tn-melur",
+          "acNo": 188,
+          "eciAcName": "Melur",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-madurai-east",
+          "acNo": 189,
+          "eciAcName": "Madurai East",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-sholavandan",
+          "acNo": 190,
+          "eciAcName": "Sholavandan",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-madurai-north",
+          "acNo": 191,
+          "eciAcName": "Madurai North",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-madurai-south",
+          "acNo": 192,
+          "eciAcName": "Madurai South",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-madurai-central",
+          "acNo": 193,
+          "eciAcName": "Madurai Central",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-madurai-west",
+          "acNo": 194,
+          "eciAcName": "Madurai West",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-thiruparankundram",
+          "acNo": 195,
+          "eciAcName": "Thiruparankundram",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-thirumangalam",
+          "acNo": 196,
+          "eciAcName": "Thirumangalam",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-usilampatti",
+          "acNo": 197,
+          "eciAcName": "Usilampatti",
+          "eciDistrictCd": "S2224",
+          "eciDistrictName": "Madurai",
+          "district": "Madurai",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2224"
+        },
+        {
+          "constituencyId": "ac-tn-andipatti",
+          "acNo": 198,
+          "eciAcName": "Andipatti",
+          "eciDistrictCd": "S2225",
+          "eciDistrictName": "Theni",
+          "district": "Theni",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2225"
+        },
+        {
+          "constituencyId": "ac-tn-periyakulam",
+          "acNo": 199,
+          "eciAcName": "Periyakulam",
+          "eciDistrictCd": "S2225",
+          "eciDistrictName": "Theni",
+          "district": "Theni",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2225"
+        },
+        {
+          "constituencyId": "ac-tn-bodinayakanur",
+          "acNo": 200,
+          "eciAcName": "Bodinayakanur",
+          "eciDistrictCd": "S2225",
+          "eciDistrictName": "Theni",
+          "district": "Theni",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2225"
+        },
+        {
+          "constituencyId": "ac-tn-cumbum",
+          "acNo": 201,
+          "eciAcName": "Cumbum",
+          "eciDistrictCd": "S2225",
+          "eciDistrictName": "Theni",
+          "district": "Theni",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2225"
+        },
+        {
+          "constituencyId": "ac-tn-rajapalayam",
+          "acNo": 202,
+          "eciAcName": "Rajapalayam",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-srivilliputhur",
+          "acNo": 203,
+          "eciAcName": "Srivilliputhur",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-sattur",
+          "acNo": 204,
+          "eciAcName": "Sattur",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-sivakasi",
+          "acNo": 205,
+          "eciAcName": "Sivakasi",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-virudhunagar",
+          "acNo": 206,
+          "eciAcName": "Virudhunagar",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-aruppukkottai",
+          "acNo": 207,
+          "eciAcName": "Aruppukkottai",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-tiruchuli",
+          "acNo": 208,
+          "eciAcName": "Tiruchuli",
+          "eciDistrictCd": "S2226",
+          "eciDistrictName": "Virudhunagar",
+          "district": "Virudhunagar",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2226"
+        },
+        {
+          "constituencyId": "ac-tn-paramakudi",
+          "acNo": 209,
+          "eciAcName": "Paramakudi",
+          "eciDistrictCd": "S2227",
+          "eciDistrictName": "Ramanathapuram",
+          "district": "Ramanathapuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2227"
+        },
+        {
+          "constituencyId": "ac-tn-tiruvadanai",
+          "acNo": 210,
+          "eciAcName": "Tiruvadanai",
+          "eciDistrictCd": "S2227",
+          "eciDistrictName": "Ramanathapuram",
+          "district": "Ramanathapuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2227"
+        },
+        {
+          "constituencyId": "ac-tn-ramanathapuram",
+          "acNo": 211,
+          "eciAcName": "Ramanathapuram",
+          "eciDistrictCd": "S2227",
+          "eciDistrictName": "Ramanathapuram",
+          "district": "Ramanathapuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2227"
+        },
+        {
+          "constituencyId": "ac-tn-mudhukulathur",
+          "acNo": 212,
+          "eciAcName": "Mudhukulathur",
+          "eciDistrictCd": "S2227",
+          "eciDistrictName": "Ramanathapuram",
+          "district": "Ramanathapuram",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2227"
+        },
+        {
+          "constituencyId": "ac-tn-vilathikulam",
+          "acNo": 213,
+          "eciAcName": "Vilathikulam",
+          "eciDistrictCd": "S2228",
+          "eciDistrictName": "Thoothukudi",
+          "district": "Thoothukudi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2228"
+        },
+        {
+          "constituencyId": "ac-tn-thoothukkudi",
+          "acNo": 214,
+          "eciAcName": "Thoothukkudi",
+          "eciDistrictCd": "S2228",
+          "eciDistrictName": "Thoothukudi",
+          "district": "Thoothukudi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2228"
+        },
+        {
+          "constituencyId": "ac-tn-tiruchendur",
+          "acNo": 215,
+          "eciAcName": "Tiruchendur",
+          "eciDistrictCd": "S2228",
+          "eciDistrictName": "Thoothukudi",
+          "district": "Thoothukudi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2228"
+        },
+        {
+          "constituencyId": "ac-tn-srivaikuntam",
+          "acNo": 216,
+          "eciAcName": "Srivaikuntam",
+          "eciDistrictCd": "S2228",
+          "eciDistrictName": "Thoothukudi",
+          "district": "Thoothukudi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2228"
+        },
+        {
+          "constituencyId": "ac-tn-ottapidaram",
+          "acNo": 217,
+          "eciAcName": "Ottapidaram",
+          "eciDistrictCd": "S2228",
+          "eciDistrictName": "Thoothukudi",
+          "district": "Thoothukudi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2228"
+        },
+        {
+          "constituencyId": "ac-tn-kovilpatti",
+          "acNo": 218,
+          "eciAcName": "Kovilpatti",
+          "eciDistrictCd": "S2228",
+          "eciDistrictName": "Thoothukudi",
+          "district": "Thoothukudi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2228"
+        },
+        {
+          "constituencyId": "ac-tn-sankarankovil",
+          "acNo": 219,
+          "eciAcName": "Sankarankovil",
+          "eciDistrictCd": "S2234",
+          "eciDistrictName": "Tenkasi",
+          "district": "Tenkasi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2234"
+        },
+        {
+          "constituencyId": "ac-tn-vasudevanallur",
+          "acNo": 220,
+          "eciAcName": "Vasudevanallur",
+          "eciDistrictCd": "S2234",
+          "eciDistrictName": "Tenkasi",
+          "district": "Tenkasi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2234"
+        },
+        {
+          "constituencyId": "ac-tn-kadayanallur",
+          "acNo": 221,
+          "eciAcName": "Kadayanallur",
+          "eciDistrictCd": "S2234",
+          "eciDistrictName": "Tenkasi",
+          "district": "Tenkasi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2234"
+        },
+        {
+          "constituencyId": "ac-tn-tenkasi",
+          "acNo": 222,
+          "eciAcName": "Tenkasi",
+          "eciDistrictCd": "S2234",
+          "eciDistrictName": "Tenkasi",
+          "district": "Tenkasi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2234"
+        },
+        {
+          "constituencyId": "ac-tn-alangulam",
+          "acNo": 223,
+          "eciAcName": "Alangulam",
+          "eciDistrictCd": "S2234",
+          "eciDistrictName": "Tenkasi",
+          "district": "Tenkasi",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2234"
+        },
+        {
+          "constituencyId": "ac-tn-tirunelveli",
+          "acNo": 224,
+          "eciAcName": "Tirunelveli",
+          "eciDistrictCd": "S2229",
+          "eciDistrictName": "Tirunelveli",
+          "district": "Tirunelveli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2229"
+        },
+        {
+          "constituencyId": "ac-tn-ambasamudram",
+          "acNo": 225,
+          "eciAcName": "Ambasamudram",
+          "eciDistrictCd": "S2229",
+          "eciDistrictName": "Tirunelveli",
+          "district": "Tirunelveli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2229"
+        },
+        {
+          "constituencyId": "ac-tn-palayamkottai",
+          "acNo": 226,
+          "eciAcName": "Palayamkottai",
+          "eciDistrictCd": "S2229",
+          "eciDistrictName": "Tirunelveli",
+          "district": "Tirunelveli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2229"
+        },
+        {
+          "constituencyId": "ac-tn-nanguneri",
+          "acNo": 227,
+          "eciAcName": "Nanguneri",
+          "eciDistrictCd": "S2229",
+          "eciDistrictName": "Tirunelveli",
+          "district": "Tirunelveli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2229"
+        },
+        {
+          "constituencyId": "ac-tn-radhapuram",
+          "acNo": 228,
+          "eciAcName": "Radhapuram",
+          "eciDistrictCd": "S2229",
+          "eciDistrictName": "Tirunelveli",
+          "district": "Tirunelveli",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2229"
+        },
+        {
+          "constituencyId": "ac-tn-kanniyakumari",
+          "acNo": 229,
+          "eciAcName": "Kanniyakumari",
+          "eciDistrictCd": "S2230",
+          "eciDistrictName": "Kanniyakumari",
+          "district": "Kanniyakumari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2230"
+        },
+        {
+          "constituencyId": "ac-tn-nagercoil",
+          "acNo": 230,
+          "eciAcName": "Nagercoil",
+          "eciDistrictCd": "S2230",
+          "eciDistrictName": "Kanniyakumari",
+          "district": "Kanniyakumari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2230"
+        },
+        {
+          "constituencyId": "ac-tn-colachal",
+          "acNo": 231,
+          "eciAcName": "Colachal",
+          "eciDistrictCd": "S2230",
+          "eciDistrictName": "Kanniyakumari",
+          "district": "Kanniyakumari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2230"
+        },
+        {
+          "constituencyId": "ac-tn-padmanabhapuram",
+          "acNo": 232,
+          "eciAcName": "Padmanabhapuram",
+          "eciDistrictCd": "S2230",
+          "eciDistrictName": "Kanniyakumari",
+          "district": "Kanniyakumari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2230"
+        },
+        {
+          "constituencyId": "ac-tn-vilavancode",
+          "acNo": 233,
+          "eciAcName": "Vilavancode",
+          "eciDistrictCd": "S2230",
+          "eciDistrictName": "Kanniyakumari",
+          "district": "Kanniyakumari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2230"
+        },
+        {
+          "constituencyId": "ac-tn-killiyoor",
+          "acNo": 234,
+          "eciAcName": "Killiyoor",
+          "eciDistrictCd": "S2230",
+          "eciDistrictName": "Kanniyakumari",
+          "district": "Kanniyakumari",
+          "matchedBy": "name",
+          "source_url": "https://gateway-voters.eci.gov.in/api/v1/common/acs/S2230"
+        }
+      ]
     }
   }
 }

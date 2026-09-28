@@ -158,9 +158,9 @@
     ],
     "head_title": "Mayor",
     "status": "administrator",
-    "source_url": "https://barakbulletin.com/silchar-municipal-corporation-polls-159-nominations-filed-across-42-wards/",
-    "source_name": "Barak Bulletin - Silchar Municipal Corporation polls: 159 nominations filed across 42 wards (12 September 2026)",
-    "retrieved_date": "2026-09-17",
+    "source_url": "https://sec.assam.gov.in//uploads/press-release/SECAssam-Press-Release-2026-09-02-15-17-37.pdf",
+    "source_name": "Assam State Election Commission - Press Release No. SEC.72/2022/245 (2 September 2026): Silchar Municipal Corporation poll on 3 October 2026, counting 6 October",
+    "retrieved_date": "2026-09-28",
     "status_note": "The corporation has no elected council or Mayor yet; officials and an Executive Officer run municipal affairs. Its first election is scheduled for 3 October 2026, with counting on 6 October 2026."
   },
   {
@@ -859,11 +859,12 @@
     "source_name": "Bengaluru Central City Corporation",
     "retrieved_date": "2026-09-10",
     "commissioner": {
-      "name": "Rajendra Cholan P.",
-      "source_url": "https://en.wikipedia.org/wiki/Bengaluru_Central_City_Corporation",
-      "source_name": "Bengaluru Central City Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
-      "title": "Municipal Commissioner"
+      "name": "Jagadeesha G",
+      "title": "Municipal Commissioner",
+      "since": "2026-06-05",
+      "source_url": "https://www.deccanherald.com/india/karnataka/bengaluru/bengaluru-deputy-commissioner-jagadeesha-g-shifted-as-central-city-corporation-commissioner-4029209",
+      "source_name": "Deccan Herald - Bengaluru Deputy Commissioner Jagadeesha G shifted as Central City Corporation Commissioner (5 June 2026)",
+      "retrieved_date": "2026-09-28"
     }
   },
   {
@@ -908,11 +909,11 @@
     "source_name": "Bengaluru North City Corporation",
     "retrieved_date": "2026-09-10",
     "commissioner": {
-      "name": "Pommalai Sunil Kumar",
-      "source_url": "https://en.wikipedia.org/wiki/Bengaluru_North_City_Corporation",
-      "source_name": "Bengaluru North City Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
-      "title": "Municipal Commissioner"
+      "name": "Pommala Sunil Kumar",
+      "title": "Municipal Commissioner",
+      "source_url": "https://bengalurunorth.karnataka.gov.in/home",
+      "source_name": "Bengaluru North City Corporation - official website",
+      "retrieved_date": "2026-09-28"
     }
   },
   {
@@ -957,11 +958,11 @@
     "source_name": "Bengaluru West City Corporation",
     "retrieved_date": "2026-09-10",
     "commissioner": {
-      "name": "Vasanth Kumar R.",
-      "source_url": "https://en.wikipedia.org/wiki/Bengaluru_West_City_Corporation",
-      "source_name": "Bengaluru West City Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
-      "title": "Municipal Commissioner"
+      "name": "Rajendra K. V.",
+      "title": "Municipal Commissioner",
+      "source_url": "https://www.countryandpolitics.in/2026/09/26/bengaluru-west-city-corporation-progress-review-meeting-by-the-commissioner/",
+      "source_name": "Country and Politics - Bengaluru West City Corporation progress review meeting by the Commissioner (26 September 2026)",
+      "retrieved_date": "2026-09-28"
     }
   },
   {
@@ -2053,11 +2054,29 @@
     ],
     "website": "https://jaipurmc.org/",
     "head_title": "Mayor",
-    "status": "administrator",
-    "status_note": "Rajasthan merged the twin Jaipur Heritage and Jaipur Greater corporations into a single Jaipur Municipal Corporation in November 2025, ending the terms of both Houses and both Mayors. Councillors for the merged corporation were elected in the September 2026 urban local body elections, but EVM faults held back the results of some wards. The State Election Commission has deferred the Mayor and Deputy Mayor elections until further orders. The office of Mayor remains vacant.",
-    "source_url": "https://sec.rajasthan.gov.in/AllNotificationsNew.aspx",
-    "source_name": "State Election Commission, Rajasthan - notifications (15 September 2026)",
-    "retrieved_date": "2026-09-17"
+    "status": "elected_council",
+    "status_note": "Rajasthan merged the Jaipur Heritage and Jaipur Greater corporations into a single Jaipur Municipal Corporation in November 2025. The council elected in the September 2026 urban local body elections chose its Mayor on 25 September 2026 and its Deputy Mayor on 26 September 2026.",
+    "source_url": "https://sec.rajasthan.gov.in/cm%5Cupload%5C8986.pdf",
+    "source_name": "State Election Commission, Rajasthan - order of 17 September 2026 fixing the Mayor (25 September) and Deputy Mayor (26 September) elections",
+    "retrieved_date": "2026-09-28",
+    "head": {
+      "name": "Sunil Kothari",
+      "party": "Bharatiya Janata Party",
+      "since": "2026-09-25",
+      "elected_by": "indirect",
+      "source_url": "https://www.indiatvnews.com/rajasthan/bjp-s-prasann-chand-mehta-wins-jodhpur-mayor-poll-sunil-kothari-and-ansuya-goswami-win-jaipur-kota-2026-09-25-1055262",
+      "source_name": "India TV - BJP's Prasann Chand Mehta wins Jodhpur mayor poll, Sunil Kothari and Anusuiya Goswami win Jaipur, Kota (25 September 2026)",
+      "retrieved_date": "2026-09-28"
+    },
+    "deputy_head": {
+      "name": "Saroj Kanwar",
+      "party": "Bharatiya Janata Party",
+      "since": "2026-09-26",
+      "elected_by": "indirect",
+      "source_url": "https://www.thehansindia.com/news/cities/new-delhi/bjps-rajvanshi-elected-unopposed-as-kota-dy-mayor-1126012",
+      "source_name": "The Hans India - BJP's Rajvanshi elected unopposed as Kota Dy Mayor (27 September 2026)",
+      "retrieved_date": "2026-09-28"
+    }
   },
   {
     "id": "rj-jodhpur",
@@ -2069,13 +2088,30 @@
     "districts": [
       "Jodhpur"
     ],
-    "website": "https://jodhpurmc.org/",
     "head_title": "Mayor",
-    "status": "administrator",
-    "status_note": "Jodhpur North and Jodhpur South were merged into a single Jodhpur Municipal Corporation in November 2025, ending the terms of both Houses and both Mayors. Councillors for the merged corporation were elected in the September 2026 urban local body elections, but EVM faults held back the result of a ward. The State Election Commission has deferred the Mayor and Deputy Mayor elections until further orders. The office of Mayor remains vacant.",
-    "source_url": "https://sec.rajasthan.gov.in/AllNotificationsNew.aspx",
-    "source_name": "State Election Commission, Rajasthan - notifications (15 September 2026)",
-    "retrieved_date": "2026-09-17"
+    "status": "elected_council",
+    "status_note": "Jodhpur North and Jodhpur South were merged into a single Jodhpur Municipal Corporation in November 2025. The council elected in the September 2026 urban local body elections chose its Mayor on 25 September 2026 and its Deputy Mayor on 26 September 2026.",
+    "source_url": "https://sec.rajasthan.gov.in/cm%5Cupload%5C8986.pdf",
+    "source_name": "State Election Commission, Rajasthan - order of 17 September 2026 fixing the Mayor (25 September) and Deputy Mayor (26 September) elections",
+    "retrieved_date": "2026-09-28",
+    "head": {
+      "name": "Prasann Chand Mehta",
+      "party": "Bharatiya Janata Party",
+      "since": "2026-09-25",
+      "elected_by": "indirect",
+      "source_url": "https://www.indiatvnews.com/rajasthan/bjp-s-prasann-chand-mehta-wins-jodhpur-mayor-poll-sunil-kothari-and-ansuya-goswami-win-jaipur-kota-2026-09-25-1055262",
+      "source_name": "India TV - BJP's Prasann Chand Mehta wins Jodhpur mayor poll, Sunil Kothari and Anusuiya Goswami win Jaipur, Kota (25 September 2026)",
+      "retrieved_date": "2026-09-28"
+    },
+    "deputy_head": {
+      "name": "Vijay Singh Panwar",
+      "party": "Bharatiya Janata Party",
+      "since": "2026-09-26",
+      "elected_by": "indirect",
+      "source_url": "https://www.thehansindia.com/news/cities/new-delhi/bjps-rajvanshi-elected-unopposed-as-kota-dy-mayor-1126012",
+      "source_name": "The Hans India - BJP's Rajvanshi elected unopposed as Kota Dy Mayor (27 September 2026)",
+      "retrieved_date": "2026-09-28"
+    }
   },
   {
     "id": "rj-kota",
@@ -2089,11 +2125,35 @@
     ],
     "website": "https://kotamc.org/",
     "head_title": "Mayor",
-    "status": "administrator",
-    "status_note": "Kota North and Kota South were merged into a single Kota Municipal Corporation in November 2025, ending the terms of both Houses and both Mayors. Councillors for the merged corporation were elected in the September 2026 urban local body elections, but EVM faults held back the results of some wards. The State Election Commission has deferred the Mayor and Deputy Mayor elections until further orders. The office of Mayor remains vacant.",
-    "source_url": "https://sec.rajasthan.gov.in/AllNotificationsNew.aspx",
-    "source_name": "State Election Commission, Rajasthan - notifications (15 September 2026)",
-    "retrieved_date": "2026-09-17"
+    "status": "elected_council",
+    "status_note": "Kota North and Kota South were merged into a single Kota Municipal Corporation in November 2025. The council elected in the September 2026 urban local body elections chose its Mayor on 25 September 2026 and its Deputy Mayor on 26 September 2026.",
+    "source_url": "https://sec.rajasthan.gov.in/cm%5Cupload%5C8986.pdf",
+    "source_name": "State Election Commission, Rajasthan - order of 17 September 2026 fixing the Mayor (25 September) and Deputy Mayor (26 September) elections",
+    "retrieved_date": "2026-09-28",
+    "head": {
+      "name": "Anusuya Goswami",
+      "since": "2026-09-25",
+      "elected_by": "indirect",
+      "source_url": "https://kotamc.org/",
+      "source_name": "Nagar Nigam Kota - official website",
+      "retrieved_date": "2026-09-28"
+    },
+    "deputy_head": {
+      "name": "Vivek Rajvanshi",
+      "party": "Bharatiya Janata Party",
+      "since": "2026-09-26",
+      "elected_by": "indirect",
+      "source_url": "https://www.thehansindia.com/news/cities/new-delhi/bjps-rajvanshi-elected-unopposed-as-kota-dy-mayor-1126012",
+      "source_name": "The Hans India - BJP's Rajvanshi elected unopposed as Kota Dy Mayor (27 September 2026)",
+      "retrieved_date": "2026-09-28"
+    },
+    "commissioner": {
+      "name": "Omprakash Mehra",
+      "title": "Municipal Commissioner",
+      "source_url": "https://kotamc.org/",
+      "source_name": "Nagar Nigam Kota - official website",
+      "retrieved_date": "2026-09-28"
+    }
   },
   {
     "id": "sk-gangtok",
@@ -2561,11 +2621,12 @@
       "elected_by": "direct"
     },
     "commissioner": {
-      "name": "Sanjay Chauhan",
-      "source_url": "https://nagarnigammoradabad.in/index.php",
-      "source_name": "Nagar Nigam Moradabad",
-      "retrieved_date": "2026-09-09",
-      "title": "Municipal Commissioner"
+      "name": "Himanshu Kaushik",
+      "title": "Municipal Commissioner",
+      "since": "2026-09-24",
+      "source_url": "https://indianmasterminds.com/news/up-transfers-34-ias-officers-14-dms-mahendra-tanwar-235467/",
+      "source_name": "Indian Masterminds - UP transfers 34 IAS officers (22 September 2026)",
+      "retrieved_date": "2026-09-28"
     }
   },
   {

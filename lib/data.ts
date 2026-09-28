@@ -1235,7 +1235,10 @@ const normSimple = (s: string) =>
 export function partyComposition(list: Politician[], top = 8): { segments: { label: string; count: number }[]; total: number } {
   const counts = new Map<string, number>();
   for (const p of list) {
-    const short = p.party.match(/\(([^)]+)\)\s*$/)?.[1] ?? p.party;
+    // Only a trailing ACRONYM is a short name ("... (BJP)"). Any other
+    // parenthetical is part of the name: "Janata Dal (United)" was charted as
+    // "United", and UDP + VPP, both "(Meghalaya)", merged into one bar.
+    const short = p.party.match(/\(([A-Z][A-Z0-9.&-]{1,9})\)\s*$/)?.[1] ?? p.party;
     counts.set(short, (counts.get(short) ?? 0) + 1);
   }
   const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);

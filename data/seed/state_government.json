@@ -3388,7 +3388,7 @@
         "state": "Jammu and Kashmir",
         "rank": "CM",
         "name": "Omar Abdullah",
-        "party": "Jammu and Kashmir National Conference",
+        "party": "Jammu & Kashmir National Conference",
         "portfolios": [
           "General Administration Department",
           "Home",
@@ -3406,7 +3406,7 @@
         "state": "Jammu and Kashmir",
         "rank": "DyCM",
         "name": "Surinder Kumar Choudhary",
-        "party": "Jammu and Kashmir National Conference",
+        "party": "Jammu & Kashmir National Conference",
         "portfolios": [
           "Public Works (R&B)",
           "Industries & Commerce",
@@ -3425,7 +3425,7 @@
         "state": "Jammu and Kashmir",
         "rank": "Cabinet",
         "name": "Sakina Itoo",
-        "party": "Jammu and Kashmir National Conference",
+        "party": "Jammu & Kashmir National Conference",
         "portfolios": [
           "Health & Medical Education",
           "School Education",
@@ -3444,7 +3444,7 @@
         "state": "Jammu and Kashmir",
         "rank": "Cabinet",
         "name": "Javid Ahmad Dar",
-        "party": "Jammu and Kashmir National Conference",
+        "party": "Jammu & Kashmir National Conference",
         "portfolios": [
           "Agriculture Production",
           "Rural Development & Panchayati Raj",
@@ -3463,7 +3463,7 @@
         "state": "Jammu and Kashmir",
         "rank": "Cabinet",
         "name": "Javed Ahmed Rana",
-        "party": "Jammu and Kashmir National Conference",
+        "party": "Jammu & Kashmir National Conference",
         "portfolios": [
           "Jal Shakti (Water Resources)",
           "Forest, Ecology & Environment",
@@ -3511,7 +3511,7 @@
     "stateCode": "JH",
     "state": "Jharkhand",
     "governmentStatus": "elected",
-    "asOf": "as of 17 September 2026 (Cabinet Minister Sudivya Kumar died on 6 September 2026; his berth and the berth vacant since Ramdas Soren's death remain unfilled)",
+    "asOf": "as of 28 September 2026 (Cabinet Minister Sudivya Kumar died on 6 September 2026; his three departments were assigned to the Chief Minister on 20 September 2026, and his berth and the berth vacant since Ramdas Soren's death remain unfilled)",
     "confidence": "high",
     "governor": {
       "name": "Santosh Kumar Gangwar",
@@ -3533,12 +3533,15 @@
           "Rajbhasha (Official Language)",
           "Road Construction",
           "Building Construction",
+          "Urban Development & Housing",
+          "Higher & Technical Education",
+          "Tourism, Art & Culture, Sports and Youth Affairs",
           "All departments not allocated to other ministers (incl. School Education & Literacy after the death of Ramdas Soren)"
         ],
-        "source_url": "https://cm.jharkhand.gov.in/",
-        "source_name": "cm.jharkhand.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of mid-2026 (verified against sources reflecting May-July 2026; one cabinet slot vacant since Ramdas Soren's death on 15 Aug 2025)",
+        "source_url": "https://www.amarujala.com/jharkhand/ranchi/cm-hemant-soren-takes-charge-of-three-vacant-ministries-following-demise-of-minister-sudivya-kumar-2026-09-20",
+        "source_name": "Amar Ujala - CM Hemant Soren takes charge of three vacant ministries (20 September 2026)",
+        "retrieved_date": "2026-09-28",
+        "as_of": "as of 28 September 2026 (the late Sudivya Kumar's three departments assigned to the Chief Minister by Cabinet Secretariat & Vigilance Department notification, 20 September 2026)",
         "politicianId": "barhait-ac-jh-hemant-soren"
       },
       {
@@ -6152,7 +6155,7 @@
     "stateCode": "ML",
     "state": "Meghalaya",
     "governmentStatus": "elected",
-    "asOf": "as of 17 September 2026",
+    "asOf": "as of 28 September 2026 (Minister Lahkmen Rymbui joined the BJP on 23 September 2026; portfolios unchanged)",
     "confidence": "high",
     "governor": {
       "name": "Chandrashekhar Harishankar Vijayashankar (C. H. Vijayashankar)",
@@ -6302,7 +6305,7 @@
         "state": "Meghalaya",
         "rank": "Cabinet",
         "name": "Lahkmen Rymbui",
-        "party": "United Democratic Party",
+        "party": "Bharatiya Janata Party",
         "portfolios": [
           "Education",
           "Revenue & Disaster Management",
@@ -6311,7 +6314,7 @@
         ],
         "source_url": "https://ukhrultimes.com/meghalaya-cm-assigns-portfolios-to-new-ministers/",
         "source_name": "ukhrultimes.com",
-        "retrieved_date": "2026-07-14",
+        "retrieved_date": "2026-09-28",
         "as_of": "as of 14 July 2026",
         "politicianId": "amlarem-ac-ml-lahkmen-rymbui"
       },
@@ -6666,7 +6669,7 @@
         "state": "Nagaland",
         "rank": "CM",
         "name": "Neiphiu Rio",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Finance",
           "Personnel & Administrative Reforms",
@@ -6684,7 +6687,7 @@
         "state": "Nagaland",
         "rank": "DyCM",
         "name": "T. R. Zeliang",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Planning & Transformation",
           "National Highways"
@@ -6701,7 +6704,7 @@
         "state": "Nagaland",
         "rank": "DyCM",
         "name": "Yanthungo Patton",
-        "party": "Bharatiya Janata Party (BJP)",
+        "party": "Bharatiya Janata Party",
         "portfolios": [
           "Home",
           "Border Affairs"
@@ -6718,7 +6721,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "G. Kaito Aye",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Roads & Bridges"
         ],
@@ -6734,7 +6737,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "Jacob Zhimomi",
-        "party": "Bharatiya Janata Party (BJP)",
+        "party": "Bharatiya Janata Party",
         "portfolios": [
           "Public Health Engineering",
           "Cooperation"
@@ -6751,7 +6754,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "K. G. Kenye",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Power",
           "Parliamentary Affairs"
@@ -6768,7 +6771,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "P. Paiwang Konyak",
-        "party": "Bharatiya Janata Party (BJP)",
+        "party": "Bharatiya Janata Party",
         "portfolios": [
           "Health & Family Welfare"
         ],
@@ -6784,7 +6787,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "Metsubo Jamir",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Rural Development",
           "State Institute of Rural Development (SIRD)"
@@ -6801,7 +6804,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "Temjen Imna Along",
-        "party": "Bharatiya Janata Party (BJP)",
+        "party": "Bharatiya Janata Party",
         "portfolios": [
           "Tourism",
           "Higher Education"
@@ -6818,7 +6821,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "C. L. John",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Forest, Environment & Climate Change",
           "Village Guards"
@@ -6835,7 +6838,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "Salhoutuonuo Kruse",
-        "party": "Naga People's Front (NPF)",
+        "party": "Naga People's Front",
         "portfolios": [
           "Women Resource Development",
           "Horticulture"
@@ -6852,7 +6855,7 @@
         "state": "Nagaland",
         "rank": "Cabinet",
         "name": "P. Bashangmongba Chang",
-        "party": "Bharatiya Janata Party (BJP)",
+        "party": "Bharatiya Janata Party",
         "portfolios": [
           "Housing",
           "Mechanical Engineering"
@@ -9799,7 +9802,7 @@
         "state": "Uttar Pradesh",
         "rank": "Cabinet",
         "name": "Ashish Patel",
-        "party": "Apna Dal (Soneylal)",
+        "party": "Apna Dal (Sonelal)",
         "portfolios": [
           "Technical Education",
           "Consumer Protection",

@@ -301,7 +301,8 @@ async function main() {
     console.log('Nothing written.');
     return;
   }
-  constituencies.sort((a, b) => a.state.localeCompare(b.state) || a.name.localeCompare(b.name));
+  // Keep the seed's own row order: re-sorting on write turned a 75-seat change
+  // into a 38,000-line diff that no reviewer could check (28 Sep 2026).
   writeFileSync(resolve(SEED_DIR, 'constituencies.json'), JSON.stringify(constituencies, null, 2) + '\n');
   writeFileSync(resolve(SEED_DIR, 'politicians.json'), JSON.stringify(politicians, null, 2) + '\n');
   writeFileSync(EVIDENCE, JSON.stringify(evidence, null, 2) + '\n');

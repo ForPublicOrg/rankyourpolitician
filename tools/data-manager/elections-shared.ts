@@ -39,7 +39,14 @@ export interface EventSpec {
   /** Seat number -> our constituency id, per state. The explicit mapping is
    *  deliberate: seat names repeat across India (Bihar and UP both have a
    *  Maharajganj), so nothing is matched on name alone. */
-  seats: { constituencyId: string; acNo: number; eciStateCode: string; vacancyReason?: string }[];
+  seats: {
+    constituencyId: string;
+    acNo: number;
+    eciStateCode: string;
+    vacancyReason?: string;
+    /** Hours not yet notified for this seat - pair with schedule.pollCloseEarliest. */
+    pollHoursUnconfirmed?: true;
+  }[];
 }
 
 /**
@@ -102,6 +109,17 @@ export const EVENTS: EventSpec[] = [
   // print 07:00-18:00. The West Bengal notifications for Rejinagar and
   // Nandigram were not found online yet - re-check before 4 October, and split
   // those seats into their own event if their close differs.
+  //
+  // Still not found on 28 Sep 2026 (CEO WB by-election page, press notes 65/66,
+  // the WB Finance holiday memo 3425-F(P2), district sites and the news all
+  // omit the hours). The ECI's exit-poll notification 576/EXIT/2026/SDR/Vol.I
+  // (10 Sep) bans exit polls 07:00-18:30 on 6 Oct for all six seats, so no seat
+  // closes after 18:00 - but WB could close at 17:00, as Nagaon does. Until the
+  // hour is notified the WB seats print no hours, and `pollCloseEarliest` opens
+  // the rating lock 48h before 17:00: an hour early for Tamil Nadu and
+  // Puducherry, which costs a little rating time and risks no silence breach.
+  // Once WB's hour is found, set it, drop pollCloseEarliest and the two
+  // pollHoursUnconfirmed flags (or split WB into its own event if it is 17:00).
   {
     event: {
       id: 'ac-bye-2026-10',
@@ -116,6 +134,7 @@ export const EVENTS: EventSpec[] = [
         pollDate: '2026-10-06',
         pollOpen: '07:00',
         pollClose: '18:00',
+        pollCloseEarliest: '17:00',
         countingDate: '2026-10-09',
         completeBy: '2026-10-11',
       },
@@ -131,8 +150,8 @@ export const EVENTS: EventSpec[] = [
       { constituencyId: 'ac-tn-madurantakam', acNo: 35, eciStateCode: 'S22', vacancyReason: 'Resignation of Tmt. Maragatham Kumaravel' },
       { constituencyId: 'ac-tn-dharapuram', acNo: 101, eciStateCode: 'S22', vacancyReason: 'Resignation of Tmt. P. Sathyabama' },
       { constituencyId: 'ac-py-thattanchavady', acNo: 9, eciStateCode: 'U07', vacancyReason: 'Resignation of Thiru N. Rangasamy' },
-      { constituencyId: 'ac-wb-rejinagar', acNo: 70, eciStateCode: 'S25', vacancyReason: 'Resignation of Sh. Humayun Kabir' },
-      { constituencyId: 'ac-wb-nandigram', acNo: 210, eciStateCode: 'S25', vacancyReason: 'Resignation of Sh. Suvendu Adhikari' },
+      { constituencyId: 'ac-wb-rejinagar', acNo: 70, eciStateCode: 'S25', vacancyReason: 'Resignation of Sh. Humayun Kabir', pollHoursUnconfirmed: true },
+      { constituencyId: 'ac-wb-nandigram', acNo: 210, eciStateCode: 'S25', vacancyReason: 'Resignation of Sh. Suvendu Adhikari', pollHoursUnconfirmed: true },
     ],
   },
   {

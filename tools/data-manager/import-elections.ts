@@ -224,10 +224,10 @@ function parseDetail(html: string): Detail {
 /** Mirror ECI's photo locally: one small WebP, served from our own origin.
  *  Hotlinking a government CDN puts a third-party request on the critical path
  *  of every candidate row and breaks silently when they reorganise. */
-async function mirrorPhoto(url: string, seat: string, cand: string): Promise<string | undefined> {
+async function mirrorPhoto(url: string, seat: string, cand: string, refresh = false): Promise<string | undefined> {
   const rel = `/candidates/${seat}/${cand}.webp`;
   const abs = resolve(PUBLIC_DIR, 'candidates', seat, `${cand}.webp`);
-  if (existsSync(abs)) return rel;
+  if (existsSync(abs) && !refresh) return rel;
   const buf = await fetchEciBinary(url);
   if (!buf || buf.length < 512) return undefined;
   try {
@@ -275,6 +275,52 @@ function uniqueSlug(name: string, taken: Set<string>): string {
   for (let n = 2; taken.has(s); n++) s = `${base}-${n}`;
   taken.add(s);
   return s;
+}
+
+/** Letters only, with the "Late" honorific ECI adds or drops between papers. */
+const squash = (s = '') => s.toLowerCase().replace(/\blate\b/g, '').replace(/[^a-z]/g, '');
+
+/** Dice coefficient over letter bigrams: "hanif tamuli" vs "hanif tamuly" = 0.9. */
+function dice(a: string, b: string): number {
+  if (!a || !b) return 0;
+  if (a === b) return 1;
+  const grams = (s: string) => {
+    const m = new Map<string, number>();
+    for (let i = 0; i < s.length - 1; i++) m.set(s.slice(i, i + 2), (m.get(s.slice(i, i + 2)) ?? 0) + 1);
+    return m;
+  };
+  const ga = grams(a);
+  let hit = 0;
+  for (const [g, n] of grams(b)) hit += Math.min(n, ga.get(g) ?? 0);
+  return (2 * hit) / (a.length - 1 + b.length - 1);
+}
+
+/**
+ * The same human under a respelled name. The final list the Returning Officer
+ * publishes after scrutiny often spells a name differently from the paper filed
+ * a week earlier - Oct 2026: "MOHAMMED BADARUDDIN AJMAL" became "MOHAMMED
+ * BADRUDDIN AJMAL", "MD. INAMUL HUDA" became "INAMUL HUDA" (13 of 145 people).
+ * The slug is the candidate's identity: it is the page URL and the vote key
+ * (`cand:{seat}:{slug}`), and it carries the `politicianId` link that stops one
+ * person being ratable twice. Minting a new slug for a respelling would orphan
+ * every rating cast so far and silently re-open the double-rating hole.
+ *
+ * So a person whose new slug is unknown is matched to a previous candidate who
+ * has vanished from this run, on what the affidavit says about them rather than
+ * on the name: same age and gender, and the same parent/spouse name (or, where
+ * that too was respelled, the same name). Party is deliberately NOT required -
+ * ECI corrected two party labels in the same pass. Verified on all 13 Oct 2026
+ * respellings: 9 carry byte-identical photos, the other 4 are the same faces.
+ */
+function sameHuman(
+  now: { name: string; relative_name?: string; age?: number; gender?: string },
+  before: ElectionCandidate,
+): number {
+  if (!now.age || now.age !== before.age) return 0;
+  if (now.gender && before.gender && now.gender !== before.gender) return 0;
+  const rel = dice(squash(now.relative_name), squash(before.relative_name));
+  const name = dice(squash(now.name), squash(before.name));
+  return rel >= 0.85 || (name >= 0.85 && rel >= 0.6) ? rel + name : 0;
 }
 
 async function main() {
@@ -334,13 +380,41 @@ async function main() {
       const taken = new Set<string>();
       const people = foldPapersIntoPeople(mine);
 
-      const candidates = await pool(people, CONCURRENCY, async (p): Promise<ElectionCandidate> => {
-        // Read the person's details off whichever paper actually carries them.
+      // Read each person's details off whichever paper actually carries them.
+      const read = await pool(people, CONCURRENCY, async (p) => {
         const r = p.forms.find((f) => f.profileUrl) ?? p.forms[0];
+        const detail: Detail = r.profileUrl ? parseDetail((await fetchEci(r.profileUrl)) ?? '') : {};
+        return { p, r, detail };
+      });
+      const slugs = read.map((x) => uniqueSlug(x.r.name, taken));
+      // Keep a respelled person on their existing slug (see sameHuman).
+      const reused = new Set<number>();
+      const vanished = (before?.candidates ?? []).filter((o) => !slugs.includes(o.slug));
+      for (let i = 0; i < read.length; i++) {
+        if (prevCand.has(slugs[i])) continue;
+        const scored = vanished
+          .map((o) => ({ o, s: sameHuman({ name: read[i].r.name, ...read[i].detail }, o) }))
+          .filter((x) => x.s > 0)
+          .sort((a, b) => b.s - a.s);
+        // Ambiguity (two plausible predecessors) is not guessed through.
+        if (!scored.length || (scored[1] && scored[1].s === scored[0].s)) continue;
+        const o = scored[0].o;
+        vanished.splice(vanished.indexOf(o), 1);
+        slugs[i] = o.slug;
+        // Later runs land here too (the slug no longer derives from the name);
+        // only an actual respelling is news, and only it can bring a new photo.
+        if (o.name !== read[i].r.name) {
+          console.log(`    ~ ${c.name}: "${o.name}" is now "${read[i].r.name}" - keeping /${o.slug}`);
+          reused.add(i);
+        }
+      }
+
+      const candidates = await pool(read, CONCURRENCY, async ({ p, r, detail }, i): Promise<ElectionCandidate> => {
         const photoUrl = p.forms.find((f) => f.photoUrl)?.photoUrl;
-        const cs = uniqueSlug(r.name, taken);
-        const detail = r.profileUrl ? parseDetail((await fetchEci(r.profileUrl)) ?? '') : {};
-        const photo = photoUrl ? await mirrorPhoto(photoUrl, sSlug, cs) : undefined;
+        const cs = slugs[i];
+        // A respelled person usually filed the final paper with a fresh photo;
+        // show that one rather than the superseded paper's.
+        const photo = photoUrl ? await mirrorPhoto(photoUrl, sSlug, cs, reused.has(i)) : undefined;
         const old = prevCand.get(cs);
         return {
           slug: cs,
@@ -377,6 +451,7 @@ async function main() {
         ...(before?.vacancy_reason ? { vacancy_reason: before.vacancy_reason } : {}),
         ...(before?.electors ? { electors: before.electors } : {}),
         ...(before?.turnout_pct ? { turnout_pct: before.turnout_pct } : {}),
+        ...(seatSpec.pollHoursUnconfirmed ? { pollHoursUnconfirmed: true } : {}),
         candidates,
         ...(before?.result ? { result: before.result } : {}),
       });

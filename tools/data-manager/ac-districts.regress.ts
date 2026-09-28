@@ -46,6 +46,8 @@ assert(cleanDistrictName('KAMRUP (METRO)') === 'Kamrup (Metro)', 'parenthesised 
 assert(cleanDistrictName('KAMRUP.', 'AS') === 'Kamrup', 'stray full stop is repaired via DISTRICT_DISPLAY');
 assert(cleanDistrictName('WEST KARBI ANGLONG ') === 'West Karbi Anglong', 'multi-word district is title-cased');
 assert(cleanDistrictName('DIMA HASAO') === 'Dima Hasao', 'renamed district keeps the current name');
+assert(cleanDistrictName('THE NILGIRIS') === 'The Nilgiris', 'a leading "The" stays capitalised');
+assert(cleanDistrictName('ANDAMAN AND NICOBAR') === 'Andaman and Nicobar', 'an inner small word is lower-cased');
 
 // A district the ECI merely spells differently from the old census vintage must
 // NOT be quietly mapped back - re-aligning to the current spelling is the point.
@@ -69,6 +71,26 @@ assert(jal?.via === 'alias', 'alias match is reported as an alias, not as a name
 // Reservation qualifiers are formatting, not name.
 const resv = matchState('AS', [seat('Baksa')], [eci(42, 'BAKSA (ST)', 'BAKSA')]);
 assert(resv.complete && resv.matches[0].district === 'Baksa', 'reservation qualifier does not block the match');
+
+// Tamil Nadu parenthesises the distinguishing word ("Salem (North)"), which the
+// seat normaliser drops - so by name all three Salem seats are one. A numeric
+// alias pins each to the ECI's own AC number instead (real rows, 28 Sep 2026).
+const salemRows = [
+  eci(88, 'Salem (West)', 'SALEM', 'S2211'),
+  eci(89, 'Salem (North)', 'SALEM', 'S2211'),
+  eci(90, 'Salem (South)', 'SALEM', 'S2211'),
+];
+const salemSeats = [seat('Salem West'), seat('Salem North'), seat('Salem South')];
+assert(!matchState('XX', salemSeats, salemRows).complete, 'parenthesised directions do not match by name alone');
+const salem = matchState('TN', salemSeats, salemRows);
+assert(salem.complete, 'numeric aliases resolve all three Salem seats 1:1');
+assert(
+  salem.matches.find((m) => m.seat.name === 'Salem North')?.eci.acNo === 89,
+  'Salem North is pinned to AC 89 by number, not to a sibling',
+);
+assert(SEAT_ALIASES.TN['Salem North'] === 89, 'TN directional aliases are ECI AC numbers');
+assert(ELECTORAL_DISTRICT_STATES.has('WB'), 'WB is refused: the ECI splits Kolkata into Kolkata North/South roll districts');
+assert(ELECTORAL_DISTRICT_STATES.has('PY'), 'PY is refused: the ECI folds Mahe and Yanam into Puducherry');
 
 // ---------------------------------------------------------------------------
 // 3. Actions: fill an empty row, re-align a stale one, leave an agreeing one.

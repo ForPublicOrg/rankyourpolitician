@@ -222,7 +222,7 @@ export default async function SeatPage({ params }: { params: Promise<{ lang: str
               </Reveal>
             )}
             <Reveal delay={140}>
-              <ScheduleCard event={event} tr={tr} locale={locale} />
+              <ScheduleCard event={event} hoursUnconfirmed={!!seat.pollHoursUnconfirmed} tr={tr} locale={locale} />
             </Reveal>
             {!result && phase !== 'counting' && phase !== 'awaiting-count' && phase !== 'declared' && officialUrl && (
               <Reveal delay={180}>
@@ -315,10 +315,14 @@ function CandidateGroupList({
 
 function ScheduleCard({
   event,
+  hoursUnconfirmed,
   tr,
   locale,
 }: {
   event: ElectionEvent;
+  /** This seat's poll hours are not yet notified - print none rather than
+   *  the event's hours, which are only cited for the other seats. */
+  hoursUnconfirmed: boolean;
   tr: (k: string, v?: Record<string, string | number>) => string;
   locale: string;
 }) {
@@ -344,9 +348,11 @@ function ScheduleCard({
           );
         })}
       </ul>
-      <p className="mt-3 text-xs text-ink-faint">
-        {tr('elections.pollHours', { from: event.schedule.pollOpen, to: event.schedule.pollClose })}
-      </p>
+      {!hoursUnconfirmed && (
+        <p className="mt-3 text-xs text-ink-faint">
+          {tr('elections.pollHours', { from: event.schedule.pollOpen, to: event.schedule.pollClose })}
+        </p>
+      )}
     </SectionCard>
   );
 }

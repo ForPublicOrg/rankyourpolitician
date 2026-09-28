@@ -720,6 +720,11 @@ export interface ElectionSchedule {
   pollDate: string;
   pollOpen: string;
   pollClose: string;
+  /** Set while some seats' closing hour is not yet notified: the earliest it
+   *  could be. The silence window then starts 48h before THIS hour and still
+   *  ends 30 min after `pollClose`, so it covers every hour the Commission might
+   *  fix - rating closes early rather than stay open into a silence period. */
+  pollCloseEarliest?: string;
   countingDate: string;
   completeBy?: string;
 }
@@ -824,6 +829,10 @@ export interface ElectionSeat {
   vacancy_reason?: Fact;
   electors?: Fact;
   turnout_pct?: Fact;
+  /** The Commission has not yet notified this seat's poll hours: the event's
+   *  `pollOpen`/`pollClose` are cited for the OTHER seats only, so the page
+   *  prints no hours for this one (see ElectionSchedule.pollCloseEarliest). */
+  pollHoursUnconfirmed?: boolean;
   /** ALL nominations, in the order the Commission lists them. */
   candidates: ElectionCandidate[];
   result?: ElectionResult;

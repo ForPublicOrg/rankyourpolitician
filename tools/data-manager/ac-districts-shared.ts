@@ -58,7 +58,14 @@ export const ECI_STATE_CD: Record<string, string> = {
  * them. Listed explicitly rather than guessed at: silence here would be the
  * expensive kind of wrong.
  */
-export const ELECTORAL_DISTRICT_STATES = new Set(['DL', 'KA']);
+//
+// West Bengal and Puducherry joined the list on 28 Sep 2026, after a dry run:
+// the ECI's WB tree has 24 roll districts because it splits Kolkata (one
+// revenue district, one DM) into "Kolkata North" and "Kolkata South", and spells
+// Purba Medinipur "Purbo Medinipur"; its Puducherry tree has only 2 districts,
+// which would move Mahe and Yanam - separate revenue districts - into
+// "Puducherry".
+export const ELECTORAL_DISTRICT_STATES = new Set(['DL', 'KA', 'WB', 'PY']);
 
 /**
  * Roster spelling -> the ECI's spelling, for seats that are the same seat under
@@ -68,8 +75,35 @@ export const ELECTORAL_DISTRICT_STATES = new Set(['DL', 'KA']);
  * Nothing is matched by edit distance - "Dharashiv" is one edit from "Dharavi"
  * and 400 km away from it, and that class of near-miss is exactly what the
  * no-guessing rule exists to stop.
+ *
+ * A NUMBER is the ECI's own AC number. It is needed where the ECI puts the
+ * distinguishing word in parentheses - "Salem (North)", "Salem (South)", "Salem
+ * (West)" - because the seat normaliser drops parenthesised text (it is almost
+ * always "(SC)"/"(ST)"), which collapses all three onto "salem".
  */
-export const SEAT_ALIASES: Record<string, Record<string, string>> = {
+export const SEAT_ALIASES: Record<string, Record<string, string | number>> = {
+  // Confirmed 28 Sep 2026: with these 18 pairs the 234 seed seats and the
+  // ECI's 234 match 1:1, nothing left over on either side.
+  TN: {
+    Anaicut: 'Anaikattu',
+    Gudiyatham: 'Gudiyattam',
+    Palacode: 'Palacodu',
+    Sholinganallur: 'Shozhinganallur',
+    Tiruchengode: 'Tiruchengodu',
+    Ulundurpet: 'Ulundurpettai',
+    Villupuram: 'Viluppuram',
+    'Salem West': 88, // Salem (West)
+    'Salem North': 89, // Salem (North)
+    'Salem South': 90, // Salem (South)
+    'Erode East': 98, // Erode (East)
+    'Erode West': 99, // Erode (West)
+    'Tiruppur North': 113, // Tiruppur (North)
+    'Tiruppur South': 114, // Tiruppur (South)
+    'Coimbatore North': 118, // Coimbatore (North)
+    'Coimbatore South': 120, // Coimbatore (South)
+    'Tiruchirappalli West': 140, // Tiruchirappalli (West)
+    'Tiruchirappalli East': 141, // Tiruchirappalli (East)
+  },
   AS: {
     'Bhowanipur-Sorbhog': 'BHAWANIPUR-SORBHOG',
     Dudhnai: 'DUDHNOI',
@@ -141,7 +175,8 @@ export function cleanDistrictName(raw: string, stateCode?: string): string {
   const titled = trimmed
     .toLowerCase()
     .replace(/(^|[\s('/-])([a-z])/g, (_m, lead: string, ch: string) => lead + ch.toUpperCase())
-    .replace(/\b(And|Of|The)\b/g, (w) => (SMALL_WORDS.has(w.toLowerCase()) ? w.toLowerCase() : w));
+    // Not the first word: "THE NILGIRIS" is "The Nilgiris", not "the Nilgiris".
+    .replace(/(?!^)\b(And|Of|The)\b/g, (w) => (SMALL_WORDS.has(w.toLowerCase()) ? w.toLowerCase() : w));
   const override = stateCode ? DISTRICT_DISPLAY[stateCode]?.[normaliseDistrict(titled)] : undefined;
   return override ?? titled;
 }
@@ -243,8 +278,10 @@ export function matchState(
 
   for (const seat of seats) {
     const aliasTarget = aliases[seat.name];
-    const key = normaliseName(aliasTarget ?? seat.name);
-    const candidates = byName.get(key);
+    const candidates =
+      typeof aliasTarget === 'number'
+        ? eciRows.filter((r) => r.acNo === aliasTarget)
+        : byName.get(normaliseName(aliasTarget ?? seat.name));
     if (!candidates || candidates.length === 0) {
       unmatchedSeats.push(seat);
       continue;

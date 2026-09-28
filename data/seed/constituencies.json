@@ -30252,7 +30252,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Tirunelveli"
+      "Tenkasi"
     ]
   },
   {
@@ -30282,7 +30282,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Vellore"
+      "Tirupathur"
     ]
   },
   {
@@ -30291,7 +30291,9 @@
     "name": "Anaicut",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Vellore"
+    ]
   },
   {
     "id": "ac-tn-andipatti",
@@ -30330,7 +30332,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Vellore"
+      "Ranipet"
     ]
   },
   {
@@ -30370,7 +30372,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Vellore"
+      "Ranipet"
     ]
   },
   {
@@ -30380,7 +30382,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Perambalur"
+      "Ariyalur"
     ]
   },
   {
@@ -30390,7 +30392,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -30430,7 +30432,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Coimbatore"
+      "Tiruppur"
     ]
   },
   {
@@ -30490,7 +30492,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Kancheepuram"
+      "Chengalpattu"
     ]
   },
   {
@@ -30509,7 +30511,9 @@
     "name": "Chepauk-Thiruvallikeni",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Chennai"
+    ]
   },
   {
     "id": "ac-tn-cheyyar",
@@ -30528,7 +30532,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Kancheepuram"
+      "Chengalpattu"
     ]
   },
   {
@@ -30547,7 +30551,9 @@
     "name": "Coimbatore North",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Coimbatore"
+    ]
   },
   {
     "id": "ac-tn-coimbatore-south",
@@ -30555,7 +30561,9 @@
     "name": "Coimbatore South",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Coimbatore"
+    ]
   },
   {
     "id": "ac-tn-colachal",
@@ -30563,7 +30571,9 @@
     "name": "Colachal",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Kanniyakumari"
+    ]
   },
   {
     "id": "ac-tn-coonoor",
@@ -30602,7 +30612,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Erode"
+      "Tiruppur"
     ]
   },
   {
@@ -30631,7 +30641,9 @@
     "name": "Dr. Radhakrishnan Nagar",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Chennai"
+    ]
   },
   {
     "id": "ac-tn-edappadi",
@@ -30659,7 +30671,9 @@
     "name": "Erode East",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Erode"
+    ]
   },
   {
     "id": "ac-tn-erode-west",
@@ -30667,7 +30681,9 @@
     "name": "Erode West",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Erode"
+    ]
   },
   {
     "id": "ac-tn-gandarvakkottai",
@@ -30675,7 +30691,9 @@
     "name": "Gandarvakkottai",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Pudukkottai"
+    ]
   },
   {
     "id": "ac-tn-gangavalli",
@@ -30693,7 +30711,9 @@
     "name": "Gingee",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Viluppuram"
+    ]
   },
   {
     "id": "ac-tn-gobichettipalayam",
@@ -30721,7 +30741,9 @@
     "name": "Gudiyatham",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Vellore"
+    ]
   },
   {
     "id": "ac-tn-gummidipoondi",
@@ -30770,7 +30792,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Perambalur"
+      "Ariyalur"
     ]
   },
   {
@@ -30780,7 +30802,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Vellore"
+      "Tirupathur"
     ]
   },
   {
@@ -30790,7 +30812,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Tirunelveli"
+      "Tenkasi"
     ]
   },
   {
@@ -30810,7 +30832,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Viluppuram"
+      "Kallakurichi"
     ]
   },
   {
@@ -30830,7 +30852,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Erode"
+      "Tiruppur"
     ]
   },
   {
@@ -30919,7 +30941,9 @@
     "name": "Kilvaithinankuppam",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Vellore"
+    ]
   },
   {
     "id": "ac-tn-kilvelur",
@@ -30928,7 +30952,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam"
+      "Nagapattinam"
     ]
   },
   {
@@ -30958,7 +30982,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -31048,7 +31072,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Coimbatore"
+      "Tiruppur"
     ]
   },
   {
@@ -31118,7 +31142,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Kancheepuram"
+      "Chengalpattu"
     ]
   },
   {
@@ -31188,7 +31212,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam"
+      "Mayiladuthurai"
     ]
   },
   {
@@ -31268,7 +31292,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam"
+      "Nagapattinam"
     ]
   },
   {
@@ -31378,7 +31402,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -31397,7 +31421,9 @@
     "name": "Palacode",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Dharmapuri"
+    ]
   },
   {
     "id": "ac-tn-palani",
@@ -31426,7 +31452,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Coimbatore"
+      "Tiruppur"
     ]
   },
   {
@@ -31436,7 +31462,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Kancheepuram"
+      "Chengalpattu"
     ]
   },
   {
@@ -31465,7 +31491,9 @@
     "name": "Pappireddipatti",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Dharmapuri"
+    ]
   },
   {
     "id": "ac-tn-paramakudi",
@@ -31594,7 +31622,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam"
+      "Mayiladuthurai"
     ]
   },
   {
@@ -31634,7 +31662,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -31654,7 +31682,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Vellore"
+      "Ranipet"
     ]
   },
   {
@@ -31674,7 +31702,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Viluppuram"
+      "Kallakurichi"
     ]
   },
   {
@@ -31703,7 +31731,9 @@
     "name": "Salem North",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Salem"
+    ]
   },
   {
     "id": "ac-tn-salem-south",
@@ -31711,7 +31741,9 @@
     "name": "Salem South",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Salem"
+    ]
   },
   {
     "id": "ac-tn-salem-west",
@@ -31719,7 +31751,9 @@
     "name": "Salem West",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Salem"
+    ]
   },
   {
     "id": "ac-tn-sankarankovil",
@@ -31728,7 +31762,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Tirunelveli"
+      "Tenkasi"
     ]
   },
   {
@@ -31738,7 +31772,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Viluppuram"
+      "Kallakurichi"
     ]
   },
   {
@@ -31758,7 +31792,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -31787,7 +31821,9 @@
     "name": "Sholinganallur",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Chengalpattu"
+    ]
   },
   {
     "id": "ac-tn-sholinghur",
@@ -31795,7 +31831,9 @@
     "name": "Sholinghur",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Ranipet"
+    ]
   },
   {
     "id": "ac-tn-singanallur",
@@ -31814,7 +31852,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam"
+      "Mayiladuthurai"
     ]
   },
   {
@@ -31834,7 +31872,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -31864,7 +31902,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -31874,7 +31912,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -31894,7 +31932,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Kancheepuram"
+      "Chengalpattu"
     ]
   },
   {
@@ -31904,7 +31942,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Tirunelveli"
+      "Tenkasi"
     ]
   },
   {
@@ -31974,7 +32012,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Kancheepuram"
+      "Chengalpattu"
     ]
   },
   {
@@ -32043,7 +32081,9 @@
     "name": "Thiruvottiyur",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Thiruvallur"
+    ]
   },
   {
     "id": "ac-tn-thiyagarayanagar",
@@ -32072,7 +32112,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -32112,7 +32152,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -32121,7 +32161,9 @@
     "name": "Tiruchengode",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Namakkal"
+    ]
   },
   {
     "id": "ac-tn-tiruchirappalli-east",
@@ -32129,7 +32171,9 @@
     "name": "Tiruchirappalli East",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Tiruchirappalli"
+    ]
   },
   {
     "id": "ac-tn-tiruchirappalli-west",
@@ -32137,7 +32181,9 @@
     "name": "Tiruchirappalli West",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Tiruchirappalli"
+    ]
   },
   {
     "id": "ac-tn-tiruchuli",
@@ -32146,7 +32192,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -32175,7 +32221,9 @@
     "name": "Tirupattur",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Tirupathur"
+    ]
   },
   {
     "id": "ac-tn-tiruppattur",
@@ -32193,7 +32241,9 @@
     "name": "Tiruppur North",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Tiruppur"
+    ]
   },
   {
     "id": "ac-tn-tiruppur-south",
@@ -32201,7 +32251,9 @@
     "name": "Tiruppur South",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Tiruppur"
+    ]
   },
   {
     "id": "ac-tn-tiruttani",
@@ -32260,7 +32312,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Coimbatore"
+      "Tiruppur"
     ]
   },
   {
@@ -32269,7 +32321,9 @@
     "name": "Ulundurpet",
     "state": "Tamil Nadu",
     "stateCode": "TN",
-    "districts": []
+    "districts": [
+      "Kallakurichi"
+    ]
   },
   {
     "id": "ac-tn-usilampatti",
@@ -32318,7 +32372,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Viluppuram"
+      "Tiruvannamalai"
     ]
   },
   {
@@ -32328,7 +32382,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Vellore"
+      "Tirupathur"
     ]
   },
   {
@@ -32348,7 +32402,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Tirunelveli"
+      "Tenkasi"
     ]
   },
   {
@@ -32358,7 +32412,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam"
+      "Nagapattinam"
     ]
   },
   {
@@ -32428,7 +32482,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -32478,7 +32532,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -44996,7 +45050,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam",
+      "Nagapattinam",
       "Thanjavur"
     ]
   },
@@ -45007,7 +45061,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Nagappattinam",
+      "Nagapattinam",
       "Thiruvarur"
     ]
   },
@@ -45065,7 +45119,7 @@
     "districts": [
       "Pudukkottai",
       "Ramanathapuram",
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -45108,7 +45162,7 @@
     "stateCode": "TN",
     "districts": [
       "Tirunelveli",
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {
@@ -45150,7 +45204,7 @@
     "state": "Tamil Nadu",
     "stateCode": "TN",
     "districts": [
-      "Thoothukkudi"
+      "Thoothukudi"
     ]
   },
   {
@@ -45224,7 +45278,7 @@
     "stateCode": "TN",
     "districts": [
       "Madurai",
-      "Virudunagar"
+      "Virudhunagar"
     ]
   },
   {

@@ -117,7 +117,7 @@
     "as_of": "2026-08-05",
     "source_url": "https://indianexpress.com/article/cities/lucknow/bsps-lone-up-mla-uma-shankar-singh-dies-after-battle-with-cancer-10819939/",
     "source_name": "The Indian Express - BSP’s lone UP MLA Uma Shankar Singh dies",
-    "retrieved_date": "2026-09-17"
+    "retrieved_date": "2026-09-28"
   },
   {
     "constituencyId": "pc-as-nagaon",
@@ -125,7 +125,7 @@
     "as_of": "2026-03-20",
     "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
     "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
-    "retrieved_date": "2026-09-17"
+    "retrieved_date": "2026-09-28"
   },
   {
     "constituencyId": "pc-ml-shillong",
@@ -133,7 +133,7 @@
     "as_of": "2026-02-19",
     "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
     "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
-    "retrieved_date": "2026-08-19"
+    "retrieved_date": "2026-09-28"
   },
   {
     "constituencyId": "pc-wb-basirhat",
@@ -141,7 +141,7 @@
     "as_of": "2024-09-25",
     "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
     "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
-    "retrieved_date": "2026-08-19"
+    "retrieved_date": "2026-09-28"
   },
   {
     "constituencyId": "ac-py-thattanchavady",
@@ -196,5 +196,21 @@
     "source_url": "https://ceogoa.nic.in/PDF/byeelection2026/Notification-ECI-dated-08-04-2026.pdf",
     "source_name": "Election Commission of India - Notification No. 100/GOA-LA/1/2026 dated 8 April 2026, rescinding the Ponda bye-election (via CEO Goa)",
     "retrieved_date": "2026-09-17"
+  },
+  {
+    "constituencyId": "ac-up-fatehabad",
+    "value": "Chhotelal Verma, the member for Fatehabad (Assembly constituency 93), died on 24 September 2026. No by-election had been announced when this page was last checked.",
+    "as_of": "2026-09-24",
+    "source_url": "https://theprint.in/india/bjp-mla-passes-away-chief-minister-adityanath-expresses-grief/3052811/",
+    "source_name": "ThePrint (PTI) - BJP MLA passes away, Chief Minister Adityanath expresses grief (24 September 2026)",
+    "retrieved_date": "2026-09-28"
+  },
+  {
+    "constituencyId": "ac-tg-khairatabad",
+    "value": "Danam Nagender, elected from Khairatabad in 2023, was held disqualified under the Tenth Schedule by the High Court for the State of Telangana on 18 September 2026, with effect from 23 April 2024; the Supreme Court upheld the ruling on 24 September 2026. The Assembly Secretary has notified the seat as vacant since 23 April 2024. No by-election had been announced when this page was last checked.",
+    "as_of": "2024-04-23",
+    "source_url": "https://telanganatoday.com/supreme-court-upholds-danam-nagenders-disqualification-as-mla",
+    "source_name": "Telangana Today - Supreme Court upholds Danam Nagender's disqualification as MLA (24 September 2026)",
+    "retrieved_date": "2026-09-28"
   }
 ]

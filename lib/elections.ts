@@ -36,11 +36,21 @@ const DAY = 24 * HOUR;
  * poll closes, through to 30 minutes after it closes.
  *
  * This is derived from the cited schedule, never hardcoded, so it is correct
- * for every future election without a code change.
+ * for every future election without a code change. While a seat's closing hour
+ * is still un-notified, the window opens 48 hours before the EARLIEST hour it
+ * could be (`pollCloseEarliest`), so it covers whichever hour is fixed.
  */
 export function ratingLockWindow(ev: ElectionEvent): { from: number; to: number } {
   const close = istInstant(ev.schedule.pollDate, ev.schedule.pollClose);
-  return { from: close - 48 * HOUR, to: close + 30 * 60_000 };
+  return { from: silenceStart(ev), to: close + 30 * 60_000 };
+}
+
+/** 48 hours before the earliest hour the poll may close. */
+function silenceStart(ev: ElectionEvent): number {
+  const s = ev.schedule;
+  const close = istInstant(s.pollDate, s.pollClose);
+  const earliest = s.pollCloseEarliest ? istInstant(s.pollDate, s.pollCloseEarliest) : close;
+  return Math.min(close, earliest) - 48 * HOUR;
 }
 
 /** Is candidate rating legally locked right now? Enforced server-side in
@@ -81,7 +91,7 @@ export function phaseOf(ev: ElectionEvent, now = Date.now()): ElectionPhase {
   if (now >= countStart) return 'counting';
   if (now > pollClose) return 'awaiting-count';
   if (now >= pollOpen) return 'polling';
-  if (now >= pollClose - 48 * HOUR) return 'silence';
+  if (now >= silenceStart(ev)) return 'silence';
   // The field is only final once withdrawals close; before that the candidate
   // list on screen can still change.
   if (now > istInstant(s.withdrawalLast, '23:59')) return 'campaign';

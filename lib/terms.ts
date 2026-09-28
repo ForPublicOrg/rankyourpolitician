@@ -9,13 +9,15 @@ export function legislatureTerms(): LegislatureTermsFile {
 }
 
 function parseLegacyUpperHouseTerm(summary?: string): Pick<LegislatureTerm, 'from' | 'to'> | null {
-  const match = summary?.match(/Current term:\s*(\d{2}-[A-Za-z]{3}-\d{4})\s+to\s+(\d{2}-[A-Za-z]{3}-\d{4})/);
+  // Days are written both padded and not ("1-Dec-2020", "09-Nov-2026"); a
+  // two-digit-only pattern silently dropped the term of 41 council members.
+  const match = summary?.match(/Current term:\s*(\d{1,2}-[A-Za-z]{3}-\d{4})\s+to\s+(\d{1,2}-[A-Za-z]{3}-\d{4})/);
   if (!match) return null;
   const toIso = (value: string) => {
     const [day, month, year] = value.split('-');
     const monthNumber = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
       .indexOf(month.toLowerCase()) + 1;
-    return monthNumber ? `${year}-${String(monthNumber).padStart(2, '0')}-${day}` : value;
+    return monthNumber ? `${year}-${String(monthNumber).padStart(2, '0')}-${day.padStart(2, '0')}` : value;
   };
   return { from: toIso(match[1]), to: toIso(match[2]) };
 }

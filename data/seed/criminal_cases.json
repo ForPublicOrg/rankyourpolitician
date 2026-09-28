@@ -105418,47 +105418,6 @@
     "as_of": "2024 election affidavit"
   },
   {
-    "politician_id": "khairatabad-ac-tg-danam-nagender",
-    "declared_total": 1,
-    "charges": [
-      {
-        "count": 1,
-        "description": "Punishment for criminal intimidation",
-        "law": "IPC",
-        "section": "506"
-      },
-      {
-        "count": 1,
-        "description": "Punishment for voluntarily causing hurt",
-        "law": "IPC",
-        "section": "323"
-      },
-      {
-        "count": 1,
-        "description": "Acts done by several persons in furtherance of common intention",
-        "law": "IPC",
-        "section": "34"
-      }
-    ],
-    "cases": [
-      {
-        "status": "convicted",
-        "status_label": "Convicted",
-        "case_no": "CC.No.120/2020",
-        "court": "Honble Special Sessions Judge For Trial of Criminal Cases Relating to Elected MP & MLA of the State of Telangana, Hyderabad",
-        "sections": "323, 506, 34",
-        "convicted_date": "07 Jul 2021",
-        "appeal_filed": "Yes",
-        "appeal_details": "CRLA No.279/2021 Pending on the file of Honble High Court of Telangana, Hyderabad. The Honble High Court in I.A. No.1 of 2021 in CRLA No.279 of 2021 suspended the sentence imposed by Trial court till the disposal of the CRLA No.279/2021, Vide its orde dt.28/07/2021. The Appeal is pending for disposal before the Honble High Court",
-        "law": "IPC"
-      }
-    ],
-    "source_url": "https://www.myneta.info/telangana2023/candidate.php?candidate_id=127",
-    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2023 assembly election affidavit"
-  },
-  {
     "politician_id": "khajani-ac-up-sriram-chauhan",
     "declared_total": 1,
     "charges": [
