@@ -1829,5 +1829,11 @@
       "municipal_council": "Municipal Council",
       "municipal_board": "Municipal Board"
     }
+  },
+  "langPrompt": {
+    "title": "Choose your language",
+    "hint": "You can change it later from the language button at the top.",
+    "keep": "Continue in English",
+    "close": "Close"
   }
 }

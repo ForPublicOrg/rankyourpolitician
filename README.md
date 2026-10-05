@@ -301,6 +301,10 @@ Practical checklist:
 keys; missing keys fall back to English). The switcher lists all 22 Eighth-Schedule languages +
 English. Translation PRs are a great first contribution.
 
+A first-time visitor is asked once which language to read in (`components/LanguagePrompt.tsx`).
+The check runs in the browser after hydration, so pages stay static, and the answer is the same
+`lang` cookie the switcher sets. The dialog is a lazy chunk returning visitors never download.
+
 ## Legal notes for operators (India)
 
 Anyone running a public deployment of this politically sensitive, public-figure site should

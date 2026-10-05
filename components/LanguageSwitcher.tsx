@@ -2,18 +2,45 @@
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { clsx } from 'clsx';
-import { LOCALES } from '@/lib/i18n/locales';
+import { LOCALES, LOCALE_MAP } from '@/lib/i18n/locales';
 import { useI18n } from '@/lib/i18n/provider';
 
 const ONE_YEAR = 60 * 60 * 24 * 365;
 
-/** Persist the choice and re-render server components in the new locale.
- *  Shared by the header switcher and the home-page hint strip. */
-function applyLocale(code: string) {
+/** Persist a language choice. The `lang` cookie is what middleware.ts routes
+ *  on; localStorage is the backup that outlives it (Safari expires cookies set
+ *  from script after 7 days). Shared by the header switcher, the home-page
+ *  hint strip and the first-visit prompt. */
+export function rememberLocale(code: string) {
   document.cookie = `lang=${code}; path=/; max-age=${ONE_YEAR}; samesite=lax`;
   try {
     localStorage.setItem('lang', code);
   } catch {}
+}
+
+/** The visitor's remembered choice, from the cookie and from its localStorage
+ *  backup. Both null = never chosen, i.e. a first visit. */
+export function rememberedLocale(): { cookie: string | null; stored: string | null } {
+  const known = (code: string | null | undefined) => {
+    const c = code?.toLowerCase();
+    return c && LOCALE_MAP[c] ? c : null;
+  };
+  let stored: string | null = null;
+  try {
+    stored = localStorage.getItem('lang');
+  } catch {}
+  return { cookie: known(document.cookie.match(/(?:^|;\s*)lang=([^;]*)/)?.[1]), stored: known(stored) };
+}
+
+/** Re-render the current page in the language just remembered. A clean URL is
+ *  rewritten from the cookie by middleware, so refreshing the server
+ *  components is enough; a locale-prefixed URL (/hi/...) pins its own
+ *  language whatever the cookie says, so swap it for the clean one. */
+export function showLocale(refresh: () => void) {
+  const { pathname, search, hash } = window.location;
+  const first = pathname.split('/')[1];
+  if (LOCALE_MAP[first]) window.location.replace((pathname.slice(first.length + 1) || '/') + search + hash);
+  else refresh();
 }
 
 /** Close-on-outside-click for a popover. */
@@ -64,9 +91,9 @@ export default function LanguageSwitcher() {
   const ref = useOutsideClose(() => setOpen(false));
 
   function choose(code: string) {
-    applyLocale(code);
+    rememberLocale(code);
     setOpen(false);
-    router.refresh();
+    showLocale(() => router.refresh());
   }
 
   const current = LOCALES.find((l) => l.code === locale) ?? LOCALES[0];
@@ -116,9 +143,9 @@ export function LanguageHint({ className }: { className?: string }) {
   const ref = useOutsideClose(() => setOpen(false));
 
   function choose(code: string) {
-    applyLocale(code);
+    rememberLocale(code);
     setOpen(false);
-    router.refresh();
+    showLocale(() => router.refresh());
   }
 
   // LOCALES is ordered by speaker count (after English), so the first five

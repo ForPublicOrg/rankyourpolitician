@@ -870,3 +870,77 @@ details > summary::-webkit-details-marker {
 :where(.dark) .hover\:bg-accent-ink:hover {
   background-color: rgb(194 65 12);
 }
+
+/* ---------------------------------------------------------------------------
+ * First-visit language prompt (components/LanguagePromptDialog.tsx). A native
+ * <dialog> in the top layer, so it sits above the header, tab bar and ads
+ * without any z-index. A bottom sheet on phones, a centred card from 640px.
+ * ------------------------------------------------------------------------- */
+.lang-prompt {
+  /* Reset the UA dialog box: the panel inside is the visible surface. */
+  margin: auto 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+.lang-prompt::backdrop {
+  background: rgb(10 12 18 / 0.55);
+}
+/* A dark page needs a deeper dim to step back behind the card. */
+.dark .lang-prompt::backdrop {
+  background: rgb(0 0 0 / 0.72);
+}
+.lang-prompt__panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 88vh;
+  max-height: 88dvh;
+  overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.lang-prompt[open] {
+  animation: lang-prompt-sheet 0.38s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+.lang-prompt[open]::backdrop {
+  animation: lang-prompt-fade 0.3s ease-out both;
+}
+@media (min-width: 640px) {
+  .lang-prompt {
+    margin: auto;
+    width: calc(100% - 3rem);
+    max-width: 42rem;
+  }
+  .lang-prompt__panel {
+    max-height: calc(100vh - 4rem);
+    max-height: calc(100dvh - 4rem);
+    border-radius: 1.5rem;
+    padding-bottom: 0;
+  }
+  .lang-prompt[open] {
+    animation-name: lang-prompt-card;
+  }
+}
+/* The global reduced-motion rule does not reach ::backdrop. */
+@media (prefers-reduced-motion: reduce) {
+  .lang-prompt[open]::backdrop {
+    animation: none;
+  }
+}
+@keyframes lang-prompt-sheet {
+  from { transform: translateY(100%); }
+  to { transform: none; }
+}
+@keyframes lang-prompt-card {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes lang-prompt-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

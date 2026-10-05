@@ -6,6 +6,7 @@ import { I18nProvider } from '@/lib/i18n/provider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileTabBar from '@/components/MobileTabBar';
+import LanguagePrompt from '@/components/LanguagePrompt';
 import JsonLd from '@/components/JsonLd';
 import { SITE_URL } from '@/lib/site-url';
 
@@ -147,6 +148,9 @@ export default async function RootLayout({
           </main>
           <Footer />
           <MobileTabBar />
+          {/* Asks a first-time visitor for their language. Client-only and
+              cookie-free on the server, so pages stay static. */}
+          <LanguagePrompt />
         </I18nProvider>
       </body>
     </html>
