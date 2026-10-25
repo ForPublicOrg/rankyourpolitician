@@ -161,7 +161,7 @@
     "source_url": "https://sec.assam.gov.in//uploads/press-release/SECAssam-Press-Release-2026-09-02-15-17-37.pdf",
     "source_name": "Assam State Election Commission - Press Release No. SEC.72/2022/245 (2 September 2026): Silchar Municipal Corporation poll on 3 October 2026, counting 6 October",
     "retrieved_date": "2026-09-28",
-    "status_note": "The corporation has no elected council or Mayor yet; officials and an Executive Officer run municipal affairs. Its first election is scheduled for 3 October 2026, with counting on 6 October 2026."
+    "status_note": "No Mayor is in office yet. The corporation's first election was scheduled for 3 October 2026, with counting on 6 October 2026."
   },
   {
     "id": "br-bhagalpur",
@@ -663,10 +663,11 @@
       "elected_by": "direct"
     },
     "commissioner": {
-      "name": "A. Mona Srinivas",
-      "source_url": "https://en.wikipedia.org/wiki/Faridabad_Municipal_Corporation",
-      "source_name": "Faridabad Municipal Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
+      "name": "Dhirendra Khadgata",
+      "source_url": "https://www.newkerala.com/news/a/haryana-orders-major-iashcs-reshuffle-15-officers-transferred-955.htm",
+      "source_name": "IANS via NewKerala - Haryana orders IAS/HCS reshuffle (July 2026): Dhirendra Khadgata posted Commissioner, Municipal Corporation, Faridabad",
+      "retrieved_date": "2026-10-25",
+      "since": "2026-07-04",
       "title": "Municipal Commissioner"
     }
   },
@@ -761,10 +762,11 @@
     "source_name": "Srinagar Municipal Corporation",
     "retrieved_date": "2026-09-10",
     "commissioner": {
-      "name": "Faz Lul Haseeb",
-      "source_url": "https://smcsrinagar.jk.gov.in/",
-      "source_name": "Srinagar Municipal Corporation (official site, Commissioner's Message)",
-      "retrieved_date": "2026-09-09",
+      "name": "Dr. Basharat Qayoom",
+      "source_url": "https://kashmirdespatch.com/?p=165198",
+      "source_name": "Kashmir Despatch - Dr. Basharat Qayoom, IAS, assumes charge as Commissioner SMC (12 October 2026)",
+      "retrieved_date": "2026-10-25",
+      "since": "2026-10-12",
       "title": "Municipal Commissioner"
     }
   },
@@ -1280,6 +1282,14 @@
       "party": "Bharatiya Janata Party",
       "since": "2022-07-08",
       "elected_by": "direct"
+    },
+    "commissioner": {
+      "name": "Ramprakash Ahirwar",
+      "source_url": "https://egov.eletsonline.com/2026/10/mp-transfers-4-ias-officers-ramprakash-ahirwar-gets-bhopal-municipal-commissioner-post/",
+      "source_name": "Elets eGov - MP transfers 4 IAS officers; Ramprakash Ahirwar gets Bhopal Municipal Commissioner post (October 2026)",
+      "retrieved_date": "2026-10-25",
+      "since": "2026-10-18",
+      "title": "Municipal Commissioner"
     }
   },
   {
@@ -1354,10 +1364,11 @@
       "elected_by": "direct"
     },
     "commissioner": {
-      "name": "Swapnil Wankhede",
-      "source_url": "https://en.wikipedia.org/wiki/Jabalpur_Municipal_Corporation",
-      "source_name": "Jabalpur Municipal Corporation - Wikipedia",
-      "retrieved_date": "2026-09-09",
+      "name": "Agrim Kumar",
+      "source_url": "https://egov.eletsonline.com/2026/10/mp-transfers-4-ias-officers-ramprakash-ahirwar-gets-bhopal-municipal-commissioner-post/",
+      "source_name": "Elets eGov - MP transfers 4 IAS officers (October 2026): Agrim Kumar posted Jabalpur Municipal Commissioner",
+      "retrieved_date": "2026-10-25",
+      "since": "2026-10-18",
       "title": "Municipal Commissioner"
     }
   },

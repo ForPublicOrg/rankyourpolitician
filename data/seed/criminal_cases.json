@@ -52692,27 +52692,6 @@
     "as_of": "2024 assembly election affidavit"
   },
   {
-    "politician_id": "davanagere-north-ac-ka-s-s-mallikarjun",
-    "declared_total": 1,
-    "charges": [],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "PCR No.933/2022",
-        "case_no": "Crl.Misc No.1460/2022",
-        "court": "II Additional District & Sessions judge at Davanagere",
-        "other_sections": "Sec.9,40,42,42(a),44,48(a),51,57 of Wild life (Protection) Act 1972 and Sec.200 of Cr.PC",
-        "charges_framed": "No",
-        "appeal_filed": "No"
-      }
-    ],
-    "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
-    "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2023 assembly election affidavit"
-  },
-  {
     "politician_id": "debra-ac-wb-subhasish-om",
     "declared_total": 1,
     "charges": [
@@ -225479,5 +225458,225 @@
     "source_name": "MyNeta / ADR - 2022 assembly affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2022 assembly election affidavit"
+  },
+  {
+    "politician_id": "thattanchavady-ac-py-ashok-anand",
+    "declared_total": 2,
+    "charges": [
+      {
+        "count": 1,
+        "description": "Punishment for wrongful restraint",
+        "law": "IPC",
+        "section": "341"
+      },
+      {
+        "count": 1,
+        "description": "Obstructing public servant in discharge of public functions",
+        "law": "IPC",
+        "section": "186"
+      },
+      {
+        "count": 1,
+        "description": "Mischief causing damage to the amount of fifty rupees",
+        "law": "IPC",
+        "section": "427"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "38/2018 - dated 1.3.2018, Dhanvantri Nagar Police station, Dhanvantri Nagar, Puducherry",
+        "case_no": "STC 368/2018",
+        "court": "The Honble Judicial Magistrate at Puducherry",
+        "law": "IPC",
+        "sections": "341, 186, 427",
+        "charges_framed": "Yes",
+        "framed_date": "14 Jun 2018",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "50/2021 - dated 6.4.2021, Dhanvantri Nagar Police station, Dhanvantri Nagar, Puducherry",
+        "case_no": "CC 1337/2025",
+        "court": "The Honble Judicial Magistrate at Puducherry",
+        "law": "IPC",
+        "other_sections": "Section- 130 of representation of people act 1951",
+        "charges_framed": "Yes",
+        "framed_date": "12 Jul 2025",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=367",
+    "source_name": "MyNeta / ADR - Thattanchavady by-election 06-10-2026",
+    "retrieved_date": "2026-10-25",
+    "as_of": "Thattanchavady by-election 06-10-2026"
+  },
+  {
+    "politician_id": "rejinagar-ac-wb-shankharavh-sarkar",
+    "declared_total": 6,
+    "charges": [
+      {
+        "count": 3,
+        "description": "Punishment for criminal intimidation",
+        "law": "IPC",
+        "section": "506"
+      },
+      {
+        "count": 2,
+        "description": "Voluntarily causing hurt to deter public servant from his duty",
+        "law": "IPC",
+        "section": "332"
+      },
+      {
+        "count": 1,
+        "description": "Assault or criminal force to woman with intent to outrage her modesty",
+        "law": "IPC",
+        "section": "354"
+      },
+      {
+        "count": 5,
+        "description": "Disobedience to order duly promulgated by public servant",
+        "law": "IPC",
+        "section": "188"
+      },
+      {
+        "count": 3,
+        "description": "Acts done by several persons in furtherance of common intention",
+        "law": "IPC",
+        "section": "34"
+      },
+      {
+        "count": 2,
+        "description": "Assault or criminal force to deter public servant from discharge of his duty",
+        "law": "IPC",
+        "section": "353"
+      },
+      {
+        "count": 2,
+        "description": "Obstructing public servant in discharge of public functions",
+        "law": "IPC",
+        "section": "186"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for wrongful restraint",
+        "law": "IPC",
+        "section": "341"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for criminal trespass",
+        "law": "IPC",
+        "section": "447"
+      },
+      {
+        "count": 1,
+        "description": "Act endangering life or personal safety of others",
+        "law": "IPC",
+        "section": "336"
+      },
+      {
+        "count": 1,
+        "description": "Being hired to take part in an unlawful assembly or riot",
+        "law": "IPC",
+        "section": "158"
+      },
+      {
+        "count": 1,
+        "description": "Intentional insult with intent to provoke breach of the peace",
+        "law": "IPC",
+        "section": "504"
+      },
+      {
+        "count": 1,
+        "description": "Punishment for voluntarily causing hurt",
+        "law": "IPC",
+        "section": "323"
+      },
+      {
+        "count": 1,
+        "description": "Threat of injury to public servant",
+        "law": "IPC",
+        "section": "189"
+      }
+    ],
+    "cases": [
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Berhampore PS Case No. 576/24, Dated 18/04/2024",
+        "case_no": "G.R. 1921/24",
+        "court": "LD 3rd Court Berhampore",
+        "law": "IPC",
+        "sections": "341, 323, 504, 506, 34",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Berhampore PS Case No. 1107/22, Dated 25/08/2022",
+        "case_no": "G.R. 3667/22",
+        "court": "G.R.O Berhampore",
+        "law": "IPC",
+        "sections": "188",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Beldanga PS Case No. 1050/2022, Dated 12/08/2022",
+        "case_no": "G.R. 3450/22",
+        "court": "G.R.O Berhampore",
+        "law": "IPC",
+        "sections": "188",
+        "other_sections": "Section 30P. Act.",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Berhampore PS Case No. 551/2022, Dated 25/04/2022",
+        "case_no": "G.R. 1706/22",
+        "court": "LD. J.M. 1st Court Berhampore",
+        "law": "IPC",
+        "sections": "188",
+        "other_sections": "Section 30P. Act.",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Burwan P.S. Dated 25/04/2022",
+        "case_no": "G.R. 701/2023",
+        "court": "A.C.J.M. at Kandi",
+        "law": "IPC",
+        "sections": "158, 186, 188, 336, 353, 332, 447, 354, 506, 34",
+        "other_sections": "Section 18 Highways Act and Section 34P. Act.",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      },
+      {
+        "status": "pending",
+        "status_label": "Pending",
+        "fir_no": "Berhampore PS Case No. 47/2022, Dated 06/01/2022",
+        "case_no": "G.R. 109/22",
+        "court": "G.R.O Berhampore",
+        "law": "IPC",
+        "sections": "186, 188, 189, 332, 353, 506, 34",
+        "other_sections": "Section 51(B) DM Act.",
+        "charges_framed": "No",
+        "appeal_filed": "No"
+      }
+    ],
+    "source_url": "https://www.myneta.info/WestBengal2026/candidate.php?candidate_id=2979",
+    "source_name": "MyNeta / ADR - Rejinagar by-election 06-10-2026",
+    "retrieved_date": "2026-10-25",
+    "as_of": "Rejinagar by-election 06-10-2026"
   }
 ]

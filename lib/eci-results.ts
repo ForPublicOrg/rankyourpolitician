@@ -89,10 +89,12 @@ export interface ParsedConstituency {
 /** ECI's candidate view is the authoritative declaration surface: it changes
  * the leading candidate's status from "leading" to "won". The table view is
  * deliberately not enough -- all EVM rounds can be present while the Returning
- * Officer is still completing the formal declaration. */
+ * Officer is still completing the formal declaration. The AC microsite puts
+ * "won" in a `captli` div; the PC one (Oct 2026) uses an inline-styled div -
+ * both sit inside `status won`. */
 export function parseWinnerDeclaration(html: string): string | null {
   const match = html.match(
-    /class\s*=\s*['"][^'"]*\bcaptli\b[^'"]*['"][^>]*>\s*won\s*<\/div>[\s\S]{0,1400}?<h5[^>]*>([\s\S]*?)<\/h5>/i,
+    /class\s*=\s*['"][^'"]*\bstatus\s+won\b[^'"]*['"][^>]*>\s*<div[^>]*>\s*won\s*<\/div>[\s\S]{0,1400}?<h5[^>]*>([\s\S]*?)<\/h5>/i,
   );
   return match ? text(match[1]) || null : null;
 }

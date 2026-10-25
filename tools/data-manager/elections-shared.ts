@@ -138,6 +138,7 @@ export const EVENTS: EventSpec[] = [
         countingDate: '2026-10-09',
         completeBy: '2026-10-11',
       },
+      results_base: 'https://results.eci.gov.in/ResultAcByeOct2026',
       affidavit_url:
         'https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63',
       source_url: 'https://www.eci.gov.in/bye-elections',
@@ -175,6 +176,7 @@ export const EVENTS: EventSpec[] = [
         countingDate: '2026-10-09',
         completeBy: '2026-10-11',
       },
+      results_base: 'https://results.eci.gov.in/ResultPcByeOct2026',
       affidavit_url:
         'https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-PC-BYE-2-64&election=34-PC-BYE-2-64',
       source_url: 'https://www.eci.gov.in/bye-elections',

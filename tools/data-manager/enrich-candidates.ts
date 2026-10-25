@@ -66,6 +66,11 @@ const CONCURRENCY = 6; // MyNeta is a small non-profit site - stay gentle
  *   BR  Bihar2025          constituency_id=252  BANKIPUR : BYE ELECTION ON 30-07-2026
  *   GJ  Gujarat2022        constituency_id=618  MANJALPUR : BYE ELECTION ON 30-07-2026
  *   MP  MadhyaPradesh2023  constituency_id=234  DATIA : BYE ELECTION ON 30-07-2026
+ * and against the October 2026 by-polls (index pages read 25 Oct 2026):
+ *   TN  TamilNadu2026      MADURANTAKAM (SC), DHARAPURAM (SC) : BYE ELECTION ON 06-10-2026
+ *   WB  WestBengal2026     REJINAGAR, NANDIGRAM : BYE ELECTION ON 06-10-2026
+ *   PY  Puducherry2026     THATTANCHAVADY : BYE ELECTION ON 06-10-2026
+ *   Lok Sabha by-polls     LokSabha2024  NAGAON : BYE ELECTION ON 06-10-2026
  *
  * A state whose folder has NOT been confirmed is deliberately absent here. Its
  * seats are then reported unresolved, which is loud and harmless; a guessed slug
@@ -75,7 +80,13 @@ const MYNETA_SLUG: Record<string, string> = {
   BR: 'Bihar2025',
   GJ: 'Gujarat2022',
   MP: 'MadhyaPradesh2023',
+  TN: 'TamilNadu2026',
+  WB: 'WestBengal2026',
+  PY: 'Puducherry2026',
 };
+
+/** Lok Sabha by-polls are filed under the last general election, not a state. */
+const MYNETA_LOK_SABHA = 'LokSabha2024';
 
 /** '2026-07-30' -> '30-07-2026', the form MyNeta prints in a page title. */
 const ddmmyyyy = (iso: string) => iso.split('-').reverse().join('-');
@@ -290,7 +301,7 @@ interface SeatReport {
 async function enrichSeat(ev: ElectionEvent, seat: ElectionSeat): Promise<SeatReport> {
   const notes: string[] = [];
   const where = `${seat.constituencyName} (${seat.stateCode})`;
-  const slug = MYNETA_SLUG[seat.stateCode];
+  const slug = ev.kind === 'lok-sabha-bye' ? MYNETA_LOK_SABHA : MYNETA_SLUG[seat.stateCode];
   if (!slug) {
     return { line: `  ✗ ${where}: no confirmed MyNeta folder for this state - nothing written`, notes };
   }

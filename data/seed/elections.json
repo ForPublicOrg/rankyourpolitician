@@ -16,6 +16,7 @@
       "countingDate": "2026-10-09",
       "completeBy": "2026-10-11"
     },
+    "results_base": "https://results.eci.gov.in/ResultAcByeOct2026",
     "affidavit_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
     "source_url": "https://www.eci.gov.in/bye-elections",
     "source_name": "Election Commission of India - Schedule for bye-elections to 05 (Five) Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 (One) Parliamentary Constituency of Assam (Press Note ECI/PN/114/2026)",
@@ -194,7 +195,8 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-09-28"
+            "retrieved_date": "2026-09-28",
+            "politicianId": "madurantakam-ac-tn-k-maragatham-kumaravel"
           },
           {
             "slug": "kayalvizhi",
@@ -676,7 +678,270 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-09-28"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-10-25",
+          "winner_slug": "k-maragatham-kumaravel",
+          "margin": 20040,
+          "total_votes": 185292,
+          "rows": [
+            {
+              "name": "K.MARAGATHAM KUMARAVEL",
+              "party": "Tamilaga Vettri Kazhagam",
+              "evm_votes": 73911,
+              "postal_votes": 137,
+              "total_votes": 74048,
+              "vote_share_pct": 39.96,
+              "candidateSlug": "k-maragatham-kumaravel"
+            },
+            {
+              "name": "I.PARANTHAMEN",
+              "party": "Dravida Munnetra Kazhagam",
+              "evm_votes": 53650,
+              "postal_votes": 358,
+              "total_votes": 54008,
+              "vote_share_pct": 29.15,
+              "candidateSlug": "i-paranthamen"
+            },
+            {
+              "name": "S.KANITHASAMPATH",
+              "party": "All India Anna Dravida Munnetra Kazhagam",
+              "evm_votes": 47128,
+              "postal_votes": 322,
+              "total_votes": 47450,
+              "vote_share_pct": 25.61,
+              "candidateSlug": "s-kanitha-sampath"
+            },
+            {
+              "name": "G.JANAKIRAMAN",
+              "party": "Naam Tamilar Katchi",
+              "evm_votes": 2709,
+              "postal_votes": 0,
+              "total_votes": 2709,
+              "vote_share_pct": 1.46,
+              "candidateSlug": "g-janakiraman"
+            },
+            {
+              "name": "SUGANTHI.P",
+              "party": "Communist Party of India (Marxist)",
+              "evm_votes": 1977,
+              "postal_votes": 9,
+              "total_votes": 1986,
+              "vote_share_pct": 1.07,
+              "candidateSlug": "suganthi-p"
+            },
+            {
+              "name": "KRISHNAKANTH.E",
+              "party": "Independent",
+              "evm_votes": 990,
+              "postal_votes": 14,
+              "total_votes": 1004,
+              "vote_share_pct": 0.54,
+              "candidateSlug": "krishnakanth-e"
+            },
+            {
+              "name": "P.N.R.BASKARAN",
+              "party": "Independent",
+              "evm_votes": 497,
+              "postal_votes": 0,
+              "total_votes": 497,
+              "vote_share_pct": 0.27,
+              "candidateSlug": "p-n-r-baskaran"
+            },
+            {
+              "name": "NAVINDAR.V",
+              "party": "Independent",
+              "evm_votes": 410,
+              "postal_votes": 0,
+              "total_votes": 410,
+              "vote_share_pct": 0.22,
+              "candidateSlug": "navindar-v"
+            },
+            {
+              "name": "RAJAMANI",
+              "party": "Independent",
+              "evm_votes": 350,
+              "postal_votes": 3,
+              "total_votes": 353,
+              "vote_share_pct": 0.19,
+              "candidateSlug": "rajamani"
+            },
+            {
+              "name": "KAYALVIZHI",
+              "party": "Independent",
+              "evm_votes": 348,
+              "postal_votes": 1,
+              "total_votes": 349,
+              "vote_share_pct": 0.19,
+              "candidateSlug": "kayalvizhi"
+            },
+            {
+              "name": "EZHIL.E",
+              "party": "Independent",
+              "evm_votes": 265,
+              "postal_votes": 2,
+              "total_votes": 267,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "ezhil-e"
+            },
+            {
+              "name": "M.MANOKAR",
+              "party": "Independent",
+              "evm_votes": 236,
+              "postal_votes": 2,
+              "total_votes": 238,
+              "vote_share_pct": 0.13,
+              "candidateSlug": "m-manokar"
+            },
+            {
+              "name": "K.ELAIYARASU",
+              "party": "Independent",
+              "evm_votes": 216,
+              "postal_votes": 0,
+              "total_votes": 216,
+              "vote_share_pct": 0.12,
+              "candidateSlug": "k-elaiyarasu"
+            },
+            {
+              "name": "RANJITHAM.M",
+              "party": "Independent",
+              "evm_votes": 154,
+              "postal_votes": 0,
+              "total_votes": 154,
+              "vote_share_pct": 0.08,
+              "candidateSlug": "ranjitham-m"
+            },
+            {
+              "name": "N.SATHIS KUMAR",
+              "party": "Independent",
+              "evm_votes": 137,
+              "postal_votes": 6,
+              "total_votes": 143,
+              "vote_share_pct": 0.08,
+              "candidateSlug": "n-sathishkumar"
+            },
+            {
+              "name": "K.BHUVANESWARI",
+              "party": "Anaithinthiya Anna Dravida Makkal Seyal katchi",
+              "evm_votes": 111,
+              "postal_votes": 1,
+              "total_votes": 112,
+              "vote_share_pct": 0.06,
+              "candidateSlug": "k-bhuvaneswari"
+            },
+            {
+              "name": "DR.G.MOORTHY",
+              "party": "Independent",
+              "evm_votes": 112,
+              "postal_votes": 0,
+              "total_votes": 112,
+              "vote_share_pct": 0.06,
+              "candidateSlug": "g-moorthy"
+            },
+            {
+              "name": "LOGESH.K",
+              "party": "Independent",
+              "evm_votes": 91,
+              "postal_votes": 0,
+              "total_votes": 91,
+              "vote_share_pct": 0.05,
+              "candidateSlug": "logesh-k"
+            },
+            {
+              "name": "S.MURUGAN",
+              "party": "Independent",
+              "evm_votes": 86,
+              "postal_votes": 0,
+              "total_votes": 86,
+              "vote_share_pct": 0.05,
+              "candidateSlug": "s-murugan"
+            },
+            {
+              "name": "M.KADIRVEL",
+              "party": "Independent",
+              "evm_votes": 78,
+              "postal_votes": 5,
+              "total_votes": 83,
+              "vote_share_pct": 0.04,
+              "candidateSlug": "m-kadirvel"
+            },
+            {
+              "name": "S.ARUMUGAM",
+              "party": "Independent",
+              "evm_votes": 70,
+              "postal_votes": 0,
+              "total_votes": 70,
+              "vote_share_pct": 0.04,
+              "candidateSlug": "s-arumugam"
+            },
+            {
+              "name": "M.JEGAN",
+              "party": "Independent",
+              "evm_votes": 66,
+              "postal_votes": 1,
+              "total_votes": 67,
+              "vote_share_pct": 0.04,
+              "candidateSlug": "m-jegan"
+            },
+            {
+              "name": "G.RAJASEKAR",
+              "party": "Desiya Makkal Sakthi Katchi",
+              "evm_votes": 52,
+              "postal_votes": 0,
+              "total_votes": 52,
+              "vote_share_pct": 0.03,
+              "candidateSlug": "g-rajasekar"
+            },
+            {
+              "name": "J.RAVIKUMAR",
+              "party": "Republican Party of India (Sivaraj)",
+              "evm_votes": 40,
+              "postal_votes": 2,
+              "total_votes": 42,
+              "vote_share_pct": 0.02,
+              "candidateSlug": "j-ravikumar"
+            },
+            {
+              "name": "V.MUTHUSELVAM",
+              "party": "Anti Corruption Dynamic Party",
+              "evm_votes": 39,
+              "postal_votes": 0,
+              "total_votes": 39,
+              "vote_share_pct": 0.02,
+              "candidateSlug": "v-muthuselvam"
+            },
+            {
+              "name": "M.G.RAMU",
+              "party": "Jebamani Janata",
+              "evm_votes": 28,
+              "postal_votes": 0,
+              "total_votes": 28,
+              "vote_share_pct": 0.02,
+              "candidateSlug": "m-g-ramu"
+            },
+            {
+              "name": "K.ARUMUGAM",
+              "party": "Independent",
+              "evm_votes": 25,
+              "postal_votes": 1,
+              "total_votes": 26,
+              "vote_share_pct": 0.01,
+              "candidateSlug": "k-arumugam"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 652,
+              "postal_votes": 0,
+              "total_votes": 652,
+              "vote_share_pct": 0.35,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-S2235.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-10-25"
+        }
       },
       {
         "slug": "dharapuram-tn-2026-10",
@@ -1027,7 +1292,8 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-09-28"
+            "retrieved_date": "2026-09-28",
+            "politicianId": "dharapuram-ac-tn-p-sathyabama"
           },
           {
             "slug": "suganya-s",
@@ -1316,7 +1582,225 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-09-28"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-10-25",
+          "winner_slug": "sathyabama-p",
+          "margin": 9471,
+          "total_votes": 180532,
+          "rows": [
+            {
+              "name": "SATHYABAMA.P",
+              "party": "Tamilaga Vettri Kazhagam",
+              "evm_votes": 66586,
+              "postal_votes": 255,
+              "total_votes": 66841,
+              "vote_share_pct": 37.02,
+              "candidateSlug": "sathyabama-p"
+            },
+            {
+              "name": "SUGANYA.S",
+              "party": "Dravida Munnetra Kazhagam",
+              "evm_votes": 56757,
+              "postal_votes": 613,
+              "total_votes": 57370,
+              "vote_share_pct": 31.78,
+              "candidateSlug": "suganya-s"
+            },
+            {
+              "name": "BANUMATHI.K",
+              "party": "All India Anna Dravida Munnetra Kazhagam",
+              "evm_votes": 44874,
+              "postal_votes": 406,
+              "total_votes": 45280,
+              "vote_share_pct": 25.08,
+              "candidateSlug": "banumathi-k"
+            },
+            {
+              "name": "KARTHIKA.M",
+              "party": "Naam Tamilar Katchi",
+              "evm_votes": 5249,
+              "postal_votes": 19,
+              "total_votes": 5268,
+              "vote_share_pct": 2.92,
+              "candidateSlug": "karthika-m"
+            },
+            {
+              "name": "LAKSHMANAN.P",
+              "party": "Communist Party of India",
+              "evm_votes": 1150,
+              "postal_votes": 7,
+              "total_votes": 1157,
+              "vote_share_pct": 0.64,
+              "candidateSlug": "lakshmanan-p"
+            },
+            {
+              "name": "RAJARATHINAM.S",
+              "party": "Independent",
+              "evm_votes": 654,
+              "postal_votes": 1,
+              "total_votes": 655,
+              "vote_share_pct": 0.36,
+              "candidateSlug": "rajarathinam-s"
+            },
+            {
+              "name": "MARIMUTHU.N",
+              "party": "Independent",
+              "evm_votes": 473,
+              "postal_votes": 0,
+              "total_votes": 473,
+              "vote_share_pct": 0.26,
+              "candidateSlug": "marimuthu-n"
+            },
+            {
+              "name": "MUTHUSAMY.P",
+              "party": "Independent",
+              "evm_votes": 436,
+              "postal_votes": 1,
+              "total_votes": 437,
+              "vote_share_pct": 0.24,
+              "candidateSlug": "muthusamy-p"
+            },
+            {
+              "name": "BANUPRIYA.S",
+              "party": "Independent",
+              "evm_votes": 325,
+              "postal_votes": 0,
+              "total_votes": 325,
+              "vote_share_pct": 0.18,
+              "candidateSlug": "banupriya-s"
+            },
+            {
+              "name": "SATHISHKUMAR.M",
+              "party": "Independent",
+              "evm_votes": 269,
+              "postal_votes": 4,
+              "total_votes": 273,
+              "vote_share_pct": 0.15,
+              "candidateSlug": "sathishkumar-m"
+            },
+            {
+              "name": "PERUMAL.R",
+              "party": "Independent",
+              "evm_votes": 253,
+              "postal_votes": 0,
+              "total_votes": 253,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "perumal-r"
+            },
+            {
+              "name": "BANUMATHI.C",
+              "party": "Independent",
+              "evm_votes": 250,
+              "postal_votes": 0,
+              "total_votes": 250,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "banumathi-c"
+            },
+            {
+              "name": "MAHENDRAN.S",
+              "party": "Independent",
+              "evm_votes": 224,
+              "postal_votes": 0,
+              "total_votes": 224,
+              "vote_share_pct": 0.12,
+              "candidateSlug": "mahendran-s"
+            },
+            {
+              "name": "NALLASAMY.P",
+              "party": "Independent",
+              "evm_votes": 195,
+              "postal_votes": 0,
+              "total_votes": 195,
+              "vote_share_pct": 0.11,
+              "candidateSlug": "nallasamy-p"
+            },
+            {
+              "name": "ARULRAJU.G",
+              "party": "Anaithinthiya Anna Dravida Makkal Seyal katchi",
+              "evm_votes": 152,
+              "postal_votes": 2,
+              "total_votes": 154,
+              "vote_share_pct": 0.09,
+              "candidateSlug": "arulraju-g"
+            },
+            {
+              "name": "DHANALAKSHMI.S",
+              "party": "Independent",
+              "evm_votes": 130,
+              "postal_votes": 3,
+              "total_votes": 133,
+              "vote_share_pct": 0.07,
+              "candidateSlug": "dhanalakshmi-s"
+            },
+            {
+              "name": "JOTHEESHWARI.D",
+              "party": "Independent",
+              "evm_votes": 124,
+              "postal_votes": 0,
+              "total_votes": 124,
+              "vote_share_pct": 0.07,
+              "candidateSlug": "jotheeshwari-d"
+            },
+            {
+              "name": "RAJESHWARI.V",
+              "party": "Independent",
+              "evm_votes": 117,
+              "postal_votes": 0,
+              "total_votes": 117,
+              "vote_share_pct": 0.06,
+              "candidateSlug": "rajeshwari-v"
+            },
+            {
+              "name": "SATHYABAMA.M",
+              "party": "Independent",
+              "evm_votes": 100,
+              "postal_votes": 2,
+              "total_votes": 102,
+              "vote_share_pct": 0.06,
+              "candidateSlug": "sathyabama-m"
+            },
+            {
+              "name": "ARUMUGAM.R",
+              "party": "Ganasangam Party of India",
+              "evm_votes": 91,
+              "postal_votes": 0,
+              "total_votes": 91,
+              "vote_share_pct": 0.05,
+              "candidateSlug": "arumugam-r"
+            },
+            {
+              "name": "SASIPRIYA.S",
+              "party": "Independent",
+              "evm_votes": 77,
+              "postal_votes": 0,
+              "total_votes": 77,
+              "vote_share_pct": 0.04,
+              "candidateSlug": "sasipriya-s"
+            },
+            {
+              "name": "MAHESHWARAN.S",
+              "party": "Anti Corruption Dynamic Party",
+              "evm_votes": 56,
+              "postal_votes": 0,
+              "total_votes": 56,
+              "vote_share_pct": 0.03,
+              "candidateSlug": "maheshwaran-s"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 674,
+              "postal_votes": 3,
+              "total_votes": 677,
+              "vote_share_pct": 0.38,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-S22101.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-10-25"
+        }
       },
       {
         "slug": "thattanchavady-py-2026-10",
@@ -1379,7 +1863,8 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-09-28"
+            "retrieved_date": "2026-09-28",
+            "politicianId": "thattanchavady-ac-py-ashok-anand"
           },
           {
             "slug": "e-vinayagam",
@@ -1557,7 +2042,126 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-09-28"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-10-25",
+          "winner_slug": "ashok-anand",
+          "margin": 8482,
+          "total_votes": 21857,
+          "rows": [
+            {
+              "name": "ASHOK ANAND",
+              "party": "All India N.R. Congress",
+              "evm_votes": 13293,
+              "postal_votes": 65,
+              "total_votes": 13358,
+              "vote_share_pct": 61.12,
+              "candidateSlug": "ashok-anand"
+            },
+            {
+              "name": "E. VINAYAGAM",
+              "party": "Indian National Congress",
+              "evm_votes": 4850,
+              "postal_votes": 26,
+              "total_votes": 4876,
+              "vote_share_pct": 22.31,
+              "candidateSlug": "e-vinayagam"
+            },
+            {
+              "name": "K. SETHU @ SETHUSELVAM",
+              "party": "Dravida Munnetra Kazhagam",
+              "evm_votes": 2656,
+              "postal_votes": 8,
+              "total_votes": 2664,
+              "vote_share_pct": 12.19,
+              "candidateSlug": "k-sethu-sethuselvam"
+            },
+            {
+              "name": "A. M. SALEEM",
+              "party": "Communist Party of India",
+              "evm_votes": 310,
+              "postal_votes": 0,
+              "total_votes": 310,
+              "vote_share_pct": 1.42,
+              "candidateSlug": "a-m-saleem"
+            },
+            {
+              "name": "S. KARTHIKUMARI",
+              "party": "Naam Tamilar Katchi",
+              "evm_votes": 171,
+              "postal_votes": 1,
+              "total_votes": 172,
+              "vote_share_pct": 0.79,
+              "candidateSlug": "s-karthikumari"
+            },
+            {
+              "name": "A. RAGU @ RAGUNATHAN",
+              "party": "Independent",
+              "evm_votes": 70,
+              "postal_votes": 0,
+              "total_votes": 70,
+              "vote_share_pct": 0.32,
+              "candidateSlug": "a-ragu-alias-ragunathan"
+            },
+            {
+              "name": "S. VASANTHI",
+              "party": "Independent",
+              "evm_votes": 56,
+              "postal_votes": 1,
+              "total_votes": 57,
+              "vote_share_pct": 0.26,
+              "candidateSlug": "s-vasanthi"
+            },
+            {
+              "name": "KALAIVANAN",
+              "party": "Republican Party of India",
+              "evm_votes": 54,
+              "postal_votes": 0,
+              "total_votes": 54,
+              "vote_share_pct": 0.25,
+              "candidateSlug": "kalaivanan"
+            },
+            {
+              "name": "R. JAYABALAN",
+              "party": "Independent",
+              "evm_votes": 35,
+              "postal_votes": 0,
+              "total_votes": 35,
+              "vote_share_pct": 0.16,
+              "candidateSlug": "r-jayabalan"
+            },
+            {
+              "name": "M. NITHYA",
+              "party": "Independent",
+              "evm_votes": 28,
+              "postal_votes": 0,
+              "total_votes": 28,
+              "vote_share_pct": 0.13,
+              "candidateSlug": "m-nithya"
+            },
+            {
+              "name": "R. SAMINADANE",
+              "party": "Independent",
+              "evm_votes": 8,
+              "postal_votes": 0,
+              "total_votes": 8,
+              "vote_share_pct": 0.04,
+              "candidateSlug": "r-saminadane"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 225,
+              "postal_votes": 0,
+              "total_votes": 225,
+              "vote_share_pct": 1.03,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-U079.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-10-25"
+        }
       },
       {
         "slug": "rejinagar-wb-2026-10",
@@ -1797,7 +2401,8 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-09-28"
+            "retrieved_date": "2026-09-28",
+            "politicianId": "rejinagar-ac-wb-shankharavh-sarkar"
           },
           {
             "slug": "tushar-pandey",
@@ -1815,7 +2420,162 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-09-28"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-10-25",
+          "winner_slug": "shankharavh-sarkar",
+          "margin": 75816,
+          "total_votes": 205747,
+          "rows": [
+            {
+              "name": "SHANKHARAVH SARKAR",
+              "party": "Bharatiya Janata Party",
+              "evm_votes": 129724,
+              "postal_votes": 190,
+              "total_votes": 129914,
+              "vote_share_pct": 63.14,
+              "candidateSlug": "shankharavh-sarkar"
+            },
+            {
+              "name": "GOLAM NABI AZAD (ROBIN)",
+              "party": "Aam Janata Unnayan party",
+              "evm_votes": 54033,
+              "postal_votes": 65,
+              "total_votes": 54098,
+              "vote_share_pct": 26.29,
+              "candidateSlug": "golam-nabi-azad"
+            },
+            {
+              "name": "ABDULLAHIL KAFI",
+              "party": "Indian National Congress",
+              "evm_votes": 6146,
+              "postal_votes": 22,
+              "total_votes": 6168,
+              "vote_share_pct": 3,
+              "candidateSlug": "md-abdullahil-kafi"
+            },
+            {
+              "name": "RABIUL ALAM CHOWDHURY",
+              "party": "Mamata All India Trinamool Congress",
+              "evm_votes": 3833,
+              "postal_votes": 14,
+              "total_votes": 3847,
+              "vote_share_pct": 1.87,
+              "candidateSlug": "rabiul-alam-chowdhury"
+            },
+            {
+              "name": "MD. SAYEED",
+              "party": "Communist Party of India (Marxist)",
+              "evm_votes": 3781,
+              "postal_votes": 16,
+              "total_votes": 3797,
+              "vote_share_pct": 1.85,
+              "candidateSlug": "md-sayeed"
+            },
+            {
+              "name": "SAFIUZZAMAN SAIKH",
+              "party": "Democratic Trinamool Congress",
+              "evm_votes": 2040,
+              "postal_votes": 4,
+              "total_votes": 2044,
+              "vote_share_pct": 0.99,
+              "candidateSlug": "safiuzzaman-saikh"
+            },
+            {
+              "name": "MEHEBUB ALAM",
+              "party": "Independent",
+              "evm_votes": 1373,
+              "postal_votes": 1,
+              "total_votes": 1374,
+              "vote_share_pct": 0.67,
+              "candidateSlug": "mehebub-alam"
+            },
+            {
+              "name": "GOLAK BANERJEE",
+              "party": "Independent",
+              "evm_votes": 1226,
+              "postal_votes": 1,
+              "total_votes": 1227,
+              "vote_share_pct": 0.6,
+              "candidateSlug": "golak-banerjee"
+            },
+            {
+              "name": "MAJIFUL HOQUE",
+              "party": "Independent",
+              "evm_votes": 657,
+              "postal_votes": 0,
+              "total_votes": 657,
+              "vote_share_pct": 0.32,
+              "candidateSlug": "majiful-hoque"
+            },
+            {
+              "name": "IMRAN MALLIK",
+              "party": "Republican Party of India (Athawale)",
+              "evm_votes": 597,
+              "postal_votes": 0,
+              "total_votes": 597,
+              "vote_share_pct": 0.29,
+              "candidateSlug": "imran-mallik"
+            },
+            {
+              "name": "SAHIN SAHA",
+              "party": "Jatiya Unnayan Party",
+              "evm_votes": 376,
+              "postal_votes": 0,
+              "total_votes": 376,
+              "vote_share_pct": 0.18,
+              "candidateSlug": "sahin-saha"
+            },
+            {
+              "name": "BIKASH CHANDRA MISRA",
+              "party": "Revolutionary Socialist Party",
+              "evm_votes": 327,
+              "postal_votes": 2,
+              "total_votes": 329,
+              "vote_share_pct": 0.16,
+              "candidateSlug": "bikash-chandra-misra"
+            },
+            {
+              "name": "JALALUDDIN MIDDER",
+              "party": "Independent",
+              "evm_votes": 291,
+              "postal_votes": 0,
+              "total_votes": 291,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "jalaluddin-midder"
+            },
+            {
+              "name": "SAIFUL ISLAM",
+              "party": "Independent",
+              "evm_votes": 223,
+              "postal_votes": 0,
+              "total_votes": 223,
+              "vote_share_pct": 0.11,
+              "candidateSlug": "saiful-islam"
+            },
+            {
+              "name": "TUSHAR PANDEY",
+              "party": "Independent",
+              "evm_votes": 211,
+              "postal_votes": 0,
+              "total_votes": 211,
+              "vote_share_pct": 0.1,
+              "candidateSlug": "tushar-pandey"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 592,
+              "postal_votes": 2,
+              "total_votes": 594,
+              "vote_share_pct": 0.29,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-S2570.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-10-25"
+        }
       },
       {
         "slug": "nandigram-wb-2026-10",
@@ -1895,7 +2655,8 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-AC-BYE-4-63&election=34-AC-BYE-4-63",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-09-28"
+            "retrieved_date": "2026-09-28",
+            "politicianId": "nandigram-ac-wb-hasi-rani-rath"
           },
           {
             "slug": "milan-pradhan",
@@ -2025,7 +2786,108 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-09-28"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-10-25",
+          "winner_slug": "hasirani-rath",
+          "margin": 122753,
+          "total_votes": 216515,
+          "rows": [
+            {
+              "name": "HASI RANI RATH",
+              "party": "Bharatiya Janata Party",
+              "evm_votes": 163630,
+              "postal_votes": 797,
+              "total_votes": 164427,
+              "vote_share_pct": 75.94,
+              "candidateSlug": "hasirani-rath"
+            },
+            {
+              "name": "MILAN PRADHAN",
+              "party": "Indian National Congress",
+              "evm_votes": 41521,
+              "postal_votes": 153,
+              "total_votes": 41674,
+              "vote_share_pct": 19.25,
+              "candidateSlug": "milan-pradhan"
+            },
+            {
+              "name": "SANTI GOPAL GIRI",
+              "party": "Communist Party of India",
+              "evm_votes": 5750,
+              "postal_votes": 29,
+              "total_votes": 5779,
+              "vote_share_pct": 2.67,
+              "candidateSlug": "santi-gopal-giri"
+            },
+            {
+              "name": "ALI MD SABE MIRAJ KHAN",
+              "party": "All India Secular Front",
+              "evm_votes": 1604,
+              "postal_votes": 3,
+              "total_votes": 1607,
+              "vote_share_pct": 0.74,
+              "candidateSlug": "md-sabe-miraj-ali-khan"
+            },
+            {
+              "name": "EHTESHMUL HAQUE",
+              "party": "Democratic Trinamool Congress",
+              "evm_votes": 845,
+              "postal_votes": 8,
+              "total_votes": 853,
+              "vote_share_pct": 0.39,
+              "candidateSlug": "ehteshmul-haque"
+            },
+            {
+              "name": "SAYED MAHAMMAD",
+              "party": "Independent",
+              "evm_votes": 720,
+              "postal_votes": 3,
+              "total_votes": 723,
+              "vote_share_pct": 0.33,
+              "candidateSlug": "sayed-mahammad"
+            },
+            {
+              "name": "SK HASIBUL",
+              "party": "Jatiya Unnayan Party",
+              "evm_votes": 323,
+              "postal_votes": 2,
+              "total_votes": 325,
+              "vote_share_pct": 0.15,
+              "candidateSlug": "sk-hasibul"
+            },
+            {
+              "name": "ABDUL RAFFIQ SAHA",
+              "party": "Independent",
+              "evm_votes": 255,
+              "postal_votes": 2,
+              "total_votes": 257,
+              "vote_share_pct": 0.12,
+              "candidateSlug": "abdul-raffiq-saha"
+            },
+            {
+              "name": "SK MUJIBAR RAHAMAN ALI",
+              "party": "Independent",
+              "evm_votes": 227,
+              "postal_votes": 0,
+              "total_votes": 227,
+              "vote_share_pct": 0.1,
+              "candidateSlug": "sek-mujibar-rahaman-ali"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 642,
+              "postal_votes": 1,
+              "total_votes": 643,
+              "vote_share_pct": 0.3,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-S25210.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-10-25"
+        }
       }
     ]
   },
@@ -2045,6 +2907,7 @@
       "countingDate": "2026-10-09",
       "completeBy": "2026-10-11"
     },
+    "results_base": "https://results.eci.gov.in/ResultPcByeOct2026",
     "affidavit_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-PC-BYE-2-64&election=34-PC-BYE-2-64",
     "source_url": "https://www.eci.gov.in/bye-elections",
     "source_name": "Election Commission of India - Schedule for bye-elections to 05 (Five) Assembly Constituencies of Tamil Nadu, Puducherry and West Bengal and 01 (One) Parliamentary Constituency of Assam (Press Note ECI/PN/114/2026)",
@@ -2115,7 +2978,8 @@
             "facts": [],
             "source_url": "https://affidavit.eci.gov.in/CandidateCustomFilter?electionType=34-PC-BYE-2-64&election=34-PC-BYE-2-64",
             "source_name": "Election Commission of India - Candidate Affidavit Management",
-            "retrieved_date": "2026-09-28"
+            "retrieved_date": "2026-09-28",
+            "politicianId": "nagaon-devasish-sharma"
           },
           {
             "slug": "emran-hussain",
@@ -2491,7 +3355,162 @@
             "source_name": "Election Commission of India - Candidate Affidavit Management",
             "retrieved_date": "2026-09-28"
           }
-        ]
+        ],
+        "result": {
+          "declared_date": "2026-10-25",
+          "winner_slug": "devasish-sharma",
+          "margin": 142224,
+          "total_votes": 1454380,
+          "rows": [
+            {
+              "name": "DEVASISH SHARMA",
+              "party": "Bharatiya Janata Party",
+              "evm_votes": 711349,
+              "postal_votes": 3000,
+              "total_votes": 714349,
+              "vote_share_pct": 49.12,
+              "candidateSlug": "devasish-sharma"
+            },
+            {
+              "name": "MOHAMMED BADRUDDIN AJMAL",
+              "party": "All India United Democratic Front",
+              "evm_votes": 570832,
+              "postal_votes": 1293,
+              "total_votes": 572125,
+              "vote_share_pct": 39.34,
+              "candidateSlug": "mohammed-badaruddin-ajmal"
+            },
+            {
+              "name": "SIBAMONI BORA",
+              "party": "Indian National Congress",
+              "evm_votes": 128872,
+              "postal_votes": 620,
+              "total_votes": 129492,
+              "vote_share_pct": 8.9,
+              "candidateSlug": "sibamoni-bora"
+            },
+            {
+              "name": "MONIRUL HUSSAIN",
+              "party": "Independent",
+              "evm_votes": 6744,
+              "postal_votes": 2,
+              "total_votes": 6746,
+              "vote_share_pct": 0.46,
+              "candidateSlug": "monirul-hussain"
+            },
+            {
+              "name": "SABINA YASMIN",
+              "party": "Independent",
+              "evm_votes": 4061,
+              "postal_votes": 22,
+              "total_votes": 4083,
+              "vote_share_pct": 0.28,
+              "candidateSlug": "sabina-yasmin"
+            },
+            {
+              "name": "SAIFUR RAHMAN",
+              "party": "Independent",
+              "evm_votes": 3619,
+              "postal_votes": 20,
+              "total_votes": 3639,
+              "vote_share_pct": 0.25,
+              "candidateSlug": "saifur-rahman"
+            },
+            {
+              "name": "YOUNUS TAMULY",
+              "party": "Independent",
+              "evm_votes": 2597,
+              "postal_votes": 5,
+              "total_votes": 2602,
+              "vote_share_pct": 0.18,
+              "candidateSlug": "md-younus-tamuly"
+            },
+            {
+              "name": "MUSTAKIM ALAM",
+              "party": "Independent",
+              "evm_votes": 2318,
+              "postal_votes": 4,
+              "total_votes": 2322,
+              "vote_share_pct": 0.16,
+              "candidateSlug": "mustakim-alam"
+            },
+            {
+              "name": "INAMUL HUDA",
+              "party": "Revolutionary Communist Party of India (Rasik Bhatt)",
+              "evm_votes": 2041,
+              "postal_votes": 13,
+              "total_votes": 2054,
+              "vote_share_pct": 0.14,
+              "candidateSlug": "md-inamul-huda"
+            },
+            {
+              "name": "BARNALI SARMA",
+              "party": "Socialist Unity Centre Of India (COMMUNIST)",
+              "evm_votes": 1662,
+              "postal_votes": 14,
+              "total_votes": 1676,
+              "vote_share_pct": 0.12,
+              "candidateSlug": "barnali-sarma"
+            },
+            {
+              "name": "HAFIZ BURHANUDDIN",
+              "party": "The National Road Map Party of India",
+              "evm_votes": 1526,
+              "postal_votes": 6,
+              "total_votes": 1532,
+              "vote_share_pct": 0.11,
+              "candidateSlug": "hafiz-burhanuddin"
+            },
+            {
+              "name": "FARUK KHAN",
+              "party": "Independent",
+              "evm_votes": 1340,
+              "postal_votes": 4,
+              "total_votes": 1344,
+              "vote_share_pct": 0.09,
+              "candidateSlug": "faruk-khan"
+            },
+            {
+              "name": "NAZRUL ISLAM",
+              "party": "Independent",
+              "evm_votes": 1308,
+              "postal_votes": 2,
+              "total_votes": 1310,
+              "vote_share_pct": 0.09,
+              "candidateSlug": "nazrul-islam"
+            },
+            {
+              "name": "EMRAN HUSSAIN",
+              "party": "Independent",
+              "evm_votes": 1039,
+              "postal_votes": 24,
+              "total_votes": 1063,
+              "vote_share_pct": 0.07,
+              "candidateSlug": "emran-hussain"
+            },
+            {
+              "name": "AYUSH KUMAR SINGH",
+              "party": "Independent",
+              "evm_votes": 792,
+              "postal_votes": 7,
+              "total_votes": 799,
+              "vote_share_pct": 0.05,
+              "candidateSlug": "ayush-kumar-singh"
+            },
+            {
+              "name": "NOTA",
+              "party": "None of the Above",
+              "evm_votes": 9165,
+              "postal_votes": 79,
+              "total_votes": 9244,
+              "vote_share_pct": 0.64,
+              "isNota": true
+            }
+          ],
+          "source_url": "https://results.eci.gov.in/ResultPcByeOct2026/candidateswise-S039.htm",
+          "source_name": "Election Commission of India - Results",
+          "retrieved_date": "2026-10-25"
+        }
       }
     ]
   },

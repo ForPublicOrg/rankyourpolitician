@@ -589,22 +589,6 @@
     "politicianId": "jayant-chaudhary-rs-up"
   },
   {
-    "id": "l-murugan",
-    "rank": "MoS",
-    "name": "L. Murugan",
-    "party": "BJP",
-    "portfolios": [
-      "Parliamentary Affairs",
-      "Information and Broadcasting"
-    ],
-    "house": "Rajya Sabha",
-    "state": "Madhya Pradesh",
-    "source_url": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
-    "source_name": "Wikipedia - Third Modi ministry",
-    "retrieved_date": "2026-07-14",
-    "politicianId": "l-murugan-rs-mp"
-  },
-  {
     "id": "anupriya-patel",
     "rank": "MoS",
     "name": "Anupriya Patel",
