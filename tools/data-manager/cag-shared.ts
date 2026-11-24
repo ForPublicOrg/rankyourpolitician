@@ -374,8 +374,21 @@ export function findReportsLiteral(bundle: string): string | null {
  */
 export function canonicalCagUrl(url: string): string {
   const u = (url || '').trim();
+  const cdn = CAG_PDF_CDN.exec(u);
+  if (cdn) return `https://cag.gov.in/uploads/${cdn[1]}`;
   return u.replace(/^(https:\/\/(?:[a-z0-9-]+\.)*cag\.gov\.in)\/webroot\//i, '$1/');
 }
+
+/**
+ * Since late 2026 the listing links each PDF straight at the Commission's
+ * CloudFront distribution. https://cag.gov.in/uploads/<path> 302s to exactly
+ * that file, so the cag.gov.in form stays the identity (and the one the seed
+ * already holds): every CDN link folds back onto the Commission's own domain,
+ * and the import-time link check still fetches it through the redirect. Only
+ * this one distribution and only its /uploads/ tree - any other host is still
+ * refused by isCagUrl.
+ */
+const CAG_PDF_CDN = /^https:\/\/d1jmc0u14z2tmp\.cloudfront\.net\/(?:webroot\/)?uploads\/(.+)$/i;
 
 /** Report numbers as the listing writes them, in the order we trust them. */
 const LISTED_REPORT_NO: RegExp[] = [
