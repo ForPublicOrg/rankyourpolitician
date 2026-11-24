@@ -14484,7 +14484,9 @@
       "name": "Wikipedia - 16th Andhra Pradesh Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q126363669"
+    "wikidata_qid": "Q126363669",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bandaru%20Sravani%20Sree.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "srikakulam-ac-ap-gondu-shankar",
@@ -25004,7 +25006,9 @@
       "source_url": "https://asla.neva.gov.in/Member/Details/48?AssemblyID=16",
       "source_name": "Assam Legislative Assembly - NeVA Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Vice%20President%2C%20Shri%20M.%20Venkaiah%20Naidu%20addressing%20the%20gathering%20after%20launching%20Deen%20Dayal%20Divyangjan%20Sahajya%20Achoni%2C%20on%20the%20occasion%20of%20International%20Day%20of%20Persons%20with%20Disabilities%2C%20in%20Guwahati%2C%20Assam%20(cropped).jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "dhekiajuli-ac-as-ashok-singhal",
@@ -27278,7 +27282,9 @@
       "source_url": "https://sansad.in/ls/members/biography/5603",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mpimage%20photo%205603.jpg?width=400",
+    "photo_license": "CC BY 4.0 · Wikimedia Commons"
   },
   {
     "id": "guwahati-central-ac-as-vijay-kumar-gupta",
@@ -28183,7 +28189,9 @@
       "source_url": "https://sansad.in/ls/members/biography/4788",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gaurav%20Gogoi%202024.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "jorhat-ac-as-hitendra-nath-goswami",
@@ -33626,7 +33634,9 @@
       "source_url": "https://sansad.in/ls/members/biography/5606",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Vice%20President%2C%20Shri%20M.%20Hamid%20Ansari%20lighting%20the%20lamp%20at%20the%20inaugural%20function%20of%20the%2019th%20National%20Convention%20on%20Knowledge%2C%20Library%20and%20Information%20Networking%20-%20NACLIN%202016%2C%20at%20Tezpur%20University%2C%20in%20Assam%20(cropped).jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "srijangram-ac-as-md-nurul-islam",
@@ -34105,7 +34115,9 @@
       "source_url": "https://asla.neva.gov.in/Member/Details/117?AssemblyID=16",
       "source_name": "Assam Legislative Assembly - NeVA Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chandra%20Mohan%20Patowary.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "tingkhong-ac-as-bimal-borah",
@@ -35083,7 +35095,9 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/96?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aktarul-iman.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "araria-ac-br-avidur-rahman",
@@ -42182,7 +42196,9 @@
     "metrics_exempt": {
       "attendance_pct": "minister",
       "questions_asked": "minister"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bihar%20CM%20meets%20PM%20Modi.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "gaya-town-ac-br-prem-kumar",
@@ -48933,14 +48949,30 @@
     "is_minister": false,
     "neutral_summary": "Ajay Kumar Singh is a Member of the Legislative Council (MLC) in Bihar - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the Saharsa-Madhepura-Supaul Local Authorities constituency. Current party affiliation: Rashtriya Janata Dal. Current term: 08-Apr-2022 to 07-Apr-2028.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q27996272",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the Bihar Legislative Assembly",
+        "source_url": "https://www.wikidata.org/wiki/Q27996272",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Bihar_Legislative_Council",
       "name": "Wikipedia - List of members of the Bihar Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q27996272"
   },
   {
     "id": "sanjay-kumar-singh-mlc-br",
@@ -49236,7 +49268,15 @@
     "is_minister": false,
     "neutral_summary": "Sheela Pandit is a Member of the Legislative Council (MLC) in Bihar - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the state's MLAs (MLA quota). Current party affiliation: Bharatiya Janata Party. Current term: 29-Jun-2026 to 28-Jun-2032.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q140463659",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
@@ -68222,7 +68262,9 @@
       "name": "Wikipedia - 6th Chhattisgarh Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q16734949"
+    "wikidata_qid": "Q16734949",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Enhanced%20Image%20ofF81A7648.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "rampur-ac-cg-phool-singh-rathiya",
@@ -114169,7 +114211,9 @@
       "source_url": "https://jkla.neva.gov.in/Member/Details/8?AssemblyID=1",
       "source_name": "Jammu & Kashmir Legislative Assembly, National e-Vidhan (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sajad%20Gani%20Lone%20calling%20on%20the%20Minister%20of%20State%20for%20Development%20of%20North%20Eastern%20Region%20(IC)%2C%20Prime%20Minister%E2%80%99s%20Office%2C%20Personnel%2C%20Public%20Grievances%20%26%20Pensions%2C%20Atomic%20Energy%20and%20Space%2C%20Dr.%20Jitendra%20Singh%2C%20in%20New%20D.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "hazratbal-ac-jk-salman-sagar",
@@ -117562,6 +117606,13 @@
         "source_name": "MyNeta / ADR - 2024 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2024 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q130466745",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -117579,7 +117630,8 @@
       "source_url": "https://jkla.neva.gov.in/Member/Details/50?AssemblyID=1",
       "source_name": "Jammu & Kashmir Legislative Assembly, National e-Vidhan (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "shri-mata-vaishno-devi-ac-jk-baldev-raj-sharma",
@@ -118946,6 +118998,13 @@
         "source_name": "MyNeta / ADR - 2024 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2024 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q7683949",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -118965,7 +119024,8 @@
       "source_url": "https://jkla.neva.gov.in/Member/Details/26?AssemblyID=1",
       "source_name": "Jammu & Kashmir Legislative Assembly, National e-Vidhan (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "zainapora-ac-jk-showkat-hussain",
@@ -121987,7 +122047,9 @@
       "retrieved_date": "2026-07-14"
     },
     "wikidata_qid": "Q16730145",
-    "terms_served": 1
+    "terms_served": 1,
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Navin%20Jaiswal.jpg?width=400",
+    "photo_license": "Attribution · Wikimedia Commons"
   },
   {
     "id": "hazaribagh-manish-jaiswal",
@@ -122657,7 +122719,9 @@
       "name": "Wikipedia - 6th Jharkhand Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q131321449"
+    "wikidata_qid": "Q131321449",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Purnima%20Sahu.jpg?width=400",
+    "photo_license": "Attribution · Wikimedia Commons"
   },
   {
     "id": "jamshedpur-west-ac-jh-saryu-roy",
@@ -122881,7 +122945,9 @@
       "name": "Wikipedia - 6th Jharkhand Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q131418953"
+    "wikidata_qid": "Q131418953",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manju%20Kumari.jpg?width=400",
+    "photo_license": "Attribution · Wikimedia Commons"
   },
   {
     "id": "jarmundi-ac-jh-devendra-kunwar",
@@ -127712,7 +127778,9 @@
       "source_url": "https://kla.kar.nic.in/assembly/member/16thWhosWho.pdf",
       "source_name": "Karnataka Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pranay%20Vivek%20Patil%201%20(cropped).jpg?width=400",
+    "photo_license": "CC BY-SA 3.0 · Wikimedia Commons"
   },
   {
     "id": "aurad-ac-ka-prabhu-chauhan",
@@ -136586,7 +136654,9 @@
       "source_url": "https://kla.kar.nic.in/assembly/member/16thWhosWho.pdf",
       "source_name": "Karnataka Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Byrathi%20Suresh%20(2022).jpg?width=400",
+    "photo_license": "CC BY 3.0 · Wikimedia Commons"
   },
   {
     "id": "heggadadevankote-ac-ka-anil-chikkamadhu",
@@ -137853,7 +137923,9 @@
       "source_url": "https://kla.kar.nic.in/assembly/member/16thWhosWho.pdf",
       "source_name": "Karnataka Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vijayanand%20S%20Kashappanavar.jpg?width=400",
+    "photo_license": "CC BY 4.0 · Wikimedia Commons"
   },
   {
     "id": "hunsur-ac-ka-g-d-harish-gowda",
@@ -142162,7 +142234,9 @@
       "name": "Wikipedia - List of members of the Karnataka Legislative Council",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q84601122"
+    "wikidata_qid": "Q84601122",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20YS.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "lingsugur-ac-ka-manappa-d-vajjal",
@@ -145576,7 +145650,9 @@
       "retrieved_date": "2026-07-14"
     },
     "wikidata_qid": "Q33977657",
-    "terms_served": 1
+    "terms_served": 1,
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Road%20Inauguration.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "pulakeshinagar-ac-ka-a-c-srinivasa",
@@ -152281,7 +152357,9 @@
       "source_url": "https://www.niyamasabha.org/codes/members.htm",
       "source_name": "Kerala Legislative Assembly (Niyamasabha) (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A.D.%20Thomas%20MLA.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "alappuzha-k-c-venugopal",
@@ -152407,7 +152485,9 @@
       "source_url": "https://sansad.in/ls/members/biography/4567",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/K.C.%20Venugopal%20addressing%20at%20the%20Concurrent%20session%20%E2%80%93%20Young%20Achievers%2C%20at%20the%2012th%20Pravasi%20Bharatiya%20Divas%20%E2%80%98Engaging%20Diaspora%20Connecting%20Across%20Generation%E2%80%99%2C%20in%20New%20Delhi%20on%20January%2007%2C%202014%20(cropped).jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "alathur-k-radhakrishnan",
@@ -155059,7 +155139,9 @@
       "source_url": "https://www.niyamasabha.org/codes/members.htm",
       "source_name": "Kerala Legislative Assembly (Niyamasabha) (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PK%20Basheer.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "eravipuram-ac-kl-vishnu-mohan",
@@ -164360,7 +164442,9 @@
       "source_url": "https://sansad.in/rs/members/biography/2515",
       "source_name": "Digital Sansad - Rajya Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/P.%20Sandosh%20Kumar.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "p-v-abdul-wahab-rs-kl",
@@ -165682,7 +165766,9 @@
       "source_url": "https://www.niyamasabha.org/codes/members.htm",
       "source_name": "Kerala Legislative Assembly (Niyamasabha) (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandeep%20Varier.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "thrikkakara-ac-kl-uma-thomas",
@@ -166135,7 +166221,9 @@
       "source_url": "https://www.niyamasabha.org/codes/members.htm",
       "source_name": "Kerala Legislative Assembly (Niyamasabha) (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri%20E.%20T.%20Muhammed%20Basheer%2C%20MP%20inaugurating%20the%20exhibition%20stalls%20as%20part%20of%20the%20Bharat%20Nirman%20Public%20Information%20Campaign%2C%20organised%20by%20Press%20Information%20Bureau%2C%20Cochin%2C%20at%20Chalissery.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "tirur-ac-kl-kurukkoli-moideen",
@@ -174273,7 +174361,9 @@
       "source_url": "https://mpla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=16&Assemblyid=16",
       "source_name": "Madhya Pradesh Legislative Assembly - NeVA (National e-Vidhan Application) Member Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uday%20Pratap%20Singh.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "gandhwani-ac-mp-umang-singhar",
@@ -186241,7 +186331,9 @@
       "source_url": "https://mpla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=16&Assemblyid=16",
       "source_name": "Madhya Pradesh Legislative Assembly - NeVA (National e-Vidhan Application) Member Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Office%20of%20PG%20Wiki%20Profile%20Photo%20-%201.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "satna-ac-mp-dabbu-siddharth-sukhlal-kushwah",
@@ -192551,7 +192643,9 @@
       "name": "Wikipedia - 15th Maharashtra Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q23761297"
+    "wikidata_qid": "Q23761297",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Member%20of%20legaslative%20assembly%20chhatrapati%20sambhajinagar%20west-108201205487524%206541452555224444.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "ausa-ac-mh-abhimanyu-pawar",
@@ -201524,7 +201618,9 @@
       "name": "Wikipedia - 15th Maharashtra Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q131390320"
+    "wikidata_qid": "Q131390320",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sai%20Dahake.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "karjat-ac-mh-mahendra-thorve",
@@ -203697,7 +203793,9 @@
       "name": "Wikipedia - List of members of the Maharashtra Legislative Council",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q4838731"
+    "wikidata_qid": "Q4838731",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clipped%20image%2020241021%20200700.png?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "basavraj-madhavrao-patil-mlc-mh",
@@ -227657,7 +227755,9 @@
       "source_url": "https://mgla.neva.gov.in/Member/Details/104?AssemblyID=11",
       "source_name": "Meghalaya Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu%20Taher%20Mondal.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "pynthorumkhrah-ac-ml-alexander-laloo-hek",
@@ -227851,7 +227951,9 @@
       "source_url": "https://mgla.neva.gov.in/Member/Details/41?AssemblyID=11",
       "source_name": "Meghalaya Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20delegation%20from%20North%20Eastern%20States%20led%20by%20the%20Minister%20General%20Administration%20Home%20(Civil%20Defence%20And%20Home%20Guards)%20Public%20Health%20Engineering%20Relief%20And%20Rehabilitation%20(cropped).jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "rajabala-ac-ml-mizanur-rahman-kazi",
@@ -239626,7 +239728,9 @@
       "source_url": "https://assembly.odisha.gov.in/MemberofAssembly.aspx?filterType=constituency&filterValue=Banki+-++(++Cuttack+%2c+Odisha+)",
       "source_name": "Odisha Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Devi%20Rajnan%20Tripathy.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "barabati-cuttack-ac-od-sofia-firdous",
@@ -241432,7 +241536,9 @@
       "source_url": "https://assembly.odisha.gov.in/MemberofAssembly.aspx?filterType=constituency&filterValue=Bhograi+-++(++Balasore+%2c+Odisha+)",
       "source_name": "Odisha Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goutam%20Buddha%20Das%20during%20a%20book%20inauguration%20at%20Bhubaneswar.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "bhubaneswar-aparajita-sarangi",
@@ -257191,7 +257297,9 @@
       "source_url": "https://py.gov.in/mlas",
       "source_name": "Government of Puducherry official portal - M.L.A.s directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/VIGNESHKANNAN.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "s-selvaganapathy-rs-py",
@@ -285063,7 +285171,9 @@
       "source_url": "https://sansad.in/ls/members/biography/5683",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahima%20Kumari%20Mewar.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "alka-gurjar-rs-rj",
@@ -286235,7 +286345,9 @@
       "source_url": "https://assembly.rajasthan.gov.in/Containers/Members/Contacts.aspx",
       "source_name": "Rajasthan Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manoj%20Nyangli.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "sadulshahar-ac-rj-gurveer-singh-brar",
@@ -287366,7 +287478,9 @@
       "source_url": "https://assembly.rajasthan.gov.in/Containers/Members/Contacts.aspx",
       "source_name": "Rajasthan Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ravsa%20Wiki.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "shergarh-ac-rj-babu-singh-rathore",
@@ -287855,7 +287969,9 @@
       "source_url": "https://assembly.rajasthan.gov.in/Containers/Members/Contacts.aspx",
       "source_name": "Rajasthan Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Otaram-dewasi-206x300.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "siwana-ac-rj-hameer-singh-bhayal",
@@ -291768,7 +291884,9 @@
       "source_url": "https://sikkim.neva.gov.in/Member/Details/36?AssemblyID=11",
       "source_name": "Sikkim Legislative Assembly - NeVA portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sonam%20Lama.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "shyari-ac-sk-tenzing-norbu-lamtha",
@@ -293142,6 +293260,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139936164",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -293151,7 +293276,8 @@
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q139936164"
+    "wikidata_qid": "Q139936164",
+    "terms_served": 1
   },
   {
     "id": "andipatti-ac-tn-a-maharajan",
@@ -293368,6 +293494,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139961388",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -293385,7 +293518,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "arakkonam-s-jagathrakshakan",
@@ -294554,6 +294688,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139672591",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -294573,7 +294714,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "bargur-ac-tn-e-c-govindarasan",
@@ -294825,6 +294967,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666689",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -294842,7 +294991,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "bhuvanagiri-ac-tn-a-arunmozhithevan",
@@ -295193,6 +295343,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139717835",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -295210,7 +295367,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "chennai-central-dayanidhi-maran",
@@ -296194,6 +296352,20 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q65030968",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "3",
+        "source_url": "https://www.wikidata.org/wiki/Q65030968",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -296210,7 +296382,9 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q65030968",
+    "terms_served": 3
   },
   {
     "id": "coimbatore-south-ac-tn-v-senthilbalaji",
@@ -296510,6 +296684,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139907321",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -296527,7 +296708,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "cuddalore-m-k-vishnu-prasad",
@@ -297140,6 +297322,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666584",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -297157,7 +297346,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "edappadi-ac-tn-edappadi-k-palaniswami",
@@ -297501,6 +297691,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139861076",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -297510,7 +297707,10 @@
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q139861076"
+    "wikidata_qid": "Q139861076",
+    "terms_served": 1,
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/M.Vijay%20Balaji.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "erode-west-ac-tn-k-k-ananth-moghan",
@@ -297943,7 +298143,9 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/K.A.%20Sengottaiyan.jpg?width=400",
+    "photo_license": "CC BY 4.0 · Wikimedia Commons"
   },
   {
     "id": "gudalur-ac-tn-m-dravidamani",
@@ -298091,6 +298293,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly election affidavit",
         "retrieved_date": "2026-07-15",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139672588",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -298108,7 +298317,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "gummidipoondi-ac-tn-s-vijayakumar",
@@ -298166,6 +298376,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139672790",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -298183,7 +298400,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "harbour-ac-tn-p-k-sekar-babu",
@@ -300141,6 +300359,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q137717516",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -300158,7 +300383,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "kilvaithinankuppam-ac-tn-e-thenral-kumar",
@@ -300209,6 +300435,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139997308",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -300226,7 +300459,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "kilvelur-ac-tn-t-latha",
@@ -300442,6 +300676,20 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 1951 (age 75)",
+        "source_url": "https://www.wikidata.org/wiki/Q139303649",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139303649",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -300459,7 +300707,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "kovilpatti-ac-tn-k-karunanithi",
@@ -300725,6 +300974,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139907954",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -300742,7 +300998,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "krishnarayapuram-ac-tn-sathya-m",
@@ -300800,6 +301057,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139672802",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -300817,7 +301081,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "kulithalai-ac-tn-suriyanur-a-chandran",
@@ -300942,6 +301207,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly election affidavit",
         "retrieved_date": "2026-07-15",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666389",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -300959,7 +301231,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "kumbakonam-ac-tn-r-vinoth",
@@ -301307,6 +301580,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666541",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -301316,7 +301596,8 @@
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q139666541"
+    "wikidata_qid": "Q139666541",
+    "terms_served": 1
   },
   {
     "id": "madathukulam-ac-tn-r-jayaramakrishnan",
@@ -301374,6 +301655,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q137290105",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -301391,7 +301679,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "madavaram-ac-tn-m-l-vijayprabhu",
@@ -302087,6 +302376,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "profession",
+        "value": "landlord",
+        "source_url": "https://www.wikidata.org/wiki/Q139681819",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -302909,6 +303205,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139906491",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -302926,7 +303229,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "mettur-ac-tn-g-venkatachalam",
@@ -303720,6 +304024,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly election affidavit",
         "retrieved_date": "2026-07-15",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q141019549",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -303728,7 +304039,9 @@
       "url": "https://en.wikipedia.org/wiki/17th_Tamil_Nadu_Assembly",
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q141019549",
+    "terms_served": 1
   },
   {
     "id": "namakkal-v-s-matheswaran",
@@ -304996,6 +305309,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139923212",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -305013,7 +305333,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "palayamkottai-ac-tn-m-abdul-wahab",
@@ -305251,6 +305572,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139672574",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -305268,7 +305596,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "panruti-ac-tn-k-mohan",
@@ -305491,6 +305820,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139717836",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -305508,7 +305844,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "paramakudi-ac-tn-k-k-kathiravan",
@@ -306046,6 +306383,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 1 January 1985 (age 41)",
+        "source_url": "https://www.wikidata.org/wiki/Q139771696",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -306351,7 +306695,9 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/G%20Sabari%20Iyngaran.png?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "pollachi-eswarasamy",
@@ -306663,6 +307009,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139672595",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -306680,7 +307033,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "poompuhar-ac-tn-nivedha-m-murugan",
@@ -306821,6 +307175,27 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 27 March 1927 (age 99)",
+        "source_url": "https://www.wikidata.org/wiki/Q20559146",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "freedom fighter, politician",
+        "source_url": "https://www.wikidata.org/wiki/Q20559146",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q20559146",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -306837,7 +307212,9 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q20559146",
+    "terms_served": 1
   },
   {
     "id": "pudukkottai-ac-tn-v-muthuraja",
@@ -307068,6 +307445,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666489",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -307085,7 +307469,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "anbumani-ramadoss-rs-tn",
@@ -312782,6 +313167,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139997309",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -312799,7 +313191,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "thiyagarayanagar-ac-tn-bussy-n-anand",
@@ -315346,6 +315739,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139997311",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -315355,7 +315755,8 @@
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q139997311"
+    "wikidata_qid": "Q139997311",
+    "terms_served": 1
   },
   {
     "id": "usilampatti-ac-tn-m-vijay",
@@ -315944,6 +316345,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q140180140",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -315961,7 +316369,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "vasudevanallur-ac-tn-e-raja",
@@ -316201,6 +316610,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q141019552",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -316217,7 +316633,9 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q141019552",
+    "terms_served": 1
   },
   {
     "id": "veerapandi-ac-tn-m-s-palanivel",
@@ -316372,6 +316790,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q140070764",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -316389,7 +316814,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "vellore-d-m-k-anand",
@@ -317704,6 +318130,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly election affidavit",
         "retrieved_date": "2026-07-15",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666598",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -317721,7 +318154,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "terms_served": 1
   },
   {
     "id": "achampet-ac-tg-chikkudu-vamshi-krishna",
@@ -321127,7 +321561,9 @@
       "retrieved_date": "2026-07-17"
     },
     "wikidata_qid": "Q136783318",
-    "party_note": "Won the by-election polled on 11 November 2025 (result declared 14 November 2025), necessitated by the death of sitting MLA Maganti Gopinath on 8 June 2025."
+    "party_note": "Won the by-election polled on 11 November 2025 (result declared 14 November 2025), necessitated by the death of sitting MLA Maganti Gopinath on 8 June 2025.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/MLC%20Naveen%20Yadav%20Welcome%20by%20State%20I%20%26%20PR%20Creative%20Director%20Konda%20for%20for%20Bathukamma%20Young%20Film%20Makers%20Challenge%202026%20Event%20at%20Shilpakalavedika%20(cropped).jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "jukkal-ac-tg-thota-laxmi-kantha-rao",
@@ -334456,6 +334892,34 @@
         "source_name": "MyNeta / ADR - 2023 assembly affidavit",
         "retrieved_date": "2026-08-05",
         "as_of": "2023 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 22 February 1943 (age 83)",
+        "source_url": "https://www.wikidata.org/wiki/Q98108920",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "writer, politician",
+        "source_url": "https://www.wikidata.org/wiki/Q98108920",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "3",
+        "source_url": "https://www.wikidata.org/wiki/Q98108920",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "member of Rajya Sabha (1920-present)",
+        "source_url": "https://www.wikidata.org/wiki/Q98108920",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -334464,7 +334928,9 @@
       "url": "https://en.wikipedia.org/wiki/13th_Tripura_Assembly",
       "name": "Wikipedia - 13th Tripura Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q98108920",
+    "terms_served": 3
   },
   {
     "id": "surma-ac-tr-swapna-das-paul",
@@ -335878,7 +336344,9 @@
       "name": "Wikipedia - 18th Uttar Pradesh Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
     },
-    "wikidata_qid": "Q111263099"
+    "wikidata_qid": "Q111263099",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ram%20Achal%20Rajbhar.jpg?width=400",
+    "photo_license": "CC BY 4.0 · Wikimedia Commons"
   },
   {
     "id": "akbarpur-raniya-ac-up-pratibha-shukla",
@@ -339931,7 +340399,9 @@
       "source_url": "https://upvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=4&MSLT=1&Assemblyid=18",
       "source_name": "Uttar Pradesh Vidhan Sabha - National e-Vidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/BJP's%20UP%20Vice%20-%20President.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "balrampur-ac-up-paltu-ram",
@@ -357562,7 +358032,9 @@
       "source_url": "https://upvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=4&MSLT=60&Assemblyid=18",
       "source_name": "Uttar Pradesh Vidhan Sabha - National e-Vidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raja%20Bhaiya.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "kundarki-ac-up-ramveer-singh",
@@ -367110,7 +367582,9 @@
       "source_url": "https://upvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=4&MSLT=36&Assemblyid=18",
       "source_name": "Uttar Pradesh Vidhan Sabha - National e-Vidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raj%20-%20Copy8%20(2).jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "mungra-badshahpur-ac-up-pankaj-patel",
@@ -370773,7 +371247,9 @@
       "retrieved_date": "2026-07-14"
     },
     "wikidata_qid": "Q24851766",
-    "terms_served": 1
+    "terms_served": 1,
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siddharth%20Nath%20Singh.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "puranpur-ac-up-babu-ram-paswan",
@@ -371432,7 +371908,9 @@
       "source_url": "https://sansad.in/rs/members/biography/2554",
       "source_name": "Digital Sansad - Rajya Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/IMAGE%20PROFILE.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "banwari-lal-verma-rs-up",
@@ -374074,7 +374552,9 @@
       "source_url": "https://upvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=4&MSLT=2&Assemblyid=18",
       "source_name": "Uttar Pradesh Vidhan Sabha - National e-Vidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aradhana%20Misra.png?width=400",
+    "photo_license": "CC BY 4.0 · Wikimedia Commons"
   },
   {
     "id": "rampur-maniharan-ac-up-devendra-kumar-nim",
@@ -375825,6 +376305,13 @@
         "source_name": "MyNeta / ADR - 2022 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2022 assembly election affidavit"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "18th Uttar Pradesh Assembly",
+        "source_url": "https://www.wikidata.org/wiki/Q126196926",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -386482,7 +386969,9 @@
       "retrieved_date": "2026-07-14"
     },
     "wikidata_qid": "Q28370224",
-    "terms_served": 1
+    "terms_served": 1,
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pradeep-batra-roorkee-mla-cabinet-minister.png?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "rudraprayag-ac-uk-bharat-singh-chaudhary",
@@ -387005,6 +387494,34 @@
         "source_name": "MyNeta / ADR - 2022 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2022 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 24 October 1966 (age 60)",
+        "source_url": "https://www.wikidata.org/wiki/Q5268888",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q5268888",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q5268888",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the Lok Sabha",
+        "source_url": "https://www.wikidata.org/wiki/Q5268888",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -387021,7 +387538,11 @@
       "source_url": "https://utkh.neva.gov.in/Member/Details/41?AssemblyID=5",
       "source_name": "Uttarakhand Vidhan Sabha - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q5268888",
+    "terms_served": 1,
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dhan%20Singh%20Rawat.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "tehri-ac-uk-kishore-upadhyaya",
@@ -390528,7 +391049,9 @@
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
     },
-    "party_note": "One of 20 Trinamool Congress MPs who announced a merger into the Nationalist Citizens Party of India on 14 June 2026. The Lok Sabha Secretariat still records them as All India Trinamool Congress: the Speaker has not recognised the merger, and disqualification petitions against them are pending before him."
+    "party_note": "One of 20 Trinamool Congress MPs who announced a merger into the Nationalist Citizens Party of India on 14 June 2026. The Lok Sabha Secretariat still records them as All India Trinamool Congress: the Speaker has not recognised the merger, and disqualification petitions against them are pending before him.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kakoli%20Ghosh%20Dastidar%20flagging%20off%20the%20Howrah-Pune%20Suvidha%20AC%20Express%20from%20Howrah%20Station%2C%20West%20Bengal.jpg?width=400",
+    "photo_license": "GODL-India · Wikimedia Commons"
   },
   {
     "id": "barasat-ac-wb-sankar-chatterjee",
@@ -390656,6 +391179,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "profession",
+        "value": "lawyer, politician",
+        "source_url": "https://www.wikidata.org/wiki/Q139764419",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -393899,6 +394429,34 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 8 March 1949 (age 77)",
+        "source_url": "https://www.wikidata.org/wiki/Q5276815",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q5276815",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q5276815",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the 15th Lok Sabha (2009-present); member of Rajya Sabha; Member of the 9th Lok Sabha (1989-1991)",
+        "source_url": "https://www.wikidata.org/wiki/Q5276815",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -393915,7 +394473,9 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/491?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q5276815",
+    "terms_served": 1
   },
   {
     "id": "chanchal-ac-wb-prasun-banerjee",
@@ -397689,7 +398249,9 @@
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
     },
-    "party_note": "One of 20 Trinamool Congress MPs who announced a merger into the Nationalist Citizens Party of India on 14 June 2026. The Lok Sabha Secretariat still records them as All India Trinamool Congress: the Speaker has not recognised the merger, and disqualification petitions against them are pending before him."
+    "party_note": "One of 20 Trinamool Congress MPs who announced a merger into the Nationalist Citizens Party of India on 14 June 2026. The Lok Sabha Secretariat still records them as All India Trinamool Congress: the Speaker has not recognised the merger, and disqualification petitions against them are pending before him.",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dev%20at%20a%20screening.jpg?width=400",
+    "photo_license": "CC BY 3.0 · Wikimedia Commons"
   },
   {
     "id": "ghatal-ac-wb-shital-kapat",
@@ -399086,6 +399648,13 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 22 April 1993 (age 33)",
+        "source_url": "https://www.wikidata.org/wiki/Q139694174",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -406631,7 +407200,9 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/471?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tapas%20Roy%20MLA.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "mathabhanga-ac-wb-nisith-pramanik",
@@ -416958,6 +417529,27 @@
         "source_name": "MyNeta / ADR - 2023 assembly affidavit",
         "retrieved_date": "2026-10-25",
         "as_of": "2023 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 7 November 1967 (age 59)",
+        "source_url": "https://www.wikidata.org/wiki/Q23418633",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q23418633",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q23418633",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -416966,7 +417558,9 @@
       "url": "https://kla.kar.nic.in/assembly/member/16assemblymemberslist.htm",
       "name": "Karnataka Legislative Assembly - members of the 16th Assembly (official)",
       "retrieved_date": "2026-08-19"
-    }
+    },
+    "wikidata_qid": "Q23418633",
+    "terms_served": 1
   },
   {
     "id": "kalyanpur-ac-br-maheshwar-hazari",
@@ -417017,6 +417611,27 @@
         "source_name": "MyNeta / ADR - 2025 assembly affidavit",
         "retrieved_date": "2026-10-25",
         "as_of": "2025 assembly election affidavit"
+      },
+      {
+        "field_type": "age",
+        "value": "Born 9 October 1970 (age 56)",
+        "source_url": "https://www.wikidata.org/wiki/Q16194579",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q16194579",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the 15th Lok Sabha",
+        "source_url": "https://www.wikidata.org/wiki/Q16194579",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -417025,7 +417640,10 @@
       "url": "https://results.eci.gov.in/ResultAcGenNov2025/candidateswise-S04131.htm",
       "name": "Election Commission of India - 2025 Bihar assembly result, AC 131 Kalyanpur (SC)",
       "retrieved_date": "2026-08-19"
-    }
+    },
+    "wikidata_qid": "Q16194579",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minister%20Maheshwar%20Hazari%20(cropped).jpg?width=400",
+    "photo_license": "Attribution · Wikimedia Commons"
   },
   {
     "id": "pipra-ac-br-rambilash-kamat",
@@ -417816,14 +418434,37 @@
     "is_minister": false,
     "neutral_summary": "Beeda Ravichandra is a Member of the Legislative Council (MLC) in Andhra Pradesh - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the state's MLAs (MLA quota). Current party affiliation: Telugu Desam Party. Current term: 30-Mar-2025 to 29-Mar-2031.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "age",
+        "value": "Born 29 July 1969 (age 57)",
+        "source_url": "https://www.wikidata.org/wiki/Q138509160",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "official, politician",
+        "source_url": "https://www.wikidata.org/wiki/Q138509160",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "member of a Legislative Assembly of India; Member of the Andhra Pradesh Legislative Assembly",
+        "source_url": "https://www.wikidata.org/wiki/Q138509160",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://aplegislature.org/web/legislative-council/member-s-information",
       "name": "AP Legislature - Legislative Council Members Information (official)",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q138509160"
   },
   {
     "id": "b-tirumala-naidu-mlc-ap",
@@ -418008,14 +418649,37 @@
     "is_minister": false,
     "neutral_summary": "B. K. Hariprasad is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the state's MLAs (MLA quota). Current party affiliation: Indian National Congress. Current term: 01-Jul-2026 to 30-Jun-2032.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "age",
+        "value": "Born 29 July 1954 (age 72)",
+        "source_url": "https://www.wikidata.org/wiki/Q4834081",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q4834081",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "member of Rajya Sabha (2014-2020)",
+        "source_url": "https://www.wikidata.org/wiki/Q4834081",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://www.indiatvnews.com/karnataka/congress-dominates-karnataka-legislative-council-polls-wins-5-of-7-seats-bjp-secures-2-latest-updates-2026-06-18-1045350",
       "name": "India TV News, 18 Jun 2026",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q4834081"
   },
   {
     "id": "p-v-mohan-mlc-ka",
@@ -418320,14 +418984,37 @@
     "is_minister": false,
     "neutral_summary": "Prakash Babanna Hukkeri is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the Karnataka North-West Teachers constituency. Current party affiliation: Indian National Congress. Current term: 05-Jul-2022 to 04-Jul-2028.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "age",
+        "value": "Born 7 October 1947 (age 79)",
+        "source_url": "https://www.wikidata.org/wiki/Q14922951",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q14922951",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the Karnataka Legislative Assembly; Member of the 16th Lok Sabha",
+        "source_url": "https://www.wikidata.org/wiki/Q14922951",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://kla.kar.nic.in/council/members/CURRENT/CKL1.htm",
       "name": "Karnataka Legislative Council - Current Members List (official)",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q14922951"
   },
   {
     "id": "s-l-bhojegowda-mlc-ka",
@@ -418416,14 +419103,39 @@
     "is_minister": false,
     "neutral_summary": "Umashree is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - nominated to the Council by the Governor (nominated member). Current party affiliation: Indian National Congress. Current term: 21-Aug-2023 to 20-Aug-2029.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "age",
+        "value": "Born 10 May 1957 (age 69)",
+        "source_url": "https://www.wikidata.org/wiki/Q7881186",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "actor, television actor, politician",
+        "source_url": "https://www.wikidata.org/wiki/Q7881186",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the Karnataka Legislative Assembly",
+        "source_url": "https://www.wikidata.org/wiki/Q7881186",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://kla.kar.nic.in/council/members/CURRENT/CKL1.htm",
       "name": "Karnataka Legislative Council - Current Members List (official)",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q7881186",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Umashree.jpg?width=400",
+    "photo_license": "Public domain · Wikimedia Commons"
   },
   {
     "id": "m-r-seetharam-mlc-ka",
@@ -418440,14 +419152,39 @@
     "is_minister": false,
     "neutral_summary": "M. R. Seetharam is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - nominated to the Council by the Governor (nominated member). Current party affiliation: Indian National Congress. Current term: 21-Aug-2023 to 20-Aug-2029.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "age",
+        "value": "Born April 1956 (age 70)",
+        "source_url": "https://www.wikidata.org/wiki/Q6713040",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q6713040",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "previous_positions",
+        "value": "Member of the Karnataka Legislative Assembly",
+        "source_url": "https://www.wikidata.org/wiki/Q6713040",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://kla.kar.nic.in/council/members/CURRENT/CKL1.htm",
       "name": "Karnataka Legislative Council - Current Members List (official)",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q6713040",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/M.R.Seetharam%20minister%20of%20science%20and%20technology.png?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "h-p-sudham-das-mlc-ka",
@@ -418584,14 +419321,23 @@
     "is_minister": false,
     "neutral_summary": "Mohammed Azharuddin is a Member of the Legislative Council (MLC) in Telangana - the Vidhan Parishad, the upper house of the state legislature - nominated to the Council by the Governor (nominated member). Current party affiliation: Indian National Congress. Current term: 26-Apr-2026 to 25-Apr-2032.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q63999891",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
       "url": "https://www.newindianexpress.com/states/telangana/2026/Apr/25/governor-clears-mlc-nominations-under-quota-appoints-azharuddin-kodandaram",
       "name": "The New Indian Express, 25 Apr 2026",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q63999891"
   },
   {
     "id": "m-kodandaram-mlc-tg",
@@ -418830,6 +419576,20 @@
         "source_name": "MyNeta / ADR - 2026 assembly election affidavit",
         "retrieved_date": "2026-10-25",
         "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "profession",
+        "value": "politician",
+        "source_url": "https://www.wikidata.org/wiki/Q139666597",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q139666597",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "party_note": "Won the Dharapuram by-election polled on 6 October 2026; the Election Commission declared the result on 25 October 2026.",
@@ -418839,7 +419599,9 @@
       "url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-S22101.htm",
       "name": "Election Commission of India - Dharapuram (Tamil Nadu) by-election result, declared 25 October 2026",
       "retrieved_date": "2026-10-25"
-    }
+    },
+    "wikidata_qid": "Q139666597",
+    "terms_served": 1
   },
   {
     "id": "thattanchavady-ac-py-ashok-anand",
@@ -418898,6 +419660,13 @@
         "source_name": "MyNeta / ADR - Thattanchavady by-election 06-10-2026",
         "retrieved_date": "2026-10-25",
         "as_of": "Thattanchavady by-election 06-10-2026"
+      },
+      {
+        "field_type": "terms_served",
+        "value": "1",
+        "source_url": "https://www.wikidata.org/wiki/Q65030565",
+        "source_name": "Wikidata",
+        "retrieved_date": "2026-11-24"
       }
     ],
     "party_note": "Won the Thattanchavady by-election polled on 6 October 2026; the Election Commission declared the result on 25 October 2026.",
@@ -418907,7 +419676,9 @@
       "url": "https://results.eci.gov.in/ResultAcByeOct2026/candidateswise-U079.htm",
       "name": "Election Commission of India - Thattanchavady (Puducherry) by-election result, declared 25 October 2026",
       "retrieved_date": "2026-10-25"
-    }
+    },
+    "wikidata_qid": "Q65030565",
+    "terms_served": 1
   },
   {
     "id": "rejinagar-ac-wb-shankharavh-sarkar",
