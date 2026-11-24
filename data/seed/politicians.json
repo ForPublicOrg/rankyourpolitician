@@ -133839,6 +133839,38 @@
         "source_url": "https://www.wikidata.org/wiki/Q7487424",
         "source_name": "Wikidata",
         "retrieved_date": "2026-07-14"
+      },
+      {
+        "field_type": "assets_total",
+        "value": "₹1,89,20,37,646 (~189 Crore)",
+        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
+        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2023 assembly election affidavit"
+      },
+      {
+        "field_type": "liabilities_total",
+        "value": "₹24,58,04,947 (~24 Crore)",
+        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
+        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2023 assembly election affidavit"
+      },
+      {
+        "field_type": "criminal_cases_declared",
+        "value": "1",
+        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
+        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2023 assembly election affidavit"
+      },
+      {
+        "field_type": "education",
+        "value": "Graduate",
+        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
+        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2023 assembly election affidavit"
       }
     ],
     "active": true,
@@ -175257,6 +175289,14 @@
         "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=698",
         "source_name": "MyNeta / ADR - 2023 assembly election affidavit",
         "retrieved_date": "2026-07-15",
+        "as_of": "2023 assembly election affidavit"
+      },
+      {
+        "field_type": "education",
+        "value": "Graduate",
+        "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=70",
+        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
+        "retrieved_date": "2026-11-24",
         "as_of": "2023 assembly election affidavit"
       }
     ],
@@ -256553,7 +256593,40 @@
     "is_minister": false,
     "neutral_summary": "V. Karthikeyan is the Member of the Legislative Assembly (MLA) for the Nellithope constituency in Puducherry. Current party affiliation: Dravida Munnetra Kazhagam.",
     "metrics": {},
-    "facts": [],
+    "facts": [
+      {
+        "field_type": "assets_total",
+        "value": "₹5,60,79,827 (~5 Crore)",
+        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
+        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "liabilities_total",
+        "value": "₹1,95,54,130 (~1 Crore)",
+        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
+        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "criminal_cases_declared",
+        "value": "7",
+        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
+        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2026 assembly election affidavit"
+      },
+      {
+        "field_type": "education",
+        "value": "Others",
+        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
+        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
+        "retrieved_date": "2026-11-24",
+        "as_of": "2026 assembly election affidavit"
+      }
+    ],
     "active": true,
     "generated": true,
     "identity_source": {
