@@ -1749,7 +1749,8 @@
       "source_url": "https://sansad.in/ls/members/biography/5680",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q126365218"
   },
   {
     "id": "bapatla-ac-ap-vegesana-narendra-varma-raju",
@@ -6598,7 +6599,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Andhra_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Andhra Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q128839451"
   },
   {
     "id": "isacc-basha-mlc-ap",
@@ -6713,7 +6715,10 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Andhra_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Andhra Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127747199",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Srikanth%20Kancharla.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "karri-padmasree-mlc-ap",
@@ -6867,7 +6872,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Andhra_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Andhra Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q110262993"
   },
   {
     "id": "m-v-ramachandra-reddy-mlc-ap",
@@ -7012,7 +7018,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Andhra_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Andhra Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127745670"
   },
   {
     "id": "narthu-ramarao-mlc-ap",
@@ -21363,7 +21370,8 @@
       "source_url": "https://sansad.in/rs/members/biography/2696",
       "source_name": "Digital Sansad - Rajya Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q141967364"
   },
   {
     "id": "roing-ac-ar-mutchu-mithi",
@@ -35695,7 +35703,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/532?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q136906253"
   },
   {
     "id": "aurai-ac-br-rama-nishad",
@@ -35794,7 +35803,7 @@
     "metrics": {
       "attendance_pct": 94.2,
       "questions_asked": 51,
-      "debates_participated": 52
+      "debates_participated": 54
     },
     "facts": [
       {
@@ -35809,7 +35818,7 @@
         "value": "94.2% (145 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -35817,15 +35826,15 @@
         "value": "51",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "52",
+        "value": "54",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -37134,7 +37143,10 @@
       "url": "https://results.eci.gov.in/ResultAcByeAugust2026/candidateswise-S04182.htm",
       "name": "Election Commission of India - Bankipur (Bihar) by-election result, declared 3 August 2026",
       "retrieved_date": "2026-08-03"
-    }
+    },
+    "wikidata_qid": "Q21516955",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prashant%20Kishor%20during%20a%20press%20conference%20on%20Bihar%20Assembly%20elections.jpg?width=400",
+    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "banmankhi-ac-br-krishna-kumar-rishi",
@@ -38921,7 +38933,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/493?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q137397591"
   },
   {
     "id": "bhore-ac-br-sunil-kumar",
@@ -41936,7 +41949,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/554?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q136932636"
   },
   {
     "id": "garkha-ac-br-surendra-ram",
@@ -44031,7 +44045,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/522?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q138426746"
   },
   {
     "id": "jagdishpur-ac-br-bhagwan-singh-kushwaha",
@@ -45369,7 +45384,7 @@
     "metrics": {
       "attendance_pct": 96.1,
       "questions_asked": 109,
-      "debates_participated": 33
+      "debates_participated": 34
     },
     "facts": [
       {
@@ -45401,7 +45416,7 @@
         "value": "96.1% (148 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -45409,15 +45424,15 @@
         "value": "109",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "33",
+        "value": "34",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -47832,7 +47847,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Bihar_Legislative_Council",
       "name": "Wikipedia - List of members of the Bihar Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q140180639"
   },
   {
     "id": "bhushan-ray-mlc-br",
@@ -48233,7 +48249,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Bihar_Legislative_Council",
       "name": "Wikipedia - List of members of the Bihar Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q63996046"
   },
   {
     "id": "lallan-kumar-saraf-mlc-br",
@@ -49299,7 +49316,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Bihar_Legislative_Council",
       "name": "Wikipedia - List of members of the Bihar Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q140184541"
   },
   {
     "id": "sunil-chaudhary-mlc-br",
@@ -50977,7 +50995,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/571?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q137163546"
   },
   {
     "id": "mohania-ac-br-sangita-kumari",
@@ -57104,7 +57123,7 @@
     "metrics": {
       "attendance_pct": 96.1,
       "questions_asked": 223,
-      "debates_participated": 41
+      "debates_participated": 43
     },
     "facts": [
       {
@@ -57158,7 +57177,7 @@
         "value": "96.1% (148 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -57166,15 +57185,15 @@
         "value": "223",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "41",
+        "value": "43",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -59859,7 +59878,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/495?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q137014341"
   },
   {
     "id": "tikari-ac-br-ajay-dangi",
@@ -59960,7 +59980,8 @@
       "source_url": "https://bla.neva.gov.in/Member/Details/565?AssemblyID=18",
       "source_name": "Bihar Vidhan Sabha - National e-Vidhan (NeVA) Members Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q136828192"
   },
   {
     "id": "ujiarpur-ac-br-alok-kumar-mehta",
@@ -80266,7 +80287,7 @@
         "value": "95.5% (147 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -80274,7 +80295,7 @@
         "value": "9",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -80282,7 +80303,7 @@
         "value": "3",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -81029,7 +81050,7 @@
         "value": "91.6% (141 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -81037,7 +81058,7 @@
         "value": "110",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -81045,7 +81066,7 @@
         "value": "29",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -81309,7 +81330,7 @@
         "value": "81.8% (126 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -81317,7 +81338,7 @@
         "value": "101",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -81325,7 +81346,7 @@
         "value": "12",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -81540,7 +81561,7 @@
     "metrics": {
       "attendance_pct": 87,
       "questions_asked": 54,
-      "debates_participated": 26
+      "debates_participated": 27
     },
     "facts": [
       {
@@ -81593,7 +81614,7 @@
         "value": "87% (134 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -81601,15 +81622,15 @@
         "value": "54",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "26",
+        "value": "27",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -94893,7 +94914,7 @@
         "value": "91.6% (141 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -94901,7 +94922,7 @@
         "value": "7",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -94909,7 +94930,7 @@
         "value": "2",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -97347,7 +97368,8 @@
       "source_url": "https://sansad.in/ls/members/biography/5545",
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q112150959"
   },
   {
     "id": "ambala-cantt-ac-hr-anil-vij",
@@ -98530,7 +98552,7 @@
     "metrics": {
       "attendance_pct": 96.8,
       "questions_asked": 171,
-      "debates_participated": 20
+      "debates_participated": 21
     },
     "facts": [
       {
@@ -98590,7 +98612,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -98598,15 +98620,15 @@
         "value": "171",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "20",
+        "value": "21",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -117913,111 +117935,6 @@
     }
   },
   {
-    "id": "srinagar-aga-syed-ruhullah-mehdi",
-    "name": "Aga Syed Ruhullah Mehdi",
-    "party": "Jammu & Kashmir National Conference",
-    "house": "Lok Sabha",
-    "state": "Jammu & Kashmir",
-    "stateCode": "JK",
-    "constituencyId": "pc-jk-srinagar",
-    "constituencyName": "Srinagar",
-    "constituencyType": "PC",
-    "districts": [
-      "Badgam",
-      "Srinagar"
-    ],
-    "current_position": "Member of Parliament, Lok Sabha",
-    "is_minister": false,
-    "neutral_summary": "Aga Syed Ruhullah Mehdi is the Member of Parliament for the Srinagar constituency in Jammu & Kashmir, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Jammu & Kashmir National Conference.",
-    "metrics": {
-      "attendance_pct": 92.9,
-      "questions_asked": 16,
-      "debates_participated": 22
-    },
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 1977 (age 49)",
-        "source_url": "https://www.wikidata.org/wiki/Q113645346",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q113645346",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹3,57,93,000 (~3 Crore)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6318",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹4,38,000 (~4 Lacs)",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6318",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6318",
-        "source_name": "MyNeta / ADR - 2024 election affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2024 election affidavit"
-      },
-      {
-        "field_type": "attendance_pct",
-        "value": "92.9% (143 of 154 recorded sitting days signed)",
-        "source_url": "https://sansad.in/ls/members",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "questions_asked",
-        "value": "16",
-        "source_url": "https://sansad.in/ls/questions/questions-and-answers",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      },
-      {
-        "field_type": "debates_participated",
-        "value": "22",
-        "source_url": "https://sansad.in/ls/debates",
-        "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
-        "as_of": "18th Lok Sabha, all sessions to date"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_18th_Lok_Sabha",
-      "name": "Election Commission of India - 2024 general election results (18th Lok Sabha members list)",
-      "retrieved_date": "2026-07-13"
-    },
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhullah%20Mehdi.jpg?width=400",
-    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons",
-    "wikidata_qid": "Q113645346",
-    "contact": {
-      "emails": [
-        "ruhullah.mehdi@mpls.sansad.in"
-      ],
-      "source_url": "https://sansad.in/ls/members/biography/5761",
-      "source_name": "Digital Sansad - Lok Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
     "id": "suchetgarh-ac-jk-gharu-ram-bhagat",
     "name": "Gharu Ram Bhagat",
     "party": "Bharatiya Janata Party",
@@ -120379,7 +120296,7 @@
     "metrics": {
       "attendance_pct": 94.2,
       "questions_asked": 97,
-      "debates_participated": 20
+      "debates_participated": 21
     },
     "facts": [
       {
@@ -120411,7 +120328,7 @@
         "value": "94.2% (145 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -120419,15 +120336,15 @@
         "value": "97",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "20",
+        "value": "21",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -132483,7 +132400,7 @@
     "metrics": {
       "attendance_pct": 92.2,
       "questions_asked": 222,
-      "debates_participated": 37
+      "debates_participated": 39
     },
     "facts": [
       {
@@ -132543,7 +132460,7 @@
         "value": "92.2% (142 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -132551,15 +132468,15 @@
         "value": "222",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "37",
+        "value": "39",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -133839,38 +133756,6 @@
         "source_url": "https://www.wikidata.org/wiki/Q7487424",
         "source_name": "Wikidata",
         "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹1,89,20,37,646 (~189 Crore)",
-        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹24,58,04,947 (~24 Crore)",
-        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "1",
-        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "Graduate",
-        "source_url": "https://www.myneta.info/karnataka2023/candidate.php?candidate_id=6799",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2023 assembly election affidavit"
       }
     ],
     "active": true,
@@ -141282,30 +141167,6 @@
     }
   },
   {
-    "id": "chidanand-m-gowda-mlc-ka",
-    "name": "Chidanand M Gowda",
-    "party": "Bharatiya Janata Party",
-    "house": "Vidhan Parishad",
-    "state": "Karnataka",
-    "stateCode": "KA",
-    "constituencyId": "",
-    "constituencyName": "Legislative Council",
-    "constituencyType": "MLC",
-    "districts": [],
-    "current_position": "Member of the Legislative Council (MLC), Karnataka",
-    "is_minister": false,
-    "neutral_summary": "Chidanand M Gowda is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the South-East Graduates constituency. Current party affiliation: Bharatiya Janata Party. Current term: 12-Nov-2020 to 11-Nov-2026.",
-    "metrics": {},
-    "facts": [],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Karnataka_Legislative_Council",
-      "name": "Wikipedia - List of members of the Karnataka Legislative Council",
-      "retrieved_date": "2026-07-14"
-    }
-  },
-  {
     "id": "d-s-arun-kumar-mlc-ka",
     "name": "D. S. Arun Kumar",
     "party": "Bharatiya Janata Party",
@@ -141821,30 +141682,6 @@
     "wikidata_qid": "Q110150542"
   },
   {
-    "id": "puttanna-mlc-ka",
-    "name": "Puttanna",
-    "party": "Indian National Congress",
-    "house": "Vidhan Parishad",
-    "state": "Karnataka",
-    "stateCode": "KA",
-    "constituencyId": "",
-    "constituencyName": "Legislative Council",
-    "constituencyType": "MLC",
-    "districts": [],
-    "current_position": "Member of the Legislative Council (MLC), Karnataka",
-    "is_minister": false,
-    "neutral_summary": "Puttanna is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the Bangalore Teachers constituency. Current party affiliation: Indian National Congress. Current term: 20-Feb-2024 to 11-Nov-2026.",
-    "metrics": {},
-    "facts": [],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Karnataka_Legislative_Council",
-      "name": "Wikipedia - List of members of the Karnataka Legislative Council",
-      "retrieved_date": "2026-07-14"
-    }
-  },
-  {
     "id": "r-rajendra-mlc-ka",
     "name": "R. Rajendra",
     "party": "Indian National Congress",
@@ -141905,15 +141742,15 @@
     "districts": [],
     "current_position": "Member of the Legislative Council (MLC), Karnataka",
     "is_minister": false,
-    "neutral_summary": "S. V. Sankanur is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the West Graduates constituency. Current party affiliation: Bharatiya Janata Party. Current term: 12-Nov-2020 to 11-Nov-2026.",
+    "neutral_summary": "S. V. Sankanur is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the West Graduates constituency. Current party affiliation: Bharatiya Janata Party. Re-elected in October 2026.",
     "metrics": {},
     "facts": [],
     "active": true,
     "generated": true,
     "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Karnataka_Legislative_Council",
-      "name": "Wikipedia - List of members of the Karnataka Legislative Council",
-      "retrieved_date": "2026-07-14"
+      "url": "https://www.etvbharat.com/en/state/nda-scores-two-mlc-wins-in-karnataka-leads-in-western-graduates-seat-enn26102709070",
+      "name": "ETV Bharat - Karnataka MLC polls: BJP-JD(S) alliance sweeps all 4 seats (28 October 2026)",
+      "retrieved_date": "2026-11-24"
     }
   },
   {
@@ -142042,7 +141879,7 @@
     "districts": [],
     "current_position": "Member of the Legislative Council (MLC), Karnataka",
     "is_minister": false,
-    "neutral_summary": "Shashil G. Namoshi is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the North-East Teachers constituency. Current party affiliation: Bharatiya Janata Party. Current term: 12-Nov-2020 to 11-Nov-2026.",
+    "neutral_summary": "Shashil G. Namoshi is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the North-East Teachers constituency. Current party affiliation: Bharatiya Janata Party. Re-elected in October 2026.",
     "metrics": {},
     "facts": [
       {
@@ -142063,9 +141900,9 @@
     "active": true,
     "generated": true,
     "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Karnataka_Legislative_Council",
-      "name": "Wikipedia - List of members of the Karnataka Legislative Council",
-      "retrieved_date": "2026-07-14"
+      "url": "https://www.etvbharat.com/en/state/nda-scores-two-mlc-wins-in-karnataka-leads-in-western-graduates-seat-enn26102709070",
+      "name": "ETV Bharat - Karnataka MLC polls: BJP-JD(S) alliance sweeps all 4 seats (28 October 2026)",
+      "retrieved_date": "2026-11-24"
     },
     "wikidata_qid": "Q7490572"
   },
@@ -147002,7 +146839,8 @@
       "source_url": "https://sansad.in/rs/members/biography/2703",
       "source_name": "Digital Sansad - Rajya Sabha (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140288697"
   },
   {
     "id": "narayana-bhandage-rs-ka",
@@ -160926,7 +160764,7 @@
         "value": "82.5% (127 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -160934,7 +160772,7 @@
         "value": "154",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -160942,7 +160780,7 @@
         "value": "50",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -167605,7 +167443,7 @@
     "metrics": {
       "attendance_pct": 84.1,
       "questions_asked": 45,
-      "debates_participated": 10
+      "debates_participated": 11
     },
     "facts": [
       {
@@ -167658,7 +167496,7 @@
         "value": "84.1% (111 of 132 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -167666,15 +167504,15 @@
         "value": "45",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "10",
+        "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -167874,7 +167712,7 @@
         "value": "94.2% (145 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -167882,7 +167720,7 @@
         "value": "101",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -167890,7 +167728,7 @@
         "value": "19",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -170317,7 +170155,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -170325,7 +170163,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -170333,7 +170171,7 @@
         "value": "5",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -173096,7 +172934,8 @@
       "url": "https://results.eci.gov.in/ResultAcByeAugust2026/candidateswise-S1222.htm",
       "name": "Election Commission of India - Datia (Madhya Pradesh) by-election result, declared 3 August 2026",
       "retrieved_date": "2026-08-03"
-    }
+    },
+    "wikidata_qid": "Q140986533"
   },
   {
     "id": "deori-ac-mp-brijbihari-pateriya",
@@ -173575,7 +173414,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -173583,7 +173422,7 @@
         "value": "97",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -173591,7 +173430,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -173892,7 +173731,8 @@
       "source_url": "https://mpla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=16&Assemblyid=16",
       "source_name": "Madhya Pradesh Legislative Assembly - NeVA (National e-Vidhan Application) Member Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q134829734"
   },
   {
     "id": "dhauhani-ac-mp-kunwar-singh-tekam",
@@ -175290,14 +175130,6 @@
         "source_name": "MyNeta / ADR - 2023 assembly election affidavit",
         "retrieved_date": "2026-07-15",
         "as_of": "2023 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "Graduate",
-        "source_url": "https://www.myneta.info/madhyapradesh2023/candidate.php?candidate_id=70",
-        "source_name": "MyNeta / ADR - 2023 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2023 assembly election affidavit"
       }
     ],
     "active": true,
@@ -175314,7 +175146,8 @@
       "source_url": "https://mpla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=16&Assemblyid=16",
       "source_name": "Madhya Pradesh Legislative Assembly - NeVA (National e-Vidhan Application) Member Contact Directory (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q131325172"
   },
   {
     "id": "gwalior-bharat-singh-kushwah",
@@ -178554,7 +178387,7 @@
     "metrics": {
       "attendance_pct": 79.9,
       "questions_asked": 149,
-      "debates_participated": 8
+      "debates_participated": 9
     },
     "facts": [
       {
@@ -178607,7 +178440,7 @@
         "value": "79.9% (123 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -178615,15 +178448,15 @@
         "value": "149",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "8",
+        "value": "9",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -191559,7 +191392,7 @@
     "metrics": {
       "attendance_pct": 88.3,
       "questions_asked": 142,
-      "debates_participated": 28
+      "debates_participated": 29
     },
     "facts": [
       {
@@ -191605,7 +191438,7 @@
         "value": "88.3% (136 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -191613,15 +191446,15 @@
         "value": "142",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "28",
+        "value": "29",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -193543,7 +193376,7 @@
         "value": "87.7% (135 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -193551,7 +193384,7 @@
         "value": "185",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -193559,7 +193392,7 @@
         "value": "26",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -195552,7 +195385,7 @@
         "value": "92.2% (142 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -195560,7 +195393,7 @@
         "value": "63",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -195568,7 +195401,7 @@
         "value": "24",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -199556,7 +199389,7 @@
     "metrics": {
       "attendance_pct": 96.8,
       "questions_asked": 299,
-      "debates_participated": 47
+      "debates_participated": 48
     },
     "facts": [
       {
@@ -199617,7 +199450,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -199625,15 +199458,15 @@
         "value": "299",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "47",
+        "value": "48",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -200820,7 +200653,7 @@
     "metrics": {
       "attendance_pct": 82.5,
       "questions_asked": 256,
-      "debates_participated": 38
+      "debates_participated": 40
     },
     "facts": [
       {
@@ -200873,7 +200706,7 @@
         "value": "82.5% (127 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -200881,15 +200714,15 @@
         "value": "256",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "38",
+        "value": "40",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -205660,7 +205493,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Maharashtra_Legislative_Council",
       "name": "Wikipedia - List of members of the Maharashtra Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q140354588"
   },
   {
     "id": "sunil-karjatkar-mlc-mh",
@@ -208402,7 +208236,7 @@
     "metrics": {
       "attendance_pct": 98.7,
       "questions_asked": 243,
-      "debates_participated": 52
+      "debates_participated": 53
     },
     "facts": [
       {
@@ -208448,7 +208282,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -208456,15 +208290,15 @@
         "value": "243",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "52",
+        "value": "53",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -210149,7 +209983,7 @@
     "metrics": {
       "attendance_pct": 94.2,
       "questions_asked": 78,
-      "debates_participated": 30
+      "debates_participated": 31
     },
     "facts": [
       {
@@ -210203,7 +210037,7 @@
         "value": "94.2% (145 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -210211,15 +210045,15 @@
         "value": "78",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "30",
+        "value": "31",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -214262,58 +214096,6 @@
     }
   },
   {
-    "id": "ramrao-wadkute-rs-mh",
-    "name": "Ramrao Wadkute",
-    "party": "Bharatiya Janata Party",
-    "house": "Rajya Sabha",
-    "state": "Maharashtra",
-    "stateCode": "MH",
-    "constituencyId": "",
-    "constituencyName": "Rajya Sabha",
-    "constituencyType": "RS",
-    "districts": [],
-    "current_position": "Member of Parliament, Rajya Sabha",
-    "is_minister": false,
-    "neutral_summary": "Ramrao Wadkute is a Member of Parliament in the Rajya Sabha (the upper house of India's Parliament), representing Maharashtra. Current party affiliation: Bharatiya Janata Party. Current term: 03-Apr-2026 to 02-Apr-2032.",
-    "metrics": {
-      "attendance_pct": 44,
-      "questions_asked": 15
-    },
-    "facts": [
-      {
-        "field_type": "attendance_pct",
-        "value": "44% (22 of 50 recorded sitting days)",
-        "source_url": "https://sansad.in/rs/members/attendance",
-        "source_name": "Digital Sansad - Rajya Sabha (official)",
-        "retrieved_date": "2026-10-25",
-        "as_of": "Rajya Sabha sessions 266-271"
-      },
-      {
-        "field_type": "questions_asked",
-        "value": "15",
-        "source_url": "https://sansad.in/rs/questions/questions-and-answers",
-        "source_name": "Digital Sansad - Rajya Sabha (official)",
-        "retrieved_date": "2026-10-25",
-        "as_of": "Rajya Sabha sessions 266-271"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_current_members_of_the_Rajya_Sabha",
-      "name": "Rajya Sabha Secretariat (rajyasabha.nic.in) - current members list",
-      "retrieved_date": "2026-07-14"
-    },
-    "contact": {
-      "emails": [
-        "rs.wadkute@mprs.sansad.in"
-      ],
-      "source_url": "https://sansad.in/rs/members/biography/2670",
-      "source_name": "Digital Sansad - Rajya Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
     "id": "sanjay-raut-rs-mh",
     "name": "Sanjay Raut",
     "party": "Shiv Sena (Uddhav Balasaheb Thackeray)",
@@ -216477,7 +216259,7 @@
         "value": "90.9% (140 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -216485,7 +216267,7 @@
         "value": "152",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -216493,7 +216275,7 @@
         "value": "13",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -217771,7 +217553,7 @@
         "value": "90.9% (140 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -217779,7 +217561,7 @@
         "value": "167",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -217787,7 +217569,7 @@
         "value": "41",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -222958,82 +222740,6 @@
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
     }
-  },
-  {
-    "id": "patsoi-ac-mn-sapam-kunjakeswor-singh",
-    "name": "Sapam Kunjakeswor Singh",
-    "party": "Bharatiya Janata Party",
-    "house": "Vidhan Sabha",
-    "state": "Manipur",
-    "stateCode": "MN",
-    "constituencyId": "ac-mn-patsoi",
-    "constituencyName": "Patsoi",
-    "constituencyType": "AC",
-    "districts": [
-      "Imphal West"
-    ],
-    "current_position": "Member of the Legislative Assembly, Manipur",
-    "is_minister": false,
-    "neutral_summary": "Sapam Kunjakeswor Singh is the Member of the Legislative Assembly (MLA) for the Patsoi constituency in Manipur. Current party affiliation: Bharatiya Janata Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 1 January 1959 (age 67)",
-        "source_url": "https://www.wikidata.org/wiki/Q23304581",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q23304581",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹23,43,487 (~23 Lacs)",
-        "source_url": "https://www.myneta.info/manipur2022/candidate.php?candidate_id=154",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹32,75,166 (~32 Lacs)",
-        "source_url": "https://www.myneta.info/manipur2022/candidate.php?candidate_id=154",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "1",
-        "source_url": "https://www.myneta.info/manipur2022/candidate.php?candidate_id=154",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "Graduate",
-        "source_url": "https://www.myneta.info/manipur2022/candidate.php?candidate_id=154",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/12th_Manipur_Assembly",
-      "name": "Wikipedia - 12th Manipur Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q23304581",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sapam%20Keba%20portrait.png?width=400",
-    "photo_license": "CC BY-SA 4.0 · Wikimedia Commons"
   },
   {
     "id": "phungyar-ac-mn-leishiyo-keishing",
@@ -256593,40 +256299,7 @@
     "is_minister": false,
     "neutral_summary": "V. Karthikeyan is the Member of the Legislative Assembly (MLA) for the Nellithope constituency in Puducherry. Current party affiliation: Dravida Munnetra Kazhagam.",
     "metrics": {},
-    "facts": [
-      {
-        "field_type": "assets_total",
-        "value": "₹5,60,79,827 (~5 Crore)",
-        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹1,95,54,130 (~1 Crore)",
-        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "7",
-        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "Others",
-        "source_url": "https://www.myneta.info/Puducherry2026/candidate.php?candidate_id=52",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-11-24",
-        "as_of": "2026 assembly election affidavit"
-      }
-    ],
+    "facts": [],
     "active": true,
     "generated": true,
     "identity_source": {
@@ -257148,7 +256821,7 @@
     "metrics": {
       "attendance_pct": 79.2,
       "questions_asked": 70,
-      "debates_participated": 11
+      "debates_participated": 13
     },
     "facts": [
       {
@@ -257215,7 +256888,7 @@
         "value": "79.2% (122 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -257223,15 +256896,15 @@
         "value": "70",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "11",
+        "value": "13",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -258502,96 +258175,6 @@
         "jeevanjyotkaur.pvs@punjab.gov.in"
       ],
       "source_url": "https://punjabassembly.gov.in/Members/MembersProfile?MemberID=180&AssemblyID=16",
-      "source_name": "Punjab Vidhan Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
-    "id": "amritsar-north-ac-pb-kunwar-vijay-pratap-singh",
-    "name": "Kunwar Vijay Pratap Singh",
-    "party": "Aam Aadmi Party",
-    "house": "Vidhan Sabha",
-    "state": "Punjab",
-    "stateCode": "PB",
-    "constituencyId": "ac-pb-amritsar-north",
-    "constituencyName": "Amritsar North",
-    "constituencyType": "AC",
-    "districts": [
-      "Amritsar"
-    ],
-    "current_position": "Member of the Legislative Assembly, Punjab",
-    "is_minister": false,
-    "neutral_summary": "Kunwar Vijay Pratap Singh is the Member of the Legislative Assembly (MLA) for the Amritsar North constituency in Punjab. Current party affiliation: Aam Aadmi Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q111179902",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the 16th Punjab Legislative Assembly (2022-present)",
-        "source_url": "https://www.wikidata.org/wiki/Q111179902",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q111179902",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹2,11,56,656 (~2 Crore)",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=449",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹12,87,067 (~12 Lacs)",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=449",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=449",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "Doctorate",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=449",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/16th_Punjab_Assembly",
-      "name": "Wikipedia - 16th Punjab Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q111179902",
-    "terms_served": 1,
-    "contact": {
-      "emails": [
-        "kunwar.amritsar@gmail.com"
-      ],
-      "source_url": "https://punjabassembly.gov.in/Members/MembersProfile?MemberID=189&AssemblyID=16",
       "source_name": "Punjab Vidhan Sabha (official)",
       "retrieved_date": "2026-07-17"
     }
@@ -268764,103 +268347,6 @@
     }
   },
   {
-    "id": "samana-ac-pb-chetan-singh-jaura-majra",
-    "name": "Chetan Singh Jaura Majra",
-    "party": "Aam Aadmi Party",
-    "house": "Vidhan Sabha",
-    "state": "Punjab",
-    "stateCode": "PB",
-    "constituencyId": "ac-pb-samana",
-    "constituencyName": "Samana",
-    "constituencyType": "AC",
-    "districts": [
-      "Patiala"
-    ],
-    "current_position": "Member of the Legislative Assembly, Punjab",
-    "is_minister": false,
-    "neutral_summary": "Chetan Singh Jaura Majra is the Member of the Legislative Assembly (MLA) for the Samana constituency in Punjab. Current party affiliation: Aam Aadmi Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "age",
-        "value": "Born 1 January 1967 (age 59)",
-        "source_url": "https://www.wikidata.org/wiki/Q110778087",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q110778087",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the 16th Punjab Legislative Assembly (2022-present)",
-        "source_url": "https://www.wikidata.org/wiki/Q110778087",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q110778087",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹1,22,76,261 (~1 Crore)",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=152",
-        "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹37,89,350 (~37 Lacs)",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=152",
-        "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "1",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=152",
-        "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "12th Pass",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=152",
-        "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
-        "retrieved_date": "2026-07-15",
-        "as_of": "2022 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/16th_Punjab_Assembly",
-      "name": "Wikipedia - 16th Punjab Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q110778087",
-    "terms_served": 1,
-    "contact": {
-      "emails": [
-        "chetansingh9975@gmail.com"
-      ],
-      "source_url": "https://punjabassembly.gov.in/Members/MembersProfile?MemberID=149&AssemblyID=16",
-      "source_name": "Punjab Vidhan Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
     "id": "samrala-ac-pb-jagtar-singh",
     "name": "Jagtar Singh",
     "party": "Aam Aadmi Party",
@@ -269155,96 +268641,6 @@
         "narinderkaur.pvs@punjab.gov.in"
       ],
       "source_url": "https://punjabassembly.gov.in/Members/MembersProfile?MemberID=201&AssemblyID=16",
-      "source_name": "Punjab Vidhan Sabha (official)",
-      "retrieved_date": "2026-07-17"
-    }
-  },
-  {
-    "id": "sanour-ac-pb-harmit-singh-pathanmajra",
-    "name": "Harmit Singh Pathanmajra",
-    "party": "Aam Aadmi Party",
-    "house": "Vidhan Sabha",
-    "state": "Punjab",
-    "stateCode": "PB",
-    "constituencyId": "ac-pb-sanour",
-    "constituencyName": "Sanour",
-    "constituencyType": "AC",
-    "districts": [
-      "Patiala"
-    ],
-    "current_position": "Member of the Legislative Assembly, Punjab",
-    "is_minister": false,
-    "neutral_summary": "Harmit Singh Pathanmajra is the Member of the Legislative Assembly (MLA) for the Sanour constituency in Punjab. Current party affiliation: Aam Aadmi Party.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q111217491",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "previous_positions",
-        "value": "Member of the 16th Punjab Legislative Assembly (2022-present)",
-        "source_url": "https://www.wikidata.org/wiki/Q111217491",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q111217491",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-07-14"
-      },
-      {
-        "field_type": "assets_total",
-        "value": "₹2,41,86,077 (~2 Crore)",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=1213",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹4,00,000 (~4 Lacs)",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=1213",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=1213",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "12th Pass",
-        "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=1213",
-        "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2022 assembly election affidavit"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/16th_Punjab_Assembly",
-      "name": "Wikipedia - 16th Punjab Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q111217491",
-    "terms_served": 1,
-    "contact": {
-      "emails": [
-        "harmitsingh.pvs@punjab.gov.in"
-      ],
-      "source_url": "https://punjabassembly.gov.in/Members/MembersProfile?MemberID=167&AssemblyID=16",
       "source_name": "Punjab Vidhan Sabha (official)",
       "retrieved_date": "2026-07-17"
     }
@@ -295652,7 +295048,7 @@
     "metrics": {
       "attendance_pct": 82.5,
       "questions_asked": 167,
-      "debates_participated": 48
+      "debates_participated": 49
     },
     "facts": [
       {
@@ -295712,7 +295108,7 @@
         "value": "82.5% (127 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -295720,15 +295116,15 @@
         "value": "167",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "48",
+        "value": "49",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -296129,7 +295525,7 @@
     "metrics": {
       "attendance_pct": 64.9,
       "questions_asked": 124,
-      "debates_participated": 17
+      "debates_participated": 18
     },
     "facts": [
       {
@@ -296189,7 +295585,7 @@
         "value": "64.9% (100 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -296197,15 +295593,15 @@
         "value": "124",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "17",
+        "value": "18",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -296382,20 +295778,6 @@
         "source_name": "MyNeta / ADR - 2026 assembly affidavit",
         "retrieved_date": "2026-07-14",
         "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "profession",
-        "value": "politician",
-        "source_url": "https://www.wikidata.org/wiki/Q65030968",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-11-24"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "3",
-        "source_url": "https://www.wikidata.org/wiki/Q65030968",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-11-24"
       }
     ],
     "active": true,
@@ -296413,7 +295795,6 @@
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
     },
-    "wikidata_qid": "Q65030968",
     "terms_served": 3
   },
   {
@@ -299676,7 +299057,7 @@
     "metrics": {
       "attendance_pct": 91.6,
       "questions_asked": 193,
-      "debates_participated": 31
+      "debates_participated": 32
     },
     "facts": [
       {
@@ -299729,7 +299110,7 @@
         "value": "91.6% (141 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -299737,15 +299118,15 @@
         "value": "193",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "31",
+        "value": "32",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -300658,89 +300039,6 @@
     }
   },
   {
-    "id": "kolathur-ac-tn-v-s-babu",
-    "name": "V. S. Babu",
-    "party": "Tamilaga Vettri Kazhagam",
-    "house": "Vidhan Sabha",
-    "state": "Tamil Nadu",
-    "stateCode": "TN",
-    "constituencyId": "ac-tn-kolathur",
-    "constituencyName": "Kolathur",
-    "constituencyType": "AC",
-    "districts": [
-      "Chennai"
-    ],
-    "current_position": "Member of the Legislative Assembly, Tamil Nadu",
-    "is_minister": false,
-    "neutral_summary": "V. S. Babu is the Member of the Legislative Assembly (MLA) for the Kolathur constituency in Tamil Nadu. Current party affiliation: Tamilaga Vettri Kazhagam.",
-    "metrics": {},
-    "facts": [
-      {
-        "field_type": "assets_total",
-        "value": "₹3,66,94,500 (~3 Crore)",
-        "source_url": "https://www.myneta.info/TamilNadu2026/candidate.php?candidate_id=2597",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "liabilities_total",
-        "value": "₹0",
-        "source_url": "https://www.myneta.info/TamilNadu2026/candidate.php?candidate_id=2597",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "criminal_cases_declared",
-        "value": "0",
-        "source_url": "https://www.myneta.info/TamilNadu2026/candidate.php?candidate_id=2597",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "education",
-        "value": "8th Pass",
-        "source_url": "https://www.myneta.info/TamilNadu2026/candidate.php?candidate_id=2597",
-        "source_name": "MyNeta / ADR - 2026 assembly affidavit",
-        "retrieved_date": "2026-07-14",
-        "as_of": "2026 assembly election affidavit"
-      },
-      {
-        "field_type": "age",
-        "value": "Born 1951 (age 75)",
-        "source_url": "https://www.wikidata.org/wiki/Q139303649",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-11-24"
-      },
-      {
-        "field_type": "terms_served",
-        "value": "1",
-        "source_url": "https://www.wikidata.org/wiki/Q139303649",
-        "source_name": "Wikidata",
-        "retrieved_date": "2026-11-24"
-      }
-    ],
-    "active": true,
-    "generated": true,
-    "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/17th_Tamil_Nadu_Assembly",
-      "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
-      "retrieved_date": "2026-07-14"
-    },
-    "wikidata_qid": "Q139303649",
-    "contact": {
-      "emails": [
-        "mlakolathur@tn.gov.in"
-      ],
-      "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
-      "source_name": "Tamil Nadu Legislative Assembly (official)",
-      "retrieved_date": "2026-07-17"
-    },
-    "terms_served": 1
-  },
-  {
     "id": "kovilpatti-ac-tn-k-karunanithi",
     "name": "K. Karunanithi",
     "party": "Dravida Munnetra Kazhagam",
@@ -301179,7 +300477,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q141019547"
   },
   {
     "id": "kumarapalayam-ac-tn-c-vijayalakshmi",
@@ -310522,7 +309821,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q141488367"
   },
   {
     "id": "sirkazhi-ac-tn-r-senthilselvan",
@@ -311174,7 +310474,8 @@
       "source_url": "https://assembly.tn.gov.in/17thassembly/members.php",
       "source_name": "Tamil Nadu Legislative Assembly (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q139902421"
   },
   {
     "id": "srivaikuntam-ac-tn-g-saravanan",
@@ -312021,7 +311322,7 @@
     "metrics": {
       "attendance_pct": 81.2,
       "questions_asked": 106,
-      "debates_participated": 20
+      "debates_participated": 21
     },
     "facts": [
       {
@@ -312074,7 +311375,7 @@
         "value": "81.2% (125 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -312082,15 +311383,15 @@
         "value": "106",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "20",
+        "value": "21",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -312793,7 +312094,7 @@
         "value": "87.7% (135 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -312801,7 +312102,7 @@
         "value": "110",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -312809,7 +312110,7 @@
         "value": "14",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -313029,7 +312330,8 @@
       "url": "https://en.wikipedia.org/wiki/17th_Tamil_Nadu_Assembly",
       "name": "Wikipedia - 17th Tamil Nadu Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q141019545"
   },
   {
     "id": "thiruvidaimarudur-ac-tn-govi-chezhian",
@@ -314066,7 +313368,7 @@
     "metrics": {
       "attendance_pct": 85.1,
       "questions_asked": 101,
-      "debates_participated": 20
+      "debates_participated": 21
     },
     "facts": [
       {
@@ -314112,7 +313414,7 @@
         "value": "85.1% (131 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -314120,15 +313422,15 @@
         "value": "101",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "20",
+        "value": "21",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -324704,7 +324006,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127505077"
   },
   {
     "id": "malakpet-ac-tg-ahmed-bin-abdullah-balala",
@@ -325032,7 +324335,10 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127429088",
+    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kavvampalli%20Satyanarayana.jpg?width=400",
+    "photo_license": "CC0 · Wikimedia Commons"
   },
   {
     "id": "mancherial-ac-tg-kokkirala-premsagar-rao",
@@ -325512,7 +324818,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127436079"
   },
   {
     "id": "mudhole-ac-tg-pawar-ramarao-patel",
@@ -325854,7 +325161,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127501145"
   },
   {
     "id": "nagarkurnool-ac-tg-kuchkulla-rajesh-reddy",
@@ -325913,7 +325221,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127504767"
   },
   {
     "id": "nagarkurnool-mallu-ravi",
@@ -327261,7 +326570,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127470763"
   },
   {
     "id": "patancheru-ac-tg-gudem-mahipal-reddy",
@@ -328323,7 +327633,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127503296"
   },
   {
     "id": "sanathnagar-ac-tg-talasani-srinivas-yadav",
@@ -329568,7 +328879,8 @@
       "url": "https://en.wikipedia.org/wiki/3rd_Telangana_Assembly",
       "name": "Wikipedia - 3rd Telangana Assembly (ECI results)",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q127510335"
   },
   {
     "id": "vikarabad-ac-tg-gaddam-prasad-kumar",
@@ -330477,7 +329789,7 @@
         "value": "83.1% (128 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -330485,7 +329797,7 @@
         "value": "162",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -330493,7 +329805,7 @@
         "value": "8",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -336828,7 +336140,7 @@
         "value": "99.4% (153 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -336836,7 +336148,7 @@
         "value": "72",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -336844,7 +336156,7 @@
         "value": "25",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -345096,7 +344408,7 @@
     "metrics": {
       "attendance_pct": 93.5,
       "questions_asked": 79,
-      "debates_participated": 38
+      "debates_participated": 39
     },
     "facts": [
       {
@@ -345156,7 +344468,7 @@
         "value": "93.5% (144 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -345164,15 +344476,15 @@
         "value": "79",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "38",
+        "value": "39",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -352991,7 +352303,7 @@
     "metrics": {
       "attendance_pct": 96.8,
       "questions_asked": 69,
-      "debates_participated": 12
+      "debates_participated": 13
     },
     "facts": [
       {
@@ -353030,7 +352342,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -353038,15 +352350,15 @@
         "value": "69",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "12",
+        "value": "13",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -358947,7 +358259,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Uttar_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Uttar Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q126901539"
   },
   {
     "id": "annapurna-singh-mlc-up",
@@ -359287,7 +358600,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Uttar_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Uttar Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q133816397"
   },
   {
     "id": "awadhesh-kumar-singh-mlc-up",
@@ -360462,7 +359776,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_members_of_the_Uttar_Pradesh_Legislative_Council",
       "name": "Wikipedia - List of members of the Uttar Pradesh Legislative Council",
       "retrieved_date": "2026-07-14"
-    }
+    },
+    "wikidata_qid": "Q115804135"
   },
   {
     "id": "lal-ji-prasad-mlc-up",
@@ -367049,7 +366364,7 @@
     "metrics": {
       "attendance_pct": 100,
       "questions_asked": 106,
-      "debates_participated": 21
+      "debates_participated": 22
     },
     "facts": [
       {
@@ -367109,7 +366424,7 @@
         "value": "100% (154 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -367117,15 +366432,15 @@
         "value": "106",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "21",
+        "value": "22",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -372221,15 +371536,15 @@
     "name": "Hardeep Singh Puri",
     "party": "Bharatiya Janata Party",
     "house": "Rajya Sabha",
-    "state": "Uttar Pradesh",
-    "stateCode": "UP",
+    "state": "Madhya Pradesh",
+    "stateCode": "MP",
     "constituencyId": "",
     "constituencyName": "Rajya Sabha",
     "constituencyType": "RS",
     "districts": [],
     "current_position": "Union Cabinet Minister",
     "is_minister": true,
-    "neutral_summary": "Hardeep Singh Puri is a Member of Parliament in the Rajya Sabha (the upper house of India's Parliament), representing Uttar Pradesh. Current party affiliation: Bharatiya Janata Party. Current term: 26-Nov-2020 to 25-Nov-2026.",
+    "neutral_summary": "Hardeep Singh Puri is a Member of Parliament in the Rajya Sabha (the upper house of India's Parliament), representing Madhya Pradesh. Current party affiliation: Bharatiya Janata Party. Current term: 05-Nov-2026 to 02-Apr-2030.",
     "metrics": {},
     "facts": [
       {
@@ -372287,9 +371602,9 @@
     "active": true,
     "generated": true,
     "identity_source": {
-      "url": "https://en.wikipedia.org/wiki/List_of_current_members_of_the_Rajya_Sabha",
-      "name": "Rajya Sabha Secretariat (rajyasabha.nic.in) - current members list",
-      "retrieved_date": "2026-07-14"
+      "url": "https://sansad.in/api_rs/member/sitting-members?state=&party=&gender=&page=1&size=300&mpFlag=1&locale=en",
+      "name": "Rajya Sabha Secretariat - sitting members (Digital Sansad, official)",
+      "retrieved_date": "2026-11-24"
     },
     "wikidata_qid": "Q5655835",
     "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hardeep%20Singh%20Puri%20-%202018%20(45176824921)%20(cropped).jpg?width=400",
@@ -372310,7 +371625,8 @@
     "metrics_exempt": {
       "attendance_pct": "minister",
       "questions_asked": "minister"
-    }
+    },
+    "party_note": "Declared elected unopposed from Madhya Pradesh on 5 November 2026, to the seat L. Murugan vacated; his Uttar Pradesh seat, whose term ran to 25 November 2026, was given up."
   },
   {
     "id": "javed-ali-khan-rs-up",
@@ -374253,7 +373569,7 @@
     "metrics": {
       "attendance_pct": 93.5,
       "questions_asked": 53,
-      "debates_participated": 13
+      "debates_participated": 14
     },
     "facts": [
       {
@@ -374306,7 +373622,7 @@
         "value": "93.5% (144 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -374314,15 +373630,15 @@
         "value": "53",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "13",
+        "value": "14",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -379348,7 +378664,8 @@
       "source_name": "Digital Sansad - Lok Sabha (official)",
       "retrieved_date": "2026-07-17"
     },
-    "party_note": "Member of Parliament for the Sitapur Lok Sabha seat. He is not Rakesh Rathour \"Guru\", who holds the Sitapur assembly seat and is a minister in the state government: two different men of the same name."
+    "party_note": "Member of Parliament for the Sitapur Lok Sabha seat. He is not Rakesh Rathour \"Guru\", who holds the Sitapur assembly seat and is a minister in the state government: two different men of the same name.",
+    "wikidata_qid": "Q125577303"
   },
   {
     "id": "sitapur-ac-up-rakesh-rathour-guru",
@@ -388621,7 +387938,7 @@
         "value": "63.6% (98 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -388629,7 +387946,7 @@
         "value": "6",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -388637,7 +387954,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -389200,7 +388517,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/543?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140043650"
   },
   {
     "id": "bagnan-ac-wb-arunava-sen",
@@ -389746,7 +389064,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/542?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140046553"
   },
   {
     "id": "bally-ac-wb-sanjay-kumar-singh",
@@ -401907,7 +401226,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/544?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q139695934"
   },
   {
     "id": "kakdwip-ac-wb-dipankar-jana",
@@ -405001,7 +404321,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/388?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q141237146"
   },
   {
     "id": "kulpi-ac-wb-barnali-dhara",
@@ -407936,7 +407257,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/568?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q139979227"
   },
   {
     "id": "metiaburuz-ac-wb-abdul-khaleque-molla",
@@ -408183,7 +407505,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/566?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q139979232"
   },
   {
     "id": "mothabari-ac-wb-md-najrul-islam",
@@ -409471,7 +408794,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/528?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140072879"
   },
   {
     "id": "natabari-ac-wb-girija-shankar-ray",
@@ -410515,7 +409839,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/515?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140450719"
   },
   {
     "id": "patharpratima-ac-wb-samir-kumar-jana",
@@ -410747,7 +410072,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/530?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140044848"
   },
   {
     "id": "purbasthali-dakshin-ac-wb-prankrishna-tapadar",
@@ -410814,7 +410140,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/571?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140137318"
   },
   {
     "id": "purbasthali-uttar-ac-wb-gopal-chattopadhyay",
@@ -413361,7 +412688,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/395?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140453833"
   },
   {
     "id": "ranaghat-uttar-paschim-ac-wb-parthasarathi-chatterjee",
@@ -414013,7 +413341,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/529?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140078380"
   },
   {
     "id": "sagar-ac-wb-sumanta-mandal",
@@ -414320,7 +413649,8 @@
       "source_url": "https://wbla.neva.gov.in/Member/Details/537?AssemblyID=18",
       "source_name": "West Bengal Legislative Assembly - National eVidhan Application (NeVA) portal (official)",
       "retrieved_date": "2026-07-17"
-    }
+    },
+    "wikidata_qid": "Q140043973"
   },
   {
     "id": "saltora-ac-wb-chandana-bauri",
@@ -418132,7 +417462,8 @@
       "url": "https://theprint.in/india/andhra-guv-nominates-two-tdp-leaders-as-mlcs/3019814/",
       "name": "ThePrint (PTI), 19 Aug 2026",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q141183643"
   },
   {
     "id": "vadde-dalavayi-ramadevi-mlc-ap",
@@ -418180,7 +417511,8 @@
       "url": "https://aplegislature.org/web/legislative-council/member-s-information",
       "name": "AP Legislature - Legislative Council Members Information (official)",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q133259367"
   },
   {
     "id": "alapati-rajendra-prasad-mlc-ap",
@@ -418228,7 +417560,8 @@
       "url": "https://aplegislature.org/web/legislative-council/member-s-information",
       "name": "AP Legislature - Legislative Council Members Information (official)",
       "retrieved_date": "2026-09-17"
-    }
+    },
+    "wikidata_qid": "Q133272650"
   },
   {
     "id": "botcha-satyanarayana-mlc-ap",
@@ -419866,6 +419199,54 @@
       "source_url": "https://sansad.in/rs/members/biography/2680",
       "source_name": "Digital Sansad - Rajya Sabha (official)",
       "retrieved_date": "2026-10-25"
+    }
+  },
+  {
+    "id": "a-p-ranganath-mlc-ka",
+    "name": "A. P. Ranganath",
+    "party": "Janata Dal (Secular)",
+    "house": "Vidhan Parishad",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "constituencyId": "",
+    "constituencyName": "Legislative Council",
+    "constituencyType": "MLC",
+    "districts": [],
+    "current_position": "Member of the Legislative Council (MLC), Karnataka",
+    "is_minister": false,
+    "neutral_summary": "A. P. Ranganath is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the Bengaluru Teachers constituency in October 2026. Current party affiliation: Janata Dal (Secular).",
+    "metrics": {},
+    "facts": [],
+    "active": true,
+    "generated": true,
+    "identity_source": {
+      "url": "https://www.etvbharat.com/en/state/nda-scores-two-mlc-wins-in-karnataka-leads-in-western-graduates-seat-enn26102709070",
+      "name": "ETV Bharat - Karnataka MLC polls: BJP-JD(S) alliance sweeps all 4 seats (28 October 2026)",
+      "retrieved_date": "2026-11-24"
+    }
+  },
+  {
+    "id": "k-m-suresh-mlc-ka",
+    "name": "K. M. Suresh",
+    "party": "Bharatiya Janata Party",
+    "house": "Vidhan Parishad",
+    "state": "Karnataka",
+    "stateCode": "KA",
+    "constituencyId": "",
+    "constituencyName": "Legislative Council",
+    "constituencyType": "MLC",
+    "districts": [],
+    "current_position": "Member of the Legislative Council (MLC), Karnataka",
+    "is_minister": false,
+    "neutral_summary": "K. M. Suresh is a Member of the Legislative Council (MLC) in Karnataka - the Vidhan Parishad, the upper house of the state legislature - elected to the Council by the South-East Graduates constituency in October 2026. Current party affiliation: Bharatiya Janata Party.",
+    "metrics": {},
+    "facts": [],
+    "active": true,
+    "generated": true,
+    "identity_source": {
+      "url": "https://www.etvbharat.com/en/state/nda-scores-two-mlc-wins-in-karnataka-leads-in-western-graduates-seat-enn26102709070",
+      "name": "ETV Bharat - Karnataka MLC polls: BJP-JD(S) alliance sweeps all 4 seats (28 October 2026)",
+      "retrieved_date": "2026-11-24"
     }
   }
 ]

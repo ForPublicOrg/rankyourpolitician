@@ -166,5 +166,53 @@
     "source_url": "https://telanganatoday.com/supreme-court-upholds-danam-nagenders-disqualification-as-mla",
     "source_name": "Telangana Today - Supreme Court upholds Danam Nagender's disqualification as MLA (24 September 2026)",
     "retrieved_date": "2026-09-28"
+  },
+  {
+    "constituencyId": "ac-tn-kolathur",
+    "value": "V. S. Babu, elected from Kolathur in April 2026, died on 19 November 2026. The seat is vacant until the Election Commission holds a bye-election; none had been announced when this page was last checked.",
+    "as_of": "2026-11-19",
+    "source_url": "https://www.deccanherald.com/india/tamil-nadu-mla-vs-babu-passes-away-in-chennai-after-prolonged-illness-4223960",
+    "source_name": "Deccan Herald - TVK's Kolathur MLA who defeated Stalin dies at 75 after prolonged illness (19 November 2026)",
+    "retrieved_date": "2026-11-24"
+  },
+  {
+    "constituencyId": "pc-jk-srinagar",
+    "value": "Aga Syed Ruhullah Mehdi, elected from Srinagar in 2024, resigned his seat; the Speaker accepted the resignation with effect from 3 November 2026. The Lok Sabha Secretariat lists Srinagar among the vacant constituencies of the 18th Lok Sabha, and no by-election had been notified when this page was last checked.",
+    "as_of": "2026-11-03",
+    "source_url": "https://sansad.in/api_ls/member/vacantConstituency?loksabha=18&locale=en",
+    "source_name": "Lok Sabha Secretariat - vacant constituencies of the 18th Lok Sabha (official)",
+    "retrieved_date": "2026-11-24"
+  },
+  {
+    "constituencyId": "ac-mn-patsoi",
+    "value": "Sapam Kunjakeswor Singh, elected from Patsoi (Assembly constituency 19) in 2022, died on 20 November 2026. A bulletin of the Assembly Secretary declared the seat vacant with effect from that date.",
+    "as_of": "2026-11-20",
+    "source_url": "https://assamtribune.com/north-east/bjp-mla-kunjakeswors-death-adds-patsoi-to-manipur-assemblys-2-existing-vacancies-1623174",
+    "source_name": "The Assam Tribune - BJP MLA Kunjakeswor's death adds Patsoi to Manipur Assembly's 2 existing vacancies (23 November 2026)",
+    "retrieved_date": "2026-11-24"
+  },
+  {
+    "constituencyId": "ac-pb-amritsar-north",
+    "value": "Kunwar Vijay Pratap Singh, elected from Amritsar North, resigned his seat; Speaker Kultar Singh Sandhwan accepted the resignation and the seat was declared vacant on 2 November 2026.",
+    "as_of": "2026-11-02",
+    "source_url": "https://www.tribuneindia.com/news/punjab/chetan-singh-jouramajra-resigns-as-mla-after-quitting-aap-party-strength-down-to-91-in-assembly",
+    "source_name": "The Tribune - Chetan Singh Jouramajra resigns as MLA after quitting AAP (3 November 2026)",
+    "retrieved_date": "2026-11-24"
+  },
+  {
+    "constituencyId": "ac-pb-sanour",
+    "value": "Harmeet Singh Pathanmajra, elected from Sanour, resigned his seat; Speaker Kultar Singh Sandhwan accepted the resignation and the seat was declared vacant on 2 November 2026.",
+    "as_of": "2026-11-02",
+    "source_url": "https://www.tribuneindia.com/news/punjab/chetan-singh-jouramajra-resigns-as-mla-after-quitting-aap-party-strength-down-to-91-in-assembly",
+    "source_name": "The Tribune - Chetan Singh Jouramajra resigns as MLA after quitting AAP (3 November 2026)",
+    "retrieved_date": "2026-11-24"
+  },
+  {
+    "constituencyId": "ac-pb-samana",
+    "value": "Chetan Singh Jauramajra, elected from Samana, resigned his seat; Speaker Kultar Singh Sandhwan accepted the resignation and the seat was declared vacant on 3 November 2026.",
+    "as_of": "2026-11-03",
+    "source_url": "https://www.tribuneindia.com/news/punjab/chetan-singh-jouramajra-resigns-as-mla-after-quitting-aap-party-strength-down-to-91-in-assembly",
+    "source_name": "The Tribune - Chetan Singh Jouramajra resigns as MLA after quitting AAP (3 November 2026)",
+    "retrieved_date": "2026-11-24"
   }
 ]

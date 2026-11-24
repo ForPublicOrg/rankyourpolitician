@@ -166200,26 +166200,6 @@
     "as_of": "2024 assembly election affidavit"
   },
   {
-    "politician_id": "patsoi-ac-mn-sapam-kunjakeswor-singh",
-    "declared_total": 1,
-    "charges": [],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "case_no": "Cril (NI Act) Case No. 15/2019",
-        "court": "CJM Imphal West",
-        "other_sections": "Section 138 of Negotiable Instrument Act",
-        "charges_framed": "No",
-        "appeal_filed": "No"
-      }
-    ],
-    "source_url": "https://www.myneta.info/manipur2022/candidate.php?candidate_id=154",
-    "source_name": "MyNeta / ADR - 2022 assembly affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2022 assembly election affidavit"
-  },
-  {
     "politician_id": "patti-ac-pb-laljit-singh-bhullar",
     "declared_total": 3,
     "charges": [
@@ -187255,40 +187235,6 @@
     "source_name": "MyNeta / ADR - 2024 assembly election affidavit",
     "retrieved_date": "2026-07-16",
     "as_of": "2024 assembly election affidavit"
-  },
-  {
-    "politician_id": "samana-ac-pb-chetan-singh-jaura-majra",
-    "declared_total": 1,
-    "charges": [
-      {
-        "count": 1,
-        "description": "Disobedience to order duly promulgated by public servant",
-        "law": "IPC",
-        "section": "188"
-      },
-      {
-        "count": 1,
-        "description": "Negligent act likely to spread infection of disease dangerous to life",
-        "law": "IPC",
-        "section": "269"
-      }
-    ],
-    "cases": [
-      {
-        "status": "pending",
-        "status_label": "Pending",
-        "fir_no": "0196 PS Sadar Nabha 27.08.2020",
-        "sections": "188, 269",
-        "other_sections": "Section-51 Disaster Management Act 2005",
-        "charges_framed": "No",
-        "appeal_filed": "No",
-        "law": "IPC"
-      }
-    ],
-    "source_url": "https://www.myneta.info/punjab2022/candidate.php?candidate_id=152",
-    "source_name": "MyNeta / ADR - 2022 assembly election affidavit",
-    "retrieved_date": "2026-07-16",
-    "as_of": "2022 assembly election affidavit"
   },
   {
     "politician_id": "sambalpur-ac-od-jayanarayan-mishra",
