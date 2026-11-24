@@ -312,8 +312,14 @@ async function main() {
     for (const c of conflicts) console.log(`    · ${c}`);
   }
 
+  // Coverage is owed to the 32 governments with their own audit reports: the
+  // Union plus every state/UT with an elected legislature. The UTs run by an
+  // Administrator (AN, CH, DN, LA, LD) are audited inside the Union's reports,
+  // so requiring a row of their own would block every import; a report the
+  // Commission does file under one of them is still accepted above.
+  const owed = [UNION_GOV, ...stateGovs.filter((g) => g.governmentStatus !== 'administered').map((g) => g.stateCode)];
   const govsCovered = new Set(merged.map((r) => r.gov));
-  const missing = [...validGovs].filter((g) => !govsCovered.has(g));
+  const missing = owed.filter((g) => !govsCovered.has(g));
   if (missing.length) {
     console.error(`\n✗ no report indexed for: ${missing.join(', ')} - partial coverage reads as selective attention. Refusing to write.`);
     process.exit(1);

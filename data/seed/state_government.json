@@ -3374,7 +3374,7 @@
     "stateCode": "JK",
     "state": "Jammu and Kashmir",
     "governmentStatus": "elected",
-    "asOf": "as of 17 September 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
+    "asOf": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
     "confidence": "high",
     "governor": {
       "name": "Manoj Sinha",
@@ -3390,14 +3390,12 @@
         "name": "Omar Abdullah",
         "party": "Jammu & Kashmir National Conference",
         "portfolios": [
-          "General Administration Department",
-          "Home",
-          "and all departments not specifically allotted to other ministers"
+          "All departments not allotted to other ministers"
         ],
-        "source_url": "https://dipr.jk.gov.in/Prnv?n=10508",
-        "source_name": "dipr.jk.gov.in",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
         "politicianId": "ganderbal-ac-jk-omar-abdullah"
       },
       {
@@ -3408,35 +3406,69 @@
         "name": "Surinder Kumar Choudhary",
         "party": "Jammu & Kashmir National Conference",
         "portfolios": [
-          "Public Works (R&B)",
-          "Industries & Commerce",
-          "Mining",
-          "Labour & Employment",
+          "Public Works",
+          "Industries and Commerce",
+          "Labour and Employment",
           "Skill Development"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Omar_Abdullah_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)"
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)"
+      },
+      {
+        "stateCode": "JK",
+        "state": "Jammu and Kashmir",
+        "party": "Jammu & Kashmir National Conference",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
+        "id": "ali-mohammad-sagar-jk",
+        "rank": "Cabinet",
+        "name": "Ali Mohammad Sagar",
+        "portfolios": [
+          "Revenue",
+          "Power Development",
+          "Law, Justice and Parliamentary Affairs",
+          "Election"
+        ],
+        "politicianId": "khanyar-ac-jk-ali-mohammad-sagar"
       },
       {
         "id": "sakina-itoo-jk",
         "stateCode": "JK",
         "state": "Jammu and Kashmir",
         "rank": "Cabinet",
-        "name": "Sakina Itoo",
+        "name": "Sakeena Masood Itoo",
         "party": "Jammu & Kashmir National Conference",
         "portfolios": [
-          "Health & Medical Education",
-          "School Education",
-          "Higher Education",
+          "Health and Medical Education",
           "Social Welfare"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Omar_Abdullah_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
         "politicianId": "dh-pora-ac-jk-sakina-itoo"
+      },
+      {
+        "id": "javed-ahmed-rana-jk",
+        "stateCode": "JK",
+        "state": "Jammu and Kashmir",
+        "rank": "Cabinet",
+        "name": "Javed Ahmed Rana",
+        "party": "Jammu & Kashmir National Conference",
+        "portfolios": [
+          "Food, Civil Supplies and Consumer Affairs",
+          "Tribal Affairs",
+          "Transport"
+        ],
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
+        "politicianId": "mendhar-ac-jk-javed-ahmed-rana"
       },
       {
         "id": "javid-ahmad-dar-jk",
@@ -3447,57 +3479,73 @@
         "party": "Jammu & Kashmir National Conference",
         "portfolios": [
           "Agriculture Production",
-          "Rural Development & Panchayati Raj",
-          "Cooperative",
-          "Election"
+          "Finance",
+          "Mining",
+          "Cooperatives"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Omar_Abdullah_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
         "politicianId": "rafiabad-ac-jk-javid-ahmad-dar"
       },
       {
-        "id": "javed-ahmed-rana-jk",
         "stateCode": "JK",
         "state": "Jammu and Kashmir",
-        "rank": "Cabinet",
-        "name": "Javed Ahmed Rana",
         "party": "Jammu & Kashmir National Conference",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
+        "id": "saifullah-mir-jk",
+        "rank": "Cabinet",
+        "name": "Mir Saifullah",
         "portfolios": [
-          "Jal Shakti (Water Resources)",
-          "Forest, Ecology & Environment",
-          "Tribal Affairs"
+          "Planning, Development and Monitoring",
+          "Culture",
+          "Youth Services and Sports",
+          "ARI and Trainings"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Omar_Abdullah_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
-        "politicianId": "mendhar-ac-jk-javed-ahmed-rana"
+        "politicianId": "trehgam-ac-jk-saifullah-mir"
       },
       {
-        "id": "satish-sharma-jk",
         "stateCode": "JK",
         "state": "Jammu and Kashmir",
+        "party": "Jammu & Kashmir National Conference",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
+        "id": "shamim-firdous-jk",
         "rank": "Cabinet",
-        "name": "Satish Sharma",
-        "party": "Independent",
+        "name": "Shamim Firdous",
         "portfolios": [
-          "Food, Civil Supplies & Consumer Affairs",
-          "Transport",
-          "Science & Technology",
-          "Information Technology",
-          "Youth Services & Sports",
-          "ARI & Trainings"
+          "School Education",
+          "Higher Education",
+          "Jal Shakti"
         ],
-        "source_url": "https://en.wikipedia.org/wiki/Second_Omar_Abdullah_ministry",
-        "source_name": "en.wikipedia.org",
-        "retrieved_date": "2026-07-14",
-        "as_of": "as of 14 July 2026 (six-member ministry unchanged; first reshuffle/expansion only planned around 20 July 2026, not yet effected)",
-        "politicianId": "chhamb-ac-jk-satish-sharma"
+        "politicianId": "habba-kadal-ac-jk-shamim-firdous"
+      },
+      {
+        "stateCode": "JK",
+        "state": "Jammu and Kashmir",
+        "party": "Jammu & Kashmir National Conference",
+        "source_url": "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
+        "source_name": "Kashmir Reader (PTI) - Portfolios allotted for new Council of Ministers in J&K (28 October 2026)",
+        "retrieved_date": "2026-11-24",
+        "as_of": "as of 28 October 2026 (Council expanded on 27 October; portfolios assigned by the Lieutenant Governor on 28 October)",
+        "id": "altaf-ahmad-wani-jk",
+        "rank": "Cabinet",
+        "name": "Altaf Ahmad Wani",
+        "portfolios": [
+          "Forest, Ecology and Environment",
+          "Rural Development and Panchayati Raj"
+        ],
+        "politicianId": "pahalgam-ac-jk-altaf-ahmad-wani"
       }
     ],
     "sources": [
+      "https://kashmirreader.com/2026/10/29/portfolios-allotted-for-new-council-of-ministers-in-jk/",
       "https://en.wikipedia.org/wiki/Second_Omar_Abdullah_ministry",
       "https://jkgad.nic.in/En/minCouncil.aspx",
       "https://dipr.jk.gov.in/Prnv?n=10508",

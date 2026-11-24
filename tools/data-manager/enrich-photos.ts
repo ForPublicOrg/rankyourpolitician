@@ -19,7 +19,7 @@ const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z
 const SEED = resolve(ROOT, 'data', 'seed', 'politicians.json');
 const WD_API = 'https://www.wikidata.org/w/api.php';
 const COMMONS_API = 'https://commons.wikimedia.org/w/api.php';
-const UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
+const UA = `RankYourPolitician-DataManager/1.0 (civic info; ${process.env.DM_CONTACT || '+https://rankyourpolitician.com'})`;
 const LIMIT = process.env.PHOTO_LIMIT ? parseInt(process.env.PHOTO_LIMIT, 10) : Infinity;
 
 // Language editions to consult, in preference order (portrait quality / recency).
@@ -28,14 +28,20 @@ const WIKI_RANK = new Map(WIKIS.map((w, i) => [`${w}wiki`, i]));
 
 async function api(base: string, params: Record<string, string>): Promise<any> {
   const u = base + '?format=json&formatversion=2&origin=*&' + new URLSearchParams(params);
-  for (let attempt = 0; attempt < 5; attempt++) {
+  for (let attempt = 0; attempt < 6; attempt++) {
+    let wait = 2000 * 2 ** attempt;
     try {
       const r = await fetch(u, { headers: { 'User-Agent': UA } });
       if (r.ok) return r.json();
       if (r.status < 500 && r.status !== 429) throw new Error(`HTTP ${r.status}`);
-    } catch (e) { if (attempt === 4) throw e; }
-    await new Promise((res) => setTimeout(res, 1000 * (attempt + 1)));
+      // Wikimedia throttles with 429 + Retry-After; honour it rather than hammer.
+      const ra = Number(r.headers.get('retry-after'));
+      if (Number.isFinite(ra) && ra > 0) wait = Math.max(wait, ra * 1000);
+    } catch (e) { if (attempt === 5) throw e; }
+    await new Promise((res) => setTimeout(res, wait));
   }
+  // Never hand back undefined: a silently empty batch reads as "no photo".
+  throw new Error(`Wikimedia API did not answer after 6 attempts: ${base}`);
 }
 
 async function main() {

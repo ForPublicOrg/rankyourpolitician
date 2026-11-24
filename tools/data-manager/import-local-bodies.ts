@@ -50,7 +50,7 @@ const OUT_ARG = args.find((a) => a.startsWith('--out='))?.slice('--out='.length)
 const OUT = OUT_ARG ? resolve(OUT_ARG) : resolve(SEED_DIR, 'local_bodies.json');
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
-const WIKI_UA = 'RankYourPolitician-DataManager/1.0 (civic info; vikas070696@gmail.com)';
+const WIKI_UA = `RankYourPolitician-DataManager/1.0 (civic info; ${process.env.DM_CONTACT || '+https://rankyourpolitician.com'})`;
 
 interface InPerson {
   name?: string; party?: string | null; since?: string | null; elected_by?: 'direct' | 'indirect' | null;

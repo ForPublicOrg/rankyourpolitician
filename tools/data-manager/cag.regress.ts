@@ -165,6 +165,17 @@ const WEBROOT = 'https://cag.gov.in/webroot/uploads/download_audit_report/2026/x
 const PLAIN = 'https://cag.gov.in/uploads/download_audit_report/2026/x-069c.pdf';
 assert(canonicalCagUrl(WEBROOT) === PLAIN, '/webroot/ prefix collapsed to the canonical form');
 assert(canonicalCagUrl(PLAIN) === PLAIN, 'canonical URL left alone');
+assert(
+  canonicalCagUrl('https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2026/Report%20No.%208%20of%202026.pdf') ===
+    'https://cag.gov.in/uploads/download_audit_report/2026/Report%20No.%208%20of%202026.pdf',
+  "the Commission's CDN link folds back onto cag.gov.in",
+);
+assert(isCagUrl(canonicalCagUrl('https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2026/x.pdf')),
+  'a folded CDN link passes the cag.gov.in check');
+assert(!isCagUrl(canonicalCagUrl('https://d1jmc0u14z2tmp.cloudfront.net/other/x.pdf')),
+  'only the /uploads/ tree of the CDN is folded');
+assert(!isCagUrl(canonicalCagUrl('https://dxxxxxxxxxxxxx.cloudfront.net/uploads/download_audit_report/2026/x.pdf')),
+  'another CloudFront distribution is still refused');
 assert(canonicalCagUrl('https://example.com/webroot/uploads/x.pdf') === 'https://example.com/webroot/uploads/x.pdf',
   'only cag.gov.in URLs are rewritten');
 assert(reportKey({ ...a, gov: 'MP', source_url: WEBROOT }) === reportKey({ ...a, gov: 'MP', source_url: PLAIN }),
