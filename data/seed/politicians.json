@@ -741,7 +741,7 @@
     "metrics": {
       "attendance_pct": 81.8,
       "questions_asked": 136,
-      "debates_participated": 28
+      "debates_participated": 29
     },
     "facts": [
       {
@@ -802,7 +802,7 @@
         "value": "81.8% (126 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -810,15 +810,15 @@
         "value": "136",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "28",
+        "value": "29",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -6150,7 +6150,7 @@
         "value": "94.8% (146 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -6158,7 +6158,7 @@
         "value": "177",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -6166,7 +6166,7 @@
         "value": "16",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -12239,7 +12239,7 @@
     "metrics": {
       "attendance_pct": 92.2,
       "questions_asked": 192,
-      "debates_participated": 26
+      "debates_participated": 29
     },
     "facts": [
       {
@@ -12300,7 +12300,7 @@
         "value": "92.2% (142 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -12308,15 +12308,15 @@
         "value": "192",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "26",
+        "value": "29",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -14632,7 +14632,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -14640,7 +14640,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -14648,7 +14648,7 @@
         "value": "14",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -16783,7 +16783,7 @@
         "value": "92.9% (143 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -16791,7 +16791,7 @@
         "value": "155",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -16799,7 +16799,7 @@
         "value": "16",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -60436,7 +60436,7 @@
         "value": "99.4% (153 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -60444,7 +60444,7 @@
         "value": "131",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -60452,7 +60452,7 @@
         "value": "31",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -65144,7 +65144,7 @@
         "value": "89% (137 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -65152,7 +65152,7 @@
         "value": "87",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -65160,7 +65160,7 @@
         "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -68871,7 +68871,7 @@
         "value": "84.4% (130 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -68879,7 +68879,7 @@
         "value": "110",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -68887,7 +68887,7 @@
         "value": "2",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -69286,7 +69286,7 @@
         "value": "81.8% (126 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -69294,7 +69294,7 @@
         "value": "254",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -69302,7 +69302,7 @@
         "value": "32",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -79946,7 +79946,7 @@
         "value": "98.1% (151 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -79954,7 +79954,7 @@
         "value": "99",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -79962,7 +79962,7 @@
         "value": "14",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -80445,7 +80445,7 @@
         "value": "98.1% (151 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -80453,7 +80453,7 @@
         "value": "103",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -80461,7 +80461,7 @@
         "value": "24",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -82500,7 +82500,7 @@
         "value": "96.1% (148 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -82508,7 +82508,7 @@
         "value": "146",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -82516,7 +82516,7 @@
         "value": "4",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -86192,7 +86192,7 @@
         "value": "90.3% (139 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -86200,7 +86200,7 @@
         "value": "191",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -86208,7 +86208,7 @@
         "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -87118,7 +87118,7 @@
         "value": "93.5% (144 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -87126,7 +87126,7 @@
         "value": "203",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -87134,7 +87134,7 @@
         "value": "5",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -90759,7 +90759,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -90767,7 +90767,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -90775,7 +90775,7 @@
         "value": "1",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -91388,7 +91388,7 @@
         "value": "95.5% (147 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -91396,7 +91396,7 @@
         "value": "36",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -91404,7 +91404,7 @@
         "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -91588,7 +91588,7 @@
         "value": "95.5% (147 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -91596,7 +91596,7 @@
         "value": "60",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -91604,7 +91604,7 @@
         "value": "4",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -92233,7 +92233,7 @@
         "value": "97.4% (150 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -92241,7 +92241,7 @@
         "value": "140",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -92249,7 +92249,7 @@
         "value": "9",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -94528,7 +94528,7 @@
     "metrics": {
       "attendance_pct": 98.7,
       "questions_asked": 199,
-      "debates_participated": 25
+      "debates_participated": 27
     },
     "facts": [
       {
@@ -94581,7 +94581,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -94589,15 +94589,15 @@
         "value": "199",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "25",
+        "value": "27",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -96215,7 +96215,7 @@
         "value": "94.2% (145 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -96223,7 +96223,7 @@
         "value": "92",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -96231,7 +96231,7 @@
         "value": "8",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -101275,7 +101275,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -101283,7 +101283,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -101291,7 +101291,7 @@
         "value": "5",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -109157,7 +109157,7 @@
         "value": "84.4% (130 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -109165,7 +109165,7 @@
         "value": "183",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -109173,7 +109173,7 @@
         "value": "20",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -114444,7 +114444,7 @@
     "metrics": {
       "attendance_pct": 90.3,
       "questions_asked": 199,
-      "debates_participated": 32
+      "debates_participated": 34
     },
     "facts": [
       {
@@ -114504,7 +114504,7 @@
         "value": "90.3% (139 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -114512,15 +114512,15 @@
         "value": "199",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "32",
+        "value": "34",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -123721,7 +123721,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -123729,7 +123729,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -123737,7 +123737,7 @@
         "value": "5",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -125447,7 +125447,7 @@
     "metrics": {
       "attendance_pct": 85.1,
       "questions_asked": 46,
-      "debates_participated": 12
+      "debates_participated": 13
     },
     "facts": [
       {
@@ -125500,7 +125500,7 @@
         "value": "85.1% (131 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -125508,15 +125508,15 @@
         "value": "46",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "12",
+        "value": "13",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -130799,7 +130799,7 @@
         "value": "83.1% (128 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -130807,7 +130807,7 @@
         "value": "15",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -130815,7 +130815,7 @@
         "value": "7",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -131008,7 +131008,7 @@
         "value": "90.9% (140 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -131016,7 +131016,7 @@
         "value": "5",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -131024,7 +131024,7 @@
         "value": "1",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -132717,7 +132717,7 @@
         "value": "60.4% (93 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -132725,7 +132725,7 @@
         "value": "4",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -132733,7 +132733,7 @@
         "value": "2",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -133277,7 +133277,7 @@
         "value": "73.4% (113 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -133285,7 +133285,7 @@
         "value": "86",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -133293,7 +133293,7 @@
         "value": "2",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -151038,7 +151038,7 @@
     "metrics": {
       "attendance_pct": 86.4,
       "questions_asked": 225,
-      "debates_participated": 17
+      "debates_participated": 19
     },
     "facts": [
       {
@@ -151091,7 +151091,7 @@
         "value": "86.4% (133 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -151099,15 +151099,15 @@
         "value": "225",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "17",
+        "value": "19",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -167009,7 +167009,7 @@
     "metrics": {
       "attendance_pct": 75.3,
       "questions_asked": 145,
-      "debates_participated": 22
+      "debates_participated": 23
     },
     "facts": [
       {
@@ -167070,7 +167070,7 @@
         "value": "75.3% (116 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -167078,15 +167078,15 @@
         "value": "145",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "22",
+        "value": "23",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -172411,7 +172411,7 @@
         "value": "79.2% (122 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -172419,7 +172419,7 @@
         "value": "94",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -172427,7 +172427,7 @@
         "value": "8",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -172992,7 +172992,7 @@
         "value": "94.8% (146 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -173000,7 +173000,7 @@
         "value": "95",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -173008,7 +173008,7 @@
         "value": "7",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -178670,7 +178670,7 @@
     "metrics": {
       "attendance_pct": 92.2,
       "questions_asked": 244,
-      "debates_participated": 14
+      "debates_participated": 15
     },
     "facts": [
       {
@@ -178716,7 +178716,7 @@
         "value": "92.2% (142 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -178724,15 +178724,15 @@
         "value": "244",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "14",
+        "value": "15",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -179098,7 +179098,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -179106,7 +179106,7 @@
         "value": "80",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -179114,7 +179114,7 @@
         "value": "13",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -180938,7 +180938,7 @@
         "value": "94.2% (145 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -180946,7 +180946,7 @@
         "value": "247",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -180954,7 +180954,7 @@
         "value": "10",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -189243,7 +189243,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -189251,7 +189251,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -189259,7 +189259,7 @@
         "value": "12",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -190435,7 +190435,7 @@
         "value": "80.5% (124 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -190443,7 +190443,7 @@
         "value": "263",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -190451,7 +190451,7 @@
         "value": "21",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -190793,7 +190793,7 @@
     "metrics": {
       "attendance_pct": 100,
       "questions_asked": 182,
-      "debates_participated": 28
+      "debates_participated": 30
     },
     "facts": [
       {
@@ -190825,7 +190825,7 @@
         "value": "100% (154 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -190833,15 +190833,15 @@
         "value": "182",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "28",
+        "value": "30",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -193833,7 +193833,7 @@
     "metrics": {
       "attendance_pct": 90.3,
       "questions_asked": 92,
-      "debates_participated": 40
+      "debates_participated": 41
     },
     "facts": [
       {
@@ -193865,7 +193865,7 @@
         "value": "90.3% (139 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -193873,15 +193873,15 @@
         "value": "92",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "40",
+        "value": "41",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -194035,7 +194035,7 @@
         "value": "65.6% (101 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -194043,7 +194043,7 @@
         "value": "152",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -194051,7 +194051,7 @@
         "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -194925,7 +194925,7 @@
     "is_minister": true,
     "neutral_summary": "Prataprao Jadhav is the Member of Parliament for the Buldhana constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
     "metrics": {
-      "debates_participated": 34
+      "debates_participated": 38
     },
     "facts": [
       {
@@ -194985,7 +194985,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -194993,15 +194993,15 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "34",
+        "value": "38",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -198811,7 +198811,7 @@
     "metrics": {
       "attendance_pct": 77.3,
       "questions_asked": 236,
-      "debates_participated": 16
+      "debates_participated": 17
     },
     "facts": [
       {
@@ -198872,7 +198872,7 @@
         "value": "77.3% (119 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -198880,15 +198880,15 @@
         "value": "236",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "16",
+        "value": "17",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -199993,7 +199993,7 @@
     "metrics": {
       "attendance_pct": 85.7,
       "questions_asked": 74,
-      "debates_participated": 8
+      "debates_participated": 9
     },
     "facts": [
       {
@@ -200039,7 +200039,7 @@
         "value": "85.7% (132 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -200047,15 +200047,15 @@
         "value": "74",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "8",
+        "value": "9",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -203170,7 +203170,7 @@
     "metrics": {
       "attendance_pct": 92.2,
       "questions_asked": 222,
-      "debates_participated": 28
+      "debates_participated": 29
     },
     "facts": [
       {
@@ -203209,7 +203209,7 @@
         "value": "92.2% (142 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -203217,15 +203217,15 @@
         "value": "222",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "28",
+        "value": "29",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -206171,7 +206171,7 @@
     "metrics": {
       "attendance_pct": 85.7,
       "questions_asked": 239,
-      "debates_participated": 9
+      "debates_participated": 11
     },
     "facts": [
       {
@@ -206203,7 +206203,7 @@
         "value": "85.7% (132 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -206211,15 +206211,15 @@
         "value": "239",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "9",
+        "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -208045,7 +208045,7 @@
     "is_minister": true,
     "neutral_summary": "Piyush Goyal is the Member of Parliament for the Mumbai North constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Bharatiya Janata Party.",
     "metrics": {
-      "debates_participated": 16
+      "debates_participated": 17
     },
     "facts": [
       {
@@ -208105,7 +208105,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -208113,15 +208113,15 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "16",
+        "value": "17",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -208167,7 +208167,7 @@
     "metrics": {
       "attendance_pct": 96.1,
       "questions_asked": 254,
-      "debates_participated": 48
+      "debates_participated": 49
     },
     "facts": [
       {
@@ -208220,7 +208220,7 @@
         "value": "96.1% (148 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -208228,15 +208228,15 @@
         "value": "254",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "48",
+        "value": "49",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -208505,7 +208505,7 @@
     "metrics": {
       "attendance_pct": 99.4,
       "questions_asked": 205,
-      "debates_participated": 52
+      "debates_participated": 54
     },
     "facts": [
       {
@@ -208558,7 +208558,7 @@
         "value": "99.4% (153 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -208566,15 +208566,15 @@
         "value": "205",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "52",
+        "value": "54",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -208676,7 +208676,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -208684,7 +208684,7 @@
         "value": "127",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -208692,7 +208692,7 @@
         "value": "23",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -209026,7 +209026,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -209034,7 +209034,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -209042,7 +209042,7 @@
         "value": "1",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -210793,7 +210793,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -210801,7 +210801,7 @@
         "value": "199",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -210809,7 +210809,7 @@
         "value": "29",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -211090,7 +211090,7 @@
     "metrics": {
       "attendance_pct": 98.1,
       "questions_asked": 279,
-      "debates_participated": 37
+      "debates_participated": 38
     },
     "facts": [
       {
@@ -211122,7 +211122,7 @@
         "value": "98.1% (151 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -211130,15 +211130,15 @@
         "value": "279",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "37",
+        "value": "38",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -211693,7 +211693,7 @@
         "value": "67.5% (104 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -211701,7 +211701,7 @@
         "value": "233",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -211709,7 +211709,7 @@
         "value": "12",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -212947,7 +212947,7 @@
     "metrics": {
       "attendance_pct": 64.9,
       "questions_asked": 103,
-      "debates_participated": 19
+      "debates_participated": 21
     },
     "facts": [
       {
@@ -213007,7 +213007,7 @@
         "value": "64.9% (100 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -213015,15 +213015,15 @@
         "value": "103",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "19",
+        "value": "21",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -214937,7 +214937,7 @@
         "value": "56.5% (87 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -214945,7 +214945,7 @@
         "value": "102",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -214953,7 +214953,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -215107,7 +215107,7 @@
         "value": "No register record - Council of Ministers members are exempt from signing (days marked \"NR\" in the official record)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -215115,7 +215115,7 @@
         "value": "Exempt - ministers answer questions in the House; only private members table them",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -215123,7 +215123,7 @@
         "value": "23",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -215548,7 +215548,7 @@
     "metrics": {
       "attendance_pct": 90.3,
       "questions_asked": 203,
-      "debates_participated": 64
+      "debates_participated": 66
     },
     "facts": [
       {
@@ -215587,7 +215587,7 @@
         "value": "90.3% (139 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -215595,15 +215595,15 @@
         "value": "203",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "64",
+        "value": "66",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -216794,7 +216794,7 @@
     "metrics": {
       "attendance_pct": 73.4,
       "questions_asked": 244,
-      "debates_participated": 14
+      "debates_participated": 15
     },
     "facts": [
       {
@@ -216854,7 +216854,7 @@
         "value": "73.4% (113 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -216862,15 +216862,15 @@
         "value": "244",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "14",
+        "value": "15",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -218182,7 +218182,7 @@
     "metrics": {
       "attendance_pct": 96.8,
       "questions_asked": 262,
-      "debates_participated": 43
+      "debates_participated": 44
     },
     "facts": [
       {
@@ -218221,7 +218221,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -218229,15 +218229,15 @@
         "value": "262",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "43",
+        "value": "44",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -219874,7 +219874,7 @@
         "value": "85.7% (132 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -219882,7 +219882,7 @@
         "value": "134",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -219890,7 +219890,7 @@
         "value": "9",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -220321,7 +220321,7 @@
         "value": "85.7% (132 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -220329,7 +220329,7 @@
         "value": "167",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -220337,7 +220337,7 @@
         "value": "22",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -240173,7 +240173,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -240181,7 +240181,7 @@
         "value": "169",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -240189,7 +240189,7 @@
         "value": "30",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -258895,7 +258895,7 @@
     "metrics": {
       "attendance_pct": 95.5,
       "questions_asked": 73,
-      "debates_participated": 24
+      "debates_participated": 25
     },
     "facts": [
       {
@@ -258934,7 +258934,7 @@
         "value": "95.5% (147 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -258942,15 +258942,15 @@
         "value": "73",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "24",
+        "value": "25",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -266976,7 +266976,7 @@
         "value": "77.9% (120 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -266984,7 +266984,7 @@
         "value": "48",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -266992,7 +266992,7 @@
         "value": "14",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -273404,7 +273404,7 @@
         "value": "99.4% (153 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -273412,7 +273412,7 @@
         "value": "144",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -273420,7 +273420,7 @@
         "value": "19",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -289198,7 +289198,7 @@
         "value": "98.1% (151 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -289206,7 +289206,7 @@
         "value": "119",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -289214,7 +289214,7 @@
         "value": "20",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -293624,7 +293624,7 @@
         "value": "42.2% (65 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -293632,7 +293632,7 @@
         "value": "157",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -293640,7 +293640,7 @@
         "value": "8",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -293871,7 +293871,7 @@
     "metrics": {
       "attendance_pct": 72.1,
       "questions_asked": 128,
-      "debates_participated": 7
+      "debates_participated": 8
     },
     "facts": [
       {
@@ -293910,7 +293910,7 @@
         "value": "72.1% (111 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -293918,15 +293918,15 @@
         "value": "128",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "7",
+        "value": "8",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -296295,7 +296295,7 @@
         "value": "90.9% (140 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -296303,7 +296303,7 @@
         "value": "131",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -296311,7 +296311,7 @@
         "value": "10",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -303043,7 +303043,7 @@
         "value": "92.9% (143 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -303051,7 +303051,7 @@
         "value": "101",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -303059,7 +303059,7 @@
         "value": "19",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -313383,7 +313383,7 @@
     "metrics": {
       "attendance_pct": 70.8,
       "questions_asked": 106,
-      "debates_participated": 38
+      "debates_participated": 39
     },
     "facts": [
       {
@@ -313450,7 +313450,7 @@
         "value": "70.8% (109 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -313458,15 +313458,15 @@
         "value": "106",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "38",
+        "value": "39",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -322103,7 +322103,7 @@
         "value": "76.6% (118 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -322111,7 +322111,7 @@
         "value": "137",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -322119,7 +322119,7 @@
         "value": "18",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -324269,7 +324269,7 @@
         "value": "64.3% (99 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -324277,7 +324277,7 @@
         "value": "36",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -324285,7 +324285,7 @@
         "value": "6",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -324935,7 +324935,7 @@
         "value": "84.4% (130 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -324943,7 +324943,7 @@
         "value": "188",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -324951,7 +324951,7 @@
         "value": "26",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -325272,7 +325272,7 @@
     "metrics": {
       "attendance_pct": 96.1,
       "questions_asked": 135,
-      "debates_participated": 9
+      "debates_participated": 10
     },
     "facts": [
       {
@@ -325326,7 +325326,7 @@
         "value": "96.1% (148 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -325334,15 +325334,15 @@
         "value": "135",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "9",
+        "value": "10",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -326289,7 +326289,7 @@
         "value": "64.3% (99 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -326297,7 +326297,7 @@
         "value": "65",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -326305,7 +326305,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -337097,7 +337097,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -337105,7 +337105,7 @@
         "value": "34",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -337113,7 +337113,7 @@
         "value": "16",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -337684,7 +337684,7 @@
     "metrics": {
       "attendance_pct": 100,
       "questions_asked": 111,
-      "debates_participated": 33
+      "debates_participated": 34
     },
     "facts": [
       {
@@ -337744,7 +337744,7 @@
         "value": "100% (154 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -337752,15 +337752,15 @@
         "value": "111",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "33",
+        "value": "34",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -340492,7 +340492,7 @@
         "value": "97.4% (150 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -340500,7 +340500,7 @@
         "value": "34",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -340508,7 +340508,7 @@
         "value": "20",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -348861,7 +348861,7 @@
         "value": "97.4% (150 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -348869,7 +348869,7 @@
         "value": "18",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -348877,7 +348877,7 @@
         "value": "22",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -350507,7 +350507,7 @@
     "metrics": {
       "attendance_pct": 98.7,
       "questions_asked": 146,
-      "debates_participated": 57
+      "debates_participated": 58
     },
     "facts": [
       {
@@ -350546,7 +350546,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -350554,15 +350554,15 @@
         "value": "146",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "57",
+        "value": "58",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -351080,7 +351080,7 @@
     "metrics": {
       "attendance_pct": 70.1,
       "questions_asked": 274,
-      "debates_participated": 32
+      "debates_participated": 33
     },
     "facts": [
       {
@@ -351141,7 +351141,7 @@
         "value": "70.1% (108 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -351149,15 +351149,15 @@
         "value": "274",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "32",
+        "value": "33",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -357282,7 +357282,7 @@
     "metrics": {
       "attendance_pct": 100,
       "questions_asked": 72,
-      "debates_participated": 26
+      "debates_participated": 28
     },
     "facts": [
       {
@@ -357342,7 +357342,7 @@
         "value": "100% (154 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -357350,15 +357350,15 @@
         "value": "72",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "26",
+        "value": "28",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -358614,7 +358614,7 @@
         "value": "90.9% (140 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -358622,7 +358622,7 @@
         "value": "46",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -358630,7 +358630,7 @@
         "value": "12",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -370840,7 +370840,7 @@
         "value": "84.4% (130 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -370848,7 +370848,7 @@
         "value": "2",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -370856,7 +370856,7 @@
         "value": "12",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -376503,7 +376503,7 @@
     "metrics": {
       "attendance_pct": 95.5,
       "questions_asked": 81,
-      "debates_participated": 39
+      "debates_participated": 41
     },
     "facts": [
       {
@@ -376563,7 +376563,7 @@
         "value": "95.5% (147 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -376571,15 +376571,15 @@
         "value": "81",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "39",
+        "value": "41",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -376868,7 +376868,7 @@
         "value": "98.1% (151 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -376876,7 +376876,7 @@
         "value": "120",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -376884,7 +376884,7 @@
         "value": "25",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -377076,7 +377076,7 @@
     "metrics": {
       "attendance_pct": 98.7,
       "questions_asked": 31,
-      "debates_participated": 22
+      "debates_participated": 23
     },
     "facts": [
       {
@@ -377108,7 +377108,7 @@
         "value": "98.7% (152 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -377116,15 +377116,15 @@
         "value": "31",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "22",
+        "value": "23",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -379312,7 +379312,7 @@
         "value": "70.1% (108 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -379320,7 +379320,7 @@
         "value": "54",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -379328,7 +379328,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -381082,7 +381082,7 @@
         "value": "89.6% (138 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -381090,7 +381090,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -381098,7 +381098,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -384036,7 +384036,7 @@
     "metrics": {
       "attendance_pct": 96.8,
       "questions_asked": 149,
-      "debates_participated": 10
+      "debates_participated": 11
     },
     "facts": [
       {
@@ -384089,7 +384089,7 @@
         "value": "96.8% (149 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -384097,15 +384097,15 @@
         "value": "149",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "10",
+        "value": "11",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -388429,7 +388429,7 @@
     "metrics": {
       "attendance_pct": 64.9,
       "questions_asked": 26,
-      "debates_participated": 11
+      "debates_participated": 12
     },
     "facts": [
       {
@@ -388483,7 +388483,7 @@
         "value": "64.9% (100 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -388491,15 +388491,15 @@
         "value": "26",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "11",
+        "value": "12",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -391461,7 +391461,7 @@
         "value": "90.3% (139 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -391469,7 +391469,7 @@
         "value": "123",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -391477,7 +391477,7 @@
         "value": "30",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -396805,7 +396805,7 @@
     "metrics": {
       "attendance_pct": 83.1,
       "questions_asked": 176,
-      "debates_participated": 90
+      "debates_participated": 93
     },
     "facts": [
       {
@@ -396872,7 +396872,7 @@
         "value": "83.1% (128 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -396880,15 +396880,15 @@
         "value": "176",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "90",
+        "value": "93",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -398132,7 +398132,7 @@
         "value": "7.8% (12 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -398140,7 +398140,7 @@
         "value": "96",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -398148,7 +398148,7 @@
         "value": "0",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -400442,7 +400442,7 @@
         "value": "83.8% (129 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -400450,7 +400450,7 @@
         "value": "105",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -400458,7 +400458,7 @@
         "value": "13",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -401625,7 +401625,7 @@
     "metrics": {
       "attendance_pct": 81.2,
       "questions_asked": 43,
-      "debates_participated": 16
+      "debates_participated": 18
     },
     "facts": [
       {
@@ -401657,7 +401657,7 @@
         "value": "81.2% (125 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -401665,15 +401665,15 @@
         "value": "43",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "16",
+        "value": "18",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -407253,7 +407253,7 @@
     "metrics": {
       "attendance_pct": 79.2,
       "questions_asked": 72,
-      "debates_participated": 7
+      "debates_participated": 8
     },
     "facts": [
       {
@@ -407307,7 +407307,7 @@
         "value": "79.2% (122 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -407315,15 +407315,15 @@
         "value": "72",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "7",
+        "value": "8",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
@@ -407605,7 +407605,7 @@
     "metrics": {
       "attendance_pct": 79.2,
       "questions_asked": 50,
-      "debates_participated": 31
+      "debates_participated": 33
     },
     "facts": [
       {
@@ -407672,7 +407672,7 @@
         "value": "79.2% (122 of 154 recorded sitting days signed)",
         "source_url": "https://sansad.in/ls/members",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
@@ -407680,15 +407680,15 @@
         "value": "50",
         "source_url": "https://sansad.in/ls/questions/questions-and-answers",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       },
       {
         "field_type": "debates_participated",
-        "value": "31",
+        "value": "33",
         "source_url": "https://sansad.in/ls/debates",
         "source_name": "Digital Sansad - Lok Sabha (official)",
-        "retrieved_date": "2026-10-25",
+        "retrieved_date": "2026-11-24",
         "as_of": "18th Lok Sabha, all sessions to date"
       }
     ],
