@@ -33,6 +33,7 @@
 //       npm run dm -- migrate-rating-floor --apply   (writes to Firestore)
 import { getDb } from '../../lib/firebase-admin';
 import type { VoteAggregate } from '../../lib/types';
+import { writeRollupEntry } from '../../lib/vote-rollup';
 import seedPoliticians from '../../data/seed/politicians.json';
 
 type Daily = Record<string, Record<string, number>>;
@@ -128,12 +129,9 @@ async function main() {
           before = mean(agg.sum || 0, agg.total || 0);
           after = mean(sum, agg.total || 0);
           if (apply) {
-            tx.update(aggRef, {
-              counts,
-              sum,
-              ...(daily ? { daily } : {}),
-              updated_at: new Date().toISOString(),
-            });
+            const changes = { counts, sum, ...(daily ? { daily } : {}), updated_at: new Date().toISOString() };
+            tx.update(aggRef, changes);
+            writeRollupEntry(tx, db, { ...agg, ...changes, politician_id: id });
           }
         }
         return { aggN1: n1, docN1: docs, dailyMoved, hasAgg: Boolean(agg), before, after };

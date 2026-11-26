@@ -21,7 +21,8 @@
     "dm:dashboard": "tsx tools/data-manager/dashboard.ts",
     "seed:import": "tsx tools/data-manager/cli.ts import-seed",
     "recompute": "tsx tools/data-manager/cli.ts recompute",
-    "test:cag": "tsx tools/data-manager/cag.regress.ts"
+    "test:cag": "tsx tools/data-manager/cag.regress.ts",
+    "test:vote-rollup": "tsx tools/data-manager/vote-rollup.regress.ts"
   },
   "dependencies": {
     "@upstash/ratelimit": "^2.0.5",

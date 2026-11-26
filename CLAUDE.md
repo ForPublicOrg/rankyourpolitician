@@ -13,9 +13,11 @@ Read "How data flows" in README.md before touching `lib/data.ts` or any page.
 - **Every page stays static/ISR.** Never call `cookies()`, `headers()` or read `searchParams`
   in a page render path - any of these makes the route dynamic. Locale comes from the `[lang]`
   URL segment (rewritten by `middleware.ts`), never from a cookie read during render.
-- **No new per-request Firestore reads.** Runtime reads go through the TTL-memoised loaders in
-  `lib/data.ts` (aggregates 5 min, government data 30 min). A new hot-path read multiplies the
-  free-tier bill by crawler traffic.
+- **No new per-request Firestore reads.** The only runtime read is the 16-document vote rollup
+  (`lib/vote-rollup.ts`), loaded by the TTL-memoised loader in `lib/data.ts` and refreshed
+  incrementally every 5 min. Government data comes from the seed. A new hot-path read multiplies
+  the free-tier bill by crawler traffic. Never scan `vote_aggregates` at runtime: it costs one
+  read per rated person per refresh and was the entire Firebase bill until November 2026.
 - **Live numbers are client-fetched, never baked into pages.** Votes and trending follow the
   same pattern: an API route served from the in-process cache, CDN-cached with `s-maxage`
   (see `app/api/vote`, `app/api/trending`). Copy that pattern for anything that must be fresh.
@@ -82,6 +84,12 @@ npm run typecheck    # required before every PR
 npm run build        # prebuild regenerates public/*.json payloads (hash-gated: skips when data/tools/lib unchanged), then next build
 npm run dm -- validate            # data changes must pass this
 npm run dm -- backfill-trending   # trending bucket rebuild (dry run; --apply writes)
+npm run test:vote-rollup          # shard hash + encoding regressions (offline)
+
+# Rebuild the vote rollup the site reads from vote_aggregates. Run it once after
+# the deploy that introduced the rollup, and after any manual edit to
+# vote_aggregates. Dry run unless --apply.
+npx tsx tools/data-manager/build-vote-rollup.ts --apply
 
 # After `dm update-all`: the affidavit steps join on name within a state, so two
 # same-named members can end up citing one MyNeta page - i.e. one of them is
@@ -160,3 +168,5 @@ npx tsx tools/data-manager/import-union-ministries.ts research/union-ministries.
   header and the revalidation ping silently 401s.
 - Firestore is never read during `next build` (`getDb()` returns null in the build phase);
   pages prerender from the seed.
+- Anything that writes `vote_aggregates` must call `writeRollupEntry` in the same transaction,
+  or the site keeps showing the old rating for that person.

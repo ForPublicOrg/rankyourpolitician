@@ -84,11 +84,18 @@ important thing to understand before changing `lib/data.ts`:
 - **Politician, constituency and government data is served from the committed seed**, never read
   from Firestore at request time. It only changes when you run the data manager and redeploy, so
   a database round-trip would buy nothing.
-- **Firestore is read at runtime for one thing: live vote aggregates.**
-- **Every runtime Firestore read is TTL-memoised in-process** (`ttlCache` in `lib/data.ts`):
-  vote aggregates refresh at most every 5 minutes, government collections every 30 minutes, per
-  warm instance. The cache stores the *promise*, so a burst of concurrent requests shares one load
-  instead of stampeding the database.
+- **Firestore is read at runtime for one thing: live vote aggregates**, and only through the
+  vote rollup (`lib/vote-rollup.ts`): 16 `vote_rollup` documents that together hold every
+  rated person's aggregate. The vote transaction updates the rollup alongside
+  `vote_aggregates`, which stays the source of truth. Loading every rating costs 16 reads
+  however many people have been rated. Scanning `vote_aggregates` instead cost one read per
+  rated person per refresh, and that was the whole Firebase bill.
+- **The rollup is TTL-memoised in-process** (`ttlCache` in `lib/data.ts`) and refreshes at most
+  every 5 minutes per warm instance. A cold instance reads all 16 shards; after that a refresh
+  fetches only the shards written since its last read (one billed read when nobody has voted),
+  with a full re-read every hour. The cache stores the *promise*, so a burst of concurrent
+  requests shares one load instead of stampeding the database. Until the rollup has been built
+  (`build-vote-rollup`, below) the site falls back to scanning `vote_aggregates`.
 - **ISR sits on top, but only as a slow self-heal** (`revalidate = 86400` on the hub pages,
   `604800` on the person/area/district/state long tail). Pages are served straight from the
   CDN cache; with ~10.6k crawlable long-tail pages, the old daily window meant crawler
@@ -125,11 +132,10 @@ important thing to understand before changing `lib/data.ts`:
     ECI's edge rejects requests that do not carry a full browser header set - the exact set
     is in `lib/eci-results.ts` with the verification matrix; trimming it silently breaks
     every count, and only on counting day.
-  - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
-    `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
-    visit. A page that regenerates within ~30 min of a publish can still bake the previous
-    in-process TTL snapshot - run `npm run dm -- revalidate` again ~35 min after the publish
-    to re-sweep those (the timed revalidate remains the backstop).
+  - *Data publishes* - `npm run dm -- publish` writes the seed to Firestore and calls
+    `POST /api/revalidate` (Bearer `REVALIDATE_SECRET`), which sweeps the page cache. The
+    site does not read the published collections at runtime, so what visitors see changes
+    with the redeploy that ships the new seed.
   - *Seed changes* still require a redeploy, which resets the whole cache anyway.
 - **Nothing reads Firestore during `next build`** - prerendering ~5,300 person pages would
   flood the database with reads on every deploy for data the seed already has. Override with
@@ -196,6 +202,7 @@ npm run dm -- revalidate               # re-sweep the deployed page cache (~35 m
 npm run dm -- update-all               # orchestrator: refresh every source, rebuild, validate
 npm run dm -- rebuild-indexes          # regenerate static search/who payloads from the seed
 npm run dm -- backfill-trending        # rebuild trending buckets from vote records (--apply)
+npm run dm -- build-vote-rollup        # rebuild the vote rollup from vote_aggregates (--apply)
 npm run dm:dashboard                   # review UI at http://localhost:4321
 ```
 

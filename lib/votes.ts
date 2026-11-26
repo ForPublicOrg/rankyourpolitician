@@ -1,11 +1,13 @@
 // Vote persistence. In Firestore, a deterministic vote-doc id
 // (`${politicianId}__${voterKey}`) makes one-vote-per-user atomic; the same
-// transaction maintains the aggregate so the displayed score is consistent.
+// transaction maintains the aggregate so the displayed score is consistent,
+// plus its copy in lib/vote-rollup.ts, which is what the site actually reads.
 // Without Firestore, an in-process store keeps local dev/voting working.
 import { getDb } from './firebase-admin';
 import type { VoteAggregate, SentimentScore } from './types';
 import { computeSentimentScore } from './ranking';
 import { bumpDaily, pruneDaily } from './trending';
+import { writeRollupEntry } from './vote-rollup';
 
 const memVotes = new Map<string, Map<string, number>>(); // politicianId -> voterKey -> rating
 // politicianId -> day -> rating -> event count (trending signal, dev fallback)
@@ -76,6 +78,7 @@ export async function recordVote(
     const newAgg: VoteAggregate = { politician_id: politicianId, counts, total, sum, updated_at: now, daily };
     tx.set(voteRef, { politician_id: politicianId, rating, updated_at: now }, { merge: true });
     tx.set(aggRef, newAgg);
+    writeRollupEntry(tx, db, newAgg);
     return { aggregate: newAgg, updated: prev != null };
   });
 

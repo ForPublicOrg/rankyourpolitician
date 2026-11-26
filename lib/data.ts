@@ -20,8 +20,10 @@ import {
 } from './ranking';
 import { computeTrendingSignals, trendDirection } from './trending';
 import type { TrendingEntry, TopRatedEntry, ElectionCandidateRatingEntry } from './types';
+import type { Firestore, Timestamp } from 'firebase-admin/firestore';
 import { getDb, isFirestoreConfigured } from './firebase-admin';
 import { memVoteAggregates } from './votes';
+import { ROLLUP_COLLECTION, ROLLUP_SHARDS, decodeShard, laterTimestamp, type RollupShard } from './vote-rollup';
 import { datasetLastUpdated } from './format';
 import { MINISTER_RANK_LABEL, type MinisterRank, type Fact, type PerfMetric } from './types';
 import seedPoliticians from '@/data/seed/politicians.json';
@@ -321,32 +323,79 @@ function ttlCache<T>(ttlMs: number | (() => number), load: () => Promise<T>): ()
   };
 }
 
-// Government/office collections only change when the data manager publishes;
-// vote aggregates drive the visible scores, so they refresh more often.
-const STATIC_TTL_MS = 30 * 60_000;
 const VOTES_TTL_MS = 5 * 60_000;
 // Credential-less mode has no Firestore to protect - the index's only
 // time-varying input is the in-process vote store - so keep it near-fresh: a
 // locally cast vote reaches trending/rankings in seconds, not five minutes.
 const SEED_TTL_MS = 5_000;
 
+// The rollup this instance holds, per shard. A cold instance reads all 16
+// shards; after that each refresh fetches only shards written since `seen`,
+// which is one billed read when nobody has voted.
+let rollup: { shards: Map<string, Map<string, VoteAggregate>>; seen?: Timestamp; loadedAt: number } | null = null;
+// Re-read every shard hourly anyway, so nothing can drift for longer than that.
+const ROLLUP_FULL_RELOAD_MS = 60 * 60_000;
+
+function flattenRollup(shards: Map<string, Map<string, VoteAggregate>>): Map<string, VoteAggregate> {
+  const m = new Map<string, VoteAggregate>();
+  for (const shard of shards.values()) for (const [id, agg] of shard) m.set(id, agg);
+  return m;
+}
+
+/** Null when the rollup has not been built yet (no shard marked complete). */
+async function readRollup(db: Firestore): Promise<Map<string, VoteAggregate> | null> {
+  const coll = db.collection(ROLLUP_COLLECTION);
+  if (!rollup || Date.now() - rollup.loadedAt > ROLLUP_FULL_RELOAD_MS) {
+    const snaps = await db.getAll(...Array.from({ length: ROLLUP_SHARDS }, (_, i) => coll.doc(String(i))));
+    if (snaps.some((s) => s.get('complete') !== true)) {
+      rollup = null;
+      return null;
+    }
+    const shards = new Map<string, Map<string, VoteAggregate>>();
+    let seen: Timestamp | undefined;
+    for (const s of snaps) {
+      const data = s.data() as RollupShard;
+      shards.set(s.id, decodeShard(data));
+      seen = laterTimestamp(seen, data.updated_at);
+    }
+    rollup = { shards, seen, loadedAt: Date.now() };
+  } else if (rollup.seen) {
+    const snap = await coll.where('updated_at', '>', rollup.seen).get();
+    for (const d of snap.docs) {
+      const data = d.data() as RollupShard;
+      if (data.complete !== true) {
+        rollup = null;
+        return null;
+      }
+      rollup.shards.set(d.id, decodeShard(data));
+      rollup.seen = laterTimestamp(rollup.seen, data.updated_at);
+    }
+  }
+  return flattenRollup(rollup.shards);
+}
+
 /**
- * Live vote aggregates - the only frequently-refreshed Firestore read.
- * Politician/constituency data is static between deploys and is served from the
- * committed seed. Returns empty during `next build` (getDb() is null) or on any
- * read error, degrading gracefully to "no ratings".
+ * Live vote aggregates - the only runtime Firestore read. Served from the
+ * rollup; until `build-vote-rollup` has run it falls back to scanning
+ * `vote_aggregates`, which costs one read per rated person per refresh.
+ * Returns empty during `next build` (getDb() is null). On a read error it
+ * keeps the last good copy, else shows "no ratings".
  */
 const loadVoteAggregates = ttlCache(VOTES_TTL_MS, async (): Promise<Map<string, VoteAggregate>> => {
-  const m = new Map<string, VoteAggregate>();
   const db = getDb();
-  if (!db) return m;
+  if (!db) return new Map();
   try {
+    const fromRollup = await readRollup(db);
+    if (fromRollup) return fromRollup;
+    console.warn('[data] vote_rollup not built, scanning vote_aggregates. Run tools/data-manager/build-vote-rollup.ts --apply');
+    const m = new Map<string, VoteAggregate>();
     const snap = await db.collection('vote_aggregates').get();
     snap.forEach((d) => m.set(d.id, d.data() as VoteAggregate));
+    return m;
   } catch (err) {
-    console.error('[data] vote_aggregates read failed, showing no ratings:', err);
+    console.error('[data] vote aggregate read failed:', err);
+    return rollup ? flattenRollup(rollup.shards) : new Map();
   }
-  return m;
 });
 
 function loadFromSeed(): Dataset {
@@ -812,19 +861,10 @@ export async function getPerson(
   return null;
 }
 
-const allOfficeSeats = ttlCache(STATIC_TTL_MS, async (): Promise<OfficeSeat[]> => {
-  let seeds = seedDistrictOfficials as unknown as OfficeSeat[];
-  const db = getDb();
-  if (db) {
-    try {
-      const snap = await db.collection('office_seats').get();
-      if (!snap.empty) seeds = snap.docs.map((d) => d.data() as OfficeSeat);
-    } catch {
-      /* fall back to seed */
-    }
-  }
-  return seeds;
-});
+// Government data is served from the committed seed only (README "How data
+// flows"). Reading Firestore here cost reads on every refresh and kept serving
+// documents that `dm publish` never deletes, such as ministers who resigned.
+const allOfficeSeats = async (): Promise<OfficeSeat[]> => seedDistrictOfficials as unknown as OfficeSeat[];
 
 /** Stable person id for an appointed official (used to link their name). */
 export function officialPersonId(name: string): string {
@@ -923,7 +963,7 @@ export async function getAllRatings(): Promise<Record<string, [number, number, n
  */
 /** Roster lookup for rated ids with no politician record (CM / minister stubs
  *  rated from government pages): central council first, then state ministers.
- *  Built per call from the TTL-cached rosters - call it lazily, only when an
+ *  Built per call from the seed rosters - call it lazily, only when an
  *  id actually misses the politician index. */
 async function ministerRosterById(): Promise<
   Map<string, { name: string; party?: string; state?: string; constituency?: string; photo_url?: string }>
@@ -1123,18 +1163,7 @@ export async function getConstitutionalOffices(): Promise<ConstitutionalOffice[]
   return joinMinisterPhotos(seedConstitutional as unknown as ConstitutionalOffice[]);
 }
 
-const loadCentralGovernment = ttlCache(STATIC_TTL_MS, async (): Promise<Minister[]> => {
-  const db = getDb();
-  if (db) {
-    try {
-      const snap = await db.collection('central_government').get();
-      if (!snap.empty) return snap.docs.map((d) => d.data() as Minister);
-    } catch (err) {
-      console.error('[data] central_government read failed, using seed:', err);
-    }
-  }
-  return seedCentral as unknown as Minister[];
-});
+const loadCentralGovernment = async (): Promise<Minister[]> => seedCentral as unknown as Minister[];
 
 export async function getCentralGovernment(): Promise<Minister[]> {
   // Photos are joined OUTSIDE the memo: the join depends on the politician
@@ -1146,18 +1175,7 @@ export async function getMinister(id: string): Promise<Minister | null> {
   return (await getCentralGovernment()).find((m) => m.id === id) ?? null;
 }
 
-const loadStateGovernments = ttlCache(STATIC_TTL_MS, async (): Promise<StateGovernment[]> => {
-  const db = getDb();
-  if (db) {
-    try {
-      const snap = await db.collection('state_government').get();
-      if (!snap.empty) return snap.docs.map((d) => d.data() as StateGovernment);
-    } catch (err) {
-      console.error('[data] state_government read failed, using seed:', err);
-    }
-  }
-  return seedStateGov as unknown as StateGovernment[];
-});
+const loadStateGovernments = async (): Promise<StateGovernment[]> => seedStateGov as unknown as StateGovernment[];
 
 export async function getStateGovernments(): Promise<StateGovernment[]> {
   const gs = await loadStateGovernments();
@@ -1197,8 +1215,7 @@ export async function getContactChannels(stateCode: string): Promise<ContactChan
  *  incumbent merged in where we have a cited one. Always returns the 2 core
  *  seats (Collector/DM + SP) so the "who to approach" is shown even without a name. */
 export async function getDistrictOfficials(stateCode: string, district: string): Promise<OfficeSeat[]> {
-  // Filter the TTL-cached full collection in memory - a per-district Firestore
-  // query per district-page render (~780 districts on ISR) adds up fast.
+  // Filter the seed in memory; never add a per-district Firestore query here.
   const seeded = await allOfficeSeats();
   const core: OfficeType[] = ['collector_dm', 'sp_district'];
   return core.map((officeType) => {

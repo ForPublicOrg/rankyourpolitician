@@ -25,6 +25,7 @@ import {
   TRENDING_WINDOW_DAYS,
 } from '../../lib/trending';
 import type { VoteAggregate } from '../../lib/types';
+import { writeRollupEntry } from '../../lib/vote-rollup';
 import seedPoliticians from '../../data/seed/politicians.json';
 
 type Daily = Record<string, Record<string, number>>;
@@ -113,7 +114,10 @@ async function main() {
       const before = windowCount(existing, now);
       const after = windowCount(rebuilt, now);
       const same = canon(rebuilt) === canon(existing);
-      if (apply && !same) tx.update(aggRef, { daily: rebuilt });
+      if (apply && !same) {
+        tx.update(aggRef, { daily: rebuilt });
+        writeRollupEntry(tx, db, { ...agg, daily: rebuilt, politician_id: id });
+      }
       return { before, after, same, total: agg.total };
     });
 

@@ -222,6 +222,11 @@ async function main() {
       await import('./backfill-trending');
       break;
     }
+    case 'build-vote-rollup': {
+      // Rebuild the 16-doc vote rollup the site reads. Dry-run unless --apply.
+      await import('./build-vote-rollup');
+      break;
+    }
     case 'rebuild-indexes':
     case '--rebuild-indexes': {
       // Regenerate the static search-index.json + who/*.json from the seed.
@@ -292,6 +297,7 @@ Commands:
   npm run dm -- stats               Dataset summary
   npm run dm -- publish             Publish to Firestore (needs .env.local creds)
   npm run dm -- revalidate          Re-sweep the deployed page cache (run ~35 min after a publish)
+  npm run dm -- build-vote-rollup   Rebuild the vote rollup the site reads (dry run unless --apply)
   npm run dm -- refresh-mps         Rebuild the all-India Lok Sabha roster (543 seats) from the ECI-sourced list
   npm run dm -- enrich-contacts     Attach each MP's published email/phone from the official Digital Sansad directories
   npm run dm -- fetch-criminal-cases  Per-case affidavit detail behind every declared criminal case
